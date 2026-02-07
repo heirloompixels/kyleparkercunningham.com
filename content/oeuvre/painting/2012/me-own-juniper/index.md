@@ -3,7 +3,9 @@ title = "Me Own Juniper"
 date = 2012-07-25
 category = "painting"
 year = 2012
+aliases = ["/me-own-juniper/"]
 +++
+
 
 Me Own Juniper by kyle parker cunningham
 
@@ -27,4 +29,4 @@ I turned and burnt ground upstream all to aware too much time had passed on this
 
 The next morning we were hiking before dawn, utilizing the cooler morning and evenings and resting through the heat of the day. As the sun rose we slogged up another endless slight incline on a mesa top and came upon this Juniper I have painted right here. We took a rest in it's presence and awed at its age. It knows stories no one else remembers. It knows the sky and the earth suspended here timelessly.
 
-![me-own-juniper](1613FC25-BABB-48B4-9DB0-5C0DA8B16B66.jpeg)
+![me-own-juniper](/oeuvre/painting/2012/me-own-juniper/1613FC25-BABB-48B4-9DB0-5C0DA8B16B66.jpeg)

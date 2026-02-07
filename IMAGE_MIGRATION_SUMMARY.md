@@ -1,47 +1,26 @@
-# Image Migration Summary
+# Migration Verification Summary
 
-## Downloaded Images
+## Source Compared
+- Ghost export: `/Users/kpc/Downloads/kpc.ghost.2026-02-07-15-19-12.json`
 
-### 2024 Paintings (10 images):
-- orbits.jpg
-- pollen-and-larvae.jpg  
-- towers.jpg
-- twenty-one-years.jpg
-- two-squared.jpg
-- felt-and-lived.jpg
-- triangular-circles.jpg
-- symbologies-intertwine-electronically.jpg
-- does-math-control-nature-.jpg
-- the-algebra-of-water-vapor.jpg
+## Content Coverage
+- Published Ghost items: 171 total (156 posts, 15 pages)
+- Zola content slugs matching Ghost: **100%** (0 missing)
+- Newly created from Ghost: 18 pages/posts (previously missing)
+  - `abstraction`, `artist-statement`, `bio`, `chronos`, `contact-2`,
+    `crystal-tooth-whale-intaglio`, `espress-machine`, `future-capcitor`,
+    `installations`, `learning`, `links`, `materials`, `paper`, `portraiture`,
+    `press-kit`, `privacy-2`, `rainfall`, `sun`
 
-### 2023 Printmaking (10 images):
-- IMG_1115.jpeg (Astro Bee)
-- saber-tooth-puma.jpeg
-- crystal-tooth-whale.jpeg
-- tubed-pachydeerm-1.jpeg
-- daydream-4.jpeg
-- gardner-1-1.jpeg
-- IMG_1110.jpeg (Shade Cloud)
-- in-the-pines-1--1--1.jpeg
-- dayhike-4-2.jpeg
-- bottled-oxygen-1.jpeg
+## Image Coverage
+- Ghost-referenced images: 240
+- All image references now present locally
+- Downloaded during this pass: 83 images
+- Verified: 0 missing image references in Zola content
 
-### 2023 Biography (1 image):
-- self_portrait.jpg
+## Notes
+- Ghost HTML content was preserved in the newly created pages/posts.
+- Image URLs from Ghost were normalized to `/images/...` paths.
 
-## Content Created
-
-All 21 images now have corresponding markdown content files with:
-- Proper metadata (title, date, category, year)
-- Image paths and alt text
-- Artwork descriptions
-
-## Site Status
-- ✅ 21 high-quality artwork images downloaded
-- ✅ 21 content files created with metadata
-- ✅ Site builds successfully (26 HTML pages)
-- ✅ Images properly organized by year/month
-- ✅ All alt text added for accessibility
-
-## Ready for Deployment
-The static site in `public/` is now complete with all artwork from your Ghost site preserved.
+## Next Check (Optional)
+- If you want exact visual parity, we can also compare each Ghost post’s HTML against the corresponding Zola page output once the site is built.

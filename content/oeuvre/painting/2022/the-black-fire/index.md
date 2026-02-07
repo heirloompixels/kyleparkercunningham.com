@@ -3,7 +3,9 @@ title = "The Black Fire"
 date = 2022-05-14
 category = "painting"
 year = 2022
+aliases = ["/the-black-fire/"]
 +++
+
 
 The Black Fire by kyle parker cunningham
 
@@ -13,4 +15,4 @@ In May of 2022 the Black Fire started near Diamond Creek in the Aldo Leopold Wil
 
 Fire is an important and natural part of the ecosystem but the fires we have today are monsters fueled by our changing climate and destructive beyond imagination. They are a reality of our modern world and it is hard to come to terms with the simple fact that I will watch many beloved wilderness burn every year for the rest of my life.
 
-![the-black-fire](the-black-fire-2000px.jpeg)
+![the-black-fire](/oeuvre/painting/2022/the-black-fire/the-black-fire-2000px.jpeg)

@@ -11,4 +11,4 @@ oil on linen
 13x34 inches
 spring 2021
 
-![tugboat-whale-sequoia](tugboat_whale_sequoia.jpg)
+![tugboat-whale-sequoia](/oeuvre/painting/2021/tugboat-whale-sequoia/tugboat_whale_sequoia.jpg)

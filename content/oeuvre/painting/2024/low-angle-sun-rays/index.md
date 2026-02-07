@@ -3,7 +3,9 @@ title = "low angle sun rays"
 date = 2024-07-29
 category = "painting"
 year = 2024
+aliases = ["/low-angle-sun-rays/"]
 +++
+
 
 low angle sun rays by kyle parker cunningham
 
@@ -11,4 +13,4 @@ Wonder, about water vapor, dust and light angles. Effortlessly floating down the
 
 Sunset approaches and everyone has eyes glued to the horizon.
 
-![low-angle-sun-rays](rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg)
+![low-angle-sun-rays](/oeuvre/painting/2024/low-angle-sun-rays/rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg)

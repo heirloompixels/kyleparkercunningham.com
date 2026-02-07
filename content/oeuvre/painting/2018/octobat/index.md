@@ -3,7 +3,9 @@ title = "Octobat"
 date = 2018-05-18
 category = "painting"
 year = 2018
+aliases = ["/octobat/"]
 +++
+
 
 Octobat by kyle parker cunningham
 
@@ -17,4 +19,4 @@ Mesmerizingly absurd.
 
 Acrylic, Paint Marker, Latex Paint on found wood. 3.5 by 19.5 inches. 2019.
 
-![octobat](7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.jpeg)
+![octobat](/oeuvre/painting/2018/octobat/7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.jpeg)

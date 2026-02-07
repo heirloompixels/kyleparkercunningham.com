@@ -3,7 +3,9 @@ title = "Dodecahedron"
 date = 2013-12-05
 category = "painting"
 year = 2013
+aliases = ["/dodecahedron/"]
 +++
+
 
 Dodecahedron by kyle parker cunningham
 
@@ -11,4 +13,4 @@ Dodecahedron by kyle parker cunningham
 
 The inspiration for this Buddha comes from a small wooden carving of the Buddha in the Temple of Namgyal Monastery, Dharamshala India.
 
-![dodecahedron](dodcahedron-copy.jpg)
+![dodecahedron](/oeuvre/painting/2013/dodecahedron/dodcahedron-copy.jpg)

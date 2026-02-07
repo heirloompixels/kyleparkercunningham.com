@@ -9,4 +9,4 @@ Rocket Propelled Clovis Point by kyle parker cunningham
 
 Oil on linen, 24 by 30 inches.
 
-![rocket-propelled-clovis-point](rpcp_1-2000px-1.jpg)
+![rocket-propelled-clovis-point](/oeuvre/painting/2020/rocket-propelled-clovis-point/rpcp_1-2000px-1.jpg)

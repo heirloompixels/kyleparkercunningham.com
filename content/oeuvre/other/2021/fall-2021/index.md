@@ -3,7 +3,9 @@ title = "fall 2021"
 date = 2021-09-21
 category = "other"
 year = 2021
+aliases = ["/fall-2021/"]
 +++
+
 
 fall 2021 by kyle parker cunningham
 
@@ -15,4 +17,4 @@ The first days of November have brought perfect fall weather. The type of fall I
 
 Work progresses on the new batch of paintings. Excitement for their completion.
 
-![fall-2021](fall2021.jpg)
+![fall-2021](/oeuvre/other/2021/fall-2021/fall2021.jpg)

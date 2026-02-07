@@ -3,7 +3,9 @@ title = "Bonsai Giant Sequoia"
 date = 2020-01-22
 category = "painting"
 year = 2020
+aliases = ["/bonsai-giant-sequoia/"]
 +++
+
 
 Bonsai Giant Sequoia by kyle parker cunningham
 
@@ -15,4 +17,4 @@ What if all of nature is in some sort of suspended cargo cult, dizzy with antici
 
 In this world is it really strange to imagine a Sandhill crane scavenging spaceships parts in order to make hazmat suit which taps a bonsai (giant) sequoia tree as it's oxygen source?
 
-![bonsai-giant-sequoia](bonsai_giant_sequoia.jpeg)
+![bonsai-giant-sequoia](/oeuvre/painting/2020/bonsai-giant-sequoia/bonsai_giant_sequoia.jpeg)

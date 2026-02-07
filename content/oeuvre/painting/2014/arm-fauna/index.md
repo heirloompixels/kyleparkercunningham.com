@@ -3,7 +3,9 @@ title = "Arm Fauna"
 date = 2014-12-04
 category = "painting"
 year = 2014
+aliases = ["/arm-fauna/"]
 +++
+
 
 Arm Fauna by kyle parker cunningham
 
@@ -19,4 +21,4 @@ At the heart of this series is my intense belief in the intelligence of nature. 
 
 This body of work, absurd as it is, looks to inspire hope as well as instill fear for the near term future of our planet in the face of unimaginable change.
 
-![arm-fauna](arm_fauna-copy.jpg)
+![arm-fauna](/oeuvre/painting/2014/arm-fauna/arm_fauna-copy.jpg)

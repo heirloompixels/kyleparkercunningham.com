@@ -3,7 +3,9 @@ title = "the river in the sky"
 date = 2024-07-29
 category = "painting"
 year = 2024
+aliases = ["/the-river-in-the-sky/"]
 +++
+
 
 the river in the sky by kyle parker cunningham
 
@@ -13,4 +15,4 @@ And then again upwards over the mountain.
 
 Time moves forward and my memory grows long, so long those choice memories of the past are now but impressions of emotion. Erosion of forms. Elongation of acceptance. Pronunciation of the winds.
 
-![the-river-in-the-sky](the-river-in-the-sky.jpg)
+![the-river-in-the-sky](/oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg)

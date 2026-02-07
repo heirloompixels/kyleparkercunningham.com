@@ -3,7 +3,9 @@ title = "Kite"
 date = 2018-09-25
 category = "printmaking"
 year = 2018
+aliases = ["/kite/"]
 +++
+
 
 Kite by kyle parker cunningham
 
@@ -21,10 +23,10 @@ I imagine they will fly it as a kite, because what could be more fun for a trunk
 
 8 by 10 inches. Drypoint intaglio print. Watercolor added by hand. 2018.
 
-![kite](061F1BAA-F70E-4665-BE8E-7353A3D0AE67.jpeg)
+![kite](/oeuvre/printmaking/2018/kite/061F1BAA-F70E-4665-BE8E-7353A3D0AE67.jpeg)
 
-![kite](B3CD48C7-A8D8-42DD-8AEA-0DA044936DF4.jpeg)
+![kite](/oeuvre/printmaking/2018/kite/B3CD48C7-A8D8-42DD-8AEA-0DA044936DF4.jpeg)
 
-![kite](printsNovember2018095.jpg)
+![kite](/oeuvre/printmaking/2018/kite/printsNovember2018095.jpg)
 
-![kite](elephant_with_kite_no3.jpg)
+![kite](/oeuvre/printmaking/2018/kite/elephant_with_kite_no3.jpg)

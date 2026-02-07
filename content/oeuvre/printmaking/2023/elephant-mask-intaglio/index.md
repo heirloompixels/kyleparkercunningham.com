@@ -7,6 +7,6 @@ year = 2023
 
 Elephant Mask by kyle parker cunningham
 
-![elephant-mask-intaglio](elephant-mask-5--1--1.jpeg)
+![elephant-mask-intaglio](/oeuvre/printmaking/2023/elephant-mask-intaglio/elephant-mask-5--1--1.jpeg)
 
-![elephant-mask-intaglio](elephant-mask-5--1-.jpeg)
+![elephant-mask-intaglio](/oeuvre/printmaking/2023/elephant-mask-intaglio/elephant-mask-5--1-.jpeg)

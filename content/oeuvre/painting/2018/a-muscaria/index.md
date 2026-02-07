@@ -3,7 +3,9 @@ title = "A. Muscaria"
 date = 2018-05-18
 category = "painting"
 year = 2018
+aliases = ["/a-muscaria/"]
 +++
+
 
 A. Muscaria by kyle parker cunningham
 
@@ -21,8 +23,8 @@ My guess: boiling up some A. Muscaria to leach away to amatoxins, pickling said 
 
 Acrylic on found panel. 14 x 28 inches (approximate). 2019. Private Collection.
 
-![a-muscaria](3B09A841-CBDA-48B7-8E70-6DE5E8030258_1_201_a.jpeg)
+![a-muscaria](/oeuvre/painting/2018/a-muscaria/3B09A841-CBDA-48B7-8E70-6DE5E8030258_1_201_a.jpeg)
 
-![a-muscaria](47EE4C9A-E931-471F-A102-3E3E8395FE66_1_105_c.jpeg)
+![a-muscaria](/oeuvre/painting/2018/a-muscaria/47EE4C9A-E931-471F-A102-3E3E8395FE66_1_105_c.jpeg)
 
-![a-muscaria](5D2E92B0-6D8C-43CD-BD08-119F8FCEB29F_1_102_o.jpeg)
+![a-muscaria](/oeuvre/painting/2018/a-muscaria/5D2E92B0-6D8C-43CD-BD08-119F8FCEB29F_1_102_o.jpeg)

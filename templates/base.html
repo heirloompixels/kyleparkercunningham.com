@@ -7,19 +7,14 @@
     <link rel="stylesheet" href="{{ get_url(path='/style.css') }}">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="{{ get_url(path='/') }}">home</a>
-            <a href="{{ get_url(path='/oeuvre/painting/') }}">painting</a>
-            <a href="{{ get_url(path='/oeuvre/printmaking/') }}">printmaking</a>
-            <a href="{{ get_url(path='/cinema/') }}">cinema</a>
-            <a href="{{ get_url(path='/about/') }}">about</a>
-        </nav>
+    <header class="site-header">
+        {% include "partials/navigation.html" %}
     </header>
     <main>
         {% block content %}{% endblock %}
     </main>
-    <footer>
+    <footer class="site-footer">
+        {% include "partials/social-links.html" %}
         <p>&copy; {{ now() | date(format="%Y") }} Kyle Parker Cunningham</p>
     </footer>
 </body>

@@ -12,4 +12,4 @@ oil on linen
 Winter 2020 - Spring 2021
 private collection
 
-![cydney-and-val](cydney_val.jpeg)
+![cydney-and-val](/oeuvre/painting/2021/cydney-and-val/cydney_val.jpeg)
