@@ -3,7 +3,9 @@ title = "cyclic repetition"
 date = 2021-12-18
 category = "painting"
 year = 2021
+aliases = ["/cyclic-repetition/"]
 +++
+
 
 cyclic repetition by kyle parker cunningham
 
@@ -35,6 +37,6 @@ And so they are hunted again, succumbing to the oldest techniques.
 Tumbling from great heights to utter destruction.
 Chips carefully collected.
 
-![cyclic-repetition](42E1182D-A2CA-4AD7-BE47-5C782C72C82D.jpeg)
+![cyclic-repetition](/oeuvre/painting/2021/cyclic-repetition/42E1182D-A2CA-4AD7-BE47-5C782C72C82D.jpeg)
 
-![cyclic-repetition](cyclic-repetition-1.jpeg)
+![cyclic-repetition](/oeuvre/painting/2021/cyclic-repetition/cyclic-repetition-1.jpeg)

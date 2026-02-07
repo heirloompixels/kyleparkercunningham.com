@@ -9,4 +9,4 @@ Alligator Juniper (Adobe Canyon) by kyle parker cunningham
 
 8 x 10 inches. Intaglio Drypoint Print. Spring 2016. private collection.
 
-![alligator-juniper-2](adobeCanyonAlligatorJuniper.jpg)
+![alligator-juniper-2](/oeuvre/printmaking/2016/alligator-juniper-2/adobeCanyonAlligatorJuniper.jpg)

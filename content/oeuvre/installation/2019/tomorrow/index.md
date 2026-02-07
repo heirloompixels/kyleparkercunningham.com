@@ -9,4 +9,4 @@ Tomorrow by kyle parker cunningham
 
 Site Specific Installation, Las Cruces New Mexico.
 
-![tomorrow](pano-three_quarters-web.png)
+![tomorrow](/oeuvre/installation/2019/tomorrow/pano-three_quarters-web.png)

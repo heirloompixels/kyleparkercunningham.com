@@ -11,4 +11,4 @@ oil on linen. 11x14 inches. Fall 2018.
 
 We all wear masks most of the time.
 
-![elephant-mask](elephan_mask-original.jpg)
+![elephant-mask](/oeuvre/painting/2018/elephant-mask/elephan_mask-original.jpg)

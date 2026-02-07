@@ -11,4 +11,4 @@ oil on linen. 11x14 inches. spring 2018.
 
 Even mega fauna needs dental work.
 
-![crystal-tooth-whale](crystal_tooth_whale.jpg)
+![crystal-tooth-whale](/oeuvre/painting/2018/crystal-tooth-whale/crystal_tooth_whale.jpg)

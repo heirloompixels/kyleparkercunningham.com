@@ -3,7 +3,9 @@ title = "Flicker Rhino"
 date = 2018-05-19
 category = "painting"
 year = 2018
+aliases = ["/flicker-rhino/"]
 +++
+
 
 Flicker Rhino by kyle parker cunningham
 
@@ -11,4 +13,4 @@ Airdrops in the night. This Rhino has it figured out. Friends with the Flicker f
 
 Acrylic on Found Object. 13 x 20 inches. 2018. Private Collection.
 
-![flicker-rhino](143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.jpeg)
+![flicker-rhino](/oeuvre/painting/2018/flicker-rhino/143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.jpeg)

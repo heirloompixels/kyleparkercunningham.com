@@ -9,6 +9,6 @@ Sunflowers by kyle parker cunningham
 
 Intaglio Drypoint Print.
 
-![sunflowers](IMG_3954-1.jpeg)
+![sunflowers](/oeuvre/printmaking/2022/sunflowers/IMG_3954-1.jpeg)
 
-![sunflowers](IMG_3954.jpeg)
+![sunflowers](/oeuvre/printmaking/2022/sunflowers/IMG_3954.jpeg)

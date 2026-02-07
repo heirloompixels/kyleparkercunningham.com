@@ -3,7 +3,9 @@ title = "airlift"
 date = 2021-07-18
 category = "printmaking"
 year = 2021
+aliases = ["/airlift/"]
 +++
+
 
 airlift by kyle parker cunningham
 
@@ -18,8 +20,8 @@ Intaglio Drypoint Print
 Image Size: 6 x 9 inches
 Paper Size roughly 8 x 10 inches
 
-![airlift](airlift-5.jpeg)
+![airlift](/oeuvre/printmaking/2021/airlift/airlift-5.jpeg)
 
-![airlift](airlift-6-1.jpeg)
+![airlift](/oeuvre/printmaking/2021/airlift/airlift-6-1.jpeg)
 
-![airlift](airlift-6.jpeg)
+![airlift](/oeuvre/printmaking/2021/airlift/airlift-6.jpeg)

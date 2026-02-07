@@ -9,4 +9,4 @@ Tubed Pachyderm by kyle parker cunningham
 
 Where elephantine strength meets industrial form, the ancient pachyderm reimagined through modern mechanical elements.
 
-![tubed-pachydeerm](tubed-pachyderm-1.jpeg)
+![tubed-pachydeerm](/oeuvre/printmaking/2023/tubed-pachydeerm/tubed-pachyderm-1.jpeg)

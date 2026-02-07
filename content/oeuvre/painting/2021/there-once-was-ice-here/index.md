@@ -3,7 +3,9 @@ title = "there once was ice here"
 date = 2021-06-09
 category = "painting"
 year = 2021
+aliases = ["/there-once-was-ice-here/"]
 +++
+
 
 there once was ice here by kyle parker cunningham
 
@@ -15,4 +17,4 @@ These polar bears, they learned how to blow glass and crafted mostly round bubbl
 
 Binary detritus of a bygone era.
 
-![there-once-was-ice-here](there_once_was_ice_here.jpg)
+![there-once-was-ice-here](/oeuvre/painting/2021/there-once-was-ice-here/there_once_was_ice_here.jpg)

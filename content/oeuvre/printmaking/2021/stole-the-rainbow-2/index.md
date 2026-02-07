@@ -14,4 +14,4 @@ Some of us just have more effective tactics than others.
 drypoint intaglio print
 hand painted with watercolor and gouache
 
-![stole-the-rainbow-2](F4DF52FB-CE8D-40CA-9ACE-DED4FF983923.jpeg)
+![stole-the-rainbow-2](/oeuvre/printmaking/2021/stole-the-rainbow-2/F4DF52FB-CE8D-40CA-9ACE-DED4FF983923.jpeg)

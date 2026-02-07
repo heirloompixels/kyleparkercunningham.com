@@ -3,12 +3,14 @@ title = "Ghost Thugs"
 date = 2022-04-05
 category = "printmaking"
 year = 2022
+aliases = ["/ghost-thugs/"]
 +++
+
 
 Ghost Thugs by kyle parker cunningham
 
 There will always be individuals being individuals.
 
-![ghost-thugs](IMG_3946-1.jpeg)
+![ghost-thugs](/oeuvre/printmaking/2022/ghost-thugs/IMG_3946-1.jpeg)
 
-![ghost-thugs](IMG_3946.jpeg)
+![ghost-thugs](/oeuvre/printmaking/2022/ghost-thugs/IMG_3946.jpeg)

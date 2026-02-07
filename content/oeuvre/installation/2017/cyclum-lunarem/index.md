@@ -3,7 +3,9 @@ title = "Cyclum Lunarem"
 date = 2017-09-21
 category = "installation"
 year = 2017
+aliases = ["/cyclum-lunarem/"]
 +++
+
 
 Cyclum Lunarem by kyle parker cunningham
 
@@ -15,10 +17,10 @@ Installation size is variable based on shape as well as spacing between the moon
 
 This piece plays well with atmospheric light due to the gold leaf.
 
-![cyclum-lunarem](cyclum_lunarem_with_trunk.png)
+![cyclum-lunarem](/oeuvre/installation/2017/cyclum-lunarem/cyclum_lunarem_with_trunk.png)
 
-![cyclum-lunarem](DSCF2532.jpg)
+![cyclum-lunarem](/oeuvre/installation/2017/cyclum-lunarem/DSCF2532.jpg)
 
-![cyclum-lunarem](cyclum_lunarem-2048.jpeg)
+![cyclum-lunarem](/oeuvre/installation/2017/cyclum-lunarem/cyclum_lunarem-2048.jpeg)
 
-![cyclum-lunarem](cyclum-close.jpg)
+![cyclum-lunarem](/oeuvre/installation/2017/cyclum-lunarem/cyclum-close.jpg)

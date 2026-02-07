@@ -7,4 +7,4 @@ year = 2021
 
 path though the autumn leaves by kyle parker cunningham
 
-![path-though-the-autumn-leaves](path_though_the_autumn_leaves_2.jpg)
+![path-though-the-autumn-leaves](/oeuvre/painting/2021/path-though-the-autumn-leaves/path_though_the_autumn_leaves_2.jpg)
