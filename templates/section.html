@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<h1>{{ section.title }}</h1>
+{% if section.content %}<div>{{ section.content | safe }}</div>{% endif %}
+<ul>
+{% for page in section.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+{% endblock %}

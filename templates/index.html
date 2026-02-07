@@ -1,8 +1,59 @@
 {% extends "base.html" %}
-
-<h1>Something</h1>
-
 {% block content %}
-{{ section.content | safe }}
+<h1>kyle parker cunningham</h1>
+<p>I paint the life I live.</p>
 
-{% endblock content %}
+<h2>painting</h2>
+<ul>
+{% set painting = get_section(path="oeuvre/painting/_index.md") %}
+{% for page in painting.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>printmaking</h2>
+<ul>
+{% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
+{% for page in printmaking.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>installation</h2>
+<ul>
+{% set installation = get_section(path="oeuvre/installation/_index.md") %}
+{% for page in installation.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>sculpture</h2>
+<ul>
+{% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
+{% for page in sculpture.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>exhibitions</h2>
+<ul>
+{% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% for page in exhibitions.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>other</h2>
+<ul>
+{% set other = get_section(path="oeuvre/other/_index.md") %}
+{% for page in other.pages | sort(attribute="date") | reverse %}
+<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
+{% endfor %}
+</ul>
+
+<h2>pages</h2>
+<ul>
+<li><a href="/about/">about</a></li>
+<li><a href="/cinema/">cinema</a></li>
+</ul>
+{% endblock %}
