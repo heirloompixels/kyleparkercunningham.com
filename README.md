@@ -50,7 +50,7 @@ Visit http://localhost:1111 to preview the site.
 
 ### New Artwork:
 1. Create new markdown file in appropriate category/year directory:
-   `content/oeuvre/painting/2024/new-artwork.md`
+   `content/catalog-raisonne/painting/2024/new-artwork.md`
 
 2. Front matter format:
    ```toml
