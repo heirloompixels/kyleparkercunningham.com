@@ -5,7 +5,7 @@
 
 <h2>painting</h2>
 <ul>
-{% set painting = get_section(path="catalog-raisonne/painting/_index.md") %}
+{% set painting = get_section(path="oeuvre/painting/_index.md") %}
 {% for page in painting.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
@@ -13,7 +13,7 @@
 
 <h2>printmaking</h2>
 <ul>
-{% set printmaking = get_section(path="catalog-raisonne/printmaking/_index.md") %}
+{% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
 {% for page in printmaking.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
@@ -21,7 +21,7 @@
 
 <h2>installation</h2>
 <ul>
-{% set installation = get_section(path="catalog-raisonne/installation/_index.md") %}
+{% set installation = get_section(path="oeuvre/installation/_index.md") %}
 {% for page in installation.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
@@ -29,7 +29,7 @@
 
 <h2>sculpture</h2>
 <ul>
-{% set sculpture = get_section(path="catalog-raisonne/sculpture/_index.md") %}
+{% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
 {% for page in sculpture.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
@@ -37,7 +37,7 @@
 
 <h2>exhibitions</h2>
 <ul>
-{% set exhibitions = get_section(path="catalog-raisonne/exhibitions/_index.md") %}
+{% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
 {% for page in exhibitions.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
@@ -45,7 +45,7 @@
 
 <h2>other</h2>
 <ul>
-{% set other = get_section(path="catalog-raisonne/other/_index.md") %}
+{% set other = get_section(path="oeuvre/other/_index.md") %}
 {% for page in other.pages | sort(attribute="date") | reverse %}
 <li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
 {% endfor %}
