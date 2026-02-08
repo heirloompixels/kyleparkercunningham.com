@@ -7,9 +7,9 @@
 
 ## 2) Site Architecture
 
-### 2.1 Catalog Raisonne (Primary)
-- **Primary name:** Catalog Raisonne
-- **Legacy synonym:** Oeuvre (redirects preserved)
+### 2.1 Oeuvre (Primary)
+- **Primary name:** Oeuvre
+- **Legacy synonym:** Catalog Raisonne (redirects preserved)
 - **Scope:** Every work you have created.
 - **Disciplines (initial):**
   - painting
@@ -27,7 +27,7 @@
 - Each entry includes embeds, stills, and metadata.
 
 ### 2.3 Projects
-- Projects are groupings of works across the catalog.
+- Projects are groupings of works across the archive.
 - Each project includes:
   - overview / statement
   - installation photos
@@ -43,7 +43,7 @@ All works use the same schema to support consistency and long-term querying.
 - `title` (string, required)
 - `year` (integer or string, required)
 - `medium` (string or list)
-- `discipline` (string; one of the catalog sections)
+- `discipline` (string; one of the archive sections)
 - `dimensions` (string)
 - `materials` (list)
 - `edition` (string, optional)
@@ -78,13 +78,13 @@ All works use the same schema to support consistency and long-term querying.
 
 ### 4.1 Works
 - Each work is a page bundle:
-  - `content/catalog-raisonne/<discipline>/<year>/<slug>/index.md`
+  - `content/oeuvre/<discipline>/<year>/<slug>/index.md`
   - Images are co-located in the same folder.
 
 Example:
 ```
-content/catalog-raisonne/painting/2024/the-river-in-the-sky/index.md
-content/catalog-raisonne/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg
+content/oeuvre/painting/2024/the-river-in-the-sky/index.md
+content/oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg
 ```
 
 ### 4.2 Cinema
@@ -147,10 +147,10 @@ content/about/<topic>/index.md
 
 ## 10) Roadmap (Phased)
 
-### Phase 1: Catalog Foundation
+### Phase 1: Archive Foundation
 - Standardize frontmatter schema in all work entries.
 - Ensure all works are properly bundled with images.
-- Verify redirects from `/oeuvre/` to `/catalog-raisonne/`.
+- Verify redirects from `/catalog-raisonne/` to `/oeuvre/`.
 
 ### Phase 2: Project System
 - Add `projects` section.
