@@ -15,4 +15,4 @@ Wonder, about water vapor, dust and light angles. Effortlessly floating down the
 
 Sunset approaches and everyone has eyes glued to the horizon.
 
-![Low angle sun rays](/oeuvre/painting/2024/low-angle-sun-rays/rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg)
+![Oil painting of billowing cumulus clouds rendered as voluminous, rounded forms in warm pinks, peaches, and whites with deep crimson shadows, set against a rich dark blue sky.](/oeuvre/painting/2024/low-angle-sun-rays/rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg)

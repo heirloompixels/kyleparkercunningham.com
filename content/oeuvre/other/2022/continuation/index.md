@@ -13,4 +13,4 @@ Continuation by kyle parker cunningham
 
 Acrylic, Latex and Oil on Canvas. 24 by 30 inches. Spring 2022. Private Collection.
 
-![Continuation](/oeuvre/other/2022/continuation/continuation-2000px.jpeg)
+![Acrylic, latex, and oil painting on canvas of four elongated skeletal figures in black and white standing in a row against a flat gray background, connected by thin lines, with angular limbs and abstract white heads.](/oeuvre/other/2022/continuation/continuation-2000px.jpeg)

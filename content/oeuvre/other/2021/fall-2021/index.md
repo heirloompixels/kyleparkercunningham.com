@@ -19,4 +19,4 @@ The first days of November have brought perfect fall weather. The type of fall I
 
 Work progresses on the new batch of paintings. Excitement for their completion.
 
-![Fall 2021](/oeuvre/other/2021/fall-2021/fall2021.jpg)
+![Photograph of cottonwood trees in full autumn color with golden and yellow leaves framing a view through to more trees under a clear blue sky in Truth or Consequences, New Mexico.](/oeuvre/other/2021/fall-2021/fall2021.jpg)

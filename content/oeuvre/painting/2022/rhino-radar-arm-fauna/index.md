@@ -13,4 +13,4 @@ Rhino Radar (Arm Fauna) by kyle parker cunningham
 
 A rhino patrols the outer perimeter looking for snacks while being aware of everything. Oil on Gesso Panel. Twelve by Sixteen Inches. Fall 2016, reworked 2022.
 
-![Rhino radar arm fauna](/oeuvre/painting/2022/rhino-radar-arm-fauna/rhino-radar-2000px.jpeg)
+![Oil painting on gesso panel of a gray rhinoceros with a satellite dish antenna extending from its back, standing on golden-yellow ground against a deeply textured dark teal sky with expressive brushstrokes.](/oeuvre/painting/2022/rhino-radar-arm-fauna/rhino-radar-2000px.jpeg)

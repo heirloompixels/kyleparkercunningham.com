@@ -13,4 +13,4 @@ Surviving the Asteroid by kyle parker cunningham
 
 Oil, Oil Stick, Acrylic and Latex on Canvas. 24 by 30 inches. Winter 2022.
 
-![Surviving the asteroid](/oeuvre/painting/2022/surviving-the-asteroid/SDIM8385-1.jpeg)
+![Mixed media painting of a whimsical upright crocodile-like creature with a long zigzag-toothed snout, white body, and small yellow claws, standing on a dark rust-colored ground against a muted pink background.](/oeuvre/painting/2022/surviving-the-asteroid/SDIM8385-1.jpeg)

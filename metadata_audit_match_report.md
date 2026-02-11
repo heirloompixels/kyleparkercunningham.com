@@ -1,0 +1,116 @@
+# Metadata Match Report
+
+Matched rows: 50
+Unmatched rows: 105
+Ambiguous title matches: 2
+
+## Unmatched (file, title, year)
+- `content/oeuvre/printmaking/2016/day-hike/index.md` | Day Hike | 2016
+- `content/oeuvre/printmaking/2016/alligator-juniper-2/index.md` | Alligator Juniper (Adobe Canyon) | 2016
+- `content/oeuvre/printmaking/2016/boom-box/index.md` | Boom Box | 2016
+- `content/oeuvre/printmaking/2016/air-lift/index.md` | Air Lift | 2016
+- `content/oeuvre/printmaking/2018/teardrop/index.md` | Teardrop | 2018
+- `content/oeuvre/printmaking/2018/lunarem/index.md` | Lunarem | 2018
+- `content/oeuvre/printmaking/2018/aeropress/index.md` | Aeropress | 2018
+- `content/oeuvre/printmaking/2018/deep-sea/index.md` | Deep Sea | 2018
+- `content/oeuvre/printmaking/2018/field-theory-ap/index.md` | Field Theory AP | 2018
+- `content/oeuvre/printmaking/2018/kite/index.md` | Kite | 2018
+- `content/oeuvre/printmaking/2018/120-volts/index.md` | 120 Volts | 2018
+- `content/oeuvre/printmaking/2018/stole-the-rainbow/index.md` | Stole the Rainbow | 2018
+- `content/oeuvre/printmaking/2018/tecate/index.md` | Tecate | 2018
+- `content/oeuvre/printmaking/2018/alligator-juniper/index.md` | Alligator Juniper | 2018
+- `content/oeuvre/printmaking/2020/alligator-juniper-nogal/index.md` | Alligator Juniper | 2020
+- `content/oeuvre/printmaking/2021/expansion-drypoint/index.md` | expansion drypoint | 2021
+- `content/oeuvre/printmaking/2021/rocks-glass/index.md` | rocks glass | 2021
+- `content/oeuvre/printmaking/2021/stole-the-rainbow-2/index.md` | stole the rainbow | 2021
+- `content/oeuvre/printmaking/2021/balance/index.md` | balance | 2021
+- `content/oeuvre/printmaking/2021/vacation/index.md` | vacation | 2021
+- `content/oeuvre/printmaking/2019/pruning/index.md` | Pruning | 2019
+- `content/oeuvre/printmaking/2019/six/index.md` | Six | 2019
+- `content/oeuvre/printmaking/2017/riot-ghost/index.md` | Riot Ghost | 2017
+- `content/oeuvre/printmaking/2023/astro-bee/index.md` | Astro Bee | 2023
+- `content/oeuvre/printmaking/2023/saber-tooth-puma/index.md` | Saber Tooth Puma | 2023
+- `content/oeuvre/printmaking/2023/bottled-oxygen/index.md` | Bottled Oxygen | 2023
+- `content/oeuvre/printmaking/2023/dayhike/index.md` | Dayhike | 2023
+- `content/oeuvre/printmaking/2023/tubed-pachydeerm/index.md` | Tubed Pachyderm | 2023
+- `content/oeuvre/printmaking/2023/shade-cloud/index.md` | Shade Cloud | 2023
+- `content/oeuvre/printmaking/2023/in-the-pines/index.md` | In The Pines | 2023
+- `content/oeuvre/printmaking/2023/daydream/index.md` | Daydream | 2023
+- `content/oeuvre/printmaking/2023/elephant-mask-intaglio/index.md` | Elephant Mask | 2023
+- `content/oeuvre/printmaking/2023/gardner/index.md` | Gardner | 2023
+- `content/oeuvre/printmaking/2022/olympus/index.md` | Olympus | 2022
+- `content/oeuvre/printmaking/2022/nogal-canyon/index.md` | Nogal Canyon | 2022
+- `content/oeuvre/printmaking/2022/sunflowers/index.md` | Sunflowers | 2022
+- `content/oeuvre/printmaking/2022/origami-beetroot/index.md` | Origami Beetroot | 2022
+- `content/oeuvre/printmaking/2022/blue-corn/index.md` | Blue Corn | 2022
+- `content/oeuvre/printmaking/2022/submerged/index.md` | Submerged | 2022
+- `content/oeuvre/printmaking/2022/ghost-thugs/index.md` | Ghost Thugs | 2022
+- `content/oeuvre/printmaking/2022/space-owl/index.md` | Space Owl | 2022
+- `content/oeuvre/painting/2016/spring/index.md` | Spring | 2016
+- `content/oeuvre/painting/2018/flicker-rhino/index.md` | Flicker Rhino | 2018
+- `content/oeuvre/painting/2018/a-muscaria/index.md` | A. Muscaria | 2018
+- `content/oeuvre/painting/2018/octobat/index.md` | Octobat | 2018
+- `content/oeuvre/painting/2018/narwhal/index.md` | Narwhal | 2018
+- `content/oeuvre/painting/2018/hands/index.md` | Hands | 2018
+- `content/oeuvre/painting/2018/airdrop/index.md` | Airdrop | 2018
+- `content/oeuvre/painting/2020/nana/index.md` | Nana | 2020
+- `content/oeuvre/painting/2020/michael/index.md` | Michael | 2020
+- `content/oeuvre/painting/2020/shawn/index.md` | Shawn Fischer | 2020
+- `content/oeuvre/painting/2021/the-mother-bear/index.md` | the mother bear | 2021
+- `content/oeuvre/painting/2021/path-though-the-autumn-leaves/index.md` | path though the autumn leaves | 2021
+- `content/oeuvre/painting/2021/tugboat-whale-sequoia/index.md` | tugboat whale sequoia | 2021
+- `content/oeuvre/painting/2021/transplanter/index.md` | transplanter | 2021
+- `content/oeuvre/painting/2021/rhino-radar/index.md` | rhino radar | 2021
+- `content/oeuvre/painting/2021/preservation-cactus/index.md` | preservation cactus | 2021
+- `content/oeuvre/painting/2021/the-berry-picker/index.md` | the berry picker | 2021
+- `content/oeuvre/painting/2019/monsoon-bird/index.md` | Monsoon Bird | 2019
+- `content/oeuvre/painting/2019/self-portrait/index.md` | Self Portrait | 2019
+- `content/oeuvre/painting/2017/yellow-and-orange/index.md` | Yellow and Orange | 2017
+- `content/oeuvre/painting/2015/enso/index.md` | Enso | 2015
+- `content/oeuvre/painting/2023/autumnal-twilight/index.md` | Autumnal Twilight | 2023
+- `content/oeuvre/painting/2023/untitled-begins/index.md` | Untitled Begins | 2023
+- `content/oeuvre/painting/2023/harmonics/index.md` | Harmonics | 2023
+- `content/oeuvre/painting/2023/geometric-anatomy/index.md` | Geometric Anatomy | 2023
+- `content/oeuvre/painting/2023/calavera-del-caballo/index.md` | Calavera Del Caballo | 2023
+- `content/oeuvre/painting/2023/first-contact/index.md` | First Contact | 2023
+- `content/oeuvre/painting/2024/low-angle-sun-rays/index.md` | low angle sun rays | 2024
+- `content/oeuvre/painting/2024/equilateral-equilibrium/index.md` | equilateral equilibrium | 2024
+- `content/oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/index.md` | alpenglow at mineral creek with the adults after the babies have gone to sleep | 2024
+- `content/oeuvre/painting/2024/the-atmospheres-electric-finger/index.md` | the atmosphere's electric finger | 2024
+- `content/oeuvre/painting/2024/symbologies-intertwine-electronically/index.md` | symbologies intertwine electronically | 2024
+- `content/oeuvre/painting/2024/triangular-circles/index.md` | triangular circles | 2024
+- `content/oeuvre/painting/2024/two-squared/index.md` | two squared | 2024
+- `content/oeuvre/painting/2024/felt-and-lived/index.md` | felt and lived | 2024
+- `content/oeuvre/painting/2024/the-algebra-of-water-vapor/index.md` | the algebra of water vapor | 2024
+- `content/oeuvre/painting/2024/separate-yet-delicate-representations-of-existence/index.md` | separate, yet delicate, representations of existence | 2024
+- `content/oeuvre/painting/2024/above-the-clouds/index.md` | above the clouds | 2024
+- `content/oeuvre/painting/2024/the-river-in-the-sky/index.md` | the river in the sky | 2024
+- `content/oeuvre/painting/2024/out-there-on-the-horizon-a-solitary-cloud/index.md` | out there, on the horizon, a solitary cloud | 2024
+- `content/oeuvre/painting/2024/towers/index.md` | towers | 2024
+- `content/oeuvre/painting/2024/bottled-lightning/index.md` | bottled lightning | 2024
+- `content/oeuvre/painting/2024/does-math-control-nature/index.md` | does math control nature? | 2024
+- `content/oeuvre/painting/2024/twenty-one-years/index.md` | twenty-one years | 2024
+- `content/oeuvre/painting/2024/pollen-and-larvae/index.md` | pollen and larvae | 2024
+- `content/oeuvre/painting/2024/orbits-plankton-dreaming-of-a-sedimentary-afterlife/index.md` | orbits (plankton dreaming of a sedimentary afterlife) | 2024
+- `content/oeuvre/painting/2014/coffee-carafe/index.md` | Coffee Carafe | 2014
+- `content/oeuvre/painting/2014/espresso-machine/index.md` | espresso machine | 2014
+- `content/oeuvre/painting/2014/arm-fauna/index.md` | Arm Fauna | 2014
+- `content/oeuvre/installation/2020/solstice/index.md` | Solstice | 2020
+- `content/oeuvre/installation/2019/tomorrow/index.md` | Tomorrow | 2019
+- `content/oeuvre/installation/2019/tomorrow-desert-archaic/index.md` | Tomorrow | 2019
+- `content/oeuvre/installation/2019/prophets/index.md` | Prophets | 2019
+- `content/oeuvre/installation/2017/cyclum-lunarem/index.md` | Cyclum Lunarem | 2017
+- `content/oeuvre/installation/2023/the-meaning-of-time/index.md` | The Meaning of Time | 2023
+- `content/oeuvre/installation/2022/once-creatures-existed/index.md` | Once Creatures Existed | 2022
+- `content/oeuvre/exhibitions/2022/b-sides-rarities/index.md` | B-sides & Rarities | 2022
+- `content/oeuvre/other/2018/space-worm/index.md` | Space Worm | 2018
+- `content/oeuvre/other/2021/owl/index.md` | owl | 2021
+- `content/oeuvre/other/2021/fall-2021/index.md` | fall 2021 | 2021
+- `content/oeuvre/other/2022/mycellium/index.md` | Mycellium | 2022
+- `content/oeuvre/other/2022/thread/index.md` | Thread | 2022
+- `content/oeuvre/other/2022/abduction/index.md` | Abduction | 2022
+- `content/oeuvre/sculpture/2021/molecule/index.md` | molecule | 2021
+
+## Ambiguous (file, title, candidate count)
+- `content/oeuvre/printmaking/2023/elephant-mask-intaglio/index.md` | Elephant Mask | 2
+- `content/oeuvre/printmaking/2022/blue-corn/index.md` | Blue Corn | 2

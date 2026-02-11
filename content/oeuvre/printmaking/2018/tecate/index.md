@@ -13,6 +13,6 @@ Tecate by kyle parker cunningham
 
 intaglio drypoint prints. printed area approx 6 x 9 inches. handtorn paper approx 8 x 10 inches.
 
-![Tecate](/oeuvre/printmaking/2018/tecate/IMG_1090-1.jpeg)
+![Drypoint intaglio print of a Tecate beer can with its distinctive eagle logo rendered in bold black crosshatching, hand-colored with red-orange watercolor on the top rim and bottom half. Printed on handtorn paper.](/oeuvre/printmaking/2018/tecate/IMG_1090-1.jpeg)
 
-![Tecate](/oeuvre/printmaking/2018/tecate/IMG_1090.jpeg)
+![Same Tecate beer can print showing the full handtorn paper with the edition number, title, and artist signature written in pencil below the plate mark.](/oeuvre/printmaking/2018/tecate/IMG_1090.jpeg)

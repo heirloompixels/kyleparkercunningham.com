@@ -13,4 +13,4 @@ Prophets by kyle parker cunningham
 
 Site specific installation. Painting on Found Wood. Private collection.
 
-![Prophets](/oeuvre/installation/2019/prophets/prophets.png)
+![Site-specific installation of paintings on found wood panels, depicting figurative and symbolic imagery arranged as a group on a wall](/oeuvre/installation/2019/prophets/prophets.png)

@@ -17,4 +17,4 @@ In May of 2022 the Black Fire started near Diamond Creek in the Aldo Leopold Wil
 
 Fire is an important and natural part of the ecosystem but the fires we have today are monsters fueled by our changing climate and destructive beyond imagination. They are a reality of our modern world and it is hard to come to terms with the simple fact that I will watch many beloved wilderness burn every year for the rest of my life.
 
-![The black fire](/oeuvre/painting/2022/the-black-fire/the-black-fire-2000px.jpeg)
+![Oil on linen painting of a row of stylized green conifer trees with brown trunks, standing on red-orange scorched earth against a heavily textured gray and white sky with scattered flashes of red and orange suggesting fire and smoke.](/oeuvre/painting/2022/the-black-fire/the-black-fire-2000px.jpeg)

@@ -12,4 +12,4 @@ Tomorrow by kyle parker cunningham
 
 Site specific installation at Desert Archaic in Truth or Consequences, New Mexico.
 
-![Tomorrow desert archaic](/oeuvre/installation/2019/tomorrow-desert-archaic/tomorrow-pyramid.jpg)
+![Pyramid-shaped wall installation at Desert Archaic gallery composed of dozens of painted found-wood panels and boards, featuring imagery of skulls, lungs, rib cages, animals, arrows, text, and geometric symbols in warm earth tones with colorful accents, flanked by two sun-shaped metal sculptures](/oeuvre/installation/2019/tomorrow-desert-archaic/tomorrow-pyramid.jpg)
