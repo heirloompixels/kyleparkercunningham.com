@@ -17,4 +17,4 @@ I adore owls and hear them most places I sleep outside. I'm fascinated by the co
 
 This painting is of four of these wonders I have known, some by site and some by voice only but all of them for extended periods of time.
 
-![Saturday evening owls](/oeuvre/painting/2022/saturday-evening-owls/saturday-evening-owls.jpeg)
+![Acrylic and latex painting of four stylized owls standing in a row, each with distinct square or rounded faces and pointed ear tufts, rendered in pinks, mauves, and grays against a loosely brushed background of gray, pink, and orange.](/oeuvre/painting/2022/saturday-evening-owls/saturday-evening-owls.jpeg)

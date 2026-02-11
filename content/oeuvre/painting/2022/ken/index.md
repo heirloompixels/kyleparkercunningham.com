@@ -13,4 +13,4 @@ Ken by kyle parker cunningham
 
 Oil on Panel. 2022.
 
-![Ken](/oeuvre/painting/2022/ken/ken-2000px.jpeg)
+![Oil on panel portrait of an older man with gray hair and a mustache, wearing a blue jacket over a turquoise shirt, rendered with visible impasto brushwork against a pale yellow textured background.](/oeuvre/painting/2022/ken/ken-2000px.jpeg)

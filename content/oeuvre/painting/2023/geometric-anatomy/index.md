@@ -13,4 +13,4 @@ Geometric Anatomy by kyle parker cunningham
 
 Oil on Panel (ACM), 20 by 20 inches, 2023.
 
-![Geometric anatomy](/oeuvre/painting/2023/geometric-anatomy/geometric-anatomy-final-perfect.jpeg)
+![Oil painting of a crouched figure with arms wrapped around drawn-up knees, rendered in deep warm browns against a pale yellow background crisscrossed with dark red geometric lines forming angular triangular shapes.](/oeuvre/painting/2023/geometric-anatomy/geometric-anatomy-final-perfect.jpeg)

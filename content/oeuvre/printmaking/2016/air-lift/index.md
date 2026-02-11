@@ -13,4 +13,4 @@ Air Lift by kyle parker cunningham
 
 5 x 7 inches. Drypoint Intaglio Print. Spring 2016.
 
-![Air lift](/oeuvre/printmaking/2016/air-lift/airLift.jpg)
+![Drypoint intaglio print of a small elephant suspended in midair by two hot air balloons connected with ropes, rendered in black ink on cream paper with delicate crosshatched lines.](/oeuvre/printmaking/2016/air-lift/airLift.jpg)

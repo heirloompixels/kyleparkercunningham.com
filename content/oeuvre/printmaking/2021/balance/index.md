@@ -17,4 +17,4 @@ drypoint intaglio printmaking on rives bfk, handcolored with gouache
 
 Finding balance in the forest. Everything is something and is something else at the same time. All is connected and coincidence rules the day. Tomorrow I find myself ideal in balance and rhythm with the trees.
 
-![Balance](/oeuvre/printmaking/2021/balance/balance2-1500w.jpeg)
+![Drypoint intaglio print on Rives BFK paper featuring dozens of golden-yellow gouache-painted triangles in varying sizes scattered across the composition, each subdivided into smaller triangular shapes, photographed on a bed of brown pine needles.](/oeuvre/printmaking/2021/balance/balance2-1500w.jpeg)

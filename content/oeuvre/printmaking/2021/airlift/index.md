@@ -22,8 +22,8 @@ Intaglio Drypoint Print
 Image Size: 6 x 9 inches
 Paper Size roughly 8 x 10 inches
 
-![Airlift](/oeuvre/printmaking/2021/airlift/airlift-5.jpeg)
+![Drypoint intaglio print of an origami paper crane lifting a soft blue-green watercolored cloud by a thin string, with delicate crosshatched lines on the crane against a pale background.](/oeuvre/printmaking/2021/airlift/airlift-5.jpeg)
 
-![Airlift](/oeuvre/printmaking/2021/airlift/airlift-6-1.jpeg)
+![Vibrant yellow variant of the Airlift print with the origami crane carrying a white cloud, the bold hand-painted yellow gouache background contrasting with the black drypoint linework.](/oeuvre/printmaking/2021/airlift/airlift-6-1.jpeg)
 
-![Airlift](/oeuvre/printmaking/2021/airlift/airlift-6.jpeg)
+![Full view of the yellow Airlift drypoint print showing the complete composition of the angular paper crane tethered to a billowing cloud, with the artist's signature and edition number below on white paper.](/oeuvre/printmaking/2021/airlift/airlift-6.jpeg)

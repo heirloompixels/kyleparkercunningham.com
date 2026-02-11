@@ -13,4 +13,4 @@ Calavera Del Caballo by kyle parker cunningham
 
 Oil on Panel, 16 x 20 inches.
 
-![Calavera del caballo](/oeuvre/painting/2023/calavera-del-caballo/Calaver-Del-Caballo-2048.jpeg)
+![Oil painting of a woman in a pink shawl holding a weathered white horse skull up to her face, partially obscuring it, against a muted gray-green textured background.](/oeuvre/painting/2023/calavera-del-caballo/Calaver-Del-Caballo-2048.jpeg)

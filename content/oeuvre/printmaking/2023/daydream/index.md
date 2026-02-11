@@ -13,4 +13,4 @@ Daydream by kyle parker cunningham
 
 The space between waking and sleeping, where reality softens and imagination takes form in delicate lines and shadow.
 
-![Daydream](/oeuvre/printmaking/2023/daydream/daydream-4.jpeg)
+![Black and white intaglio print of a small face in profile with angular crystalline forms sprouting from the head, centered in a large field of scratched and textured plate tone on cream paper.](/oeuvre/printmaking/2023/daydream/daydream-4.jpeg)
