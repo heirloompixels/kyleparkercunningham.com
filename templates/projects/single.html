@@ -23,6 +23,9 @@
 {% if page.extra.works %}
   <section class="latest-additions">
     <h2>Works in this project</h2>
+    {% if page.extra.catalog_pdf %}
+      <p><a href="{{ page.extra.catalog_pdf | urlencode }}">Download catalog (PDF)</a></p>
+    {% endif %}
     <table class="works-table">
       <thead>
         <tr>
