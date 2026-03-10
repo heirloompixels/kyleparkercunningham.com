@@ -3,9 +3,37 @@
 {% block content %}
 <h1>{{ section.title }}</h1>
 {% if section.content %}<div>{{ section.content | safe }}</div>{% endif %}
-<ul>
-{% for page in section.pages | sort(attribute="date") | reverse %}
-<li><a href="{{ page.permalink }}">{{ page.title }}</a> ({{ page.date | date(format="%Y") }})</li>
-{% endfor %}
-</ul>
+<table class="works-table">
+  <thead>
+    <tr>
+      <th>Work</th>
+      <th>Year</th>
+      <th>Medium</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for page in section.pages | sort(attribute="date") | reverse %}
+      {% set thumb = page.assets | first %}
+      {% if thumb %}
+        {% set thumb_img = resize_image(path=thumb, width=128, height=128, op="fill") %}
+      {% endif %}
+      <tr>
+        <td>
+          <div class="works-cell">
+            {% if thumb %}
+              <img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ page.title }}" class="works-thumb">
+            {% endif %}
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+          </div>
+        </td>
+        <td>
+          {% if page.extra.year %}{{ page.extra.year }}{% elif page.date %}{{ page.date | date(format="%Y") }}{% endif %}
+        </td>
+        <td>{{ page.extra.medium | default(value="") }}</td>
+        <td>{{ page.extra.status | default(value="") }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
