@@ -10,7 +10,7 @@
 {% if page.extra.cover %}
   {% set cover = resize_image(path=page.extra.cover, width=1600, op="fit_width") %}
   <figure class="project-cover">
-    <img src="{{ cover.url }}" alt="{{ page.title }} installation view">
+    <img src="/{{ cover.static_path | replace(from='static/', to='') }}" alt="{{ page.title }} installation view">
   </figure>
 {% endif %}
 
@@ -43,7 +43,7 @@
             <td>
               <div class="works-cell">
                 {% if thumb %}
-                  <img src="{{ thumb_img.url }}" alt="{{ work.title }}" class="works-thumb">
+                  <img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ work.title }}" class="works-thumb">
                 {% endif %}
                 <a href="{{ work.permalink }}">{{ work.title }}</a>
               </div>

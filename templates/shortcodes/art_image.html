@@ -5,8 +5,8 @@
 
 <figure class="art-image">
   <img
-    src="{{ img_md.url }}"
-    srcset="{{ img_sm.url }} 480w, {{ img_md.url }} 960w, {{ img_lg.url }} 1600w"
+    src="/{{ img_md.static_path | replace(from='static/', to='') }}"
+    srcset="/{{ img_sm.static_path | replace(from='static/', to='') }} 480w, /{{ img_md.static_path | replace(from='static/', to='') }} 960w, /{{ img_lg.static_path | replace(from='static/', to='') }} 1600w"
     sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px"
     alt="{{ alt_text }}"
     loading="lazy"
