@@ -45,9 +45,12 @@ html, body {
   padding: 0;
   background: radial-gradient(1200px 600px at 10% -10%, #ffffff 0%, var(--bg) 55%, var(--bg-accent) 100%);
   color: var(--ink);
-  font-family: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Literata", serif;
   font-size: var(--step-0);
   line-height: 1.7;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-kerning: normal;
 }
 
 .site-header,
@@ -80,7 +83,7 @@ main,
 }
 
 .site-title a {
-  font-family: "Fraunces", serif;
+  font-family: "Literata", serif;
   font-size: var(--step-1);
   letter-spacing: 0.02em;
   color: var(--ink);
@@ -102,7 +105,7 @@ main,
 }
 
 .nav-list a {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 500;
   font-size: var(--step--1);
   letter-spacing: 0.08em;
@@ -125,8 +128,8 @@ main {
 }
 
 h1, h2, h3, h4 {
-  font-family: "Fraunces", serif;
-  font-weight: 500;
+  font-family: "Literata", serif;
+  font-weight: 600;
   letter-spacing: 0.01em;
   margin: var(--space-l) 0 var(--space-s);
 }
@@ -150,6 +153,141 @@ p {
   margin: 0 0 var(--space-s);
 }
 
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--ink);
+}
+
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
+figure {
+  margin: var(--space-m) 0;
+}
+
+figcaption {
+  font-family: "IBM Plex Sans", sans-serif;
+  font-size: var(--step--1);
+  color: var(--muted);
+  margin-top: var(--space-2xs);
+}
+
+figure img {
+  display: block;
+  width: 100%;
+}
+
+.kg-embed-card iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  border: 0;
+}
+
+ul,
+ol {
+  padding-left: 1.2rem;
+  margin: 0 0 var(--space-s);
+}
+
+li {
+  margin: 0.2rem 0;
+}
+
+blockquote {
+  margin: var(--space-m) 0;
+  padding-left: var(--space-s);
+  border-left: 2px solid var(--line);
+  color: var(--muted);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: var(--space-l) 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-m) 0;
+  font-size: var(--step--1);
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+}
+
+code, pre {
+  font-family: "Inconsolata", ui-monospace, SFMono-Regular, Menlo, monospace;
+  background: #f1ece6;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0;
+  font-size: var(--step--1);
+}
+
+pre {
+  padding: var(--space-s);
+  overflow-x: auto;
+}
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-s);
+  margin-bottom: var(--space-xs);
+}
+
+.social-links a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: var(--step--2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--accent);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs) var(--space-s);
+  margin-bottom: var(--space-xs);
+}
+
+.footer-nav a {
+  color: var(--ink);
+  text-decoration: none;
+  font-size: var(--step--2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.footer-nav a:hover,
+.footer-nav a:focus-visible {
+  color: var(--accent);
+}
+
 .home-hero {
   padding: var(--space-l) 0 var(--space-m);
 }
@@ -160,6 +298,7 @@ p {
   font-size: var(--step--2);
   color: var(--muted);
   margin-bottom: var(--space-2xs);
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .home-deck {
@@ -227,6 +366,7 @@ p {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--muted);
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .latest-additions {
@@ -260,35 +400,7 @@ p {
 .latest-year {
   font-size: var(--step--2);
   color: var(--muted);
-}
-
-a {
-  color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-
-a:hover,
-a:focus-visible {
-  color: var(--ink);
-}
-
-img,
-video,
-iframe {
-  max-width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-}
-
-figure {
-  margin: var(--space-m) 0;
-}
-
-figure img {
-  display: block;
-  width: 100%;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 .project-cover {
@@ -304,36 +416,6 @@ figure img {
 .project-content {
   margin: var(--space-m) 0 var(--space-l);
   max-width: 70ch;
-}
-
-.kg-embed-card iframe {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  border: 0;
-}
-
-ul,
-ol {
-  padding-left: 1.2rem;
-  margin: 0 0 var(--space-s);
-}
-
-li {
-  margin: 0.2rem 0;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: var(--space-m) 0;
-  font-size: var(--step--1);
-}
-
-th, td {
-  text-align: left;
-  padding: 0.5rem 0.6rem;
-  border-bottom: 1px solid var(--line);
 }
 
 .works-table th:first-child,
@@ -353,59 +435,6 @@ th, td {
   object-fit: cover;
   background: #fff;
   border: 1px solid var(--line);
-}
-
-code, pre {
-  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
-  background: #f1ece6;
-  padding: 0.15rem 0.35rem;
-  border-radius: 0;
-  font-size: var(--step--1);
-}
-
-pre {
-  padding: var(--space-s);
-  overflow-x: auto;
-}
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs) var(--space-s);
-  margin-bottom: var(--space-xs);
-}
-
-.social-links a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: var(--step--2);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.social-links a:hover,
-.social-links a:focus-visible {
-  color: var(--accent);
-}
-
-.footer-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2xs) var(--space-s);
-  margin-bottom: var(--space-xs);
-}
-
-.footer-nav a {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: var(--step--2);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.footer-nav a:hover,
-.footer-nav a:focus-visible {
-  color: var(--accent);
 }
 
 @media (max-width: 720px) {
