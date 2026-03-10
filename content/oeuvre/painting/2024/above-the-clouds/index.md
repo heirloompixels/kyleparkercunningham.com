@@ -13,4 +13,4 @@ above the clouds by kyle parker cunningham
 
 Tres Piedras, New Mexico looks out to the east over the great expanse which is the Taos Gorge valley. The clouds often sit low out there above the Rio Grande Rift weaving through those ancient volcanoes and from this vantage point tucked up just a bit into the tree line - you feel as though you are above the clouds.
 
-![Oil painting of a New Mexico landscape with geometric triangular mountain forms in varied greens and teals in the lower half, blue-purple mountain ridges with small white clouds nestled between peaks along the horizon, beneath an expansive hazy pink sky.](/oeuvre/painting/2024/above-the-clouds/above-the-clouds.jpg)
+![Oil painting of a New Mexico landscape with geometric, faceted green and olive triangular shapes forming mountains and forest in the lower half, white clouds nestled between peaks, blue-purple mountain ridges along the horizon, and a hazy pink sky above.](/oeuvre/painting/2024/above-the-clouds/above-the-clouds.jpg)

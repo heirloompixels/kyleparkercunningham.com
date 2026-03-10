@@ -17,4 +17,4 @@ Some of us just have more effective tactics than others.
 drypoint intaglio print
 hand painted with watercolor and gouache
 
-![Drypoint intaglio print of a woolly mammoth gripping a broken rainbow in its tusks and trunk, with vivid hand-painted watercolor stripes of red, orange, yellow, green, and blue arcing behind the animal on both sides.](/oeuvre/printmaking/2021/stole-the-rainbow-2/F4DF52FB-CE8D-40CA-9ACE-DED4FF983923.jpeg)
+![Drypoint intaglio print of a woolly mammoth carrying a broken rainbow in its trunk, with vibrant hand-painted rainbow stripes in red, orange, yellow, green, and blue arcing on either side of the animal.](/oeuvre/printmaking/2021/stole-the-rainbow-2/F4DF52FB-CE8D-40CA-9ACE-DED4FF983923.jpeg)

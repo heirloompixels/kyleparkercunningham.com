@@ -17,4 +17,4 @@ And then again upwards over the mountain.
 
 Time moves forward and my memory grows long, so long those choice memories of the past are now but impressions of emotion. Erosion of forms. Elongation of acceptance. Pronunciation of the winds.
 
-![Oil painting of densely packed spherical forms in soft lavender, plum, mauve, and white tones filling the canvas like atmospheric water droplets, with a vivid blue channel of sky visible between the two masses of clustered orbs.](/oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg)
+![Oil painting of clusters of luminous spheres in soft lavender, mauve, plum, and white tones filling most of the canvas, with a strip of vivid blue sky visible between two large masses of bulbous cloud-like forms.](/oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg)

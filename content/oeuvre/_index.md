@@ -1,6 +1,6 @@
 +++
-title = "Artwork"
-template = "section.html"
+title = "Oeuvre"
+template = "oeuvre/section.html"
 aliases = ["/oeuvre/"]
 +++
 

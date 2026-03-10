@@ -12,4 +12,4 @@ Tubed Pachyderm by kyle parker cunningham
 
 Where elephantine strength meets industrial form, the ancient pachyderm reimagined through modern mechanical elements.
 
-![Intaglio print of a mechanical elephant with vacuum tubes protruding from its back and concentric circular dials on its side, drawn in black etched lines against a vivid hand-painted red watercolor background.](/oeuvre/printmaking/2023/tubed-pachydeerm/tubed-pachyderm-1.jpeg)
+![Intaglio print of a mechanical elephant in profile with vacuum tubes protruding from its back and concentric circular speaker-like elements on its side, set against a vivid hand-painted red watercolor background.](/oeuvre/printmaking/2023/tubed-pachydeerm/tubed-pachyderm-1.jpeg)

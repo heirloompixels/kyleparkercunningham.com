@@ -13,6 +13,6 @@ aliases = ["/120-volts/", "/oeuvre/printmaking/2018/120-volts/"]
 
 intaglio printmaking on rives bfk. 8 by 10 inches. 2018.
 
-![Drypoint intaglio print of a tall, thin figure standing in profile with a cord trailing from its head to a wall outlet, surrounded by dense crosshatched dark shading in the upper left that fades to open white space, rendered entirely in black ink on cream paper.](/oeuvre/printmaking/2018/120-volts/120_volts_2.jpg)
+![Black and white intaglio print of a tall, thin figure standing in profile with a cord trailing from its head to a wall outlet, surrounded by dense crosshatched shadows in the upper left and dripping vertical lines.](/oeuvre/printmaking/2018/120-volts/120_volts_2.jpg)
 
-![Hand-colored variant of the same composition, with the figure painted in golden yellow watercolor with teal-green shadows, standing against the dark crosshatched background with the electrical cord and outlet on the left.](/oeuvre/printmaking/2018/120-volts/IMG_3960.jpeg)
+![Hand-colored version of the 120 Volts intaglio print, with the figure painted in ochre yellow and teal accents against the same dark crosshatched background and wall outlet composition.](/oeuvre/printmaking/2018/120-volts/IMG_3960.jpeg)

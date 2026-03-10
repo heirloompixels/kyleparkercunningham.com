@@ -13,4 +13,4 @@ Deep Sea by kyle parker cunningham
 
 8 x 10 inches. Drypoint Intaglio Print. Handcolored with watercolor. 2018.
 
-![Drypoint intaglio print of a small deep-sea diver in an old-fashioned helmet standing at the bottom of the ocean, with a plume of bubbles rising upward toward a tangled mass of seaweed at the water's surface, hand-colored with teal and red watercolor accents along the top edge.](/oeuvre/printmaking/2018/deep-sea/printsNovember2018094.jpg)
+![Drypoint intaglio print hand-colored with watercolor, depicting a small deep-sea diver standing at the bottom with a round helmet, looking up at a tangled mass of seaweed or coral along the top edge painted in teal green and red-orange.](/oeuvre/printmaking/2018/deep-sea/printsNovember2018094.jpg)
