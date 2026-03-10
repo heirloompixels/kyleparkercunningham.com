@@ -17,6 +17,6 @@ handtorn paper approx 8 x 10 inches
 
 Each print is printed in an open ended series. I physically scratch the print number into the plate before inking it and then print just one copy at that number.
 
-![Drypoint intaglio print of a whimsical figure wearing a golden-yellow halo and striped collar, standing on green ground while holding a scuba tank connected by a curving hose, hand-colored with watercolor and gouache.](/oeuvre/printmaking/2021/vacation/IMG_1096-1.jpeg)
+![Hand-colored drypoint intaglio print of a standing figure wearing a golden-yellow space helmet and striped collar, connected by a curving hose to an oxygen tank, with a green watercolor ground below.](/oeuvre/printmaking/2021/vacation/IMG_1096-1.jpeg)
 
-![Detail view of the Vacation drypoint print showing the simplified figure with its yellow circular halo, teal-green ground, and the winding air hose rising from the scuba tank beside the figure.](/oeuvre/printmaking/2021/vacation/IMG_1096.jpeg)
+![Wider view of the Vacation drypoint print on handtorn paper showing the full composition of the helmeted figure with oxygen tank against a pale background and teal-green painted ground.](/oeuvre/printmaking/2021/vacation/IMG_1096.jpeg)

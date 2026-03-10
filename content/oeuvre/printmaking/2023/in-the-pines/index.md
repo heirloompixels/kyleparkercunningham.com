@@ -13,4 +13,4 @@ In The Pines by kyle parker cunningham
 
 Forest as sanctuary, where pine needles create their own sky and shadows tell ancient stories in vertical language.
 
-![Intaglio print of six tall, slender pine trees in a row, each filled with hand-painted watercolor in varying shades of olive, emerald, and yellow-green, standing on a thin horizon line against a cream background.](/oeuvre/printmaking/2023/in-the-pines/in-the-pines-1--1--1.jpeg)
+![Hand-colored intaglio print of six tall, narrow pine trees in a row along a horizon line, each filled with varying shades of green and olive watercolor, set against a cream-white background.](/oeuvre/printmaking/2023/in-the-pines/in-the-pines-1--1--1.jpeg)

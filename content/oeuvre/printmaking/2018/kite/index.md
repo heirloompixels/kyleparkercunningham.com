@@ -25,10 +25,10 @@ I imagine they will fly it as a kite, because what could be more fun for a trunk
 
 8 by 10 inches. Drypoint intaglio print. Watercolor added by hand. 2018.
 
-![Drypoint intaglio print of an elephant holding a string in its trunk that flies a small flying-saucer kite with a yellow watercolor dome, rendered in black ink with crosshatched texture on cream paper.](/oeuvre/printmaking/2018/kite/061F1BAA-F70E-4665-BE8E-7353A3D0AE67.jpeg)
+![Drypoint intaglio print of an elephant holding a string with its trunk, flying a small saucer-shaped kite with a yellow watercolor sphere, rendered in black ink on cream paper.](/oeuvre/printmaking/2018/kite/061F1BAA-F70E-4665-BE8E-7353A3D0AE67.jpeg)
 
-![Variant print of the elephant and flying-saucer kite, identical composition with the yellow-painted dome on the kite, showing subtle differences in ink tone and plate wear in this edition.](/oeuvre/printmaking/2018/kite/B3CD48C7-A8D8-42DD-8AEA-0DA044936DF4.jpeg)
+![Alternate hand-pulled print of the elephant and saucer kite, with the same composition showing slight variations in ink density and plate tone between editions.](/oeuvre/printmaking/2018/kite/B3CD48C7-A8D8-42DD-8AEA-0DA044936DF4.jpeg)
 
-![Hand-colored edition of the elephant and kite print with soft green and teal watercolor washes along the ground beneath the elephant's feet, and an uncolored flying-saucer kite floating above on its string.](/oeuvre/printmaking/2018/kite/printsNovember2018095.jpg)
+![Hand-colored variant of the elephant and kite print, with soft green and teal watercolor washes along the ground beneath the elephant's feet and an uncolored saucer kite above.](/oeuvre/printmaking/2018/kite/printsNovember2018095.jpg)
 
-![Edition of the elephant and kite print with a rich purple watercolor wash along the ground, the elephant rendered in black drypoint linework holding a string to the flying-saucer kite above.](/oeuvre/printmaking/2018/kite/elephant_with_kite_no3.jpg)
+![Hand-colored variant of the elephant and kite print with rich purple and violet watercolor washes along the ground, the elephant rendered in black drypoint linework flying its saucer-shaped kite on a string.](/oeuvre/printmaking/2018/kite/elephant_with_kite_no3.jpg)

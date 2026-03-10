@@ -13,4 +13,4 @@ Visible by kyle parker cunningham
 
 Acrylic, Latex and Oil on Canvas. 30 by 24 inches. Winter 2022.
 
-![Expressionist mixed media portrait of a face with wide staring eyes and dark bobbed hair, painted in bold strokes of deep crimson, black, pink, and gray against a pale lavender background.](/oeuvre/painting/2022/visible/visible.jpeg)
+![Expressionist portrait in acrylic, latex, and oil on canvas of a face with wide blue eyes, dark bobbed hair, and angular features, painted in bold strokes of deep crimson, mauve, pink, and black against a pale lavender background.](/oeuvre/painting/2022/visible/visible.jpeg)

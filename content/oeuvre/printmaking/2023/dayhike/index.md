@@ -13,6 +13,6 @@ Dayhike by kyle parker cunningham
 
 The rhythm of walking, where each step becomes a mark, trail becomes line, and journey becomes composition.
 
-![Black and white intaglio print of a small bird wearing a backpack, standing in profile facing right with detailed crosshatched feathers and a determined expression, on a pale gray background.](/oeuvre/printmaking/2023/dayhike/dayhike-4-1.jpeg)
+![Black and white intaglio print of a small bird wearing a backpack, standing in profile facing right with detailed cross-hatched feathers and a single visible eye, on a softly toned gray background.](/oeuvre/printmaking/2023/dayhike/dayhike-4-1.jpeg)
 
-![Second impression of the Dayhike intaglio print showing the backpack-wearing bird, with slightly darker ink tone revealing more texture in the feather hatching and plate surface.](/oeuvre/printmaking/2023/dayhike/dayhike-4-2.jpeg)
+![Alternate print of the backpacking bird, showing slightly darker ink coverage and tonal variation in the plate marks surrounding the small detailed figure.](/oeuvre/printmaking/2023/dayhike/dayhike-4-2.jpeg)
