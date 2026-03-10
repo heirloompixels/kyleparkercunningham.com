@@ -5,12 +5,6 @@ category = "installation"
 year = 2019
 aliases = ["/oeuvre/installation/2019/prophets/", "/prophets/"]
 +++
-
-
-
-
-Prophets by kyle parker cunningham
-
 Site specific installation. Painting on Found Wood. Private collection.
 
-![Prophets](/oeuvre/installation/2019/prophets/prophets.png)
+{{ art_image(path="oeuvre/installation/2019/prophets/prophets.png", alt="Prophets", caption="Prophets by kyle parker cunningham") }}

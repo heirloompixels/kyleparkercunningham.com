@@ -5,7 +5,7 @@ template = "projects/single.html"
 
 [extra]
 year = 2024
-cover = "sun-and-dust-install.jpeg"
+cover = "projects/the-memory-of-atmosphere/sun-and-dust-install.jpeg"
 works = [
   "oeuvre/painting/2024/bottled-lightning",
   "oeuvre/painting/2024/the-river-in-the-sky",

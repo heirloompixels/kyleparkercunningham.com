@@ -5,12 +5,6 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/cyclic-repetition/", "/cyclic-repetition/"]
 +++
-
-
-
-
-cyclic repetition by kyle parker cunningham
-
 The sacrifice of the drone bison.
 
 *A future some days in front of us unfolding as echos we just now begin to hear.*
@@ -39,6 +33,6 @@ And so they are hunted again, succumbing to the oldest techniques.
 Tumbling from great heights to utter destruction.
 Chips carefully collected.
 
-![Gestural oil painting sketch on gray ground showing loosely rendered bison-like forms tumbling from a cliff edge, in white, pink, and dark brushstrokes.](/oeuvre/painting/2021/cyclic-repetition/42E1182D-A2CA-4AD7-BE47-5C782C72C82D.jpeg)
+{{ art_image(path="oeuvre/painting/2021/cyclic-repetition/42E1182D-A2CA-4AD7-BE47-5C782C72C82D.jpeg", alt="Gestural oil painting sketch on gray ground showing loosely rendered bison-like forms tumbling from a cliff edge, in white, pink, and dark brushstrokes.", caption="cyclic repetition by kyle parker cunningham") }}
 
-![Panoramic oil painting of angular gray robotic bison stampeding off a cliff edge amid billowing white spheres, set against a pink and lavender sunset sky.](/oeuvre/painting/2021/cyclic-repetition/cyclic-repetition-1.jpeg)
+{{ art_image(path="oeuvre/painting/2021/cyclic-repetition/cyclic-repetition-1.jpeg", alt="Panoramic oil painting of angular gray robotic bison stampeding off a cliff edge amid billowing white spheres, set against a pink and lavender sunset sky.") }}

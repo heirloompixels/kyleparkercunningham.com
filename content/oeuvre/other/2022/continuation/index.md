@@ -5,12 +5,6 @@ category = "other"
 year = 2022
 aliases = ["/oeuvre/other/2022/continuation/", "/continuation/"]
 +++
-
-
-
-
-Continuation by kyle parker cunningham
-
 Acrylic, Latex and Oil on Canvas. 24 by 30 inches. Spring 2022. Private Collection.
 
-![Continuation](/oeuvre/other/2022/continuation/continuation-2000px.jpeg)
+{{ art_image(path="oeuvre/other/2022/continuation/continuation-2000px.jpeg", alt="Continuation", caption="Continuation by kyle parker cunningham") }}

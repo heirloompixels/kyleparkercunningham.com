@@ -5,12 +5,6 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/ken/", "/ken/"]
 +++
-
-
-
-
-Ken by kyle parker cunningham
-
 Oil on Panel. 2022.
 
-![Oil portrait of an older man with gray hair and a mustache, wearing a blue jacket over a turquoise shirt, rendered with visible impasto brushwork against a warm cream background.](/oeuvre/painting/2022/ken/ken-2000px.jpeg)
+{{ art_image(path="oeuvre/painting/2022/ken/ken-2000px.jpeg", alt="Oil portrait of an older man with gray hair and a mustache, wearing a blue jacket over a turquoise shirt, rendered with visible impasto brushwork against a warm cream background.", caption="Ken by kyle parker cunningham") }}

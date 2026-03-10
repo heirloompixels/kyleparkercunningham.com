@@ -5,12 +5,6 @@ category = "painting"
 year = 2020
 aliases = ["/bonsai-giant-sequoia/", "/oeuvre/painting/2020/bonsai-giant-sequoia/"]
 +++
-
-
-
-
-Bonsai Giant Sequoia by kyle parker cunningham
-
 The Sand hill Crane.
 
 Apocalyptic scavenger. They still wander the migrations paths of old and winter in the abundant Bosque del Apache along that ancient Rio Grande.  Now they collect artifacts from defunct spaceships, the detritus of the Spaceport and human hubris.  Good fodder, though, those spaceships with their top notch circuitry and magical fabrics.  All is appropriated in this new reality and anything is fair game.
@@ -19,4 +13,4 @@ What if all of nature is in some sort of suspended cargo cult, dizzy with antici
 
 In this world is it really strange to imagine a Sandhill crane scavenging spaceships parts in order to make hazmat suit which taps a bonsai (giant) sequoia tree as it's oxygen source?
 
-![Oil painting of a sandhill crane wearing a glass helmet connected by tubing to a bonsai tree strapped to its back, standing on desert terrain against a deep blue background.](/oeuvre/painting/2020/bonsai-giant-sequoia/bonsai_giant_sequoia.jpeg)
+{{ art_image(path="oeuvre/painting/2020/bonsai-giant-sequoia/bonsai_giant_sequoia.jpeg", alt="Oil painting of a sandhill crane wearing a glass helmet connected by tubing to a bonsai tree strapped to its back, standing on desert terrain against a deep blue background.", caption="Bonsai Giant Sequoia by kyle parker cunningham") }}

@@ -5,12 +5,6 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/the-mother-bear/", "/the-mother-bear/"]
 +++
-
-
-
-
-the mother bear by kyle parker cunningham
-
 51 1/2 by 32 inches
 Oil, Oil Stick, Acrylic, Latex on Canvas
 2021
@@ -29,4 +23,4 @@ When our hearts returned to a normal pace we stopped and talked and took of our 
 
 The bears that year were hungry and stressed from the unprecidented drought gripping Montana. They were not in a live and let live mood, the cubs were tiny for that time of the year and there was little more than rose hips to eat. I fear even now those cubs did not make it to the next season and I hope the mother did so she might try again to raise a family in the ever shrinking wild spaces in which she roams.
 
-![Mixed media painting of a dark brown bear facing the viewer with an intense gaze, rendered in thick expressive brushstrokes of oil, oil stick, acrylic, and latex on canvas, standing on orange-ochre ground against a speckled white background.](/oeuvre/painting/2021/the-mother-bear/the-mother-bear-2000px.jpg)
+{{ art_image(path="oeuvre/painting/2021/the-mother-bear/the-mother-bear-2000px.jpg", alt="Mixed media painting of a dark brown bear facing the viewer with an intense gaze, rendered in thick expressive brushstrokes of oil, oil stick, acrylic, and latex on canvas, standing on orange-ochre ground against a speckled white background.", caption="the mother bear by kyle parker cunningham") }}

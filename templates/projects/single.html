@@ -8,8 +8,9 @@
 </section>
 
 {% if page.extra.cover %}
+  {% set cover = resize_image(path=page.extra.cover, width=1600, op="fit_width") %}
   <figure class="project-cover">
-    <img src="{{ page.extra.cover }}" alt="{{ page.title }} installation view">
+    <img src="{{ cover.url }}" alt="{{ page.title }} installation view">
   </figure>
 {% endif %}
 
@@ -35,11 +36,14 @@
         {% for work_path in page.extra.works %}
           {% set work = get_page(path=work_path ~ "/index.md") %}
           {% set thumb = work.assets | first %}
+          {% if thumb %}
+            {% set thumb_img = resize_image(path=thumb, width=128, height=128, op="fill") %}
+          {% endif %}
           <tr>
             <td>
               <div class="works-cell">
                 {% if thumb %}
-                  <img src="{{ thumb }}" alt="{{ work.title }}" class="works-thumb">
+                  <img src="{{ thumb_img.url }}" alt="{{ work.title }}" class="works-thumb">
                 {% endif %}
                 <a href="{{ work.permalink }}">{{ work.title }}</a>
               </div>

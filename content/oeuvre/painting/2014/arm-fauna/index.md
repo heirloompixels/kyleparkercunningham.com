@@ -5,12 +5,6 @@ category = "painting"
 year = 2014
 aliases = ["/arm-fauna/", "/oeuvre/painting/2014/arm-fauna/"]
 +++
-
-
-
-
-Arm Fauna by kyle parker cunningham
-
 13 by 21 inches. Oil on Handwoven Linen. 2014. Private Collection.
 
 I painted this on the occasion of reading about the death of Satao. I had not known before of this creature but his story really moved my heart.
@@ -23,4 +17,4 @@ At the heart of this series is my intense belief in the intelligence of nature. 
 
 This body of work, absurd as it is, looks to inspire hope as well as instill fear for the near term future of our planet in the face of unimaginable change.
 
-![Oil painting on handwoven linen of a dark elephant harnessed to a silver rocket on wheels against a bright golden-yellow textured background, with a glowing red patch on the elephant's back.](/oeuvre/painting/2014/arm-fauna/arm_fauna-copy.jpg)
+{{ art_image(path="oeuvre/painting/2014/arm-fauna/arm_fauna-copy.jpg", alt="Oil painting on handwoven linen of a dark elephant harnessed to a silver rocket on wheels against a bright golden-yellow textured background, with a glowing red patch on the elephant's back.", caption="Arm Fauna by kyle parker cunningham") }}

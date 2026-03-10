@@ -5,14 +5,8 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/skull/", "/skull/"]
 +++
-
-
-
-
-Skull by kyle parker cunningham
-
 Intaglio drypoint prints. Printed area approx 6 x 9 inches. Handtorn paper approx 8 x 10 inches.
 
-![Intaglio drypoint print of a human skull in three-quarter profile view facing left, with detailed cross-hatching around the eye socket and jaw, hand-colored with subtle washes of pale green and blue-gray across the cranium.](/oeuvre/printmaking/2022/skull/IMG_3973-1.jpeg)
+{{ art_image(path="oeuvre/printmaking/2022/skull/IMG_3973-1.jpeg", alt="Intaglio drypoint print of a human skull in three-quarter profile view facing left, with detailed cross-hatching around the eye socket and jaw, hand-colored with subtle washes of pale green and blue-gray across the cranium.", caption="Skull by kyle parker cunningham") }}
 
-![Full view of the Skull drypoint print on handtorn paper, showing the pencil-signed title, edition number, and artist signature beneath the plate mark.](/oeuvre/printmaking/2022/skull/IMG_3973.jpeg)
+{{ art_image(path="oeuvre/printmaking/2022/skull/IMG_3973.jpeg", alt="Full view of the Skull drypoint print on handtorn paper, showing the pencil-signed title, edition number, and artist signature beneath the plate mark.") }}
