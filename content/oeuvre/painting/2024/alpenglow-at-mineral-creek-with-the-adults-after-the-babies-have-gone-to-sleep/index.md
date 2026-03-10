@@ -5,12 +5,6 @@ category = "painting"
 year = 2024
 aliases = ["/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/", "/oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/"]
 +++
-
-
-
-
-alpenglow at mineral creek with the adults after the babies have gone to sleep by kyle parker cunningham
-
 A perfect day from a perfect trip. I sit down to paint just at twilight and sketch this out to bring home to Tres Piedras and finish painting while remembering the little ones bouncing around the tents and that rain storm an hour before and the crisp air and that cold, cold alpine river. The details melt away and I'm left with this glow of a moment of happiness in a wonderful place.
 
-![Oil painting of a mountain valley rendered in geometric, faceted planes of green, teal, rose, and ochre, with billowing white clouds above and a pale green twilight sky, the angular forms converging toward a creek bed in the foreground.](/oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/alpenglow-at-mineral-creek-after-the-babies-have-gone-to-sleep.jpg)
+{{ art_image(path="oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/alpenglow-at-mineral-creek-after-the-babies-have-gone-to-sleep.jpg", alt="Oil painting of a mountain valley rendered in geometric, faceted planes of green, teal, rose, and ochre, with billowing white clouds above and a pale green twilight sky, the angular forms converging toward a creek bed in the foreground.", caption="alpenglow at mineral creek with the adults after the babies have gone to sleep by kyle parker cunningham") }}

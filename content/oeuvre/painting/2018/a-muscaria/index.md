@@ -5,12 +5,6 @@ category = "painting"
 year = 2018
 aliases = ["/a-muscaria/", "/oeuvre/painting/2018/a-muscaria/"]
 +++
-
-
-
-
-A. Muscaria by kyle parker cunningham
-
 Future perfect anomalies.
 
 The ants will probably be O.K. in that future perfect scenario. I'm guessing contingency plans are already in place.
@@ -25,8 +19,8 @@ My guess: boiling up some A. Muscaria to leach away to amatoxins, pickling said 
 
 Acrylic on found panel. 14 x 28 inches (approximate). 2019. Private Collection.
 
-![Acrylic painting on found panel of an ant with a jetpack using a winch and pulley to haul a red-and-white spotted Amanita muscaria mushroom across a gray background.](/oeuvre/painting/2018/a-muscaria/3B09A841-CBDA-48B7-8E70-6DE5E8030258_1_201_a.jpeg)
+{{ art_image(path="oeuvre/painting/2018/a-muscaria/3B09A841-CBDA-48B7-8E70-6DE5E8030258_1_201_a.jpeg", alt="Acrylic painting on found panel of an ant with a jetpack using a winch and pulley to haul a red-and-white spotted Amanita muscaria mushroom across a gray background.", caption="A. Muscaria by kyle parker cunningham") }}
 
-![Gallery wall detail showing the painting alongside other works on found wood, including lungs, a rhino, and an airship piece.](/oeuvre/painting/2018/a-muscaria/47EE4C9A-E931-471F-A102-3E3E8395FE66_1_105_c.jpeg)
+{{ art_image(path="oeuvre/painting/2018/a-muscaria/47EE4C9A-E931-471F-A102-3E3E8395FE66_1_105_c.jpeg", alt="Gallery wall detail showing the painting alongside other works on found wood, including lungs, a rhino, and an airship piece.") }}
 
-![Wide view of a pyramid-shaped gallery installation composed of dozens of painted found wood panels featuring animals, anatomy, text, and whimsical imagery.](/oeuvre/painting/2018/a-muscaria/5D2E92B0-6D8C-43CD-BD08-119F8FCEB29F_1_102_o.jpeg)
+{{ art_image(path="oeuvre/painting/2018/a-muscaria/5D2E92B0-6D8C-43CD-BD08-119F8FCEB29F_1_102_o.jpeg", alt="Wide view of a pyramid-shaped gallery installation composed of dozens of painted found wood panels featuring animals, anatomy, text, and whimsical imagery.") }}

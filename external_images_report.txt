@@ -1,0 +1,2 @@
+content/learning/index.md	https://archive.org/images/glogo.jpg
+content/learning/index.md	https://archive.org/services/img/morpho-simplified-forms-anatomy-for-artists

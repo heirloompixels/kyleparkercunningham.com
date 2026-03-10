@@ -5,16 +5,10 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/teardrop/", "/teardrop/"]
 +++
-
-
-
-
-Teardrop by kyle parker cunningham
-
 8 x 10 inches. Drypoint Intaglio Print. Handcolored with watercolor. 2018.
 
-![Drypoint intaglio print of a vintage teardrop camper trailer in profile, with black linework showing horizontal siding, a door, window, and tail fin, accented by a bold orange-red stripe across the middle.](/oeuvre/printmaking/2018/teardrop/DC3345B5-0458-49B2-91D2-ABB51C023655.jpeg)
+{{ art_image(path="oeuvre/printmaking/2018/teardrop/DC3345B5-0458-49B2-91D2-ABB51C023655.jpeg", alt="Drypoint intaglio print of a vintage teardrop camper trailer in profile, with black linework showing horizontal siding, a door, window, and tail fin, accented by a bold orange-red stripe across the middle.", caption="Teardrop by kyle parker cunningham") }}
 
-![Alternate print of the teardrop camper trailer with the same drypoint composition, showing subtle variations in ink tone and plate marks characteristic of hand-pulled intaglio editions.](/oeuvre/printmaking/2018/teardrop/F003C219-1CC0-4C3B-B231-C9F1C07CC71C.jpeg)
+{{ art_image(path="oeuvre/printmaking/2018/teardrop/F003C219-1CC0-4C3B-B231-C9F1C07CC71C.jpeg", alt="Alternate print of the teardrop camper trailer with the same drypoint composition, showing subtle variations in ink tone and plate marks characteristic of hand-pulled intaglio editions.") }}
 
-![Hand-colored variant of the teardrop camper print with watercolor, featuring a bright red-orange wash covering the lower half of the trailer body against soft grey drypoint linework on cream paper.](/oeuvre/printmaking/2018/teardrop/printsNovember2018091.jpg)
+{{ art_image(path="oeuvre/printmaking/2018/teardrop/printsNovember2018091.jpg", alt="Hand-colored variant of the teardrop camper print with watercolor, featuring a bright red-orange wash covering the lower half of the trailer body against soft grey drypoint linework on cream paper.") }}

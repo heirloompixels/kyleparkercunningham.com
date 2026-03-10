@@ -5,14 +5,8 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/origami-beetroot/", "/origami-beetroot/"]
 +++
-
-
-
-
-Origami Beetroot by kyle parker cunningham
-
 Intaglio Drypoint Print.
 
-![Intaglio drypoint print of a beetroot rendered with angular, origami-like folds, its long tapered roots pointing upward and jagged leaves radiating outward, printed in deep black ink on pale paper with heavy cross-hatching.](/oeuvre/printmaking/2022/origami-beetroot/IMG_3950-1.jpeg)
+{{ art_image(path="oeuvre/printmaking/2022/origami-beetroot/IMG_3950-1.jpeg", alt="Intaglio drypoint print of a beetroot rendered with angular, origami-like folds, its long tapered roots pointing upward and jagged leaves radiating outward, printed in deep black ink on pale paper with heavy cross-hatching.", caption="Origami Beetroot by kyle parker cunningham") }}
 
-![Full view of the Origami Beetroot drypoint print on handtorn paper, showing the pencil-signed title, edition number, and artist signature beneath the plate mark.](/oeuvre/printmaking/2022/origami-beetroot/IMG_3950.jpeg)
+{{ art_image(path="oeuvre/printmaking/2022/origami-beetroot/IMG_3950.jpeg", alt="Full view of the Origami Beetroot drypoint print on handtorn paper, showing the pencil-signed title, edition number, and artist signature beneath the plate mark.") }}

@@ -5,14 +5,8 @@ category = "installation"
 year = 2023
 aliases = ["/oeuvre/installation/2023/the-meaning-of-time/", "/the-meaning-of-time/"]
 +++
-
-
-
-
-The Meaning of Time by kyle parker cunningham
-
 Inquiry into the conditions from which we enjoy the memory of our ancestors.
 
 Installation 2023. Included Works: Geometric Anatomy, Calavera Del Caballo, Cyclum Lunarem.
 
-![The meaning of time](/oeuvre/installation/2023/the-meaning-of-time/the-meaning-of-time-2048.jpeg)
+{{ art_image(path="oeuvre/installation/2023/the-meaning-of-time/the-meaning-of-time-2048.jpeg", alt="The meaning of time", caption="The Meaning of Time by kyle parker cunningham") }}

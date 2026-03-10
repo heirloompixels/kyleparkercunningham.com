@@ -5,12 +5,6 @@ category = "sculpture"
 year = 2021
 aliases = ["/oeuvre/sculpture/2021/molecule/", "/molecule/"]
 +++
-
-
-
-
-molecule by kyle parker cunningham
-
 Molecule in progress
 
-![Molecule](/oeuvre/sculpture/2021/molecule/molecule-marble_marble_progress-1500w.jpeg)
+{{ art_image(path="oeuvre/sculpture/2021/molecule/molecule-marble_marble_progress-1500w.jpeg", alt="Molecule", caption="molecule by kyle parker cunningham") }}

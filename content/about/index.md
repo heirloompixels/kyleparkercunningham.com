@@ -6,7 +6,7 @@ date = 2023-01-01
 
 I paint the life I live.
 
-![A self portrait by Kyle Parker Cunningham gazing left wearing a yellow knit hat, scarf and green shirt.](/about/self_portrait.jpg)
+{{ art_image(path="about/self_portrait.jpg", alt="A self portrait by Kyle Parker Cunningham gazing left wearing a yellow knit hat, scarf and green shirt.") }}
 
 Self Portrait (2019)
 

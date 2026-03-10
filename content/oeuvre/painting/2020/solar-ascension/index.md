@@ -5,12 +5,6 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/"]
 +++
-
-
-
-
-Solar Ascension by kyle parker cunningham
-
 Oil on linen, 34 by 34 inches.
 
-![Oil on linen painting of a large triangle composed of multicolored smaller triangles in pinks, reds, oranges, yellows, and blues, centered on a warm yellow-green background.](/oeuvre/painting/2020/solar-ascension/solar-ascension.jpeg)
+{{ art_image(path="oeuvre/painting/2020/solar-ascension/solar-ascension.jpeg", alt="Oil on linen painting of a large triangle composed of multicolored smaller triangles in pinks, reds, oranges, yellows, and blues, centered on a warm yellow-green background.", caption="Solar Ascension by kyle parker cunningham") }}

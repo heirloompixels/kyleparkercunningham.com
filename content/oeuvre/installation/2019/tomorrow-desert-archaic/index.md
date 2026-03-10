@@ -5,11 +5,6 @@ category = "installation"
 year = 2019
 aliases = ["/oeuvre/installation/2019/tomorrow-desert-archaic/"]
 +++
-
-
-
-Tomorrow by kyle parker cunningham
-
 Site specific installation at Desert Archaic in Truth or Consequences, New Mexico.
 
-![Tomorrow desert archaic](/oeuvre/installation/2019/tomorrow-desert-archaic/tomorrow-pyramid.jpg)
+{{ art_image(path="oeuvre/installation/2019/tomorrow-desert-archaic/tomorrow-pyramid.jpg", alt="Tomorrow desert archaic", caption="Tomorrow by kyle parker cunningham") }}
