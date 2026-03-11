@@ -35,13 +35,13 @@ kpc-site/
 ### Build the site:
 ```bash
 cd kpc-site
-zola build
+./scripts/build.sh
 ```
 
 ### Run local development server:
 ```bash
 cd kpc-site
-zola serve
+./scripts/serve.sh
 ```
 
 Visit http://localhost:1111 to preview the site.

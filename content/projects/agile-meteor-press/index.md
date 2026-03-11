@@ -5,7 +5,7 @@ template = "projects/single.html"
 
 [extra]
 year = 2025
-status = "complete"
+status = "ongoing"
 +++
 
 Project overview coming soon.
