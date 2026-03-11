@@ -47,7 +47,7 @@ A link should be visible without being loud. [This is a link example](/oeuvre/).
 Inline code looks like `resize_image` and code blocks are quiet and legible:
 
 ```text
-zola build
+./scripts/build.sh
 ```
 
 ### Table

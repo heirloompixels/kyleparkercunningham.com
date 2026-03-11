@@ -8,6 +8,7 @@
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 {% set projects = get_section(path="projects/_index.md") %}
+{% set ongoing_projects = projects.pages | filter(attribute="extra.status", value="ongoing") | sort(attribute="date") | reverse %}
 {% set complete_projects = projects.pages | filter(attribute="extra.status", value="complete") | sort(attribute="date") | reverse %}
 {% set future_projects = projects.pages | filter(attribute="extra.status", value="researching") | sort(attribute="date") | reverse %}
 
@@ -22,8 +23,20 @@
 <section class="home-hero">
   <p class="home-eyebrow">Home</p>
   <h1>Kyle Parker Cunningham</h1>
-  <p class="home-deck">A living archive of current, future, and past work. The complete catalogue lives in the Oeuvre.</p>
-  <p><a href="{{ get_url(path='/oeuvre/') }}">Enter the Oeuvre archive</a></p>
+  <p class="home-deck">Believing in a future is not the same thing as living through a future. This is becoming all the more apparent as we move forward into each new day of this existence right now. Who and what are we supposed to be? Where are we going to head to. This is the relevence of the inspiration.</p>
+</section>
+
+{% set log = get_section(path="log/_index.md") %}
+<section class="latest-additions">
+  <h2>Log</h2>
+  <ul class="latest-list">
+    {% for page in log.pages | sort(attribute="date") | reverse | slice(end=3) %}
+      <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        <span class="latest-year">{{ page.content | striptags | truncate(length=144) }}</span>
+      </li>
+    {% endfor %}
+  </ul>
 </section>
 
 <section class="home-split">
@@ -35,7 +48,7 @@
       <h3>Present</h3>
       <p>{{ home.extra.present_text }}</p>
       <ul class="latest-list">
-        {% for page in complete_projects | slice(end=3) %}
+        {% for page in ongoing_projects | slice(end=3) %}
           <li>
             <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% if page.extra.year %}<span class="latest-year">{{ page.extra.year }}</span>{% endif %}
@@ -59,7 +72,7 @@
       <h3>Past</h3>
       <p>{{ home.extra.past_text }}</p>
       <ul class="latest-list">
-        {% for page in complete_projects | slice(start=3) %}
+        {% for page in complete_projects %}
           <li>
             <a href="{{ page.permalink }}">{{ page.title }}</a>
             {% if page.extra.year %}<span class="latest-year">{{ page.extra.year }}</span>{% endif %}

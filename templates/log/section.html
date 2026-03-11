@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<section class="home-hero">
+  <p class="home-eyebrow">Log</p>
+  <h1>{{ section.title }}</h1>
+  {% if section.content %}<div class="home-deck">{{ section.content | safe }}</div>{% endif %}
+</section>
+
+<section class="latest-additions">
+  <h2>Entries</h2>
+  <ul class="latest-list">
+    {% for page in section.pages | sort(attribute="date") | reverse %}
+      <li>
+        <a href="{{ page.permalink }}">{{ page.title }}</a>
+        {% if page.date %}<span class="latest-year">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

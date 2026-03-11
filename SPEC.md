@@ -25,6 +25,7 @@
   - artist statement / overview
   - exhibition information (if any)
   - linked works table with thumbnails and metadata
+ - **Status values:** `ongoing`, `researching`, `complete`
 
 ### 2.3 Cinema
 - Gallery of all video work with embeds and descriptions.
@@ -62,6 +63,7 @@ All Oeuvre works use the same schema for consistency and long‑term querying.
 - `template = "projects/single.html"`
 - `[extra]`
   - `year` (integer or range string)
+  - `status` (`ongoing`, `researching`, `complete`)
   - `cover` (relative path to cover image in project bundle)
   - `works` (list of Oeuvre work paths, e.g. `oeuvre/painting/2024/the-river-in-the-sky`)
 
@@ -139,6 +141,11 @@ content/colophon/index.md
 ## 8) Home Page
 - Landing page with hero and long-form, column-based layout.
 - Content edited in `content/_index.md`.
+- **Projects column:**
+  - Present = 3 most recent projects with status `ongoing`
+  - Future = all projects with status `researching`
+  - Past = all projects with status `complete`
+- **Recently edited list:** generated from file modification times for all `content/**/*.md`.
 
 ## 9) Project Layout
 - Single-column project statement.
@@ -155,7 +162,13 @@ content/colophon/index.md
 - Add cinema item pages with consistent metadata.
 - Add archive utilities (indexes by year/medium/status).
 
-## 12) Templates (Examples)
+## 12) Build & Deployment Automation
+- **Recently edited generator:** `scripts/update_recently_edited.py`
+- **Build wrapper:** `./scripts/build.sh` (runs the generator, then `zola build`)
+- **Dev wrapper:** `./scripts/serve.sh` (runs the generator, then `zola serve`)
+- **GitHub Pages:** `.github/workflows/main.yml` runs the generator before deploy, uses `GITHUB_TOKEN`.
+
+## 13) Templates (Examples)
 
 ### Work Template
 ```
