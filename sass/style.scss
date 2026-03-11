@@ -202,6 +202,7 @@ ul,
 ol {
   padding-left: 1.2rem;
   margin: 0 0 var(--space-s);
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
 li {
@@ -403,6 +404,7 @@ pre {
   gap: var(--space-s);
   padding: var(--space-2xs) 0;
   border-bottom: 1px solid var(--line);
+  font-size: var(--step--1);
 }
 
 .latest-list a {
@@ -416,9 +418,9 @@ pre {
 }
 
 .latest-year {
-  font-size: var(--step--2);
-  color: var(--muted);
-  font-family: "IBM Plex Sans", sans-serif;
+  color: inherit;
+  font-family: inherit;
+  font-style: italic;
 }
 
 .project-cover {
