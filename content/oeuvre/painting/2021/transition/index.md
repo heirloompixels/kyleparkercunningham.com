@@ -9,7 +9,9 @@ aliases = ["/oeuvre/painting/2021/transition/", "/transition/"]
 medium = "Oil on Gesso Panel"
 dimensions = "6 3/8 by 36 3/8"
 +++
-6 by 30 inches
+A nine-year painting. A tall, narrow column where big loose circles crowd the top and slowly resolve — band by band — into a small, orderly lattice of diamonds and dots at the bottom. I started it in 2012 and finished it in 2021, and the painting did what its name says in the meantime: the same shapes, refined by years of returning. The transition is mine as much as the geometry's.
+
+6 3/8 by 36 3/8 inches
 Oil on Gesso Panel
 2012-2021
 
