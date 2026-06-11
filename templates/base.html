@@ -4,18 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ get_url(path='/style.css') }}">
+    {% block head_extra %}{% endblock %}
 </head>
 <body>
+    {% block site_header %}
     <header class="site-header">
         {% include "partials/navigation.html" %}
     </header>
+    {% endblock %}
     <main>
         {% block content %}{% endblock %}
     </main>
     <footer class="site-footer">
         <nav class="footer-nav">
             <a href="{{ get_url(path='/colophon/') }}">colophon</a>
+            <a href="{{ get_url(path='/dashboard/') }}">dashboard</a>
             <a href="{{ get_url(path='/') }}">home</a>
             <a href="{{ get_url(path='/oeuvre/painting/') }}">painting</a>
             <a href="{{ get_url(path='/oeuvre/printmaking/') }}">printmaking</a>

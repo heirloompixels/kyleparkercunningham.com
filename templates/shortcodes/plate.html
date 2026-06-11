@@ -1,0 +1,16 @@
+{% set alt_text = alt | default(value="") %}
+{% set t = title | default(value="") %}
+{% set m = meta | default(value="") %}
+{% set img_md = resize_image(path=path, width=960, op="fit_width") %}
+{% set img_lg = resize_image(path=path, width=1600, op="fit_width") %}
+<figure class="ed-plate">
+  <img
+    src="/{{ img_md.static_path | replace(from='static/', to='') }}"
+    srcset="/{{ img_md.static_path | replace(from='static/', to='') }} 960w, /{{ img_lg.static_path | replace(from='static/', to='') }} 1600w"
+    sizes="(max-width: 700px) 100vw, 90vw"
+    alt="{{ alt_text }}"
+    loading="lazy"
+    decoding="async"
+  >
+  {% if t or m %}<figcaption>{% if t %}<i>{{ t }}</i>{% endif %}{% if t and m %} · {% endif %}{{ m }}</figcaption>{% endif %}
+</figure>

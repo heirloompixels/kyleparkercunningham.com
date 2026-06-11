@@ -1,5 +1,33 @@
 {% extends "base.html" %}
+
+{% block head_extra %}
+{% set editions = get_section(path="editions/_index.md") %}
+{% set live = editions.pages | filter(attribute="extra.status", value="live") %}
+{% if live | length > 0 %}
+{% set edition = live | first %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
+{% for asset in edition.assets %}{% if asset is ending_with("edition.css") %}
+<link rel="stylesheet" href="{{ get_url(path=asset) }}">
+{% endif %}{% endfor %}
+{% endif %}
+{% endblock %}
+
+{# When an edition is live, the front page opens with its cover — no site header. #}
+{% block site_header %}
+{% set editions = get_section(path="editions/_index.md") %}
+{% set live = editions.pages | filter(attribute="extra.status", value="live") %}
+{% if live | length == 0 %}{{ super() }}{% endif %}
+{% endblock %}
+
 {% block content %}
+{% set editions = get_section(path="editions/_index.md") %}
+{% set live = editions.pages | filter(attribute="extra.status", value="live") %}
+{% if live | length > 0 %}
+{% set edition = live | first %}
+{% include "editions/issue.html" %}
+{% else %}
 {% set home = get_section(path="_index.md") %}
 {% set painting = get_section(path="oeuvre/painting/_index.md") %}
 {% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
@@ -94,4 +122,5 @@
     </ul>
   </aside>
 </section>
+{% endif %}
 {% endblock %}
