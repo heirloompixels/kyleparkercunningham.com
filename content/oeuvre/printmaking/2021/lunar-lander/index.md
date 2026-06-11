@@ -9,6 +9,8 @@ intaglio drypoint prints
 printed area approx 6 x 9 inches
 handtorn paper approx 8 x 10 inches
 
+Based on an earlier 2014 oil painting of the same title (not yet documented here).
+
 Each print is printed in an open ended series. I physically scratch the print number into the plate before inking it and then print just one copy at that number.
 
 {{ art_image(path="oeuvre/printmaking/2021/lunar-lander/lunar_lander.jpg", alt="Drypoint intaglio print of a geometric lunar lander module with a dragonfly resting on its dome, standing on four legs above a purple and maroon watercolor ground, on handtorn cream paper.", caption="lunar lander by kyle parker cunningham") }}
