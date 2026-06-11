@@ -4,6 +4,10 @@ date = 2018-09-02
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/pinned/", "/pinned/"]
+
+[extra]
+medium = "Acrylic and Latex on Canvas"
+dimensions = "20 by 27"
 +++
 Acrylic and Latex on Canvas. 20 by 27 inches. 2018.
 

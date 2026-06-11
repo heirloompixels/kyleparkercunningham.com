@@ -4,6 +4,11 @@ date = 2018-04-17
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/three-blue-corn/", "/three-blue-corn/"]
+
+[extra]
+medium = "Oil on Canvas"
+dimensions = "26x26 Inches"
+status = "sold"
 +++
 oil on gesso panel. 26 by 26 inches. spring 2018. private collection.
 

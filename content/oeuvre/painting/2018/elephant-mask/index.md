@@ -4,6 +4,10 @@ date = 2018-10-22
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/elephant-mask/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "11x14 inches"
 +++
 oil on linen. 11x14 inches. Fall 2018.
 

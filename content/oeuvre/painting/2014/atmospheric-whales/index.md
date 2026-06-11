@@ -4,6 +4,9 @@ date = 2014-12-04
 category = "painting"
 year = 2014
 aliases = ["/atmospheric-whales/", "/oeuvre/painting/2014/atmospheric-whales/"]
+
+[extra]
+medium = "Oil on Handwoven Linen"
 +++
 5 by 7 inches. Oil on Handloom Linen. 24kt gold Leaf. 2014.
 

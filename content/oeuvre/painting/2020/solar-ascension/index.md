@@ -4,6 +4,10 @@ date = 2020-05-02
 category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "34 x 34 Inches"
 +++
 Oil on linen, 34 by 34 inches.
 

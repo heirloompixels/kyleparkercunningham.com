@@ -4,6 +4,10 @@ date = 2022-06-11
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/ken/", "/ken/"]
+
+[extra]
+medium = "Oil on Panel"
+dimensions = "16 x 20 inches"
 +++
 Oil on Panel. 2022.
 

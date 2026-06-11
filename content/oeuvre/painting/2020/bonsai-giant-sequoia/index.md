@@ -4,6 +4,10 @@ date = 2020-01-22
 category = "painting"
 year = 2020
 aliases = ["/bonsai-giant-sequoia/", "/oeuvre/painting/2020/bonsai-giant-sequoia/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "21 x 34 Inches"
 +++
 The Sand hill Crane.
 

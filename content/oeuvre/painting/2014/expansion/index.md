@@ -4,6 +4,10 @@ date = 2014-06-09
 category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/expansion/", "/expansion-drypoint/", "/expansion/"]
+
+[extra]
+medium = "Oil on Handwoven Linen"
+dimensions = "6x7 inches"
 +++
 The mind shifts color pretending the future is a pealed orange imitating a banana.
 

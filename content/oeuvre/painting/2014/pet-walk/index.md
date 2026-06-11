@@ -4,6 +4,9 @@ date = 2014-06-05
 category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/pet-walk/", "/pet-walk/"]
+
+[extra]
+medium = "Oil on Handwoven Linen"
 +++
 5 by 7 inches. Oil on Handwoven Linen. 2014. Private Collection.
 

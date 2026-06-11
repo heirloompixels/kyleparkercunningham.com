@@ -4,6 +4,9 @@ date = 2014-12-05
 category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/corn-sky-connection/", "/corn-sky-connection/"]
+
+[extra]
+medium = "Oil on Handwoven Linen"
 +++
 13 x 21 inches. Oil on Handwoven Linen. 2014. Private Collection.
 

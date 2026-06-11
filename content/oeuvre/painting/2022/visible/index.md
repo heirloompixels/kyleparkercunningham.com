@@ -4,6 +4,10 @@ date = 2022-05-03
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/visible/", "/visible/"]
+
+[extra]
+medium = "Acrylic, Latex and Oil on Canvas"
+dimensions = "20 x 24 Inches"
 +++
 Acrylic, Latex and Oil on Canvas. 30 by 24 inches. Winter 2022.
 

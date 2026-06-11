@@ -4,6 +4,11 @@ date = 2022-05-14
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/the-black-fire/", "/the-black-fire/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "21 x 34 inches"
+status = "sold"
 +++
 A painting created in response to the Black Fire in the Aldo Leopold Wilderness during the spring of 2022. Oil on Linen. Twenty One by Thirty Four Inches. May 2022.
 

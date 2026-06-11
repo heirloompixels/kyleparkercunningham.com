@@ -4,6 +4,10 @@ date = 2018-04-24
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/prickly-pear/", "/prickly-pear/"]
+
+[extra]
+medium = "Oil on Diabond"
+dimensions = "12x12 inches"
 +++
 oil on dibond ACM panel. 12x12 inches. Spring 2018.
 

@@ -4,6 +4,10 @@ date = 2021-11-02
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/paper-neck-giraffes/", "/paper-neck-giraffes/"]
+
+[extra]
+medium = "Oil on Cotton Canvas"
+dimensions = "20 x 24 Inches"
 +++
 Oil on Canvas
 20x30 inches

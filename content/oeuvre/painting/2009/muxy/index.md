@@ -4,6 +4,9 @@ date = 2009-09-25
 category = "painting"
 year = 2009
 aliases = ["/oeuvre/painting/2009/muxy/", "/muxy/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 Japanese Ink & Oil on Linen Canvas. 34 x 55 inches. 2009. Private Collection.
 

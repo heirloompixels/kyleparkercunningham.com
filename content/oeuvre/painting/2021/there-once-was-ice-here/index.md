@@ -4,6 +4,10 @@ date = 2021-06-09
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/there-once-was-ice-here/", "/there-once-was-ice-here/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "21 x 34 inches"
 +++
 oil on linen
 21x34 inches
