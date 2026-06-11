@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — {{ config.title }}{% endblock %}
+{% block content %}
+{% set home = get_section(path="_index.md") %}
+{% set painting = get_section(path="oeuvre/painting/_index.md") %}
+{% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
+{% set installation = get_section(path="oeuvre/installation/_index.md") %}
+{% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
+{% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% set other = get_section(path="oeuvre/other/_index.md") %}
+{% set projects = get_section(path="projects/_index.md") %}
+{% set log = get_section(path="log/_index.md") %}
+
+{% set n_painting = painting.pages | length %}
+{% set n_printmaking = printmaking.pages | length %}
+{% set n_installation = installation.pages | length %}
+{% set n_sculpture = sculpture.pages | length %}
+{% set n_exhibitions = exhibitions.pages | length %}
+{% set n_other = other.pages | length %}
+{% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_other %}
+
+{% set ongoing = projects.pages | filter(attribute="extra.status", value="ongoing") | sort(attribute="date") | reverse %}
+{% set researching = projects.pages | filter(attribute="extra.status", value="researching") | sort(attribute="date") | reverse %}
+{% set complete = projects.pages | filter(attribute="extra.status", value="complete") | sort(attribute="date") | reverse %}
+{% set edited = load_data(path="data/recently_edited.json") %}
+
+<div class="dash">
+
+  <div class="dash-intro">
+    <h1>The working view of the archive.</h1>
+    <p class="dash-statline"><b>{{ n_total }}</b> works · <b>{{ projects.pages | length }}</b> projects · last edit <b>{{ edited | first | get(key="updated") | date(format="%Y-%m-%d") }}</b></p>
+  </div>
+
+  <div class="dash-grid">
+    <div class="dash-main">
+
+      <h2 class="dash-h">Projects in motion</h2>
+      {% for p in ongoing %}
+        <div class="dash-projrow"><a href="{{ p.permalink }}"><i>{{ p.title }}</i></a><span class="dstatus ongoing">ongoing</span></div>
+      {% endfor %}
+      {% for p in researching %}
+        <div class="dash-projrow"><a href="{{ p.permalink }}"><i>{{ p.title }}</i></a><span class="dstatus research">researching</span></div>
+      {% endfor %}
+      {% for p in complete %}
+        <div class="dash-projrow"><a href="{{ p.permalink }}"><i>{{ p.title }}</i></a><span class="dstatus complete">complete</span></div>
+      {% endfor %}
+
+      <h2 class="dash-h dash-h-gap">Production log</h2>
+      {% for p in log.pages | sort(attribute="date") | reverse | slice(end=6) %}
+        <a class="dash-logentry" href="{{ p.permalink }}">
+          <time>{{ p.date | date(format="%Y-%m-%d") }}</time>
+          <span><b>{{ p.title }}</b>
+          <p>{{ p.content | striptags | truncate(length=120) }}</p></span>
+        </a>
+      {% endfor %}
+
+    </div>
+    <aside class="dash-rail">
+
+      <h2 class="dash-h">The archive at a glance</h2>
+      <div class="dash-glance">
+        <a class="row" href="{{ painting.permalink }}"><span>painting</span><b>{{ n_painting }}</b></a>
+        <a class="row" href="{{ printmaking.permalink }}"><span>printmaking</span><b>{{ n_printmaking }}</b></a>
+        <a class="row" href="{{ installation.permalink }}"><span>installation</span><b>{{ n_installation }}</b></a>
+        <a class="row" href="{{ sculpture.permalink }}"><span>sculpture</span><b>{{ n_sculpture }}</b></a>
+        <a class="row" href="{{ exhibitions.permalink }}"><span>exhibitions</span><b>{{ n_exhibitions }}</b></a>
+        <a class="row" href="{{ other.permalink }}"><span>other</span><b>{{ n_other }}</b></a>
+      </div>
+
+      <h2 class="dash-h dash-h-gap">Recently edited</h2>
+      <div class="dash-recent">
+        {% for e in edited | slice(end=13) %}
+          <a class="row" href="{{ e.permalink }}"><span>{{ e.title }}</span><span class="when">{{ e.updated | date(format="%m-%d") }}</span></a>
+        {% endfor %}
+      </div>
+
+    </aside>
+  </div>
+</div>
+{% endblock %}

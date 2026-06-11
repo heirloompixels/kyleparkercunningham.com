@@ -15,85 +15,72 @@
   | concat(with=exhibitions.pages)
   | concat(with=other.pages)
 %}
+{% set n_painting = painting.pages | length %}
+{% set n_printmaking = printmaking.pages | length %}
+{% set n_installation = installation.pages | length %}
+{% set n_sculpture = sculpture.pages | length %}
+{% set n_exhibitions = exhibitions.pages | length %}
+{% set n_other = other.pages | length %}
+{% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_other %}
 
-<section class="home-hero">
-  <p class="home-eyebrow">Oeuvre Archive</p>
-  <h1>{{ section.title }}</h1>
-  <p class="home-deck">Complete catalog of work by Kyle Parker Cunningham, organized by discipline and year.</p>
-</section>
+<header class="ledger-head">
+  <h1>{{ section.title }} <span class="ledger-sub">— the working index</span></h1>
+</header>
 
-<section class="archive-index">
-  <h2>Archive Index</h2>
-  <div class="archive-grid">
-    <a class="archive-card" href="{{ painting.permalink }}">
-      <span>Painting</span>
-      <span class="archive-count">{{ painting.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ printmaking.permalink }}">
-      <span>Printmaking</span>
-      <span class="archive-count">{{ printmaking.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ sculpture.permalink }}">
-      <span>Sculpture</span>
-      <span class="archive-count">{{ sculpture.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ installation.permalink }}">
-      <span>Installations</span>
-      <span class="archive-count">{{ installation.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ exhibitions.permalink }}">
-      <span>Exhibitions</span>
-      <span class="archive-count">{{ exhibitions.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ other.permalink }}">
-      <span>Other</span>
-      <span class="archive-count">{{ other.pages | length }}</span>
-    </a>
-    <a class="archive-card" href="{{ get_url(path='/cinema/') }}">
-      <span>Cinema</span>
-      <span class="archive-count">View</span>
-    </a>
-    <a class="archive-card" href="{{ get_url(path='/about/') }}">
-      <span>About</span>
-      <span class="archive-count">Info</span>
-    </a>
-  </div>
-</section>
+<div class="ledger-statline">
+  <span><b>{{ n_total }}</b> works catalogued</span>
+  <span><b>{{ n_painting }}</b> paintings</span>
+  <span><b>{{ n_printmaking }}</b> prints</span>
+  <span><b>{{ n_installation }}</b> installations</span>
+  <span><b>{{ n_sculpture + n_exhibitions + n_other }}</b> other</span>
+</div>
 
-<section class="latest-additions">
-  <h2>Latest Additions</h2>
-  <table class="works-table">
-    <thead>
+<div class="ledger-filters">
+  <span class="chip on">All</span>
+  <a class="chip" href="{{ painting.permalink }}">Painting</a>
+  <a class="chip" href="{{ printmaking.permalink }}">Printmaking</a>
+  <a class="chip" href="{{ installation.permalink }}">Installation</a>
+  <a class="chip" href="{{ sculpture.permalink }}">Sculpture</a>
+  <a class="chip" href="{{ exhibitions.permalink }}">Exhibitions</a>
+  <a class="chip" href="{{ other.permalink }}">Other</a>
+  <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
+</div>
+
+<table class="ledger">
+  <thead>
+    <tr>
+      <th class="c-thumb"></th>
+      <th>Title</th>
+      <th>Discipline</th>
+      <th>Medium</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% set_global prev_year = 0 %}
+    {% for p in works | sort(attribute="date") | reverse %}
+      {% if p.year != prev_year %}
+        {% set year_count = works | filter(attribute="year", value=p.year) | length %}
+        <tr class="yearband"><td colspan="5">{{ p.year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
+        {% set_global prev_year = p.year %}
+      {% endif %}
+      {% set parts = p.path | split(pat="/") %}
       <tr>
-        <th>Work</th>
-        <th>Year</th>
-        <th>Medium</th>
-        <th>Status</th>
+        <td class="c-thumb">
+          {% set thumb = p.assets | first %}
+          {% if thumb %}
+            {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
+            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
+          {% else %}
+            <span class="noimg">no img</span>
+          {% endif %}
+        </td>
+        <td class="c-title"><a href="{{ p.permalink }}">{{ p.title }}</a></td>
+        <td class="c-disc">{{ parts[2] }}</td>
+        <td class="c-med">{{ p.extra.medium | default(value="—") }}</td>
+        <td class="c-st"><span class="st st-{{ p.extra.status | default(value='unrecorded') | slugify }}">{{ p.extra.status | default(value="unrecorded") }}</span></td>
       </tr>
-    </thead>
-    <tbody>
-      {% for page in works | sort(attribute="date") | reverse | slice(end=20) %}
-        {% set thumb = page.assets | first %}
-        {% if thumb %}
-          {% set thumb_img = resize_image(path=thumb, width=128, height=128, op="fill") %}
-        {% endif %}
-        <tr>
-          <td>
-            <div class="works-cell">
-              {% if thumb %}
-                <img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ page.title }}" class="works-thumb">
-              {% endif %}
-              <a href="{{ page.permalink }}">{{ page.title }}</a>
-            </div>
-          </td>
-          <td>
-            {% if page.extra.year %}{{ page.extra.year }}{% elif page.date %}{{ page.date | date(format="%Y") }}{% endif %}
-          </td>
-          <td>{{ page.extra.medium | default(value="") }}</td>
-          <td>{{ page.extra.status | default(value="") }}</td>
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</section>
+    {% endfor %}
+  </tbody>
+</table>
 {% endblock %}
