@@ -10,6 +10,8 @@ medium = "Acrylic and Latex on Canvas"
 dimensions = "24 x 24 Inches"
 status = "sold"
 +++
-Acylic and Latex on Canvas. 24 by 24 inches. Winter 2022.
+Two heads meet at eye level. One is empty and pink; the other is packed with a branching network of nodes, charge waiting to move. A capacitor stores energy until the moment it is needed — so does a thought, so does a friendship. Sold at the April 2022 Art Hop in Truth or Consequences.
+
+Acrylic and Latex on Canvas. 24 by 24 inches. Winter 2022.
 
 {{ art_image(path="oeuvre/painting/2022/future-capacitor/C1CF5D0C-DBC8-4EB2-AED5-A9022ABF006F_1_102_o.jpeg", alt="Acrylic painting on canvas of two abstract faces in profile — one pink and one orange — connected by a network of purple lines and pink dots resembling a circuit diagram, on a warm beige background.", caption="Future Capacitor by kyle parker cunningham") }}
