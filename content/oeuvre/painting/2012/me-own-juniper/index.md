@@ -28,4 +28,12 @@ I turned and burnt ground upstream all to aware too much time had passed on this
 
 The next morning we were hiking before dawn, utilizing the cooler morning and evenings and resting through the heat of the day. As the sun rose we slogged up another endless slight incline on a mesa top and came upon this Juniper I have painted right here. We took a rest in it's presence and awed at its age. It knows stories no one else remembers. It knows the sky and the earth suspended here timelessly.
 
+On May 13th, 2022 a fire started very near to that place we camped that night. I write this a day later and this fire is spreading rapidly — we have visited this area many times and I know this fire will rage in the coming days and weeks and engulf yet another section of the Gila. I have spent this whole day thinking about this tree and the worlds it knows and the almost certain abrupt violent end it will experience imminently.
+
+So much of what is happening around us is experienced abstractedly. These giant forest fires, that most easily recognizable type of climate change, are often just statistics: so many acres burnt, so many houses lost. We see the smoke and then it's gone.
+
+The reality of these events is whole worlds are destroyed, a billion homes for birds and bugs and bears and trees ancient. Lost is the cumulative knowledge of spans of time both huge and tiny we as humans cannot even fathom. These stories are never to return. A new climate brings with it new stories.
+
+This *Juniperus deppeana* is perched on that edge between life and death. I will visit once the monsoons return to know if its arc of time continues.
+
 {{ art_image(path="oeuvre/painting/2012/me-own-juniper/1613FC25-BABB-48B4-9DB0-5C0DA8B16B66.jpeg", alt="Oil painting of an ancient alligator juniper tree viewed from below, its thick gnarled trunk with deeply textured bark twisting upward into a canopy of vibrant green foliage against a soft blue-green sky.", caption="Me Own Juniper by kyle parker cunningham") }}

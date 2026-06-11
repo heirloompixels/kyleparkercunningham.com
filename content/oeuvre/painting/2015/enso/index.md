@@ -5,6 +5,8 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/enso/", "/enso/"]
 +++
+Three ensos — the circle drawn in one continuous gesture, here built up in yellows, greens, and pinks like tree rings. I lived three years in a monastery and the enso followed me home: the mark that records exactly one moment of one hand, never repeatable, never finished. Painting them in oil is a contradiction the Zen masters would probably enjoy.
+
 Three Paintings. Each 11 by 15 inches. Oil on Linen. 2015.
 
 {{ art_image(path="oeuvre/painting/2015/enso/Enso1-copy.jpg", alt="Oil painting of concentric circles in yellow, green, pink, and dark green bands radiating from a warm white center, on a white linen ground.", caption="Enso by kyle parker cunningham") }}
