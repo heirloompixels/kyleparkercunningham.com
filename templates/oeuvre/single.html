@@ -1,9 +1,43 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
 {% block content %}
-<article>
+{% set parts = page.path | split(pat="/") %}
+{% set discipline = parts[2] %}
+<article class="work-page">
+
+  <nav class="work-crumb">
+    <a href="{{ get_url(path='/oeuvre/') }}">Oeuvre</a> /
+    <a href="{{ get_url(path='/oeuvre/' ~ discipline ~ '/') }}">{{ discipline }}</a> /
+    <span>{{ page.year }}</span>
+  </nav>
+
+  <header class="work-head">
     <h1>{{ page.title }}</h1>
-    <p>{{ page.extra.category }} · {{ page.date | date(format="%Y") }}</p>
+    <p class="work-tombstone">
+      {%- if page.extra.medium %}<b>{{ page.extra.medium }}</b> · {% endif -%}
+      {%- if page.extra.dimensions %}{{ page.extra.dimensions }} · {% endif -%}
+      {%- if page.extra.year_started -%}
+        <b>{{ page.extra.year_started }} — {{ page.year }}</b>
+      {%- else -%}
+        <b>{{ page.year }}</b>
+      {%- endif -%}
+      {%- if page.extra.year_reworked %} · reworked {{ page.extra.year_reworked }}{% endif -%}
+      {%- if page.extra.status %} · {{ page.extra.status }}{% endif -%}
+    </p>
+  </header>
+
+  <div class="work-body">
     {{ page.content | safe }}
+  </div>
+
+  <nav class="work-pn">
+    {% if page.higher %}
+      <a href="{{ page.higher.permalink }}">← previous<br><i>{{ page.higher.title }}</i></a>
+    {% else %}<span></span>{% endif %}
+    {% if page.lower %}
+      <a class="pn-next" href="{{ page.lower.permalink }}">next →<br><i>{{ page.lower.title }}</i></a>
+    {% else %}<span></span>{% endif %}
+  </nav>
+
 </article>
 {% endblock %}
