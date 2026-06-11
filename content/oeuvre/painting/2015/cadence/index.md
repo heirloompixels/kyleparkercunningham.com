@@ -4,6 +4,10 @@ date = 2015-12-04
 category = "painting"
 year = 2015
 aliases = ["/cadence/", "/oeuvre/painting/2015/cadence/"]
+
+[extra]
+medium = "Oil on Gesso Panel"
+dimensions = "13.5x13.5 inches"
 +++
 13 by 13 inches. Oil on Gesso Panel. Walnut Frame. 2015.
 

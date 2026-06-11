@@ -4,6 +4,10 @@ date = 2016-07-09
 category = "painting"
 year = 2016
 aliases = ["/approximate-completion/", "/oeuvre/painting/2016/approximate-completion/"]
+
+[extra]
+medium = "Oil on Canvas"
+dimensions = "30 by 30"
 +++
 Oil on Canvas. 30 by 30 inches. 2016.
 

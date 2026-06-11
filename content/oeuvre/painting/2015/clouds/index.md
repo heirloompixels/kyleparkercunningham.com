@@ -4,6 +4,10 @@ date = 2015-12-04
 category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/clouds/", "/clouds/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "7x8.5 inches"
 +++
 8 by 13 inches. Oil on Linen. 2015. Private Collection.
 

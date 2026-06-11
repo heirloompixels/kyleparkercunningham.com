@@ -4,6 +4,10 @@ date = 2022-05-03
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/saturday-evening-owls/", "/saturday-evening-owls/"]
+
+[extra]
+medium = "Acrylic, Latex & Paint marker on Canvas"
+dimensions = "30 x 20 inches"
 +++
 Acrylic and latex paint on Canvas. 20 by 30 inches. Spring 2022.
 

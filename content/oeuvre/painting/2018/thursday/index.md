@@ -4,6 +4,10 @@ date = 2018-05-14
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/thursday/", "/thursday/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "5x7 inches"
 +++
 oil on gesso panel. 5 by 7 inches. spring 2018.
 

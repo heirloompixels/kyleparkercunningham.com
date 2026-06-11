@@ -4,6 +4,12 @@ date = 2018-04-28
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/crystal-tooth-whale/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "11x14 inches"
+status = "on loan"
+location = "Alida"
 +++
 oil on linen. 11x14 inches. spring 2018.
 

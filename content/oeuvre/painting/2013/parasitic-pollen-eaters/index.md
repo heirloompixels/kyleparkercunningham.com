@@ -4,6 +4,9 @@ date = 2013-12-05
 category = "painting"
 year = 2013
 aliases = ["/oeuvre/painting/2013/parasitic-pollen-eaters/", "/parasitic-pollen-eaters/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 21 by 34 inches. Oil on Linen. 2013. Private Collection.
 

@@ -4,6 +4,9 @@ date = 2015-12-04
 category = "painting"
 year = 2015
 aliases = ["/binoculars/", "/oeuvre/painting/2015/binoculars/"]
+
+[extra]
+medium = "Oil on Panel"
 +++
 20 by 30 inches. Oil on Panel. Walnut Frame. 2015.
 

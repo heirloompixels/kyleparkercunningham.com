@@ -4,6 +4,11 @@ date = 2021-04-08
 category = "painting"
 year = 2021
 aliases = ["/bison-robotics/", "/oeuvre/painting/2021/bison-robotics/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "21 x 34 inches"
+status = "sold"
 +++
 oil on linen
 21 x 34 inches

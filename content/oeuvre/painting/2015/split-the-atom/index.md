@@ -4,6 +4,10 @@ date = 2015-12-04
 category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/split-the-atom/", "/split-the-atom/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "13x21 inches"
 +++
 13 by 21 inches. Oil on Linen. 2015.
 

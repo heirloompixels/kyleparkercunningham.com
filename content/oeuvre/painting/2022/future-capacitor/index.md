@@ -4,6 +4,11 @@ date = 2022-01-05
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/future-capacitor/"]
+
+[extra]
+medium = "Acrylic and Latex on Canvas"
+dimensions = "24 x 24 Inches"
+status = "sold"
 +++
 Acylic and Latex on Canvas. 24 by 24 inches. Winter 2022.
 

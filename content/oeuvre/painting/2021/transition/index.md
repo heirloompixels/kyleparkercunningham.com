@@ -4,6 +4,10 @@ date = 2021-11-23
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/transition/", "/transition/"]
+
+[extra]
+medium = "Oil on Gesso Panel"
+dimensions = "6 3/8 by 36 3/8"
 +++
 6 by 30 inches
 Oil on Gesso Panel

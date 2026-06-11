@@ -4,6 +4,10 @@ date = 2022-01-18
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/surviving-the-asteroid/", "/surviving-the-asteroid/"]
+
+[extra]
+medium = "Oil, Oil Stick, Acrylic, Latex on Canvas"
+dimensions = "24 by 30"
 +++
 Oil, Oil Stick, Acrylic and Latex on Canvas. 24 by 30 inches. Winter 2022.
 

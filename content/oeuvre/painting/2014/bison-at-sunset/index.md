@@ -4,6 +4,10 @@ date = 2014-12-05
 category = "painting"
 year = 2014
 aliases = ["/bison-at-sunset/", "/oeuvre/painting/2014/bison-at-sunset/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "8x13 inches"
 +++
 8 by 13 inches. Oil on Linen. 2014. Private Collection.
 

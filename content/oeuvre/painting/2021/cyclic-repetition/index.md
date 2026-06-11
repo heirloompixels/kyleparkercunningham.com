@@ -4,6 +4,11 @@ date = 2021-12-18
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/cyclic-repetition/", "/cyclic-repetition/"]
+
+[extra]
+medium = "Oil on Panel"
+dimensions = "48 x 14 Inches"
+year_reworked = "2022"
 +++
 The sacrifice of the drone bison.
 

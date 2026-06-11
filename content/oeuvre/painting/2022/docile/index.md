@@ -4,6 +4,10 @@ date = 2022-05-03
 category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/docile/", "/docile/"]
+
+[extra]
+medium = "Oil on Linen"
+dimensions = "24 x 30 inches"
 +++
 Oil on Linen. 24 by 30 inches. Winter 2022.
 

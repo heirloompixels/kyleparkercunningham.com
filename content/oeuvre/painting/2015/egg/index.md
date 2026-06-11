@@ -4,6 +4,10 @@ date = 2015-10-25
 category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/egg/", "/egg/"]
+
+[extra]
+medium = "Oil on Panel"
+dimensions = "20 1/2 by 14 1/2"
 +++
 20 x 30 inches. 2015.
 
