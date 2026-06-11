@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block head_extra %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
+{% for asset in page.assets %}{% if asset is ending_with("edition.css") %}
+<link rel="stylesheet" href="{{ get_url(path=asset) }}">
+{% endif %}{% endfor %}
+{% endblock %}
+
+{# An edition opens with its cover — no site header above it. #}
+{% block site_header %}{% endblock %}
+
+{% block content %}
+{% set edition = page %}
+{% include "editions/issue.html" %}
+{% endblock %}

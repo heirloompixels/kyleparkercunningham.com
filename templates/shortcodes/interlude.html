@@ -1,0 +1,17 @@
+{% set k = kicker | default(value="") %}
+{% set t = title | default(value="") %}
+{% set img = image | default(value="") %}
+{% set img_alt = image_alt | default(value="") %}
+<section class="ed-interlude">
+  <div class="ed-interlude-inner">
+    {% if img %}
+      {% set i = resize_image(path=img, width=1200, op="fit_width") %}
+      <img src="/{{ i.static_path | replace(from='static/', to='') }}" alt="{{ img_alt }}" loading="lazy" decoding="async">
+    {% endif %}
+    <div class="ed-interlude-text">
+      {% if k %}<span class="ed-kicker">{{ k }}</span>{% endif %}
+      {% if t %}<h2>{{ t }}</h2>{% endif %}
+      {{ body | markdown | safe }}
+    </div>
+  </div>
+</section>

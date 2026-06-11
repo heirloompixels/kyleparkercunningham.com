@@ -46,6 +46,41 @@ cd kpc-site
 
 Visit http://localhost:1111 to preview the site.
 
+## Editions — the living homepage
+
+The front page of the site is an **edition**: an art-directed editorial issue
+composed around what the studio is doing right now. Seasonal editions are the
+spine, with project editions interspersed. When an edition's time is over it
+retires — whole and unchanged — to a permanent URL under `/editions/`, and a
+new front page is composed.
+
+- **Content**: one folder per edition in `content/editions/<slug>/index.md`.
+  Front matter carries `kind` (season/project), `numeral`, `status`
+  (staging / live / retired), `lifespan`, `cover`, `deck`, etc. The body is
+  markdown using the editorial shortcodes: `plate`, `diptych`, `wallquote`,
+  `marginalia`, `interlude`.
+- **Rendering**: the homepage renders whichever edition has `status = "live"`
+  (`templates/index.html` → `templates/editions/issue.html`). If none is live,
+  it falls back to the old homepage. `/editions/` is the archive shelf.
+- **Per-edition art direction**: drop an `edition.css` next to the edition's
+  `index.md`; it loads after the shared base (`static/editions.css`) and can
+  restyle anything. Each edition can look like its own work.
+
+### Workflow
+
+```bash
+./scripts/edition.sh new 2026-autumn "Title Here" season   # scaffold (staged, draft)
+./scripts/edition.sh serve                                  # live-reload incl. drafts
+#   → preview at http://127.0.0.1:1111/editions/2026-autumn/
+./scripts/edition.sh list                                   # see all editions + status
+./scripts/edition.sh promote 2026-autumn                    # retire current, go live
+```
+
+Staged editions have `draft = true`, so **production builds never include
+them** — you can push work-in-progress safely. `promote` removes the draft
+flag, stamps dates, retires the previous edition, and flips its lifespan
+to past tense.
+
 ## Adding New Content
 
 ### New Artwork:

@@ -1,0 +1,5 @@
+{% set c = cite | default(value="") %}
+<div class="ed-wallquote">
+  <p>{{ quote }}</p>
+  {% if c %}<span>{{ c }}</span>{% endif %}
+</div>

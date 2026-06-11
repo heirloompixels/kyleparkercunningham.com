@@ -1,0 +1,80 @@
+{# Renders one full edition issue. Expects `edition` (a page from the editions
+   section) to be set in context before this include. Used by index.html when
+   an edition is live, and by editions/single.html for permanent edition URLs. #}
+
+{% set kind_label = "Edition" %}
+{% if edition.extra.kind == "season" %}{% set kind_label = "Season" %}{% endif %}
+
+<article class="edition-issue edition-{{ edition.slug }}">
+
+  {% if edition.extra.cover %}
+    {% set cover_lg = resize_image(path=edition.extra.cover, width=2000, op="fit_width") %}
+    <div class="edition-cover-track edition-bleed">
+      <div class="edition-cover">
+        <img src="/{{ cover_lg.static_path | replace(from='static/', to='') }}" alt="{{ edition.extra.cover_alt | default(value=edition.title) }}">
+        <div class="veil"></div>
+        <div class="tag">
+          <div class="who">Kyle Parker Cunningham</div>
+          <div class="what">{{ edition.extra.cover_tag | default(value=edition.title) }}</div>
+        </div>
+        <div class="hint">scroll ↓</div>
+      </div>
+    </div>
+  {% endif %}
+
+  <header class="edition-masthead">
+    <div class="season">The Front Page · {{ kind_label }} {{ edition.extra.numeral }} · {{ edition.extra.lifespan }}</div>
+    <h1>{{ edition.title }}</h1>
+    {% if edition.extra.deck %}<p class="deck">{{ edition.extra.deck }}</p>{% endif %}
+    {% if edition.extra.dateline %}<div class="dateline">{{ edition.extra.dateline }}</div>{% endif %}
+    <div class="edition-orn"><span>{{ edition.extra.ornament | default(value="❦") }}</span></div>
+  </header>
+
+  <div class="edition-body">
+    {{ edition.content | safe }}
+  </div>
+
+  {% set painting = get_section(path="oeuvre/painting/_index.md") %}
+  {% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
+  {% set installation = get_section(path="oeuvre/installation/_index.md") %}
+  {% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
+  {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+  {% set other = get_section(path="oeuvre/other/_index.md") %}
+  {% set projects = get_section(path="projects/_index.md") %}
+  {% set n_painting = painting.pages | length %}
+  {% set n_printmaking = printmaking.pages | length %}
+  {% set n_installation = installation.pages | length %}
+  {% set n_sculpture = sculpture.pages | length %}
+  {% set n_exhibitions = exhibitions.pages | length %}
+  {% set n_other = other.pages | length %}
+  {% set works_count = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_other %}
+
+  <section class="edition-doors">
+    <h2>Step deeper</h2>
+    <div class="edition-doorgrid">
+      <a class="edition-door" href="{{ get_url(path='/oeuvre/') }}">
+        <div class="n">{{ works_count }}</div>
+        <div class="t">The Oeuvre</div>
+        <div class="d">Every work, catalogued — paintings, prints, installations, 2003 to now.</div>
+      </a>
+      <a class="edition-door" href="{{ get_url(path='/projects/') }}">
+        <div class="n">{{ projects.pages | length }}</div>
+        <div class="t">Projects</div>
+        <div class="d">The long arcs — ongoing, researching, and complete.</div>
+      </a>
+      <a class="edition-door" href="{{ get_url(path='/log/') }}">
+        <div class="n">∞</div>
+        <div class="t">The Log</div>
+        <div class="d">Production notes from the studio, as they happen.</div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="edition-colophon">
+    <div class="k">About this front page</div>
+    <p>This page is {{ kind_label | lower }} {{ edition.extra.numeral }} of a living homepage. Each season the front of this site is composed anew — around whatever the studio is actually doing — and when the season turns, this page retires, whole and unchanged, to the permanent archive. The homepage is a work; the archive keeps everything.</p>
+    {% if edition.extra.sign_off %}<div class="sig">{{ edition.extra.sign_off }}</div>{% endif %}
+    <a class="shelf-link" href="{{ get_url(path='/editions/') }}">Browse the past editions →</a>
+  </footer>
+
+</article>

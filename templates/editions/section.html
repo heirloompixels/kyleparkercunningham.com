@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Editions — {{ config.title }}{% endblock %}
+
+{% block head_extra %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
+{% endblock %}
+
+{% block content %}
+{% set live = section.pages | filter(attribute="extra.status", value="live") %}
+{% set retired = section.pages | filter(attribute="extra.status", value="retired") | sort(attribute="date") | reverse %}
+
+<div class="editions-intro">
+  <div class="k">The Editions</div>
+  <h1>Every front page this site has ever had, kept whole.</h1>
+  <p>The homepage of this site is composed fresh each season — with project editions in between — around what the studio is doing, then retired here, unchanged, at a permanent address, when its time is over.</p>
+</div>
+
+{% for edition in live %}
+  <a class="editions-current" href="{{ edition.permalink }}">
+    {% if edition.extra.cover %}
+      {% set cov = resize_image(path=edition.extra.cover, width=960, op="fit_width") %}
+      <img src="/{{ cov.static_path | replace(from='static/', to='') }}" alt="">
+    {% endif %}
+    <span>
+      <span class="k">Now live</span>
+      <h2>{{ edition.extra.numeral }} — {{ edition.title }}</h2>
+      <span class="m">{{ edition.extra.lifespan }}{% if edition.extra.deck %} · {{ edition.extra.deck }}{% endif %}</span>
+    </span>
+  </a>
+{% endfor %}
+
+<div class="editions-shelf">
+  {% for edition in retired %}
+    <a class="editions-vol" href="{{ edition.permalink }}">
+      {% if edition.extra.cover %}
+        {% set cov = resize_image(path=edition.extra.cover, width=640, op="fit_width") %}
+        <img src="/{{ cov.static_path | replace(from='static/', to='') }}" alt="">
+      {% endif %}
+      <div class="body">
+        <div class="no">{% if edition.extra.kind == "season" %}Season{% else %}Edition{% endif %} {{ edition.extra.numeral }}</div>
+        <h3>{{ edition.title }}</h3>
+        <div class="lived">{{ edition.extra.lifespan }}</div>
+        {% if edition.extra.deck %}<div class="desc">{{ edition.extra.deck }}</div>{% endif %}
+      </div>
+    </a>
+  {% endfor %}
+</div>
+{% endblock %}
