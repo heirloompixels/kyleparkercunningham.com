@@ -16,6 +16,8 @@ Intaglio Drypoint Print
 Image Size: 6 x 9 inches
 Paper Size roughly 8 x 10 inches
 
+Based on an earlier 2015 oil painting of the same title (not yet documented here).
+
 {{ art_image(path="oeuvre/printmaking/2021/airlift/airlift-5.jpeg", alt="Drypoint intaglio print of an origami paper crane lifting a soft blue-green watercolor cloud by a thin string, floating against a pale background with subtle plate tone.", caption="airlift by kyle parker cunningham") }}
 
 {{ art_image(path="oeuvre/printmaking/2021/airlift/airlift-6-1.jpeg", alt="Hand-colored print of the Airlift origami crane carrying a white cloud, set against a vivid yellow gouache background that fills the entire plate area.") }}
