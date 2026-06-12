@@ -5,6 +5,8 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/"]
 +++
+A turtle carries the arsenal this time — rocket, clovis point, and satellite dish strapped to the hexagons of its shell. The slowest courier entrusted with the fastest cargo: twelve thousand years of point technology riding deep time's own armored chassis. The [painting](/oeuvre/painting/2020/rocket-propelled-clovis-point/) (2020) posed the idea; the turtle volunteered to deliver it.
+
 Intaglio drypoint prints. Printed area approx 6 x 9 inches. Handtorn paper approx 8 x 10 inches.
 
 {{ art_image(path="oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/IMG_3957-1.jpeg", alt="Intaglio drypoint print of a whimsical turtle carrying a rocket and a Clovis arrowhead on its hexagonal-patterned shell, with a satellite dish near its head, hand-colored with burnt orange along the ground line.", caption="Rocket Propelled Clovis Point by kyle parker cunningham") }}
