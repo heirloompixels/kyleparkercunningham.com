@@ -5,6 +5,8 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/teardrop/", "/teardrop/"]
 +++
+The teardrop trailer — the Homemade Spaceship. Jeannie and I built one and lived in it for a year crossing the American West, so this is less a still life than a portrait of a home. Red and white, hand colored, permanently ready to leave.
+
 8 x 10 inches. Drypoint Intaglio Print. Handcolored with watercolor. 2018.
 
 {{ art_image(path="oeuvre/printmaking/2018/teardrop/DC3345B5-0458-49B2-91D2-ABB51C023655.jpeg", alt="Drypoint intaglio print of a vintage teardrop camper trailer in profile, with black linework showing horizontal siding, a door, window, and tail fin, accented by a bold orange-red stripe across the middle.", caption="Teardrop by kyle parker cunningham") }}
