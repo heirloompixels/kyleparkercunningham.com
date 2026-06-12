@@ -5,6 +5,8 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/sunflowers/"]
 +++
+Sunflowers in a mug, the big head spiraling with seed, hand colored in burnt orange. Numbered into the plate one pull at a time — the open-ended series is documented on the [Sunflowers](/sun/) page, where each numbered print gets its portrait.
+
 Intaglio Drypoint Print.
 
 {{ art_image(path="oeuvre/printmaking/2022/sunflowers/IMG_3954-1.jpeg", alt="Intaglio drypoint print of sunflowers in a mug, with a large spiraling flower head in the foreground and several smaller blooms rising above, hand-colored with warm burnt orange on the mug and petals against a scratched gray background.", caption="Sunflowers by kyle parker cunningham") }}

@@ -5,6 +5,8 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/origami-beetroot/", "/origami-beetroot/"]
 +++
+A beet pulled and drawn like a botanical plate, its leaves creased flat and angular as folded paper. The garden produces its own origami; you just have to pull it up and turn it over.
+
 Intaglio Drypoint Print.
 
 {{ art_image(path="oeuvre/printmaking/2022/origami-beetroot/IMG_3950-1.jpeg", alt="Intaglio drypoint print of a beetroot rendered with angular, origami-like folds, its long tapered roots pointing upward and jagged leaves radiating outward, printed in deep black ink on pale paper with heavy cross-hatching.", caption="Origami Beetroot by kyle parker cunningham") }}
