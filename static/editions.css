@@ -106,6 +106,7 @@
 /* ---------- plates ---------- */
 .ed-plate { padding: 3rem 0; text-align: center; width: 100vw; margin-left: calc(50% - 50vw); }
 .ed-plate img {
+  display: block; margin-left: auto; margin-right: auto;
   max-height: 88vh; max-width: min(1000px, 92vw); width: auto;
   box-shadow: 0 2px 4px rgba(30,26,22,.08), 0 24px 70px rgba(30,26,22,.16);
 }
