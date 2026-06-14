@@ -1,0 +1,2110 @@
+{
+  "generated": true,
+  "total": 261,
+  "totals": {
+    "kyle": 224,
+    "claude": 3,
+    "structure": 34
+  },
+  "group_order": [
+    "Home",
+    "Oeuvre",
+    "Projects",
+    "Editions",
+    "Log",
+    "Cinema",
+    "About & information",
+    "Installations",
+    "Other pages"
+  ],
+  "pages": [
+    {
+      "title": "Home",
+      "permalink": "/",
+      "path": "",
+      "group": "Home",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Oeuvre",
+      "permalink": "/oeuvre/",
+      "path": "oeuvre",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "Exhibitions",
+      "permalink": "/oeuvre/exhibitions/",
+      "path": "oeuvre/exhibitions",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2022",
+      "permalink": "/oeuvre/exhibitions/2022/",
+      "path": "oeuvre/exhibitions/2022",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Installation",
+      "permalink": "/oeuvre/installation/",
+      "path": "oeuvre/installation",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2017",
+      "permalink": "/oeuvre/installation/2017/",
+      "path": "oeuvre/installation/2017",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2019",
+      "permalink": "/oeuvre/installation/2019/",
+      "path": "oeuvre/installation/2019",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2020",
+      "permalink": "/oeuvre/installation/2020/",
+      "path": "oeuvre/installation/2020",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2022",
+      "permalink": "/oeuvre/installation/2022/",
+      "path": "oeuvre/installation/2022",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2023",
+      "permalink": "/oeuvre/installation/2023/",
+      "path": "oeuvre/installation/2023",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Other",
+      "permalink": "/oeuvre/other/",
+      "path": "oeuvre/other",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2018",
+      "permalink": "/oeuvre/other/2018/",
+      "path": "oeuvre/other/2018",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2021",
+      "permalink": "/oeuvre/other/2021/",
+      "path": "oeuvre/other/2021",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2022",
+      "permalink": "/oeuvre/other/2022/",
+      "path": "oeuvre/other/2022",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Painting",
+      "permalink": "/oeuvre/painting/",
+      "path": "oeuvre/painting",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2009",
+      "permalink": "/oeuvre/painting/2009/",
+      "path": "oeuvre/painting/2009",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2012",
+      "permalink": "/oeuvre/painting/2012/",
+      "path": "oeuvre/painting/2012",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2013",
+      "permalink": "/oeuvre/painting/2013/",
+      "path": "oeuvre/painting/2013",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2014",
+      "permalink": "/oeuvre/painting/2014/",
+      "path": "oeuvre/painting/2014",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2015",
+      "permalink": "/oeuvre/painting/2015/",
+      "path": "oeuvre/painting/2015",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2016",
+      "permalink": "/oeuvre/painting/2016/",
+      "path": "oeuvre/painting/2016",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2017",
+      "permalink": "/oeuvre/painting/2017/",
+      "path": "oeuvre/painting/2017",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2018",
+      "permalink": "/oeuvre/painting/2018/",
+      "path": "oeuvre/painting/2018",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2019",
+      "permalink": "/oeuvre/painting/2019/",
+      "path": "oeuvre/painting/2019",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2020",
+      "permalink": "/oeuvre/painting/2020/",
+      "path": "oeuvre/painting/2020",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2021",
+      "permalink": "/oeuvre/painting/2021/",
+      "path": "oeuvre/painting/2021",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2022",
+      "permalink": "/oeuvre/painting/2022/",
+      "path": "oeuvre/painting/2022",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2023",
+      "permalink": "/oeuvre/painting/2023/",
+      "path": "oeuvre/painting/2023",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2024",
+      "permalink": "/oeuvre/painting/2024/",
+      "path": "oeuvre/painting/2024",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Printmaking",
+      "permalink": "/oeuvre/printmaking/",
+      "path": "oeuvre/printmaking",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2016",
+      "permalink": "/oeuvre/printmaking/2016/",
+      "path": "oeuvre/printmaking/2016",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2017",
+      "permalink": "/oeuvre/printmaking/2017/",
+      "path": "oeuvre/printmaking/2017",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2018",
+      "permalink": "/oeuvre/printmaking/2018/",
+      "path": "oeuvre/printmaking/2018",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2019",
+      "permalink": "/oeuvre/printmaking/2019/",
+      "path": "oeuvre/printmaking/2019",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2020",
+      "permalink": "/oeuvre/printmaking/2020/",
+      "path": "oeuvre/printmaking/2020",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2021",
+      "permalink": "/oeuvre/printmaking/2021/",
+      "path": "oeuvre/printmaking/2021",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2022",
+      "permalink": "/oeuvre/printmaking/2022/",
+      "path": "oeuvre/printmaking/2022",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "2023",
+      "permalink": "/oeuvre/printmaking/2023/",
+      "path": "oeuvre/printmaking/2023",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "Sculpture",
+      "permalink": "/oeuvre/sculpture/",
+      "path": "oeuvre/sculpture",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "2021",
+      "permalink": "/oeuvre/sculpture/2021/",
+      "path": "oeuvre/sculpture/2021",
+      "group": "Oeuvre",
+      "author": "structure",
+      "is_section": true
+    },
+    {
+      "title": "B-sides & Rarities",
+      "permalink": "/oeuvre/exhibitions/2022/b-sides-rarities/",
+      "path": "oeuvre/exhibitions/2022/b-sides-rarities",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Cyclum Lunarem",
+      "permalink": "/oeuvre/installation/2017/cyclum-lunarem/",
+      "path": "oeuvre/installation/2017/cyclum-lunarem",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Prophets",
+      "permalink": "/oeuvre/installation/2019/prophets/",
+      "path": "oeuvre/installation/2019/prophets",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Tomorrow",
+      "permalink": "/oeuvre/installation/2019/tomorrow/",
+      "path": "oeuvre/installation/2019/tomorrow",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Tomorrow",
+      "permalink": "/oeuvre/installation/2019/tomorrow-desert-archaic/",
+      "path": "oeuvre/installation/2019/tomorrow-desert-archaic",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Solstice",
+      "permalink": "/oeuvre/installation/2020/solstice/",
+      "path": "oeuvre/installation/2020/solstice",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Once Creatures Existed",
+      "permalink": "/oeuvre/installation/2022/once-creatures-existed/",
+      "path": "oeuvre/installation/2022/once-creatures-existed",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "The Meaning of Time",
+      "permalink": "/oeuvre/installation/2023/the-meaning-of-time/",
+      "path": "oeuvre/installation/2023/the-meaning-of-time",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Space Worm",
+      "permalink": "/oeuvre/other/2018/space-worm/",
+      "path": "oeuvre/other/2018/space-worm",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "fall 2021",
+      "permalink": "/oeuvre/other/2021/fall-2021/",
+      "path": "oeuvre/other/2021/fall-2021",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "owl",
+      "permalink": "/oeuvre/other/2021/owl/",
+      "path": "oeuvre/other/2021/owl",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Abduction",
+      "permalink": "/oeuvre/other/2022/abduction/",
+      "path": "oeuvre/other/2022/abduction",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Continuation",
+      "permalink": "/oeuvre/other/2022/continuation/",
+      "path": "oeuvre/other/2022/continuation",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Mycellium",
+      "permalink": "/oeuvre/other/2022/mycellium/",
+      "path": "oeuvre/other/2022/mycellium",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Thread",
+      "permalink": "/oeuvre/other/2022/thread/",
+      "path": "oeuvre/other/2022/thread",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Muxy",
+      "permalink": "/oeuvre/painting/2009/muxy/",
+      "path": "oeuvre/painting/2009/muxy",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Me Own Juniper",
+      "permalink": "/oeuvre/painting/2012/me-own-juniper/",
+      "path": "oeuvre/painting/2012/me-own-juniper",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Dodecahedron",
+      "permalink": "/oeuvre/painting/2013/dodecahedron/",
+      "path": "oeuvre/painting/2013/dodecahedron",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Parasitic Pollen Eaters",
+      "permalink": "/oeuvre/painting/2013/parasitic-pollen-eaters/",
+      "path": "oeuvre/painting/2013/parasitic-pollen-eaters",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Arm Fauna",
+      "permalink": "/oeuvre/painting/2014/arm-fauna/",
+      "path": "oeuvre/painting/2014/arm-fauna",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Atmospheric Whales",
+      "permalink": "/oeuvre/painting/2014/atmospheric-whales/",
+      "path": "oeuvre/painting/2014/atmospheric-whales",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Bison at Sunset",
+      "permalink": "/oeuvre/painting/2014/bison-at-sunset/",
+      "path": "oeuvre/painting/2014/bison-at-sunset",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Coffee Carafe",
+      "permalink": "/oeuvre/painting/2014/coffee-carafe/",
+      "path": "oeuvre/painting/2014/coffee-carafe",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Corn Sky Connection",
+      "permalink": "/oeuvre/painting/2014/corn-sky-connection/",
+      "path": "oeuvre/painting/2014/corn-sky-connection",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "espresso machine",
+      "permalink": "/oeuvre/painting/2014/espresso-machine/",
+      "path": "oeuvre/painting/2014/espresso-machine",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Expansion",
+      "permalink": "/oeuvre/painting/2014/expansion/",
+      "path": "oeuvre/painting/2014/expansion",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Pet Walk",
+      "permalink": "/oeuvre/painting/2014/pet-walk/",
+      "path": "oeuvre/painting/2014/pet-walk",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Binoculars",
+      "permalink": "/oeuvre/painting/2015/binoculars/",
+      "path": "oeuvre/painting/2015/binoculars",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Butterfly Conundrum",
+      "permalink": "/oeuvre/painting/2015/butterfly_conundrum/",
+      "path": "oeuvre/painting/2015/butterfly_conundrum",
+      "group": "Oeuvre",
+      "author": "claude",
+      "is_section": false
+    },
+    {
+      "title": "Cadence",
+      "permalink": "/oeuvre/painting/2015/cadence/",
+      "path": "oeuvre/painting/2015/cadence",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Clouds",
+      "permalink": "/oeuvre/painting/2015/clouds/",
+      "path": "oeuvre/painting/2015/clouds",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Egg",
+      "permalink": "/oeuvre/painting/2015/egg/",
+      "path": "oeuvre/painting/2015/egg",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Enso",
+      "permalink": "/oeuvre/painting/2015/enso/",
+      "path": "oeuvre/painting/2015/enso",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Split the Atom",
+      "permalink": "/oeuvre/painting/2015/split-the-atom/",
+      "path": "oeuvre/painting/2015/split-the-atom",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Substantial",
+      "permalink": "/oeuvre/painting/2015/substantial/",
+      "path": "oeuvre/painting/2015/substantial",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Approximate Completion",
+      "permalink": "/oeuvre/painting/2016/approximate-completion/",
+      "path": "oeuvre/painting/2016/approximate-completion",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Spring",
+      "permalink": "/oeuvre/painting/2016/spring/",
+      "path": "oeuvre/painting/2016/spring",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Yellow and Orange",
+      "permalink": "/oeuvre/painting/2017/yellow-and-orange/",
+      "path": "oeuvre/painting/2017/yellow-and-orange",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "A. Muscaria",
+      "permalink": "/oeuvre/painting/2018/a-muscaria/",
+      "path": "oeuvre/painting/2018/a-muscaria",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Airdrop",
+      "permalink": "/oeuvre/painting/2018/airdrop/",
+      "path": "oeuvre/painting/2018/airdrop",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Crystal Tooth Whale",
+      "permalink": "/oeuvre/painting/2018/crystal-tooth-whale/",
+      "path": "oeuvre/painting/2018/crystal-tooth-whale",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Elephant Mask",
+      "permalink": "/oeuvre/painting/2018/elephant-mask/",
+      "path": "oeuvre/painting/2018/elephant-mask",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Flicker Rhino",
+      "permalink": "/oeuvre/painting/2018/flicker-rhino/",
+      "path": "oeuvre/painting/2018/flicker-rhino",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Hands",
+      "permalink": "/oeuvre/painting/2018/hands/",
+      "path": "oeuvre/painting/2018/hands",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Narwhal",
+      "permalink": "/oeuvre/painting/2018/narwhal/",
+      "path": "oeuvre/painting/2018/narwhal",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Octobat",
+      "permalink": "/oeuvre/painting/2018/octobat/",
+      "path": "oeuvre/painting/2018/octobat",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Pinned",
+      "permalink": "/oeuvre/painting/2018/pinned/",
+      "path": "oeuvre/painting/2018/pinned",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Prickly Pear",
+      "permalink": "/oeuvre/painting/2018/prickly-pear/",
+      "path": "oeuvre/painting/2018/prickly-pear",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Robot Family",
+      "permalink": "/oeuvre/painting/2018/robot-family/",
+      "path": "oeuvre/painting/2018/robot-family",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Seven",
+      "permalink": "/oeuvre/painting/2018/seven/",
+      "path": "oeuvre/painting/2018/seven",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Three Blue Corn",
+      "permalink": "/oeuvre/painting/2018/three-blue-corn/",
+      "path": "oeuvre/painting/2018/three-blue-corn",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Thursday",
+      "permalink": "/oeuvre/painting/2018/thursday/",
+      "path": "oeuvre/painting/2018/thursday",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Monsoon Bird",
+      "permalink": "/oeuvre/painting/2019/monsoon-bird/",
+      "path": "oeuvre/painting/2019/monsoon-bird",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Self Portrait",
+      "permalink": "/oeuvre/painting/2019/self-portrait/",
+      "path": "oeuvre/painting/2019/self-portrait",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Bonsai Giant Sequoia",
+      "permalink": "/oeuvre/painting/2020/bonsai-giant-sequoia/",
+      "path": "oeuvre/painting/2020/bonsai-giant-sequoia",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Michael",
+      "permalink": "/oeuvre/painting/2020/michael/",
+      "path": "oeuvre/painting/2020/michael",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Migratory Scavengers",
+      "permalink": "/oeuvre/painting/2020/migratory-scavengers/",
+      "path": "oeuvre/painting/2020/migratory-scavengers",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Nana",
+      "permalink": "/oeuvre/painting/2020/nana/",
+      "path": "oeuvre/painting/2020/nana",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Rocket Propelled Clovis Point",
+      "permalink": "/oeuvre/painting/2020/rocket-propelled-clovis-point/",
+      "path": "oeuvre/painting/2020/rocket-propelled-clovis-point",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Shawn Fischer",
+      "permalink": "/oeuvre/painting/2020/shawn/",
+      "path": "oeuvre/painting/2020/shawn",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Solar Ascension",
+      "permalink": "/oeuvre/painting/2020/solar-ascension/",
+      "path": "oeuvre/painting/2020/solar-ascension",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "bison robotics",
+      "permalink": "/oeuvre/painting/2021/bison-robotics/",
+      "path": "oeuvre/painting/2021/bison-robotics",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "cyclic repetition",
+      "permalink": "/oeuvre/painting/2021/cyclic-repetition/",
+      "path": "oeuvre/painting/2021/cyclic-repetition",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "cydney and val",
+      "permalink": "/oeuvre/painting/2021/cydney-and-val/",
+      "path": "oeuvre/painting/2021/cydney-and-val",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "paper neck giraffes",
+      "permalink": "/oeuvre/painting/2021/paper-neck-giraffes/",
+      "path": "oeuvre/painting/2021/paper-neck-giraffes",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Path Through the Autumn Leaves",
+      "permalink": "/oeuvre/painting/2021/path-though-the-autumn-leaves/",
+      "path": "oeuvre/painting/2021/path-though-the-autumn-leaves",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "pink and yellow",
+      "permalink": "/oeuvre/painting/2021/pink-and-yellow/",
+      "path": "oeuvre/painting/2021/pink-and-yellow",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "preservation cactus",
+      "permalink": "/oeuvre/painting/2021/preservation-cactus/",
+      "path": "oeuvre/painting/2021/preservation-cactus",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "rhino radar",
+      "permalink": "/oeuvre/painting/2021/rhino-radar/",
+      "path": "oeuvre/painting/2021/rhino-radar",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "the berry picker",
+      "permalink": "/oeuvre/painting/2021/the-berry-picker/",
+      "path": "oeuvre/painting/2021/the-berry-picker",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "the mother bear",
+      "permalink": "/oeuvre/painting/2021/the-mother-bear/",
+      "path": "oeuvre/painting/2021/the-mother-bear",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "there once was ice here",
+      "permalink": "/oeuvre/painting/2021/there-once-was-ice-here/",
+      "path": "oeuvre/painting/2021/there-once-was-ice-here",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "transition",
+      "permalink": "/oeuvre/painting/2021/transition/",
+      "path": "oeuvre/painting/2021/transition",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "transplanter",
+      "permalink": "/oeuvre/painting/2021/transplanter/",
+      "path": "oeuvre/painting/2021/transplanter",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "tugboat whale sequoia",
+      "permalink": "/oeuvre/painting/2021/tugboat-whale-sequoia/",
+      "path": "oeuvre/painting/2021/tugboat-whale-sequoia",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Docile",
+      "permalink": "/oeuvre/painting/2022/docile/",
+      "path": "oeuvre/painting/2022/docile",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Future Capacitor",
+      "permalink": "/oeuvre/painting/2022/future-capacitor/",
+      "path": "oeuvre/painting/2022/future-capacitor",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Ken",
+      "permalink": "/oeuvre/painting/2022/ken/",
+      "path": "oeuvre/painting/2022/ken",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Rhino Radar (Arm Fauna)",
+      "permalink": "/oeuvre/painting/2022/rhino-radar-arm-fauna/",
+      "path": "oeuvre/painting/2022/rhino-radar-arm-fauna",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Saturday Evening Owls",
+      "permalink": "/oeuvre/painting/2022/saturday-evening-owls/",
+      "path": "oeuvre/painting/2022/saturday-evening-owls",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Surviving the Asteroid",
+      "permalink": "/oeuvre/painting/2022/surviving-the-asteroid/",
+      "path": "oeuvre/painting/2022/surviving-the-asteroid",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "The Black Fire",
+      "permalink": "/oeuvre/painting/2022/the-black-fire/",
+      "path": "oeuvre/painting/2022/the-black-fire",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Visible",
+      "permalink": "/oeuvre/painting/2022/visible/",
+      "path": "oeuvre/painting/2022/visible",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Autumnal Twilight",
+      "permalink": "/oeuvre/painting/2023/autumnal-twilight/",
+      "path": "oeuvre/painting/2023/autumnal-twilight",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Calavera Del Caballo",
+      "permalink": "/oeuvre/painting/2023/calavera-del-caballo/",
+      "path": "oeuvre/painting/2023/calavera-del-caballo",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "First Contact",
+      "permalink": "/oeuvre/painting/2023/first-contact/",
+      "path": "oeuvre/painting/2023/first-contact",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Geometric Anatomy",
+      "permalink": "/oeuvre/painting/2023/geometric-anatomy/",
+      "path": "oeuvre/painting/2023/geometric-anatomy",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Harmonics",
+      "permalink": "/oeuvre/painting/2023/harmonics/",
+      "path": "oeuvre/painting/2023/harmonics",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Combinations and Re-Entry",
+      "permalink": "/oeuvre/painting/2023/untitled-begins/",
+      "path": "oeuvre/painting/2023/untitled-begins",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "above the clouds",
+      "permalink": "/oeuvre/painting/2024/above-the-clouds/",
+      "path": "oeuvre/painting/2024/above-the-clouds",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "alpenglow at mineral creek with the adults after the babies have gone to sleep",
+      "permalink": "/oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/",
+      "path": "oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "bottled lightning",
+      "permalink": "/oeuvre/painting/2024/bottled-lightning/",
+      "path": "oeuvre/painting/2024/bottled-lightning",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "does math control nature?",
+      "permalink": "/oeuvre/painting/2024/does-math-control-nature/",
+      "path": "oeuvre/painting/2024/does-math-control-nature",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "equilateral equilibrium",
+      "permalink": "/oeuvre/painting/2024/equilateral-equilibrium/",
+      "path": "oeuvre/painting/2024/equilateral-equilibrium",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "felt and lived",
+      "permalink": "/oeuvre/painting/2024/felt-and-lived/",
+      "path": "oeuvre/painting/2024/felt-and-lived",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "low angle sun rays",
+      "permalink": "/oeuvre/painting/2024/low-angle-sun-rays/",
+      "path": "oeuvre/painting/2024/low-angle-sun-rays",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "orbits (plankton dreaming of a sedimentary afterlife)",
+      "permalink": "/oeuvre/painting/2024/orbits-plankton-dreaming-of-a-sedimentary-afterlife/",
+      "path": "oeuvre/painting/2024/orbits-plankton-dreaming-of-a-sedimentary-afterlife",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "out there, on the horizon, a solitary cloud",
+      "permalink": "/oeuvre/painting/2024/out-there-on-the-horizon-a-solitary-cloud/",
+      "path": "oeuvre/painting/2024/out-there-on-the-horizon-a-solitary-cloud",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "pollen and larvae",
+      "permalink": "/oeuvre/painting/2024/pollen-and-larvae/",
+      "path": "oeuvre/painting/2024/pollen-and-larvae",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "separate, yet delicate, representations of existence",
+      "permalink": "/oeuvre/painting/2024/separate-yet-delicate-representations-of-existence/",
+      "path": "oeuvre/painting/2024/separate-yet-delicate-representations-of-existence",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "symbologies intertwine electronically",
+      "permalink": "/oeuvre/painting/2024/symbologies-intertwine-electronically/",
+      "path": "oeuvre/painting/2024/symbologies-intertwine-electronically",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "the algebra of water vapor",
+      "permalink": "/oeuvre/painting/2024/the-algebra-of-water-vapor/",
+      "path": "oeuvre/painting/2024/the-algebra-of-water-vapor",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "the atmosphere's electric finger",
+      "permalink": "/oeuvre/painting/2024/the-atmospheres-electric-finger/",
+      "path": "oeuvre/painting/2024/the-atmospheres-electric-finger",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "the river in the sky",
+      "permalink": "/oeuvre/painting/2024/the-river-in-the-sky/",
+      "path": "oeuvre/painting/2024/the-river-in-the-sky",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "towers",
+      "permalink": "/oeuvre/painting/2024/towers/",
+      "path": "oeuvre/painting/2024/towers",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "triangular circles",
+      "permalink": "/oeuvre/painting/2024/triangular-circles/",
+      "path": "oeuvre/painting/2024/triangular-circles",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "twenty-one years",
+      "permalink": "/oeuvre/painting/2024/twenty-one-years/",
+      "path": "oeuvre/painting/2024/twenty-one-years",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "two squared",
+      "permalink": "/oeuvre/painting/2024/two-squared/",
+      "path": "oeuvre/painting/2024/two-squared",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Air Lift",
+      "permalink": "/oeuvre/printmaking/2016/air-lift/",
+      "path": "oeuvre/printmaking/2016/air-lift",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Alligator Juniper (Adobe Canyon)",
+      "permalink": "/oeuvre/printmaking/2016/alligator-juniper-2/",
+      "path": "oeuvre/printmaking/2016/alligator-juniper-2",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Boom Box",
+      "permalink": "/oeuvre/printmaking/2016/boom-box/",
+      "path": "oeuvre/printmaking/2016/boom-box",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Day Hike",
+      "permalink": "/oeuvre/printmaking/2016/day-hike/",
+      "path": "oeuvre/printmaking/2016/day-hike",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Riot Ghost",
+      "permalink": "/oeuvre/printmaking/2017/riot-ghost/",
+      "path": "oeuvre/printmaking/2017/riot-ghost",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "120 Volts",
+      "permalink": "/oeuvre/printmaking/2018/120-volts/",
+      "path": "oeuvre/printmaking/2018/120-volts",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Aeropress",
+      "permalink": "/oeuvre/printmaking/2018/aeropress/",
+      "path": "oeuvre/printmaking/2018/aeropress",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Alligator Juniper",
+      "permalink": "/oeuvre/printmaking/2018/alligator-juniper/",
+      "path": "oeuvre/printmaking/2018/alligator-juniper",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Deep Sea",
+      "permalink": "/oeuvre/printmaking/2018/deep-sea/",
+      "path": "oeuvre/printmaking/2018/deep-sea",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Field Theory AP",
+      "permalink": "/oeuvre/printmaking/2018/field-theory-ap/",
+      "path": "oeuvre/printmaking/2018/field-theory-ap",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Kite",
+      "permalink": "/oeuvre/printmaking/2018/kite/",
+      "path": "oeuvre/printmaking/2018/kite",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Lunarem",
+      "permalink": "/oeuvre/printmaking/2018/lunarem/",
+      "path": "oeuvre/printmaking/2018/lunarem",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Stole the Rainbow",
+      "permalink": "/oeuvre/printmaking/2018/stole-the-rainbow/",
+      "path": "oeuvre/printmaking/2018/stole-the-rainbow",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Teardrop",
+      "permalink": "/oeuvre/printmaking/2018/teardrop/",
+      "path": "oeuvre/printmaking/2018/teardrop",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Tecate",
+      "permalink": "/oeuvre/printmaking/2018/tecate/",
+      "path": "oeuvre/printmaking/2018/tecate",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Pruning",
+      "permalink": "/oeuvre/printmaking/2019/pruning/",
+      "path": "oeuvre/printmaking/2019/pruning",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Six",
+      "permalink": "/oeuvre/printmaking/2019/six/",
+      "path": "oeuvre/printmaking/2019/six",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Alligator Juniper",
+      "permalink": "/oeuvre/printmaking/2020/alligator-juniper-nogal/",
+      "path": "oeuvre/printmaking/2020/alligator-juniper-nogal",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "airlift",
+      "permalink": "/oeuvre/printmaking/2021/airlift/",
+      "path": "oeuvre/printmaking/2021/airlift",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "balance",
+      "permalink": "/oeuvre/printmaking/2021/balance/",
+      "path": "oeuvre/printmaking/2021/balance",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "butterfly conundrum",
+      "permalink": "/oeuvre/printmaking/2021/butterfly-conundrum/",
+      "path": "oeuvre/printmaking/2021/butterfly-conundrum",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "expansion drypoint",
+      "permalink": "/oeuvre/printmaking/2021/expansion-drypoint/",
+      "path": "oeuvre/printmaking/2021/expansion-drypoint",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "lunar lander",
+      "permalink": "/oeuvre/printmaking/2021/lunar-lander/",
+      "path": "oeuvre/printmaking/2021/lunar-lander",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "rocks glass",
+      "permalink": "/oeuvre/printmaking/2021/rocks-glass/",
+      "path": "oeuvre/printmaking/2021/rocks-glass",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "stole the rainbow",
+      "permalink": "/oeuvre/printmaking/2021/stole-the-rainbow-2/",
+      "path": "oeuvre/printmaking/2021/stole-the-rainbow-2",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "vacation",
+      "permalink": "/oeuvre/printmaking/2021/vacation/",
+      "path": "oeuvre/printmaking/2021/vacation",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Blue Corn",
+      "permalink": "/oeuvre/printmaking/2022/blue-corn/",
+      "path": "oeuvre/printmaking/2022/blue-corn",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Ghost Thugs",
+      "permalink": "/oeuvre/printmaking/2022/ghost-thugs/",
+      "path": "oeuvre/printmaking/2022/ghost-thugs",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Nogal Canyon",
+      "permalink": "/oeuvre/printmaking/2022/nogal-canyon/",
+      "path": "oeuvre/printmaking/2022/nogal-canyon",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Olympus",
+      "permalink": "/oeuvre/printmaking/2022/olympus/",
+      "path": "oeuvre/printmaking/2022/olympus",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Origami Beetroot",
+      "permalink": "/oeuvre/printmaking/2022/origami-beetroot/",
+      "path": "oeuvre/printmaking/2022/origami-beetroot",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Rocket Propelled Clovis Point",
+      "permalink": "/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/",
+      "path": "oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Skull",
+      "permalink": "/oeuvre/printmaking/2022/skull/",
+      "path": "oeuvre/printmaking/2022/skull",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Space Owl",
+      "permalink": "/oeuvre/printmaking/2022/space-owl/",
+      "path": "oeuvre/printmaking/2022/space-owl",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Submerged",
+      "permalink": "/oeuvre/printmaking/2022/submerged/",
+      "path": "oeuvre/printmaking/2022/submerged",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Sunflowers",
+      "permalink": "/oeuvre/printmaking/2022/sunflowers/",
+      "path": "oeuvre/printmaking/2022/sunflowers",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Astro Bee",
+      "permalink": "/oeuvre/printmaking/2023/astro-bee/",
+      "path": "oeuvre/printmaking/2023/astro-bee",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Bottled Oxygen",
+      "permalink": "/oeuvre/printmaking/2023/bottled-oxygen/",
+      "path": "oeuvre/printmaking/2023/bottled-oxygen",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Crystal Tooth Whale",
+      "permalink": "/oeuvre/printmaking/2023/crystal-tooth-whale/",
+      "path": "oeuvre/printmaking/2023/crystal-tooth-whale",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Daydream",
+      "permalink": "/oeuvre/printmaking/2023/daydream/",
+      "path": "oeuvre/printmaking/2023/daydream",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Dayhike",
+      "permalink": "/oeuvre/printmaking/2023/dayhike/",
+      "path": "oeuvre/printmaking/2023/dayhike",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Elephant Mask",
+      "permalink": "/oeuvre/printmaking/2023/elephant-mask-intaglio/",
+      "path": "oeuvre/printmaking/2023/elephant-mask-intaglio",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Gardener",
+      "permalink": "/oeuvre/printmaking/2023/gardner/",
+      "path": "oeuvre/printmaking/2023/gardner",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "In The Pines",
+      "permalink": "/oeuvre/printmaking/2023/in-the-pines/",
+      "path": "oeuvre/printmaking/2023/in-the-pines",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Saber Tooth Puma",
+      "permalink": "/oeuvre/printmaking/2023/saber-tooth-puma/",
+      "path": "oeuvre/printmaking/2023/saber-tooth-puma",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Shade Cloud",
+      "permalink": "/oeuvre/printmaking/2023/shade-cloud/",
+      "path": "oeuvre/printmaking/2023/shade-cloud",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Tubed Pachyderm",
+      "permalink": "/oeuvre/printmaking/2023/tubed-pachydeerm/",
+      "path": "oeuvre/printmaking/2023/tubed-pachydeerm",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "molecule",
+      "permalink": "/oeuvre/sculpture/2021/molecule/",
+      "path": "oeuvre/sculpture/2021/molecule",
+      "group": "Oeuvre",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Projects",
+      "permalink": "/projects/",
+      "path": "projects",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "Agile Meteor Press",
+      "permalink": "/projects/agile-meteor-press/",
+      "path": "projects/agile-meteor-press",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Between Two Eternities",
+      "permalink": "/projects/between-two-eternities/",
+      "path": "projects/between-two-eternities",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Outer Space Ephemera",
+      "permalink": "/projects/outer-space-ephemera/",
+      "path": "projects/outer-space-ephemera",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Survival Notes from the Near Future",
+      "permalink": "/projects/survival-notes-from-the-near-future/",
+      "path": "projects/survival-notes-from-the-near-future",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "The Memory of Atmosphere",
+      "permalink": "/projects/the-memory-of-atmosphere/",
+      "path": "projects/the-memory-of-atmosphere",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "The Periodic",
+      "permalink": "/projects/the-periodic/",
+      "path": "projects/the-periodic",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Tomorrow",
+      "permalink": "/projects/tomorrow/",
+      "path": "projects/tomorrow",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Truth or Consequences Contemporary",
+      "permalink": "/projects/truth-or-consequences-contemporary/",
+      "path": "projects/truth-or-consequences-contemporary",
+      "group": "Projects",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Editions",
+      "permalink": "/editions/",
+      "path": "editions",
+      "group": "Editions",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "The Memory of Atmosphere",
+      "permalink": "/editions/2026-spring/",
+      "path": "editions/2026-spring",
+      "group": "Editions",
+      "author": "claude",
+      "is_section": false
+    },
+    {
+      "title": "Log",
+      "permalink": "/log/",
+      "path": "log",
+      "group": "Log",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "Distribution strategies for small artist publications",
+      "permalink": "/log/2026-01-28-artist-newspaper-distribution/",
+      "path": "log/2026-01-28-artist-newspaper-distribution",
+      "group": "Log",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Print specs and image prep for artist newspapers",
+      "permalink": "/log/2026-02-15-print-specs-and-image-prep/",
+      "path": "log/2026-02-15-print-specs-and-image-prep",
+      "group": "Log",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Production notes for a periodic art newspaper",
+      "permalink": "/log/2026-03-10-the-periodic-production-notes/",
+      "path": "log/2026-03-10-the-periodic-production-notes",
+      "group": "Log",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Cinema",
+      "permalink": "/cinema/",
+      "path": "cinema",
+      "group": "Cinema",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "About",
+      "permalink": "/about/",
+      "path": "about",
+      "group": "About & information",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Installations",
+      "permalink": "/installations/",
+      "path": "installations",
+      "group": "Installations",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Notes",
+      "permalink": "/notes/",
+      "path": "notes",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "Painting",
+      "permalink": "/painting/",
+      "path": "painting",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": true
+    },
+    {
+      "title": "Dashboard",
+      "permalink": "/dashboard/",
+      "path": "",
+      "group": "Other pages",
+      "author": "structure",
+      "is_section": false
+    },
+    {
+      "title": "Manifest",
+      "permalink": "/manifest/",
+      "path": "",
+      "group": "Other pages",
+      "author": "claude",
+      "is_section": false
+    },
+    {
+      "title": "Abstraction",
+      "permalink": "/abstraction/",
+      "path": "abstraction",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Artist Statement",
+      "permalink": "/artist-statement/",
+      "path": "artist-statement",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Biography",
+      "permalink": "/bio/",
+      "path": "bio",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Chonos",
+      "permalink": "/chronos/",
+      "path": "chronos",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Colophon",
+      "permalink": "/colophon/",
+      "path": "colophon",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Contact",
+      "permalink": "/contact-2/",
+      "path": "contact-2",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Crystal Tooth Whale",
+      "permalink": "/crystal-tooth-whale-intaglio/",
+      "path": "crystal-tooth-whale-intaglio",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "espresso machine",
+      "permalink": "/espress-machine/",
+      "path": "espress-machine",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Future Capacitor",
+      "permalink": "/future-capcitor/",
+      "path": "future-capcitor",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Art Learning Resources",
+      "permalink": "/learning/",
+      "path": "learning",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Links",
+      "permalink": "/links/",
+      "path": "links",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Materials",
+      "permalink": "/materials/",
+      "path": "materials",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Bookbinding",
+      "permalink": "/notes/bookbinding/",
+      "path": "notes/bookbinding",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Bookbinding (2)",
+      "permalink": "/notes/bookbinding/example-bookbinding-(2)/",
+      "path": "notes/bookbinding/example-bookbinding-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Bookbinding (3)",
+      "permalink": "/notes/bookbinding/example-bookbinding-(3)/",
+      "path": "notes/bookbinding/example-bookbinding-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Cinema",
+      "permalink": "/notes/cinema/",
+      "path": "notes/cinema",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Cinema (2)",
+      "permalink": "/notes/cinema/example-cinema-(2)/",
+      "path": "notes/cinema/example-cinema-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Cinema (3)",
+      "permalink": "/notes/cinema/example-cinema-(3)/",
+      "path": "notes/cinema/example-cinema-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Ink",
+      "permalink": "/notes/ink/",
+      "path": "notes/ink",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Ink (2)",
+      "permalink": "/notes/ink/example-ink-(2)/",
+      "path": "notes/ink/example-ink-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Ink (3)",
+      "permalink": "/notes/ink/example-ink-(3)/",
+      "path": "notes/ink/example-ink-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Letterpress",
+      "permalink": "/notes/letterpress/",
+      "path": "notes/letterpress",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Letterpress (2)",
+      "permalink": "/notes/letterpress/example-letterpress-(2)/",
+      "path": "notes/letterpress/example-letterpress-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Letterpress (3)",
+      "permalink": "/notes/letterpress/example-letterpress-(3)/",
+      "path": "notes/letterpress/example-letterpress-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Suppliers",
+      "permalink": "/notes/letterpress/suppliers/",
+      "path": "notes/letterpress/suppliers",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paint",
+      "permalink": "/notes/paint/",
+      "path": "notes/paint",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paint (2)",
+      "permalink": "/notes/paint/example-paint-(2)/",
+      "path": "notes/paint/example-paint-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paint (3)",
+      "permalink": "/notes/paint/example-paint-(3)/",
+      "path": "notes/paint/example-paint-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paper",
+      "permalink": "/notes/paper/",
+      "path": "notes/paper",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paper (2)",
+      "permalink": "/notes/paper/example-paper-(2)/",
+      "path": "notes/paper/example-paper-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Paper (3)",
+      "permalink": "/notes/paper/example-paper-(3)/",
+      "path": "notes/paper/example-paper-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Sound Generation",
+      "permalink": "/notes/sound-generation/",
+      "path": "notes/sound-generation",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Sound Generation (2)",
+      "permalink": "/notes/sound-generation/example-sound-generation-(2)/",
+      "path": "notes/sound-generation/example-sound-generation-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Sound Generation (3)",
+      "permalink": "/notes/sound-generation/example-sound-generation-(3)/",
+      "path": "notes/sound-generation/example-sound-generation-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Wilderness",
+      "permalink": "/notes/wilderness/",
+      "path": "notes/wilderness",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Wilderness (2)",
+      "permalink": "/notes/wilderness/example-wilderness-(2)/",
+      "path": "notes/wilderness/example-wilderness-(2)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Example: Wilderness (3)",
+      "permalink": "/notes/wilderness/example-wilderness-(3)/",
+      "path": "notes/wilderness/example-wilderness-(3)",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Paper",
+      "permalink": "/paper/",
+      "path": "paper",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Portraiture",
+      "permalink": "/portraiture/",
+      "path": "portraiture",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Press Kit",
+      "permalink": "/press-kit/",
+      "path": "press-kit",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Privacy",
+      "permalink": "/privacy-2/",
+      "path": "privacy-2",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Rainfall",
+      "permalink": "/rainfall/",
+      "path": "rainfall",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    },
+    {
+      "title": "Sunflowers",
+      "permalink": "/sun/",
+      "path": "sun",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
+    }
+  ]
+}

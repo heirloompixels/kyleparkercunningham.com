@@ -162,6 +162,7 @@ PYEOF
 
   serve)
     python3 scripts/update_recently_edited.py
+    python3 scripts/generate_site_index.py
     exec zola serve --drafts
     ;;
 
