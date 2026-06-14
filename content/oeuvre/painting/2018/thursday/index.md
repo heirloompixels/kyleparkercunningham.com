@@ -6,6 +6,7 @@ year = 2018
 aliases = ["/oeuvre/painting/2018/thursday/", "/thursday/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "5x7 inches"
 +++

@@ -4,6 +4,9 @@ date = 2022-04-05
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/ghost-thugs/", "/ghost-thugs/"]
+
+[extra]
+author = "claude"
 +++
 There will always be individuals being individuals.
 

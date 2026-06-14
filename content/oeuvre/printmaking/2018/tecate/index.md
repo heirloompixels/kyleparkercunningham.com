@@ -4,6 +4,9 @@ date = 2018-02-18
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/tecate/", "/tecate/"]
+
+[extra]
+author = "claude"
 +++
 A Tecate can, slightly crushed, hand colored red. The desert has its monuments and its sacraments; this one is both. Still life raises the authority of simple, mundane objects — sometimes the object is a cold beer at the end of a hot day.
 

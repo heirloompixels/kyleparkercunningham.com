@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/painting/2022/visible/", "/visible/"]
 
 [extra]
+author = "claude"
 medium = "Acrylic, Latex and Oil on Canvas"
 dimensions = "20 x 24 Inches"
 +++

@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/painting/2022/docile/", "/docile/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "24 x 30 inches"
 +++

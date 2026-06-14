@@ -6,6 +6,7 @@ year = 2021
 aliases = ["/bison-robotics/", "/oeuvre/painting/2021/bison-robotics/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "21 x 34 inches"
 status = "sold"

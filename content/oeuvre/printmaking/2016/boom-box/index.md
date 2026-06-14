@@ -4,6 +4,9 @@ date = 2016-04-23
 category = "printmaking"
 year = 2016
 aliases = ["/boom-box/", "/oeuvre/printmaking/2016/boom-box/"]
+
+[extra]
+author = "claude"
 +++
 A skull-faced figure in a space helmet carries a boombox on one shoulder, walking the horizon line. Every era gets the procession it deserves; ours brings its own soundtrack and its own helmet.
 

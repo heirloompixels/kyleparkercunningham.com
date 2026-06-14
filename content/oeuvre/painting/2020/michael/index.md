@@ -4,6 +4,9 @@ date = 2020-06-02
 category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/michael/", "/michael/"]
+
+[extra]
+author = "claude"
 +++
 Michael, mid-laugh, lit from one side against the dark — the kind of expression that lasts half a second and takes months to paint. I take the photograph first, then live with the face, layering until the person is present. What I wanted here was the warmth; everything else is just paint taking orders.
 

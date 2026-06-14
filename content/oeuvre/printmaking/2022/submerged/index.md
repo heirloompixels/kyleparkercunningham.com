@@ -4,6 +4,9 @@ date = 2022-04-05
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/submerged/", "/submerged/"]
+
+[extra]
+author = "claude"
 +++
 A diver stands on the bottom, helmet line wandering all the way up to the thin band of the surface. Sibling of [Deep Sea](/oeuvre/printmaking/2018/deep-sea/) (2018) — the same predicament, revisited.
 

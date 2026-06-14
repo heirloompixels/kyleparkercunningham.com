@@ -6,6 +6,7 @@ year = 2021
 aliases = ["/oeuvre/painting/2021/transition/", "/transition/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Gesso Panel"
 dimensions = "6 3/8 by 36 3/8"
 +++

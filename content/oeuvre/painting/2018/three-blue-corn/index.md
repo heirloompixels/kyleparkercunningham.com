@@ -6,6 +6,7 @@ year = 2018
 aliases = ["/oeuvre/painting/2018/three-blue-corn/", "/three-blue-corn/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Canvas"
 dimensions = "26x26 Inches"
 status = "sold"

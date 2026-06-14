@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/painting/2023/harmonics/", "/harmonics/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "20 x 22 inches"
 +++

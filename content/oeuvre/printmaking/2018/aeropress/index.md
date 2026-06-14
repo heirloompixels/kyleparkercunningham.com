@@ -4,6 +4,9 @@ date = 2018-01-24
 category = "printmaking"
 year = 2018
 aliases = ["/aeropress/", "/oeuvre/printmaking/2018/aeropress/"]
+
+[extra]
+author = "claude"
 +++
 The Aeropress, drawn like the small monument it is — exploded view, chambers stacked. Part of the coffee congregation, with the [carafe](/oeuvre/painting/2014/coffee-carafe/) and the [espresso machine](/oeuvre/painting/2014/espresso-machine/). 2018 plate #1 — the year started properly.
 

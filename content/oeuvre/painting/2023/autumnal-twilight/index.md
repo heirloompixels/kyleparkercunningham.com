@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/autumnal-twilight/", "/oeuvre/painting/2023/autumnal-twilight/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel"
 +++
 Concentric rings in thick impasto: the colors of the season going around — rose, ochre, slate, the last yellow — circling a warm center. The circle is the oldest mark we make, and I keep returning to it. This one is the light of an autumn evening, compressed into orbit.

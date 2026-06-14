@@ -4,6 +4,9 @@ date = 2018-01-02
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/field-theory-ap/"]
+
+[extra]
+author = "claude"
 +++
 Concentric rectangles closing in on a small blue center — the field drawn as pure attention. The same image became a mural in Truth or Consequences; this is the pocket version. Artist proof.
 

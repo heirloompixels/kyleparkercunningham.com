@@ -6,6 +6,7 @@ year = 2021
 aliases = ["/oeuvre/painting/2021/preservation-cactus/", "/preservation-cactus/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "11x14 inches"
 year_started = "2018"

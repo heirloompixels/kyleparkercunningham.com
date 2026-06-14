@@ -4,6 +4,9 @@ date = 2022-04-05
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/"]
+
+[extra]
+author = "claude"
 +++
 A turtle carries the arsenal this time — rocket, clovis point, and satellite dish strapped to the hexagons of its shell. The slowest courier entrusted with the fastest cargo: twelve thousand years of point technology riding deep time's own armored chassis. The [painting](/oeuvre/painting/2020/rocket-propelled-clovis-point/) (2020) posed the idea; the turtle volunteered to deliver it.
 

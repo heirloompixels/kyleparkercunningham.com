@@ -4,6 +4,9 @@ date = 2019-10-25
 category = "printmaking"
 year = 2019
 aliases = ["/oeuvre/printmaking/2019/six/", "/six/"]
+
+[extra]
+author = "claude"
 +++
 Six round creatures on bird feet, eyes up on long stalks, hand colored in purples and blues, standing around the way a group does when nobody wants to leave first. Cousin to the [Seven](/oeuvre/painting/2018/seven/) painting; apparently I count my crowds.
 

@@ -6,6 +6,7 @@ year = 2018
 aliases = ["/oeuvre/painting/2018/pinned/", "/pinned/"]
 
 [extra]
+author = "claude"
 medium = "Acrylic and Latex on Canvas"
 dimensions = "20 by 27"
 +++

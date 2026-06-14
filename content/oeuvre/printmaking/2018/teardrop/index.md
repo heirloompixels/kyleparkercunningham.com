@@ -4,6 +4,9 @@ date = 2018-10-25
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/teardrop/", "/teardrop/"]
+
+[extra]
+author = "claude"
 +++
 The teardrop trailer — the Homemade Spaceship. Jeannie and I built one and lived in it for a year crossing the American West, so this is less a still life than a portrait of a home. Red and white, hand colored, permanently ready to leave.
 

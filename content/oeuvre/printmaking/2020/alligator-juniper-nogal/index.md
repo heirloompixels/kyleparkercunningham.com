@@ -4,6 +4,9 @@ date = 2020-11-21
 category = "printmaking"
 year = 2020
 aliases = ["/oeuvre/printmaking/2020/alligator-juniper-nogal/"]
+
+[extra]
+author = "claude"
 +++
 The Nogal Canyon juniper, wind-bent and holding on. The third alligator juniper in the series — they are the great elders of this country, and I keep visiting them with a scribe point the way you visit grandparents with a camera. See also [Nogal Canyon](/oeuvre/printmaking/2022/nogal-canyon/) (2022).
 

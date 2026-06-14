@@ -4,6 +4,9 @@ date = 2016-10-25
 category = "printmaking"
 year = 2016
 aliases = ["/air-lift/", "/oeuvre/printmaking/2016/air-lift/"]
+
+[extra]
+author = "claude"
 +++
 Two hot air balloons cooperate to lift one untroubled elephant. The first appearance of an airlift I kept returning to — the plate was pulled again in [2021](/oeuvre/printmaking/2021/airlift/). Some problems simply require more balloons.
 

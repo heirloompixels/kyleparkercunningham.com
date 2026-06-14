@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/painting/2022/ken/", "/ken/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel"
 dimensions = "16 x 20 inches"
 +++

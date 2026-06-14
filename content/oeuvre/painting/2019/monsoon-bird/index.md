@@ -4,6 +4,9 @@ date = 2019-04-24
 category = "painting"
 year = 2019
 aliases = ["/oeuvre/painting/2019/monsoon-bird/", "/monsoon-bird/"]
+
+[extra]
+author = "claude"
 +++
 A bird built from the oldest vocabulary: striped body, wings of blue rain-leaves, a head of orange grid-marks around one concentric eye, arrows flying off the corner of the sky. It walks the red ground on stilt legs, the way the big birds do here when the water finally comes. A petroglyph that got up and went looking for the monsoon.
 

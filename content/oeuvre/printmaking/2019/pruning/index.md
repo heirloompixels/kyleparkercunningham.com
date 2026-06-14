@@ -4,6 +4,9 @@ date = 2019-02-18
 category = "printmaking"
 year = 2019
 aliases = ["/oeuvre/printmaking/2019/pruning/", "/pruning/"]
+
+[extra]
+author = "claude"
 +++
 Loppers at work on a prickly pear, a green barrel cactus standing witness. Garden chores in the desert are a negotiation between species, and the cactus usually gets the last word. Hand colored.
 

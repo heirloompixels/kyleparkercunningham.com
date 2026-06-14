@@ -4,6 +4,9 @@ date = 2023-02-07
 category = "printmaking"
 year = 2023
 aliases = ["/bottled-oxygen/", "/oeuvre/printmaking/2023/bottled-oxygen/"]
+
+[extra]
+author = "claude"
 +++
 Two bell jars share a hose: in one, a small yellow-leafed tree; in the other, a village of little dome houses, with a tap to meter the air between them. The tree works, the houses breathe. The future's utilities may be exactly this intimate.
 

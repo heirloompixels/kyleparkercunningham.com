@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/painting/2023/untitled-begins/", "/untitled-begins/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel (ACM)"
 dimensions = "16 x 20 Inches"
 +++

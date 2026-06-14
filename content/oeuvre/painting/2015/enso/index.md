@@ -4,6 +4,9 @@ date = 2015-12-04
 category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/enso/", "/enso/"]
+
+[extra]
+author = "claude"
 +++
 Three ensos — the circle drawn in one continuous gesture, here built up in yellows, greens, and pinks like tree rings. I lived three years in a monastery and the enso followed me home: the mark that records exactly one moment of one hand, never repeatable, never finished. Painting them in oil is a contradiction the Zen masters would probably enjoy.
 

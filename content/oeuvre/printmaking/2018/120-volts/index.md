@@ -4,6 +4,9 @@ date = 2018-03-28
 category = "printmaking"
 year = 2018
 aliases = ["/120-volts/", "/oeuvre/printmaking/2018/120-volts/"]
+
+[extra]
+author = "claude"
 +++
 A long, stooped figure plugged into the wall outlet by his own hair. Household current as life support, five years before the sky demonstrated the high-voltage version on me personally. The glitch of daily reality at its most literal: we are all on the grid.
 

@@ -4,6 +4,9 @@ date = 2023-02-07
 category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/shade-cloud/", "/shade-cloud/"]
+
+[extra]
+author = "claude"
 +++
 One small cloud far up, its patch of shade far below — and tucked into the shade, someone grateful. That's the entire economy of a desert summer: you learn to walk from one shadow to the next, and you thank the cloud personally.
 
