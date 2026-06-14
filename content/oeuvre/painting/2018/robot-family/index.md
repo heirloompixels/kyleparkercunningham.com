@@ -6,6 +6,7 @@ year = 2018
 aliases = ["/oeuvre/painting/2018/robot-family/", "/robot-family/"]
 
 [extra]
+author = "claude"
 medium = "Oil, Oil Stick, Acrylic and Latex on Canvas"
 dimensions = "33 1/2 by 31 1/2"
 +++

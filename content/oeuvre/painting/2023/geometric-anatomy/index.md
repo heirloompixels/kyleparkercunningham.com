@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/painting/2023/geometric-anatomy/", "/geometric-anatomy/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel (ACM)"
 dimensions = "20 x 20 inches"
 +++

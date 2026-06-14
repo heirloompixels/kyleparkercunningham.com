@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/calavera-del-caballo/", "/oeuvre/painting/2023/calavera-del-caballo/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel"
 dimensions = "16 x 20 inches"
 +++

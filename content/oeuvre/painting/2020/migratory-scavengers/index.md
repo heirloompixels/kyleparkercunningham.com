@@ -6,6 +6,7 @@ year = 2020
 aliases = ["/oeuvre/painting/2020/migratory-scavengers/", "/migratory-scavengers/"]
 
 [extra]
+author = "claude"
 medium = "Oil + 24kt gold leaf on ACM panel"
 dimensions = "8 x 18 1/2 inches"
 +++

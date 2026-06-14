@@ -6,6 +6,7 @@ year = 2015
 aliases = ["/cadence/", "/oeuvre/painting/2015/cadence/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Gesso Panel"
 dimensions = "13.5x13.5 inches"
 +++

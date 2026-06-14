@@ -4,6 +4,9 @@ date = 2018-10-29
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/alligator-juniper/"]
+
+[extra]
+author = "claude"
 +++
 The juniper again, this time at arm's length: the trunk and limbs filling the frame, bark in checkered plates like reptile hide. You can know a tree from across the mesa or from inside its shade; this is the second kind of knowing.
 

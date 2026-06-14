@@ -4,6 +4,9 @@ date = 2022-04-05
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/origami-beetroot/", "/origami-beetroot/"]
+
+[extra]
+author = "claude"
 +++
 A beet pulled and drawn like a botanical plate, its leaves creased flat and angular as folded paper. The garden produces its own origami; you just have to pull it up and turn it over.
 

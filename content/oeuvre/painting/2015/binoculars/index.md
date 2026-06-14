@@ -6,6 +6,7 @@ year = 2015
 aliases = ["/binoculars/", "/oeuvre/painting/2015/binoculars/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Panel"
 +++
 A creature that is mostly neck — a long striped column rising out of ordinary baggy trousers — with binoculars for a head. All watcher, no talker. I have spent enough of my life glassing ridgelines that this may be a self portrait of one particular muscle.

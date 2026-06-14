@@ -4,6 +4,9 @@ date = 2023-02-07
 category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/tubed-pachydeerm/"]
+
+[extra]
+author = "claude"
 +++
 An elephant refitted as a tube amplifier — vacuum tubes standing on its back, speaker cones set into its flank, a field of red gouache behind. The herd's volume restored by analog means. (I have opinions about analog; see the [Olympus](/oeuvre/printmaking/2022/olympus/) typewriter.)
 

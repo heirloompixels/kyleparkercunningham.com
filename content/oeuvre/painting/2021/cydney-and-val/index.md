@@ -6,6 +6,7 @@ year = 2021
 aliases = ["/oeuvre/painting/2021/cydney-and-val/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "16 x 20 inches"
 status = "sold"

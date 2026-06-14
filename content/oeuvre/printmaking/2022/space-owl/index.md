@@ -4,6 +4,9 @@ date = 2022-02-18
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/space-owl/", "/space-owl/"]
+
+[extra]
+author = "claude"
 +++
 The owl, helmeted, antenna up. The owls already hold their conversations across the night ([Saturday Evening Owls](/oeuvre/painting/2022/saturday-evening-owls/) eavesdrops on them); this one has simply extended the broadcast range.
 

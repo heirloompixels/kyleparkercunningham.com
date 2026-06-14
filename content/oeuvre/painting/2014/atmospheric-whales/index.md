@@ -6,6 +6,7 @@ year = 2014
 aliases = ["/atmospheric-whales/", "/oeuvre/painting/2014/atmospheric-whales/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Handwoven Linen"
 +++
 Whales coming down by parachute through a gold-leaf sky, an eye-sun watching from above. They appear again and again in my work, these atmospheric whales — the biggest body the planet ever made, handed the gentlest possible landing. Five by seven inches of the largest thing I know.

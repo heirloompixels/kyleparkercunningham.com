@@ -4,6 +4,9 @@ date = 2022-04-05
 category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/skull/", "/skull/"]
+
+[extra]
+author = "claude"
 +++
 A skull in profile, hand colored a pale mineral green — the oldest still life subject there is. More curiosity than warning: this is the architecture under every portrait I've ever painted.
 

@@ -6,6 +6,7 @@ year = 2014
 aliases = ["/bison-at-sunset/", "/oeuvre/painting/2014/bison-at-sunset/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "8x13 inches"
 +++

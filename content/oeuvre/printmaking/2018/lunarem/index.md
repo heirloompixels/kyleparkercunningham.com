@@ -4,6 +4,9 @@ date = 2018-11-25
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/lunarem/", "/lunarem/"]
+
+[extra]
+author = "claude"
 +++
 Twenty-eight moons in their phases, row by row, drawn from the years I spent painting the Earth's oldest timepiece (Cyclum Lunarem, 2014–2018). The moon repeats itself and is never the same twice — which is also a fair description of pulling prints from one plate.
 

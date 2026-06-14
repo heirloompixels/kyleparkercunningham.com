@@ -6,6 +6,7 @@ year = 2018
 aliases = ["/oeuvre/painting/2018/prickly-pear/", "/prickly-pear/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Diabond"
 dimensions = "12x12 inches"
 +++

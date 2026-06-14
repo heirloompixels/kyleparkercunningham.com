@@ -4,6 +4,9 @@ date = 2023-02-07
 category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/saber-tooth-puma/", "/saber-tooth-puma/"]
+
+[extra]
+author = "claude"
 +++
 A puma carrying the old saber teeth again — the Pleistocene loadout reissued for the present mountains (the plate was first scratched in 2016). Deep time doesn't retire its designs; it just waits for the right climate to bring them back.
 

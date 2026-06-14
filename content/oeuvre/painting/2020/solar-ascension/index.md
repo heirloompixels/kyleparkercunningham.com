@@ -6,6 +6,7 @@ year = 2020
 aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "34 x 34 Inches"
 +++

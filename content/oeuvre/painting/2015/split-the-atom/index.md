@@ -6,6 +6,7 @@ year = 2015
 aliases = ["/oeuvre/painting/2015/split-the-atom/", "/split-the-atom/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "13x21 inches"
 +++

@@ -4,6 +4,9 @@ date = 2018-02-25
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/deep-sea/", "/deep-sea/"]
+
+[extra]
+author = "claude"
 +++
 A figure in a diving helmet stands on the bottom, while a single line wanders all the way up to the thin green-and-red band of the surface, impossibly far above. Some days are like that. The air is up there somewhere.
 

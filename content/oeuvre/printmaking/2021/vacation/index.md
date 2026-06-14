@@ -4,6 +4,9 @@ date = 2021-11-07
 category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/vacation/", "/vacation/"]
+
+[extra]
+author = "claude"
 +++
 A figure stands easy on green ground in a gold space helmet, oxygen tank resting at the knee. A vacation in the future may require equipment, but the posture is eternal: shoulders down, nowhere to be, air supply secured.
 

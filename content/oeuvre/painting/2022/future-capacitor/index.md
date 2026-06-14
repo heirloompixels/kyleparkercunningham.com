@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/painting/2022/future-capacitor/"]
 
 [extra]
+author = "claude"
 medium = "Acrylic and Latex on Canvas"
 dimensions = "24 x 24 Inches"
 status = "sold"

@@ -6,6 +6,7 @@ year = 2021
 aliases = ["/oeuvre/painting/2021/path-though-the-autumn-leaves/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Linen"
 dimensions = "17 1/2 x 17 1/2 inches"
 status = "sold"

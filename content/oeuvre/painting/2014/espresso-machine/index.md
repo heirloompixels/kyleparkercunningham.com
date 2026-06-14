@@ -4,6 +4,9 @@ date = 2014-12-05
 category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/espresso-machine/"]
+
+[extra]
+author = "claude"
 +++
 The espresso machine painted white on white, an appliance dissolving into the kitchen light like a saint in an old fresco. Every household has its altars. This is one of ours.
 

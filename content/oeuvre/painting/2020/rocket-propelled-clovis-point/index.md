@@ -6,6 +6,7 @@ year = 2020
 aliases = ["/oeuvre/painting/2020/rocket-propelled-clovis-point/"]
 
 [extra]
+author = "claude"
 medium = "Oil on Cotton Canvas"
 dimensions = "24 x 30 Inches"
 +++
