@@ -14,6 +14,7 @@ deck = "What the sky keeps and what it lets go. A season of weather paintings, a
 dateline = "Truth or Consequences, New Mexico · 33.13° N, 107.25° W"
 ornament = "☁"
 sign_off = "— KPC, Truth or Consequences, May 2026"
+author = "claude"
 +++
 
 The desert does not get much weather, so when it comes, it is an event. This spring the studio is full of sky — twelve panels of it finished, four still wet on the easel. They are not landscapes. They are attempts to paint what remains of a cloud after it has gone: the river it drew across the blue, the low-angle light it bent, the electric finger it pointed at the mesa for half a second in August.

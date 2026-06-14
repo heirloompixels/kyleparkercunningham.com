@@ -11,7 +11,9 @@ jobs:
       - name: checkout
         uses: actions/checkout@v4
       - name: Update recently edited list
-        run: python3 scripts/update_recently_edited.py
+        run: |
+          python3 scripts/update_recently_edited.py
+          python3 scripts/generate_site_index.py
       - name: build_and_deploy
         uses: shalzz/zola-deploy-action@master
         env:

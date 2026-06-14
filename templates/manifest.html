@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+{% block content %}
+{% set data = load_data(path="data/site_index.json") %}
+
+<header class="manifest-head">
+  <h1>{{ page.title }} <span class="manifest-sub">— every page, and who wrote it</span></h1>
+  <div class="manifest-note">{{ page.content | safe }}</div>
+</header>
+
+<div class="manifest-legend">
+  <span class="tally"><span class="atag a-kyle">Kyle</span> <b>{{ data.totals.kyle }}</b> pages</span>
+  <span class="tally"><span class="atag a-claude">Claude</span> <b>{{ data.totals.claude }}</b> pages</span>
+  <span class="tally"><span class="atag a-structure">structure</span> <b>{{ data.totals.structure }}</b> generated</span>
+  <span class="tally manifest-total"><b>{{ data.total }}</b> pages total</span>
+</div>
+
+{% for group in data.group_order %}
+  {% set rows = data.pages | filter(attribute="group", value=group) %}
+  {% if rows | length > 0 %}
+    <section class="manifest-group">
+      <h2>{{ group }} <span>{{ rows | length }}</span></h2>
+      <ul class="manifest-list">
+        {% for p in rows %}
+          <li class="m-row m-{{ p.author }}">
+            <a class="m-title" href="{{ get_url(path=p.permalink) }}">
+              {{ p.title }}{% if p.is_section %} <span class="m-kind">index</span>{% endif %}
+            </a>
+            {% if p.path %}<span class="m-path">/{{ p.path }}/</span>{% endif %}
+            <span class="atag a-{{ p.author }}">{% if p.author == "structure" %}structure{% elif p.author == "claude" %}Claude{% else %}Kyle{% endif %}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+{% endfor %}
+{% endblock %}
