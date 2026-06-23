@@ -1,66 +1,75 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = "projects" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
 {% block content %}
-<section class="home-hero">
-  <p class="home-eyebrow">Project</p>
-  <h1>{{ page.title }}</h1>
-  {% if page.date %}<p class="home-deck">{{ page.date | date(format="%Y") }}</p>{% endif %}
-</section>
+<article class="page-doc">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / <a href="{{ get_url(path='/projects/') }}">Projects</a> / {{ page.title }}</nav>
+  <header class="page-head">
+    <div class="label">Project{% if page.date %} · {{ page.date | date(format="%Y") }}{% endif %}</div>
+    <h1>{{ page.title }}</h1>
+  </header>
 
-{% if page.extra.cover %}
-  {% set cover = resize_image(path=page.extra.cover, width=1600, op="fit_width") %}
-  <figure class="project-cover">
-    <img src="/{{ cover.static_path | replace(from='static/', to='') }}" alt="{{ page.title }} installation view">
-  </figure>
-{% endif %}
+  {% if page.extra.cover %}
+    {% set cover = resize_image(path=page.extra.cover, width=1600, op="fit_width") %}
+    <figure class="project-cover">
+      <img src="/{{ cover.static_path | replace(from='static/', to='') }}" alt="{{ page.title }} installation view">
+    </figure>
+  {% endif %}
 
-{% if page.content %}
-  <section class="project-content">
-    {{ page.content | safe }}
-  </section>
-{% endif %}
+  {% if page.content %}
+    <div class="prose">{{ page.content | safe }}</div>
+  {% endif %}
 
-{% if page.extra.works %}
-  <section class="latest-additions">
-    <h2>Works in this project</h2>
-    {% if page.extra.catalog_pdf %}
-      <p><a href="{{ page.extra.catalog_pdf | urlencode }}">Download catalog (PDF)</a></p>
-    {% endif %}
-    <table class="works-table">
-      <thead>
-        <tr>
-          <th>Work</th>
-          <th>Year</th>
-          <th>Medium</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for work_path in page.extra.works %}
-          {% set work = get_page(path=work_path ~ "/index.md") %}
-          {% set thumb = work.assets | first %}
-          {% if thumb %}
-            {% set thumb_img = resize_image(path=thumb, width=128, height=128, op="fill") %}
-          {% endif %}
+  {% if page.extra.works %}
+    <section class="latest-additions">
+      <h2 class="doc-subhead">Works in this project</h2>
+      {% if page.extra.catalog_pdf %}
+        <p><a href="{{ page.extra.catalog_pdf | urlencode }}">Download catalog (PDF)</a></p>
+      {% endif %}
+      <table class="works-table">
+        <thead>
           <tr>
-            <td>
-              <div class="works-cell">
-                {% if thumb %}
-                  <img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ work.title }}" class="works-thumb">
-                {% endif %}
-                <a href="{{ work.permalink }}">{{ work.title }}</a>
-              </div>
-            </td>
-            <td>
-              {% if work.extra.year %}{{ work.extra.year }}{% elif work.date %}{{ work.date | date(format="%Y") }}{% endif %}
-            </td>
-            <td>{{ work.extra.medium | default(value="") }}</td>
-            <td>{{ work.extra.status | default(value="") }}</td>
+            <th>Work</th>
+            <th>Year</th>
+            <th>Medium</th>
+            <th>Status</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-  </section>
-{% endif %}
-
+        </thead>
+        <tbody>
+          {% for work_path in page.extra.works %}
+            {% set work = get_page(path=work_path ~ "/index.md") %}
+            {% set thumb = work.assets | first %}
+            {% if thumb %}
+              {% set thumb_img = resize_image(path=thumb, width=128, height=128, op="fill") %}
+            {% endif %}
+            <tr>
+              <td>
+                <div class="works-cell">
+                  {% if thumb %}
+                    <img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ work.title }}" class="works-thumb">
+                  {% endif %}
+                  <a href="{{ work.permalink }}">{{ work.title }}</a>
+                </div>
+              </td>
+              <td>
+                {% if work.extra.year %}{{ work.extra.year }}{% elif work.date %}{{ work.date | date(format="%Y") }}{% endif %}
+              </td>
+              <td>{{ work.extra.medium | default(value="") }}</td>
+              <td>{{ work.extra.status | default(value="") }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  {% endif %}
+</article>
 {% endblock %}

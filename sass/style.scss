@@ -1064,3 +1064,54 @@ table.ledger {
 }
 @media (max-width: 760px) { .foot .cols { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 440px) { .foot .cols { grid-template-columns: 1fr; } }
+
+/* Inner-page index lists & decks (projects, log, notes) */
+.page-doc .doc-deck {
+  font-style: italic; color: #2c2620; font-size: 1.12rem; line-height: 1.55;
+  max-width: 48ch; margin: 0 0 2.4rem;
+}
+.page-doc .doc-deck p { margin: 0 0 0.8rem; }
+.doc-list { list-style: none; margin: 0 0 2rem; padding: 0; max-width: 64ch; }
+.doc-list li {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: 0.75rem 0; border-bottom: 1px solid var(--line);
+}
+.doc-list li a {
+  font-family: "Literata", serif; font-size: 1.12rem; color: var(--ink);
+  text-decoration: none; border: 0;
+}
+.doc-list li a:hover { color: var(--accent); }
+.doc-list .yr {
+  font-family: "Inconsolata", monospace; font-size: 0.8rem; letter-spacing: 0.06em;
+  color: var(--muted); white-space: nowrap;
+}
+
+/* Notes — topic groups */
+.topic-group { border-bottom: 1px solid var(--line); padding: 1.2rem 0; max-width: 64ch; }
+.topic-group h2 {
+  font-family: "Inconsolata", monospace; font-size: 0.82rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--accent); margin: 0 0 0.6rem; font-weight: 500;
+}
+.topic-group h2 .count { color: var(--muted); margin-left: 0.5rem; }
+.topic-group ul { list-style: none; margin: 0; padding: 0; }
+.topic-group li { padding: 0.25rem 0; }
+.topic-group li a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--line); }
+.topic-group li a:hover { color: var(--accent); border-color: var(--accent); }
+
+/* Project cover & note tags within the editorial body */
+.page-doc .project-cover { margin: 0 0 2.4rem; max-width: 1180px; }
+.page-doc .project-cover img {
+  width: 100%; height: auto; display: block;
+  box-shadow: 0 1px 2px rgba(30,26,22,.1), 0 18px 46px rgba(30,26,22,.16);
+}
+.page-doc .note-tags {
+  font-family: "Inconsolata", monospace; font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 1.8rem;
+}
+.page-doc .note-tags a { color: var(--accent); text-decoration: none; border: 0; }
+.page-doc .note-tags a:hover { text-decoration: underline; }
+
+.page-doc .doc-subhead {
+  font-family: "Inconsolata", monospace; font-size: 0.82rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--accent); margin: 2.6rem 0 1rem; font-weight: 500;
+}
