@@ -1,5 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Dashboard — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
 {% block content %}
 {% set home = get_section(path="_index.md") %}
 {% set painting = get_section(path="oeuvre/painting/_index.md") %}

@@ -8,6 +8,15 @@
 <link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
 {% endblock %}
 
+{% block site_header %}
+  {% set mast_active = "editions" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
 {% block content %}
 {% set live = section.pages | filter(attribute="extra.status", value="live") %}
 {% set retired = section.pages | filter(attribute="extra.status", value="retired") | sort(attribute="date") | reverse %}
