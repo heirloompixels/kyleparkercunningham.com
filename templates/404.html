@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Page not found — {{ config.title }}{% endblock %}
+
+{% block content %}
+<article class="page-doc">
+  <header class="page-head">
+    <div class="label">Error 404</div>
+    <h1>This page has wandered off.</h1>
+  </header>
+  <div class="prose">
+    <p>The page you were looking for isn't here — it may have moved when the
+    archive was reorganised, or it never existed. The work is all still here,
+    though; start from one of these:</p>
+    <ul>
+      <li><a href="{{ get_url(path='/') }}">The front page</a> — the current edition</li>
+      <li><a href="{{ get_url(path='/oeuvre/') }}">The Oeuvre</a> — every work, catalogued</li>
+      <li><a href="{{ get_url(path='/projects/') }}">Projects</a> · <a href="{{ get_url(path='/about/') }}">About</a></li>
+    </ul>
+  </div>
+</article>
+{% endblock %}
