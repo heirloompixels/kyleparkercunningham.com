@@ -1,34 +1,96 @@
+{# Edition-led homepage. Layout derived from mockups/29-edition-menu-footer.html:
+   masthead + deck, the live edition (rendered through editions/issue.html),
+   a catalogue index of recent work, a large typographic site menu, and an
+   expanded colophon footer. The previous "home-hero" design is preserved at
+   templates/index.home-hero.html. #}
 {% extends "base.html" %}
+
+{% block title %}The art of Kyle Parker Cunningham{% endblock %}
 
 {% block head_extra %}
 {% set editions = get_section(path="editions/_index.md") %}
 {% set live = editions.pages | filter(attribute="extra.status", value="live") %}
 {% if live | length > 0 %}
 {% set edition = live | first %}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
 {% for asset in edition.assets %}{% if asset is ending_with("edition.css") %}
 <link rel="stylesheet" href="{{ get_url(path=asset) }}">
 {% endif %}{% endfor %}
 {% endif %}
+<style>
+  /* ── Edition-led homepage framing (h29-*) ─────────────────────────────── */
+  :root{
+    --h29-bg:#f7f4ef; --h29-ink:#1e1a16; --h29-muted:#6a6258; --h29-accent:#1f3f5b; --h29-line:#e2dbd1;
+    --h29-serif:'Literata',Georgia,serif; --h29-sans:'IBM Plex Sans',sans-serif; --h29-mono:'Inconsolata',monospace;
+  }
+  body{background:var(--h29-bg);color:var(--h29-ink);font-family:var(--h29-serif);line-height:1.5;-webkit-font-smoothing:antialiased}
+  main{display:block}
+  .h29{max-width:1180px;margin:0 auto;padding:3rem 2.2rem 0}
+  .h29 a{color:inherit;text-decoration:none}
+
+  .h29-mast{border-bottom:2px solid var(--h29-ink);padding-bottom:1.1rem}
+  .h29-mast .kicker{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--h29-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+  .h29-mast h1{font-weight:300;font-size:clamp(2.4rem,9vw,8.4rem);line-height:.92;letter-spacing:-.02em}
+  .h29-mast h1 .amp{font-style:italic;font-weight:400}
+  .h29-mast .sub{font-family:var(--h29-sans);font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--h29-muted);margin-top:1rem;display:flex;gap:2.2rem;flex-wrap:wrap}
+  .h29-mast .sub a:hover{color:var(--h29-accent)}
+
+  .h29-deck{max-width:46ch;margin:2.6rem 0 3.4rem;font-size:1.15rem;font-style:italic;color:#2c2620;line-height:1.55}
+
+  /* The live edition is rendered by editions/issue.html with its own styles.
+     Give it room to sit between the masthead and the catalogue. */
+  .h29-edition{margin:0 0 1rem}
+
+  /* Catalogue index of recent work */
+  .h29-index{margin-top:3.4rem;padding-top:1.6rem;border-top:2px solid var(--h29-ink)}
+  .h29-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem}
+  @media(max-width:760px){.h29-grid{grid-template-columns:1fr}}
+  .h29-col h2{font-family:var(--h29-mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--h29-accent);border-bottom:1px solid var(--h29-line);padding-bottom:.5rem;margin-bottom:.4rem}
+  .h29-row{display:grid;grid-template-columns:2.4rem 1fr auto;align-items:baseline;gap:.6rem;padding:.62rem 0;border-bottom:1px solid var(--h29-line)}
+  .h29-row:hover .t{color:var(--h29-accent)}
+  .h29-row .n{font-family:var(--h29-mono);font-size:.74rem;color:var(--h29-muted)}
+  .h29-row .t{font-size:1.12rem;line-height:1.2;transition:color .15s}
+  .h29-row .t em{color:var(--h29-muted);font-size:.86rem;font-style:italic;display:block;font-family:var(--h29-sans);letter-spacing:.02em}
+  .h29-row .y{font-family:var(--h29-mono);font-size:.82rem;color:var(--h29-muted)}
+
+  /* Large typographic site menu */
+  .h29-menu{margin-top:4.5rem;border-top:2px solid var(--h29-ink)}
+  .h29-mrow{display:grid;grid-template-columns:3.4rem 1fr auto;align-items:baseline;gap:1.6rem;padding:1.5rem 0;border-bottom:1px solid var(--h29-line);transition:padding .25s,background .25s}
+  .h29-mrow:hover{background:color-mix(in srgb,var(--h29-accent) 8%,transparent);padding-left:1.2rem}
+  .h29-mrow .m-no{font-family:var(--h29-mono);font-size:.82rem;letter-spacing:.1em;color:var(--h29-muted)}
+  .h29-mrow .m-main{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:300;line-height:1.04;letter-spacing:-.015em}
+  .h29-mrow .m-main em{display:block;font-style:normal;font-family:var(--h29-sans);font-size:.92rem;font-weight:400;color:var(--h29-muted);line-height:1.5;margin-top:.5rem;max-width:54ch;letter-spacing:0}
+  .h29-mrow:hover .m-main{font-style:italic;color:var(--h29-accent)}
+  .h29-mrow:hover .m-main em{font-style:normal;color:var(--h29-muted)}
+  .h29-mrow .m-meta{font-family:var(--h29-mono);font-size:.78rem;letter-spacing:.08em;color:var(--h29-muted);text-align:right;white-space:nowrap}
+
+  /* Expanded colophon footer */
+  .h29-foot{max-width:1180px;margin:5rem auto 0;padding:1.4rem 2.2rem 4rem;border-top:2px solid var(--h29-ink);
+    font-family:var(--h29-mono);font-size:.74rem;letter-spacing:.06em;color:var(--h29-muted)}
+  .h29-foot a:hover{color:var(--h29-accent)}
+  .h29-foot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.8rem 1.4rem;padding-bottom:1.6rem}
+  .h29-foot .top .mark{font-family:var(--h29-serif);font-size:1.15rem;font-style:italic;color:var(--h29-ink);letter-spacing:0}
+  .h29-foot .top .mark b{font-style:normal;font-weight:400}
+  .h29-foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;border-top:1px solid var(--h29-line);padding-top:1.6rem}
+  @media(max-width:760px){.h29-foot .cols{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.h29-foot .cols{grid-template-columns:1fr}}
+  .h29-foot .cols h5{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--h29-accent);margin-bottom:.6rem;font-weight:400}
+  .h29-foot .cols p{font-size:.76rem;line-height:1.85;margin:0;max-width:none}
+  .h29-foot .cols p a{display:block}
+  .h29-foot .cols b{color:var(--h29-ink);font-weight:600}
+  .h29-foot .baseline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;border-top:1px solid var(--h29-line);margin-top:1.6rem;padding-top:1.1rem;font-size:.7rem;letter-spacing:.08em}
+
+  .h29-between{margin:3rem 0;font-style:italic;color:var(--h29-muted);font-size:1.1rem}
+</style>
 {% endblock %}
 
-{# When an edition is live, the front page opens with its cover — no site header. #}
-{% block site_header %}
-{% set editions = get_section(path="editions/_index.md") %}
-{% set live = editions.pages | filter(attribute="extra.status", value="live") %}
-{% if live | length == 0 %}{{ super() }}{% endif %}
-{% endblock %}
+{# The masthead carries the site identity, so suppress the default nav header. #}
+{% block site_header %}{% endblock %}
 
 {% block content %}
 {% set editions = get_section(path="editions/_index.md") %}
 {% set live = editions.pages | filter(attribute="extra.status", value="live") %}
-{% if live | length > 0 %}
-{% set edition = live | first %}
-{% include "editions/issue.html" %}
-{% else %}
-{% set home = get_section(path="_index.md") %}
+
 {% set painting = get_section(path="oeuvre/painting/_index.md") %}
 {% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
 {% set installation = get_section(path="oeuvre/installation/_index.md") %}
@@ -36,91 +98,142 @@
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 {% set projects = get_section(path="projects/_index.md") %}
-{% set ongoing_projects = projects.pages | filter(attribute="extra.status", value="ongoing") | sort(attribute="date") | reverse %}
-{% set complete_projects = projects.pages | filter(attribute="extra.status", value="complete") | sort(attribute="date") | reverse %}
-{% set future_projects = projects.pages | filter(attribute="extra.status", value="researching") | sort(attribute="date") | reverse %}
 
-{% set works = painting.pages
-  | concat(with=printmaking.pages)
-  | concat(with=installation.pages)
-  | concat(with=sculpture.pages)
-  | concat(with=exhibitions.pages)
-  | concat(with=other.pages)
-%}
+{% set n_pt = painting.pages | length %}
+{% set n_pr = printmaking.pages | length %}
+{% set n_in = installation.pages | length %}
+{% set n_sc = sculpture.pages | length %}
+{% set n_ex = exhibitions.pages | length %}
+{% set n_ot = other.pages | length %}
+{% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ot %}
 
-<section class="home-hero">
-  <p class="home-eyebrow">Home</p>
-  <h1>Kyle Parker Cunningham</h1>
-  <p class="home-deck">Believing in a future is not the same thing as living through a future. This is becoming all the more apparent as we move forward into each new day of this existence right now. Who and what are we supposed to be? Where are we going to head to. This is the relevence of the inspiration.</p>
-</section>
+{% set_global edition_numeral = "" %}
+{% if live | length > 0 %}{% set ed = live | first %}{% set_global edition_numeral = ed.extra.numeral %}{% endif %}
 
-{% set log = get_section(path="log/_index.md") %}
-<section class="latest-additions">
-  <h2>Log</h2>
-  <ul class="latest-list">
-    {% for page in log.pages | sort(attribute="date") | reverse | slice(end=3) %}
-      <li>
-        <a href="{{ page.permalink }}">{{ page.title }}</a>
-        <span class="latest-year">{{ page.content | striptags | truncate(length=144) }}</span>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+{% set recent_painting = painting.pages | sort(attribute="date") | reverse | slice(end=6) %}
+{% set archive_rest = printmaking.pages | concat(with=installation.pages) | concat(with=sculpture.pages) | concat(with=exhibitions.pages) | concat(with=other.pages) | sort(attribute="date") | reverse | slice(end=6) %}
 
-<section class="home-split">
-  <div class="home-column">
-    <div class="home-block">
-      <h2>Projects</h2>
+<div class="h29">
+  <header class="h29-mast">
+    <div class="kicker"><span>Painting · Printmaking · Installation</span><span>Est. 2003 — Present</span></div>
+    <h1>Kyle&nbsp;Parker<br>Cunning<span class="amp">h</span>am</h1>
+    <div class="sub">
+      <a href="{{ get_url(path='/oeuvre/') }}">The Oeuvre</a>
+      <a href="{{ get_url(path='/editions/') }}">Editions</a>
+      <a href="{{ get_url(path='/projects/') }}">Projects</a>
+      <a href="{{ get_url(path='/log/') }}">Log</a>
+      <a href="{{ get_url(path='/manifest/') }}">Manifest</a>
     </div>
-    <div class="home-block">
-      <h3>Present</h3>
-      <p>{{ home.extra.present_text }}</p>
-      <ul class="latest-list">
-        {% for page in ongoing_projects | slice(end=3) %}
-          <li>
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-            {% if page.extra.year %}<span class="latest-year">{{ page.extra.year }}</span>{% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+  </header>
+
+  <p class="h29-deck">Believing in a future is not the same thing as living through a future — an archive kept in the present tense, organised by discipline and year.</p>
+
+  {% if live | length > 0 %}
+    {% set edition = live | first %}
+    <div class="h29-edition">
+      {% include "editions/issue.html" %}
     </div>
-    <div class="home-block">
-      <h3>Future</h3>
-      <p>{{ home.extra.future_text }}</p>
-      <ul class="latest-list">
-        {% for page in future_projects %}
-          <li>
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-            {% if page.extra.year %}<span class="latest-year">{{ page.extra.year }}</span>{% endif %}
-          </li>
+  {% else %}
+    <p class="h29-between">Between seasons — the front page is being composed anew. Meanwhile, the archive below keeps everything.</p>
+  {% endif %}
+
+  <section class="h29-index">
+    <div class="h29-grid">
+      <div class="h29-col">
+        <h2>Recent Painting</h2>
+        {% for page in recent_painting %}
+          <a class="h29-row" href="{{ page.permalink }}">
+            <span class="n">{{ loop.index }}</span>
+            <span class="t">{{ page.title }}<em>Painting</em></span>
+            <span class="y">{{ page.date | date(format="%Y") }}</span>
+          </a>
         {% endfor %}
-      </ul>
+      </div>
+      <div class="h29-col">
+        <h2>Across the Archive</h2>
+        {% for page in archive_rest %}
+          <a class="h29-row" href="{{ page.permalink }}">
+            <span class="n">{{ loop.index }}</span>
+            <span class="t">{{ page.title }}</span>
+            <span class="y">{{ page.date | date(format="%Y") }}</span>
+          </a>
+        {% endfor %}
+      </div>
     </div>
-    <div class="home-block">
-      <h3>Past</h3>
-      <p>{{ home.extra.past_text }}</p>
-      <ul class="latest-list">
-        {% for page in complete_projects %}
-          <li>
-            <a href="{{ page.permalink }}">{{ page.title }}</a>
-            {% if page.extra.year %}<span class="latest-year">{{ page.extra.year }}</span>{% endif %}
-          </li>
-        {% endfor %}
-      </ul>
+  </section>
+
+  <nav class="h29-menu">
+    <a class="h29-mrow" href="{{ get_url(path='/oeuvre/') }}">
+      <span class="m-no">01</span>
+      <span class="m-main">The Oeuvre<em>Every work, catalogued — painting, printmaking, installation, sculpture &amp; more, 2003 to now.</em></span>
+      <span class="m-meta">{{ works_count }} works</span>
+    </a>
+    <a class="h29-mrow" href="{{ get_url(path='/editions/') }}">
+      <span class="m-no">02</span>
+      <span class="m-main">Editions<em>The living front page, season by season — and the archive of every front page this site has had.</em></span>
+      <span class="m-meta">{% if live | length > 0 %}Season {{ edition_numeral }}{% else %}Archive{% endif %}</span>
+    </a>
+    <a class="h29-mrow" href="{{ get_url(path='/projects/') }}">
+      <span class="m-no">03</span>
+      <span class="m-main">Projects<em>The long arcs — ongoing, researching, and complete.</em></span>
+      <span class="m-meta">{{ projects.pages | length }} threads</span>
+    </a>
+    <a class="h29-mrow" href="{{ get_url(path='/log/') }}">
+      <span class="m-no">04</span>
+      <span class="m-main">The Log<em>Production notes from the studio, posted as they happen.</em></span>
+      <span class="m-meta">∞</span>
+    </a>
+    <a class="h29-mrow" href="{{ get_url(path='/manifest/') }}">
+      <span class="m-no">05</span>
+      <span class="m-main">Manifest<em>The full page index — every page on the site, with honest authorship tags.</em></span>
+      <span class="m-meta">↗</span>
+    </a>
+  </nav>
+</div>
+{% endblock %}
+
+{% block site_footer %}
+<footer class="h29-foot">
+  <div class="top">
+    <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+    <span>Painting · Printmaking · Installation · Cinema</span>
+  </div>
+  <div class="cols">
+    <div>
+      <h5>The Studio</h5>
+      <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a></p>
+    </div>
+    <div>
+      <h5>The Archive</h5>
+      {% set editions = get_section(path="editions/_index.md") %}
+      {% set live = editions.pages | filter(attribute="extra.status", value="live") %}
+      {% set painting = get_section(path="oeuvre/painting/_index.md") %}
+      {% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
+      {% set installation = get_section(path="oeuvre/installation/_index.md") %}
+      {% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
+      {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+      {% set other = get_section(path="oeuvre/other/_index.md") %}
+      {% set n_pt = painting.pages | length %}
+      {% set n_pr = printmaking.pages | length %}
+      {% set n_in = installation.pages | length %}
+      {% set n_sc = sculpture.pages | length %}
+      {% set n_ex = exhibitions.pages | length %}
+      {% set n_ot = other.pages | length %}
+      {% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ot %}
+      <p><b>{{ works_count }}</b> works catalogued<br><b>{{ n_pt }}</b> paintings<br>{% if live | length > 0 %}{% set ed = live | first %}Season <b>{{ ed.extra.numeral }}</b> live now{% else %}Between seasons{% endif %}</p>
+    </div>
+    <div>
+      <h5>This Page</h5>
+      <p>Updated <b>{{ now() | date(format="%Y·%m·%d") }}</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
     </div>
   </div>
-  <aside class="home-aside">
-    <h2>Recently edited</h2>
-    <ul class="latest-list">
-      {% set edited = load_data(path="data/recently_edited.json") | slice(end=13) %}
-      {% for page in edited %}
-        <li>
-          <a href="{{ page.permalink }}">{{ page.title }}</a>
-          {% if page.updated %}<span class="latest-year">{{ page.updated | date(format="%Y-%m-%d") }}</span>{% endif %}
-        </li>
-      {% endfor %}
-    </ul>
-  </aside>
-</section>
-{% endif %}
+  <div class="baseline">
+    <span>&copy; {{ now() | date(format="%Y") }} Kyle Parker Cunningham — all works &amp; words</span>
+    <span>The homepage is a work; the archive keeps everything.</span>
+  </div>
+</footer>
 {% endblock %}
