@@ -1,5 +1,5 @@
 +++
-title = "Home"
+title = "The art of Kyle Parker Cunningham"
 template = "index.html"
 
 [extra]

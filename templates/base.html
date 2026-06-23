@@ -4,7 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+    {# Resolve title/description/url across page, section, and site defaults. #}
+    {% if page.title %}{% set meta_title = page.title %}{% elif section.title %}{% set meta_title = section.title %}{% else %}{% set meta_title = config.title %}{% endif %}
+    {% if page.description %}{% set meta_desc = page.description %}{% elif section.description %}{% set meta_desc = section.description %}{% else %}{% set meta_desc = config.description %}{% endif %}
+
+    <meta name="description" content="{{ meta_desc }}">
+    <meta name="author" content="{{ config.extra.author }}">
+    <meta name="robots" content="index, follow">
+    {% if current_url %}<link rel="canonical" href="{{ current_url | safe }}">{% endif %}
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="{{ config.title }}">
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_desc }}">
+    {% if current_url %}<meta property="og:url" content="{{ current_url | safe }}">{% endif %}
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ get_url(path='/favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='/apple-touch-icon.png') }}">
+    <link rel="manifest" href="{{ get_url(path='/site.webmanifest') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ get_url(path='/style.css') }}">
     {% block head_extra %}{% endblock %}
