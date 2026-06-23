@@ -19,6 +19,7 @@ taxonomies = [
   {name = "categories", feed = true},
   {name = "years", feed = true},
   {name = "medium", feed = true},
+  {name = "topics", feed = true},
 ]
 
 [markdown]

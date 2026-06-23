@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }}{% endblock %}
+{% block content %}
+<h1>{{ section.title }}</h1>
+{% if section.content %}<div>{{ section.content | safe }}</div>{% endif %}
+
+{% set topics = get_taxonomy(kind="topics") %}
+<table class="works-table">
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for topic in topics.items | sort(attribute="name") %}
+      <tr>
+        <td>
+          <a href="{{ topic.permalink }}">{{ topic.name | title }}</a>
+          <span class="latest-year">{{ topic.pages | length }}</span>
+        </td>
+        <td>
+          <ul>
+            {% for page in topic.pages | sort(attribute="date") | reverse %}
+              <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
