@@ -3,7 +3,7 @@ title = "preservation cactus"
 date = 2021-10-09
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/preservation-cactus/", "/preservation-cactus/"]
+aliases = ["/oeuvre/painting/2021/preservation-cactus/", "/preservation-cactus/", "/oeuvre/2021/painting/preservation-cactus/"]
 
 [extra]
 author = "claude"

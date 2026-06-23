@@ -3,7 +3,7 @@ title = "owl"
 date = 2021-04-13
 category = "other"
 year = 2021
-aliases = ["/oeuvre/other/2021/owl/", "/owl/"]
+aliases = ["/oeuvre/other/2021/owl/", "/owl/", "/oeuvre/2021/2015/owl/"]
 +++
 oil on baltic birch panel
 12x17.5 inches

@@ -3,7 +3,7 @@ title = "Space Owl"
 date = 2022-02-18
 category = "printmaking"
 year = 2022
-aliases = ["/oeuvre/printmaking/2022/space-owl/", "/space-owl/"]
+aliases = ["/oeuvre/printmaking/2022/space-owl/", "/space-owl/", "/oeuvre/2022/printmaking/space-owl/"]
 
 [extra]
 author = "claude"

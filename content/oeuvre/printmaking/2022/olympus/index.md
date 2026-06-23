@@ -3,7 +3,7 @@ title = "Olympus"
 date = 2022-04-05
 category = "printmaking"
 year = 2022
-aliases = ["/oeuvre/printmaking/2022/olympus/", "/olympus/"]
+aliases = ["/oeuvre/printmaking/2022/olympus/", "/olympus/", "/oeuvre/2022/printmaking/olympus/"]
 +++
 This is one of my favorite typewriters of all time. Unfortunately it has a sticky "n" key, it works, but you get some type errors. That, though, is the cost of being analog!
 

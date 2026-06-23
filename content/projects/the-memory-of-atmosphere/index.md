@@ -3,6 +3,7 @@ title = "The Memory of Atmosphere"
 date = 2024-08-02
 template = "projects/single.html"
 
+aliases = ["/works/the-memory-of-atmosphere/"]
 [extra]
 year = 2024
 cover = "projects/the-memory-of-atmosphere/sun-and-dust-install.jpeg"

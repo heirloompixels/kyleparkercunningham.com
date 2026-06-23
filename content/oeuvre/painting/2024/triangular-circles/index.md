@@ -3,7 +3,7 @@ title = "triangular circles"
 date = 2024-07-29
 category = "painting"
 year = 2024
-aliases = ["/oeuvre/painting/2024/triangular-circles/", "/triangular-circles/"]
+aliases = ["/oeuvre/painting/2024/triangular-circles/", "/triangular-circles/", "/oeuvre/2024/painting/triangular-circles/"]
 +++
 Where geometry and emotion meet - perfect circle formed from sharp triangular fragments, suggesting wholeness through division.
 

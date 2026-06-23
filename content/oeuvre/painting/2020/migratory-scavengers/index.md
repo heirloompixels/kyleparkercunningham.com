@@ -3,7 +3,7 @@ title = "Migratory Scavengers"
 date = 2020-03-24
 category = "painting"
 year = 2020
-aliases = ["/oeuvre/painting/2020/migratory-scavengers/", "/migratory-scavengers/"]
+aliases = ["/oeuvre/painting/2020/migratory-scavengers/", "/migratory-scavengers/", "/oeuvre/2020/painting/migratory-scavengers/"]
 
 [extra]
 author = "claude"

@@ -3,7 +3,7 @@ title = "pink and yellow"
 date = 2021-11-13
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/pink-and-yellow/", "/pink-and-yellow/"]
+aliases = ["/oeuvre/painting/2021/pink-and-yellow/", "/pink-and-yellow/", "/oeuvre/2021/painting/pink-and-yellow/"]
 
 [extra]
 medium = "Oil, Oil Stick, Acrylic, Latex on Canvas"

@@ -3,7 +3,7 @@ title = "transition"
 date = 2021-11-23
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/transition/", "/transition/"]
+aliases = ["/oeuvre/painting/2021/transition/", "/transition/", "/oeuvre/2021/painting/transition/"]
 
 [extra]
 author = "claude"

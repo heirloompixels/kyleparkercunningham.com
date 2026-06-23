@@ -3,7 +3,7 @@ title = "the mother bear"
 date = 2021-11-13
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/the-mother-bear/", "/the-mother-bear/"]
+aliases = ["/oeuvre/painting/2021/the-mother-bear/", "/the-mother-bear/", "/oeuvre/2021/painting/the-mother-bear/"]
 +++
 51 1/2 by 32 inches
 Oil, Oil Stick, Acrylic, Latex on Canvas

@@ -3,7 +3,7 @@ title = "Path Through the Autumn Leaves"
 date = 2021-11-02
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/path-though-the-autumn-leaves/"]
+aliases = ["/oeuvre/painting/2021/path-though-the-autumn-leaves/", "/oeuvre/2021/painting/path-though-the-autumn-leaves/"]
 
 [extra]
 author = "claude"

@@ -3,7 +3,7 @@ title = "120 Volts"
 date = 2018-03-28
 category = "printmaking"
 year = 2018
-aliases = ["/120-volts/", "/oeuvre/printmaking/2018/120-volts/"]
+aliases = ["/120-volts/", "/oeuvre/printmaking/2018/120-volts/", "/oeuvre/2018/printmaking/120-volts/"]
 
 [extra]
 author = "claude"

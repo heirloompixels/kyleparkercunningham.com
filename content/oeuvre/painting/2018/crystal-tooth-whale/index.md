@@ -3,7 +3,7 @@ title = "Crystal Tooth Whale"
 date = 2018-04-28
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/crystal-tooth-whale/"]
+aliases = ["/oeuvre/painting/2018/crystal-tooth-whale/", "/oeuvre/2018/painting/crystal-tooth-whale/"]
 
 [extra]
 medium = "Oil on Linen"

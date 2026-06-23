@@ -3,7 +3,7 @@ title = "The Black Fire"
 date = 2022-05-14
 category = "painting"
 year = 2022
-aliases = ["/oeuvre/painting/2022/the-black-fire/", "/the-black-fire/"]
+aliases = ["/oeuvre/painting/2022/the-black-fire/", "/the-black-fire/", "/oeuvre/2022/painting/the-black-fire/"]
 
 [extra]
 medium = "Oil on Linen"

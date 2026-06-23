@@ -3,7 +3,7 @@ title = "A. Muscaria"
 date = 2018-05-18
 category = "painting"
 year = 2018
-aliases = ["/a-muscaria/", "/oeuvre/painting/2018/a-muscaria/"]
+aliases = ["/a-muscaria/", "/oeuvre/painting/2018/a-muscaria/", "/oeuvre/2018/painting/a-muscaria/"]
 +++
 Future perfect anomalies.
 

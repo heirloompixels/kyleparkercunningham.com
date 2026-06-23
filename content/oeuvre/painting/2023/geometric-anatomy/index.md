@@ -3,7 +3,7 @@ title = "Geometric Anatomy"
 date = 2023-04-10
 category = "painting"
 year = 2023
-aliases = ["/oeuvre/painting/2023/geometric-anatomy/", "/geometric-anatomy/"]
+aliases = ["/oeuvre/painting/2023/geometric-anatomy/", "/geometric-anatomy/", "/oeuvre/2023/painting/geometric-anatomy/"]
 
 [extra]
 author = "claude"

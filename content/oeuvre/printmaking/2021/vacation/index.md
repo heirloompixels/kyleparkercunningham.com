@@ -3,7 +3,7 @@ title = "vacation"
 date = 2021-11-07
 category = "printmaking"
 year = 2021
-aliases = ["/oeuvre/printmaking/2021/vacation/", "/vacation/"]
+aliases = ["/oeuvre/printmaking/2021/vacation/", "/vacation/", "/oeuvre/2021/printmaking/vacation/"]
 
 [extra]
 author = "claude"

@@ -3,7 +3,7 @@ title = "Lunarem"
 date = 2018-11-25
 category = "printmaking"
 year = 2018
-aliases = ["/oeuvre/printmaking/2018/lunarem/", "/lunarem/"]
+aliases = ["/oeuvre/printmaking/2018/lunarem/", "/lunarem/", "/oeuvre/2018/printmaking/lunarem/"]
 
 [extra]
 author = "claude"

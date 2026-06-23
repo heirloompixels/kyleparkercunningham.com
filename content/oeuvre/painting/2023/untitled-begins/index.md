@@ -3,7 +3,7 @@ title = "Combinations and Re-Entry"
 date = 2023-02-09
 category = "painting"
 year = 2023
-aliases = ["/oeuvre/painting/2023/untitled-begins/", "/untitled-begins/"]
+aliases = ["/oeuvre/painting/2023/untitled-begins/", "/untitled-begins/", "/oeuvre/2023/painting/untitled-begins/"]
 
 [extra]
 author = "claude"

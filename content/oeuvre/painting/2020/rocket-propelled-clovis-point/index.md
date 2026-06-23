@@ -3,7 +3,7 @@ title = "Rocket Propelled Clovis Point"
 date = 2020-05-10
 category = "painting"
 year = 2020
-aliases = ["/oeuvre/painting/2020/rocket-propelled-clovis-point/"]
+aliases = ["/oeuvre/painting/2020/rocket-propelled-clovis-point/", "/oeuvre/2020/painting/rocket-propelled-clovis-point/"]
 
 [extra]
 author = "claude"

@@ -3,6 +3,7 @@ title = "About"
 template = "page.html"
 date = 2023-01-01
 
+aliases = ["/author/ghost-user/", "/author/kyle/"]
 [extra]
 label = "The Artist"
 mast_active = "about"

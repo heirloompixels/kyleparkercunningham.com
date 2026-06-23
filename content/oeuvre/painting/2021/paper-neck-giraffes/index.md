@@ -3,7 +3,7 @@ title = "paper neck giraffes"
 date = 2021-11-02
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/paper-neck-giraffes/", "/paper-neck-giraffes/"]
+aliases = ["/oeuvre/painting/2021/paper-neck-giraffes/", "/paper-neck-giraffes/", "/oeuvre/2021/painting/paper-neck-giraffes/"]
 
 [extra]
 medium = "Oil on Cotton Canvas"

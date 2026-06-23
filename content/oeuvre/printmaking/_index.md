@@ -2,7 +2,7 @@
 title = "Printmaking"
 template = "oeuvre/discipline.html"
 page_template = "oeuvre/single.html"
-aliases = ["/oeuvre/printmaking/"]
+aliases = ["/oeuvre/printmaking/", "/printmaking/", "/works/printmaking/"]
 +++
 
 

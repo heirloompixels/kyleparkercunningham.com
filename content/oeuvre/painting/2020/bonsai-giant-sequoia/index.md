@@ -3,7 +3,7 @@ title = "Bonsai Giant Sequoia"
 date = 2020-01-22
 category = "painting"
 year = 2020
-aliases = ["/bonsai-giant-sequoia/", "/oeuvre/painting/2020/bonsai-giant-sequoia/"]
+aliases = ["/bonsai-giant-sequoia/", "/oeuvre/painting/2020/bonsai-giant-sequoia/", "/oeuvre/2020/painting/bonsai-giant-sequoia/"]
 
 [extra]
 medium = "Oil on Linen"

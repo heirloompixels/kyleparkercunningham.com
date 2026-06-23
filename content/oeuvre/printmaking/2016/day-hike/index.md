@@ -3,7 +3,7 @@ title = "Day Hike"
 date = 2016-04-21
 category = "printmaking"
 year = 2016
-aliases = ["/oeuvre/printmaking/2016/day-hike/", "/day-hike/"]
+aliases = ["/oeuvre/printmaking/2016/day-hike/", "/day-hike/", "/oeuvre/2016/printmaking/day-hike/"]
 
 [extra]
 author = "claude"

@@ -2,6 +2,7 @@
 title = "Rainfall"
 date = 2015-04-03
 template = "page.html"
+aliases = ["/oeuvre/2015/installation/rainfall/"]
 +++
 
 {{ art_image(path="rainfall/IMG_6628.JPG", alt="Rainfall") }}

@@ -3,7 +3,7 @@ title = "the river in the sky"
 date = 2024-07-29
 category = "painting"
 year = 2024
-aliases = ["/oeuvre/painting/2024/the-river-in-the-sky/", "/the-river-in-the-sky/"]
+aliases = ["/oeuvre/painting/2024/the-river-in-the-sky/", "/the-river-in-the-sky/", "/oeuvre/2024/painting/the-river-in-the-sky/"]
 +++
 Magic is the transportation of millions of gallons of water over thousands of miles in the rivers of the atmosphere. Each molecule of water drifts aimlessly on a cyclical pilgrimage to the tops of the mounts only to erode their way back to the melting pot of the oceans.
 

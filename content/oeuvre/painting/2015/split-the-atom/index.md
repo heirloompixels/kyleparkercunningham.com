@@ -3,7 +3,7 @@ title = "Split the Atom"
 date = 2015-12-04
 category = "painting"
 year = 2015
-aliases = ["/oeuvre/painting/2015/split-the-atom/", "/split-the-atom/"]
+aliases = ["/oeuvre/painting/2015/split-the-atom/", "/split-the-atom/", "/oeuvre/2015/painting/split-the-atom/"]
 
 [extra]
 author = "claude"

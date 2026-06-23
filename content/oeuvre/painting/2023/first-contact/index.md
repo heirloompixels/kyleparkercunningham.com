@@ -3,7 +3,7 @@ title = "First Contact"
 date = 2023-11-17
 category = "painting"
 year = 2023
-aliases = ["/oeuvre/painting/2023/first-contact/", "/first-contact/"]
+aliases = ["/oeuvre/painting/2023/first-contact/", "/first-contact/", "/oeuvre/2023/painting/first-contact/"]
 +++
 Now, I'm in the depths of contemplation about what lies ahead. A convergence of disparate events – my life to this point, the weight of age, the global tumult – swirl in my thoughts. Reflections on the past and musings on the future collide, sparked into focus by a bolt from the heavens. I navigate this uncharted territory without a map, relying on intuition and an open heart to carve the correct path.
 

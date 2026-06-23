@@ -3,7 +3,7 @@ title = "Calavera Del Caballo"
 date = 2023-04-12
 category = "painting"
 year = 2023
-aliases = ["/calavera-del-caballo/", "/oeuvre/painting/2023/calavera-del-caballo/"]
+aliases = ["/calavera-del-caballo/", "/oeuvre/painting/2023/calavera-del-caballo/", "/oeuvre/2023/painting/calavera-del-caballo/"]
 
 [extra]
 author = "claude"

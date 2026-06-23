@@ -2,6 +2,7 @@
 title = "Sunflowers"
 date = 2022-04-05
 template = "page.html"
+aliases = ["/oeuvre/2022/printmaking/sun/"]
 +++
 
 {{ art_image(path="sun/IMG_3954.jpeg", alt="Sunflowers") }}

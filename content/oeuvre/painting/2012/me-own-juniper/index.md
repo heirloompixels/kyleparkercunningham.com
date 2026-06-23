@@ -3,7 +3,7 @@ title = "Me Own Juniper"
 date = 2012-07-25
 category = "painting"
 year = 2012
-aliases = ["/oeuvre/painting/2012/me-own-juniper/", "/me-own-juniper/"]
+aliases = ["/oeuvre/painting/2012/me-own-juniper/", "/me-own-juniper/", "/oeuvre/2012/painting/me-own-juniper/"]
 
 [extra]
 medium = "Oil on Linen"

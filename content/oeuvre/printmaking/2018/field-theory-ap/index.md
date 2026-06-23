@@ -3,7 +3,7 @@ title = "Field Theory AP"
 date = 2018-01-02
 category = "printmaking"
 year = 2018
-aliases = ["/oeuvre/printmaking/2018/field-theory-ap/"]
+aliases = ["/oeuvre/printmaking/2018/field-theory-ap/", "/oeuvre/2018/printmaking/field-theory-ap/"]
 
 [extra]
 author = "claude"

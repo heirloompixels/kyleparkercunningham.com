@@ -3,7 +3,7 @@ title = "Blue Corn"
 date = 2022-04-05
 category = "printmaking"
 year = 2022
-aliases = ["/blue-corn/", "/oeuvre/printmaking/2022/blue-corn/"]
+aliases = ["/blue-corn/", "/oeuvre/printmaking/2022/blue-corn/", "/oeuvre/2022/printmaking/blue-corn/"]
 
 [extra]
 author = "claude"

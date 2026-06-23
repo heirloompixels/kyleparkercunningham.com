@@ -3,7 +3,7 @@ title = "Alligator Juniper"
 date = 2020-11-21
 category = "printmaking"
 year = 2020
-aliases = ["/oeuvre/printmaking/2020/alligator-juniper-nogal/"]
+aliases = ["/oeuvre/printmaking/2020/alligator-juniper-nogal/", "/oeuvre/2020/printmaking/alligator-juniper-nogal/"]
 
 [extra]
 author = "claude"

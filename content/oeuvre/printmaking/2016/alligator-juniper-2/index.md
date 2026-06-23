@@ -3,7 +3,7 @@ title = "Alligator Juniper (Adobe Canyon)"
 date = 2016-04-08
 category = "printmaking"
 year = 2016
-aliases = ["/oeuvre/printmaking/2016/alligator-juniper-2/"]
+aliases = ["/oeuvre/printmaking/2016/alligator-juniper-2/", "/oeuvre/2016/printmaking/alligator-juniper-2/"]
 
 [extra]
 author = "claude"

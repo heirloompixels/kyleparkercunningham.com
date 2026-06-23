@@ -3,7 +3,7 @@ title = "Stole the Rainbow"
 date = 2018-03-25
 category = "printmaking"
 year = 2018
-aliases = ["/oeuvre/printmaking/2018/stole-the-rainbow/"]
+aliases = ["/oeuvre/printmaking/2018/stole-the-rainbow/", "/oeuvre/2018/printmaking/stole-the-rainbow/"]
 
 [extra]
 author = "claude"

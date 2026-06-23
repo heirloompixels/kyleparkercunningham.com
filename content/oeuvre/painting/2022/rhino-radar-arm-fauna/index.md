@@ -3,7 +3,7 @@ title = "Rhino Radar (Arm Fauna)"
 date = 2022-12-05
 category = "painting"
 year = 2022
-aliases = ["/oeuvre/painting/2022/rhino-radar-arm-fauna/", "/rhino-radar-arm-fauna/"]
+aliases = ["/oeuvre/painting/2022/rhino-radar-arm-fauna/", "/rhino-radar-arm-fauna/", "/oeuvre/2022/painting/rhino-radar-arm-fauna/"]
 
 [extra]
 medium = "Oil on Gesso Panel"

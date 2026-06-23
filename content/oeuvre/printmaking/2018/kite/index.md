@@ -3,7 +3,7 @@ title = "Kite"
 date = 2018-09-25
 category = "printmaking"
 year = 2018
-aliases = ["/oeuvre/printmaking/2018/kite/", "/kite/"]
+aliases = ["/oeuvre/printmaking/2018/kite/", "/kite/", "/oeuvre/2018/printmaking/kite/"]
 +++
 An elephant with her kite.
 

@@ -3,7 +3,7 @@ title = "symbologies intertwine electronically"
 date = 2024-07-29
 category = "painting"
 year = 2024
-aliases = ["/oeuvre/painting/2024/symbologies-intertwine-electronically/", "/symbologies-intertwine-electronically/"]
+aliases = ["/oeuvre/painting/2024/symbologies-intertwine-electronically/", "/symbologies-intertwine-electronically/", "/oeuvre/2024/painting/symbologies-intertwine-electronically/"]
 +++
 The modern intersection of ancient symbols and digital connectivity, where meaning flows through electronic pathways.
 

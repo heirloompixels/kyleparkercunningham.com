@@ -3,7 +3,7 @@ title = "Autumnal Twilight"
 date = 2023-12-05
 category = "painting"
 year = 2023
-aliases = ["/autumnal-twilight/", "/oeuvre/painting/2023/autumnal-twilight/"]
+aliases = ["/autumnal-twilight/", "/oeuvre/painting/2023/autumnal-twilight/", "/oeuvre/2023/painting/autumnal-twilight/"]
 
 [extra]
 author = "claude"
