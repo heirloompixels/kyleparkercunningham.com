@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mockup 28 — Edition Lead + Large Menu</title>
+<title>Mockup 29 — Edition Lead, Menu + Expanded Footer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
 <style>
@@ -117,8 +117,22 @@
   .menu-row:hover .m-main em{font-style:normal;color:var(--muted)}
   .menu-row .m-meta{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--muted);text-align:right;white-space:nowrap}
 
-  .colofoot{margin-top:4.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);border-top:2px solid var(--ink);padding-top:1.1rem}
+  /* Expanded colophon footer — the old three-line strip grown into a proper
+     foot: a tagline row on a heavy rule, then a grid of catalogue particulars. */
+  .colofoot{margin-top:5rem;border-top:2px solid var(--ink);padding-top:1.4rem;
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
   .colofoot a:hover{color:var(--accent)}
+  .colofoot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.8rem 1.4rem;padding-bottom:1.6rem}
+  .colofoot .top .mark{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--ink);letter-spacing:0}
+  .colofoot .top .mark b{font-style:normal;font-weight:400}
+  .colofoot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;border-top:1px solid var(--line);padding-top:1.6rem}
+  @media(max-width:760px){.colofoot .cols{grid-template-columns:1fr 1fr}}
+  @media(max-width:440px){.colofoot .cols{grid-template-columns:1fr}}
+  .colofoot .cols h5{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;font-weight:400}
+  .colofoot .cols p{font-size:.76rem;line-height:1.85;margin:0;max-width:none}
+  .colofoot .cols p a{display:block}
+  .colofoot .cols b{color:var(--ink);font-weight:600}
+  .colofoot .baseline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;border-top:1px solid var(--line);margin-top:1.6rem;padding-top:1.1rem;font-size:.7rem;letter-spacing:.08em}
 
   .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--ink);color:var(--bg);padding:.45rem .7rem;border-radius:3px;opacity:.9;z-index:99}
   .switch a{color:var(--bg);margin:0 .2rem}.switch a.cur{color:#e8b96a}
@@ -275,13 +289,36 @@
     </a>
   </nav>
 
-  <div class="colofoot">
-    <span>Studio archive · 312 works catalogued</span>
-    <span><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a></span>
-    <span>Last edited 2026·06·19</span>
-  </div>
+  <footer class="colofoot">
+    <div class="top">
+      <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+      <span>Painting · Printmaking · Installation · Cinema</span>
+    </div>
+    <div class="cols">
+      <div>
+        <h5>The Studio</h5>
+        <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
+      </div>
+      <div>
+        <h5>Contact</h5>
+        <p><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a><a href="#">Instagram</a><a href="#">Newsletter</a></p>
+      </div>
+      <div>
+        <h5>The Archive</h5>
+        <p><b>312</b> works catalogued<br><b>48</b> paintings · 2024<br>Season <b>XII</b> live now</p>
+      </div>
+      <div>
+        <h5>This Page</h5>
+        <p>Last edited <b>2026·06·19</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
+      </div>
+    </div>
+    <div class="baseline">
+      <span>© 2026 Kyle Parker Cunningham — all works &amp; words</span>
+      <span>The homepage is a work; the archive keeps everything.</span>
+    </div>
+  </footer>
 </div>
 
-<div class="switch"><a href="11-masthead-index.html">11</a><a href="22-index-edition-banner.html">22</a><a href="23-index-edition-plate.html">23</a><a href="24-index-edition-card.html">24</a><a href="25-index-edition-numeral.html">25</a><a href="26-index-edition-row.html">26</a><a href="27-index-edition-full.html">27</a><a href="28-edition-lead-menu.html" class="cur">28</a></div>
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="22-index-edition-banner.html">22</a><a href="23-index-edition-plate.html">23</a><a href="24-index-edition-card.html">24</a><a href="25-index-edition-numeral.html">25</a><a href="26-index-edition-row.html">26</a><a href="27-index-edition-full.html">27</a><a href="28-edition-lead-menu.html">28</a><a href="29-edition-menu-footer.html" class="cur">29</a></div>
 </body>
 </html>
