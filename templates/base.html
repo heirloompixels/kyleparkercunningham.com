@@ -11,30 +11,13 @@
 </head>
 <body>
     {% block site_header %}
-    <header class="site-header">
-        {% include "partials/navigation.html" %}
-    </header>
+    {% include "partials/masthead.html" %}
     {% endblock %}
     <main>
         {% block content %}{% endblock %}
     </main>
     {% block site_footer %}
-    <footer class="site-footer">
-        <nav class="footer-nav">
-            <a href="{{ get_url(path='/colophon/') }}">colophon</a>
-            <a href="{{ get_url(path='/dashboard/') }}">dashboard</a>
-            <a href="{{ get_url(path='/manifest/') }}">manifest</a>
-            <a href="{{ get_url(path='/') }}">home</a>
-            <a href="{{ get_url(path='/oeuvre/painting/') }}">painting</a>
-            <a href="{{ get_url(path='/oeuvre/printmaking/') }}">printmaking</a>
-            <a href="{{ get_url(path='/cinema/') }}">cinema</a>
-            <a href="{{ get_url(path='/about/') }}">about</a>
-        </nav>
-        {% include "partials/social-links.html" %}
-        <p>This site is the permanent archive of the works of Kyle Parker Cunningham.</p>
-        <p>Kyle Parker Cunningham · Taos &amp; Truth or Consequences, NM · 2003–{{ now() | date(format="%Y") }} · analogkyle@gmail.com</p>
-        <p>&copy; {{ now() | date(format="%Y") }} Kyle Parker Cunningham</p>
-    </footer>
+    {% include "partials/colophon.html" %}
     {% endblock %}
 </body>
 </html>

@@ -11,8 +11,10 @@
 {% endif %}{% endfor %}
 {% endblock %}
 
-{# An edition opens with its cover — no site header above it. #}
+{# An edition opens with its cover and ends with its own colophon —
+   no site masthead above it, no site footer below it. #}
 {% block site_header %}{% endblock %}
+{% block site_footer %}{% endblock %}
 
 {% block content %}
 {% set edition = page %}
