@@ -1,13 +1,28 @@
 {% extends "base.html" %}
 {% block title %}{{ taxonomy.name | title }}{% endblock %}
+
+{% block site_header %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
 {% block content %}
-<h1>{{ taxonomy.name | title }}</h1>
-<ul class="latest-list">
-  {% for item in terms %}
-    <li>
-      <a href="{{ item.permalink }}">{{ item.name | title }}</a>
-      <span class="latest-year">{{ item.pages | length }}</span>
-    </li>
-  {% endfor %}
-</ul>
+<article class="page-doc">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / <a href="{{ get_url(path='/notes/') }}">Notes</a> / {{ taxonomy.name | title }}</nav>
+  <header class="page-head">
+    <div class="label">All Topics</div>
+    <h1>{{ taxonomy.name | title }}</h1>
+  </header>
+  <ul class="doc-list">
+    {% for item in terms %}
+      <li>
+        <a href="{{ item.permalink }}">{{ item.name | title }}</a>
+        <span class="yr">{{ item.pages | length }} note{{ item.pages | length | pluralize }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</article>
 {% endblock %}

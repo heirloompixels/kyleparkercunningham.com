@@ -1,21 +1,31 @@
 {% extends "base.html" %}
 {% block title %}{{ section.title }}{% endblock %}
-{% block content %}
-<section class="home-hero">
-  <p class="home-eyebrow">Log</p>
-  <h1>{{ section.title }}</h1>
-  {% if section.content %}<div class="home-deck">{{ section.content | safe }}</div>{% endif %}
-</section>
 
-<section class="latest-additions">
-  <h2>Entries</h2>
-  <ul class="latest-list">
+{% block site_header %}
+  {% set mast_active = "log" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
+{% block content %}
+<article class="page-doc">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / {{ section.title }}</nav>
+  <header class="page-head">
+    <div class="label">From the Studio</div>
+    <h1>{{ section.title }}</h1>
+  </header>
+  {% if section.content %}<div class="doc-deck">{{ section.content | safe }}</div>{% endif %}
+
+  <ul class="doc-list">
     {% for page in section.pages | sort(attribute="date") | reverse %}
       <li>
         <a href="{{ page.permalink }}">{{ page.title }}</a>
-        {% if page.date %}<span class="latest-year">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
+        {% if page.date %}<span class="yr">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
       </li>
     {% endfor %}
   </ul>
-</section>
+</article>
 {% endblock %}
