@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 16 — Filmstrip (experimental)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0e10; --ink:#efe9df; --dim:#8a8478; --accent:#e8b96a; --line:#26262a;
+    --serif:'Literata',Georgia,serif; --mono:'Inconsolata',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);overflow:hidden;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+
+  /* A horizontal cinema reel — the homepage scrolls sideways through the work */
+  .reelhead{display:flex;justify-content:space-between;align-items:baseline;padding:1.4rem 2rem .8rem;z-index:10}
+  .reelhead .name{font-style:italic;font-size:1.15rem}
+  .reelhead .meta{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+
+  .strip{flex:1;display:flex;align-items:center;gap:0;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0 2rem;-webkit-overflow-scrolling:touch}
+  .strip::-webkit-scrollbar{height:0}
+
+  /* intro panel set as the title card */
+  .card{flex:0 0 auto;scroll-snap-align:center;height:62vh;display:flex;flex-direction:column;justify-content:center;margin-right:2.2rem}
+  .titlecard{width:44vw;min-width:300px;padding-right:2rem}
+  .titlecard .roman{font-family:var(--mono);font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--accent)}
+  .titlecard h1{font-weight:300;font-size:clamp(2rem,4.6vw,3.8rem);line-height:1.04;margin:1rem 0}
+  .titlecard h1 em{font-style:italic;color:var(--accent)}
+  .titlecard p{color:var(--dim);font-size:1rem;max-width:34ch;line-height:1.5}
+  .titlecard .scroll{margin-top:2rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink)}
+  .titlecard .scroll span{color:var(--accent)}
+
+  .frame{position:relative;height:62vh;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+  .frame img{height:100%;width:auto;display:block;object-fit:cover}
+  /* sprocket-hole reel edges */
+  .frame::before,.frame::after{content:"";position:absolute;left:0;right:0;height:14px;background:
+      repeating-linear-gradient(90deg,transparent 0 10px,var(--bg) 10px 22px);}
+  .frame::before{top:-18px}.frame::after{bottom:-18px}
+  .frame .plate{position:absolute;left:0;right:0;bottom:0;padding:1.4rem 1.2rem .9rem;background:linear-gradient(transparent,rgba(0,0,0,.82));}
+  .frame .plate .t{font-style:italic;font-size:1.25rem}
+  .frame .plate .d{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;color:var(--accent);margin-top:.3rem}
+  .frame .num{position:absolute;top:.6rem;left:.7rem;font-family:var(--mono);font-size:.66rem;color:var(--accent);letter-spacing:.1em;background:rgba(0,0,0,.45);padding:.15rem .4rem}
+
+  .footstrip{display:flex;justify-content:space-between;align-items:center;padding:.9rem 2rem 1.3rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);z-index:10}
+  .footstrip nav{display:flex;gap:1.8rem}
+  .footstrip a:hover{color:var(--accent)}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--accent);color:#0e0e10;padding:.45rem .7rem;border-radius:3px;opacity:.92;z-index:99}
+  .switch a{color:#0e0e10;margin:0 .22rem;font-weight:600}.switch a.cur{color:#fff}
+</style>
+</head>
+<body>
+<div class="reelhead">
+  <span class="name">Kyle Parker Cunningham</span>
+  <span class="meta">Reel 01 · 2012–2026 · 312 frames</span>
+</div>
+
+<div class="strip">
+  <div class="card titlecard">
+    <div class="roman">The art of</div>
+    <h1>A reel of <em>painting,</em> prints &amp; <em>installation</em></h1>
+    <p>Believing in a future is not the same thing as living through a future. Scroll the strip — each frame a work, in sequence.</p>
+    <div class="scroll">Scroll right <span>→</span></div>
+  </div>
+
+  <div class="card"><figure class="frame"><span class="num">F·240</span><img src="assets/oeuvre__painting__2024__above-the-clouds__above-the-clouds.jpg" alt=""><figcaption class="plate"><div class="t">Above the Clouds</div><div class="d">Oil on linen · 2024</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·238</span><img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" alt=""><figcaption class="plate"><div class="t">The River in the Sky</div><div class="d">Oil on canvas · 2024</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·224</span><img src="assets/oeuvre__painting__2023__first-contact__IMG_6715--1-.jpeg" alt=""><figcaption class="plate"><div class="t">First Contact</div><div class="d">Oil on canvas · 2023</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·219</span><img src="assets/oeuvre__painting__2022__saturday-evening-owls__saturday-evening-owls.jpeg" alt=""><figcaption class="plate"><div class="t">Saturday Evening Owls</div><div class="d">Oil on linen · 2022</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·042</span><img src="assets/oeuvre__installation__2022__once-creatures-existed__gallery-wide-webized.jpg" alt=""><figcaption class="plate"><div class="t">Once, Creatures Existed</div><div class="d">Installation · 2022</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·121</span><img src="assets/oeuvre__printmaking__2021__airlift__airlift-6.jpeg" alt=""><figcaption class="plate"><div class="t">Airlift</div><div class="d">Drypoint, ed. 12 · 2021</div></figcaption></figure></div>
+  <div class="card"><figure class="frame"><span class="num">F·204</span><img src="assets/oeuvre__painting__2021__the-mother-bear__the-mother-bear-2000px.jpg" alt=""><figcaption class="plate"><div class="t">The Mother Bear</div><div class="d">Oil on canvas · 2021</div></figcaption></figure></div>
+</div>
+
+<div class="footstrip">
+  <nav><a>Oeuvre</a><a>Editions</a><a>Projects</a><a>Log</a><a>Manifest</a></nav>
+  <span>analogkyle@gmail.com</span>
+</div>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="12-colophon.html">12</a><a href="13-lettering.html">13</a><a href="14-salon-wall.html">14</a><a href="15-system-archive.html">15</a><a href="16-filmstrip.html" class="cur">16</a><a href="17-nameplate-issue.html">17</a><a href="18-the-issue.html">18</a><a href="19-split-folio.html">19</a><a href="20-seasonal-index.html">20</a><a href="21-cover-plate.html">21</a></div>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 28 — Edition Lead + Large Menu</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f4ef; --ink:#1e1a16; --muted:#6a6258; --accent:#1f3f5b; --line:#e2dbd1;
+    --serif:'Literata',Georgia,serif; --sans:'IBM Plex Sans',sans-serif; --mono:'Inconsolata',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.5}
+  a{color:inherit;text-decoration:none}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:3rem 2.2rem 5rem}
+
+  .masthead{border-bottom:2px solid var(--ink);padding-bottom:1.1rem}
+  .masthead .kicker{font-family:var(--mono);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;margin-bottom:1.4rem}
+  .masthead h1{font-weight:300;font-size:clamp(2.6rem,9.2vw,8.4rem);line-height:.92;letter-spacing:-.02em}
+  .masthead h1 .amp{font-style:italic;font-weight:400}
+  .masthead .sub{font-family:var(--sans);font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:1rem;display:flex;gap:2.2rem;flex-wrap:wrap}
+
+  .deck{max-width:46ch;margin:2.6rem 0 3.4rem;font-size:1.15rem;font-style:italic;color:#2c2620;line-height:1.55}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .col h2{font-family:var(--mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:.5rem;margin-bottom:.4rem}
+  .row{display:grid;grid-template-columns:2.4rem 1fr auto;align-items:baseline;gap:.6rem;padding:.62rem 0;border-bottom:1px solid var(--line)}
+  .row:hover .t{color:var(--accent)}
+  .row .n{font-family:var(--mono);font-size:.74rem;color:var(--muted)}
+  .row .t{font-size:1.12rem;line-height:1.2;transition:color .15s}
+  .row .t em{color:var(--muted);font-size:.86rem;font-style:italic;display:block;font-family:var(--sans);letter-spacing:.02em}
+  .row .y{font-family:var(--mono);font-size:.82rem;color:var(--muted)}
+
+  /* ── THE CURRENT EDITION ──────────────────────────────────────────────
+     25's numeral heading, now opening into the full issue laid out below. */
+  .ed-head{margin-top:3.8rem;padding-top:1.6rem;border-top:2px solid var(--ink);
+    display:grid;grid-template-columns:auto 1fr;gap:2.4rem;align-items:center}
+  @media(max-width:620px){.ed-head{grid-template-columns:1fr;gap:1rem}}
+  .ed-head .roman{font-weight:300;font-size:clamp(4.5rem,13vw,9rem);line-height:.82;letter-spacing:-.03em}
+  .ed-head .roman small{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent);margin-top:.6rem;font-weight:400}
+  .ed-head .label{font-family:var(--mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent)}
+  .ed-head h3{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
+  .ed-head .lifespan{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted)}
+
+  /* The issue itself — a centred reading measure; plates break wider. */
+  .issue{margin-top:3rem}
+  .issue-deck{max-width:34ch;margin:0 auto 2.6rem;text-align:center;font-size:1.3rem;font-style:italic;line-height:1.5;color:#2c2620}
+  .issue-deck + .dateline{text-align:center;font-family:var(--mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:-1.8rem;margin-bottom:2.4rem}
+  .ed-orn{text-align:center;color:var(--accent);font-size:1.4rem;margin:0 0 2.6rem;letter-spacing:.5em}
+
+  .issue p{max-width:34em;margin:0 auto 1.4rem;font-size:1.12rem;line-height:1.7}
+  .ed-marginalia{display:block;text-align:center;font-family:var(--mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:2.8rem auto;}
+
+  .ed-plate{max-width:920px;margin:2.8rem auto}
+  .ed-plate img{width:100%;height:auto;display:block;box-shadow:0 1px 2px rgba(30,26,22,.1),0 18px 46px rgba(30,26,22,.16)}
+  .ed-plate figcaption{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;color:var(--muted);margin-top:.7rem;text-align:center}
+  .ed-plate figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink)}
+
+  .ed-diptych{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:1100px;margin:2.8rem auto}
+  @media(max-width:620px){.ed-diptych{grid-template-columns:1fr}}
+  .ed-diptych figure{margin:0}
+  .ed-diptych img{width:100%;height:auto;display:block;box-shadow:0 1px 2px rgba(30,26,22,.1),0 14px 36px rgba(30,26,22,.14)}
+  .ed-diptych figcaption{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:.6rem}
+  .ed-diptych figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink)}
+
+  .ed-wallquote{max-width:24ch;margin:3.4rem auto;text-align:center}
+  .ed-wallquote p{font-size:clamp(1.6rem,4vw,2.4rem);font-style:italic;font-weight:300;line-height:1.25;max-width:none}
+  .ed-wallquote span{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:1rem}
+
+  .ed-interlude{margin:3.6rem auto 0;max-width:1100px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:2.6rem 0;
+    display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:center}
+  @media(max-width:680px){.ed-interlude{grid-template-columns:1fr}}
+  .ed-interlude img{width:100%;height:auto;display:block;box-shadow:0 12px 32px rgba(30,26,22,.16)}
+  .ed-kicker{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+  .ed-interlude h2{font-weight:300;font-style:italic;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.1;margin:.5rem 0 1rem}
+  .ed-interlude p{max-width:none;margin:0 0 1rem;font-size:1rem}
+  .ed-interlude blockquote{font-family:var(--mono);font-size:.78rem;color:var(--muted);line-height:2;border-left:2px solid var(--line);padding-left:1rem;margin-top:1.2rem}
+  .ed-interlude blockquote b{color:var(--ink);font-weight:600}
+
+  /* Step deeper — doors */
+  .ed-doors{margin-top:4rem}
+  .ed-doors h4{font-family:var(--mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);text-align:center;margin-bottom:1.6rem}
+  .ed-doorgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  @media(max-width:680px){.ed-doorgrid{grid-template-columns:1fr}}
+  .ed-door{border:1px solid var(--line);padding:1.6rem;background:#fbf9f4;transition:border-color .2s}
+  .ed-door:hover{border-color:var(--accent)}
+  .ed-door .n{font-size:2.4rem;font-weight:300;line-height:1}
+  .ed-door .t{font-family:var(--mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.7rem 0 .5rem}
+  .ed-door .d{font-family:var(--sans);font-size:.9rem;color:var(--muted);line-height:1.5}
+
+  .ed-colophon{max-width:34em;margin:4rem auto 0;text-align:center}
+  .ed-colophon .k{font-family:var(--mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent);margin-bottom:1rem}
+  .ed-colophon p{font-size:1rem;color:var(--muted);line-height:1.65;max-width:none}
+  .ed-colophon .sig{font-style:italic;color:var(--ink);margin-top:1.2rem}
+  .ed-colophon .shelf{display:inline-block;margin-top:1.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:2px}
+  .ed-colophon .shelf:hover{color:var(--accent)}
+
+  /* Index moved to the foot — given a little air above it */
+  .grid-foot{margin-top:4.5rem;padding-top:1.6rem;border-top:2px solid var(--ink)}
+
+  /* A larger typographic site menu — the navigation set as a register of big
+     serif links, each with a gloss and a count, in the catalogue voice. */
+  .sitemenu{margin-top:4.5rem;border-top:2px solid var(--ink)}
+  .menu-row{display:grid;grid-template-columns:3.4rem 1fr auto;align-items:baseline;gap:1.6rem;
+    padding:1.5rem 0;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}
+  .menu-row:hover{background:color-mix(in srgb,var(--accent) 8%,transparent);padding-left:1.2rem}
+  .menu-row .m-no{font-family:var(--mono);font-size:.82rem;letter-spacing:.1em;color:var(--muted)}
+  .menu-row .m-main{font-size:clamp(1.8rem,5vw,3.2rem);font-weight:300;line-height:1.04;letter-spacing:-.015em}
+  .menu-row .m-main em{display:block;font-style:normal;font-family:var(--sans);font-size:.92rem;font-weight:400;
+    color:var(--muted);line-height:1.5;margin-top:.5rem;max-width:54ch;letter-spacing:0}
+  .menu-row:hover .m-main{font-style:italic;color:var(--accent)}
+  .menu-row:hover .m-main em{font-style:normal;color:var(--muted)}
+  .menu-row .m-meta{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;color:var(--muted);text-align:right;white-space:nowrap}
+
+  .colofoot{margin-top:4.5rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted);border-top:2px solid var(--ink);padding-top:1.1rem}
+  .colofoot a:hover{color:var(--accent)}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--ink);color:var(--bg);padding:.45rem .7rem;border-radius:3px;opacity:.9;z-index:99}
+  .switch a{color:var(--bg);margin:0 .2rem}.switch a.cur{color:#e8b96a}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="kicker"><span>Painting · Printmaking · Installation</span><span>Est. 2012 — Present</span></div>
+    <h1>Kyle&nbsp;Parker<br>Cunning<span class="amp">h</span>am</h1>
+    <div class="sub"><span>The Oeuvre</span><span>Editions</span><span>Projects</span><span>Log</span><span>Manifest</span></div>
+  </header>
+
+  <p class="deck">Believing in a future is not the same thing as living through a future — an archive kept in the present tense, organised by discipline and year.</p>
+
+  <!-- The current edition leads the page: 25's numeral heading opening the full issue -->
+  <div class="ed-head">
+    <div class="roman">XII<small>☁ Spring 2026</small></div>
+    <div>
+      <div class="label">The Current Edition</div>
+      <h3>The Memory of Atmosphere</h3>
+      <div class="lifespan">The Front Page · Season XII · Lives March — June 2026</div>
+    </div>
+  </div>
+
+  <article class="issue">
+    <p class="issue-deck">What the sky keeps and what it lets go. A season of weather paintings, a press run in the dark, and the slow work of photographing twenty years of missing panels.</p>
+    <div class="dateline">Truth or Consequences, New Mexico · 33.13° N, 107.25° W</div>
+    <div class="ed-orn">☁</div>
+
+    <p>The desert does not get much weather, so when it comes, it is an event. This spring the studio is full of sky — twelve panels of it finished, four still wet on the easel. They are not landscapes. They are attempts to paint what remains of a cloud after it has gone: the river it drew across the blue, the low-angle light it bent, the electric finger it pointed at the mesa for half a second in August.</p>
+
+    <span class="ed-marginalia">— the season's work, I —</span>
+
+    <figure class="ed-plate">
+      <img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" alt="The River in the Sky">
+      <figcaption><i>the river in the sky</i> · oil · 2024 — the painting you landed inside</figcaption>
+    </figure>
+
+    <div class="ed-diptych">
+      <figure>
+        <img src="assets/oeuvre__painting__2024__low-angle-sun-rays__rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg" alt="Low angle sun rays">
+        <figcaption><i>low angle sun rays</i> · oil · 2024</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/oeuvre__painting__2024__the-algebra-of-water-vapor__the-algebra-of-water-vapor.jpg" alt="The Algebra of Water Vapor">
+        <figcaption><i>the algebra of water vapor</i> · oil · 2024</figcaption>
+      </figure>
+    </div>
+
+    <div class="ed-wallquote">
+      <p>A painting is a record of weather that happened in a person.</p>
+      <span>studio note · march 2026</span>
+    </div>
+
+    <figure class="ed-plate">
+      <img src="assets/oeuvre__painting__2024__the-atmospheres-electric-finger__the-atmosphere-s-electric-finger-good.jpg" alt="The Atmosphere's Electric Finger">
+      <figcaption><i>the atmosphere's electric finger</i> · oil · 2024</figcaption>
+    </figure>
+
+    <p>The series began two summers ago with a single cloud on the horizon — out there, distinct, refusing to arrive. Most of what hangs in this issue was painted with the monsoon either coming or just gone, which may be the only two tenses this landscape has. The newest panels have started letting the geometry show through the vapor — the season is bending back toward structure.</p>
+
+    <span class="ed-marginalia">— the season's work, II —</span>
+
+    <div class="ed-diptych">
+      <figure>
+        <img src="assets/oeuvre__painting__2024__out-there-on-the-horizon-a-solitary-cloud__-in-the-distance--on-the-horizon--a-cloud.jpg" alt="Out there, on the horizon, a solitary cloud">
+        <figcaption><i>out there, on the horizon, a solitary cloud</i> · oil · 2024</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/oeuvre__painting__2024__felt-and-lived__felt-and-lived.jpg" alt="Felt and Lived">
+        <figcaption><i>felt and lived</i> · oil · 2024</figcaption>
+      </figure>
+    </div>
+
+    <section class="ed-interlude">
+      <img src="assets/oeuvre__printmaking__2021__butterfly-conundrum__IMG_1089.jpeg" alt="Drypoint plate on the press">
+      <div class="ed-interlude-text">
+        <span class="ed-kicker">Meanwhile, after dark</span>
+        <h2>The press runs at night</h2>
+        <p>The drypoint plates wait until the heat breaks. This season the press is revisiting the panel paintings of a decade ago — the butterflies, the airlift, the skull — translating brushwork into scribed line, edition by edition.</p>
+        <p>And in the flat files: twenty years of paintings that were never photographed are coming out, one by one, under north light.</p>
+        <blockquote>
+          <b>2026-03-10</b> — reworking the press schedule<br>
+          <b>2026-02-15</b> — archive photography, week two<br>
+          <b>2026-01-28</b> — the periodic: first research
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="ed-doors">
+      <h4>Step deeper</h4>
+      <div class="ed-doorgrid">
+        <a class="ed-door"><div class="n">312</div><div class="t">The Oeuvre</div><div class="d">Every work, catalogued — paintings, prints, installations, 2003 to now.</div></a>
+        <a class="ed-door"><div class="n">28</div><div class="t">Projects</div><div class="d">The long arcs — ongoing, researching, and complete.</div></a>
+        <a class="ed-door"><div class="n">∞</div><div class="t">The Log</div><div class="d">Production notes from the studio, as they happen.</div></a>
+      </div>
+    </section>
+
+    <footer class="ed-colophon">
+      <div class="k">About this front page</div>
+      <p>This page is season XII of a living homepage. Each season the front of this site is composed anew — around whatever the studio is actually doing — and when the season turns, this page retires, whole and unchanged, to the permanent archive. The homepage is a work; the archive keeps everything.</p>
+      <div class="sig">— KPC, Truth or Consequences, May 2026</div>
+      <a class="shelf">Browse the past editions →</a>
+    </footer>
+  </article>
+
+  <!-- The catalogue index, moved below the edition -->
+  <div class="grid grid-foot">
+    <div class="col">
+      <h2>Recent Painting</h2>
+      <a class="row"><span class="n">№ 240</span><span class="t">Above the Clouds<em>Oil on linen, 48 × 60 in.</em></span><span class="y">2024</span></a>
+      <a class="row"><span class="n">№ 238</span><span class="t">The River in the Sky<em>Oil on canvas</em></span><span class="y">2024</span></a>
+      <a class="row"><span class="n">№ 231</span><span class="t">Bottled Lightning<em>Oil on panel</em></span><span class="y">2024</span></a>
+      <a class="row"><span class="n">№ 224</span><span class="t">First Contact<em>Oil on canvas</em></span><span class="y">2023</span></a>
+      <a class="row"><span class="n">№ 219</span><span class="t">Saturday Evening Owls<em>Oil on linen</em></span><span class="y">2022</span></a>
+    </div>
+    <div class="col">
+      <h2>Across the Archive</h2>
+      <a class="row"><span class="n">PR·21</span><span class="t">Airlift<em>Drypoint, edition of 12</em></span><span class="y">2021</span></a>
+      <a class="row"><span class="n">IN·22</span><span class="t">Once, Creatures Existed<em>Installation, dimensions variable</em></span><span class="y">2022</span></a>
+      <a class="row"><span class="n">PT·21</span><span class="t">The Mother Bear<em>Oil on canvas</em></span><span class="y">2021</span></a>
+      <a class="row"><span class="n">PT·13</span><span class="t">Dodecahedron<em>Acrylic on board</em></span><span class="y">2013</span></a>
+      <a class="row"><span class="n">IN·19</span><span class="t">Tomorrow, the Desert is Archaic<em>Site-specific</em></span><span class="y">2019</span></a>
+    </div>
+  </div>
+
+  <!-- A larger typographic menu of the whole site -->
+  <nav class="sitemenu">
+    <a class="menu-row">
+      <span class="m-no">01</span>
+      <span class="m-main">The Oeuvre<em>Every work, catalogued — painting, printmaking, installation, sculpture &amp; more, 2003 to now.</em></span>
+      <span class="m-meta">312 works</span>
+    </a>
+    <a class="menu-row">
+      <span class="m-no">02</span>
+      <span class="m-main">Editions<em>The living front page, season by season — and the archive of every front page this site has had.</em></span>
+      <span class="m-meta">Season XII</span>
+    </a>
+    <a class="menu-row">
+      <span class="m-no">03</span>
+      <span class="m-main">Projects<em>The long arcs — ongoing, researching, and complete.</em></span>
+      <span class="m-meta">28 threads</span>
+    </a>
+    <a class="menu-row">
+      <span class="m-no">04</span>
+      <span class="m-main">The Log<em>Production notes from the studio, posted as they happen.</em></span>
+      <span class="m-meta">∞</span>
+    </a>
+    <a class="menu-row">
+      <span class="m-no">05</span>
+      <span class="m-main">Manifest<em>The full page index — every page on the site, with honest authorship tags.</em></span>
+      <span class="m-meta">↗</span>
+    </a>
+  </nav>
+
+  <div class="colofoot">
+    <span>Studio archive · 312 works catalogued</span>
+    <span><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a></span>
+    <span>Last edited 2026·06·19</span>
+  </div>
+</div>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="22-index-edition-banner.html">22</a><a href="23-index-edition-plate.html">23</a><a href="24-index-edition-card.html">24</a><a href="25-index-edition-numeral.html">25</a><a href="26-index-edition-row.html">26</a><a href="27-index-edition-full.html">27</a><a href="28-edition-lead-menu.html" class="cur">28</a></div>
+</body>
+</html>

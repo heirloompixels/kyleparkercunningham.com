@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 15 — System Archive (experimental)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300..700&family=Literata:ital,opsz,wght@0,7..72,300..600;1,7..72,300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0c0d0c; --panel:#121413; --ink:#d7e0d4; --dim:#6f786c; --accent:#9fe870; --warn:#e8b96a; --line:#222521;
+    --mono:'Inconsolata',monospace; --serif:'Literata',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--mono);font-size:14px;line-height:1.5;
+    background-image:repeating-linear-gradient(0deg,transparent,transparent 3px,rgba(255,255,255,.012) 3px,rgba(255,255,255,.012) 4px)}
+  a{color:inherit;text-decoration:none}
+
+  .bar{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:.7rem 1.2rem;color:var(--dim);font-size:.74rem;letter-spacing:.08em}
+  .bar .dot{color:var(--accent)}
+
+  .head{padding:2.6rem 1.2rem 1.6rem;border-bottom:1px solid var(--line)}
+  .head .prompt{color:var(--dim)}
+  .head .prompt b{color:var(--accent);font-weight:600}
+  .head h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.8rem,5vw,3.2rem);margin:.8rem 0 .4rem;letter-spacing:.01em;color:#fff}
+  .head .out{color:var(--dim);max-width:62ch;font-size:.86rem}
+  .blink{display:inline-block;width:.55em;height:1.05em;background:var(--accent);transform:translateY(.18em);animation:bl 1.05s steps(1) infinite}
+  @keyframes bl{50%{opacity:0}}
+
+  .cols{display:grid;grid-template-columns:1fr;}
+  table{width:100%;border-collapse:collapse}
+  caption{text-align:left;padding:1.4rem 1.2rem .5rem;color:var(--warn);font-size:.74rem;letter-spacing:.18em;text-transform:uppercase}
+  th{text-align:left;font-weight:400;color:var(--dim);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem 1.2rem;border-bottom:1px solid var(--line)}
+  td{padding:.5rem 1.2rem;border-bottom:1px solid #181a18;white-space:nowrap}
+  tr:hover td{background:var(--panel)}
+  tr:hover .title{color:var(--accent)}
+  .id{color:var(--dim)}
+  .title{color:var(--ink);font-family:var(--serif);font-style:italic;font-size:.96rem}
+  .med{color:var(--dim)}
+  .yr{color:var(--warn)}
+  .stat{color:var(--accent)}
+  .stat.arch{color:var(--dim)}
+  .num{color:var(--ink)}
+
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.6rem 1.2rem 3rem;color:var(--dim);font-size:.74rem;border-top:1px solid var(--line);margin-top:1rem}
+  .foot a{color:var(--ink)}.foot a:hover{color:var(--accent)}
+  .foot .keys b{color:var(--accent)}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-size:.72rem;background:var(--accent);color:#0c0d0c;padding:.45rem .7rem;border-radius:3px;opacity:.92;z-index:99}
+  .switch a{color:#0c0d0c;margin:0 .22rem;font-weight:600}.switch a.cur{color:#fff}
+</style>
+</head>
+<body>
+<div class="bar"><span><span class="dot">●</span> kpc.archive — /oeuvre — read-only</span><span>312 records · idx ok · 19·06·2026 18:59</span></div>
+
+<div class="head">
+  <div class="prompt"><b>kpc@studio</b>:~$ query oeuvre --recent --all-media</div>
+  <h1>The art of Kyle Parker Cunningham</h1>
+  <div class="out">// an artist archive addressed as a system. believing in a future is not the same thing as living through a future — so the record is queried, not curated. 312 works indexed by discipline and year.<span class="blink"></span></div>
+</div>
+
+<div class="cols">
+  <table>
+    <caption>// recent.painting — head 6</caption>
+    <thead><tr><th>id</th><th>title</th><th>medium</th><th>year</th><th>state</th></tr></thead>
+    <tbody>
+      <tr><td class="id">PT·0240</td><td class="title">Above the Clouds</td><td class="med">oil/linen 48×60</td><td class="yr">2024</td><td class="stat">live</td></tr>
+      <tr><td class="id">PT·0238</td><td class="title">The River in the Sky</td><td class="med">oil/canvas</td><td class="yr">2024</td><td class="stat">live</td></tr>
+      <tr><td class="id">PT·0231</td><td class="title">Bottled Lightning</td><td class="med">oil/panel</td><td class="yr">2024</td><td class="stat">live</td></tr>
+      <tr><td class="id">PT·0224</td><td class="title">First Contact</td><td class="med">oil/canvas</td><td class="yr">2023</td><td class="stat">live</td></tr>
+      <tr><td class="id">PT·0219</td><td class="title">Saturday Evening Owls</td><td class="med">oil/linen</td><td class="yr">2022</td><td class="stat arch">archived</td></tr>
+      <tr><td class="id">PT·0204</td><td class="title">The Mother Bear</td><td class="med">oil/canvas</td><td class="yr">2021</td><td class="stat arch">archived</td></tr>
+    </tbody>
+  </table>
+
+  <table>
+    <caption>// cross-media — prints + installation</caption>
+    <thead><tr><th>id</th><th>title</th><th>medium</th><th>year</th><th>ed.</th></tr></thead>
+    <tbody>
+      <tr><td class="id">PR·0121</td><td class="title">Airlift</td><td class="med">drypoint</td><td class="yr">2021</td><td class="num">/12</td></tr>
+      <tr><td class="id">IN·0042</td><td class="title">Once, Creatures Existed</td><td class="med">installation</td><td class="yr">2022</td><td class="num">1/1</td></tr>
+      <tr><td class="id">IN·0039</td><td class="title">Tomorrow, the Desert is Archaic</td><td class="med">site-specific</td><td class="yr">2019</td><td class="num">1/1</td></tr>
+      <tr><td class="id">PT·0013</td><td class="title">Dodecahedron</td><td class="med">acrylic/board</td><td class="yr">2013</td><td class="num">1/1</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="foot">
+  <span class="keys">nav: <b>o</b> oeuvre · <b>e</b> editions · <b>p</b> projects · <b>l</b> log · <b>m</b> manifest</span>
+  <span><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a></span>
+  <span>EOF — 312/312 rows</span>
+</div>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="12-colophon.html">12</a><a href="13-lettering.html">13</a><a href="14-salon-wall.html">14</a><a href="15-system-archive.html" class="cur">15</a><a href="16-filmstrip.html">16</a><a href="17-nameplate-issue.html">17</a><a href="18-the-issue.html">18</a><a href="19-split-folio.html">19</a><a href="20-seasonal-index.html">20</a><a href="21-cover-plate.html">21</a></div>
+</body>
+</html>
