@@ -2,6 +2,10 @@
 title = "About"
 template = "page.html"
 date = 2023-01-01
+
+[extra]
+label = "The Artist"
+mast_active = "about"
 +++
 
 I paint the life I live.

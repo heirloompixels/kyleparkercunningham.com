@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 30 — Inner-page chrome (compact masthead + colophon)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f4ef; --ink:#1e1a16; --muted:#6a6258; --accent:#1f3f5b; --line:#e2dbd1;
+    --serif:'Literata',Georgia,serif; --sans:'IBM Plex Sans',sans-serif; --mono:'Inconsolata',monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:radial-gradient(1200px 600px at 10% -10%,#fff 0%,var(--bg) 55%,#efe9e1 100%);color:var(--ink);font-family:var(--serif);line-height:1.7}
+  a{color:inherit;text-decoration:none}
+
+  /* ── Compact running masthead (the inner-page header) ─────────────────── */
+  .mast{max-width:1180px;margin:0 auto;padding:2.4rem 2.2rem 0}
+  .mast-inner{border-bottom:2px solid var(--ink);padding-bottom:.9rem}
+  .mast .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem}
+  .mast .kicker a:hover{color:var(--accent)}
+  .mast-row{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.6rem 2rem}
+  .mast .wordmark{font-weight:300;font-size:clamp(1.4rem,3.2vw,2.1rem);letter-spacing:-.01em;line-height:1}
+  .mast .wordmark .amp{font-style:italic;font-weight:400}
+  .mast nav{font-family:var(--mono);font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:flex;gap:1.5rem;flex-wrap:wrap}
+  .mast nav a{padding-bottom:2px;border-bottom:1px solid transparent}
+  .mast nav a:hover{color:var(--accent);border-color:var(--accent)}
+  .mast nav a.here{color:var(--ink);border-color:var(--ink)}
+
+  main{max-width:1180px;margin:0 auto;padding:0 2.2rem}
+
+  /* ── Editorial page body ──────────────────────────────────────────────── */
+  .crumb{font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:1.8rem 0 0}
+  .crumb a:hover{color:var(--accent)}
+  .page-head{padding:.6rem 0 1.4rem;border-bottom:1px solid var(--line);margin-bottom:2.4rem}
+  .page-head h1{font-weight:300;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:-.015em;line-height:1.05}
+  .page-head .label{font-family:var(--mono);font-size:.7rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);margin-bottom:.7rem}
+
+  .prose{max-width:60ch}
+  .prose p{margin:0 0 1.3rem;font-size:1.08rem}
+  .prose > p:first-of-type::first-letter{float:left;font-size:3.4rem;line-height:.8;padding:.3rem .5rem .1rem 0;font-weight:300;color:var(--accent)}
+  .prose h2{font-family:var(--mono);font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:2.6rem 0 1rem;font-weight:500}
+  .prose h2 em{font-style:italic;text-transform:none;letter-spacing:0;color:var(--muted)}
+  .prose ul{margin:0 0 1.3rem;padding-left:1.2rem}
+  .prose li{margin:.35rem 0}
+  .prose a{border-bottom:1px solid var(--line)}
+  .prose a:hover{color:var(--accent);border-color:var(--accent)}
+  .plate{margin:2.2rem 0;max-width:520px}
+  .plate .ph{aspect-ratio:4/5;background:linear-gradient(135deg,#e8e0d4,#d8cdba);box-shadow:0 1px 2px rgba(30,26,22,.1),0 18px 46px rgba(30,26,22,.16);display:flex;align-items:center;justify-content:center;color:#a89a82;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+  .plate figcaption{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:.6rem}
+  .plate figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink)}
+
+  /* ── Section index (the ledger-lite list) ─────────────────────────────── */
+  .ix-stat{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:0 0 1.6rem}
+  .ix-stat b{color:var(--ink)}
+  table.ix{width:100%;border-collapse:collapse;font-size:1rem}
+  table.ix th{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:400;padding:0 1rem .6rem 0;border-bottom:1px solid var(--ink)}
+  table.ix td{padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:middle}
+  table.ix tr:hover td{background:color-mix(in srgb,var(--accent) 6%,transparent)}
+  table.ix .thumb{width:52px;height:52px;background:linear-gradient(135deg,#e8e0d4,#d8cdba);display:block}
+  table.ix .t{font-size:1.1rem}
+  table.ix tr:hover .t{color:var(--accent)}
+  table.ix .y,table.ix .m{font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+  .dot{display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--accent);margin-right:.4rem;vertical-align:middle}
+
+  /* ── Expanded colophon footer (shared, from homepage) ─────────────────── */
+  .foot{max-width:1180px;margin:5rem auto 0;padding:1.4rem 2.2rem 4rem;border-top:2px solid var(--ink);
+    font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;color:var(--muted)}
+  .foot a:hover{color:var(--accent)}
+  .foot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.8rem 1.4rem;padding-bottom:1.6rem}
+  .foot .top .mark{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:var(--ink);letter-spacing:0}
+  .foot .top .mark b{font-style:normal;font-weight:400}
+  .foot .top a:hover{color:var(--accent)}
+  .foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;border-top:1px solid var(--line);padding-top:1.6rem}
+  @media(max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
+  .foot .cols h5{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;font-weight:400}
+  .foot .cols p{font-size:.76rem;line-height:1.85;margin:0}
+  .foot .cols p a{display:block}
+  .foot .cols b{color:var(--ink);font-weight:600}
+  .foot .baseline{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;border-top:1px solid var(--line);margin-top:1.6rem;padding-top:1.1rem;font-size:.7rem;letter-spacing:.08em}
+
+  /* prototype scaffolding only */
+  .divider{max-width:1180px;margin:4rem auto 0;padding:0 2.2rem}
+  .divider span{display:block;border-top:1px dashed #c5bba9;padding-top:.6rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#a89a82}
+  .protohead{max-width:1180px;margin:0 auto;padding:1.4rem 2.2rem .4rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:#a89a82}
+</style>
+</head>
+<body>
+
+<div class="protohead">Prototype · new global chrome on two inner-page types</div>
+
+<!-- ════════════ PAGE TYPE A — a text page (About) ════════════ -->
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">
+      <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+      <span>Est. 2003 — Present</span>
+    </div>
+    <div class="mast-row">
+      <a class="wordmark" href="#">Kyle Parker Cunning<span class="amp">h</span>am</a>
+      <nav>
+        <a href="#">The Oeuvre</a>
+        <a href="#">Editions</a>
+        <a href="#">Projects</a>
+        <a href="#">Log</a>
+        <a class="here" href="#">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="crumb"><a href="#">Home</a> / About</p>
+  <header class="page-head">
+    <div class="label">The Artist</div>
+    <h1>About</h1>
+  </header>
+
+  <div class="prose">
+    <p>I paint the life I live. The work gathered on this site is the permanent
+    archive of more than twenty years of painting, printmaking, and installation
+    — kept in the present tense, organised by discipline and year.</p>
+
+    <figure class="plate">
+      <div class="ph">self portrait</div>
+      <figcaption><i>Self Portrait</i> · 2019</figcaption>
+    </figure>
+
+    <h2>Kyle Parker Cunningham <em>(American, b. 1983)</em></h2>
+    <p>Taos &amp; Truth or Consequences, New Mexico.</p>
+
+    <h2>Topics <em>(alphabetical)</em></h2>
+    <ul>
+      <li><b><a href="#">abstraction</a></b>: meditations in paint</li>
+      <li><b><a href="#">animism</a></b>: acknowledging animals have intelligence and souls</li>
+      <li><b><a href="#">biography</a></b>: third-person look at my own life</li>
+      <li><b><a href="#">portraiture</a></b>: exploring why I paint people</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: <a href="#">analogkyle@gmail.com</a><br>
+    Mastodon: <a href="#">merveilles.town/@kpc</a></p>
+  </div>
+</main>
+
+<div class="divider"><span>↓ same chrome · page type B — a section index ↓</span></div>
+
+<!-- ════════════ PAGE TYPE B — a section index (Painting) ════════════ -->
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">
+      <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+      <span>Est. 2003 — Present</span>
+    </div>
+    <div class="mast-row">
+      <a class="wordmark" href="#">Kyle Parker Cunning<span class="amp">h</span>am</a>
+      <nav>
+        <a class="here" href="#">The Oeuvre</a>
+        <a href="#">Editions</a>
+        <a href="#">Projects</a>
+        <a href="#">Log</a>
+        <a href="#">About</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <p class="crumb"><a href="#">Oeuvre</a> / Painting</p>
+  <header class="page-head">
+    <div class="label">The Working Index</div>
+    <h1>Painting</h1>
+  </header>
+
+  <p class="ix-stat"><b>48</b> works · 2003 — 2026 · oil, acrylic &amp; mixed media on panel and canvas</p>
+
+  <table class="ix">
+    <thead>
+      <tr><th></th><th>Work</th><th>Year</th><th>Medium</th><th>Status</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><span class="thumb"></span></td><td class="t">Butterfly Conundrum</td><td class="y">2015</td><td class="m">Oil on panel</td><td><span class="dot"></span>Archived</td></tr>
+      <tr><td><span class="thumb"></span></td><td class="t">Rhino Radar Arm Fauna</td><td class="y">2019 — 2024</td><td class="m">Acrylic on canvas</td><td><span class="dot"></span>Reworked</td></tr>
+      <tr><td><span class="thumb"></span></td><td class="t">Cydney and Val</td><td class="y">2021</td><td class="m">Oil on linen</td><td><span class="dot"></span>Archived</td></tr>
+      <tr><td><span class="thumb"></span></td><td class="t">Preservation Cactus</td><td class="y">2022</td><td class="m">Mixed media</td><td><span class="dot"></span>Archived</td></tr>
+    </tbody>
+  </table>
+</main>
+
+<!-- shared expanded footer -->
+<footer class="foot">
+  <div class="top">
+    <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+    <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+  </div>
+  <div class="cols">
+    <div>
+      <h5>The Studio</h5>
+      <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p><a href="#">analogkyle@gmail.com</a><a href="#">Mastodon</a><a href="#">About</a></p>
+    </div>
+    <div>
+      <h5>The Archive</h5>
+      <p><a href="#"><b>156</b> works catalogued</a><a href="#"><b>48</b> paintings</a><a href="#">Season <b>XII</b> live now</a></p>
+    </div>
+    <div>
+      <h5>This Page</h5>
+      <p>Updated <b>2026·06·23</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
+    </div>
+  </div>
+  <div class="baseline">
+    <span>&copy; 2026 Kyle Parker Cunningham — all works &amp; words</span>
+    <span>The homepage is a work; the archive keeps everything.</span>
+  </div>
+</footer>
+
+</body>
+</html>
