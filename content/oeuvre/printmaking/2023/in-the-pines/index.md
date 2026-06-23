@@ -3,7 +3,7 @@ title = "In The Pines"
 date = 2023-02-07
 category = "printmaking"
 year = 2023
-aliases = ["/oeuvre/printmaking/2023/in-the-pines/", "/in-the-pines/"]
+aliases = ["/oeuvre/printmaking/2023/in-the-pines/", "/in-the-pines/", "/oeuvre/2023/printmaking/in-the-pines/"]
 
 [extra]
 author = "claude"

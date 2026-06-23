@@ -3,7 +3,7 @@ title = "lunar lander"
 date = 2021-07-31
 category = "printmaking"
 year = 2021
-aliases = ["/oeuvre/printmaking/2021/lunar-lander/", "/lunar-lander/"]
+aliases = ["/oeuvre/printmaking/2021/lunar-lander/", "/lunar-lander/", "/oeuvre/2021/printmaking/lunar-lander/"]
 +++
 intaglio drypoint prints
 printed area approx 6 x 9 inches

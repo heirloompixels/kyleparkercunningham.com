@@ -3,7 +3,7 @@ title = "fall 2021"
 date = 2021-09-21
 category = "other"
 year = 2021
-aliases = ["/oeuvre/other/2021/fall-2021/", "/fall-2021/"]
+aliases = ["/oeuvre/other/2021/fall-2021/", "/fall-2021/", "/oeuvre/2021/now/fall-2021/"]
 +++
 A log book of November 2021.
 

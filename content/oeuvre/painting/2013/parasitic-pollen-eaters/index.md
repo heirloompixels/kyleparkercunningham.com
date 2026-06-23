@@ -3,7 +3,7 @@ title = "Parasitic Pollen Eaters"
 date = 2013-12-05
 category = "painting"
 year = 2013
-aliases = ["/oeuvre/painting/2013/parasitic-pollen-eaters/", "/parasitic-pollen-eaters/"]
+aliases = ["/oeuvre/painting/2013/parasitic-pollen-eaters/", "/parasitic-pollen-eaters/", "/oeuvre/2013/painting/parasitic-pollen-eaters/"]
 
 [extra]
 medium = "Oil on Linen"

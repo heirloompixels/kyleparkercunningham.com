@@ -3,7 +3,7 @@ title = "transplanter"
 date = 2021-10-24
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/transplanter/", "/transplanter/"]
+aliases = ["/oeuvre/painting/2021/transplanter/", "/transplanter/", "/oeuvre/2021/painting/transplanter/"]
 +++
 oil on linen
 16 x 20 inches

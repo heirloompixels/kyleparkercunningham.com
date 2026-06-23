@@ -3,7 +3,7 @@ title = "Atmospheric Whales"
 date = 2014-12-04
 category = "painting"
 year = 2014
-aliases = ["/atmospheric-whales/", "/oeuvre/painting/2014/atmospheric-whales/"]
+aliases = ["/atmospheric-whales/", "/oeuvre/painting/2014/atmospheric-whales/", "/oeuvre/2014/painting/atmospheric-whales/"]
 
 [extra]
 author = "claude"

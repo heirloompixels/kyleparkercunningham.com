@@ -3,7 +3,7 @@ title = "Hands"
 date = 2018-05-19
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/hands/", "/hands/"]
+aliases = ["/oeuvre/painting/2018/hands/", "/hands/", "/oeuvre/2018/painting/hands/"]
 +++
 Our hands allow us to be the most human we can.
 

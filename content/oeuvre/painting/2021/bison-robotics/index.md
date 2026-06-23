@@ -3,7 +3,7 @@ title = "bison robotics"
 date = 2021-04-08
 category = "painting"
 year = 2021
-aliases = ["/bison-robotics/", "/oeuvre/painting/2021/bison-robotics/"]
+aliases = ["/bison-robotics/", "/oeuvre/painting/2021/bison-robotics/", "/oeuvre/2021/painting/bison-robotics/"]
 
 [extra]
 author = "claude"

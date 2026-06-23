@@ -3,7 +3,7 @@ title = "Seven"
 date = 2018-03-16
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/seven/", "/seven/"]
+aliases = ["/oeuvre/painting/2018/seven/", "/seven/", "/oeuvre/2018/painting/seven/"]
 
 [extra]
 author = "claude"

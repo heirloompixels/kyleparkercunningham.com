@@ -3,7 +3,7 @@ title = "does math control nature?"
 date = 2024-07-29
 category = "painting"
 year = 2024
-aliases = ["/oeuvre/painting/2024/does-math-control-nature/", "/does-math-control-nature/"]
+aliases = ["/oeuvre/painting/2024/does-math-control-nature/", "/does-math-control-nature/", "/oeuvre/2024/painting/does-math-control-nature/"]
 +++
 An exploration of the fibonacci sequence in nature, questioning whether mathematical patterns are the foundation of natural forms or merely our way of understanding them.
 

@@ -3,7 +3,7 @@ title = "towers"
 date = 2024-07-29
 category = "painting"
 year = 2024
-aliases = ["/oeuvre/painting/2024/towers/", "/towers/"]
+aliases = ["/oeuvre/painting/2024/towers/", "/towers/", "/oeuvre/2024/painting/towers/"]
 +++
 Looking up at clouds, seeing their magnificent height and perspective. The sky becomes architecture, water vapor transformed into towers reaching toward infinity.
 

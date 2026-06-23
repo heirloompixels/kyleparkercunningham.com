@@ -3,7 +3,7 @@ title = "Solstice"
 date = 2020-12-21
 category = "installation"
 year = 2020
-aliases = ["/oeuvre/installation/2020/solstice/", "/solstice/"]
+aliases = ["/oeuvre/installation/2020/solstice/", "/solstice/", "/oeuvre/2020/installation/solstice/"]
 +++
 Solstice (15 paintings). Algebraic assimilation. Harvests and desert flora. Substantial expansion. Mythological Intonations. Spacial Atoms. A group of 15 paintings.
 

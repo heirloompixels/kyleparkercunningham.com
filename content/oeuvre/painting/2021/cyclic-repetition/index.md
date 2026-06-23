@@ -3,7 +3,7 @@ title = "cyclic repetition"
 date = 2021-12-18
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/cyclic-repetition/", "/cyclic-repetition/"]
+aliases = ["/oeuvre/painting/2021/cyclic-repetition/", "/cyclic-repetition/", "/oeuvre/2021/painting/cyclic-repetition/"]
 
 [extra]
 medium = "Oil on Panel"

@@ -3,7 +3,7 @@ title = "Octobat"
 date = 2018-05-18
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/octobat/", "/octobat/"]
+aliases = ["/oeuvre/painting/2018/octobat/", "/octobat/", "/oeuvre/2018/painting/octobat/"]
 +++
 Wild futures.
 

@@ -3,7 +3,7 @@ title = "molecule"
 date = 2021-10-24
 category = "sculpture"
 year = 2021
-aliases = ["/oeuvre/sculpture/2021/molecule/", "/molecule/"]
+aliases = ["/oeuvre/sculpture/2021/molecule/", "/molecule/", "/oeuvre/2021/sculpture/molecule/"]
 +++
 Colorado Marble. 2019–Present.
 

@@ -3,7 +3,7 @@ title = "tugboat whale sequoia"
 date = 2021-06-02
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/tugboat-whale-sequoia/"]
+aliases = ["/oeuvre/painting/2021/tugboat-whale-sequoia/", "/oeuvre/2021/painting/tugboat-whale-sequoia/"]
 
 [extra]
 author = "claude"

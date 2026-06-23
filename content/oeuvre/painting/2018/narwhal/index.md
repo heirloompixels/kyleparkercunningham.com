@@ -3,7 +3,7 @@ title = "Narwhal"
 date = 2018-05-19
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/narwhal/", "/narwhal/"]
+aliases = ["/oeuvre/painting/2018/narwhal/", "/narwhal/", "/oeuvre/2018/painting/narwhal/"]
 +++
 Mystery of the sea. Where do you go? Where do you see?
 

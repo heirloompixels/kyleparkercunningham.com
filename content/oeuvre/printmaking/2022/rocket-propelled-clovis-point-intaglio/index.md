@@ -3,7 +3,7 @@ title = "Rocket Propelled Clovis Point"
 date = 2022-04-05
 category = "printmaking"
 year = 2022
-aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/"]
+aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/", "/oeuvre/2022/printmaking/rocket-propelled-clovis-point-intaglio/"]
 
 [extra]
 author = "claude"

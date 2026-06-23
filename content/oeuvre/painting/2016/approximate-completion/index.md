@@ -3,7 +3,7 @@ title = "Approximate Completion"
 date = 2016-07-09
 category = "painting"
 year = 2016
-aliases = ["/approximate-completion/", "/oeuvre/painting/2016/approximate-completion/"]
+aliases = ["/approximate-completion/", "/oeuvre/painting/2016/approximate-completion/", "/oeuvre/2016/painting/approximate-completion/"]
 
 [extra]
 author = "claude"

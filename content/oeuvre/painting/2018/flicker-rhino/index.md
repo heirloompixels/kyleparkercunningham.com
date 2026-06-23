@@ -3,7 +3,7 @@ title = "Flicker Rhino"
 date = 2018-05-19
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/flicker-rhino/", "/flicker-rhino/"]
+aliases = ["/oeuvre/painting/2018/flicker-rhino/", "/flicker-rhino/", "/oeuvre/2018/painting/flicker-rhino/"]
 +++
 Airdrops in the night. This Rhino has it figured out. Friends with the Flicker feathers are affixed to a spider silk string. And upon the wind waves floats this Rhino of my dreams.
 

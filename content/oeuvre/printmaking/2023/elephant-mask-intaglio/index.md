@@ -3,7 +3,7 @@ title = "Elephant Mask"
 date = 2023-02-07
 category = "printmaking"
 year = 2023
-aliases = ["/oeuvre/printmaking/2023/elephant-mask-intaglio/"]
+aliases = ["/oeuvre/printmaking/2023/elephant-mask-intaglio/", "/oeuvre/2023/printmaking/elephant-mask-intaglio/"]
 
 [extra]
 author = "claude"

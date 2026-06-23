@@ -3,7 +3,7 @@ title = "Solar Ascension"
 date = 2020-05-02
 category = "painting"
 year = 2020
-aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/"]
+aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/", "/oeuvre/2020/painting/solar-ascension/"]
 
 [extra]
 author = "claude"

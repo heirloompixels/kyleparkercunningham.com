@@ -2,6 +2,7 @@
 title = "Crystal Tooth Whale"
 date = 2023-02-08
 template = "page.html"
+aliases = ["/oeuvre/2023/printmaking/crystal-tooth-whale-intaglio/"]
 +++
 
 {{ art_image(path="crystal-tooth-whale-intaglio/crystal-tooth-whale.jpeg", alt="Crystal Tooth Whale") }}

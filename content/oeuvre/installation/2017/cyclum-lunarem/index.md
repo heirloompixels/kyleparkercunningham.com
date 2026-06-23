@@ -3,7 +3,7 @@ title = "Cyclum Lunarem"
 date = 2017-09-21
 category = "installation"
 year = 2017
-aliases = ["/oeuvre/installation/2017/cyclum-lunarem/", "/cyclum-lunarem/"]
+aliases = ["/oeuvre/installation/2017/cyclum-lunarem/", "/cyclum-lunarem/", "/oeuvre/2017/installation/cyclum-lunarem/"]
 +++
 I painted the moons from an entire summer, starting on the summer solstice and completed on the autumnal equinox.
 

@@ -3,7 +3,7 @@ title = "Elephant Mask"
 date = 2018-10-22
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/elephant-mask/"]
+aliases = ["/oeuvre/painting/2018/elephant-mask/", "/oeuvre/2018/painting/elephant-mask/"]
 
 [extra]
 medium = "Oil on Linen"

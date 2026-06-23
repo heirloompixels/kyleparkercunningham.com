@@ -3,7 +3,7 @@ title = "Surviving the Asteroid"
 date = 2022-01-18
 category = "painting"
 year = 2022
-aliases = ["/oeuvre/painting/2022/surviving-the-asteroid/", "/surviving-the-asteroid/"]
+aliases = ["/oeuvre/painting/2022/surviving-the-asteroid/", "/surviving-the-asteroid/", "/oeuvre/2022/painting/surviving-the-asteroid/"]
 
 [extra]
 author = "claude"

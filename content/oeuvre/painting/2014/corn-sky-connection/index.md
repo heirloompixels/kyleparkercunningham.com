@@ -3,7 +3,7 @@ title = "Corn Sky Connection"
 date = 2014-12-05
 category = "painting"
 year = 2014
-aliases = ["/oeuvre/painting/2014/corn-sky-connection/", "/corn-sky-connection/"]
+aliases = ["/oeuvre/painting/2014/corn-sky-connection/", "/corn-sky-connection/", "/oeuvre/2014/painting/corn-sky-connection/"]
 
 [extra]
 medium = "Oil on Handwoven Linen"

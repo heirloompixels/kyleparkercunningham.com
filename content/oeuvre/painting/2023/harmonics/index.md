@@ -3,7 +3,7 @@ title = "Harmonics"
 date = 2023-12-04
 category = "painting"
 year = 2023
-aliases = ["/oeuvre/painting/2023/harmonics/", "/harmonics/"]
+aliases = ["/oeuvre/painting/2023/harmonics/", "/harmonics/", "/oeuvre/2023/painting/harmonics/"]
 
 [extra]
 author = "claude"

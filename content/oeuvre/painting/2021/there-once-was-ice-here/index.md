@@ -3,7 +3,7 @@ title = "there once was ice here"
 date = 2021-06-09
 category = "painting"
 year = 2021
-aliases = ["/oeuvre/painting/2021/there-once-was-ice-here/", "/there-once-was-ice-here/"]
+aliases = ["/oeuvre/painting/2021/there-once-was-ice-here/", "/there-once-was-ice-here/", "/oeuvre/2021/painting/there-once-was-ice-here/"]
 
 [extra]
 medium = "Oil on Linen"

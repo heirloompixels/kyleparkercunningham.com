@@ -3,7 +3,7 @@ title = "rocks glass"
 date = 2021-07-16
 category = "printmaking"
 year = 2021
-aliases = ["/oeuvre/printmaking/2021/rocks-glass/", "/rocks-glass/"]
+aliases = ["/oeuvre/printmaking/2021/rocks-glass/", "/rocks-glass/", "/oeuvre/2021/printmaking/rocks-glass/"]
 +++
 This particular glass was my grandfathers.
 He drank from it nightly a 7-up and vodka.

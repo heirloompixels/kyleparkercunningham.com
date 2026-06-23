@@ -3,7 +3,7 @@ title = "Saturday Evening Owls"
 date = 2022-05-03
 category = "painting"
 year = 2022
-aliases = ["/oeuvre/painting/2022/saturday-evening-owls/", "/saturday-evening-owls/"]
+aliases = ["/oeuvre/painting/2022/saturday-evening-owls/", "/saturday-evening-owls/", "/oeuvre/2022/painting/saturday-evening-owls/"]
 
 [extra]
 medium = "Acrylic, Latex & Paint marker on Canvas"

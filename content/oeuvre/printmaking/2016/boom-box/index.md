@@ -3,7 +3,7 @@ title = "Boom Box"
 date = 2016-04-23
 category = "printmaking"
 year = 2016
-aliases = ["/boom-box/", "/oeuvre/printmaking/2016/boom-box/"]
+aliases = ["/boom-box/", "/oeuvre/printmaking/2016/boom-box/", "/oeuvre/2016/printmaking/boom-box/"]
 
 [extra]
 author = "claude"

@@ -3,7 +3,7 @@ title = "Monsoon Bird"
 date = 2019-04-24
 category = "painting"
 year = 2019
-aliases = ["/oeuvre/painting/2019/monsoon-bird/", "/monsoon-bird/"]
+aliases = ["/oeuvre/painting/2019/monsoon-bird/", "/monsoon-bird/", "/oeuvre/2019/painting/monsoon-bird/"]
 
 [extra]
 author = "claude"

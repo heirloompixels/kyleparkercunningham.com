@@ -3,7 +3,7 @@ title = "Dodecahedron"
 date = 2013-12-05
 category = "painting"
 year = 2013
-aliases = ["/oeuvre/painting/2013/dodecahedron/", "/dodecahedron/"]
+aliases = ["/oeuvre/painting/2013/dodecahedron/", "/dodecahedron/", "/oeuvre/2013/painting/dodecahedron/"]
 
 [extra]
 medium = "Oil on Linen"

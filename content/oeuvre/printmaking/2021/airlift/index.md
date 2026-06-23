@@ -3,7 +3,7 @@ title = "airlift"
 date = 2021-07-18
 category = "printmaking"
 year = 2021
-aliases = ["/airlift/", "/oeuvre/printmaking/2021/airlift/"]
+aliases = ["/airlift/", "/oeuvre/printmaking/2021/airlift/", "/oeuvre/2021/printmaking/airlift/"]
 +++
 Future cranes crafted from recycled libraries.
 They soar up on thermals.

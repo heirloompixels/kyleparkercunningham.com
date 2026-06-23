@@ -3,7 +3,7 @@ title = "Tubed Pachyderm"
 date = 2023-02-07
 category = "printmaking"
 year = 2023
-aliases = ["/oeuvre/printmaking/2023/tubed-pachydeerm/"]
+aliases = ["/oeuvre/printmaking/2023/tubed-pachydeerm/", "/oeuvre/2023/printmaking/tubed-pachydeerm/"]
 
 [extra]
 author = "claude"

@@ -3,7 +3,7 @@ title = "Three Blue Corn"
 date = 2018-04-17
 category = "painting"
 year = 2018
-aliases = ["/oeuvre/painting/2018/three-blue-corn/", "/three-blue-corn/"]
+aliases = ["/oeuvre/painting/2018/three-blue-corn/", "/three-blue-corn/", "/oeuvre/2018/painting/three-blue-corn/"]
 
 [extra]
 author = "claude"

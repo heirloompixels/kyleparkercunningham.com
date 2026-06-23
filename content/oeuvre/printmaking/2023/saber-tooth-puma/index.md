@@ -3,7 +3,7 @@ title = "Saber Tooth Puma"
 date = 2023-02-07
 category = "printmaking"
 year = 2023
-aliases = ["/oeuvre/printmaking/2023/saber-tooth-puma/", "/saber-tooth-puma/"]
+aliases = ["/oeuvre/printmaking/2023/saber-tooth-puma/", "/saber-tooth-puma/", "/oeuvre/2023/printmaking/saber-tooth-puma/"]
 
 [extra]
 author = "claude"

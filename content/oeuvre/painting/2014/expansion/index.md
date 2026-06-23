@@ -3,7 +3,7 @@ title = "Expansion"
 date = 2014-06-09
 category = "painting"
 year = 2014
-aliases = ["/oeuvre/painting/2014/expansion/", "/expansion-drypoint/", "/expansion/"]
+aliases = ["/oeuvre/painting/2014/expansion/", "/expansion-drypoint/", "/expansion/", "/oeuvre/2014/painting/expansion/"]
 
 [extra]
 medium = "Oil on Handwoven Linen"

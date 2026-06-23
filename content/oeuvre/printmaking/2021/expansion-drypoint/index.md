@@ -3,7 +3,7 @@ title = "expansion drypoint"
 date = 2021-07-30
 category = "printmaking"
 year = 2021
-aliases = ["/oeuvre/printmaking/2021/expansion-drypoint/"]
+aliases = ["/oeuvre/printmaking/2021/expansion-drypoint/", "/oeuvre/2021/printmaking/expansion-drypoint/"]
 +++
 The mind shifts color pretending the future is a peeled orange imitating a banana.
 
