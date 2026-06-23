@@ -18,6 +18,7 @@
     <main>
         {% block content %}{% endblock %}
     </main>
+    {% block site_footer %}
     <footer class="site-footer">
         <nav class="footer-nav">
             <a href="{{ get_url(path='/colophon/') }}">colophon</a>
@@ -34,5 +35,6 @@
         <p>Kyle Parker Cunningham · Taos &amp; Truth or Consequences, NM · 2003–{{ now() | date(format="%Y") }} · analogkyle@gmail.com</p>
         <p>&copy; {{ now() | date(format="%Y") }} Kyle Parker Cunningham</p>
     </footer>
+    {% endblock %}
 </body>
 </html>
