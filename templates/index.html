@@ -23,10 +23,17 @@
     --h29-bg:#f7f4ef; --h29-ink:#1e1a16; --h29-muted:#6a6258; --h29-accent:#1f3f5b; --h29-line:#e2dbd1;
     --h29-serif:'Literata',Georgia,serif; --h29-sans:'IBM Plex Sans',sans-serif; --h29-mono:'Inconsolata',monospace;
   }
+  /* Neutralise the global stylesheet's wrappers so this bespoke layout owns
+     the page (the standalone mockup assumed a bare canvas). */
+  html{background:var(--h29-bg)}
   body{background:var(--h29-bg);color:var(--h29-ink);font-family:var(--h29-serif);line-height:1.5;-webkit-font-smoothing:antialiased}
-  main{display:block}
+  main{display:block;max-width:none;margin:0;padding:0;background:none}
   .h29{max-width:1180px;margin:0 auto;padding:3rem 2.2rem 0}
   .h29 a{color:inherit;text-decoration:none}
+  /* reset global element rules on this layout's own headings/paragraphs only
+     (leave the edition include's headings to editions.css) */
+  .h29-mast h1,.h29-col h2,.h29-deck,.h29-between{margin:0}
+  .h29-col h2{margin-bottom:.4rem;font-weight:400}
 
   .h29-mast{border-bottom:2px solid var(--h29-ink);padding-bottom:1.1rem}
   .h29-mast .kicker{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--h29-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
