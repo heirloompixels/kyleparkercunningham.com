@@ -1,6 +1,6 @@
 +++
 title = "Installation"
-template = "section.html"
+template = "oeuvre/discipline.html"
 page_template = "oeuvre/single.html"
 aliases = ["/oeuvre/installation/"]
 +++
