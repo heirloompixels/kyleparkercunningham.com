@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 19 — Split Folio (typographic + edition)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..700&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1b1916; --ink:#f3eee4; --muted:#9b9387; --accent:#e8b96a; --line:#322e28;
+    --serif:'Literata',Georgia,serif; --mono:'Inconsolata',monospace;
+  }
+  [data-theme="paper"]{--bg:#f4f0e8;--ink:#211d18;--muted:#6a6258;--accent:#7a2e1e;--line:#ddd5c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.4;transition:background .5s,color .5s;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+  .topbar .toggle{cursor:pointer;border:1px solid var(--line);padding:.25rem .6rem;border-radius:2px}
+  .topbar .toggle:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* SPLIT FOLIO: a bound spread. Left verso = identity, right recto = the live issue. */
+  .folio{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0}
+  @media(max-width:880px){.folio{grid-template-columns:1fr}}
+
+  .verso{padding:8vh 3rem 4vh;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line)}
+  @media(max-width:880px){.verso{border-right:none;border-bottom:1px solid var(--line)}}
+  .verso .top{font-family:var(--mono);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted)}
+  .verso h1{font-size:clamp(2.6rem,7vw,6rem);line-height:.92;letter-spacing:-.025em;margin:auto 0;cursor:default;user-select:none;font-variation-settings:'wght' var(--w,340),'opsz' 72}
+  .verso h1 em{font-style:italic}
+  .verso .disc{font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);line-height:2}
+  .verso .disc b{color:var(--ink);font-weight:500}
+
+  .recto{padding:8vh 3rem 4vh;display:flex;flex-direction:column;justify-content:space-between;background:color-mix(in srgb,var(--accent) 5%,transparent)}
+  .recto .tag{font-family:var(--mono);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);display:flex;justify-content:space-between}
+  .recto .body{margin:auto 0}
+  .recto .orn{font-size:1.5rem;color:var(--accent);margin-bottom:.9rem}
+  .recto h2{font-size:clamp(1.9rem,4.6vw,3.2rem);font-weight:300;font-style:italic;line-height:1.06}
+  .recto .deck{font-size:1.1rem;line-height:1.55;font-weight:300;margin-top:1.2rem;max-width:42ch;color:var(--ink)}
+  .recto .sign{font-family:var(--mono);font-size:.74rem;letter-spacing:.08em;color:var(--muted);margin-top:1.6rem;line-height:1.9}
+  .recto .enter{font-family:var(--mono);font-size:.76rem;letter-spacing:.22em;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:4px;align-self:flex-start}
+  .recto .enter:hover{color:var(--accent)}
+
+  .footrule{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:1.3rem 2.6rem;border-top:1px solid var(--line);font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .footrule .links{display:flex;gap:1.8rem;flex-wrap:wrap}
+  .footrule a:hover{color:var(--accent)}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--ink);color:var(--bg);padding:.45rem .6rem;border-radius:3px;opacity:.92;z-index:99}
+  .switch a{color:var(--bg);margin:0 .18rem}.switch a.cur{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="topbar"><span>The art of — Folio, Season XII</span><span class="toggle" id="toggle">Paper / Ink</span></div>
+
+<div class="folio">
+  <section class="verso">
+    <div class="top">Verso · the maker</div>
+    <h1 id="name">Kyle Parker <em>Cunningham</em></h1>
+    <div class="disc"><b>Painter</b> · <b>Printmaker</b><br>installations &amp; cinema<br>312 works catalogued · 2012—2026</div>
+  </section>
+
+  <section class="recto">
+    <div class="tag"><span>Recto · the current edition</span><span>☁ XII</span></div>
+    <div class="body">
+      <div class="orn">Season XII — Spring 2026</div>
+      <h2>The Memory of Atmosphere</h2>
+      <p class="deck">What the sky keeps and what it lets go. A season of weather paintings, a press run in the dark, and the slow work of photographing twenty years of missing panels.</p>
+      <div class="sign">Lives March — June 2026<br>— KPC, Truth or Consequences, May 2026</div>
+    </div>
+    <a class="enter">Open the edition →</a>
+  </section>
+</div>
+
+<div class="footrule">
+  <div class="links"><a>Oeuvre</a><a>Editions</a><a>Projects</a><a>Log</a><a>Manifest</a></div>
+  <span>analogkyle@gmail.com</span>
+</div>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="12-colophon.html">12</a><a href="13-lettering.html">13</a><a href="14-salon-wall.html">14</a><a href="15-system-archive.html">15</a><a href="16-filmstrip.html">16</a><a href="17-nameplate-issue.html">17</a><a href="18-the-issue.html">18</a><a href="19-split-folio.html" class="cur">19</a><a href="20-seasonal-index.html">20</a><a href="21-cover-plate.html">21</a></div>
+
+<script>
+  const name=document.getElementById('name');
+  name.addEventListener('pointermove',e=>{const r=name.getBoundingClientRect();const t=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width));name.style.setProperty('--w',Math.round(220+t*460))});
+  name.addEventListener('pointerleave',()=>name.style.setProperty('--w',340));
+  document.getElementById('toggle').addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='paper'?'':'paper'});
+</script>
+</body>
+</html>

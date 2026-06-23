@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 20 — Seasonal Index (typographic + edition)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..700&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1b1916; --ink:#f3eee4; --muted:#9b9387; --accent:#e8b96a; --line:#322e28;
+    --serif:'Literata',Georgia,serif; --mono:'Inconsolata',monospace;
+  }
+  [data-theme="paper"]{--bg:#f4f0e8;--ink:#211d18;--muted:#6a6258;--accent:#7a2e1e;--line:#ddd5c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.4;overflow-x:hidden;transition:background .5s,color .5s}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+  .topbar .toggle{cursor:pointer;border:1px solid var(--line);padding:.25rem .6rem;border-radius:2px}
+  .topbar .toggle:hover{color:var(--accent);border-color:var(--accent)}
+
+  .stage{padding:7vh 2.6rem 2vh}
+  .stage h1{font-size:clamp(2.2rem,8vw,6.5rem);line-height:.92;letter-spacing:-.025em;cursor:default;user-select:none;font-variation-settings:'wght' var(--w,340),'opsz' 72}
+  .stage h1 em{font-style:italic}
+  .stage .sub{font-family:var(--mono);font-size:.78rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted);margin-top:1.2rem}
+
+  /* SEASONAL INDEX: every front page the site has ever had, typeset as a register.
+     The live issue sits at the head, larger and accented. */
+  .register{margin-top:5vh;border-top:1px solid var(--line)}
+  .register a{display:grid;grid-template-columns:5.5rem 1fr auto;align-items:baseline;gap:1.6rem;padding:1.4rem 0;border-bottom:1px solid var(--line);transition:padding .25s,background .25s}
+  .register a:hover{background:color-mix(in srgb,var(--accent) 9%,transparent);padding-left:1.4rem}
+  .register .rom{font-family:var(--mono);font-size:1rem;letter-spacing:.1em;color:var(--muted)}
+  .register .ti{font-size:clamp(1.4rem,3.6vw,2.4rem);font-weight:300;letter-spacing:-.01em}
+  .register .ti .k{display:block;font-family:var(--mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.4rem}
+  .register a:hover .ti{font-style:italic;color:var(--accent)}
+  .register .life{font-family:var(--mono);font-size:.76rem;letter-spacing:.06em;color:var(--muted);text-align:right;white-space:nowrap}
+
+  /* live row */
+  .register a.live{padding:1.8rem 0}
+  .register a.live .rom{color:var(--accent);font-size:1.15rem}
+  .register a.live .ti{font-size:clamp(1.8rem,5vw,3.4rem);font-style:italic}
+  .register a.live .now{display:inline-block;font-family:var(--mono);font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--bg);background:var(--accent);padding:.15rem .5rem;border-radius:2px;vertical-align:.35em;margin-left:.7rem}
+
+  .colophon{display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;padding:3rem 2.6rem 5rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+  .colophon .links{display:flex;gap:1.8rem;flex-wrap:wrap}
+  .colophon a:hover{color:var(--accent)}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--ink);color:var(--bg);padding:.45rem .6rem;border-radius:3px;opacity:.92;z-index:99}
+  .switch a{color:var(--bg);margin:0 .18rem}.switch a.cur{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="topbar"><span>The archive of every front page this site has had</span><span class="toggle" id="toggle">Paper / Ink</span></div>
+
+<section class="stage">
+  <h1 id="name">Kyle Parker <em>Cunningham</em></h1>
+  <div class="sub">Editions — a seasonal register · XII issues since 2021</div>
+</section>
+
+<nav class="register">
+  <a class="live">
+    <span class="rom">☁ XII</span>
+    <span class="ti">The Memory of Atmosphere<span class="now">Live now</span><span class="k">Weather paintings · a night press · the missing-panel archive</span></span>
+    <span class="life">Spring 2026<br>Mar — Jun</span>
+  </a>
+  <a><span class="rom">XI</span><span class="ti">The Long Dark Press<span class="k">Drypoint, after hours</span></span><span class="life">Winter 2025</span></a>
+  <a><span class="rom">X</span><span class="ti">Field Notes for a Vanishing<span class="k">Installation &amp; document</span></span><span class="life">Autumn 2025</span></a>
+  <a><span class="rom">IX</span><span class="ti">Heat &amp; Pigment<span class="k">The summer paintings</span></span><span class="life">Summer 2025</span></a>
+  <a><span class="rom">VIII</span><span class="ti">A Geometry of Daily Life<span class="k">Small works on panel</span></span><span class="life">Spring 2025</span></a>
+  <a><span class="rom">VII</span><span class="ti">Once, Creatures Existed<span class="k">The installation year</span></span><span class="life">Winter 2024</span></a>
+</nav>
+
+<div class="colophon">
+  <div class="links"><a>Oeuvre</a><a>Editions</a><a>Projects</a><a>Log</a><a>Manifest</a></div>
+  <span>Truth or Consequences, NM · analogkyle@gmail.com</span>
+</div>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="12-colophon.html">12</a><a href="13-lettering.html">13</a><a href="14-salon-wall.html">14</a><a href="15-system-archive.html">15</a><a href="16-filmstrip.html">16</a><a href="17-nameplate-issue.html">17</a><a href="18-the-issue.html">18</a><a href="19-split-folio.html">19</a><a href="20-seasonal-index.html" class="cur">20</a><a href="21-cover-plate.html">21</a></div>
+
+<script>
+  const name=document.getElementById('name');
+  name.addEventListener('pointermove',e=>{const r=name.getBoundingClientRect();const t=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width));name.style.setProperty('--w',Math.round(220+t*460))});
+  name.addEventListener('pointerleave',()=>name.style.setProperty('--w',340));
+  document.getElementById('toggle').addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='paper'?'':'paper'});
+</script>
+</body>
+</html>
