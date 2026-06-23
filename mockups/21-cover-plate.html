@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 21 — Cover Plate (typographic + edition)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..700;1,7..72,200..700&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#1b1916; --ink:#f3eee4; --muted:#9b9387; --accent:#e8b96a; --line:#322e28;
+    --serif:'Literata',Georgia,serif; --mono:'Inconsolata',monospace;
+  }
+  [data-theme="paper"]{--bg:#f4f0e8;--ink:#211d18;--muted:#6a6258;--accent:#7a2e1e;--line:#ddd5c8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.4;transition:background .5s,color .5s;min-height:100vh;display:flex;flex-direction:column}
+  a{color:inherit;text-decoration:none}
+
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2.6rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--line)}
+  .topbar .toggle{cursor:pointer;border:1px solid var(--line);padding:.25rem .6rem;border-radius:2px}
+  .topbar .toggle:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* COVER PLATE: the season's cover painting is the field; the lettering is set over it.
+     Type stays the protagonist — the image is a tint behind the words. */
+  .cover{flex:1;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;min-height:78vh}
+  .cover .art{position:absolute;inset:0;z-index:0}
+  .cover .art img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+  .cover .scrim{position:absolute;inset:0;z-index:1;background:
+      linear-gradient(180deg,rgba(20,18,15,.42) 0%,rgba(20,18,15,.12) 38%,rgba(20,18,15,.72) 100%)}
+  [data-theme="paper"] .cover .scrim{background:linear-gradient(180deg,rgba(244,240,232,.55) 0%,rgba(244,240,232,.15) 40%,rgba(244,240,232,.82) 100%)}
+
+  .cover .top{position:absolute;top:1.6rem;left:2.6rem;right:2.6rem;z-index:2;display:flex;justify-content:space-between;font-family:var(--mono);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:#f3eee4;mix-blend-mode:difference}
+
+  .cover .plate{position:relative;z-index:2;padding:3rem 2.6rem 2.6rem;color:#f6f1e7}
+  [data-theme="paper"] .cover .plate{color:#211d18}
+  .cover h1{font-size:clamp(2.6rem,11vw,8.5rem);line-height:.9;letter-spacing:-.03em;cursor:default;user-select:none;
+    font-variation-settings:'wght' var(--w,360),'opsz' 72;text-shadow:0 2px 40px rgba(0,0,0,.35)}
+  [data-theme="paper"] .cover h1{text-shadow:none}
+  .cover h1 em{font-style:italic}
+  .cover .issue{margin-top:1.4rem;max-width:52ch}
+  .cover .issue .num{font-family:var(--mono);font-size:.74rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+  .cover .issue h2{font-size:clamp(1.4rem,3.4vw,2.2rem);font-weight:300;font-style:italic;margin:.5rem 0 .6rem}
+  .cover .issue .deck{font-size:1.02rem;font-weight:300;line-height:1.5;opacity:.92}
+  .cover .issue .enter{display:inline-block;margin-top:1.1rem;font-family:var(--mono);font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;border-bottom:1px solid var(--accent);padding-bottom:3px}
+
+  .undernav{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.3rem 2.6rem;font-family:var(--mono);font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line)}
+  .undernav .links{display:flex;gap:1.9rem;flex-wrap:wrap}
+  .undernav a:hover{color:var(--accent)}
+  .undernav a b{color:var(--ink);font-weight:400;margin-left:.35rem}
+
+  .switch{position:fixed;bottom:14px;right:14px;font-family:var(--mono);font-size:.72rem;background:var(--ink);color:var(--bg);padding:.45rem .6rem;border-radius:3px;opacity:.92;z-index:99}
+  .switch a{color:var(--bg);margin:0 .18rem}.switch a.cur{color:var(--accent)}
+</style>
+</head>
+<body>
+<div class="topbar"><span>Kyle Parker Cunningham</span><span class="toggle" id="toggle">Paper / Ink</span></div>
+
+<section class="cover">
+  <div class="art"><img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" alt="The River in the Sky — cover of Season XII"></div>
+  <div class="scrim"></div>
+
+  <div class="top"><span>Season XII — Spring 2026</span><span>☁ The cover · The River in the Sky</span></div>
+
+  <div class="plate">
+    <h1 id="name">Kyle Parker <em>Cunningham</em></h1>
+    <div class="issue">
+      <div class="num">The current edition</div>
+      <h2>The Memory of Atmosphere</h2>
+      <p class="deck">What the sky keeps and what it lets go. A season of weather paintings, a press run in the dark, and the slow work of photographing twenty years of missing panels.</p>
+      <a class="enter">Enter the edition →</a>
+    </div>
+  </div>
+</section>
+
+<nav class="undernav">
+  <div class="links"><a>The Oeuvre<b>312</b></a><a>Editions<b>XII</b></a><a>Projects<b>28</b></a><a>Log<b>90</b></a><a>Manifest<b>↗</b></a></div>
+  <span>Past front pages →</span>
+</nav>
+
+<div class="switch"><a href="11-masthead-index.html">11</a><a href="12-colophon.html">12</a><a href="13-lettering.html">13</a><a href="14-salon-wall.html">14</a><a href="15-system-archive.html">15</a><a href="16-filmstrip.html">16</a><a href="17-nameplate-issue.html">17</a><a href="18-the-issue.html">18</a><a href="19-split-folio.html">19</a><a href="20-seasonal-index.html">20</a><a href="21-cover-plate.html" class="cur">21</a></div>
+
+<script>
+  const name=document.getElementById('name');
+  name.addEventListener('pointermove',e=>{const r=name.getBoundingClientRect();const t=Math.min(1,Math.max(0,(e.clientX-r.left)/r.width));name.style.setProperty('--w',Math.round(240+t*420))});
+  name.addEventListener('pointerleave',()=>name.style.setProperty('--w',360));
+  document.getElementById('toggle').addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='paper'?'':'paper'});
+</script>
+</body>
+</html>
