@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} - {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = page.extra.mast_active | default(value="") %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
 {% block content %}
-<h1>{{ page.title }}</h1>
-{{ page.content | safe }}
+<article class="page-doc">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / {{ page.title }}</nav>
+  <header class="page-head">
+    {% if page.extra.label %}<div class="label">{{ page.extra.label }}</div>{% endif %}
+    <h1>{{ page.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ page.content | safe }}
+  </div>
+</article>
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
 {% endblock %}

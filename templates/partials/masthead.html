@@ -1,0 +1,26 @@
+{# Compact running masthead for inner pages. Optional `mast_active` variable
+   (one of: oeuvre, editions, projects, log, about) underlines the current nav item. #}
+{% set act = mast_active | default(value="") %}
+<header class="mast">
+  <div class="mast-inner">
+    <div class="kicker">
+      <span>
+        <a href="{{ get_url(path='/oeuvre/painting/') }}">Painting</a> ·
+        <a href="{{ get_url(path='/oeuvre/printmaking/') }}">Printmaking</a> ·
+        <a href="{{ get_url(path='/oeuvre/installation/') }}">Installation</a> ·
+        <a href="{{ get_url(path='/cinema/') }}">Cinema</a>
+      </span>
+      <span>Est. 2003 — Present</span>
+    </div>
+    <div class="mast-row">
+      <a class="wordmark" href="{{ get_url(path='/') }}">Kyle Parker Cunning<span class="amp">h</span>am</a>
+      <nav>
+        <a class="{% if act == 'oeuvre' %}here{% endif %}" href="{{ get_url(path='/oeuvre/') }}">The Oeuvre</a>
+        <a class="{% if act == 'editions' %}here{% endif %}" href="{{ get_url(path='/editions/') }}">Editions</a>
+        <a class="{% if act == 'projects' %}here{% endif %}" href="{{ get_url(path='/projects/') }}">Projects</a>
+        <a class="{% if act == 'log' %}here{% endif %}" href="{{ get_url(path='/log/') }}">Log</a>
+        <a class="{% if act == 'about' %}here{% endif %}" href="{{ get_url(path='/about/') }}">About</a>
+      </nav>
+    </div>
+  </div>
+</header>

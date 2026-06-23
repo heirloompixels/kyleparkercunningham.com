@@ -1,6 +1,9 @@
 +++
 title = "Colophon"
 template = "page.html"
+
+[extra]
+label = "How This Site Is Made"
 +++
 
 This site is a long‑term archive built to outlast trends. It is a static site with minimal dependencies, designed for clarity, speed, and future portability.

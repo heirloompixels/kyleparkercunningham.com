@@ -1,0 +1,50 @@
+{# Expanded colophon footer, shared across inner pages. Self-contained:
+   computes the catalogue counts and the live edition. #}
+{% set editions = get_section(path="editions/_index.md") %}
+{% set live = editions.pages | filter(attribute="extra.status", value="live") %}
+{% set painting = get_section(path="oeuvre/painting/_index.md") %}
+{% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
+{% set installation = get_section(path="oeuvre/installation/_index.md") %}
+{% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
+{% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% set other = get_section(path="oeuvre/other/_index.md") %}
+{% set n_pt = painting.pages | length %}
+{% set n_pr = printmaking.pages | length %}
+{% set n_in = installation.pages | length %}
+{% set n_sc = sculpture.pages | length %}
+{% set n_ex = exhibitions.pages | length %}
+{% set n_ot = other.pages | length %}
+{% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ot %}
+<footer class="foot">
+  <div class="top">
+    <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+    <span>
+      <a href="{{ get_url(path='/oeuvre/painting/') }}">Painting</a> ·
+      <a href="{{ get_url(path='/oeuvre/printmaking/') }}">Printmaking</a> ·
+      <a href="{{ get_url(path='/oeuvre/installation/') }}">Installation</a> ·
+      <a href="{{ get_url(path='/cinema/') }}">Cinema</a>
+    </span>
+  </div>
+  <div class="cols">
+    <div>
+      <h5>The Studio</h5>
+      <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
+    </div>
+    <div>
+      <h5>Contact</h5>
+      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a></p>
+    </div>
+    <div>
+      <h5>The Archive</h5>
+      <p><a href="{{ get_url(path='/oeuvre/') }}"><b>{{ works_count }}</b> works catalogued</a><a href="{{ get_url(path='/oeuvre/painting/') }}"><b>{{ n_pt }}</b> paintings</a>{% if live | length > 0 %}{% set ed = live | first %}<a href="{{ ed.permalink }}">Season <b>{{ ed.extra.numeral }}</b> live now</a>{% else %}<a href="{{ get_url(path='/editions/') }}">Between seasons</a>{% endif %}</p>
+    </div>
+    <div>
+      <h5>This Page</h5>
+      <p>Updated <b>{{ now() | date(format="%Y·%m·%d") }}</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
+    </div>
+  </div>
+  <div class="baseline">
+    <span>&copy; {{ now() | date(format="%Y") }} Kyle Parker Cunningham — all works &amp; words</span>
+    <span>The homepage is a work; the archive keeps everything.</span>
+  </div>
+</footer>
