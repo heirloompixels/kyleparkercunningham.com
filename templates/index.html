@@ -29,6 +29,7 @@
 
   .h29-mast{border-bottom:2px solid var(--h29-ink);padding-bottom:1.1rem}
   .h29-mast .kicker{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.34em;text-transform:uppercase;color:var(--h29-muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem;margin-bottom:1.4rem}
+  .h29-mast .kicker a:hover{color:var(--h29-accent)}
   .h29-mast h1{font-weight:300;font-size:clamp(2.4rem,9vw,8.4rem);line-height:.92;letter-spacing:-.02em}
   .h29-mast h1 .amp{font-style:italic;font-weight:400}
   .h29-mast .sub{font-family:var(--h29-sans);font-size:.86rem;letter-spacing:.16em;text-transform:uppercase;color:var(--h29-muted);margin-top:1rem;display:flex;gap:2.2rem;flex-wrap:wrap}
@@ -125,6 +126,7 @@
   .h29-foot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.8rem 1.4rem;padding-bottom:1.6rem}
   .h29-foot .top .mark{font-family:var(--h29-serif);font-size:1.15rem;font-style:italic;color:var(--h29-ink);letter-spacing:0}
   .h29-foot .top .mark b{font-style:normal;font-weight:400}
+  .h29-foot .top a:hover{color:var(--h29-accent)}
   .h29-foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.6rem;border-top:1px solid var(--h29-line);padding-top:1.6rem}
   @media(max-width:760px){.h29-foot .cols{grid-template-columns:1fr 1fr}}
   @media(max-width:440px){.h29-foot .cols{grid-template-columns:1fr}}
@@ -169,7 +171,7 @@
 
 <div class="h29">
   <header class="h29-mast">
-    <div class="kicker"><span>Painting · Printmaking · Installation</span><span>Est. 2003 — Present</span></div>
+    <div class="kicker"><span><a href="{{ get_url(path='/oeuvre/painting/') }}">Painting</a> · <a href="{{ get_url(path='/oeuvre/printmaking/') }}">Printmaking</a> · <a href="{{ get_url(path='/oeuvre/installation/') }}">Installation</a></span><span>Est. 2003 — Present</span></div>
     <h1>Kyle&nbsp;Parker<br>Cunning<span class="amp">h</span>am</h1>
     <div class="sub">
       <a href="{{ get_url(path='/oeuvre/') }}">The Oeuvre</a>
@@ -279,7 +281,7 @@
 <footer class="h29-foot">
   <div class="top">
     <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
-    <span>Painting · Printmaking · Installation · Cinema</span>
+    <span><a href="{{ get_url(path='/oeuvre/painting/') }}">Painting</a> · <a href="{{ get_url(path='/oeuvre/printmaking/') }}">Printmaking</a> · <a href="{{ get_url(path='/oeuvre/installation/') }}">Installation</a> · <a href="{{ get_url(path='/cinema/') }}">Cinema</a></span>
   </div>
   <div class="cols">
     <div>
@@ -307,7 +309,7 @@
       {% set n_ex = exhibitions.pages | length %}
       {% set n_ot = other.pages | length %}
       {% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ot %}
-      <p><b>{{ works_count }}</b> works catalogued<br><b>{{ n_pt }}</b> paintings<br>{% if live | length > 0 %}{% set ed = live | first %}Season <b>{{ ed.extra.numeral }}</b> live now{% else %}Between seasons{% endif %}</p>
+      <p><a href="{{ get_url(path='/oeuvre/') }}"><b>{{ works_count }}</b> works catalogued</a><br><a href="{{ get_url(path='/oeuvre/painting/') }}"><b>{{ n_pt }}</b> paintings</a><br>{% if live | length > 0 %}{% set ed = live | first %}<a href="{{ ed.permalink }}">Season <b>{{ ed.extra.numeral }}</b> live now</a>{% else %}<a href="{{ get_url(path='/editions/') }}">Between seasons</a>{% endif %}</p>
     </div>
     <div>
       <h5>This Page</h5>
