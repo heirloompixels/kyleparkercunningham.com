@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://brain.kyleparkercunningham.com"
+base_url = "https://kyleparkercunningham.com"
 
 # The site title and description; used in feeds by default.
 title = "The art of Kyle Parker Cunningham"
@@ -15,10 +15,9 @@ compile_sass = true
 build_search_index = false
 
 # The taxonomies to be rendered for the site and their configuration.
+# Only `topics` is used (by the notes section); the others were declared but
+# never populated, so they produced empty index pages.
 taxonomies = [
-  {name = "categories", feed = true},
-  {name = "years", feed = true},
-  {name = "medium", feed = true},
   {name = "topics", feed = true},
 ]
 
