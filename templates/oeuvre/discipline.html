@@ -1,5 +1,7 @@
+{# A single-discipline view of the working index: same ledger as /oeuvre/,
+   filtered to this discipline's works, with the active filter chip lit. #}
 {% extends "base.html" %}
-{% block title %}{{ section.title }}{% endblock %}
+{% block title %}{{ section.title }} — {{ config.title }}{% endblock %}
 
 {% block site_header %}
   {% set mast_active = "oeuvre" %}
@@ -11,6 +13,12 @@
 {% endblock %}
 
 {% block content %}
+{% set parts = section.path | split(pat="/") %}
+{% set disc = parts[2] %}
+{% set works = section.pages %}
+{% set n_total = works | length %}
+
+{% set oeuvre = get_section(path="oeuvre/_index.md") %}
 {% set painting = get_section(path="oeuvre/painting/_index.md") %}
 {% set printmaking = get_section(path="oeuvre/printmaking/_index.md") %}
 {% set installation = get_section(path="oeuvre/installation/_index.md") %}
@@ -18,41 +26,28 @@
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 
-{% set works = painting.pages
-  | concat(with=printmaking.pages)
-  | concat(with=installation.pages)
-  | concat(with=sculpture.pages)
-  | concat(with=exhibitions.pages)
-  | concat(with=other.pages)
-%}
-{% set n_painting = painting.pages | length %}
-{% set n_printmaking = printmaking.pages | length %}
-{% set n_installation = installation.pages | length %}
-{% set n_sculpture = sculpture.pages | length %}
-{% set n_exhibitions = exhibitions.pages | length %}
-{% set n_other = other.pages | length %}
-{% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_other %}
-
 <header class="ledger-head">
   <h1>{{ section.title }} <span class="ledger-sub">— the working index</span></h1>
 </header>
 
 <div class="ledger-statline">
-  <span><b>{{ n_total }}</b> works catalogued</span>
-  <span><b>{{ n_painting }}</b> paintings</span>
-  <span><b>{{ n_printmaking }}</b> prints</span>
-  <span><b>{{ n_installation }}</b> installations</span>
-  <span><b>{{ n_sculpture + n_exhibitions + n_other }}</b> other</span>
+  <span><b>{{ n_total }}</b> work{{ n_total | pluralize }} in {{ section.title | lower }}</span>
+  {% if works | length > 0 %}
+    {% set first = works | sort(attribute="date") | first %}
+    {% set last = works | sort(attribute="date") | last %}
+    <span>{{ first.year }} — {{ last.year }}</span>
+  {% endif %}
+  <span><a href="{{ oeuvre.permalink }}">← all disciplines</a></span>
 </div>
 
 <div class="ledger-filters">
-  <span class="chip on">All</span>
-  <a class="chip" href="{{ painting.permalink }}">Painting</a>
-  <a class="chip" href="{{ printmaking.permalink }}">Printmaking</a>
-  <a class="chip" href="{{ installation.permalink }}">Installation</a>
-  <a class="chip" href="{{ sculpture.permalink }}">Sculpture</a>
-  <a class="chip" href="{{ exhibitions.permalink }}">Exhibitions</a>
-  <a class="chip" href="{{ other.permalink }}">Other</a>
+  <a class="chip" href="{{ oeuvre.permalink }}">All</a>
+  <a class="chip {% if disc == 'painting' %}on{% endif %}" href="{{ painting.permalink }}">Painting</a>
+  <a class="chip {% if disc == 'printmaking' %}on{% endif %}" href="{{ printmaking.permalink }}">Printmaking</a>
+  <a class="chip {% if disc == 'installation' %}on{% endif %}" href="{{ installation.permalink }}">Installation</a>
+  <a class="chip {% if disc == 'sculpture' %}on{% endif %}" href="{{ sculpture.permalink }}">Sculpture</a>
+  <a class="chip {% if disc == 'exhibitions' %}on{% endif %}" href="{{ exhibitions.permalink }}">Exhibitions</a>
+  <a class="chip {% if disc == 'other' %}on{% endif %}" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
 
@@ -74,7 +69,6 @@
         <tr class="yearband"><td colspan="5">{{ p.year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
         {% set_global prev_year = p.year %}
       {% endif %}
-      {% set parts = p.path | split(pat="/") %}
       <tr>
         <td class="c-thumb">
           {% set thumb = p.assets | first %}
@@ -86,7 +80,7 @@
           {% endif %}
         </td>
         <td class="c-title"><a href="{{ p.permalink }}">{{ p.title }}</a></td>
-        <td class="c-disc">{{ parts[2] }}</td>
+        <td class="c-disc">{{ disc }}</td>
         <td class="c-med">{{ p.extra.medium | default(value="—") }}</td>
         <td class="c-st"><span class="st st-{{ p.extra.status | default(value='unrecorded') | slugify }}">{{ p.extra.status | default(value="unrecorded") }}</span></td>
       </tr>

@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 {% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = "oeuvre" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
 {% block content %}
 {% set parts = page.path | split(pat="/") %}
 {% set discipline = parts[2] %}
