@@ -12,7 +12,6 @@
 {% set live = editions.pages | filter(attribute="extra.status", value="live") %}
 {% if live | length > 0 %}
 {% set edition = live | first %}
-<link rel="stylesheet" href="{{ get_url(path='/editions.css') }}">
 {% for asset in edition.assets %}{% if asset is ending_with("edition.css") %}
 <link rel="stylesheet" href="{{ get_url(path=asset) }}">
 {% endif %}{% endfor %}
@@ -37,9 +36,64 @@
 
   .h29-deck{max-width:46ch;margin:2.6rem 0 3.4rem;font-size:1.15rem;font-style:italic;color:#2c2620;line-height:1.55}
 
-  /* The live edition is rendered by editions/issue.html with its own styles.
-     Give it room to sit between the masthead and the catalogue. */
-  .h29-edition{margin:0 0 1rem}
+  /* ── The current edition, rendered inline (mockup 29 .issue) ──────────── */
+  .h29 .ed-head{margin-top:3.8rem;padding-top:1.6rem;border-top:2px solid var(--h29-ink);display:grid;grid-template-columns:auto 1fr;gap:2.4rem;align-items:center}
+  @media(max-width:620px){.h29 .ed-head{grid-template-columns:1fr;gap:1rem}}
+  .h29 .ed-head .roman{font-weight:300;font-size:clamp(4.5rem,13vw,9rem);line-height:.82;letter-spacing:-.03em}
+  .h29 .ed-head .roman small{display:block;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--h29-accent);margin-top:.6rem;font-weight:400}
+  .h29 .ed-head .label{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--h29-accent)}
+  .h29 .ed-head h3{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
+  .h29 .ed-head .lifespan{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.08em;color:var(--h29-muted)}
+
+  .h29 .issue{margin-top:3rem}
+  .h29 .issue-deck{max-width:34ch;margin:0 auto 2.6rem;text-align:center;font-size:1.3rem;font-style:italic;line-height:1.5;color:#2c2620}
+  .h29 .issue .dateline{text-align:center;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--h29-muted);margin-top:-1.8rem;margin-bottom:2.4rem}
+  .h29 .ed-orn{text-align:center;color:var(--h29-accent);font-size:1.4rem;margin:0 0 2.6rem;letter-spacing:.5em}
+  .h29 .issue p{max-width:34em;margin:0 auto 1.4rem;font-size:1.12rem;line-height:1.7}
+  .h29 .ed-marginalia{display:block;text-align:center;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--h29-accent);margin:2.8rem auto}
+
+  .h29 .ed-plate{max-width:920px;margin:2.8rem auto;width:auto;padding:0}
+  .h29 .ed-plate img{width:100%;height:auto;max-height:none;display:block;box-shadow:0 1px 2px rgba(30,26,22,.1),0 18px 46px rgba(30,26,22,.16);margin:0}
+  .h29 .ed-plate figcaption{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.04em;color:var(--h29-muted);margin-top:.7rem;text-align:center}
+  .h29 .ed-plate figcaption i{font-family:var(--h29-serif);font-style:italic;color:var(--h29-ink)}
+
+  .h29 .ed-diptych{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;max-width:1100px;margin:2.8rem auto;width:auto;padding:0}
+  @media(max-width:620px){.h29 .ed-diptych{grid-template-columns:1fr}}
+  .h29 .ed-diptych figure{margin:0}
+  .h29 .ed-diptych img{width:100%;height:auto;display:block;box-shadow:0 1px 2px rgba(30,26,22,.1),0 14px 36px rgba(30,26,22,.14)}
+  .h29 .ed-diptych figcaption{font-family:var(--h29-mono);font-size:.7rem;color:var(--h29-muted);margin-top:.6rem}
+  .h29 .ed-diptych figcaption i{font-family:var(--h29-serif);font-style:italic;color:var(--h29-ink)}
+
+  .h29 .ed-wallquote{max-width:24ch;margin:3.4rem auto;text-align:center;padding:0}
+  .h29 .ed-wallquote p{font-size:clamp(1.6rem,4vw,2.4rem);font-style:italic;font-weight:300;line-height:1.25;max-width:none}
+  .h29 .ed-wallquote span{display:block;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:var(--h29-muted);margin-top:1rem}
+
+  .h29 .ed-interlude{margin:3.6rem auto 0;max-width:1100px;border-top:1px solid var(--h29-line);border-bottom:1px solid var(--h29-line);padding:2.6rem 0;background:none;width:auto}
+  .h29 .ed-interlude-inner{display:grid;grid-template-columns:1fr 1fr;gap:2.4rem;align-items:center;max-width:none;margin:0}
+  @media(max-width:680px){.h29 .ed-interlude-inner{grid-template-columns:1fr}}
+  .h29 .ed-interlude img{width:100%;height:auto;display:block;box-shadow:0 12px 32px rgba(30,26,22,.16)}
+  .h29 .ed-interlude .ed-kicker{font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--h29-accent)}
+  .h29 .ed-interlude h2{font-weight:300;font-style:italic;font-size:clamp(1.5rem,3.4vw,2.2rem);line-height:1.1;margin:.5rem 0 1rem;color:var(--h29-ink)}
+  .h29 .ed-interlude p{max-width:none;margin:0 0 1rem;font-size:1rem;color:var(--h29-muted)}
+  .h29 .ed-interlude blockquote{font-family:var(--h29-mono);font-size:.78rem;color:var(--h29-muted);line-height:2;border-left:2px solid var(--h29-line);padding-left:1rem;margin-top:1.2rem}
+  .h29 .ed-interlude blockquote b{color:var(--h29-ink);font-weight:600}
+
+  .h29 .ed-doors{margin-top:4rem}
+  .h29 .ed-doors h4{font-family:var(--h29-mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--h29-accent);text-align:center;margin-bottom:1.6rem}
+  .h29 .ed-doorgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+  @media(max-width:680px){.h29 .ed-doorgrid{grid-template-columns:1fr}}
+  .h29 .ed-door{border:1px solid var(--h29-line);padding:1.6rem;background:#fbf9f4;transition:border-color .2s}
+  .h29 .ed-door:hover{border-color:var(--h29-accent)}
+  .h29 .ed-door .n{font-size:2.4rem;font-weight:300;line-height:1}
+  .h29 .ed-door .t{font-family:var(--h29-mono);font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--h29-accent);margin:.7rem 0 .5rem}
+  .h29 .ed-door .d{font-family:var(--h29-sans);font-size:.9rem;color:var(--h29-muted);line-height:1.5}
+
+  .h29 .ed-colophon{max-width:34em;margin:4rem auto 0;text-align:center}
+  .h29 .ed-colophon .k{font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;color:var(--h29-accent);margin-bottom:1rem}
+  .h29 .ed-colophon p{font-size:1rem;color:var(--h29-muted);line-height:1.65;max-width:none}
+  .h29 .ed-colophon .sig{font-style:italic;color:var(--h29-ink);margin-top:1.2rem}
+  .h29 .ed-colophon .shelf{display:inline-block;margin-top:1.6rem;font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;border-bottom:1px solid var(--h29-accent);padding-bottom:2px}
+  .h29 .ed-colophon .shelf:hover{color:var(--h29-accent)}
 
   /* Catalogue index of recent work */
   .h29-index{margin-top:3.4rem;padding-top:1.6rem;border-top:2px solid var(--h29-ink)}
@@ -130,9 +184,38 @@
 
   {% if live | length > 0 %}
     {% set edition = live | first %}
-    <div class="h29-edition">
-      {% include "editions/issue.html" %}
+    <div class="ed-head">
+      <div class="roman">{{ edition.extra.numeral }}<small>{{ edition.extra.ornament }} {{ edition.extra.cover_tag | split(pat="— ") | last }}</small></div>
+      <div>
+        <div class="label">The Current Edition</div>
+        <h3>{{ edition.title }}</h3>
+        <div class="lifespan">The Front Page · {% if edition.extra.kind == "season" %}Season{% else %}Edition{% endif %} {{ edition.extra.numeral }} · {{ edition.extra.lifespan }}</div>
+      </div>
     </div>
+
+    <article class="issue">
+      {% if edition.extra.deck %}<p class="issue-deck">{{ edition.extra.deck }}</p>{% endif %}
+      {% if edition.extra.dateline %}<div class="dateline">{{ edition.extra.dateline }}</div>{% endif %}
+      {% if edition.extra.ornament %}<div class="ed-orn">{{ edition.extra.ornament }}</div>{% endif %}
+
+      {{ edition.content | safe }}
+
+      <section class="ed-doors">
+        <h4>Step deeper</h4>
+        <div class="ed-doorgrid">
+          <a class="ed-door" href="{{ get_url(path='/oeuvre/') }}"><div class="n">{{ works_count }}</div><div class="t">The Oeuvre</div><div class="d">Every work, catalogued — paintings, prints, installations, 2003 to now.</div></a>
+          <a class="ed-door" href="{{ get_url(path='/projects/') }}"><div class="n">{{ projects.pages | length }}</div><div class="t">Projects</div><div class="d">The long arcs — ongoing, researching, and complete.</div></a>
+          <a class="ed-door" href="{{ get_url(path='/log/') }}"><div class="n">∞</div><div class="t">The Log</div><div class="d">Production notes from the studio, as they happen.</div></a>
+        </div>
+      </section>
+
+      <footer class="ed-colophon">
+        <div class="k">About this front page</div>
+        <p>This page is {% if edition.extra.kind == "season" %}season{% else %}edition{% endif %} {{ edition.extra.numeral }} of a living homepage. Each season the front of this site is composed anew — around whatever the studio is actually doing — and when the season turns, this page retires, whole and unchanged, to the permanent archive. The homepage is a work; the archive keeps everything.</p>
+        {% if edition.extra.sign_off %}<div class="sig">{{ edition.extra.sign_off }}</div>{% endif %}
+        <a class="shelf" href="{{ get_url(path='/editions/') }}">Browse the past editions →</a>
+      </footer>
+    </article>
   {% else %}
     <p class="h29-between">Between seasons — the front page is being composed anew. Meanwhile, the archive below keeps everything.</p>
   {% endif %}
