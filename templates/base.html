@@ -21,6 +21,8 @@
     {% if current_url %}<meta property="og:url" content="{{ current_url | safe }}">{% endif %}
     <meta name="twitter:card" content="summary">
 
+    <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ get_url(path='/rss.xml') }}">
+
     <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path='/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path='/favicon-16x16.png') }}">
     <link rel="shortcut icon" href="{{ get_url(path='/favicon.ico') }}">

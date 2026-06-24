@@ -23,6 +23,16 @@ The live site has: per-page `<title>`, meta `description`, `author`, `robots`,
 the sitemap). The homepage `og:title` uses the site title (the root
 `_index.md` title was set to the full name for this).
 
+## RSS feed
+
+`generate_feeds = true` + `feed_filenames = ["rss.xml"]` in `config.toml`
+produce a site-wide feed at **`/rss.xml`** (Zola's built-in template), newest
+first — it mirrors the old Ghost site where each work was a post. Autodiscovery
+`<link rel="alternate" type="application/rss+xml">` is in `base.html`, and the
+footer Contact column links it. The old Ghost feed lived at `/rss/`; readers on
+that URL will need to re-point (it wasn't in the sitemap). To scope the feed to
+just the Log later, move `generate_feeds` to `content/log/_index.md` instead.
+
 ## Legacy-URL redirects (the important part)
 
 The old Ghost site exposed **218 URLs** (sitemap: 18 pages, 156 posts, 2
