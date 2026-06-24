@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/printmaking/2022/ghost-thugs/", "/ghost-thugs/", "/oeuvre/2022/printmaking/ghost-thugs/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 There will always be individuals being individuals.

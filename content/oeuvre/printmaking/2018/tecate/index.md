@@ -6,6 +6,8 @@ year = 2018
 aliases = ["/oeuvre/printmaking/2018/tecate/", "/tecate/", "/oeuvre/2018/printmaking/tecate/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 A Tecate can, slightly crushed, hand colored red. The desert has its monuments and its sacraments; this one is both. Still life raises the authority of simple, mundane objects — sometimes the object is a cold beer at the end of a hot day.

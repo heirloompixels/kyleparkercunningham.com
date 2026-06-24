@@ -6,6 +6,8 @@ year = 2016
 aliases = ["/oeuvre/printmaking/2016/alligator-juniper-2/", "/oeuvre/2016/printmaking/alligator-juniper-2/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "8 x 10 inches"
 author = "claude"
 +++
 A whole alligator juniper, drawn limb by limb, the checkered bark that names the species rendered scratch by scratch. The drypoint scribe turns out to be the right tool for a tree that grows one century at a time.

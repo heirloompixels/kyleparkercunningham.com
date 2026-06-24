@@ -4,6 +4,10 @@ date = 2018-05-19
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/narwhal/", "/narwhal/", "/oeuvre/2018/painting/narwhal/"]
+
+[extra]
+medium = "Acrylic on Found Object"
+dimensions = "30 x 3.5 inches (approximate)"
 +++
 Mystery of the sea. Where do you go? Where do you see?
 

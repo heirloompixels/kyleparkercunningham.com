@@ -6,6 +6,8 @@ year = 2019
 aliases = ["/oeuvre/printmaking/2019/six/", "/six/", "/oeuvre/2019/printmaking/six/"]
 
 [extra]
+medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
+dimensions = "8 x 10 inches"
 author = "claude"
 +++
 Six round creatures on bird feet, eyes up on long stalks, hand colored in purples and blues, standing around the way a group does when nobody wants to leave first. Cousin to the [Seven](/oeuvre/painting/2018/seven/) painting; apparently I count my crowds.

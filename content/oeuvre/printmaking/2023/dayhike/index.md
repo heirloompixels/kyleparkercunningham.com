@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/printmaking/2023/dayhike/", "/dayhike/", "/oeuvre/2023/printmaking/dayhike/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 A songbird with a backpack, ready for the trail (the plate is scratched 2018). The [owl](/oeuvre/printmaking/2016/day-hike/) pioneered the look in 2016; word spreads fast in the forest.

@@ -4,6 +4,10 @@ date = 2021-11-13
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/the-mother-bear/", "/the-mother-bear/", "/oeuvre/2021/painting/the-mother-bear/"]
+
+[extra]
+medium = "Oil, Oil Stick, Acrylic and Latex on Canvas"
+dimensions = "51 1/2 x 32 inches"
 +++
 51 1/2 by 32 inches
 Oil, Oil Stick, Acrylic, Latex on Canvas

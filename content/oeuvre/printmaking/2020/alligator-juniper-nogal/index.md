@@ -6,6 +6,8 @@ year = 2020
 aliases = ["/oeuvre/printmaking/2020/alligator-juniper-nogal/", "/oeuvre/2020/printmaking/alligator-juniper-nogal/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 The Nogal Canyon juniper, wind-bent and holding on. The third alligator juniper in the series — they are the great elders of this country, and I keep visiting them with a scribe point the way you visit grandparents with a camera. See also [Nogal Canyon](/oeuvre/printmaking/2022/nogal-canyon/) (2022).

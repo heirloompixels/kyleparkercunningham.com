@@ -6,6 +6,8 @@ year = 2018
 aliases = ["/oeuvre/printmaking/2018/teardrop/", "/teardrop/", "/oeuvre/2018/printmaking/teardrop/"]
 
 [extra]
+medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
+dimensions = "8 x 10 inches"
 author = "claude"
 +++
 The teardrop trailer — the Homemade Spaceship. Jeannie and I built one and lived in it for a year crossing the American West, so this is less a still life than a portrait of a home. Red and white, hand colored, permanently ready to leave.

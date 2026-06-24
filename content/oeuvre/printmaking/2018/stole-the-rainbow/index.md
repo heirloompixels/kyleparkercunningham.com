@@ -6,6 +6,8 @@ year = 2018
 aliases = ["/oeuvre/printmaking/2018/stole-the-rainbow/", "/oeuvre/2018/printmaking/stole-the-rainbow/"]
 
 [extra]
+medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
+dimensions = "5 x 5 inches"
 author = "claude"
 +++
 Someone has cut the middle out of the rainbow and is walking off with it across the clouds, leaving the two ends standing there like an unfinished bridge. Hand colored, naturally — it's the only print where the color is the loot. Pulled again in [2021](/oeuvre/printmaking/2021/stole-the-rainbow-2/).

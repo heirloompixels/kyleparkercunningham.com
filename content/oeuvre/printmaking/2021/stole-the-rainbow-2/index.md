@@ -4,6 +4,10 @@ date = 2021-07-31
 category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/stole-the-rainbow-2/", "/oeuvre/2021/printmaking/stole-the-rainbow-2/"]
+
+[extra]
+medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
+dimensions = "8 x 10 inches"
 +++
 Everyone is trying to find what is at the end of the rainbow.
 Some of us just have more effective tactics than others.

@@ -6,6 +6,8 @@ year = 2022
 aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/", "/oeuvre/2022/printmaking/rocket-propelled-clovis-point-intaglio/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 A turtle carries the arsenal this time — rocket, clovis point, and satellite dish strapped to the hexagons of its shell. The slowest courier entrusted with the fastest cargo: twelve thousand years of point technology riding deep time's own armored chassis. The [painting](/oeuvre/painting/2020/rocket-propelled-clovis-point/) (2020) posed the idea; the turtle volunteered to deliver it.

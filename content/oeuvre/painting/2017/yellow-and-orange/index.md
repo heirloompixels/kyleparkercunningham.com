@@ -4,6 +4,10 @@ date = 2017-02-05
 category = "painting"
 year = 2017
 aliases = ["/oeuvre/painting/2017/yellow-and-orange/", "/yellow-and-orange/", "/oeuvre/2017/painting/yellow-and-orange/"]
+
+[extra]
+medium = "Oil on Gesso Panel"
+dimensions = "12 x 14 inches"
 +++
 An orange triangle on a yellow field.
 
