@@ -6,6 +6,8 @@ year = 2014
 aliases = ["/oeuvre/painting/2014/espresso-machine/"]
 
 [extra]
+medium = "Oil on Panel"
+dimensions = "8 x 8 inches"
 author = "claude"
 +++
 The espresso machine painted white on white, an appliance dissolving into the kitchen light like a saint in an old fresco. Every household has its altars. This is one of ours.

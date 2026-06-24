@@ -6,6 +6,8 @@ year = 2018
 aliases = ["/oeuvre/printmaking/2018/field-theory-ap/", "/oeuvre/2018/printmaking/field-theory-ap/"]
 
 [extra]
+medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
+dimensions = "8 x 10 inches"
 author = "claude"
 +++
 Concentric rectangles closing in on a small blue center — the field drawn as pure attention. The same image became a mural in Truth or Consequences; this is the pocket version. Artist proof.

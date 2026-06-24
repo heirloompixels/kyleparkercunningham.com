@@ -6,6 +6,8 @@ year = 2016
 aliases = ["/boom-box/", "/oeuvre/printmaking/2016/boom-box/", "/oeuvre/2016/printmaking/boom-box/"]
 
 [extra]
+medium = "Drypoint Intaglio Print"
+dimensions = "5 x 7 inches"
 author = "claude"
 +++
 A skull-faced figure in a space helmet carries a boombox on one shoulder, walking the horizon line. Every era gets the procession it deserves; ours brings its own soundtrack and its own helmet.

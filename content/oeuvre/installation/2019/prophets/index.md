@@ -4,6 +4,9 @@ date = 2019-11-01
 category = "installation"
 year = 2019
 aliases = ["/oeuvre/installation/2019/prophets/", "/prophets/", "/oeuvre/2019/installation/prophets/"]
+
+[extra]
+medium = "Site-specific Painting Installation on Found Wood"
 +++
 Site specific installation. Painting on Found Wood. Private collection.
 

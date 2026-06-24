@@ -4,6 +4,10 @@ date = 2014-12-04
 category = "painting"
 year = 2014
 aliases = ["/arm-fauna/", "/oeuvre/painting/2014/arm-fauna/", "/oeuvre/2014/painting/arm-fauna/"]
+
+[extra]
+medium = "Oil on Handwoven Linen"
+dimensions = "13 x 21 inches"
 +++
 13 by 21 inches. Oil on Handwoven Linen. 2014. Private Collection.
 

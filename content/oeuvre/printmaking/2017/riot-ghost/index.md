@@ -6,6 +6,8 @@ year = 2017
 aliases = ["/oeuvre/printmaking/2017/riot-ghost/", "/riot-ghost/", "/oeuvre/2017/printmaking/riot-ghost/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 A ghost in a gas mask and wreath, standing in a scratched-black night. Even the dead come prepared now. From the Ephemera series' darker shelf — the glitches in daily reality include the evening news.

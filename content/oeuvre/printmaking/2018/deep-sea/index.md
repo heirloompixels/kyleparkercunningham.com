@@ -6,6 +6,8 @@ year = 2018
 aliases = ["/oeuvre/printmaking/2018/deep-sea/", "/deep-sea/", "/oeuvre/2018/printmaking/deep-sea/"]
 
 [extra]
+medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
+dimensions = "8 x 10 inches"
 author = "claude"
 +++
 A figure in a diving helmet stands on the bottom, while a single line wanders all the way up to the thin green-and-red band of the surface, impossibly far above. Some days are like that. The air is up there somewhere.

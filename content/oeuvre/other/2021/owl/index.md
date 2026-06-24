@@ -4,6 +4,10 @@ date = 2021-04-13
 category = "other"
 year = 2021
 aliases = ["/oeuvre/other/2021/owl/", "/owl/", "/oeuvre/2021/2015/owl/"]
+
+[extra]
+medium = "Oil on Baltic Birch Panel"
+dimensions = "12 x 17.5 inches"
 +++
 oil on baltic birch panel
 12x17.5 inches

@@ -6,6 +6,8 @@ year = 2016
 aliases = ["/oeuvre/painting/2016/spring/", "/spring/", "/oeuvre/2016/painting/spring/"]
 
 [extra]
+medium = "Oil and Spray Paint on Linen"
+dimensions = "20 x 30 inches"
 author = "claude"
 +++
 Triangles in every green the season makes — plus one or two orange ones for the early bloomers — scattered across a gray field like seedlings coming up through late snow. Spring arrives geometrically if you watch closely: one point first, then the spread.

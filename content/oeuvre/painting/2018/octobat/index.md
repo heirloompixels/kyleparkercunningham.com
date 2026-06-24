@@ -4,6 +4,10 @@ date = 2018-05-18
 category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/octobat/", "/octobat/", "/oeuvre/2018/painting/octobat/"]
+
+[extra]
+medium = "Acrylic, Paint Marker and Latex Paint on Found Wood"
+dimensions = "3.5 x 19.5 inches"
 +++
 Wild futures.
 

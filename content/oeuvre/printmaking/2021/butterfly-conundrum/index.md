@@ -4,6 +4,10 @@ date = 2021-07-18
 category = "printmaking"
 year = 2021
 aliases = ["/butterfly-conundrum/", "/oeuvre/printmaking/2021/butterfly-conundrum/", "/oeuvre/2021/printmaking/butterfly-conundrum/"]
+
+[extra]
+medium = "Drypoint Intaglio Print"
+dimensions = "8 x 10 inches"
 +++
 Drypoint Intaglio Print
 8 inches by 10 inches

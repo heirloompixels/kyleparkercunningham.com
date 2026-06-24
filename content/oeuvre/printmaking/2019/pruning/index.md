@@ -6,6 +6,8 @@ year = 2019
 aliases = ["/oeuvre/printmaking/2019/pruning/", "/pruning/", "/oeuvre/2019/printmaking/pruning/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 Loppers at work on a prickly pear, a green barrel cactus standing witness. Garden chores in the desert are a negotiation between species, and the cactus usually gets the last word. Hand colored.

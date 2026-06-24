@@ -6,6 +6,8 @@ year = 2022
 aliases = ["/oeuvre/printmaking/2022/space-owl/", "/space-owl/", "/oeuvre/2022/printmaking/space-owl/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 The owl, helmeted, antenna up. The owls already hold their conversations across the night ([Saturday Evening Owls](/oeuvre/painting/2022/saturday-evening-owls/) eavesdrops on them); this one has simply extended the broadcast range.

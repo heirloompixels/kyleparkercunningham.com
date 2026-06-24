@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/printmaking/2023/elephant-mask-intaglio/", "/oeuvre/2023/printmaking/elephant-mask-intaglio/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 Behind the bright yellow elephant mask: an elephant. "We all wear masks most of the time," the [painting](/oeuvre/painting/2018/elephant-mask/) said back in 2018 — and the most convincing disguise is always yourself, slightly off.

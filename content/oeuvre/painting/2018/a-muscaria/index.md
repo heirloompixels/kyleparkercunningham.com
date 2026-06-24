@@ -4,6 +4,10 @@ date = 2018-05-18
 category = "painting"
 year = 2018
 aliases = ["/a-muscaria/", "/oeuvre/painting/2018/a-muscaria/", "/oeuvre/2018/painting/a-muscaria/"]
+
+[extra]
+medium = "Acrylic on Found Panel"
+dimensions = "14 x 28 inches (approximate)"
 +++
 Future perfect anomalies.
 

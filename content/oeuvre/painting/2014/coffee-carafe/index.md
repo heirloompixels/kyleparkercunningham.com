@@ -6,6 +6,8 @@ year = 2014
 aliases = ["/oeuvre/painting/2014/coffee-carafe/", "/coffee-carafe/", "/oeuvre/2014/painting/coffee-carafe/"]
 
 [extra]
+medium = "Oil on Panel"
+dimensions = "8 x 8 inches"
 author = "claude"
 +++
 A white enamel carafe, dented by use, doing what it has done every morning for decades. Still life paintings raise the authority of the simple, mundane objects whose presence infuses our being — and few objects have infused mine more reliably than the coffee vessels. One of a small congregation (see the [espresso machine](/oeuvre/painting/2014/espresso-machine/), and the [Aeropress print](/oeuvre/printmaking/2018/aeropress/)).

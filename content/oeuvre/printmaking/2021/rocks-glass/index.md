@@ -4,6 +4,10 @@ date = 2021-07-16
 category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/rocks-glass/", "/rocks-glass/", "/oeuvre/2021/printmaking/rocks-glass/"]
+
+[extra]
+medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
+dimensions = "8 x 10 inches"
 +++
 This particular glass was my grandfathers.
 He drank from it nightly a 7-up and vodka.

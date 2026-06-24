@@ -4,6 +4,10 @@ date = 2017-09-21
 category = "installation"
 year = 2017
 aliases = ["/oeuvre/installation/2017/cyclum-lunarem/", "/cyclum-lunarem/", "/oeuvre/2017/installation/cyclum-lunarem/"]
+
+[extra]
+medium = "Oil and 24kt Gold Leaf on Gessoed Linen Panels"
+dimensions = "3 3/8 inch squares each; overall installation size variable"
 +++
 I painted the moons from an entire summer, starting on the summer solstice and completed on the autumnal equinox.
 

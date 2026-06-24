@@ -6,6 +6,8 @@ year = 2016
 aliases = ["/oeuvre/printmaking/2016/day-hike/", "/day-hike/", "/oeuvre/2016/printmaking/day-hike/"]
 
 [extra]
+medium = "Drypoint Intaglio Print"
+dimensions = "5 x 7 inches"
 author = "claude"
 +++
 An owl wearing a backpack, ready for the trail. The work of a day hike is mostly looking — and nobody looks like an owl. A backpacked songbird took up the same hobby in [Dayhike (2023)](/oeuvre/printmaking/2023/dayhike/).

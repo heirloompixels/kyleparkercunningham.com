@@ -6,6 +6,7 @@ year = 2022
 aliases = ["/oeuvre/printmaking/2022/origami-beetroot/", "/origami-beetroot/", "/oeuvre/2022/printmaking/origami-beetroot/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 A beet pulled and drawn like a botanical plate, its leaves creased flat and angular as folded paper. The garden produces its own origami; you just have to pull it up and turn it over.

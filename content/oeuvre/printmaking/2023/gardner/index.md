@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/printmaking/2023/gardner/", "/gardner/", "/oeuvre/2023/printmaking/gardner/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 The whale tows a coracle planted with a tree — the print of [Tugboat (Whale & Sequoia)](/oeuvre/painting/2021/tugboat-whale-sequoia/). The gardener of the future sea, mid-row, unhurried. Whales transplanting trees: I keep saying it because they keep doing it.

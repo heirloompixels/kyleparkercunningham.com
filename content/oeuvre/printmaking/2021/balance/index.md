@@ -4,6 +4,10 @@ date = 2021-07-23
 category = "printmaking"
 year = 2021
 aliases = ["/balance/", "/oeuvre/printmaking/2021/balance/", "/oeuvre/2021/printmaking/balance/"]
+
+[extra]
+medium = "Drypoint Intaglio Printmaking on Rives BFK, Hand-colored with Gouache"
+dimensions = "8 x 10 inches"
 +++
 drypoint intaglio printmaking on rives bfk, handcolored with gouache
 8 by 10 inches

@@ -6,6 +6,8 @@ year = 2021
 aliases = ["/oeuvre/printmaking/2021/vacation/", "/vacation/", "/oeuvre/2021/printmaking/vacation/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
+dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
 author = "claude"
 +++
 A figure stands easy on green ground in a gold space helmet, oxygen tank resting at the knee. A vacation in the future may require equipment, but the posture is eternal: shoulders down, nowhere to be, air supply secured.

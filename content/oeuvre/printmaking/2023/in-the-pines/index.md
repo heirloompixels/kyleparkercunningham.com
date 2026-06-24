@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/printmaking/2023/in-the-pines/", "/in-the-pines/", "/oeuvre/2023/printmaking/in-the-pines/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 Six pines, hand colored in six different greens, standing in their own quiet. Named for the place where shadows stack vertical and the needles make their own floor — and maybe a little for the old song.

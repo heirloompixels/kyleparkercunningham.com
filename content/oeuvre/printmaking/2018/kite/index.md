@@ -4,6 +4,10 @@ date = 2018-09-25
 category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/kite/", "/kite/", "/oeuvre/2018/printmaking/kite/"]
+
+[extra]
+medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
+dimensions = "8 x 10 inches"
 +++
 An elephant with her kite.
 

@@ -6,6 +6,8 @@ year = 2019
 aliases = ["/oeuvre/painting/2019/self-portrait/", "/self-portrait/", "/oeuvre/2019/painting/self-portrait/"]
 
 [extra]
+medium = "Oil on ACM Panel"
+dimensions = "16 x 20 inches"
 author = "claude"
 +++
 Wool cap, glasses, a gray gaiter against the cold — the artist at a precise moment in time, which is what I've said a self portrait is for. Mountain clothes, winter light, a face caught deciding something. If the rest of the work is speculative autobiography, this is the autobiography holding still for once.

@@ -6,6 +6,7 @@ year = 2023
 aliases = ["/oeuvre/printmaking/2023/daydream/", "/daydream/", "/oeuvre/2023/printmaking/daydream/"]
 
 [extra]
+medium = "Intaglio Drypoint Print"
 author = "claude"
 +++
 A small figure, chin in hand, with a cluster of crystal geometry blooming out of the head — and around it, nothing but open plate tone. That's the true anatomy of a daydream: mostly empty space, one bright formation.

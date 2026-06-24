@@ -4,6 +4,10 @@ date = 2018-05-19
 category = "painting"
 year = 2018
 aliases = ["/airdrop/", "/oeuvre/painting/2018/airdrop/", "/oeuvre/2018/painting/airdrop/"]
+
+[extra]
+medium = "Acrylic on Found Object"
+dimensions = "12 x 26 inches"
 +++
 Acrylic on Found Object. 12 by 26. 2018.
 
