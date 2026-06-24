@@ -1,8 +1,5 @@
 # The URL the site will be built for.
-# NOTE: still on the brain. subdomain until the apex DNS cutover. To go live on
-# the apex, change this to https://kyleparkercunningham.com AND set static/CNAME
-# to kyleparkercunningham.com — but only after apex DNS points at GitHub Pages.
-base_url = "https://brain.kyleparkercunningham.com"
+base_url = "https://kyleparkercunningham.com"
 
 # The site title and description; used in feeds by default.
 title = "The art of Kyle Parker Cunningham"
