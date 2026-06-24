@@ -74,8 +74,6 @@ was removed from the About page.
   ~2048px web masters committed to the repo and originals kept on the drive.
 - [ ] **Notes** — write real notes, then un-draft (`draft = true` on all
   `content/notes/**`).
-- [ ] **RSS/feed** — the old Ghost site had `/rss/`; the new site generates no
-  feed. Add one (Zola `generate_feeds`) if subscribers matter.
 - [ ] **Work pages** — grow the terse stubs into image-rich, prose-heavy
   documents (ongoing direction).
 - [ ] **Dead-code** — `partials/navigation.html` etc. were removed; if any old

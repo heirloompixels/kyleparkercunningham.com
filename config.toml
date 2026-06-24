@@ -17,6 +17,10 @@ compile_sass = true
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
+# Generate an RSS feed for the site (built-in rss.xml template) at /rss.xml.
+generate_feeds = true
+feed_filenames = ["rss.xml"]
+
 # The taxonomies to be rendered for the site and their configuration.
 # Only `topics` is used (by the notes section); the others were declared but
 # never populated, so they produced empty index pages.
