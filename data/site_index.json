@@ -1,9 +1,9 @@
 {
   "generated": true,
-  "total": 261,
+  "total": 236,
   "totals": {
-    "kyle": 224,
-    "claude": 3,
+    "kyle": 121,
+    "claude": 81,
     "structure": 34
   },
   "group_order": [
@@ -19,7 +19,7 @@
   ],
   "pages": [
     {
-      "title": "Home",
+      "title": "The art of Kyle Parker Cunningham",
       "permalink": "/",
       "path": "",
       "group": "Home",
@@ -503,7 +503,7 @@
       "permalink": "/oeuvre/painting/2014/atmospheric-whales/",
       "path": "oeuvre/painting/2014/atmospheric-whales",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -511,7 +511,7 @@
       "permalink": "/oeuvre/painting/2014/bison-at-sunset/",
       "path": "oeuvre/painting/2014/bison-at-sunset",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -519,7 +519,7 @@
       "permalink": "/oeuvre/painting/2014/coffee-carafe/",
       "path": "oeuvre/painting/2014/coffee-carafe",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -535,7 +535,7 @@
       "permalink": "/oeuvre/painting/2014/espresso-machine/",
       "path": "oeuvre/painting/2014/espresso-machine",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -551,7 +551,7 @@
       "permalink": "/oeuvre/painting/2014/pet-walk/",
       "path": "oeuvre/painting/2014/pet-walk",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -559,7 +559,7 @@
       "permalink": "/oeuvre/painting/2015/binoculars/",
       "path": "oeuvre/painting/2015/binoculars",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -567,7 +567,7 @@
       "permalink": "/oeuvre/painting/2015/butterfly_conundrum/",
       "path": "oeuvre/painting/2015/butterfly_conundrum",
       "group": "Oeuvre",
-      "author": "claude",
+      "author": "kyle",
       "is_section": false
     },
     {
@@ -575,7 +575,7 @@
       "permalink": "/oeuvre/painting/2015/cadence/",
       "path": "oeuvre/painting/2015/cadence",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -583,7 +583,7 @@
       "permalink": "/oeuvre/painting/2015/clouds/",
       "path": "oeuvre/painting/2015/clouds",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -591,7 +591,7 @@
       "permalink": "/oeuvre/painting/2015/egg/",
       "path": "oeuvre/painting/2015/egg",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -599,7 +599,7 @@
       "permalink": "/oeuvre/painting/2015/enso/",
       "path": "oeuvre/painting/2015/enso",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -607,7 +607,7 @@
       "permalink": "/oeuvre/painting/2015/split-the-atom/",
       "path": "oeuvre/painting/2015/split-the-atom",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -615,7 +615,7 @@
       "permalink": "/oeuvre/painting/2015/substantial/",
       "path": "oeuvre/painting/2015/substantial",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -623,7 +623,7 @@
       "permalink": "/oeuvre/painting/2016/approximate-completion/",
       "path": "oeuvre/painting/2016/approximate-completion",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -631,7 +631,7 @@
       "permalink": "/oeuvre/painting/2016/spring/",
       "path": "oeuvre/painting/2016/spring",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -711,7 +711,7 @@
       "permalink": "/oeuvre/painting/2018/pinned/",
       "path": "oeuvre/painting/2018/pinned",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -719,7 +719,7 @@
       "permalink": "/oeuvre/painting/2018/prickly-pear/",
       "path": "oeuvre/painting/2018/prickly-pear",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -727,7 +727,7 @@
       "permalink": "/oeuvre/painting/2018/robot-family/",
       "path": "oeuvre/painting/2018/robot-family",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -735,7 +735,7 @@
       "permalink": "/oeuvre/painting/2018/seven/",
       "path": "oeuvre/painting/2018/seven",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -743,7 +743,7 @@
       "permalink": "/oeuvre/painting/2018/three-blue-corn/",
       "path": "oeuvre/painting/2018/three-blue-corn",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -751,7 +751,7 @@
       "permalink": "/oeuvre/painting/2018/thursday/",
       "path": "oeuvre/painting/2018/thursday",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -759,7 +759,7 @@
       "permalink": "/oeuvre/painting/2019/monsoon-bird/",
       "path": "oeuvre/painting/2019/monsoon-bird",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -767,7 +767,7 @@
       "permalink": "/oeuvre/painting/2019/self-portrait/",
       "path": "oeuvre/painting/2019/self-portrait",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -783,7 +783,7 @@
       "permalink": "/oeuvre/painting/2020/michael/",
       "path": "oeuvre/painting/2020/michael",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -791,7 +791,7 @@
       "permalink": "/oeuvre/painting/2020/migratory-scavengers/",
       "path": "oeuvre/painting/2020/migratory-scavengers",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -799,7 +799,7 @@
       "permalink": "/oeuvre/painting/2020/nana/",
       "path": "oeuvre/painting/2020/nana",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -807,7 +807,7 @@
       "permalink": "/oeuvre/painting/2020/rocket-propelled-clovis-point/",
       "path": "oeuvre/painting/2020/rocket-propelled-clovis-point",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -823,7 +823,7 @@
       "permalink": "/oeuvre/painting/2020/solar-ascension/",
       "path": "oeuvre/painting/2020/solar-ascension",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -831,7 +831,7 @@
       "permalink": "/oeuvre/painting/2021/bison-robotics/",
       "path": "oeuvre/painting/2021/bison-robotics",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -847,7 +847,7 @@
       "permalink": "/oeuvre/painting/2021/cydney-and-val/",
       "path": "oeuvre/painting/2021/cydney-and-val",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -863,7 +863,7 @@
       "permalink": "/oeuvre/painting/2021/path-though-the-autumn-leaves/",
       "path": "oeuvre/painting/2021/path-though-the-autumn-leaves",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -879,7 +879,7 @@
       "permalink": "/oeuvre/painting/2021/preservation-cactus/",
       "path": "oeuvre/painting/2021/preservation-cactus",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -919,7 +919,7 @@
       "permalink": "/oeuvre/painting/2021/transition/",
       "path": "oeuvre/painting/2021/transition",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -935,7 +935,7 @@
       "permalink": "/oeuvre/painting/2021/tugboat-whale-sequoia/",
       "path": "oeuvre/painting/2021/tugboat-whale-sequoia",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -943,7 +943,7 @@
       "permalink": "/oeuvre/painting/2022/docile/",
       "path": "oeuvre/painting/2022/docile",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -951,7 +951,7 @@
       "permalink": "/oeuvre/painting/2022/future-capacitor/",
       "path": "oeuvre/painting/2022/future-capacitor",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -959,7 +959,7 @@
       "permalink": "/oeuvre/painting/2022/ken/",
       "path": "oeuvre/painting/2022/ken",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -983,7 +983,7 @@
       "permalink": "/oeuvre/painting/2022/surviving-the-asteroid/",
       "path": "oeuvre/painting/2022/surviving-the-asteroid",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -999,7 +999,7 @@
       "permalink": "/oeuvre/painting/2022/visible/",
       "path": "oeuvre/painting/2022/visible",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1007,7 +1007,7 @@
       "permalink": "/oeuvre/painting/2023/autumnal-twilight/",
       "path": "oeuvre/painting/2023/autumnal-twilight",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1015,7 +1015,7 @@
       "permalink": "/oeuvre/painting/2023/calavera-del-caballo/",
       "path": "oeuvre/painting/2023/calavera-del-caballo",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1031,7 +1031,7 @@
       "permalink": "/oeuvre/painting/2023/geometric-anatomy/",
       "path": "oeuvre/painting/2023/geometric-anatomy",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1039,7 +1039,7 @@
       "permalink": "/oeuvre/painting/2023/harmonics/",
       "path": "oeuvre/painting/2023/harmonics",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1047,7 +1047,7 @@
       "permalink": "/oeuvre/painting/2023/untitled-begins/",
       "path": "oeuvre/painting/2023/untitled-begins",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1207,7 +1207,7 @@
       "permalink": "/oeuvre/printmaking/2016/air-lift/",
       "path": "oeuvre/printmaking/2016/air-lift",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1215,7 +1215,7 @@
       "permalink": "/oeuvre/printmaking/2016/alligator-juniper-2/",
       "path": "oeuvre/printmaking/2016/alligator-juniper-2",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1223,7 +1223,7 @@
       "permalink": "/oeuvre/printmaking/2016/boom-box/",
       "path": "oeuvre/printmaking/2016/boom-box",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1231,7 +1231,7 @@
       "permalink": "/oeuvre/printmaking/2016/day-hike/",
       "path": "oeuvre/printmaking/2016/day-hike",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1239,7 +1239,7 @@
       "permalink": "/oeuvre/printmaking/2017/riot-ghost/",
       "path": "oeuvre/printmaking/2017/riot-ghost",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1247,7 +1247,7 @@
       "permalink": "/oeuvre/printmaking/2018/120-volts/",
       "path": "oeuvre/printmaking/2018/120-volts",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1255,7 +1255,7 @@
       "permalink": "/oeuvre/printmaking/2018/aeropress/",
       "path": "oeuvre/printmaking/2018/aeropress",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1263,7 +1263,7 @@
       "permalink": "/oeuvre/printmaking/2018/alligator-juniper/",
       "path": "oeuvre/printmaking/2018/alligator-juniper",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1271,7 +1271,7 @@
       "permalink": "/oeuvre/printmaking/2018/deep-sea/",
       "path": "oeuvre/printmaking/2018/deep-sea",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1279,7 +1279,7 @@
       "permalink": "/oeuvre/printmaking/2018/field-theory-ap/",
       "path": "oeuvre/printmaking/2018/field-theory-ap",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1295,7 +1295,7 @@
       "permalink": "/oeuvre/printmaking/2018/lunarem/",
       "path": "oeuvre/printmaking/2018/lunarem",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1303,7 +1303,7 @@
       "permalink": "/oeuvre/printmaking/2018/stole-the-rainbow/",
       "path": "oeuvre/printmaking/2018/stole-the-rainbow",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1311,7 +1311,7 @@
       "permalink": "/oeuvre/printmaking/2018/teardrop/",
       "path": "oeuvre/printmaking/2018/teardrop",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1319,7 +1319,7 @@
       "permalink": "/oeuvre/printmaking/2018/tecate/",
       "path": "oeuvre/printmaking/2018/tecate",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1327,7 +1327,7 @@
       "permalink": "/oeuvre/printmaking/2019/pruning/",
       "path": "oeuvre/printmaking/2019/pruning",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1335,7 +1335,7 @@
       "permalink": "/oeuvre/printmaking/2019/six/",
       "path": "oeuvre/printmaking/2019/six",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1343,7 +1343,7 @@
       "permalink": "/oeuvre/printmaking/2020/alligator-juniper-nogal/",
       "path": "oeuvre/printmaking/2020/alligator-juniper-nogal",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1407,7 +1407,7 @@
       "permalink": "/oeuvre/printmaking/2021/vacation/",
       "path": "oeuvre/printmaking/2021/vacation",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1415,7 +1415,7 @@
       "permalink": "/oeuvre/printmaking/2022/blue-corn/",
       "path": "oeuvre/printmaking/2022/blue-corn",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1423,7 +1423,7 @@
       "permalink": "/oeuvre/printmaking/2022/ghost-thugs/",
       "path": "oeuvre/printmaking/2022/ghost-thugs",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1447,7 +1447,7 @@
       "permalink": "/oeuvre/printmaking/2022/origami-beetroot/",
       "path": "oeuvre/printmaking/2022/origami-beetroot",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1455,7 +1455,7 @@
       "permalink": "/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/",
       "path": "oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1463,7 +1463,7 @@
       "permalink": "/oeuvre/printmaking/2022/skull/",
       "path": "oeuvre/printmaking/2022/skull",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1471,7 +1471,7 @@
       "permalink": "/oeuvre/printmaking/2022/space-owl/",
       "path": "oeuvre/printmaking/2022/space-owl",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1479,7 +1479,7 @@
       "permalink": "/oeuvre/printmaking/2022/submerged/",
       "path": "oeuvre/printmaking/2022/submerged",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1487,7 +1487,7 @@
       "permalink": "/oeuvre/printmaking/2022/sunflowers/",
       "path": "oeuvre/printmaking/2022/sunflowers",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1503,7 +1503,7 @@
       "permalink": "/oeuvre/printmaking/2023/bottled-oxygen/",
       "path": "oeuvre/printmaking/2023/bottled-oxygen",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1511,7 +1511,7 @@
       "permalink": "/oeuvre/printmaking/2023/crystal-tooth-whale/",
       "path": "oeuvre/printmaking/2023/crystal-tooth-whale",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1519,7 +1519,7 @@
       "permalink": "/oeuvre/printmaking/2023/daydream/",
       "path": "oeuvre/printmaking/2023/daydream",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1527,7 +1527,7 @@
       "permalink": "/oeuvre/printmaking/2023/dayhike/",
       "path": "oeuvre/printmaking/2023/dayhike",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1535,7 +1535,7 @@
       "permalink": "/oeuvre/printmaking/2023/elephant-mask-intaglio/",
       "path": "oeuvre/printmaking/2023/elephant-mask-intaglio",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1543,7 +1543,7 @@
       "permalink": "/oeuvre/printmaking/2023/gardner/",
       "path": "oeuvre/printmaking/2023/gardner",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1551,7 +1551,7 @@
       "permalink": "/oeuvre/printmaking/2023/in-the-pines/",
       "path": "oeuvre/printmaking/2023/in-the-pines",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1559,7 +1559,7 @@
       "permalink": "/oeuvre/printmaking/2023/saber-tooth-puma/",
       "path": "oeuvre/printmaking/2023/saber-tooth-puma",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1567,7 +1567,7 @@
       "permalink": "/oeuvre/printmaking/2023/shade-cloud/",
       "path": "oeuvre/printmaking/2023/shade-cloud",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1575,7 +1575,7 @@
       "permalink": "/oeuvre/printmaking/2023/tubed-pachydeerm/",
       "path": "oeuvre/printmaking/2023/tubed-pachydeerm",
       "group": "Oeuvre",
-      "author": "kyle",
+      "author": "claude",
       "is_section": false
     },
     {
@@ -1731,20 +1731,20 @@
       "is_section": false
     },
     {
-      "title": "Notes",
-      "permalink": "/notes/",
-      "path": "notes",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": true
-    },
-    {
       "title": "Painting",
       "permalink": "/painting/",
       "path": "painting",
       "group": "Other pages",
       "author": "kyle",
       "is_section": true
+    },
+    {
+      "title": "",
+      "permalink": "/works-index/",
+      "path": "",
+      "group": "Other pages",
+      "author": "kyle",
+      "is_section": false
     },
     {
       "title": "Dashboard",
@@ -1854,206 +1854,6 @@
       "title": "Materials",
       "permalink": "/materials/",
       "path": "materials",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Bookbinding",
-      "permalink": "/notes/bookbinding/",
-      "path": "notes/bookbinding",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Bookbinding (2)",
-      "permalink": "/notes/bookbinding/example-bookbinding-(2)/",
-      "path": "notes/bookbinding/example-bookbinding-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Bookbinding (3)",
-      "permalink": "/notes/bookbinding/example-bookbinding-(3)/",
-      "path": "notes/bookbinding/example-bookbinding-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Cinema",
-      "permalink": "/notes/cinema/",
-      "path": "notes/cinema",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Cinema (2)",
-      "permalink": "/notes/cinema/example-cinema-(2)/",
-      "path": "notes/cinema/example-cinema-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Cinema (3)",
-      "permalink": "/notes/cinema/example-cinema-(3)/",
-      "path": "notes/cinema/example-cinema-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Ink",
-      "permalink": "/notes/ink/",
-      "path": "notes/ink",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Ink (2)",
-      "permalink": "/notes/ink/example-ink-(2)/",
-      "path": "notes/ink/example-ink-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Ink (3)",
-      "permalink": "/notes/ink/example-ink-(3)/",
-      "path": "notes/ink/example-ink-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Letterpress",
-      "permalink": "/notes/letterpress/",
-      "path": "notes/letterpress",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Letterpress (2)",
-      "permalink": "/notes/letterpress/example-letterpress-(2)/",
-      "path": "notes/letterpress/example-letterpress-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Letterpress (3)",
-      "permalink": "/notes/letterpress/example-letterpress-(3)/",
-      "path": "notes/letterpress/example-letterpress-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Suppliers",
-      "permalink": "/notes/letterpress/suppliers/",
-      "path": "notes/letterpress/suppliers",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paint",
-      "permalink": "/notes/paint/",
-      "path": "notes/paint",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paint (2)",
-      "permalink": "/notes/paint/example-paint-(2)/",
-      "path": "notes/paint/example-paint-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paint (3)",
-      "permalink": "/notes/paint/example-paint-(3)/",
-      "path": "notes/paint/example-paint-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paper",
-      "permalink": "/notes/paper/",
-      "path": "notes/paper",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paper (2)",
-      "permalink": "/notes/paper/example-paper-(2)/",
-      "path": "notes/paper/example-paper-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Paper (3)",
-      "permalink": "/notes/paper/example-paper-(3)/",
-      "path": "notes/paper/example-paper-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Sound Generation",
-      "permalink": "/notes/sound-generation/",
-      "path": "notes/sound-generation",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Sound Generation (2)",
-      "permalink": "/notes/sound-generation/example-sound-generation-(2)/",
-      "path": "notes/sound-generation/example-sound-generation-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Sound Generation (3)",
-      "permalink": "/notes/sound-generation/example-sound-generation-(3)/",
-      "path": "notes/sound-generation/example-sound-generation-(3)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Wilderness",
-      "permalink": "/notes/wilderness/",
-      "path": "notes/wilderness",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Wilderness (2)",
-      "permalink": "/notes/wilderness/example-wilderness-(2)/",
-      "path": "notes/wilderness/example-wilderness-(2)",
-      "group": "Other pages",
-      "author": "kyle",
-      "is_section": false
-    },
-    {
-      "title": "Example: Wilderness (3)",
-      "permalink": "/notes/wilderness/example-wilderness-(3)/",
-      "path": "notes/wilderness/example-wilderness-(3)",
       "group": "Other pages",
       "author": "kyle",
       "is_section": false

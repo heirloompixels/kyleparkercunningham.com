@@ -3,6 +3,7 @@ title = "Suppliers"
 date = 2026-03-12
 template = "notes/single.html"
 
+draft = true
 [taxonomies]
 topics = ["letterpress"]
 +++
