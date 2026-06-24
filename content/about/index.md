@@ -38,6 +38,7 @@ Phone: 575.519.4773
 mastodon: [https://merveilles.town/@kpc](https://merveilles.town/@kpc)
 
 See Also: [https://intentionallyconfusing.com](https://intentionallyconfusing.com)  
-Exhibiting: [https://desertarchaic.com](https://desertarchaic.com)  
+Represented by: [Truth or Consequences Contemporary](https://torc.art) — Truth or Consequences, NM  
+Also showing at: [Sun and Dust](https://sunanddust.gallery) — Santa Fe, NM  
 
 Shop: [https://shop.intentionallyconfusing.com](https://shop.intentionallyconfusing.com)
