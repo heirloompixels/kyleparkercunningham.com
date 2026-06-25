@@ -18,10 +18,10 @@ Start here, then dive into the file you need:
 
 - **Generator:** Zola 0.22.1. **Hosting:** GitHub Pages (`gh-pages` branch) via
   GitHub Actions. **Repo:** `heirloompixels/kyleparkercunningham.com`.
-- **Live (dev) URL:** `https://brain.kyleparkercunningham.com`. The apex
-  `kyleparkercunningham.com` still serves Kyle's **old** Ghost site on a
-  DigitalOcean droplet — the cutover is a DNS task, see
-  [seo-and-cutover.md](seo-and-cutover.md).
+- **Live URL:** `https://kyleparkercunningham.com` (apex). The site cut over
+  from the old Ghost site to this Zola build on the apex in June 2026;
+  `brain.kyleparkercunningham.com` was the pre-launch dev URL and now
+  canonicalizes to the apex. See [seo-and-cutover.md](seo-and-cutover.md).
 - **Stylesheet source of truth:** `sass/style.scss` (compiled by Zola). The
   homepage and editions carry extra scoped CSS inline in their templates.
 - **Run locally:** `./scripts/serve.sh` (regenerates data, then `zola serve`).

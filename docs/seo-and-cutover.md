@@ -2,17 +2,28 @@
 
 ## Current domain state
 
-- **New site (this repo)** → GitHub Pages → served at
-  **`brain.kyleparkercunningham.com`** (`static/CNAME`, `config.toml` base_url).
-- **Apex `kyleparkercunningham.com`** → A record `164.90.135.135`, a
-  **DigitalOcean droplet running Kyle's old Ghost site** (confusingly, same
-  title "The art of Kyle Parker Cunningham").
+**Cut over to the apex in June 2026.** The site is live at
+**`https://kyleparkercunningham.com`** — GitHub Pages, apex A records
+`185.199.108–111.153`, `static/CNAME` + `config.toml` base_url both on the apex,
+HTTPS enforced. `brain.kyleparkercunningham.com` was the pre-launch dev URL and
+now canonicalizes to the apex; its DNS record can be removed whenever. The old
+Ghost site (DigitalOcean droplet `164.90.135.135`) is no longer referenced and
+can be retired.
 
-The goal is to move the new site onto the apex. **This is a DNS operation, not
-a code change.** Flipping `CNAME`/`base_url` to the apex *before* DNS points at
-GitHub Pages takes the new site offline (GitHub Pages 404s `brain.` and
-redirects to an apex it doesn't serve). This was tried and reverted — do it in
-the right order.
+> **Hard-won lesson (kept for the record):** the cutover is a DNS operation, not
+> a code change. Flipping `CNAME`/`base_url` to the apex *before* DNS pointed at
+> GitHub Pages took the site offline (Pages 404'd `brain.` and redirected to an
+> apex it didn't serve). Order matters: repoint DNS first, verify with `dig`,
+> *then* flip the config.
+
+### If you ever need to move domains again
+
+1. Point the target domain's DNS at GitHub Pages (A records
+   `185.199.108–111.153`, optional AAAA `2606:50c0:8000–8003::153`).
+2. Verify: `dig +short <domain>` shows those IPs.
+3. Set `static/CNAME` + `config.toml` `base_url` to the new domain; push.
+4. GitHub → Settings → Pages: confirm custom domain + Enforce HTTPS.
+5. Resubmit the sitemap in Search Console.
 
 ## SEO head (in `base.html`)
 
@@ -60,23 +71,22 @@ check `public/<path>/index.html` exists. The old sitemap URL list was captured
 during the migration; regenerate from `https://kyleparkercunningham.com/sitemap*.xml`
 if needed.
 
-## The cutover runbook
+## Post-launch follow-ups
 
-Do in order:
+Done at cutover (June 2026): apex DNS repointed to GitHub Pages, `CNAME` +
+`base_url` flipped to the apex, deploy verified live (homepage, work pages,
+legacy redirects, RSS, sitemap, HTTPS cert all 200/valid).
 
-1. **Repoint apex DNS:** remove the `164.90.135.135` A record; add GitHub Pages
-   A records `185.199.108.153`, `.109.153`, `.110.153`, `.111.153`. Optionally
-   add a `www` CNAME → `heirloompixels.github.io`.
-2. Wait for propagation; confirm `dig +short kyleparkercunningham.com` shows the
-   `185.199.x` IPs.
-3. **Flip the config:** set `static/CNAME` → `kyleparkercunningham.com` and
-   `config.toml` `base_url` → `https://kyleparkercunningham.com` (there's an
-   inline note in `config.toml`). Push.
-4. In **GitHub → Settings → Pages**: confirm custom domain =
-   `kyleparkercunningham.com` and enable **Enforce HTTPS** (wait for the cert).
-5. In **Google Search Console**: resubmit the sitemap. Same apex domain, so the
-   internal redirects carry the link equity — no Change-of-Address needed.
-6. Retire the DigitalOcean droplet.
+Remaining housekeeping (low-priority, Kyle's side):
+
+- [ ] GitHub → Settings → Pages: confirm custom domain + **Enforce HTTPS** is on.
+- [ ] Google Search Console: resubmit `https://kyleparkercunningham.com/sitemap.xml`
+      (same apex domain → the internal redirects carry link equity; no
+      Change-of-Address needed).
+- [ ] Retire the old DigitalOcean droplet (`164.90.135.135`) — nothing points
+      at it anymore.
+- [ ] Optionally remove the `brain.kyleparkercunningham.com` DNS record (it now
+      just canonicalizes to the apex).
 
 ## Known false positive
 

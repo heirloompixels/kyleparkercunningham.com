@@ -66,9 +66,10 @@ was removed from the About page.
 
 ## Open items / next up
 
-- [ ] **Apex DNS cutover** — the one remaining launch step (runbook in
-  [seo-and-cutover.md](seo-and-cutover.md)). Owner: Kyle (DNS), then ping for the
-  config flip.
+- [x] **Apex DNS cutover** — **done June 2026.** Live at
+  `https://kyleparkercunningham.com`; remaining housekeeping (Enforce HTTPS,
+  Search Console resubmit, retire the droplet) is in
+  [seo-and-cutover.md](seo-and-cutover.md).
 - [ ] **External archive drive reorganization** — discussed, not implemented:
   a definitive medium-first `works/<medium>/<year>/<work>/` hierarchy, with
   ~2048px web masters committed to the repo and originals kept on the drive.
