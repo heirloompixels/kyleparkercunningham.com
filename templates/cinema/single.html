@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}{{ page.title }} — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block content %}
+<article class="page-doc film-page">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / <a href="{{ get_url(path='/cinema/') }}">Cinema</a> / {{ page.title }}</nav>
+  <header class="page-head">
+    <div class="label">A Film</div>
+    <h1><em>{{ page.title }}</em></h1>
+    {% if page.extra.format or page.extra.location or page.extra.duration %}
+    <p class="film-meta">
+      {%- set bits = [] -%}
+      {%- if page.extra.format %}{% set bits = bits | concat(with=page.extra.format) %}{% endif -%}
+      {%- if page.extra.location %}{% set bits = bits | concat(with=page.extra.location) %}{% endif -%}
+      {%- if page.extra.duration %}{% set bits = bits | concat(with=page.extra.duration) %}{% endif -%}
+      {{ bits | join(sep=" · ") }}
+    </p>
+    {% endif %}
+  </header>
+
+  <figure class="film-embed">
+    <iframe src="{{ page.extra.embed | safe }}" title="{{ page.title }}"
+            allowfullscreen
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </figure>
+
+  <div class="prose">
+    {{ page.content | safe }}
+  </div>
+
+  <nav class="work-pn">
+    {% if page.lighter %}
+      <a href="{{ page.lighter.permalink }}">← previous<br><i>{{ page.lighter.title }}</i></a>
+    {% else %}<span></span>{% endif %}
+    {% if page.heavier %}
+      <a class="pn-next" href="{{ page.heavier.permalink }}">next →<br><i>{{ page.heavier.title }}</i></a>
+    {% else %}<span></span>{% endif %}
+  </nav>
+</article>
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
