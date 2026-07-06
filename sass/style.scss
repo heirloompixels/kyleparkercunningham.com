@@ -854,3 +854,13 @@ table.ledger {
 }
 .filmography .film p { max-width: 62ch; }
 .film-page .film-embed { max-width: 62rem; margin-bottom: 2rem; }
+
+/* Enquire link on work pages */
+.work-enquire {
+  font-family: "Inconsolata", monospace;
+  font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin: 2.6rem 0 0;
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent); }
+  a:hover { color: var(--ink); border-color: var(--ink); }
+  span a { color: inherit; border-color: var(--line); }
+}

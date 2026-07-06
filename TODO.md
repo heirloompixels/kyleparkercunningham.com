@@ -49,21 +49,26 @@ Two kinds of work are mixed here, marked accordingly:
   `cinema` are raw Ghost HTML blobs pasted into markdown. Convert to clean
   markdown with words unchanged; make cinema embeds responsive instead of
   200 px wide.
-- [ ] **Backfill collector metadata** [build starts; voice finishes] — 148 of
-  156 works have no `status` (available / sold / collection). Collectors are
-  the site's stated audience; the work-page tombstone already renders status
-  when present. Backfill from the oeuvre CSV where the data exists; Kyle
-  fills the rest over time.
+- [ ] **Fill in collector metadata** [voice] — ~148 of 156 works have no
+  `status` (available / sold / collection). The CSV backfill is already
+  exhausted (`scripts/backfill_from_csv.py` reports all 48 matchable rows
+  complete), so the remaining statuses are knowledge only Kyle has. The
+  work-page tombstone and the oeuvre ledger both render status the moment
+  it's added to a work's `[extra]`. Also: 45 post-2023 works have no CSV row
+  at all — add them to the spreadsheet, and consider folding the CSV's
+  `Remarks` column into page prose (the dry run prints the list).
 - [ ] **Clean the repo root** [build] — move migration-era audit files
   (`metadata_audit*.csv`, `*_REPORT.md`, `BACKFILL_CANDIDATES.md`,
   `external_images_report.txt`, `Kyle Oeuvre/`) into `docs/archive/`.
 
 ## 3. New features
 
-- [ ] **Catalogue index** [build] — one no-JS page listing every work grouped
-  by year, with medium and status columns. (Groundwork exists:
-  `content/works-index.md`, `templates/works_json.html`.) This is the archive
-  utility the SPEC roadmap calls for, and the honest answer to "search."
+- [x] **Catalogue index** [build] — already existed: `/oeuvre/` is a full
+  ledger of every work grouped by year with thumbnail, discipline, medium,
+  and status columns. (`works-index.md` turned out to be the machine-readable
+  JSON bridge for the river service, not a stub.) What makes the ledger look
+  unfinished is the *unrecorded* status on most rows — see the collector
+  metadata item above.
 - [ ] **"Where to see the work" page** [build scaffolds; voice reviews] —
   gallery representation (Truth or Consequences Contemporary; Sun and Dust),
   what's available now, the shop, and a per-work *Enquire* mailto link with

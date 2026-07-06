@@ -40,6 +40,11 @@
     {{ page.content | safe }}
   </div>
 
+  <p class="work-enquire">
+    <a href="mailto:{{ config.extra.email }}?subject={{ page.title | urlencode }}%20%E2%80%94%20enquiry">Enquire about this work ✉</a>
+    <span>· or see <a href="{{ get_url(path='/collect/') }}">where to collect</a></span>
+  </p>
+
   <nav class="work-pn">
     {% if page.higher %}
       <a href="{{ page.higher.permalink }}">← previous<br><i>{{ page.higher.title }}</i></a>
