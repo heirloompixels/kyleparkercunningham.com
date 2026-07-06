@@ -34,3 +34,6 @@ taxonomies = [
 # Put all your custom variables here
 author = "Kyle Parker Cunningham"
 email = "analogkyle@gmail.com"
+# Fallback social-share image (path relative to content/) for pages that have
+# no co-located photo of their own — e.g. the homepage and section indexes.
+og_default_image = "oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg"
