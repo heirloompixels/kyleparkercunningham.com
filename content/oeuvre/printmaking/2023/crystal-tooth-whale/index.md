@@ -3,12 +3,21 @@ title = "Crystal Tooth Whale"
 date = 2023-02-07
 category = "printmaking"
 year = 2023
-aliases = ["/oeuvre/printmaking/2023/crystal-tooth-whale/"]
+aliases = ["/oeuvre/printmaking/2023/crystal-tooth-whale/", "/crystal-tooth-whale-intaglio/", "/oeuvre/2023/printmaking/crystal-tooth-whale-intaglio/"]
 
 [extra]
 medium = "Intaglio Print with Chine-collé"
+dimensions = "printed area approx 11 x 12 in · handtorn paper approx 13 x 19 in"
 author = "claude"
 +++
 The whale in one continuous line, teeth like little crystals at the tip of the jaw — printed chine-collé, a sheet of handmade brown paper bonded into the print. The [painting](/oeuvre/painting/2018/crystal-tooth-whale/) came first (2018); even mega fauna needs dental work.
+
+### Edition Details
+
+intaglio drypoint prints
+printed area approx 11 x 12 inches
+handtorn paper approx 13 x 19 inches
+
+chine collé
 
 {{ art_image(path="oeuvre/printmaking/2023/crystal-tooth-whale/crystal-tooth-whale.jpeg", alt="Intaglio print of a whale rendered in simple contour lines on dark brown handmade paper, with small crystalline teeth visible in its open jaw and a forked tail at left.", caption="Crystal Tooth Whale by kyle parker cunningham") }}

@@ -3,7 +3,7 @@ title = "espresso machine"
 date = 2014-12-05
 category = "painting"
 year = 2014
-aliases = ["/oeuvre/painting/2014/espresso-machine/"]
+aliases = ["/oeuvre/painting/2014/espresso-machine/", "/espress-machine/", "/oeuvre/2014/painting/espress-machine/"]
 
 [extra]
 medium = "Oil on Panel"

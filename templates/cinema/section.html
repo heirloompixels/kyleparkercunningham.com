@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}{{ section.title }} — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block content %}
+<article class="page-doc">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / {{ section.title }}</nav>
+  <header class="page-head">
+    <div class="label">The Filmography</div>
+    <h1>{{ section.title }}</h1>
+  </header>
+  <div class="prose">
+    {{ section.content | safe }}
+  </div>
+
+  <div class="filmography">
+    {% for film in section.pages %}
+    <section class="film">
+      <figure class="film-embed">
+        <iframe src="{{ film.extra.embed | safe }}" title="{{ film.title }}"
+                loading="lazy" allowfullscreen
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+      </figure>
+      <h2><a href="{{ film.permalink }}"><em>{{ film.title }}</em></a></h2>
+      {% if film.extra.format or film.extra.location %}
+      <p class="film-meta">
+        {%- if film.extra.format %}{{ film.extra.format }}{% endif -%}
+        {%- if film.extra.format and film.extra.location %} · {% endif -%}
+        {%- if film.extra.location %}{{ film.extra.location }}{% endif -%}
+      </p>
+      {% endif %}
+      {{ film.content | safe }}
+    </section>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
