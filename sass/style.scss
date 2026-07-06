@@ -832,3 +832,25 @@ table.ledger {
   font-family: "Inconsolata", monospace; font-size: 0.82rem; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--accent); margin: 2.6rem 0 1rem; font-weight: 500;
 }
+
+/* Cinema — filmography section and single film pages */
+.filmography { max-width: 62rem; }
+.filmography .film {
+  margin: 3.4rem 0 0; padding-top: 2.4rem; border-top: 1px solid var(--line);
+}
+.film-embed {
+  margin: 0 0 1.2rem;
+  iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; display: block; }
+}
+.filmography .film h2 {
+  font-weight: 300; font-size: var(--step-2); margin: 0 0 0.3rem;
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--accent); }
+}
+.film-meta {
+  font-family: "Inconsolata", monospace;
+  font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 1rem;
+}
+.filmography .film p { max-width: 62ch; }
+.film-page .film-embed { max-width: 62rem; margin-bottom: 2rem; }
