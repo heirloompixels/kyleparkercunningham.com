@@ -5,8 +5,9 @@ date = 2026-03-01
 [extra]
 kind = "season"
 numeral = "XII"
-status = "live"
-lifespan = "Lives March — June 2026"
+status = "retired"
+retired = "2026-07-06"
+lifespan = "lived March — June 2026"
 cover = "oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg"
 cover_alt = "The River in the Sky — detail of cloud forms in oil"
 cover_tag = "Season XII — Spring, 2026"

@@ -14,30 +14,36 @@ Two kinds of work are mixed here, marked accordingly:
 
 ## 1. Make the site current
 
-- [ ] **Promote the 2026-summer edition** [build] — it is July and Season XII
-  (Spring) is still live; "Everything That Can Be Carried" sits in staging.
-  `./scripts/edition.sh promote 2026-summer`. The living homepage only works
-  if the season is actually alive.
+- [x] **Promote the 2026-summer edition** [build] — done; Season XIII is the
+  front page, Spring XII retired to the shelf with a past-tense lifespan.
+  (Also fixed a latent build break: an unescaped `plate` shortcode inside the
+  edition's HTML working-notes comment.)
 - [ ] **Give the summer edition a cover** [voice] — `cover` / `cover_alt` are
   empty. One photographed work from the road is enough. Same for the empty
   `PLATE SLOT` in the body: drop in the first photographed painting of The 200.
-- [ ] **Write the Survival Notes project statement** [voice; build scaffolds] —
-  `/projects/survival-notes-from-the-near-future/` is the conceptual spine of
-  the whole summer and currently reads "This project is currently in
-  progress." It is the most-linked stub on the site.
-- [ ] **Wire the field log to /log/** [build] — the edition keeps an inline
-  field log *and* there's a Log section. Write once: post to `/log/`, have the
-  live edition surface the latest entries automatically.
+- [ ] **Write the Agile Meteor Press project page** [voice] — it reads
+  "Project overview coming soon," and the live edition now links to it as the
+  home of the bookbinding & letterpress craft (the edition's old
+  `/bookbinding-and-letterpress/` link pointed at a page that never existed).
+- [x] **Write the Survival Notes project statement** [voice; build scaffolds] —
+  scaffolded from the season's own words, marked `author = "claude"`, status
+  flipped to *ongoing*. **Kyle: make it yours** — it's the conceptual spine
+  of the summer and deserves first-person voice.
+- [x] **Wire the field log to /log/** [build] — done. The solstice entry is
+  now a real log post; the homepage surfaces the three latest log entries
+  under the edition's field-log note while a season is live. Post from the
+  road to `/log/` and the front page updates itself.
 
 ## 2. Fixes & migration debt
 
-- [ ] **Add og:image / summary_large_image cards** [build] — an art site whose
-  links unfurl with no image. Per-page image from the work's own photos, with
-  a site-wide fallback.
-- [ ] **Fold orphaned artwork pages into the Oeuvre** [build] — root-level
-  pages that are really artworks (`espress-machine`, `crystal-tooth-whale-intaglio`,
-  `future-capcitor`, `rainfall`, `sun`, …). Move each into
-  `content/oeuvre/<discipline>/<year>/<slug>/` with aliases so no URL breaks.
+- [x] **Add og:image / summary_large_image cards** [build] — done. Each page
+  unfurls with its own first co-located photo (resized to 1200px at build
+  time); the fallback painting is set in `config.toml` (`og_default_image`).
+- [x] **Fold orphaned artwork pages into the Oeuvre** [build] — done. Four of
+  the five were Ghost-era duplicates of works already catalogued; their URLs
+  now redirect to the canonical pages and their unique prose (Sunflowers
+  versions, Crystal Tooth Whale edition details) was merged in. Rainfall —
+  the one true orphan — lives at `/oeuvre/installation/2015/rainfall/`.
 - [x] **Audit internal links** [build] — a full scan of the built site found
   zero broken internal links; `/works/animism/` turned out to be a legacy
   alias redirecting to `/oeuvre/`, not a 404.
@@ -45,10 +51,9 @@ Two kinds of work are mixed here, marked accordingly:
   *animism: acknowledging animals have intelligence and souls* but the link
   just redirects to the oeuvre index. It deserves the real page the About
   list promises.
-- [ ] **De-Ghost the prose pages** [build] — `bio`, `artist-statement`, and
-  `cinema` are raw Ghost HTML blobs pasted into markdown. Convert to clean
-  markdown with words unchanged; make cinema embeds responsive instead of
-  200 px wide.
+- [x] **De-Ghost the prose pages** [build] — done. Bio and artist statement
+  are clean markdown with the words unchanged; cinema became per-film pages
+  (see below).
 - [ ] **Fill in collector metadata** [voice] — ~148 of 156 works have no
   `status` (available / sold / collection). The CSV backfill is already
   exhausted (`scripts/backfill_from_csv.py` reports all 48 matchable rows
@@ -57,9 +62,8 @@ Two kinds of work are mixed here, marked accordingly:
   it's added to a work's `[extra]`. Also: 45 post-2023 works have no CSV row
   at all — add them to the spreadsheet, and consider folding the CSV's
   `Remarks` column into page prose (the dry run prints the list).
-- [ ] **Clean the repo root** [build] — move migration-era audit files
-  (`metadata_audit*.csv`, `*_REPORT.md`, `BACKFILL_CANDIDATES.md`,
-  `external_images_report.txt`, `Kyle Oeuvre/`) into `docs/archive/`.
+- [x] **Clean the repo root** [build] — done; everything now lives in
+  `docs/archive/`, and `backfill_from_csv.py` points at the new CSV location.
 
 ## 3. New features
 
@@ -69,15 +73,15 @@ Two kinds of work are mixed here, marked accordingly:
   JSON bridge for the river service, not a stub.) What makes the ledger look
   unfinished is the *unrecorded* status on most rows — see the collector
   metadata item above.
-- [ ] **"Where to see the work" page** [build scaffolds; voice reviews] —
-  gallery representation (Truth or Consequences Contemporary; Sun and Dust),
-  what's available now, the shop, and a per-work *Enquire* mailto link with
-  the work's title prefilled. Right now buying interest has no path except
-  finding an email address on the About page.
-- [ ] **Per-film cinema pages** [build] — each film gets
-  `content/cinema/<slug>/` with duration/format/year metadata and a
-  full-width embed, per the SPEC's cinema schema. The cinema index becomes a
-  filmography.
+- [x] **"Where to see the work" page** [build scaffolds; voice reviews] —
+  scaffolded at `/collect/` (marked `author = "claude"`): representation, the
+  shop, and how to ask about a work. Every oeuvre work page now has an
+  *enquire* mailto with the title prefilled, and Collect sits in both
+  footers. **Kyle: review the wording.**
+- [x] **Per-film cinema pages** [build] — done: eight film pages with
+  format/location metadata and privacy-respecting embeds (youtube-nocookie /
+  vimeo dnt), and `/cinema/` is the filmography. Year and duration fields
+  render when added — Kyle can fill those in per film.
 
 ## 4. Telling the story better
 
@@ -95,8 +99,9 @@ Two kinds of work are mixed here, marked accordingly:
 - [ ] **Edition codas** [voice] — when a season retires, it gets a short
   "what actually happened" postscript before shelving. The editions archive
   then reads as a serialized autobiography, not a stack of old front pages.
-- [ ] **Retire Season XII with the first coda** [voice] — Spring 2026 retires
-  when Summer is promoted; write its postscript while it's fresh.
+- [ ] **Retire Season XII with the first coda** [voice] — Spring 2026 is now
+  retired (Summer was promoted 2026-07-06); write its postscript while it's
+  fresh.
 
 ---
 
