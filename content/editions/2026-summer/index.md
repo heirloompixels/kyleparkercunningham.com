@@ -1,12 +1,12 @@
 +++
 title = "Everything That Can Be Carried"
 date = 2026-06-21
-draft = true
 
 [extra]
 kind = "season"
 numeral = "XIII"
-status = "staging"
+status = "live"
+published = "2026-07-06"
 lifespan = "Lives June — September 2026"
 cover = ""
 cover_alt = ""
@@ -39,13 +39,13 @@ each one unique. The first iteration of a larger idea, made entirely on the move
 sale beginning at the summer solstice.
 
 <!-- PLATE SLOT: add a 200 painting once photographed —
-     {{ plate(path="...", alt="", title="", meta="watercolor · 2026") }} -->
+     {{/* plate(path="...", alt="", title="", meta="watercolor · 2026") */}} -->
 
 **Two books, bound in the forest.** First editions in the Sewn Boards structure: Wittgenstein's
 *Tractatus Logico-Philosophicus*, chosen for what it says about the limits of language in the age of
 the language model, and Whitman's *Leaves of Grass*, which Whitman set by hand. Austere limit against
 catalogue-everything abundance — the conceptual engine of the whole summer. (More on the craft:
-[Bookbinding & Letterpress](/bookbinding-and-letterpress/).)
+[Agile Meteor Press](/projects/agile-meteor-press/).)
 
 **The Periodic, field-printed.** The small art newspaper, now run off a laser printer and a lithium
 battery in the van — proof that a real publication can be made from the side of a road.
@@ -55,9 +55,9 @@ there are no walls, the landscape doing most of the talking.
 
 {{ marginalia(text="— field log —") }}
 
-A running record of the season. Newest at the top; I add to it from the road.
-
-> **2026-06-21** — Solstice. The season opens; the first of the 200 go up.
+A running record of the season lives in [the log](/log/), posted from the
+road. While this edition is the front page, the latest entries follow just
+below.
 
 <!--
   HOW TO ADD TO THIS EDITION (working notes — invisible in production while draft = true)

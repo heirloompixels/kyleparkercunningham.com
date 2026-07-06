@@ -77,6 +77,14 @@
   .h29 .ed-interlude blockquote{font-family:var(--h29-mono);font-size:.78rem;color:var(--h29-muted);line-height:2;border-left:2px solid var(--h29-line);padding-left:1rem;margin-top:1.2rem}
   .h29 .ed-interlude blockquote b{color:var(--h29-ink);font-weight:600}
 
+  .h29 .ed-fieldlog{max-width:34em;margin:1.6rem auto 0}
+  .h29 .ed-fieldlog .fl-row{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:baseline;padding:.55rem 0;border-bottom:1px solid var(--h29-line)}
+  .h29 .ed-fieldlog .fl-row .d{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.08em;color:var(--h29-muted)}
+  .h29 .ed-fieldlog .fl-row .t{font-size:1.02rem;transition:color .15s}
+  .h29 .ed-fieldlog .fl-row:hover .t{color:var(--h29-accent)}
+  .h29 .ed-fieldlog .fl-all{display:inline-block;margin-top:.9rem;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--h29-muted)}
+  .h29 .ed-fieldlog .fl-all:hover{color:var(--h29-accent)}
+
   .h29 .ed-doors{margin-top:4rem}
   .h29 .ed-doors h4{font-family:var(--h29-mono);font-size:.74rem;letter-spacing:.3em;text-transform:uppercase;color:var(--h29-accent);text-align:center;margin-bottom:1.6rem}
   .h29 .ed-doorgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
@@ -199,6 +207,22 @@
       {% if edition.extra.ornament %}<div class="ed-orn">{{ edition.extra.ornament }}</div>{% endif %}
 
       {{ edition.content | safe }}
+
+      {# The season's field log, written once in /log/ and surfaced here while
+         the edition is live. The edition's permanent page stays as authored. #}
+      {% set log = get_section(path="log/_index.md") %}
+      {% set log_entries = log.pages | sort(attribute="date") | reverse | slice(end=3) %}
+      {% if log_entries | length > 0 %}
+      <section class="ed-fieldlog">
+        {% for e in log_entries %}
+        <a class="fl-row" href="{{ e.permalink }}">
+          <span class="d">{{ e.date | date(format="%Y·%m·%d") }}</span>
+          <span class="t">{{ e.title }}</span>
+        </a>
+        {% endfor %}
+        <a class="fl-all" href="{{ get_url(path='/log/') }}">The full log →</a>
+      </section>
+      {% endif %}
 
       <section class="ed-doors">
         <h4>Step deeper</h4>
