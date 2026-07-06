@@ -14,7 +14,7 @@ import csv, re, sys
 from pathlib import Path
 from collections import defaultdict
 
-CSV_PATH = Path("/Users/kpc/www/kyleparkercunningham.com/Kyle Oeuvre/Oeuvre-Table 1.csv")
+CSV_PATH = Path(__file__).resolve().parent.parent / "docs" / "archive" / "Kyle Oeuvre" / "Oeuvre-Table 1.csv"
 ROOT = Path(__file__).resolve().parent.parent
 PAINTINGS = ROOT / "content" / "oeuvre" / "painting"
 APPLY = "--apply" in sys.argv

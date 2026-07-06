@@ -38,8 +38,13 @@ Two kinds of work are mixed here, marked accordingly:
   pages that are really artworks (`espress-machine`, `crystal-tooth-whale-intaglio`,
   `future-capcitor`, `rainfall`, `sun`, …). Move each into
   `content/oeuvre/<discipline>/<year>/<slug>/` with aliases so no URL breaks.
-- [ ] **Fix broken About links** [build] — `/works/animism/` 404s; audit every
-  topic link on the About page.
+- [x] **Audit internal links** [build] — a full scan of the built site found
+  zero broken internal links; `/works/animism/` turned out to be a legacy
+  alias redirecting to `/oeuvre/`, not a 404.
+- [ ] **Write the animism topic page** [voice] — the About page lists
+  *animism: acknowledging animals have intelligence and souls* but the link
+  just redirects to the oeuvre index. It deserves the real page the About
+  list promises.
 - [ ] **De-Ghost the prose pages** [build] — `bio`, `artist-statement`, and
   `cinema` are raw Ghost HTML blobs pasted into markdown. Convert to clean
   markdown with words unchanged; make cinema embeds responsive instead of
