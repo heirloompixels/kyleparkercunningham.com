@@ -7,14 +7,21 @@
 {% set installation = get_section(path="oeuvre/installation/_index.md") %}
 {% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% set philosophy = get_section(path="oeuvre/philosophy/_index.md") %}
+{% set book_binding = get_section(path="oeuvre/book-binding/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 {% set n_pt = painting.pages | length %}
 {% set n_pr = printmaking.pages | length %}
 {% set n_in = installation.pages | length %}
 {% set n_sc = sculpture.pages | length %}
 {% set n_ex = exhibitions.pages | length %}
+{% set n_ph = philosophy.pages | length %}
+{% set n_bb = book_binding.pages | length %}
 {% set n_ot = other.pages | length %}
-{% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ot %}
+{# Project-type works are year subsections, not leaf pages; count them too. #}
+{% set_global n_proj = 0 %}
+{% for d in [painting, printmaking, installation, sculpture, exhibitions, philosophy, book_binding, other] %}{% for yp in d.subsections %}{% set ys = get_section(path=yp) %}{% set yc = ys.subsections | length %}{% set_global n_proj = n_proj + yc %}{% endfor %}{% endfor %}
+{% set works_count = n_pt + n_pr + n_in + n_sc + n_ex + n_ph + n_bb + n_ot + n_proj %}
 <footer class="foot">
   <div class="top">
     <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>

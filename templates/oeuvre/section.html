@@ -16,22 +16,46 @@
 {% set installation = get_section(path="oeuvre/installation/_index.md") %}
 {% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% set philosophy = get_section(path="oeuvre/philosophy/_index.md") %}
+{% set book_binding = get_section(path="oeuvre/book-binding/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 
-{% set works = painting.pages
+{# Project-type works are sections (a landing + child pages), not leaf pages, so
+   they live in each discipline's year subsections rather than in .pages. Walk
+   discipline -> year -> project to collect them, then merge into the ledger. #}
+{% set discs = [painting, printmaking, installation, sculpture, exhibitions, philosophy, book_binding, other] %}
+{% set_global projects = [] %}
+{% for d in discs %}{% for yp in d.subsections %}{% set ys = get_section(path=yp) %}{% for pp in ys.subsections %}{% set proj = get_section(path=pp) %}{% set_global projects = projects | concat(with=proj) %}{% endfor %}{% endfor %}{% endfor %}
+
+{% set page_works = painting.pages
   | concat(with=printmaking.pages)
   | concat(with=installation.pages)
   | concat(with=sculpture.pages)
   | concat(with=exhibitions.pages)
+  | concat(with=philosophy.pages)
+  | concat(with=book_binding.pages)
   | concat(with=other.pages)
+  | sort(attribute="date") | reverse
 %}
+{# Sections have no date; band and sort by the year in the path (components[2]).
+   Stable sort keeps the date order within each year for the leaf pages. #}
+{% set works = page_works | concat(with=projects) | sort(attribute="components.2") | reverse %}
+
 {% set n_painting = painting.pages | length %}
 {% set n_printmaking = printmaking.pages | length %}
 {% set n_installation = installation.pages | length %}
 {% set n_sculpture = sculpture.pages | length %}
 {% set n_exhibitions = exhibitions.pages | length %}
+{% set n_philosophy = philosophy.pages | length %}
+{% set n_book_binding = book_binding.pages | length %}
 {% set n_other = other.pages | length %}
-{% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_other %}
+{% set n_projects = projects | length %}
+{% set pj_pt = projects | filter(attribute="components.1", value="painting") | length %}
+{% set pj_pr = projects | filter(attribute="components.1", value="printmaking") | length %}
+{% set pj_in = projects | filter(attribute="components.1", value="installation") | length %}
+{% set pj_ph = projects | filter(attribute="components.1", value="philosophy") | length %}
+{% set pj_rest = n_projects - pj_pt - pj_pr - pj_in - pj_ph %}
+{% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_philosophy + n_book_binding + n_other + n_projects %}
 
 <header class="ledger-head">
   <h1>{{ section.title }} <span class="ledger-sub">— the working index</span></h1>
@@ -39,10 +63,11 @@
 
 <div class="ledger-statline">
   <span><b>{{ n_total }}</b> works catalogued</span>
-  <span><b>{{ n_painting }}</b> paintings</span>
-  <span><b>{{ n_printmaking }}</b> prints</span>
-  <span><b>{{ n_installation }}</b> installations</span>
-  <span><b>{{ n_sculpture + n_exhibitions + n_other }}</b> other</span>
+  <span><b>{{ n_painting + pj_pt }}</b> paintings</span>
+  <span><b>{{ n_printmaking + pj_pr }}</b> prints</span>
+  <span><b>{{ n_installation + pj_in }}</b> installations</span>
+  <span><b>{{ n_philosophy + pj_ph }}</b> philosophy</span>
+  <span><b>{{ n_sculpture + n_exhibitions + n_book_binding + n_other + pj_rest }}</b> other</span>
 </div>
 
 <div class="ledger-filters">
@@ -52,6 +77,8 @@
   <a class="chip" href="{{ installation.permalink }}">Installation</a>
   <a class="chip" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip" href="{{ exhibitions.permalink }}">Exhibitions</a>
+  <a class="chip" href="{{ philosophy.permalink }}">Philosophy</a>
+  <a class="chip" href="{{ book_binding.permalink }}">Book Binding</a>
   <a class="chip" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
@@ -67,17 +94,18 @@
     </tr>
   </thead>
   <tbody>
-    {% set_global prev_year = 0 %}
-    {% for p in works | sort(attribute="date") | reverse %}
-      {% if p.year != prev_year %}
-        {% set year_count = works | filter(attribute="year", value=p.year) | length %}
-        <tr class="yearband"><td colspan="5">{{ p.year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
-        {% set_global prev_year = p.year %}
+    {% set_global prev_year = "" %}
+    {% for p in works %}
+      {% set p_year = p.components[2] %}
+      {% if p_year != prev_year %}
+        {% set year_count = works | filter(attribute="components.2", value=p_year) | length %}
+        <tr class="yearband"><td colspan="5">{{ p_year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
+        {% set_global prev_year = p_year %}
       {% endif %}
-      {% set parts = p.path | split(pat="/") %}
       <tr>
         <td class="c-thumb">
           {% set thumb = p.assets | first %}
+          {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
           {% if thumb %}
             {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
             <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
@@ -86,7 +114,7 @@
           {% endif %}
         </td>
         <td class="c-title"><a href="{{ p.permalink }}">{{ p.title }}</a></td>
-        <td class="c-disc">{{ parts[2] }}</td>
+        <td class="c-disc">{{ p.components[1] }}</td>
         <td class="c-med">{{ p.extra.medium | default(value="—") }}</td>
         <td class="c-st"><span class="st st-{{ p.extra.status | default(value='unrecorded') | slugify }}">{{ p.extra.status | default(value="unrecorded") }}</span></td>
       </tr>
