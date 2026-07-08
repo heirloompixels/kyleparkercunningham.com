@@ -47,6 +47,16 @@ the language model, and Whitman's *Leaves of Grass*, which Whitman set by hand. 
 catalogue-everything abundance — the conceptual engine of the whole summer. (More on the craft:
 [Agile Meteor Press](/projects/agile-meteor-press/).)
 
+{% interlude(kicker="Bound in the field", title="The bindery loses its walls too", image="editions/2026-summer/bindery-at-dusk.jpg", image_alt="Binding a book on a boulder in an aspen grove at dusk, materials spread out around the work") %}
+The *Tractatus* was sewn and cased by headlamp in a creek bottom below the Wild Iris crags,
+outside Lander, Wyoming — glue pot, awl, thread and boards laid out on a boulder while the light
+went. A book about the limits of language, finished at the exact hour the light runs out.
+{% end %}
+
+{{ diptych(left="editions/2026-summer/sewing-the-boards.jpg", left_alt="Close-up of sewing the boards by headlamp", left_title="sewing the boards", left_meta="Lander, Wyoming · 2026", right="editions/2026-summer/reading-on-the-rock.jpg", right_alt="Reading the finished book on a rock in period dress", right_title="the first reading", right_meta="Lander, Wyoming · 2026") }}
+
+{{ plate(path="editions/2026-summer/tractatus-bound.jpg", alt="The finished Tractatus — boards covered in black walnut–dyed Mohawk Superfine cardstock, with a linen spine and an embossed goatskin TRACTATUS label, resting on stone", title="Tractatus Logico-Philosophicus", meta="first edition, Sewn Boards binding · museum board & folding stock cased in black walnut–dyed Mohawk Superfine cardstock · linen spine, embossed goatskin label · Lander, Wyoming · 2026") }}
+
 **The Periodic, field-printed.** The small art newspaper, now run off a laser printer and a lithium
 battery in the van — proof that a real publication can be made from the side of a road.
 
