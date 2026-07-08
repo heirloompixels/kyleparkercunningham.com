@@ -18,7 +18,7 @@
    Each json_encode is piped through `safe`: .html templates HTML-escape by
    default, which would turn json_encode's quotes/slashes into &quot;/&#x2F; and
    corrupt the JSON. -#}
-{%- set disciplines = ["painting", "printmaking", "installation", "sculpture", "exhibitions", "other"] -%}
+{%- set disciplines = ["painting", "printmaking", "installation", "sculpture", "exhibitions", "philosophy", "book-binding", "other"] -%}
 {%- set_global works = [] -%}
 {%- for d in disciplines -%}
   {%- set sec = get_section(path="oeuvre/" ~ d ~ "/_index.md") -%}

@@ -15,7 +15,10 @@
 {% block content %}
 {% set parts = section.path | split(pat="/") %}
 {% set disc = parts[2] %}
-{% set works = section.pages %}
+{# Collect project-type works (sections under year folders) alongside leaf pages. #}
+{% set_global projects = [] %}
+{% for yp in section.subsections %}{% set ys = get_section(path=yp) %}{% for pp in ys.subsections %}{% set proj = get_section(path=pp) %}{% set_global projects = projects | concat(with=proj) %}{% endfor %}{% endfor %}
+{% set works = section.pages | sort(attribute="date") | reverse | concat(with=projects) | sort(attribute="components.2") | reverse %}
 {% set n_total = works | length %}
 
 {% set oeuvre = get_section(path="oeuvre/_index.md") %}
@@ -24,6 +27,8 @@
 {% set installation = get_section(path="oeuvre/installation/_index.md") %}
 {% set sculpture = get_section(path="oeuvre/sculpture/_index.md") %}
 {% set exhibitions = get_section(path="oeuvre/exhibitions/_index.md") %}
+{% set philosophy = get_section(path="oeuvre/philosophy/_index.md") %}
+{% set book_binding = get_section(path="oeuvre/book-binding/_index.md") %}
 {% set other = get_section(path="oeuvre/other/_index.md") %}
 
 <header class="ledger-head">
@@ -33,9 +38,9 @@
 <div class="ledger-statline">
   <span><b>{{ n_total }}</b> work{{ n_total | pluralize }} in {{ section.title | lower }}</span>
   {% if works | length > 0 %}
-    {% set first = works | sort(attribute="date") | first %}
-    {% set last = works | sort(attribute="date") | last %}
-    <span>{{ first.year }} — {{ last.year }}</span>
+    {% set newest = works | first %}
+    {% set oldest = works | last %}
+    <span>{{ oldest.components[2] }} — {{ newest.components[2] }}</span>
   {% endif %}
   <span><a href="{{ oeuvre.permalink }}">← all disciplines</a></span>
 </div>
@@ -47,6 +52,8 @@
   <a class="chip {% if disc == 'installation' %}on{% endif %}" href="{{ installation.permalink }}">Installation</a>
   <a class="chip {% if disc == 'sculpture' %}on{% endif %}" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip {% if disc == 'exhibitions' %}on{% endif %}" href="{{ exhibitions.permalink }}">Exhibitions</a>
+  <a class="chip {% if disc == 'philosophy' %}on{% endif %}" href="{{ philosophy.permalink }}">Philosophy</a>
+  <a class="chip {% if disc == 'book-binding' %}on{% endif %}" href="{{ book_binding.permalink }}">Book Binding</a>
   <a class="chip {% if disc == 'other' %}on{% endif %}" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
@@ -62,16 +69,18 @@
     </tr>
   </thead>
   <tbody>
-    {% set_global prev_year = 0 %}
-    {% for p in works | sort(attribute="date") | reverse %}
-      {% if p.year != prev_year %}
-        {% set year_count = works | filter(attribute="year", value=p.year) | length %}
-        <tr class="yearband"><td colspan="5">{{ p.year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
-        {% set_global prev_year = p.year %}
+    {% set_global prev_year = "" %}
+    {% for p in works %}
+      {% set p_year = p.components[2] %}
+      {% if p_year != prev_year %}
+        {% set year_count = works | filter(attribute="components.2", value=p_year) | length %}
+        <tr class="yearband"><td colspan="5">{{ p_year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
+        {% set_global prev_year = p_year %}
       {% endif %}
       <tr>
         <td class="c-thumb">
           {% set thumb = p.assets | first %}
+          {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
           {% if thumb %}
             {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
             <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>

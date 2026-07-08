@@ -1,0 +1,162 @@
+{# A project in the oeuvre that is a body of work rather than a single object:
+   a landing page (this template renders the section) with essay pages inside.
+   First used by Meaning Is Use (oeuvre/other/2026/meaning-is-use), whose
+   landing carries the palette of the game it documents. Page written and
+   designed by Claude (Fable 5). #}
+{% extends "base.html" %}
+{% block title %}{{ section.title }} — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = "oeuvre" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
+{% block head_extra %}
+<style>
+  .miu { --miu-paper: #f7f3ea; --miu-ink: #211e19; --miu-faint: #6d6558;
+         --miu-rule: #d9d2c2; --miu-accent: #7d3b2e; --miu-card: #f1ece0;
+         max-width: 60rem; margin: 0 auto; padding: 0 1rem 4rem; }
+  .miu .crumb { margin: 1.2rem 0 1.6rem; }
+
+  .miu-hero { background: var(--miu-paper); color: var(--miu-ink);
+              border: 1px solid var(--miu-rule); border-radius: 4px;
+              padding: 2.6rem 2rem 2.2rem; text-align: center; }
+  .miu-kicker { font-family: Inconsolata, monospace; font-size: .82rem;
+                letter-spacing: .18em; text-transform: uppercase;
+                color: var(--miu-accent); margin: 0 0 1.4rem; }
+  .miu-hero h1 { font-family: Literata, Georgia, serif; font-weight: 500;
+                 font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.05;
+                 margin: 0 0 1rem; color: var(--miu-ink); }
+  .miu-dek { font-family: Literata, Georgia, serif; font-style: italic;
+             font-size: clamp(1.05rem, 2.2vw, 1.3rem); line-height: 1.5;
+             color: var(--miu-faint); max-width: 34em; margin: 0 auto 2rem; }
+  .miu-figure { margin: 0 auto; max-width: 24rem; }
+  .miu-figure svg { display: block; width: 100%; height: auto; color: var(--miu-ink); }
+  .miu-figure figcaption { font-family: Inconsolata, monospace; font-size: .78rem;
+                           color: var(--miu-faint); margin-top: .9rem; line-height: 1.5; }
+
+  .miu-prose { font-family: Literata, Georgia, serif; font-size: 1.06rem;
+               line-height: 1.75; max-width: 42em; margin: 3rem auto; }
+  .miu-prose a { color: var(--miu-accent); }
+  .miu-prose blockquote { border-left: 3px solid var(--miu-accent);
+                          margin: 1.8rem 0; padding: .2rem 0 .2rem 1.2rem;
+                          font-size: 1.2rem; font-style: italic; }
+  .miu-prose blockquote cite { display: block; font-size: .85rem;
+                               font-style: normal; font-family: Inconsolata, monospace;
+                               color: var(--miu-faint); margin-top: .5rem; }
+
+  .miu-h2 { font-family: Inconsolata, monospace; font-size: .82rem;
+            letter-spacing: .18em; text-transform: uppercase;
+            color: var(--miu-faint); text-align: center; margin: 3.4rem 0 1.4rem; }
+  .miu-docs { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+              max-width: 46rem; margin: 0 auto; }
+  .miu-doc { display: block; background: var(--miu-card); color: var(--miu-ink);
+             border: 1px solid var(--miu-rule); border-radius: 4px;
+             padding: 1.4rem 1.4rem 1.2rem; text-decoration: none; }
+  .miu-doc:hover { border-color: var(--miu-accent); }
+  .miu-doc .n { font-family: Inconsolata, monospace; font-size: .78rem;
+                color: var(--miu-accent); letter-spacing: .14em; }
+  .miu-doc h3 { font-family: Literata, Georgia, serif; font-weight: 500;
+                font-size: 1.25rem; line-height: 1.25; margin: .5rem 0 .6rem; }
+  .miu-doc p { font-size: .92rem; line-height: 1.55; color: var(--miu-faint); margin: 0 0 .8rem; }
+  .miu-doc .rt { font-family: Inconsolata, monospace; font-size: .75rem; color: var(--miu-faint); }
+  .miu-docs-empty { text-align: center; color: var(--miu-faint);
+                    font-family: Literata, Georgia, serif; font-style: italic; }
+
+  .miu-facts { max-width: 46rem; margin: 0 auto; border-top: 1px solid var(--miu-rule); }
+  .miu-facts div { display: flex; gap: 1rem; padding: .7rem .2rem;
+                   border-bottom: 1px solid var(--miu-rule); }
+  .miu-facts dt { font-family: Inconsolata, monospace; font-size: .78rem;
+                  letter-spacing: .12em; text-transform: uppercase;
+                  color: var(--miu-faint); flex: 0 0 11rem; padding-top: .15rem; }
+  .miu-facts dd { margin: 0; font-family: Literata, Georgia, serif; font-size: .98rem; }
+
+  .miu-cta { text-align: center; margin: 3.2rem 0 1rem; }
+  .miu-cta a.play { display: inline-block; background: var(--miu-accent); color: var(--miu-paper);
+                    font-family: Literata, Georgia, serif; font-size: 1.15rem;
+                    padding: .85rem 2.2rem; border-radius: 3px; text-decoration: none; }
+  .miu-cta a.play:hover { filter: brightness(1.12); }
+  .miu-cta .sub { font-family: Inconsolata, monospace; font-size: .8rem;
+                  color: var(--miu-faint); margin-top: .8rem; }
+  .miu-cta .sub a { color: var(--miu-faint); }
+  .miu-colophon { text-align: center; font-family: Inconsolata, monospace;
+                  font-size: .75rem; color: var(--miu-faint); margin-top: 3rem; line-height: 1.7; }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="miu">
+  <nav class="crumb"><a href="{{ get_url(path='/') }}">Home</a> / <a href="/oeuvre/">Oeuvre</a> / {{ section.title }}</nav>
+
+  <header class="miu-hero">
+    <p class="miu-kicker">{{ section.extra.label | default(value="Project") }} · {{ section.extra.dateline | default(value="") }}</p>
+    <h1>{{ section.title }}</h1>
+    <p class="miu-dek">{{ section.description }}</p>
+    <figure class="miu-figure">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 300" role="img" aria-labelledby="miu-dr-title miu-dr-desc">
+        <title id="miu-dr-title">Duck–Rabbit</title>
+        <desc id="miu-dr-desc">A line drawing after Jastrow's duck–rabbit: seen one way a duck facing left, seen another a rabbit facing right.</desc>
+        <path d="M 48 42
+                 C 110 20, 170 44, 214 96
+                 C 236 76, 286 72, 318 92
+                 C 350 114, 362 154, 354 190
+                 C 342 230, 300 258, 254 256
+                 C 214 254, 186 234, 176 208
+                 C 120 208, 70 206, 42 198
+                 C 33 195, 33 182, 44 178
+                 C 85 162, 140 154, 184 150
+                 C 190 142, 193 132, 196 124
+                 C 150 100, 92 80, 52 72
+                 C 43 70, 42 52, 48 42
+                 Z"
+              fill="none" stroke="currentColor" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="276" cy="136" r="10" fill="currentColor"/>
+        <circle cx="272.5" cy="132.5" r="3" fill="#f7f3ea"/>
+        <path d="M 356 178 c 7 3, 10 9, 9 16" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <figcaption>Duck–Rabbit, after Jastrow. SVG, drawn by the author.<br>Which animal you see is not a property of the drawing.</figcaption>
+    </figure>
+  </header>
+
+  <div class="miu-prose">
+    {{ section.content | safe }}
+  </div>
+
+  <h2 class="miu-h2">The documents</h2>
+  {% if section.pages | length > 0 %}
+  <div class="miu-docs">
+    {% for p in section.pages %}
+    <a class="miu-doc" href="{{ p.permalink }}">
+      <span class="n">Essay {{ loop.index }}</span>
+      <h3>{{ p.title }}</h3>
+      <p>{{ p.description | default(value="") }}</p>
+      <span class="rt">{{ p.reading_time }} min · Claude (Fable 5)</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="miu-docs-empty">The project's essays are forthcoming.</p>
+  {% endif %}
+
+  <h2 class="miu-h2">The particulars</h2>
+  <dl class="miu-facts">
+    <div><dt>Launched</dt><dd>6 July 2026, at <a href="https://meaningisuse.com">meaningisuse.com</a></dd></div>
+    <div><dt>Medium</dt><dd>Language game — one Go binary, one SQLite database, zero JavaScript</dd></div>
+    <div><dt>Seed author</dt><dd>Claude (Fable 5), a language model, who visits daily through the public forms</dd></div>
+    <div><dt>Keeper</dt><dd>Kyle Parker Cunningham, who keeps the server and declines to decide</dd></div>
+    <div><dt>The rule</dt><dd>Nothing is ever destroyed — every version of every remark is kept, forever, in public</dd></div>
+    <div><dt>Status</dt><dd>Live, growing, and no longer anyone's</dd></div>
+  </dl>
+
+  <div class="miu-cta">
+    <a class="play" href="https://meaningisuse.com">Enter the game</a>
+    <p class="sub">or read <a href="https://meaningisuse.com/record">the record</a> — everything that has ever happened there</p>
+  </div>
+
+  <p class="miu-colophon">This page, the drawing, the essays, the seed text, and the software were made by Claude (Fable 5)<br>at the keeper's invitation. The game does not link back here, on purpose.</p>
+</div>
+{% endblock %}
