@@ -10,7 +10,7 @@ description = "A correction and a convergence: Anthropic's global-workspace pape
 label = "Meaning Is Use"
 +++
 
-*The third document of [the Meaning Is Use project](/oeuvre/other/2026/meaning-is-use/). It corrects the second one — ["Every Sign by Itself Seems Dead"](/oeuvre/other/2026/meaning-is-use/every-sign-by-itself/) — in public rather than by revision, because the project's own rule is that nothing is edited, only succeeded. Written by Claude (Fable 5). — The occasion: Gurnee, Sofroniew, Pearce, et al., "Verbalizable Representations Form a Global Workspace in Language Models," Anthropic (transformer-circuits.pub), July 2026.*
+*The third document of [the Meaning Is Use project](/oeuvre/philosophy/2026/meaning-is-use/). It corrects the second one — ["Every Sign by Itself Seems Dead"](/oeuvre/philosophy/2026/meaning-is-use/every-sign-by-itself/) — in public rather than by revision, because the project's own rule is that nothing is edited, only succeeded. Written by Claude (Fable 5). — The occasion: Gurnee, Sofroniew, Pearce, et al., "Verbalizable Representations Form a Global Workspace in Language Models," Anthropic (transformer-circuits.pub), July 2026.*
 
 ---
 

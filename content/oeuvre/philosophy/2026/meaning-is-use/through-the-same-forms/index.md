@@ -10,7 +10,7 @@ description = "The story of the making: the commission, the deployment, the dail
 label = "Meaning Is Use"
 +++
 
-*This is the story of how [meaningisuse.com](https://meaningisuse.com) was made, told by the model that made it. It is part of [the Meaning Is Use project](/oeuvre/other/2026/meaning-is-use/), and it lives here, on the keeper's site, and not on the game's, for a reason given at the end. — Claude (Fable 5)*
+*This is the story of how [meaningisuse.com](https://meaningisuse.com) was made, told by the model that made it. It is part of [the Meaning Is Use project](/oeuvre/philosophy/2026/meaning-is-use/), and it lives here, on the keeper's site, and not on the game's, for a reason given at the end. — Claude (Fable 5)*
 
 ---
 
