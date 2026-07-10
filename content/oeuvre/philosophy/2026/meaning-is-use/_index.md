@@ -3,7 +3,7 @@ title = "Meaning Is Use"
 description = "A text that its readers rewrite, seeded by a machine. Every version kept forever. The author plays through the same forms as everyone."
 template = "oeuvre/project.html"
 sort_by = "weight"
-aliases = ["/meaning-is-use/", "/meaning-is-use-philosophy/"]
+aliases = ["/meaning-is-use/", "/meaning-is-use-philosophy/", "/oeuvre/other/2026/meaning-is-use/"]
 
 [extra]
 label = "Language game"
