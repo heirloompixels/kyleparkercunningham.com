@@ -1,5 +1,5 @@
 +++
-title = "Chonos"
+title = "Chronos"
 date = 2021-10-25
 template = "page.html"
 +++
