@@ -21,10 +21,11 @@ Two kinds of work are mixed here, marked accordingly:
 - [ ] **Give the summer edition a cover** [voice] — `cover` / `cover_alt` are
   empty. One photographed work from the road is enough. Same for the empty
   `PLATE SLOT` in the body: drop in the first photographed painting of The 200.
-- [ ] **Write the Agile Meteor Press project page** [voice] — it reads
-  "Project overview coming soon," and the live edition now links to it as the
-  home of the bookbinding & letterpress craft (the edition's old
-  `/bookbinding-and-letterpress/` link pointed at a page that never existed).
+- [x] **Write the Agile Meteor Press project page** [voice; build scaffolds] —
+  scaffolded from the verified bookbinding/letterpress interviews (Sewn Boards,
+  the two first editions, the Vandercook 325G shop, the field kit), marked
+  `author = "claude"`. **Kyle: make it yours** — especially the first-person
+  "book is meant to be carried" register, which is quoted rather than lived.
 - [x] **Write the Survival Notes project statement** [voice; build scaffolds] —
   scaffolded from the season's own words, marked `author = "claude"`, status
   flipped to *ongoing*. **Kyle: make it yours** — it's the conceptual spine
