@@ -8,10 +8,16 @@
 <article class="edition-issue edition-{{ edition.slug }}">
 
   {% if edition.extra.cover %}
+    {% set cover_sm = resize_image(path=edition.extra.cover, width=800, op="fit_width") %}
+    {% set cover_md = resize_image(path=edition.extra.cover, width=1400, op="fit_width") %}
     {% set cover_lg = resize_image(path=edition.extra.cover, width=2000, op="fit_width") %}
     <div class="edition-cover-track edition-bleed">
       <div class="edition-cover">
-        <img src="/{{ cover_lg.static_path | replace(from='static/', to='') }}" alt="{{ edition.extra.cover_alt | default(value=edition.title) }}">
+        <img
+          src="/{{ cover_md.static_path | replace(from='static/', to='') }}"
+          srcset="/{{ cover_sm.static_path | replace(from='static/', to='') }} 800w, /{{ cover_md.static_path | replace(from='static/', to='') }} 1400w, /{{ cover_lg.static_path | replace(from='static/', to='') }} 2000w"
+          sizes="100vw"
+          alt="{{ edition.extra.cover_alt | default(value=edition.title) }}">
         <div class="veil"></div>
         <div class="tag">
           <div class="who">Kyle Parker Cunningham</div>
