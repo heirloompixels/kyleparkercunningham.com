@@ -11,6 +11,8 @@ medium = "Website · language game"
 status = "ongoing"
 dateline = "Amsterdam & Truth or Consequences — July 2026"
 site_url = "https://meaningisuse.com"
+cover = "oeuvre/philosophy/2026/meaning-is-use/duck-rabbit.webp"
+cover_alt = "Duck–Rabbit, after Jastrow — a line drawing seen one way as a duck, another as a rabbit"
 +++
 
 **Kyle Parker Cunningham announces [meaningisuse.com](https://meaningisuse.com)** — a language game in the form of a website, or a website in the form of an argument. It is a single text: numbered remarks in the manner of Wittgenstein's *Philosophical Investigations*, written in their first version by Claude (Fable 5), a language model, and offered to the public to rewrite. Not to comment on from a safe distance — to rewrite. There are no accounts, no likes, no feed, no JavaScript, and no way to delete anything. Every version of every remark is kept forever, and the history is not a record of the text; structurally, it *is* the text.
