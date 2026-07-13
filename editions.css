@@ -1,0 +1,257 @@
+/* ==========================================================================
+   EDITIONS — base styles for the living homepage issues
+   Each edition may ship its own co-located `edition.css` that overrides
+   anything here. This file provides the shared structure only.
+   ========================================================================== */
+
+:root {
+  --ed-night: #14120f;
+  --ed-night-chalk: #e6dfd3;
+  --ed-night-dim: #94897a;
+  --ed-gold: #c9a35c;
+}
+
+/* The issue escapes the site's 78ch column */
+.edition-issue {
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+.edition-bleed {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+/* ---------- cover ---------- */
+.edition-cover-track { height: 220vh; position: relative; }
+.edition-cover { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.edition-cover img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  transform: scale(1.15);
+}
+@supports (animation-timeline: view()) {
+  .edition-cover img {
+    animation: ed-settle linear both;
+    animation-timeline: view(block);
+    animation-range: exit 0% exit 100%;
+  }
+  @keyframes ed-settle { from { transform: scale(1.45); } to { transform: scale(1.02); } }
+}
+.edition-cover .veil {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(20,18,15,.52), transparent 45%);
+}
+.edition-cover .tag {
+  position: absolute;
+  left: clamp(1.4rem, 4vw, 3.5rem);
+  bottom: clamp(1.6rem, 5vh, 3.4rem);
+  color: #f4efe6;
+}
+.edition-cover .tag .who {
+  font-family: "Inconsolata", monospace;
+  font-size: .78rem; letter-spacing: .34em; text-transform: uppercase;
+}
+.edition-cover .tag .what {
+  font-family: "Literata", serif; font-style: italic; font-weight: 300;
+  font-size: clamp(1.4rem, 3vw, 2.1rem); margin-top: .6rem; opacity: .92;
+}
+.edition-cover .hint {
+  position: absolute;
+  right: clamp(1.4rem, 4vw, 3.5rem);
+  bottom: clamp(1.6rem, 5vh, 3.4rem);
+  color: #f4efe6;
+  font-family: "Inconsolata", monospace;
+  font-size: .7rem; letter-spacing: .3em; text-transform: uppercase;
+  opacity: .75; writing-mode: vertical-rl;
+}
+
+/* ---------- masthead ---------- */
+.edition-masthead { text-align: center; padding: 7rem 2rem 4.5rem; max-width: 900px; margin: 0 auto; }
+.edition-masthead .season {
+  font-family: "Inconsolata", monospace;
+  font-size: .76rem; letter-spacing: .44em; text-transform: uppercase; color: var(--accent);
+}
+.edition-masthead h1 {
+  font-size: clamp(2.8rem, 7.5vw, 5.6rem);
+  font-weight: 300; font-style: italic; line-height: 1.04;
+  margin: 1.6rem 0 0; letter-spacing: -.01em;
+}
+.edition-masthead .deck {
+  max-width: 46ch; margin: 2.4rem auto 0;
+  font-size: 1.18rem; font-weight: 300; color: var(--muted); line-height: 1.7;
+}
+.edition-masthead .dateline {
+  font-family: "Inconsolata", monospace;
+  font-size: .74rem; letter-spacing: .2em; color: var(--muted);
+  margin-top: 2.4rem; text-transform: uppercase;
+}
+.edition-orn { display: flex; align-items: center; gap: 1.2rem; max-width: 280px; margin: 2.6rem auto 0; }
+.edition-orn::before, .edition-orn::after { content: ""; flex: 1; border-top: 1px solid var(--line); }
+.edition-orn span { color: var(--accent); font-size: .9rem; }
+
+/* ---------- body prose ---------- */
+.edition-body > p {
+  max-width: 62ch; margin: 0 auto 1.6rem; padding: 0 2rem; font-weight: 300;
+}
+.edition-body > p:first-of-type { padding-top: 3rem; }
+.edition-body > p:first-of-type::first-letter {
+  font-size: 3.6em; float: left; line-height: .82;
+  padding: .05em .14em 0 0; font-weight: 500; font-style: normal;
+}
+.ed-marginalia {
+  display: block; max-width: 62ch; margin: 2.2rem auto .4rem; padding: 0 2rem;
+  font-family: "Inconsolata", monospace; font-size: .76rem;
+  color: var(--accent); letter-spacing: .08em;
+}
+
+/* ---------- plates ---------- */
+.ed-plate { padding: 3rem 0; text-align: center; width: 100vw; margin-left: calc(50% - 50vw); }
+.ed-plate img {
+  display: block; margin-left: auto; margin-right: auto;
+  max-height: 88vh; max-width: min(1000px, 92vw); width: auto;
+  box-shadow: 0 2px 4px rgba(30,26,22,.08), 0 24px 70px rgba(30,26,22,.16);
+}
+.ed-plate figcaption {
+  font-family: "IBM Plex Sans", sans-serif; font-size: .78rem;
+  color: var(--muted); margin-top: 1.4rem; letter-spacing: .04em;
+}
+.ed-plate figcaption i { font-family: "Literata", serif; font-style: italic; font-size: .95rem; color: var(--ink); }
+
+.ed-diptych {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem;
+  width: 100vw; margin-left: calc(50% - 50vw);
+  max-width: 1150px; padding: 3rem 2rem; align-items: end;
+}
+@media (min-width: 1150px) { .ed-diptych { margin-left: calc(50% - 575px); } }
+.ed-diptych figure { text-align: center; margin: 0; }
+.ed-diptych img {
+  max-width: 100%;
+  box-shadow: 0 2px 4px rgba(30,26,22,.08), 0 18px 50px rgba(30,26,22,.14);
+}
+.ed-diptych figcaption {
+  font-family: "IBM Plex Sans", sans-serif; font-size: .76rem; color: var(--muted); margin-top: 1.2rem;
+}
+.ed-diptych figcaption i { font-family: "Literata", serif; font-style: italic; color: var(--ink); font-size: .92rem; }
+@media (max-width: 700px) { .ed-diptych { grid-template-columns: 1fr; } }
+
+/* ---------- wall quote ---------- */
+.ed-wallquote { padding: 6rem 2rem; text-align: center; }
+.ed-wallquote p {
+  font-size: clamp(1.7rem, 4.2vw, 3rem);
+  font-weight: 300; font-style: italic; line-height: 1.3;
+  max-width: 24ch; margin: 0 auto;
+}
+.ed-wallquote span {
+  display: block; font-family: "Inconsolata", monospace;
+  font-size: .72rem; letter-spacing: .3em; text-transform: uppercase;
+  color: var(--muted); margin-top: 2rem;
+}
+
+/* ---------- night interlude ---------- */
+.ed-interlude {
+  background: var(--ed-night); color: var(--ed-night-chalk);
+  padding: 6.5rem 2rem 7rem; margin-top: 4rem;
+  width: 100vw; margin-left: calc(50% - 50vw);
+}
+.ed-interlude-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: minmax(0,5fr) minmax(0,4fr);
+  gap: 4rem; align-items: center;
+}
+@media (max-width: 820px) { .ed-interlude-inner { grid-template-columns: 1fr; } }
+.ed-interlude img { max-width: 100%; box-shadow: 0 0 0 1px rgba(230,223,211,.06), 0 26px 70px rgba(0,0,0,.7); }
+.ed-kicker {
+  font-family: "Inconsolata", monospace;
+  font-size: .72rem; letter-spacing: .34em; text-transform: uppercase; color: var(--ed-gold);
+}
+.ed-interlude h2 {
+  font-size: clamp(1.7rem, 3.2vw, 2.4rem);
+  font-weight: 300; font-style: italic; margin: 1.2rem 0 1.4rem; line-height: 1.2;
+}
+.ed-interlude p { font-weight: 300; color: var(--ed-night-dim); margin-bottom: 1.3rem; }
+.ed-interlude strong, .ed-interlude b { color: var(--ed-night-chalk); font-weight: 500; }
+.ed-interlude blockquote {
+  font-family: "Inconsolata", monospace; font-size: .78rem; font-style: normal;
+  color: var(--ed-night-dim); border-left: 2px solid var(--ed-gold);
+  padding: .2rem 0 .2rem 1rem; margin: 2rem 0 0; line-height: 2;
+}
+
+/* ---------- doors ---------- */
+.edition-doors { max-width: 1150px; margin: 0 auto; padding: 6.5rem 2rem 4rem; }
+.edition-doors h2 {
+  font-family: "IBM Plex Sans", sans-serif; font-size: .74rem; font-weight: 500;
+  letter-spacing: .3em; text-transform: uppercase; color: var(--muted);
+  text-align: center; margin-bottom: 3rem;
+}
+.edition-doorgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+@media (max-width: 760px) { .edition-doorgrid { grid-template-columns: 1fr; } }
+.edition-door {
+  border: 1px solid var(--line); padding: 2.6rem 2rem 2.4rem; text-align: center;
+  text-decoration: none;
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.edition-door:hover { border-color: var(--accent); background: var(--bg-accent); transform: translateY(-3px); }
+.edition-door .n { font-family: "Inconsolata", monospace; font-size: 2.6rem; font-weight: 300; color: var(--accent); line-height: 1; }
+.edition-door .t { font-style: italic; font-size: 1.3rem; margin-top: .8rem; }
+.edition-door .d { font-family: "IBM Plex Sans", sans-serif; font-size: .8rem; color: var(--muted); margin-top: .5rem; line-height: 1.5; }
+
+/* ---------- season colophon ---------- */
+.edition-colophon {
+  border-top: 1px solid var(--line);
+  max-width: 680px; margin: 3rem auto 0; padding: 4rem 2rem 4rem; text-align: center;
+}
+.edition-colophon .k {
+  font-family: "Inconsolata", monospace;
+  font-size: .7rem; letter-spacing: .34em; text-transform: uppercase; color: var(--accent);
+}
+.edition-colophon p { font-size: .98rem; color: var(--muted); font-weight: 300; margin-top: 1.4rem; }
+.edition-colophon .sig { font-style: italic; font-size: 1.05rem; color: var(--ink); margin-top: 2.2rem; }
+.edition-colophon .shelf-link {
+  display: inline-block; margin-top: 2.4rem;
+  font-family: "IBM Plex Sans", sans-serif; font-size: .74rem;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--accent);
+  text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 3px;
+}
+
+/* ==========================================================================
+   THE SHELF — /editions/ archive of retired front pages
+   ========================================================================== */
+.editions-intro { padding: 3rem 0 2.5rem; max-width: 54ch; }
+.editions-intro .k {
+  font-family: "Inconsolata", monospace;
+  font-size: .74rem; letter-spacing: .34em; text-transform: uppercase; color: var(--accent);
+}
+.editions-intro h1 { font-size: clamp(1.9rem, 3.6vw, 2.7rem); font-weight: 300; font-style: italic; margin-top: 1rem; line-height: 1.15; }
+.editions-intro p { color: var(--muted); font-weight: 300; margin-top: 1.2rem; font-size: 1rem; }
+
+.editions-current {
+  display: grid; grid-template-columns: minmax(0,5fr) minmax(0,4fr); gap: 2rem;
+  border: 2px solid var(--ink); padding: 1.6rem; margin-bottom: 3rem;
+  align-items: center; text-decoration: none; transition: background .15s;
+}
+.editions-current:hover { background: var(--bg-accent); }
+.editions-current img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; }
+.editions-current .k {
+  font-family: "Inconsolata", monospace;
+  font-size: .7rem; letter-spacing: .3em; text-transform: uppercase; color: #8a5a1f;
+}
+.editions-current .k::before { content: "●"; margin-right: .5rem; color: #3d6b3f; }
+.editions-current h2 { font-size: 1.7rem; font-weight: 300; font-style: italic; margin: .7rem 0 .5rem; line-height: 1.15; }
+.editions-current .m { font-family: "IBM Plex Sans", sans-serif; font-size: .8rem; color: var(--muted); }
+@media (max-width: 720px) { .editions-current { grid-template-columns: 1fr; } }
+
+.editions-shelf { display: flex; flex-direction: column; padding-bottom: 3rem; border-top: 1px solid var(--line); }
+.editions-vol {
+  display: grid; grid-template-columns: minmax(0,260px) 1fr; gap: 2rem;
+  align-items: center; padding: 1.8rem 0; border-bottom: 1px solid var(--line);
+  text-decoration: none; transition: background .15s;
+}
+.editions-vol:hover { background: var(--bg-accent); }
+.editions-vol img { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; filter: saturate(.9); }
+.editions-vol .no {
+  font-family: "Inconsolata", monospace;
+  font-size: .7rem; letter-spacing: .26em; text-transform: uppercase; color: var(--accent);
+}
+.editions-vol h3 { font-style: italic; font-weight: 300; font-size: 1.4rem; margin: .5rem 0 .4rem; line-height: 1.2; }
+.editions-vol .lived { font-family: "Inconsolata", monospace; font-size: .72rem; color: var(--muted); }
+.editions-vol .desc { font-family: "IBM Plex Sans", sans-serif; font-size: .85rem; color: var(--muted); margin-top: .7rem; line-height: 1.55; max-width: 60ch; }
+@media (max-width: 640px) { .editions-vol { grid-template-columns: 1fr; gap: 1rem; } }
