@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/the-atmospheres-electric-finger/", "/the-atmospheres-electric-finger/", "/oeuvre/2024/painting/the-atmospheres-electric-finger/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 Behold the awe which is the blinding light of lighting strikes when surrounded by the intense darkness of encroached clouds while miles away from domesticated electricity.
 

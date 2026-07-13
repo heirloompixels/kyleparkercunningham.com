@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/separate-yet-delicate-representations-of-existence/", "/separate-yet-delicate-representations-of-existence/", "/oeuvre/2024/painting/separate-yet-delicate-representations-of-existence/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 Living between chemical reactions and gravity.
 

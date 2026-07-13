@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/out-there-on-the-horizon-a-solitary-cloud/", "/oeuvre/2024/painting/out-there-on-the-horizon-a-solitary-cloud/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 A proud cloud caught in the act of looking perfect while it though no one was looking.
 

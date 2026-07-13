@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/low-angle-sun-rays/", "/low-angle-sun-rays/", "/oeuvre/2024/painting/low-angle-sun-rays/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 Wonder, about water vapor, dust and light angles. Effortlessly floating down the spine of the continental divide transporting moisture and spores. Aimlessly re-sculpting top soil creating art works while simultaneously eroding them like Buddhist monks and sand mandala's. Endlessly enigmatic, effortlessly aloft.
 

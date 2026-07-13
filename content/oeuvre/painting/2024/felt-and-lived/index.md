@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/felt-and-lived/", "/felt-and-lived/", "/oeuvre/2024/painting/felt-and-lived/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 The convergence of experience and emotion, where opposing forces meet in the center to create something new and unified.
 
