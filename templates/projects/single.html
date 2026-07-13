@@ -19,9 +19,15 @@
   </header>
 
   {% if page.extra.cover %}
+    {% set cover_sm = resize_image(path=page.extra.cover, width=800, op="fit_width") %}
+    {% set cover_md = resize_image(path=page.extra.cover, width=1200, op="fit_width") %}
     {% set cover = resize_image(path=page.extra.cover, width=1600, op="fit_width") %}
     <figure class="project-cover">
-      <img src="/{{ cover.static_path | replace(from='static/', to='') }}" alt="{{ page.title }} installation view">
+      <img
+        src="/{{ cover_md.static_path | replace(from='static/', to='') }}"
+        srcset="/{{ cover_sm.static_path | replace(from='static/', to='') }} 800w, /{{ cover_md.static_path | replace(from='static/', to='') }} 1200w, /{{ cover.static_path | replace(from='static/', to='') }} 1600w"
+        sizes="(max-width: 1180px) 100vw, 1180px"
+        alt="{{ page.title }} installation view">
     </figure>
   {% endif %}
 

@@ -5,8 +5,13 @@
 <section class="ed-interlude">
   <div class="ed-interlude-inner">
     {% if img %}
-      {% set i = resize_image(path=img, width=1200, op="fit_width") %}
-      <img src="/{{ i.static_path | replace(from='static/', to='') }}" alt="{{ img_alt }}" loading="lazy" decoding="async">
+      {% set i_sm = resize_image(path=img, width=480, op="fit_width") %}
+      {% set i = resize_image(path=img, width=960, op="fit_width") %}
+      <img
+        src="/{{ i.static_path | replace(from='static/', to='') }}"
+        srcset="/{{ i_sm.static_path | replace(from='static/', to='') }} 480w, /{{ i.static_path | replace(from='static/', to='') }} 960w"
+        sizes="(max-width: 680px) 100vw, 540px"
+        alt="{{ img_alt }}" loading="lazy" decoding="async">
     {% endif %}
     <div class="ed-interlude-text">
       {% if k %}<span class="ed-kicker">{{ k }}</span>{% endif %}

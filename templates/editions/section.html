@@ -30,8 +30,13 @@
 {% for edition in live %}
   <a class="editions-current" href="{{ edition.permalink }}">
     {% if edition.extra.cover %}
+      {% set cov_sm = resize_image(path=edition.extra.cover, width=480, op="fit_width") %}
       {% set cov = resize_image(path=edition.extra.cover, width=960, op="fit_width") %}
-      <img src="/{{ cov.static_path | replace(from='static/', to='') }}" alt="">
+      <img
+        src="/{{ cov.static_path | replace(from='static/', to='') }}"
+        srcset="/{{ cov_sm.static_path | replace(from='static/', to='') }} 480w, /{{ cov.static_path | replace(from='static/', to='') }} 960w"
+        sizes="(max-width: 720px) 100vw, 500px"
+        alt="">
     {% endif %}
     <span>
       <span class="k">Now live</span>
@@ -45,8 +50,13 @@
   {% for edition in retired %}
     <a class="editions-vol" href="{{ edition.permalink }}">
       {% if edition.extra.cover %}
+        {% set cov_sm = resize_image(path=edition.extra.cover, width=320, op="fit_width") %}
         {% set cov = resize_image(path=edition.extra.cover, width=640, op="fit_width") %}
-        <img src="/{{ cov.static_path | replace(from='static/', to='') }}" alt="">
+        <img
+          src="/{{ cov.static_path | replace(from='static/', to='') }}"
+          srcset="/{{ cov_sm.static_path | replace(from='static/', to='') }} 320w, /{{ cov.static_path | replace(from='static/', to='') }} 640w"
+          sizes="(max-width: 480px) 100vw, 320px"
+          alt="">
       {% endif %}
       <div class="body">
         <div class="no">{% if edition.extra.kind == "season" %}Season{% else %}Edition{% endif %} {{ edition.extra.numeral }}</div>

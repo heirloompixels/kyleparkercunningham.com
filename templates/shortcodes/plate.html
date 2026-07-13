@@ -1,13 +1,14 @@
 {% set alt_text = alt | default(value="") %}
 {% set t = title | default(value="") %}
 {% set m = meta | default(value="") %}
+{% set img_sm = resize_image(path=path, width=480, op="fit_width") %}
 {% set img_md = resize_image(path=path, width=960, op="fit_width") %}
 {% set img_lg = resize_image(path=path, width=1600, op="fit_width") %}
 <figure class="ed-plate">
   <img
     src="/{{ img_md.static_path | replace(from='static/', to='') }}"
-    srcset="/{{ img_md.static_path | replace(from='static/', to='') }} 960w, /{{ img_lg.static_path | replace(from='static/', to='') }} 1600w"
-    sizes="(max-width: 700px) 100vw, 90vw"
+    srcset="/{{ img_sm.static_path | replace(from='static/', to='') }} 480w, /{{ img_md.static_path | replace(from='static/', to='') }} 960w, /{{ img_lg.static_path | replace(from='static/', to='') }} 1600w"
+    sizes="(max-width: 700px) 100vw, (max-width: 1023px) 90vw, 920px"
     alt="{{ alt_text }}"
     loading="lazy"
     decoding="async"

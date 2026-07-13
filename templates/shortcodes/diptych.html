@@ -1,4 +1,6 @@
+{% set l_sm = resize_image(path=left, width=480, op="fit_width") %}
 {% set l_img = resize_image(path=left, width=960, op="fit_width") %}
+{% set r_sm = resize_image(path=right, width=480, op="fit_width") %}
 {% set r_img = resize_image(path=right, width=960, op="fit_width") %}
 {% set lt = left_title | default(value="") %}
 {% set rt = right_title | default(value="") %}
@@ -6,13 +8,22 @@
 {% set rm = right_meta | default(value="") %}
 {% set la = left_alt | default(value="") %}
 {% set ra = right_alt | default(value="") %}
+{% set diptych_sizes = "(max-width: 620px) 100vw, 540px" %}
 <div class="ed-diptych">
   <figure>
-    <img src="/{{ l_img.static_path | replace(from='static/', to='') }}" alt="{{ la }}" loading="lazy" decoding="async">
+    <img
+      src="/{{ l_img.static_path | replace(from='static/', to='') }}"
+      srcset="/{{ l_sm.static_path | replace(from='static/', to='') }} 480w, /{{ l_img.static_path | replace(from='static/', to='') }} 960w"
+      sizes="{{ diptych_sizes }}"
+      alt="{{ la }}" loading="lazy" decoding="async">
     {% if lt or lm %}<figcaption>{% if lt %}<i>{{ lt }}</i>{% endif %}{% if lt and lm %} · {% endif %}{{ lm }}</figcaption>{% endif %}
   </figure>
   <figure>
-    <img src="/{{ r_img.static_path | replace(from='static/', to='') }}" alt="{{ ra }}" loading="lazy" decoding="async">
+    <img
+      src="/{{ r_img.static_path | replace(from='static/', to='') }}"
+      srcset="/{{ r_sm.static_path | replace(from='static/', to='') }} 480w, /{{ r_img.static_path | replace(from='static/', to='') }} 960w"
+      sizes="{{ diptych_sizes }}"
+      alt="{{ ra }}" loading="lazy" decoding="async">
     {% if rt or rm %}<figcaption>{% if rt %}<i>{{ rt }}</i>{% endif %}{% if rt and rm %} · {% endif %}{{ rm }}</figcaption>{% endif %}
   </figure>
 </div>
