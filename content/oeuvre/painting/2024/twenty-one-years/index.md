@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/twenty-one-years/", "/twenty-one-years/", "/oeuvre/2024/painting/twenty-one-years/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 A celebration of time and growth, painted in arcs of vibrant color representing the journey through two decades of life and art.
 

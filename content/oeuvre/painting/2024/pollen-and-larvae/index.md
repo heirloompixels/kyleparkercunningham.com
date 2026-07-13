@@ -4,6 +4,9 @@ date = 2024-07-29
 category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/pollen-and-larvae/", "/pollen-and-larvae/", "/oeuvre/2024/painting/pollen-and-larvae/"]
+
+[extra]
+medium = "Oil on Linen"
 +++
 The dance of pollination and transformation, circles of life in geometric harmony.
 
