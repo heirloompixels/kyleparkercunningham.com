@@ -258,9 +258,7 @@ pre {
 }
 
 table.ledger {
-  /* escape the 78ch column */
-  width: min(1240px, calc(100vw - 2 * var(--space-m)));
-  margin-left: calc(50% - min(620px, 50vw - var(--space-m)));
+  width: 100%;
   border-collapse: collapse;
   font-family: "Inconsolata", ui-monospace, monospace;
   font-size: 0.88rem;
