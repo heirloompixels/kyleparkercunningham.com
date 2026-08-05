@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 33 — The Index (work)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  /* 33 — THE INDEX · record page.
+     A work page as a catalogue record: the image on the left, the complete
+     schema on the right — including the fields that are empty, marked
+     "unrecorded" rather than hidden. The prose is a field like any other.
+     At the foot, the record exactly as it is stored on disk. */
+  :root{
+    --paper:#fbfbf9; --panel:#f4f4f1; --ink:#15161a; --dim:#6b6f76; --faint:#9a9ea4;
+    --line:#e2e2dd; --hair:#eeeee9; --sig:#0f5d4c; --sig-bg:rgba(15,93,76,.09);
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --serif:'IBM Plex Serif',Georgia,serif;
+    --gut:clamp(.85rem,3vw,1.8rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 var(--gut)}
+
+  .sysbar{border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:20}
+  .sysbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    gap:.3rem 1.2rem;padding-top:.55rem;padding-bottom:.55rem;
+    font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--dim)}
+  .sysbar b{color:var(--ink);font-weight:500}
+  .sysbar .id{color:var(--sig);letter-spacing:.16em;text-transform:uppercase}
+  .sysbar nav{display:flex;gap:.9rem;flex-wrap:wrap}
+  .sysbar nav a{border-bottom:1px solid transparent}
+  .sysbar nav a:hover,.sysbar nav a.on{color:var(--sig);border-color:var(--sig)}
+
+  .crumb{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--dim);
+    padding:.9rem 0 .2rem;display:flex;flex-wrap:wrap;gap:.35rem}
+  .crumb a{border-bottom:1px solid transparent}
+  .crumb a:hover{color:var(--sig);border-color:var(--sig)}
+  .crumb .sep{color:var(--faint)}
+
+  .rechead{border-top:2px solid var(--ink);padding-top:.7rem;display:flex;justify-content:space-between;
+    align-items:flex-end;flex-wrap:wrap;gap:.6rem 1.6rem;padding-bottom:1rem;border-bottom:1px solid var(--line)}
+  .rechead .rid{font-family:var(--mono);font-size:11.5px;letter-spacing:.16em;color:var(--sig)}
+  .rechead h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.7rem,4.6vw,3rem);
+    line-height:1.1;letter-spacing:-.015em;margin-top:.35rem}
+  .rechead .ops{font-family:var(--mono);font-size:11px;color:var(--dim);display:flex;gap:.9rem;flex-wrap:wrap}
+  .rechead .ops a{border:1px solid var(--line);padding:.25rem .55rem;background:#fff}
+  .rechead .ops a:hover{border-color:var(--sig);color:var(--sig)}
+
+  /* two panes */
+  .panes{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+    gap:clamp(1.2rem,3.5vw,3rem);padding:clamp(1.2rem,3vw,2rem) 0 0;align-items:start}
+  @media(max-width:900px){.panes{grid-template-columns:1fr}}
+
+  .imgpane{position:sticky;top:3.2rem}
+  @media(max-width:900px){.imgpane{position:static;top:auto}}
+  .imgpane .main{border:1px solid var(--line);background:#fff;padding:.5rem}
+  .imgpane .main img{width:100%}
+  .imgpane .meta{font-family:var(--mono);font-size:10.5px;color:var(--faint);letter-spacing:.05em;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.2rem .8rem;margin-top:.4rem}
+  .imgpane .alt{font-size:12.5px;color:var(--dim);font-weight:300;line-height:1.55;
+    border-left:2px solid var(--line);padding-left:.7rem;margin-top:.7rem}
+  .imgpane .alt b{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+    color:var(--faint);display:block;margin-bottom:.2rem;font-weight:400}
+
+  /* the schema */
+  .fields{border-top:2px solid var(--ink)}
+  .fields h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;padding:.55rem 0 .7rem}
+  .frow{display:grid;grid-template-columns:9.5rem minmax(0,1fr);gap:.4rem 1rem;
+    padding:.42rem 0;border-bottom:1px solid var(--hair);align-items:baseline}
+  @media(max-width:480px){.frow{grid-template-columns:1fr;gap:.1rem}}
+  .frow dt{font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--dim)}
+  .frow dd{font-size:14.5px;line-height:1.5}
+  .frow dd.serif{font-family:var(--serif);font-size:16px}
+  .frow dd .un{color:var(--faint);font-family:var(--mono);font-size:11.5px;font-style:italic}
+  .frow dd a{color:var(--sig);border-bottom:1px solid var(--hair)}
+  .frow dd a:hover{border-color:var(--sig)}
+  .chip{display:inline-block;border:1px solid var(--line);background:#fff;padding:.05rem .4rem;
+    font-family:var(--mono);font-size:11px;color:var(--dim);margin:.12rem .18rem .12rem 0}
+  .chip:hover{border-color:var(--sig);color:var(--sig)}
+
+  .prosefield{margin-top:1.6rem;border-top:2px solid var(--ink);padding-top:.55rem}
+  .prosefield h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.8rem}
+  .prosefield .body{font-family:var(--serif);font-size:16.5px;line-height:1.68;max-width:62ch;font-weight:300}
+  .prosefield .body p{margin-bottom:1rem}
+  .prosefield .attr{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:.4rem;
+    border-top:1px solid var(--hair);padding-top:.5rem}
+
+  /* related by facet */
+  .related{margin-top:2.2rem;border-top:2px solid var(--ink);padding-top:.55rem}
+  .related h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.9rem}
+  .relgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(.6rem,1.6vw,1rem)}
+  .relgrid a{display:block}
+  .relgrid img{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line)}
+  .relgrid .q{font-family:var(--mono);font-size:10px;color:var(--sig);margin-top:.4rem;letter-spacing:.02em}
+  .relgrid .t{font-family:var(--serif);font-size:14px;line-height:1.3;margin-top:.1rem}
+  .relgrid a:hover .t{color:var(--sig)}
+  .relgrid a:hover img{border-color:var(--sig)}
+
+  /* raw record */
+  .raw{margin-top:2.2rem;border-top:2px solid var(--ink);padding-top:.55rem;padding-bottom:2.4rem}
+  .raw h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.7rem}
+  .raw pre{background:var(--panel);border:1px solid var(--line);padding:.9rem 1rem;overflow-x:auto;
+    font-family:var(--mono);font-size:11.5px;line-height:1.85;color:var(--ink)}
+  .raw pre .k{color:var(--sig)}
+  .raw pre .c{color:var(--faint)}
+  .raw .why{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:.5rem;line-height:1.8;max-width:80ch}
+
+  .pn{display:grid;grid-template-columns:1fr 1fr;border-top:2px solid var(--ink);margin-top:1rem}
+  @media(max-width:560px){.pn{grid-template-columns:1fr}}
+  .pn a{padding:.8rem 0}
+  .pn a+a{text-align:right;border-left:1px solid var(--hair);padding-left:1rem}
+  @media(max-width:560px){.pn a+a{text-align:left;border-left:none;border-top:1px solid var(--hair);padding-left:0}}
+  .pn .k{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--faint)}
+  .pn .t{font-family:var(--serif);font-size:16px;margin-top:.2rem}
+  .pn a:hover .t{color:var(--sig)}
+
+  footer.sysfoot{border-top:1px solid var(--line);background:var(--panel);margin-top:1.4rem}
+  footer.sysfoot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem 1.4rem;
+    padding-top:.8rem;padding-bottom:2.6rem;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em}
+  footer.sysfoot a:hover{color:var(--sig)}
+  footer.sysfoot b{color:var(--ink);font-weight:500}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:.35rem .5rem;opacity:.94}
+  .sw a{color:var(--paper);padding:0 .22rem}
+  .sw a.cur{color:#7fd8bd}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="sysbar">
+  <div class="wrap">
+    <span class="id">kpc · oeuvre index</span>
+    <nav>
+      <a class="on" href="33-the-index-home.html">records</a>
+      <a href="#">projects</a>
+      <a href="#">editions</a>
+      <a href="#">cinema</a>
+      <a href="#">log</a>
+      <a href="#">about</a>
+      <a href="#">colophon</a>
+    </nav>
+    <span>record <b>PT-2024-014</b> · 1 of 19 in this query</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <p class="crumb">
+    <a href="33-the-index-home.html">index</a><span class="sep">/</span>
+    <a href="#">discipline:painting</a><span class="sep">/</span>
+    <a href="#">year:2024</a><span class="sep">/</span>
+    <span>the-river-in-the-sky</span>
+  </p>
+
+  <header class="rechead">
+    <div>
+      <div class="rid">PT-2024-014 · /oeuvre/painting/2024/the-river-in-the-sky/</div>
+      <h1>the river in the sky</h1>
+    </div>
+    <div class="ops">
+      <a href="mailto:analogkyle@gmail.com?subject=the%20river%20in%20the%20sky%20%E2%80%94%20enquiry">enquire ✉</a>
+      <a href="#">json</a>
+      <a href="#">cite</a>
+      <a href="#">permalink</a>
+    </div>
+  </header>
+
+  <div class="panes">
+
+    <!-- ── IMAGE PANE ───────────────────────────────────────────────── -->
+    <div class="imgpane">
+      <div class="main">
+        <img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" width="1400" height="1400"
+             alt="Oil painting of clusters of luminous spheres in soft lavender, mauve, plum and white tones filling most of the canvas, with a strip of vivid blue sky visible between two large masses of bulbous cloud-like forms">
+      </div>
+      <div class="meta">
+        <span>the-river-in-the-sky.jpg</span>
+        <span>1400 × 1400 · 480/960/1600 variants</span>
+        <span>original preserved in bundle</span>
+      </div>
+      <p class="alt"><b>alt text (recorded)</b>Oil painting of clusters of luminous spheres in soft
+        lavender, mauve, plum and white tones filling most of the canvas, with a strip of vivid blue sky
+        visible between two large masses of bulbous cloud-like forms.</p>
+    </div>
+
+    <!-- ── FIELDS ───────────────────────────────────────────────────── -->
+    <div>
+      <section class="fields">
+        <h2>Record — universal work schema</h2>
+        <dl>
+          <div class="frow"><dt>title</dt><dd class="serif">the river in the sky</dd></div>
+          <div class="frow"><dt>year</dt><dd>2024 <span class="un">· dated 2024-07-29</span></dd></div>
+          <div class="frow"><dt>discipline</dt><dd><a href="33-the-index-home.html">painting</a></dd></div>
+          <div class="frow"><dt>medium</dt><dd>Oil on Linen</dd></div>
+          <div class="frow"><dt>dimensions</dt><dd><span class="un">unrecorded</span></dd></div>
+          <div class="frow"><dt>materials</dt><dd><span class="chip">oil</span><span class="chip">linen</span></dd></div>
+          <div class="frow"><dt>edition</dt><dd><span class="un">n/a — unique work</span></dd></div>
+          <div class="frow"><dt>status</dt><dd><span class="un">unrecorded</span> — <a href="#">how to enquire</a></dd></div>
+          <div class="frow"><dt>location</dt><dd><span class="un">unrecorded</span></dd></div>
+          <div class="frow"><dt>project</dt><dd><a href="#">the-memory-of-atmosphere</a> <span class="un">· complete · 2024</span></dd></div>
+          <div class="frow"><dt>series</dt><dd><span class="un">unrecorded</span></dd></div>
+          <div class="frow"><dt>tags</dt><dd><a class="chip" href="#">clouds</a><a class="chip" href="#">atmosphere</a><a class="chip" href="#">abstraction</a><a class="chip" href="#">water</a></dd></div>
+          <div class="frow"><dt>images</dt><dd>1 <span class="un">· the-river-in-the-sky.jpg</span></dd></div>
+          <div class="frow"><dt>external_links</dt><dd><a href="#">The Memory of Atmosphere — catalog (PDF)</a></dd></div>
+          <div class="frow"><dt>aliases</dt><dd><span class="un">/the-river-in-the-sky/ · /oeuvre/2024/painting/the-river-in-the-sky/ — both still resolve</span></dd></div>
+          <div class="frow"><dt>og:image</dt><dd><span class="un">site default — this work is the fallback share image for the whole site</span></dd></div>
+        </dl>
+      </section>
+
+      <section class="prosefield">
+        <h2>description — as written by the artist</h2>
+        <div class="body">
+          <p>Magic is the transportation of millions of gallons of water over thousands of miles in the
+          rivers of the atmosphere. Each molecule of water drifts aimlessly on a cyclical pilgrimage to
+          the tops of the mounts only to erode their way back to the melting pot of the oceans.</p>
+          <p>And then again upwards over the mountain.</p>
+          <p>Time moves forward and my memory grows long, so long those choice memories of the past are
+          now but impressions of emotion. Erosion of forms. Elongation of acceptance. Pronunciation of
+          the winds.</p>
+        </div>
+        <p class="attr">author: kpc · first published 2024-07-29 · unedited since</p>
+      </section>
+    </div>
+  </div>
+
+  <!-- ── RELATED BY FACET ───────────────────────────────────────────── -->
+  <section class="related">
+    <h2>Neighbours — records reachable from this one</h2>
+    <div class="relgrid">
+      <a href="#">
+        <img src="assets/oeuvre__painting__2024__the-algebra-of-water-vapor__the-algebra-of-water-vapor.jpg" width="1400" height="1400" alt="White impasto clouds drifting across a fragmented geometric blue and teal sky">
+        <div class="q">∧ project · ∧ medium</div><div class="t">the algebra of water vapor</div>
+      </a>
+      <a href="#">
+        <img src="assets/oeuvre__painting__2024__low-angle-sun-rays__rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg" width="1400" height="1400" alt="Billowing cumulus clouds in pinks and peach with golden highlights against deep navy">
+        <div class="q">∧ project · ∧ tag:clouds</div><div class="t">low angle sun rays</div>
+      </a>
+      <a href="#">
+        <img src="assets/oeuvre__painting__2024__towers__towers.jpg" width="1400" height="1400" alt="Towering cumulus clouds in sculptural white and gray brushstrokes against vivid blue">
+        <div class="q">∧ tag:clouds · ∧ year</div><div class="t">towers</div>
+      </a>
+      <a href="#">
+        <img src="assets/oeuvre__painting__2023__harmonics__harmonics.jpeg" width="1400" height="1658" alt="Framed oil painting of a cloud with angular lightning bolts descending from it">
+        <div class="q">→ precedes this work</div><div class="t">Harmonics, 2023</div>
+      </a>
+      <a href="#">
+        <img src="assets/oeuvre__painting__2023__first-contact__IMG_6715--1-.jpeg" width="1400" height="1401" alt="Stylized white clouds on a deep blue ground connected by jagged white lightning bolts">
+        <div class="q">→ precedes this work</div><div class="t">First Contact, 2023</div>
+      </a>
+      <a href="#">
+        <img src="assets/oeuvre__painting__2024__bottled-lightning__bottled-lightning.jpg" width="1400" height="1400" alt="Three glass mason jars each containing a cloud, one with a lightning bolt inside">
+        <div class="q">∧ project · ∧ tag:atmosphere</div><div class="t">bottled lightning</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── RAW ────────────────────────────────────────────────────────── -->
+  <section class="raw">
+    <h2>The record as stored — content/oeuvre/painting/2024/the-river-in-the-sky/index.md</h2>
+<pre>+++
+<span class="k">title</span>    = "the river in the sky"
+<span class="k">date</span>     = 2024-07-29
+<span class="k">category</span> = "painting"
+<span class="k">year</span>     = 2024
+<span class="k">aliases</span>  = ["/the-river-in-the-sky/",
+            "/oeuvre/2024/painting/the-river-in-the-sky/"]
+
+[extra]
+<span class="k">medium</span>   = "Oil on Linen"
+<span class="c"># dimensions = ""      unrecorded</span>
+<span class="c"># status     = ""      unrecorded</span>
++++
+Magic is the transportation of millions of gallons of water over
+thousands of miles in the rivers of the atmosphere. …
+
+{{ art_image(path="…/the-river-in-the-sky.jpg", alt="…") }}</pre>
+    <p class="why">One plain-text file per work, images beside it, no database. That is the durability
+      argument: this record can be read in fifty years by anything that can read a text file, and the
+      index above is generated from it rather than stored separately.</p>
+  </section>
+
+  <nav class="pn">
+    <a href="#"><div class="k">← previous · PT-2024-013</div><div class="t">the algebra of water vapor</div></a>
+    <a href="#"><div class="k">next · PT-2024-015 →</div><div class="t">separate yet delicate representations of existence</div></a>
+  </nav>
+</div>
+
+<footer class="sysfoot">
+  <div class="wrap">
+    <span><b>Kyle Parker Cunningham</b> — Truth or Consequences, New Mexico · 33.13° N, 107.25° W</span>
+    <span><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a> · <a href="33-the-index-home.html">back to the index</a></span>
+    <span>Static site · no tracking · <a href="#">works.json</a> · built <b>2026-07-06</b></span>
+  </div>
+</footer>
+
+<nav class="sw"><i>33</i><a href="33-the-index-home.html">home</a>·<a class="cur" href="33-the-index-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="32-the-specimen-home.html">32</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>

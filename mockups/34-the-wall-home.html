@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 34 — The Wall (home)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     34 — THE WALL
+     A painter's site whose homepage is the hang. No cards, no grid, no
+     index, no hero — you are put in front of the work immediately and you
+     walk past it. Every word on the page is marginalia: it sits in the left
+     rail, small, at the height of the thing it refers to, and never
+     interrupts the run of images. Scale does the editing — the big works
+     are big, the studies are small, and the wall breathes between them.
+     Reading is optional. Looking is not.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root{
+    --paper:#fff; --ink:#111110; --dim:#8b8b85; --faint:#c6c6c0; --hair:#e8e8e3;
+    --disp:'Instrument Serif',Georgia,serif;
+    --ui:'Inter',system-ui,-apple-system,sans-serif;
+    --gut:clamp(1.1rem,5vw,4rem);
+    --rail:12.5rem;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+  body{background:var(--paper);color:var(--ink);font-family:var(--ui);font-weight:300;line-height:1.6}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+
+  /* ── gallery signage: the only chrome ───────────────────────────────── */
+  .signage{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+  .signage .in{max-width:1560px;margin:0 auto;padding:.85rem var(--gut);
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.3rem 1.5rem}
+  .signage .name{font-family:var(--disp);font-size:1.05rem;letter-spacing:.01em;white-space:nowrap}
+  .signage nav{display:flex;gap:clamp(.8rem,2.6vw,1.9rem);flex-wrap:wrap;
+    font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+  .signage nav a{padding-bottom:2px;border-bottom:1px solid transparent}
+  .signage nav a:hover,.signage nav a.on{color:var(--ink);border-color:var(--ink)}
+
+  .stage{max-width:1560px;margin:0 auto;padding:0 var(--gut)}
+
+  /* ── the opening line — the whole of the site's copy, up front ──────── */
+  .opening{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+    column-gap:clamp(1.4rem,4.5vw,4.5rem);padding:clamp(4rem,14vh,10rem) 0 clamp(3.5rem,9vw,7rem)}
+  @media(max-width:820px){.opening{grid-template-columns:1fr}}
+  .opening .rail{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);line-height:2}
+  .opening h1{font-family:var(--disp);font-weight:400;font-size:clamp(2.4rem,7.4vw,6rem);
+    line-height:1.02;letter-spacing:-.015em;max-width:16ch}
+  .opening h1 em{font-style:italic;color:var(--dim)}
+  .opening .sub{font-size:.92rem;color:var(--dim);max-width:46ch;margin-top:clamp(1.4rem,3vw,2.4rem);line-height:1.75}
+  @media(max-width:820px){.opening .rail{margin-bottom:1.4rem}}
+
+  /* ── a piece on the wall ────────────────────────────────────────────── */
+  .piece{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+    column-gap:clamp(1.4rem,4.5vw,4.5rem);margin-bottom:clamp(4.5rem,13vw,12rem)}
+  @media(max-width:820px){.piece{grid-template-columns:1fr;margin-bottom:clamp(3rem,11vw,5rem)}}
+
+  .note{position:sticky;top:4.6rem;align-self:start;padding-top:.25rem}
+  @media(max-width:820px){.note{position:static;top:auto;order:2;padding-top:.7rem}}
+  .note .t{font-family:var(--disp);font-size:1.35rem;line-height:1.15;letter-spacing:.005em}
+  .note a.t:hover{border-bottom:1px solid var(--ink)}
+  .note .m{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:.5rem;line-height:1.9}
+  .note .g{font-size:.85rem;color:var(--dim);margin-top:.9rem;line-height:1.7;max-width:24ch}
+  .note .g em{font-style:italic;color:var(--ink)}
+  @media(max-width:820px){
+    .note .g{max-width:44ch}
+    .note{display:grid;grid-template-columns:1fr;gap:.1rem}
+  }
+
+  .art{order:1}
+  .art img{width:100%}
+  /* scale is the editing: not every work gets the same room */
+  .w-full{max-width:100%}
+  .w-lg{max-width:82%}
+  .w-md{max-width:60%}
+  .w-sm{max-width:40%}
+  .w-xs{max-width:30%}
+  @media(max-width:820px){.w-lg,.w-md{max-width:100%}.w-sm{max-width:74%}.w-xs{max-width:56%}}
+  .a-right{margin-left:auto}
+  .a-center{margin-left:auto;margin-right:auto}
+
+  /* a work that takes the whole wall, edge to edge */
+  .bleed{width:100vw;margin-left:calc(50% - 50vw);margin-bottom:clamp(4.5rem,13vw,12rem)}
+  .bleed img{width:100%}
+  .bleed .cap{max-width:1560px;margin:.9rem auto 0;padding:0 var(--gut);
+    display:flex;gap:.4rem 1.6rem;flex-wrap:wrap;align-items:baseline}
+  .bleed .cap .t{font-family:var(--disp);font-size:1.35rem}
+  .bleed .cap .m{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .bleed .cap .g{font-size:.85rem;color:var(--dim);max-width:44ch;line-height:1.7}
+
+  /* a breath: a single line of text, alone on the wall */
+  .breath{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+    column-gap:clamp(1.4rem,4.5vw,4.5rem);margin:clamp(1rem,4vw,3rem) 0 clamp(4.5rem,13vw,12rem)}
+  @media(max-width:820px){.breath{grid-template-columns:1fr}}
+  .breath .rail{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+  .breath p{font-family:var(--disp);font-weight:400;font-size:clamp(1.5rem,3.6vw,2.9rem);
+    line-height:1.22;max-width:26ch;font-style:italic;color:var(--ink)}
+
+  /* ── the end of the wall ────────────────────────────────────────────── */
+  .end{display:grid;grid-template-columns:var(--rail) minmax(0,1fr);
+    column-gap:clamp(1.4rem,4.5vw,4.5rem);border-top:1px solid var(--hair);
+    padding:clamp(2rem,5vw,3.4rem) 0 clamp(3.5rem,8vw,6rem)}
+  @media(max-width:820px){.end{grid-template-columns:1fr;gap:1.4rem}}
+  .end .rail{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);line-height:2.2}
+  .end .rail a:hover{color:var(--ink)}
+  .end .cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1.6rem}
+  .end h5{font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint);margin-bottom:.5rem}
+  .end p{font-size:.85rem;color:var(--dim);line-height:1.85}
+  .end p a:hover{color:var(--ink)}
+  .end .rooms a{display:block;font-family:var(--disp);font-size:1.15rem;color:var(--ink);
+    letter-spacing:0;text-transform:none;line-height:1.5}
+  .end .rooms a:hover{border-bottom:1px solid var(--ink);display:inline-block}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:#111110;color:#fff;
+    font-family:var(--ui);font-size:.66rem;letter-spacing:.14em;padding:.4rem .55rem;opacity:.9}
+  .sw a{color:#fff;padding:0 .22rem}
+  .sw a.cur{color:#e8b96a}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<header class="signage">
+  <div class="in">
+    <a class="name" href="34-the-wall-home.html">Kyle Parker Cunningham</a>
+    <nav>
+      <a class="on" href="#">The Wall</a>
+      <a href="34-the-wall-work.html">Oeuvre</a>
+      <a href="#">Projects</a>
+      <a href="#">Cinema</a>
+      <a href="#">Log</a>
+      <a href="#">About</a>
+    </nav>
+  </div>
+</header>
+
+<div class="stage">
+
+  <section class="opening">
+    <div class="rail">Summer 2026<br>Truth or Consequences</div>
+    <div>
+      <h1>I paint the life <em>I live.</em></h1>
+      <p class="sub">One hundred and sixty works, hung in one continuous run. Everything else — the
+        catalogue, the seasons, the films, the writing — is a door in the far wall. Walk first.</p>
+    </div>
+  </section>
+
+  <!-- ── the hang ─────────────────────────────────────────────────────── -->
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="34-the-wall-work.html">towers</a>
+      <div class="m">Oil on linen · 2024</div>
+      <p class="g">Looking up at clouds, seeing their magnificent height. The sky becomes architecture.</p>
+    </div>
+    <div class="art">
+      <img class="w-lg" src="assets/oeuvre__painting__2024__towers__towers.jpg" width="1400" height="1400"
+           alt="Oil painting of towering cumulus clouds rendered in thick sculptural white and gray brushstrokes against a vivid blue sky, with massive cloud columns rising from the bottom of the canvas">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">above the clouds</a>
+      <div class="m">Oil on linen · 2024</div>
+      <p class="g">Tres Piedras looks east over the Taos Gorge. From up in the tree line you feel as
+        though you are above the clouds.</p>
+    </div>
+    <div class="art">
+      <img class="w-md a-right" src="assets/oeuvre__painting__2024__above-the-clouds__above-the-clouds.jpg" width="1400" height="1400"
+           alt="Oil painting of a New Mexico landscape with faceted green and olive triangular mountains, white clouds between peaks, and a hazy pink sky">
+    </div>
+  </div>
+
+  <div class="breath">
+    <div class="rail">2024 — 2026</div>
+    <p>A painting is a record of weather that happened in a person.</p>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">Cyclum Lunarem</a>
+      <div class="m">24kt gold leaf · 2017</div>
+      <p class="g">A whole summer of moons, solstice to equinox, each on a 3⅜″ gilded square. It plays
+        with the light in the room.</p>
+    </div>
+    <div class="art">
+      <img class="w-sm" src="assets/oeuvre__installation__2017__cyclum-lunarem__cyclum_lunarem-2048.jpeg" width="1536" height="2048"
+           alt="Tall vertical column of gold-leafed square tiles, each painted with a lunar phase in muted grays and blacks on a white gallery wall">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">balance</a>
+      <div class="m">Drypoint, hand-coloured · 2021</div>
+      <p class="g">Finding balance in the forest. <em>Everything is something and is something else at
+        the same time.</em></p>
+    </div>
+    <div class="art">
+      <img class="w-lg a-right" src="assets/oeuvre__printmaking__2021__balance__balance2-1500w.jpeg" width="1400" height="933"
+           alt="Drypoint print on Rives BFK covered with dozens of hand-painted golden-yellow triangular tree forms, photographed on a bed of pine needles">
+    </div>
+  </div>
+</div>
+
+<!-- the whole wall, edge to edge -->
+<div class="bleed">
+  <img src="assets/oeuvre__installation__2022__once-creatures-existed__gallery-wide-webized.jpg" width="1400" height="371"
+       alt="Wide gallery view of the installation Once Creatures Existed, twenty-three paintings hung together across a long wall">
+  <div class="cap">
+    <span class="t">Once Creatures Existed</span>
+    <span class="m">Installation · 2022 · Desert Archaic</span>
+    <span class="g">Twenty-three paintings, October 2021 to January 2022. Ruminations on the ever
+      present world unfolding right before us.</span>
+  </div>
+</div>
+
+<div class="stage">
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">the mother bear</a>
+      <div class="m">Oil, oil stick, acrylic &amp; latex · 2021</div>
+      <p class="g">Twelve feet away, head buried in a rose hip bush. <em>I yelled "Hey Bear" and she
+        looked up at us for a split second.</em></p>
+    </div>
+    <div class="art">
+      <img class="w-full" src="assets/oeuvre__painting__2021__the-mother-bear__the-mother-bear-2000px.jpg" width="1400" height="867"
+           alt="Mixed media painting of a dark brown bear facing the viewer with an intense gaze, in thick expressive brushstrokes on orange-ochre ground against a speckled white background">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">Skull</a>
+      <div class="m">Intaglio drypoint · 2022</div>
+      <p class="g">The architecture under every portrait I've ever painted.</p>
+    </div>
+    <div class="art">
+      <img class="w-xs" src="assets/oeuvre__printmaking__2022__skull__IMG_3973.jpeg" width="1400" height="1867"
+           alt="Intaglio drypoint print of a human skull in three-quarter profile, hand-coloured with pale green and blue-gray washes on hand-torn paper">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="34-the-wall-work.html">The Black Fire</a>
+      <div class="m">Oil on linen · 2022 · sold</div>
+      <p class="g">Painted in the first days of the fire, watching the afternoon plumes blot out the
+        sun over the Aldo Leopold Wilderness.</p>
+    </div>
+    <div class="art">
+      <img class="w-lg a-right" src="assets/oeuvre__painting__2022__the-black-fire__the-black-fire-2000px.jpeg" width="1400" height="854"
+           alt="Oil painting on linen of a row of green conifers with brown trunks on red earth, with splashes of red and orange suggesting flames, against an abstracted gray and white sky">
+    </div>
+  </div>
+
+  <div class="breath">
+    <div class="rail">The wall continues</div>
+    <p>Though the day is long we are each but a piece of this being known as existence.</p>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">Saturday Evening Owls</a>
+      <div class="m">Acrylic, latex &amp; paint marker · 2022</div>
+      <p class="g">Four wonders I have known — some by sight, some by voice only, all of them for
+        extended periods of time.</p>
+    </div>
+    <div class="art">
+      <img class="w-md" src="assets/oeuvre__painting__2022__saturday-evening-owls__saturday-evening-owls.jpeg" width="1400" height="933"
+           alt="Acrylic painting of four stylized owls standing in a row with square and round faces, in pinks, mauves and grays against expressionistic brushstrokes">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">Solar Ascension</a>
+      <div class="m">Oil on linen · 34 × 34 in · 2020</div>
+      <p class="g">The triangle is the sun's shape when a child draws its rays, and the oldest mark on
+        the rock faces.</p>
+    </div>
+    <div class="art">
+      <img class="w-md a-right" src="assets/oeuvre__painting__2020__solar-ascension__solar-ascension.jpeg" width="1400" height="1416"
+           alt="Oil painting of a large triangle composed of multicoloured smaller triangles in pinks, reds, oranges, yellows and blues on a warm yellow-green ground">
+    </div>
+  </div>
+
+  <div class="piece">
+    <div class="note">
+      <a class="t" href="#">paper neck giraffes</a>
+      <div class="m">Oil on canvas · 2021</div>
+      <p class="g">The rare breed of the future, flatter than normal to use less water — with the
+        obligatory bonsai respirator apparatus.</p>
+    </div>
+    <div class="art">
+      <img class="w-sm" src="assets/oeuvre__painting__2021__paper-neck-giraffes__paper-neck-giraffes-2000px.jpg" width="1400" height="1643"
+           alt="Oil painting of three flat-bodied yellow giraffes with patterned hides, each carrying a glass globe respirator containing a bonsai tree, on brown earth against muted blue">
+    </div>
+  </div>
+
+  <!-- ── the far wall: the doors ──────────────────────────────────────── -->
+  <footer class="end">
+    <div class="rail">
+      Doors in the far wall
+    </div>
+    <div>
+      <div class="cols">
+        <div class="rooms">
+          <h5>Rooms</h5>
+          <a href="34-the-wall-work.html">The Oeuvre — 160</a>
+          <a href="#">Editions — XIII</a>
+          <a href="#">Projects — 9</a>
+          <a href="#">Cinema — 8</a>
+        </div>
+        <div>
+          <h5>The studio</h5>
+          <p>Truth or Consequences<br>New Mexico<br>33.13° N, 107.25° W</p>
+        </div>
+        <div>
+          <h5>Contact</h5>
+          <p><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a><br>
+            <a href="#">merveilles.town/@kpc</a><br><a href="#">Where to collect</a></p>
+        </div>
+        <div>
+          <h5>Represented by</h5>
+          <p><a href="#">Truth or Consequences Contemporary</a><br><a href="#">Sun and Dust</a>, Santa Fe</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<nav class="sw"><i>34</i><a class="cur" href="34-the-wall-home.html">home</a>·<a href="34-the-wall-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="32-the-specimen-home.html">32</a><a href="33-the-index-home.html">33</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>

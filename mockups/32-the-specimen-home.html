@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 32 — The Specimen (home)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     32 — THE SPECIMEN
+     The site as a printed object. Not "editorial-looking" — actually set
+     like a sheet off the Vandercook: a nameplate, a dateline bar, justified
+     columns with rules between them, plates numbered in the gathering, a
+     type specimen, a contents page, and a folio at the foot of every page.
+     Nothing here is a card. Everything here is a page.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root{
+    --news:#e9e3d6;          /* uncoated newsprint */
+    --news-2:#f2ede2;        /* second sheet, slightly brighter */
+    --ink:#16130d;
+    --ink-60:#5d564a;
+    --ink-35:#948b7a;
+    --spot:#b0301b;          /* the second run: vermillion */
+    --rule:#16130d;
+    --hair:#c2b9a5;
+    --disp:'Bodoni Moda',Didot,'Times New Roman',serif;
+    --text:'EB Garamond',Garamond,Georgia,serif;
+    --slug:'Inconsolata',ui-monospace,monospace;
+    --gut:clamp(.9rem,3.4vw,2rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{
+    background:var(--news);color:var(--ink);font-family:var(--text);
+    font-size:clamp(1.02rem,.98rem+.22vw,1.14rem);line-height:1.52;
+    /* the tooth of uncoated stock */
+    background-image:
+      radial-gradient(circle at 20% 30%,rgba(22,19,13,.022) 0 1px,transparent 1px),
+      radial-gradient(circle at 70% 65%,rgba(22,19,13,.018) 0 1px,transparent 1px);
+    background-size:7px 7px,11px 11px;
+  }
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto;filter:saturate(.94) contrast(1.02)}
+
+  .sheet{max-width:1220px;margin:0 auto;padding:0 var(--gut);
+    background:linear-gradient(var(--news-2),var(--news-2));
+    box-shadow:0 0 0 1px var(--hair),0 2px 0 rgba(22,19,13,.05),0 24px 60px rgba(22,19,13,.10)}
+
+  /* ── nameplate ──────────────────────────────────────────────────────── */
+  .plate-rules{border-top:5px solid var(--rule);margin-top:clamp(1rem,3vw,2.4rem)}
+  .plate-rules::after{content:"";display:block;border-top:1px solid var(--rule);margin-top:2px}
+  .nameplate{text-align:center;padding:clamp(1rem,3vw,1.9rem) 0 .7rem}
+  .nameplate .over{font-family:var(--slug);font-size:.66rem;letter-spacing:.5em;text-transform:uppercase;
+    color:var(--spot);margin-bottom:.7rem}
+  .nameplate h1{font-family:var(--disp);font-weight:500;font-size:clamp(2rem,8.4vw,6.6rem);
+    line-height:.92;letter-spacing:-.005em;font-optical-sizing:auto}
+  .nameplate h1 em{font-style:italic;font-weight:400}
+  .nameplate .under{font-family:var(--text);font-style:italic;font-size:clamp(.95rem,2vw,1.2rem);
+    color:var(--ink-60);margin-top:.6rem}
+
+  .datebar{border-top:1px solid var(--rule);border-bottom:3px double var(--rule);
+    font-family:var(--slug);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.35rem 1rem;padding:.5rem 0;color:var(--ink-60)}
+  .datebar b{color:var(--spot);font-weight:400}
+
+  /* ── the running contents strip (this is the nav) ───────────────────── */
+  .strip{display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;padding:.7rem 0;border-bottom:1px solid var(--hair);
+    font-family:var(--slug);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+  .strip a{border-bottom:1px solid transparent;padding-bottom:1px}
+  .strip a:hover{color:var(--spot);border-color:var(--spot)}
+  .strip a b{color:var(--ink-35);font-weight:400}
+
+  /* ── lead story ─────────────────────────────────────────────────────── */
+  .lead{padding:clamp(1.4rem,3.5vw,2.6rem) 0 0}
+  .lead .kick{font-family:var(--slug);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--spot);text-align:center}
+  .lead h2{font-family:var(--disp);font-weight:500;font-size:clamp(1.9rem,6.6vw,4.6rem);line-height:1.02;
+    text-align:center;margin:.6rem auto .5rem;max-width:20ch;letter-spacing:-.01em}
+  .lead h2 em{font-style:italic;font-weight:400}
+  .lead .deck{font-family:var(--text);font-style:italic;font-size:clamp(1.02rem,2.2vw,1.32rem);
+    text-align:center;max-width:56ch;margin:0 auto;color:#3a342a;line-height:1.45}
+  .lead .byline{font-family:var(--slug);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;
+    text-align:center;color:var(--ink-60);margin:1rem 0 1.3rem;
+    border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);padding:.45rem 0}
+
+  .cols{columns:4;column-gap:clamp(1rem,2.4vw,1.9rem);column-rule:1px solid var(--hair);
+    text-align:justify;hyphens:auto;padding-bottom:1.4rem}
+  @media(max-width:1040px){.cols{columns:2}}
+  @media(max-width:600px){.cols{columns:1;text-align:left;column-rule:none}}
+  .cols p{margin:0 0 .75rem;text-indent:1.1em}
+  .cols p:first-of-type{text-indent:0}
+  .cols p:first-of-type::first-letter{float:left;font-family:var(--disp);font-size:3.5em;line-height:.76;
+    padding:.06em .1em 0 0;font-weight:600;color:var(--spot)}
+  .cols .sub{font-family:var(--slug);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--spot);text-indent:0;margin:1.1rem 0 .5rem;break-after:avoid}
+  .cols .jump{font-family:var(--slug);font-size:.66rem;letter-spacing:.1em;color:var(--ink-60);
+    font-style:normal;text-indent:0;border-top:1px solid var(--hair);padding-top:.4rem;margin-top:.4rem}
+  .cols .jump a:hover{color:var(--spot)}
+  .cols figure{break-inside:avoid;margin:.4rem 0 .9rem}
+  .cols figure img{width:100%}
+  .cols figcaption{font-family:var(--slug);font-size:.64rem;line-height:1.6;color:var(--ink-60);
+    margin-top:.4rem;text-align:left;border-bottom:1px solid var(--hair);padding-bottom:.4rem}
+  .cols figcaption b{color:var(--spot);font-weight:400;letter-spacing:.14em;text-transform:uppercase;display:block}
+
+  /* wide plate that spans the measure, as a pasted-in cut */
+  .cut{column-span:all;margin:1.2rem 0 1.4rem;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);
+    padding:1rem 0;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(1rem,3vw,2.2rem);align-items:center}
+  @media(max-width:760px){.cut{grid-template-columns:1fr}}
+  .cut .capbox{text-align:left;text-indent:0}
+  .cut .capbox .no{font-family:var(--slug);font-size:.64rem;letter-spacing:.28em;text-transform:uppercase;color:var(--spot)}
+  .cut .capbox h3{font-family:var(--disp);font-style:italic;font-weight:400;font-size:clamp(1.3rem,3vw,2rem);
+    line-height:1.1;margin:.4rem 0 .6rem}
+  .cut .capbox p{text-indent:0;font-size:.98rem;margin-bottom:.5rem}
+  .cut .capbox .part{font-family:var(--slug);font-size:.64rem;letter-spacing:.1em;color:var(--ink-60);line-height:1.8}
+
+  /* ── ornament band ──────────────────────────────────────────────────── */
+  .orn{display:flex;align-items:center;gap:1rem;margin:clamp(1.4rem,3.5vw,2.4rem) 0;color:var(--spot)}
+  .orn::before,.orn::after{content:"";flex:1;border-top:1px solid var(--rule)}
+  .orn span{font-family:var(--slug);font-size:.66rem;letter-spacing:.42em;text-transform:uppercase}
+
+  /* ── the gathering of plates ────────────────────────────────────────── */
+  .gathering h4,.specimen h4,.contents h4{font-family:var(--slug);font-size:.66rem;letter-spacing:.32em;
+    text-transform:uppercase;color:var(--spot);border-bottom:1px solid var(--rule);padding-bottom:.4rem;margin-bottom:1.1rem}
+  .plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.6vw,2rem)}
+  @media(max-width:820px){.plates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:480px){.plates{grid-template-columns:1fr}}
+  .plates figure{margin:0}
+  .plates .frame{border:1px solid var(--hair);padding:.55rem;background:#f7f3ea}
+  .plates img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .plates figcaption{margin-top:.55rem;font-size:.92rem;line-height:1.45}
+  .plates figcaption .n{font-family:var(--slug);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--spot)}
+  .plates figcaption i{font-family:var(--disp);font-style:italic;font-size:1.1rem;display:block;margin:.2rem 0 .15rem}
+  .plates figcaption .m{font-family:var(--slug);font-size:.64rem;color:var(--ink-60);letter-spacing:.06em}
+  .plates a:hover figcaption i{color:var(--spot)}
+  .plates a:hover .frame{border-color:var(--spot)}
+
+  /* ── the type specimen — the conceit made literal ───────────────────── */
+  .specimen{margin-top:clamp(2rem,5vw,3.4rem)}
+  .spec-body{border:1px solid var(--rule);padding:clamp(1rem,3vw,2rem);background:#f7f3ea}
+  .spec-row{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;align-items:baseline;
+    padding:.75rem 0;border-bottom:1px solid var(--hair)}
+  .spec-row:last-child{border-bottom:none}
+  @media(max-width:520px){.spec-row{grid-template-columns:1fr;gap:.2rem}}
+  .spec-row .sz{font-family:var(--slug);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-35)}
+  .spec-row .sp{font-family:var(--disp);line-height:1.05;overflow-wrap:anywhere}
+  .s-72{font-size:clamp(1.7rem,6vw,3.6rem);font-weight:600}
+  .s-48{font-size:clamp(1.35rem,4.2vw,2.4rem);font-style:italic;font-weight:400}
+  .s-24{font-size:clamp(1.05rem,2.4vw,1.45rem);font-weight:500;letter-spacing:.01em}
+  .s-12{font-family:var(--text);font-size:1rem;line-height:1.5;max-width:70ch}
+  .s-10{font-family:var(--slug);font-size:.72rem;letter-spacing:.12em;color:var(--ink-60)}
+
+  /* ── contents page (the nav, properly) ──────────────────────────────── */
+  .contents{margin-top:clamp(2rem,5vw,3.4rem)}
+  .toc a{display:grid;grid-template-columns:2.6rem 1fr auto;gap:.4rem 1rem;align-items:baseline;
+    padding:.7rem 0;border-bottom:1px solid var(--hair)}
+  .toc a:hover{color:var(--spot)}
+  .toc .r{font-family:var(--slug);font-size:.7rem;color:var(--ink-35);letter-spacing:.1em}
+  .toc .n{font-family:var(--disp);font-size:clamp(1.15rem,2.6vw,1.7rem);font-weight:500;line-height:1.2}
+  .toc .n em{display:block;font-family:var(--text);font-style:italic;font-size:.95rem;font-weight:400;
+    color:var(--ink-60);line-height:1.45;margin-top:.15rem;max-width:58ch}
+  .toc .p{font-family:var(--slug);font-size:.72rem;letter-spacing:.1em;color:var(--ink-60);white-space:nowrap}
+  @media(max-width:520px){.toc a{grid-template-columns:2.2rem 1fr}.toc .p{grid-column:2}}
+
+  /* ── imprint + folio ────────────────────────────────────────────────── */
+  .imprint{margin-top:clamp(2.2rem,5vw,3.6rem);border-top:3px double var(--rule);padding-top:1.2rem;
+    display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,3vw,2.2rem)}
+  @media(max-width:720px){.imprint{grid-template-columns:1fr}}
+  .imprint h5{font-family:var(--slug);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;
+    color:var(--spot);margin-bottom:.5rem}
+  .imprint p{font-size:.95rem;line-height:1.6;color:var(--ink-60)}
+  .imprint p b{color:var(--ink);font-weight:600}
+  .imprint a:hover{color:var(--spot)}
+  .folio{border-top:1px solid var(--rule);margin-top:1.6rem;padding:.7rem 0 2.4rem;
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem 1rem;
+    font-family:var(--slug);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-35)}
+  .folio .pg{font-family:var(--disp);font-size:1.4rem;letter-spacing:0;color:var(--ink);text-transform:none}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--ink);color:var(--news);
+    font-family:var(--slug);font-size:.7rem;letter-spacing:.1em;padding:.4rem .55rem;opacity:.94}
+  .sw a{color:var(--news);padding:0 .22rem}
+  .sw a.cur{color:#e6a05a}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+
+  <div class="plate-rules"></div>
+  <header class="nameplate">
+    <div class="over">Painting · Printmaking · Installation · Cinema</div>
+    <h1>Kyle Parker <em>Cunningham</em></h1>
+    <div class="under">The permanent archive, issued in seasons — Truth or Consequences, New Mexico</div>
+  </header>
+
+  <div class="datebar">
+    <span>Vol. <b>XIII</b> — Summer MMXXVI</span>
+    <span>Season lives June — September</span>
+    <span>160 works catalogued</span>
+    <span>Set &amp; printed on the road</span>
+  </div>
+
+  <nav class="strip">
+    <a href="32-the-specimen-work.html">The Oeuvre <b>· p. 2</b></a>
+    <a href="#">Editions <b>· p. 8</b></a>
+    <a href="#">Projects <b>· p. 11</b></a>
+    <a href="#">The Log <b>· p. 14</b></a>
+    <a href="#">Cinema <b>· p. 16</b></a>
+    <a href="#">About <b>· p. 19</b></a>
+    <a href="#">Colophon <b>· p. 20</b></a>
+  </nav>
+
+  <!-- ── LEAD ─────────────────────────────────────────────────────────── -->
+  <article class="lead">
+    <div class="kick">The Front Page · Season XIII</div>
+    <h2>Everything That Can Be <em>Carried</em></h2>
+    <p class="deck">The studio loses its walls. A summer spent finding out whether the whole operation —
+      paintings, a press, a bindery — can be carried, and keep working from anywhere.</p>
+    <div class="byline">On the road · Wyoming · Montana · Colorado — filed under Survival Notes from the Near Future</div>
+
+    <div class="cols">
+      <p>This season the studio has no walls. Through the summer Jeannie and I are working out of a
+      vehicle across Wyoming, Montana, and Colorado — climbing and painting in the mornings, swimming
+      the heat off at midday, documenting in the evenings, all of it running on a satellite signal and
+      a battery.</p>
+
+      <p>The question underneath it is simple and practical: can the whole operation be
+      <i>carried</i> — made small enough, and durable enough, to keep making real, physical things from
+      wherever the work happens to be?</p>
+
+      <p>It is one investigation under a single name, <i>Survival Notes from the Near Future</i>: a
+      practical guide and a meditation on moving into a reality of computing and climate change
+      without losing what makes us human. What comes back from the road will gather here, week by
+      week, all summer long.</p>
+
+      <p class="sub">The 200</p>
+      <p>Two hundred small watercolors — half mine, half Jeannie's — painted in the field and each one
+      unique. The first iteration of a larger idea, made entirely on the move. They go up for sale
+      beginning at the summer solstice.</p>
+
+      <p>Every painting carries its own price, and no two prices repeat. The two hundred whole-dollar
+      amounts form one shared pool between the two painters, and each price is set subjectively — a
+      record of what the painting actually asked of its maker, not a formula of size and materials.
+      The price is part of the work.</p>
+
+      <figure>
+        <img src="assets/editions__2026-summer__sewing-the-boards.jpg" width="1500" height="2000"
+             alt="Close-up of sewing the boards of a book by headlamp, thread and awl on a boulder">
+        <figcaption><b>Fig. 1</b>Sewing the boards by headlamp, Lander, Wyoming. The <i>Tractatus</i> was cased in a creek bottom below the Wild Iris crags.</figcaption>
+      </figure>
+
+      <p class="sub">Two books, bound in the forest</p>
+      <p>First editions in the Sewn Boards structure: Wittgenstein's <i>Tractatus
+      Logico-Philosophicus</i>, chosen for what it says about the limits of language in the age of the
+      language model, and Whitman's <i>Leaves of Grass</i>, which Whitman set by hand.</p>
+
+      <p>Austere limit against catalogue-everything abundance — the conceptual engine of the whole
+      summer. A painting hangs on the wall, a precious object you don't touch. A book is meant to be
+      carried: a little world you put in your pocket.</p>
+
+      <p class="sub">The Periodic, field-printed</p>
+      <p>The small art newspaper, run off a laser printer and a lithium battery instead of the
+      Vandercook. Eleven by seventeen, sixteen pages, published periodically — a tactile, portable
+      archive designed for slow reading and repeated return.</p>
+
+      <p class="jump">Continued in the bindery — <a href="#">see p. 4</a>, and the field log at <a href="#">p. 14</a>.</p>
+
+      <div class="cut">
+        <img src="assets/editions__2026-summer__tractatus-bound.jpg" width="1500" height="2000"
+             alt="The finished Tractatus, boards covered in black walnut–dyed cardstock with a linen spine and an embossed goatskin label, resting on stone">
+        <div class="capbox">
+          <div class="no">Plate I — the season's object</div>
+          <h3>Tractatus Logico-Philosophicus</h3>
+          <p>First edition, Sewn Boards binding: museum board and folding stock cased in black
+          walnut–dyed Mohawk Superfine cardstock, linen spine, embossed goatskin label.</p>
+          <div class="part">Lander, Wyoming · 2026<br>Agile Meteor Press · edition in progress<br>A book about the limits of language, finished at the exact hour the light runs out.</div>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <div class="orn"><span>❦ &nbsp; The gathering of plates &nbsp; ❦</span></div>
+
+  <!-- ── PLATES ───────────────────────────────────────────────────────── -->
+  <section class="gathering">
+    <h4>From the oeuvre — recently pulled for the issue</h4>
+    <div class="plates">
+      <a href="32-the-specimen-work.html">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__installation__2017__cyclum-lunarem__cyclum_lunarem-2048.jpeg" width="1536" height="2048" alt="Tall vertical column of gold-leafed square tiles, each painted with a lunar phase in muted grays and blacks on a white gallery wall"></div>
+          <figcaption><span class="n">Plate II</span><i>Cyclum Lunarem</i><span class="m">oil &amp; 24kt gold leaf on gessoed linen · 2017</span></figcaption>
+        </figure>
+      </a>
+      <a href="#">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__printmaking__2022__skull__IMG_3973.jpeg" width="1400" height="1867" alt="Intaglio drypoint print of a human skull in three-quarter profile, hand-coloured with pale green and blue-gray washes"></div>
+          <figcaption><span class="n">Plate III</span><i>Skull</i><span class="m">intaglio drypoint, hand-torn paper · 2022</span></figcaption>
+        </figure>
+      </a>
+      <a href="#">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__printmaking__2021__expansion-drypoint__expansion.jpeg" width="1400" height="1867" alt="Drypoint print of a face in profile sliced into accordion-like vertical segments fanning outward, on Rives BFK paper"></div>
+          <figcaption><span class="n">Plate IV</span><i>expansion drypoint</i><span class="m">drypoint on Rives BFK · 2021</span></figcaption>
+        </figure>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── SPECIMEN ─────────────────────────────────────────────────────── -->
+  <section class="specimen">
+    <h4>Specimen of the faces in which this archive is set</h4>
+    <div class="spec-body">
+      <div class="spec-row"><div class="sz">72 pt</div><div class="sp s-72">Bottled Lightning</div></div>
+      <div class="spec-row"><div class="sz">48 pt italic</div><div class="sp s-48">the river in the sky</div></div>
+      <div class="spec-row"><div class="sz">24 pt</div><div class="sp s-24">THE ALGEBRA OF WATER VAPOR · 2024</div></div>
+      <div class="spec-row"><div class="sz">12 pt text</div><div class="sp s-12">Magic is the transportation of millions of gallons of water over thousands of miles in the rivers of the atmosphere. Each molecule of water drifts aimlessly on a cyclical pilgrimage to the tops of the mounts only to erode their way back to the melting pot of the oceans. And then again upwards over the mountain.</div></div>
+      <div class="spec-row"><div class="sz">10 pt slug</div><div class="sp s-10">OIL ON LINEN · 51½ × 32 IN · 2021 · AVAILABLE · PT·137 · 33.13° N, 107.25° W</div></div>
+    </div>
+  </section>
+
+  <!-- ── CONTENTS ─────────────────────────────────────────────────────── -->
+  <section class="contents">
+    <h4>Contents of the whole book</h4>
+    <nav class="toc">
+      <a href="32-the-specimen-work.html"><span class="r">I</span><span class="n">The Oeuvre<em>Every work catalogued — painting, printmaking, installation, sculpture and more, 2003 to now.</em></span><span class="p">160 works · p. 2</span></a>
+      <a href="#"><span class="r">II</span><span class="n">Editions<em>The living front page, season by season, and every front page this site has retired.</em></span><span class="p">Season XIII · p. 8</span></a>
+      <a href="#"><span class="r">III</span><span class="n">Projects<em>The long arcs — ongoing, researching, complete.</em></span><span class="p">9 threads · p. 11</span></a>
+      <a href="#"><span class="r">IV</span><span class="n">The Log<em>Production notes from the studio, posted as they happen.</em></span><span class="p">p. 14</span></a>
+      <a href="#"><span class="r">V</span><span class="n">Cinema<em>Every film, with its format, location and embed.</em></span><span class="p">8 films · p. 16</span></a>
+      <a href="#"><span class="r">VI</span><span class="n">About &amp; Colophon<em>Biography, statement, materials, paper, and how this thing is made.</em></span><span class="p">p. 19</span></a>
+    </nav>
+  </section>
+
+  <!-- ── IMPRINT ──────────────────────────────────────────────────────── -->
+  <section class="imprint">
+    <div>
+      <h5>The Press</h5>
+      <p><b>Agile Meteor Press</b><br>Letterpress &amp; bindery. Sewn Boards structure,
+      Vandercook 325G. Books, covers, and <i>The Periodic</i>.</p>
+    </div>
+    <div>
+      <h5>The Studio</h5>
+      <p>Truth or Consequences, New Mexico<br>33.13° N, 107.25° W<br>
+      <a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a></p>
+    </div>
+    <div>
+      <h5>This Sheet</h5>
+      <p>Set in <b>Bodoni Moda</b> and <b>EB Garamond</b>, slugs in Inconsolata.<br>
+      Composed 6 July 2026. Two runs: black and vermillion.</p>
+    </div>
+  </section>
+
+  <div class="folio">
+    <span>Kyle Parker Cunningham — Season XIII</span>
+    <span class="pg">1</span>
+    <span>The homepage is a work; the archive keeps everything</span>
+  </div>
+</div>
+
+<nav class="sw"><i>32</i><a class="cur" href="32-the-specimen-home.html">home</a>·<a href="32-the-specimen-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>
