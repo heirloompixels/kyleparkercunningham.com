@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 31 — The Ledger (home)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     31 — THE LEDGER
+     Evolution of the live design. Same palette, same three faces, same
+     masthead → issue → index → colophon spine as mockups 29 + 30. What
+     changes is discipline: one measure for prose, one rail for marginalia,
+     one ledger for the archive, and a vertical rhythm that never guesses.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root{
+    --bg:#f7f4ef; --paper:#fdfbf7; --ink:#1e1a16; --muted:#6a6258;
+    --accent:#1f3f5b; --line:#e2dbd1; --rule:#1e1a16;
+    --serif:'Literata',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --mono:'Inconsolata',ui-monospace,monospace;
+    --gut:clamp(1.1rem,4vw,2.2rem);
+    --measure:62ch;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.72;font-size:clamp(1rem,.96rem+.2vw,1.08rem)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+
+  .shell{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+
+  /* ── masthead ───────────────────────────────────────────────────────── */
+  .mast{padding-top:clamp(1.4rem,3vw,2.6rem)}
+  .mast-inner{border-bottom:2px solid var(--rule);padding-bottom:.85rem}
+  .mast .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem 1rem;margin-bottom:.9rem}
+  .mast .kicker a:hover{color:var(--accent)}
+  .mast-row{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem}
+  .wordmark{font-weight:300;font-size:clamp(1.5rem,3.4vw,2.15rem);letter-spacing:-.015em;line-height:1;white-space:nowrap}
+  .wordmark .h{font-style:italic;font-weight:400}
+  .mast nav{font-family:var(--mono);font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;
+    color:var(--muted);display:flex;gap:clamp(.8rem,2.4vw,1.5rem);flex-wrap:wrap}
+  .mast nav a{padding-bottom:2px;border-bottom:1px solid transparent}
+  .mast nav a:hover{color:var(--accent);border-color:var(--accent)}
+  .mast nav a.here{color:var(--ink);border-color:var(--ink)}
+
+  /* ── the standfirst: numeral, title, deck, lead plate ───────────────── */
+  .stand{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.72fr);
+    gap:clamp(1.6rem,4vw,3.4rem);align-items:end;padding:clamp(2.2rem,5vw,3.6rem) 0 clamp(1.6rem,3vw,2.4rem)}
+  @media(max-width:820px){.stand{grid-template-columns:1fr;align-items:start}}
+  .stand .label{font-family:var(--mono);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+  .stand .roman{font-family:var(--serif);font-weight:300;font-size:clamp(3.2rem,9vw,6.4rem);
+    line-height:.84;letter-spacing:-.035em;margin:.5rem 0 .1rem}
+  .stand .roman span{font-size:.26em;letter-spacing:.24em;text-transform:uppercase;font-family:var(--mono);
+    color:var(--muted);vertical-align:.9em;margin-left:.7rem}
+  .stand h1{font-weight:300;font-style:italic;font-size:clamp(2rem,5.4vw,3.5rem);line-height:1.04;
+    letter-spacing:-.012em;margin:.9rem 0 .8rem;max-width:16ch}
+  .stand .deck{font-size:1.05rem;color:#403a33;max-width:44ch;font-weight:300}
+  .stand .dateline{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);margin-top:1.1rem;padding-top:.9rem;border-top:1px solid var(--line);max-width:44ch}
+  .stand figure img{width:100%;height:clamp(300px,48vh,520px);object-fit:cover;object-position:50% 45%;
+    box-shadow:0 1px 2px rgba(30,26,22,.12),0 20px 44px rgba(30,26,22,.16)}
+  @media(max-width:820px){.stand figure img{height:clamp(260px,42vh,380px)}}
+  .stand figcaption{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.6rem;letter-spacing:.04em}
+  .stand figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:.85rem}
+
+  /* ── the issue ──────────────────────────────────────────────────────── */
+  .issue{border-top:1px solid var(--line);padding-top:clamp(2rem,4vw,3.2rem)}
+  .stanza{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,var(--measure)) minmax(0,1fr);
+    column-gap:clamp(1rem,3vw,2.6rem)}
+  .stanza .body{grid-column:2}
+  .stanza .note{grid-column:1;justify-self:end;text-align:right;max-width:13rem;
+    font-family:var(--mono);font-size:.68rem;line-height:1.85;letter-spacing:.05em;color:var(--muted);
+    padding-top:.45rem;border-top:1px solid var(--line)}
+  .stanza .note b{color:var(--accent);font-weight:400;display:block;letter-spacing:.2em;text-transform:uppercase;font-size:.64rem;margin-bottom:.3rem}
+  @media(max-width:940px){
+    .stanza{grid-template-columns:1fr}
+    .stanza .body,.stanza .note{grid-column:1}
+    .stanza .note{text-align:left;justify-self:start;max-width:var(--measure);margin:0 0 .9rem;
+      border-top:none;border-left:2px solid var(--line);padding:0 0 0 .8rem}
+  }
+  .issue p{margin:0 0 1.35rem;max-width:var(--measure)}
+  .issue p a{border-bottom:1px solid var(--line);color:var(--accent)}
+  .issue p a:hover{border-color:var(--accent)}
+  .issue .lede::first-letter{float:left;font-size:3.5rem;line-height:.78;padding:.32rem .48rem .1rem 0;font-weight:400;color:var(--accent)}
+  .issue strong{font-weight:600}
+
+  .band{font-family:var(--mono);font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--accent);
+    display:flex;align-items:center;gap:1rem;margin:clamp(2.2rem,5vw,3.4rem) 0 1.6rem}
+  .band::before,.band::after{content:"";flex:1;border-top:1px solid var(--line)}
+
+  figure.plate{margin:clamp(1.8rem,4vw,2.8rem) auto;max-width:900px}
+  figure.plate img{width:100%;box-shadow:0 1px 2px rgba(30,26,22,.1),0 22px 52px rgba(30,26,22,.16)}
+  figure.plate figcaption{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin-top:.75rem;
+    letter-spacing:.03em;line-height:1.65}
+  figure.plate figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:.92rem}
+  .diptych{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.9rem,2.4vw,1.6rem);
+    max-width:1000px;margin:clamp(1.8rem,4vw,2.8rem) auto;align-items:end}
+  @media(max-width:640px){.diptych{grid-template-columns:1fr}}
+  .diptych figure{margin:0}
+  .diptych img{width:100%;box-shadow:0 1px 2px rgba(30,26,22,.1),0 16px 38px rgba(30,26,22,.14)}
+  .diptych figcaption{font-family:var(--mono);font-size:.68rem;color:var(--muted);margin-top:.6rem}
+  .diptych figcaption i{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:.88rem}
+
+  .wallquote{max-width:26ch;margin:clamp(2.6rem,6vw,4.4rem) auto;text-align:center}
+  .wallquote p{font-size:clamp(1.5rem,4vw,2.35rem);font-style:italic;font-weight:300;line-height:1.24;max-width:none;margin:0}
+  .wallquote span{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.24em;
+    text-transform:uppercase;color:var(--muted);margin-top:1.3rem}
+
+  .interlude{margin:clamp(2.4rem,5vw,3.6rem) 0;padding:clamp(1.8rem,4vw,2.6rem) 0;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:clamp(1.4rem,3.5vw,2.8rem);align-items:center}
+  @media(max-width:760px){.interlude{grid-template-columns:1fr}}
+  .interlude img{width:100%;box-shadow:0 14px 36px rgba(30,26,22,.18)}
+  .interlude .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:var(--accent)}
+  .interlude h2{font-weight:300;font-style:italic;font-size:clamp(1.4rem,3.2vw,2.1rem);line-height:1.12;margin:.55rem 0 .9rem}
+  .interlude p{max-width:none;font-size:1rem;margin-bottom:.9rem}
+  .interlude .log{font-family:var(--mono);font-size:.74rem;line-height:2;color:var(--muted);
+    border-left:2px solid var(--line);padding-left:.9rem;margin-top:1.1rem}
+  .interlude .log b{color:var(--ink);font-weight:600}
+  .interlude .log a:hover{color:var(--accent)}
+
+  /* ── the ledger ─────────────────────────────────────────────────────── */
+  .ledger{margin-top:clamp(3rem,6vw,4.6rem);border-top:2px solid var(--rule);padding-top:1.2rem}
+  .ledger-head{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.5rem 1.4rem;margin-bottom:1.4rem}
+  .ledger-head h3{font-family:var(--mono);font-size:.72rem;font-weight:400;letter-spacing:.28em;
+    text-transform:uppercase;color:var(--accent)}
+  .ledger-head .stat{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--muted)}
+  .ledger-head .stat b{color:var(--ink);font-weight:600}
+  .lg{width:100%;border-collapse:collapse}
+  .lg th{font-family:var(--mono);font-size:.62rem;font-weight:400;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--muted);text-align:left;padding:0 .8rem .55rem 0;border-bottom:1px solid var(--rule)}
+  .lg td{padding:.62rem .8rem .62rem 0;border-bottom:1px solid var(--line);vertical-align:baseline}
+  .lg tr:hover td{background:rgba(31,63,91,.05)}
+  .lg .no{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+  .lg .t{font-size:1.05rem;line-height:1.3}
+  .lg tr:hover .t{color:var(--accent)}
+  .lg .d,.lg .m,.lg .y{font-family:var(--sans);font-size:.8rem;color:var(--muted);font-weight:300}
+  .lg .y{font-family:var(--mono);white-space:nowrap}
+  @media(max-width:700px){
+    .lg thead{position:absolute;left:-9999px}
+    .lg tr{display:grid;grid-template-columns:auto 1fr;gap:0 .8rem;padding:.7rem 0;border-bottom:1px solid var(--line)}
+    .lg td{border:none;padding:0}
+    .lg .no{grid-row:1;grid-column:1}
+    .lg .t{grid-row:1;grid-column:2}
+    .lg .d{grid-row:2;grid-column:2}
+    .lg .m{grid-row:3;grid-column:2}
+    .lg .y{grid-row:2;grid-column:1;font-size:.72rem}
+  }
+
+  /* ── site menu ──────────────────────────────────────────────────────── */
+  .menu{margin-top:clamp(3rem,6vw,4.6rem);border-top:2px solid var(--rule)}
+  .menu a{display:grid;grid-template-columns:2.8rem 1fr auto;align-items:baseline;
+    gap:.6rem clamp(.8rem,2.5vw,1.6rem);padding:1.2rem 0;border-bottom:1px solid var(--line);
+    transition:background .2s,padding-left .2s}
+  .menu a:hover{background:rgba(31,63,91,.06);padding-left:.9rem}
+  .menu .n{font-family:var(--mono);font-size:.76rem;color:var(--muted)}
+  .menu .m{font-size:clamp(1.5rem,4vw,2.5rem);font-weight:300;line-height:1.06;letter-spacing:-.015em}
+  .menu a:hover .m{font-style:italic;color:var(--accent)}
+  .menu .m em{display:block;font-style:normal;font-family:var(--sans);font-size:.88rem;font-weight:300;
+    color:var(--muted);line-height:1.55;margin-top:.4rem;max-width:56ch}
+  .menu .c{font-family:var(--mono);font-size:.74rem;color:var(--muted);text-align:right;white-space:nowrap}
+  @media(max-width:520px){.menu a{grid-template-columns:2.2rem 1fr}.menu .c{grid-column:2;text-align:left}}
+
+  /* ── colophon foot ──────────────────────────────────────────────────── */
+  .foot{margin-top:clamp(3rem,6vw,5rem);border-top:2px solid var(--rule);padding:1.3rem 0 4rem;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted)}
+  .foot a:hover{color:var(--accent)}
+  .foot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.7rem 1.4rem;padding-bottom:1.4rem}
+  .foot .mark{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ink);letter-spacing:0}
+  .foot .mark b{font-style:normal;font-weight:400}
+  .foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;border-top:1px solid var(--line);padding-top:1.4rem}
+  @media(max-width:720px){.foot .cols{grid-template-columns:1fr 1fr}}
+  .foot h5{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;font-weight:400}
+  .foot .cols p{font-size:.74rem;line-height:1.9}
+  .foot .cols p a{display:block}
+  .foot .cols b{color:var(--ink);font-weight:600}
+  .foot .base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+    border-top:1px solid var(--line);margin-top:1.4rem;padding-top:1rem;font-size:.68rem}
+
+  /* ── prototype switcher (not part of the design) ────────────────────── */
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:#1e1a16;color:#f7f4ef;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;padding:.4rem .55rem;border-radius:2px;opacity:.92}
+  .sw a{color:#f7f4ef;padding:0 .22rem}
+  .sw a.cur{color:#e8b96a}
+  .sw i{opacity:.45;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="mast">
+    <div class="mast-inner">
+      <div class="kicker">
+        <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+        <span>Est. 2003 — Present</span>
+      </div>
+      <div class="mast-row">
+        <a class="wordmark" href="31-the-ledger-home.html">Kyle Parker Cunning<span class="h">h</span>am</a>
+        <nav>
+          <a href="31-the-ledger-work.html">The Oeuvre</a>
+          <a class="here" href="#">Editions</a>
+          <a href="#">Projects</a>
+          <a href="#">Log</a>
+          <a href="#">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── the current edition, standing first ─────────────────────────── -->
+  <section class="stand">
+    <div>
+      <div class="label">The Front Page · Season</div>
+      <div class="roman">XIII<span>☀ Summer 2026</span></div>
+      <h1>Everything That Can Be Carried</h1>
+      <p class="deck">The studio loses its walls. A summer spent finding out whether the whole
+        operation — paintings, a press, a bindery — can be carried, and keep working from anywhere.</p>
+      <div class="dateline">On the road · Wyoming · Montana · Colorado — lives June to September 2026</div>
+    </div>
+    <figure>
+      <img src="assets/editions__2026-summer__tractatus-bound.jpg" width="1500" height="2000"
+           alt="The finished Tractatus, boards covered in black walnut–dyed cardstock with a linen spine and embossed goatskin label, resting on stone">
+      <figcaption><i>Tractatus Logico-Philosophicus</i><br>first edition, Sewn Boards binding · Lander, Wyoming · 2026</figcaption>
+    </figure>
+  </section>
+
+  <!-- ── the issue ───────────────────────────────────────────────────── -->
+  <article class="issue">
+
+    <div class="stanza">
+      <div class="note"><b>Dateline</b>Wyoming · Montana · Colorado. Working from a vehicle, a satellite signal and a battery.</div>
+      <div class="body">
+        <p class="lede">This season the studio has no walls. Through the summer Jeannie and I are working
+        out of a vehicle across Wyoming, Montana, and Colorado — climbing and painting in the mornings,
+        swimming the heat off at midday, documenting in the evenings, all of it running on a satellite
+        signal and a battery. The question underneath it is simple and practical: can the whole
+        operation be <em>carried</em> — made small enough, and durable enough, to keep making real,
+        physical things from wherever the work happens to be?</p>
+        <p>It is one investigation under a single name, <a href="#">Survival Notes from the Near Future</a>:
+        a practical guide and a meditation on moving into a reality of computing and climate change
+        without losing what makes us human. What comes back from the road will gather here, week by
+        week, all summer long.</p>
+      </div>
+    </div>
+
+    <div class="wallquote">
+      <p>We need to rethink the way technologies are integrated into our existence — and embrace them for the realization of our goals.</p>
+      <span>survival notes · 2026</span>
+    </div>
+
+    <div class="band">The season's work</div>
+
+    <div class="stanza">
+      <div class="note"><b>Solstice</b>The first of the 200 go up. Half Kyle's hand, half Jeannie's; no two prices repeat.</div>
+      <div class="body">
+        <p><strong>The 200.</strong> Two hundred small watercolors — half mine, half Jeannie's — painted
+        in the field and each one unique. The first iteration of a larger idea, made entirely on the
+        move. They go up for sale beginning at the summer solstice.</p>
+        <p><strong>Two books, bound in the forest.</strong> First editions in the Sewn Boards structure:
+        Wittgenstein's <em>Tractatus Logico-Philosophicus</em>, chosen for what it says about the limits
+        of language in the age of the language model, and Whitman's <em>Leaves of Grass</em>, which
+        Whitman set by hand. Austere limit against catalogue-everything abundance — the conceptual
+        engine of the whole summer.</p>
+      </div>
+    </div>
+
+    <section class="interlude">
+      <img src="assets/editions__2026-summer__bindery-at-dusk.jpg" width="1500" height="2000"
+           alt="Binding a book on a boulder in an aspen grove at dusk, materials spread out around the work">
+      <div>
+        <div class="k">Bound in the field</div>
+        <h2>The bindery loses its walls too</h2>
+        <p>The <em>Tractatus</em> was sewn and cased by headlamp in a creek bottom below the Wild Iris
+        crags, outside Lander, Wyoming — glue pot, awl, thread and boards laid out on a boulder while
+        the light went. A book about the limits of language, finished at the exact hour the light runs out.</p>
+        <div class="log">
+          <a href="#"><b>2026·06·21</b> — Solstice: the season opens</a><br>
+          <a href="#"><b>2026·03·10</b> — Production notes for a periodic art newspaper</a><br>
+          <a href="#"><b>2026·02·15</b> — Print specs and image prep</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="diptych">
+      <figure>
+        <img src="assets/editions__2026-summer__sewing-the-boards.jpg" width="1500" height="2000"
+             alt="Close-up of sewing the boards by headlamp">
+        <figcaption><i>sewing the boards</i> · Lander, Wyoming · 2026</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/editions__2026-summer__reading-on-the-rock.jpg" width="1500" height="2000"
+             alt="Reading the finished book on a rock in period dress">
+        <figcaption><i>the first reading</i> · Lander, Wyoming · 2026</figcaption>
+      </figure>
+    </div>
+
+    <div class="band">From the flat files</div>
+
+    <figure class="plate">
+      <img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" width="1400" height="1400"
+           alt="Oil painting of clusters of luminous spheres in lavender, mauve, plum and white, with a strip of vivid blue sky between two masses of bulbous cloud forms">
+      <figcaption><i>the river in the sky</i> · oil on linen · 2024 — from <em>The Memory of Atmosphere</em></figcaption>
+    </figure>
+
+    <div class="stanza">
+      <div class="note"><b>On the easel</b>Twenty years of unphotographed panels are coming out of the flat files, one at a time, under north light.</div>
+      <div class="body">
+        <p>Magic is the transportation of millions of gallons of water over thousands of miles in the
+        rivers of the atmosphere. Each molecule of water drifts aimlessly on a cyclical pilgrimage to
+        the tops of the mounts only to erode their way back to the melting pot of the oceans. And then
+        again upwards over the mountain.</p>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- ── the ledger ──────────────────────────────────────────────────── -->
+  <section class="ledger">
+    <div class="ledger-head">
+      <h3>Latest in the ledger</h3>
+      <div class="stat"><b>160</b> works catalogued · 93 painting · 47 printmaking · 8 installation</div>
+    </div>
+    <table class="lg">
+      <thead><tr><th>No.</th><th>Work</th><th>Discipline</th><th>Medium</th><th>Year</th></tr></thead>
+      <tbody>
+        <tr><td class="no">PT·160</td><td class="t"><a href="#">towers</a></td><td class="d">Painting</td><td class="m">Oil on linen</td><td class="y">2024</td></tr>
+        <tr><td class="no">PT·159</td><td class="t"><a href="#">the algebra of water vapor</a></td><td class="d">Painting</td><td class="m">Oil on linen</td><td class="y">2024</td></tr>
+        <tr><td class="no">PT·158</td><td class="t"><a href="#">bottled lightning</a></td><td class="d">Painting</td><td class="m">Oil on linen</td><td class="y">2024</td></tr>
+        <tr><td class="no">PT·151</td><td class="t"><a href="#">Harmonics</a></td><td class="d">Painting</td><td class="m">Oil on linen · 20 × 22 in</td><td class="y">2023</td></tr>
+        <tr><td class="no">PT·143</td><td class="t"><a href="#">The Black Fire</a></td><td class="d">Painting</td><td class="m">Oil on linen · 21 × 34 in</td><td class="y">2022</td></tr>
+        <tr><td class="no">PT·137</td><td class="t"><a href="31-the-ledger-work.html">the mother bear</a></td><td class="d">Painting</td><td class="m">Oil, oil stick, acrylic &amp; latex on canvas</td><td class="y">2021</td></tr>
+        <tr><td class="no">PR·118</td><td class="t"><a href="#">balance</a></td><td class="d">Printmaking</td><td class="m">Drypoint on Rives BFK, hand-coloured</td><td class="y">2021</td></tr>
+        <tr><td class="no">IN·106</td><td class="t"><a href="#">Cyclum Lunarem</a></td><td class="d">Installation</td><td class="m">Oil &amp; 24kt gold leaf on gessoed linen</td><td class="y">2017</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ── site menu ───────────────────────────────────────────────────── -->
+  <nav class="menu">
+    <a href="31-the-ledger-work.html">
+      <span class="n">01</span>
+      <span class="m">The Oeuvre<em>Every work, catalogued — painting, printmaking, installation, sculpture and more, 2003 to now.</em></span>
+      <span class="c">160 works</span>
+    </a>
+    <a href="#">
+      <span class="n">02</span>
+      <span class="m">Editions<em>The living front page, season by season — and the archive of every front page this site has had.</em></span>
+      <span class="c">Season XIII</span>
+    </a>
+    <a href="#">
+      <span class="n">03</span>
+      <span class="m">Projects<em>The long arcs — ongoing, researching, and complete.</em></span>
+      <span class="c">9 threads</span>
+    </a>
+    <a href="#">
+      <span class="n">04</span>
+      <span class="m">The Log<em>Production notes from the studio, posted as they happen.</em></span>
+      <span class="c">∞</span>
+    </a>
+    <a href="#">
+      <span class="n">05</span>
+      <span class="m">Cinema<em>Every film, with its embed, format and location.</em></span>
+      <span class="c">8 films</span>
+    </a>
+  </nav>
+
+  <footer class="foot">
+    <div class="top">
+      <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+      <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+    </div>
+    <div class="cols">
+      <div><h5>The Studio</h5><p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p></div>
+      <div><h5>Contact</h5><p><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a><a href="#">merveilles.town/@kpc</a><a href="#">Collect</a></p></div>
+      <div><h5>The Archive</h5><p><a href="#"><b>160</b> works catalogued</a><a href="#"><b>93</b> paintings</a><a href="#">Season <b>XIII</b> live now</a></p></div>
+      <div><h5>This Page</h5><p>Composed <b>2026·07·06</b><br>Set in Literata &amp;<br>IBM Plex Sans</p></div>
+    </div>
+    <div class="base">
+      <span>© 2026 Kyle Parker Cunningham — all works &amp; words</span>
+      <span>The homepage is a work; the archive keeps everything.</span>
+    </div>
+  </footer>
+</div>
+
+<nav class="sw"><i>31</i><a class="cur" href="31-the-ledger-home.html">home</a>·<a href="31-the-ledger-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="32-the-specimen-home.html">32</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>

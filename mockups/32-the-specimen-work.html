@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 32 — The Specimen (work)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..700;1,400..700&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  /* 32 — THE SPECIMEN · work page.
+     A plate page out of the book: running head, plate number, the plate at
+     full width with a tissue-guard caption under it, the description set in
+     justified columns, and the catalogue particulars as an imprint block. */
+  :root{
+    --news:#e9e3d6; --news-2:#f2ede2; --ink:#16130d; --ink-60:#5d564a; --ink-35:#948b7a;
+    --spot:#b0301b; --rule:#16130d; --hair:#c2b9a5;
+    --disp:'Bodoni Moda',Didot,'Times New Roman',serif;
+    --text:'EB Garamond',Garamond,Georgia,serif;
+    --slug:'Inconsolata',ui-monospace,monospace;
+    --gut:clamp(.9rem,3.4vw,2rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--news);color:var(--ink);font-family:var(--text);
+    font-size:clamp(1.02rem,.98rem+.22vw,1.14rem);line-height:1.52;
+    background-image:
+      radial-gradient(circle at 20% 30%,rgba(22,19,13,.022) 0 1px,transparent 1px),
+      radial-gradient(circle at 70% 65%,rgba(22,19,13,.018) 0 1px,transparent 1px);
+    background-size:7px 7px,11px 11px}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto;filter:saturate(.94) contrast(1.02)}
+  .sheet{max-width:1220px;margin:0 auto;padding:0 var(--gut);
+    background:linear-gradient(var(--news-2),var(--news-2));
+    box-shadow:0 0 0 1px var(--hair),0 2px 0 rgba(22,19,13,.05),0 24px 60px rgba(22,19,13,.10)}
+
+  /* running head — verso title / recto section, as in a bound book */
+  .running{border-top:5px solid var(--rule);margin-top:clamp(1rem,3vw,2.4rem);padding-top:.5rem;
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.3rem 1rem;
+    border-bottom:1px solid var(--rule);padding-bottom:.5rem;
+    font-family:var(--slug);font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-60)}
+  .running a:hover{color:var(--spot)}
+  .running .mid{font-family:var(--disp);font-style:italic;text-transform:none;letter-spacing:0;
+    font-size:1rem;color:var(--ink)}
+
+  .strip{display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;padding:.65rem 0;border-bottom:1px solid var(--hair);
+    font-family:var(--slug);font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+  .strip a{border-bottom:1px solid transparent;padding-bottom:1px}
+  .strip a:hover,.strip a.here{color:var(--spot);border-color:var(--spot)}
+  .strip a b{color:var(--ink-35);font-weight:400}
+
+  /* plate title block */
+  .plate-head{text-align:center;padding:clamp(1.6rem,4vw,3rem) 0 1.2rem}
+  .plate-head .no{font-family:var(--slug);font-size:.68rem;letter-spacing:.42em;text-transform:uppercase;color:var(--spot)}
+  .plate-head h1{font-family:var(--disp);font-weight:500;font-size:clamp(2.1rem,7.4vw,5.2rem);
+    line-height:1;margin:.6rem 0 .4rem;letter-spacing:-.005em}
+  .plate-head h1 em{font-style:italic;font-weight:400}
+  .plate-head .rule{display:flex;align-items:center;gap:1rem;max-width:34rem;margin:1rem auto 0;color:var(--spot)}
+  .plate-head .rule::before,.plate-head .rule::after{content:"";flex:1;border-top:1px solid var(--rule)}
+  .plate-head .rule span{font-family:var(--slug);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase}
+
+  /* the plate itself, with a tissue-guard caption */
+  .bigplate{margin:0 auto;max-width:840px;padding-bottom:.9rem}
+  .bigplate .frame{border:1px solid var(--hair);padding:clamp(.6rem,2vw,1.2rem);background:#f7f3ea}
+  .bigplate img{width:100%}
+  .tissue{max-width:840px;margin:0 auto clamp(1.6rem,4vw,2.6rem);
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--hair);padding:.6rem 0;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.3rem 1.4rem;
+    font-family:var(--slug);font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-60)}
+  .tissue i{font-family:var(--disp);font-style:italic;font-size:.95rem;letter-spacing:0;
+    text-transform:none;color:var(--ink)}
+
+  /* the description, justified */
+  .cols{columns:3;column-gap:clamp(1rem,2.4vw,1.9rem);column-rule:1px solid var(--hair);
+    text-align:justify;hyphens:auto;padding-bottom:1.2rem}
+  @media(max-width:900px){.cols{columns:2}}
+  @media(max-width:600px){.cols{columns:1;text-align:left;column-rule:none}}
+  .cols p{margin:0 0 .75rem;text-indent:1.1em}
+  .cols p:first-of-type{text-indent:0}
+  .cols p:first-of-type::first-letter{float:left;font-family:var(--disp);font-size:3.4em;line-height:.76;
+    padding:.06em .1em 0 0;font-weight:600;color:var(--spot)}
+
+  /* imprint block — the tombstone, set as a colophon */
+  .imprint-block{border:1px solid var(--rule);padding:clamp(1rem,3vw,1.8rem);background:#f7f3ea;
+    margin:clamp(1.4rem,3.5vw,2.4rem) 0}
+  .imprint-block h4{font-family:var(--slug);font-size:.64rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--spot);margin-bottom:1rem;text-align:center}
+  .ib-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.2rem}
+  @media(max-width:820px){.ib-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .ib-grid dt{font-family:var(--slug);font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--ink-35);margin-bottom:.25rem}
+  .ib-grid dd{font-size:.98rem;line-height:1.45}
+  .ib-grid dd b{font-weight:600}
+  .ib-note{border-top:1px solid var(--hair);margin-top:1.1rem;padding-top:.8rem;
+    font-family:var(--slug);font-size:.66rem;letter-spacing:.06em;color:var(--ink-60);line-height:1.85;text-align:center}
+  .ib-note a{color:var(--spot);border-bottom:1px solid var(--hair)}
+  .ib-note a:hover{border-color:var(--spot)}
+
+  .orn{display:flex;align-items:center;gap:1rem;margin:clamp(1.6rem,4vw,2.6rem) 0;color:var(--spot)}
+  .orn::before,.orn::after{content:"";flex:1;border-top:1px solid var(--rule)}
+  .orn span{font-family:var(--slug);font-size:.66rem;letter-spacing:.42em;text-transform:uppercase}
+
+  /* remaining plates of this gathering */
+  .gathering h4{font-family:var(--slug);font-size:.66rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--spot);border-bottom:1px solid var(--rule);padding-bottom:.4rem;margin-bottom:1.1rem}
+  .plates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(1rem,2.6vw,2rem)}
+  @media(max-width:820px){.plates{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:480px){.plates{grid-template-columns:1fr}}
+  .plates figure{margin:0}
+  .plates .frame{border:1px solid var(--hair);padding:.55rem;background:#f7f3ea}
+  .plates img{width:100%;aspect-ratio:3/2;object-fit:cover}
+  .plates figcaption{margin-top:.55rem;line-height:1.45}
+  .plates figcaption .n{font-family:var(--slug);font-size:.62rem;letter-spacing:.26em;text-transform:uppercase;color:var(--spot)}
+  .plates figcaption i{font-family:var(--disp);font-style:italic;font-size:1.08rem;display:block;margin:.2rem 0 .15rem}
+  .plates figcaption .m{font-family:var(--slug);font-size:.63rem;color:var(--ink-60);letter-spacing:.06em}
+  .plates a:hover .frame{border-color:var(--spot)}
+  .plates a:hover figcaption i{color:var(--spot)}
+
+  /* signatures — previous / next leaf */
+  .leaf{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:3px double var(--rule);
+    margin-top:clamp(1.8rem,4vw,2.8rem)}
+  @media(max-width:560px){.leaf{grid-template-columns:1fr}}
+  .leaf a{padding:1.1rem 1rem 1.2rem}
+  .leaf a+a{border-left:1px solid var(--hair);text-align:right}
+  @media(max-width:560px){.leaf a+a{border-left:none;border-top:1px solid var(--hair);text-align:left}}
+  .leaf .k{font-family:var(--slug);font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-35)}
+  .leaf .t{font-family:var(--disp);font-style:italic;font-size:1.2rem;margin-top:.3rem}
+  .leaf a:hover .t{color:var(--spot)}
+
+  .folio{border-top:1px solid var(--rule);margin-top:1.6rem;padding:.7rem 0 2.4rem;
+    display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.4rem 1rem;
+    font-family:var(--slug);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-35)}
+  .folio .pg{font-family:var(--disp);font-size:1.4rem;letter-spacing:0;color:var(--ink);text-transform:none}
+  .folio a:hover{color:var(--spot)}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--ink);color:var(--news);
+    font-family:var(--slug);font-size:.7rem;letter-spacing:.1em;padding:.4rem .55rem;opacity:.94}
+  .sw a{color:var(--news);padding:0 .22rem}
+  .sw a.cur{color:#e6a05a}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="running">
+    <span><a href="32-the-specimen-home.html">Kyle Parker Cunningham</a></span>
+    <span class="mid">The Oeuvre — Installation, 2017</span>
+    <span>Gathering II · Plate II</span>
+  </div>
+
+  <nav class="strip">
+    <a class="here" href="#">The Oeuvre <b>· p. 2</b></a>
+    <a href="32-the-specimen-home.html">Editions <b>· p. 8</b></a>
+    <a href="#">Projects <b>· p. 11</b></a>
+    <a href="#">The Log <b>· p. 14</b></a>
+    <a href="#">Cinema <b>· p. 16</b></a>
+    <a href="#">About <b>· p. 19</b></a>
+  </nav>
+
+  <header class="plate-head">
+    <div class="no">Plate II</div>
+    <h1>Cyclum <em>Lunarem</em></h1>
+    <div class="rule"><span>Oil &amp; 24kt gold leaf · 2017</span></div>
+  </header>
+
+  <figure class="bigplate">
+    <div class="frame">
+      <img src="assets/oeuvre__installation__2017__cyclum-lunarem__cyclum_lunarem-2048.jpeg" width="1536" height="2048"
+           alt="Full frontal view of Cyclum Lunarem, a tall vertical column of gold-leafed square tiles each painted with a lunar phase in muted grays and blacks on a white gallery wall">
+    </div>
+  </figure>
+  <div class="tissue">
+    <span><i>Cyclum Lunarem</i> — full installation</span>
+    <span>3⅜ in. squares each · size variable</span>
+    <span>Solstice to equinox, 2017</span>
+  </div>
+
+  <div class="cols">
+    <p>I painted the moons from an entire summer, starting on the summer solstice and completed on the
+    autumnal equinox.</p>
+
+    <p>Each moon is painted upon a 3⅜″ square prepared with linen and a traditional gesso ground. 24kt
+    gold leaf was gilded upon this ground and the moon then painted upon this.</p>
+
+    <p>Installation size is variable based on shape as well as spacing between the moons. This piece
+    plays well with atmospheric light due to the gold leaf.</p>
+
+    <p>It was later shown as part of <i>The Meaning of Time</i> (2023), an inquiry into the conditions
+    from which we enjoy the memory of our ancestors, alongside <i>Geometric Anatomy</i> and
+    <i>Calavera Del Caballo</i>.</p>
+  </div>
+
+  <section class="imprint-block">
+    <h4>Catalogue particulars</h4>
+    <dl class="ib-grid">
+      <div><dt>Medium</dt><dd>Oil and 24kt gold leaf<br>on gessoed linen panels</dd></div>
+      <div><dt>Dimensions</dt><dd>3⅜ inch squares each<br>overall size variable</dd></div>
+      <div><dt>Year</dt><dd><b>2017</b><br>solstice → equinox</dd></div>
+      <div><dt>Discipline</dt><dd>Installation<br>No. IN·106</dd></div>
+    </dl>
+    <div class="ib-note">
+      Shown in <i>The Meaning of Time</i>, 2023 &nbsp;·&nbsp;
+      <a href="mailto:analogkyle@gmail.com?subject=Cyclum%20Lunarem%20%E2%80%94%20enquiry">Enquire about this work ✉</a>
+      &nbsp;·&nbsp; <a href="#">where to collect</a>
+    </div>
+  </section>
+
+  <div class="orn"><span>❦ &nbsp; Further leaves of this plate &nbsp; ❦</span></div>
+
+  <section class="gathering">
+    <h4>The same work, other states</h4>
+    <div class="plates">
+      <a href="#">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__installation__2017__cyclum-lunarem__DSCF2532.jpg" width="2000" height="1333" alt="Angled view of Cyclum Lunarem showing rows of gold-leafed moon phase paintings catching atmospheric light"></div>
+          <figcaption><span class="n">II a</span><i>catching the light</i><span class="m">angled view · gold leaf at grazing incidence</span></figcaption>
+        </figure>
+      </a>
+      <a href="#">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__installation__2017__cyclum-lunarem__cyclum-close.jpg" width="1400" height="933" alt="Close-up detail of Cyclum Lunarem showing painted moon phases on gold leaf squares in horizontal rows, revealing textured brushwork"></div>
+          <figcaption><span class="n">II b</span><i>detail, waxing rows</i><span class="m">brushwork over gilding · 3⅜ in. squares</span></figcaption>
+        </figure>
+      </a>
+      <a href="#">
+        <figure>
+          <div class="frame"><img src="assets/oeuvre__installation__2023__the-meaning-of-time__the-meaning-of-time-2048.jpeg" width="1400" height="1866" alt="Installation view of The Meaning of Time, 2023"></div>
+          <figcaption><span class="n">Plate V</span><i>The Meaning of Time</i><span class="m">installation · 2023 · includes this work</span></figcaption>
+        </figure>
+      </a>
+    </div>
+  </section>
+
+  <nav class="leaf">
+    <a href="#"><div class="k">← Preceding leaf</div><div class="t">Tomorrow — Desert Archaic, 2019</div></a>
+    <a href="#"><div class="k">Following leaf →</div><div class="t">Once Creatures Existed, 2022</div></a>
+  </nav>
+
+  <div class="folio">
+    <span><a href="32-the-specimen-home.html">Return to the front page</a></span>
+    <span class="pg">2</span>
+    <span>Set in Bodoni Moda &amp; EB Garamond · Agile Meteor Press</span>
+  </div>
+</div>
+
+<nav class="sw"><i>32</i><a href="32-the-specimen-home.html">home</a>·<a class="cur" href="32-the-specimen-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>

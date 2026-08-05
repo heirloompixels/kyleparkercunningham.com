@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 35 — The Reel (work)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* 35 — THE REEL · work page.
+     A single work gets its own short: head slate, the wide shot, the
+     artist's line as an intertitle, a shot list of what stood in the room
+     with it, and production notes in place of a tombstone. The catalogue
+     data is all here — it is just wearing a call sheet. */
+  :root{
+    --black:#070707; --deep:#0d0d0c; --chalk:#ece9e2; --dim:#82807a; --edge:#2a2926;
+    --amber:#d9a44b;
+    --dis:'Space Grotesk',system-ui,sans-serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+    --gut:clamp(1rem,4vw,3rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;scroll-snap-type:y proximity;scroll-behavior:smooth}
+  body{background:var(--black);color:var(--chalk);font-family:var(--dis);font-weight:300;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  .hud{position:fixed;inset:0;pointer-events:none;z-index:40}
+  .hud .bar{position:absolute;left:0;right:0;padding:.75rem var(--gut);
+    display:flex;justify-content:space-between;align-items:baseline;gap:.4rem 1.2rem;flex-wrap:wrap;
+    font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+  .hud .bar.top{top:0;background:linear-gradient(rgba(7,7,7,.85),transparent)}
+  .hud .mark{color:var(--chalk);letter-spacing:.32em}
+  .hud nav{pointer-events:auto;display:flex;gap:clamp(.7rem,2.2vw,1.5rem);flex-wrap:wrap}
+  .hud nav a{border-bottom:1px solid transparent;padding-bottom:2px}
+  .hud nav a:hover,.hud nav a.on{color:var(--amber);border-color:var(--amber)}
+  .hud .rec{color:var(--amber)}
+  .hud .rec::before{content:"●";margin-right:.4rem}
+
+  .grain{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.5;
+    background-image:
+      radial-gradient(circle at 15% 25%,rgba(255,255,255,.045) 0 1px,transparent 1px),
+      radial-gradient(circle at 62% 71%,rgba(255,255,255,.035) 0 1px,transparent 1px),
+      radial-gradient(circle at 88% 40%,rgba(255,255,255,.03) 0 1px,transparent 1px);
+    background-size:3px 3px,5px 5px,7px 7px}
+  .vign{position:fixed;inset:0;z-index:29;pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 50%,transparent 40%,rgba(0,0,0,.55) 100%)}
+
+  .frame{min-height:100vh;min-height:100svh;scroll-snap-align:start;position:relative;
+    display:grid;place-items:center;padding:3.4rem var(--gut)}
+
+  /* head slate */
+  .head{width:100%;max-width:1100px;text-align:center}
+  .head .back{font-family:var(--mono);font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;color:var(--dim)}
+  .head .back:hover{color:var(--amber)}
+  .head h1{font-weight:300;font-size:clamp(2rem,7.6vw,5.6rem);line-height:.98;letter-spacing:-.03em;
+    text-transform:uppercase;margin:1.6rem 0 1.4rem}
+  .head h1 b{font-weight:700}
+  .head .strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--edge);
+    border:1px solid var(--edge);margin-top:2.4rem;text-align:left}
+  @media(max-width:700px){.head .strip{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .head .strip div{background:var(--black);padding:.9rem 1rem 1rem}
+  .head .strip dt{font-family:var(--mono);font-size:.56rem;letter-spacing:.28em;text-transform:uppercase;color:var(--dim)}
+  .head .strip dd{font-size:.95rem;margin-top:.35rem;line-height:1.4}
+
+  /* the gate */
+  .gate{width:100%;max-width:1720px;aspect-ratio:2.39/1;overflow:hidden;position:relative;background:#000}
+  @media(max-width:760px){.gate{aspect-ratio:4/5}}
+  .gate.tall{aspect-ratio:16/10}
+  @media(max-width:760px){.gate.tall{aspect-ratio:4/5}}
+  .gate img{width:100%;height:100%;object-fit:cover;transform:scale(1.05);
+    animation:drift 26s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:scale(1.05)}to{transform:scale(1.13) translate3d(-1%,-1%,0)}}
+  @media(prefers-reduced-motion:reduce){.gate img{animation:none;transform:none}}
+  .slate{position:absolute;left:0;right:0;bottom:0;padding:1rem clamp(.8rem,2.5vw,1.6rem);
+    background:linear-gradient(transparent,rgba(0,0,0,.82));
+    display:flex;justify-content:space-between;align-items:flex-end;gap:.4rem 1.4rem;flex-wrap:wrap}
+  .slate .n{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber)}
+  .slate .t{font-size:clamp(1.05rem,3vw,1.9rem);font-weight:400;line-height:1.1;margin-top:.35rem}
+  .slate .r{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--dim);text-align:right;line-height:1.9}
+  @media(max-width:620px){.slate .r{text-align:left}}
+
+  .inter{text-align:center;max-width:26ch}
+  .inter .n{font-family:var(--mono);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dim)}
+  .inter p{font-size:clamp(1.4rem,4.2vw,2.9rem);font-weight:300;line-height:1.26;letter-spacing:-.015em;margin:1.6rem 0 0}
+  .inter .src{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-top:2rem}
+
+  @supports (animation-timeline: view()){
+    .frame > *{animation:rise linear both;animation-timeline:view();animation-range:entry 8% cover 32%}
+    @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.frame > *{animation:none}}
+  }
+
+  /* ── shot list & production notes: information, still on black ─────── */
+  .sheet{max-width:1300px;margin:0 auto;padding:clamp(3rem,9vh,6rem) var(--gut);scroll-snap-align:start}
+  .sheet h2{font-family:var(--mono);font-size:.62rem;letter-spacing:.32em;text-transform:uppercase;
+    color:var(--amber);border-bottom:1px solid var(--edge);padding-bottom:.6rem;margin-bottom:1.4rem;font-weight:400}
+
+  .shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(.8rem,2.4vw,1.6rem)}
+  @media(max-width:860px){.shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:520px){.shots{grid-template-columns:1fr}}
+  .shots a{display:block}
+  .shots .f{position:relative;aspect-ratio:16/10;overflow:hidden;background:#000;border:1px solid var(--edge)}
+  .shots .f img{width:100%;height:100%;object-fit:cover;filter:saturate(.92)}
+  .shots a:hover .f{border-color:var(--amber)}
+  .shots a:hover .f img{filter:saturate(1.05)}
+  .shots .tc{position:absolute;top:.45rem;left:.5rem;font-family:var(--mono);font-size:.56rem;
+    letter-spacing:.14em;color:var(--chalk);background:rgba(7,7,7,.7);padding:.1rem .35rem}
+  .shots .t{font-size:1.02rem;margin-top:.55rem;line-height:1.25}
+  .shots a:hover .t{color:var(--amber)}
+  .shots .m{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;color:var(--dim);margin-top:.25rem;line-height:1.75}
+
+  .notes{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(1.4rem,4vw,3.2rem);
+    margin-top:clamp(2.4rem,6vw,4rem)}
+  @media(max-width:820px){.notes{grid-template-columns:1fr}}
+  .notes .body p{font-size:1.05rem;line-height:1.75;color:#cfccc5;margin-bottom:1rem;max-width:56ch}
+  .notes .body p b{color:var(--chalk);font-weight:500}
+  .notes dl{border-top:1px solid var(--edge)}
+  .notes .row{display:grid;grid-template-columns:8.5rem minmax(0,1fr);gap:.4rem 1rem;
+    padding:.6rem 0;border-bottom:1px solid var(--edge)}
+  @media(max-width:480px){.notes .row{grid-template-columns:1fr;gap:.1rem}}
+  .notes dt{font-family:var(--mono);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim)}
+  .notes dd{font-size:.98rem;line-height:1.45}
+  .notes dd a{color:var(--amber);border-bottom:1px solid var(--edge)}
+  .notes dd a:hover{border-color:var(--amber)}
+
+  .reels{max-width:1300px;margin:0 auto;padding:0 var(--gut) clamp(4rem,10vh,7rem);
+    display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--edge);border:1px solid var(--edge)}
+  @media(max-width:600px){.reels{grid-template-columns:1fr}}
+  .reels a{background:var(--black);padding:1.4rem 1.2rem 1.5rem}
+  .reels a:last-child{text-align:right}
+  @media(max-width:600px){.reels a:last-child{text-align:left}}
+  .reels a:hover{background:var(--deep)}
+  .reels .k{font-family:var(--mono);font-size:.58rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dim)}
+  .reels .t{font-size:1.3rem;margin-top:.35rem;line-height:1.2}
+  .reels a:hover .t{color:var(--amber)}
+
+  .colophon{max-width:1300px;margin:0 auto;padding:1.4rem var(--gut) 4rem;border-top:1px solid var(--edge);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.6rem;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .colophon a:hover{color:var(--amber)}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--chalk);color:var(--black);
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;padding:.35rem .5rem;opacity:.94}
+  .sw a{color:var(--black);padding:0 .22rem}
+  .sw a.cur{color:#9a5d00}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="vign"></div>
+
+<div class="hud">
+  <div class="bar top">
+    <span class="mark">KPC</span>
+    <nav>
+      <a class="on" href="#">Oeuvre</a>
+      <a href="#">Projects</a>
+      <a href="#">Cinema</a>
+      <a href="#">Log</a>
+      <a href="35-the-reel-home.html">Front page</a>
+    </nav>
+    <span class="rec">IN·106 — Installation, 2022</span>
+  </div>
+</div>
+
+<!-- ── HEAD SLATE ─────────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="head">
+    <a class="back" href="35-the-reel-home.html">↺ back to the reel</a>
+    <h1>Once Creatures <b>Existed</b></h1>
+    <dl class="strip">
+      <div><dt>Discipline</dt><dd>Installation</dd></div>
+      <div><dt>Scale</dt><dd>Twenty-three paintings</dd></div>
+      <div><dt>Ran</dt><dd>Oct 2021 — Jan 2022</dd></div>
+      <div><dt>Location</dt><dd>Desert Archaic, T or C</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ── THE WIDE SHOT ──────────────────────────────────────────────────── -->
+<section class="frame">
+  <figure class="gate">
+    <img src="assets/oeuvre__installation__2022__once-creatures-existed__gallery-wide-webized.jpg" width="1400" height="371"
+         alt="Wide gallery view of the installation Once Creatures Existed, twenty-three paintings hung together across a long wall">
+    <figcaption class="slate">
+      <div>
+        <div class="n">Sc. 01 · Establishing · Wide</div>
+        <div class="t">The whole wall, Desert Archaic</div>
+      </div>
+      <div class="r">Truth or Consequences, NM<br>2022 · 00:00:00:00</div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── INTERTITLE ─────────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="inter">
+    <div class="n">Intertitle</div>
+    <p>Ruminations on the ever present world unfolding right before us.</p>
+    <div class="src">Once Creatures Existed · 2022</div>
+  </div>
+</section>
+
+<!-- ── SHOT LIST + PRODUCTION NOTES ───────────────────────────────────── -->
+<div class="sheet">
+  <h2>Shot list — painted in the same window, October 2021 to January 2022</h2>
+  <div class="shots">
+    <a href="#">
+      <div class="f"><span class="tc">00:01:14</span>
+        <img src="assets/oeuvre__painting__2021__the-mother-bear__the-mother-bear-2000px.jpg" width="1400" height="867"
+             alt="Mixed media painting of a dark brown bear facing the viewer with an intense gaze, on orange-ochre ground"></div>
+      <div class="t">the mother bear</div>
+      <div class="m">Oil, oil stick, acrylic &amp; latex · 51½ × 32 in · Nov 2021</div>
+    </a>
+    <a href="#">
+      <div class="f"><span class="tc">00:01:52</span>
+        <img src="assets/oeuvre__painting__2021__paper-neck-giraffes__paper-neck-giraffes-2000px.jpg" width="1400" height="1643"
+             alt="Oil painting of three flat-bodied yellow giraffes with glass globe respirators containing bonsai trees"></div>
+      <div class="t">paper neck giraffes</div>
+      <div class="m">Oil on canvas · 20 × 24 in · Nov 2021</div>
+    </a>
+    <a href="#">
+      <div class="f"><span class="tc">00:02:30</span>
+        <img src="assets/oeuvre__printmaking__2021__butterfly-conundrum__IMG_1089.jpeg" width="1400" height="1744"
+             alt="Drypoint print of a white butterfly and hammer against bold washes of purple and violet watercolour"></div>
+      <div class="t">butterfly conundrum</div>
+      <div class="m">Drypoint intaglio · 8 × 10 in · 2021</div>
+    </a>
+    <a href="#">
+      <div class="f"><span class="tc">00:03:08</span>
+        <img src="assets/oeuvre__printmaking__2021__airlift__airlift-6.jpeg" width="1400" height="1689"
+             alt="Hand-coloured print of an origami crane carrying a white cloud against a vivid yellow field"></div>
+      <div class="t">airlift</div>
+      <div class="m">Drypoint intaglio · 6 × 9 in · 2021</div>
+    </a>
+    <a href="#">
+      <div class="f"><span class="tc">00:03:46</span>
+        <img src="assets/oeuvre__printmaking__2021__balance__balance2-1500w.jpeg" width="1400" height="933"
+             alt="Drypoint print covered with hand-painted golden triangular tree forms, on a bed of pine needles"></div>
+      <div class="t">balance</div>
+      <div class="m">Drypoint, hand-coloured with gouache · 2021</div>
+    </a>
+    <a href="#">
+      <div class="f"><span class="tc">00:04:24</span>
+        <img src="assets/oeuvre__painting__2022__saturday-evening-owls__saturday-evening-owls.jpeg" width="1400" height="933"
+             alt="Acrylic painting of four stylized owls in a row against pink, orange and gray brushstrokes"></div>
+      <div class="t">Saturday Evening Owls</div>
+      <div class="m">Acrylic, latex &amp; paint marker · 30 × 20 in · 2022</div>
+    </a>
+  </div>
+
+  <div class="notes">
+    <div class="body">
+      <h2 style="margin-top:2.4rem">Production notes</h2>
+      <p>Installation of <b>Once Creatures Existed</b>. Ruminations on the ever present world unfolding
+      right before us. Twenty-three paintings. October 2021 – January 2022. Desert Archaic, Truth or
+      Consequences, New Mexico.</p>
+      <p>Individual works are situated together forming dense matrices of interconnected stories.
+      The installations mimic ubiquitous computer interfaces chock full of multilayered information
+      streams which in turn mirror the overlapping and intertwined drawings found in caves the world
+      over.</p>
+    </div>
+    <div>
+      <h2 style="margin-top:2.4rem">Call sheet</h2>
+      <dl>
+        <div class="row"><dt>Record</dt><dd>IN·106 · installation</dd></div>
+        <div class="row"><dt>Year</dt><dd>2022</dd></div>
+        <div class="row"><dt>Works</dt><dd>23 paintings</dd></div>
+        <div class="row"><dt>Venue</dt><dd>Desert Archaic<br>Truth or Consequences, NM</dd></div>
+        <div class="row"><dt>Dimensions</dt><dd>Variable</dd></div>
+        <div class="row"><dt>Status</dt><dd>De-installed · works dispersed</dd></div>
+        <div class="row"><dt>Enquire</dt><dd><a href="mailto:analogkyle@gmail.com?subject=Once%20Creatures%20Existed%20%E2%80%94%20enquiry">analogkyle@gmail.com ✉</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+<nav class="reels">
+  <a href="#"><div class="k">← Previous reel</div><div class="t">Tomorrow — Desert Archaic, 2019</div></a>
+  <a href="#"><div class="k">Next reel →</div><div class="t">The Meaning of Time, 2023</div></a>
+</nav>
+
+<div class="colophon">
+  <span>© 2026 Kyle Parker Cunningham</span>
+  <span>160 works catalogued · 8 films</span>
+  <span><a href="35-the-reel-home.html">Return to the front page ↺</a></span>
+</div>
+
+<nav class="sw"><i>35</i><a href="35-the-reel-home.html">home</a>·<a class="cur" href="35-the-reel-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="32-the-specimen-home.html">32</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a></nav>
+</body>
+</html>

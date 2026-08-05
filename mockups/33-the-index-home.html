@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 33 — The Index (home)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     33 — THE INDEX
+     The archive as something you query, not something you browse. There is
+     no hero. The first thing on the page is the question box and the facet
+     counts, because SPEC.md says the core value is "comprehensive, precise,
+     searchable records per work, built to last decades." This design takes
+     that literally: the homepage IS the finding aid. Prose lives inside the
+     records; the front door is instrumentation.
+     Facets toggle for real — checkbox + label, no JavaScript anywhere.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root{
+    --paper:#fbfbf9; --panel:#f4f4f1; --ink:#15161a; --dim:#6b6f76; --faint:#9a9ea4;
+    --line:#e2e2dd; --hair:#eeeee9; --sig:#0f5d4c; --sig-bg:rgba(15,93,76,.09);
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+    --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --serif:'IBM Plex Serif',Georgia,serif;
+    --gut:clamp(.85rem,3vw,1.8rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 var(--gut)}
+
+  /* ── system bar ─────────────────────────────────────────────────────── */
+  .sysbar{border-bottom:1px solid var(--line);background:var(--panel);position:sticky;top:0;z-index:20}
+  .sysbar .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;
+    gap:.3rem 1.2rem;padding-top:.55rem;padding-bottom:.55rem;
+    font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--dim)}
+  .sysbar b{color:var(--ink);font-weight:500}
+  .sysbar .id{color:var(--sig);letter-spacing:.16em;text-transform:uppercase}
+  .sysbar nav{display:flex;gap:.9rem;flex-wrap:wrap}
+  .sysbar nav a{border-bottom:1px solid transparent}
+  .sysbar nav a:hover,.sysbar nav a.on{color:var(--sig);border-color:var(--sig)}
+
+  /* ── the query head ─────────────────────────────────────────────────── */
+  .queryhead{padding:clamp(1.6rem,4vw,3rem) 0 1.2rem}
+  .queryhead h1{font-family:var(--serif);font-weight:300;font-size:clamp(1.5rem,3.6vw,2.3rem);
+    line-height:1.2;letter-spacing:-.01em;max-width:34ch}
+  .queryhead h1 i{color:var(--dim)}
+  .queryhead .sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;color:var(--dim);
+    margin-top:.55rem;max-width:80ch;line-height:1.8}
+  .queryhead .sub b{color:var(--ink);font-weight:500}
+
+  .qbox{display:flex;align-items:stretch;border:1px solid var(--ink);background:#fff;
+    margin-top:1.2rem;max-width:900px}
+  .qbox .pfx{font-family:var(--mono);font-size:13px;color:var(--sig);padding:.7rem .3rem .7rem .8rem;
+    display:flex;align-items:center;letter-spacing:.1em}
+  .qbox input{flex:1;border:0;outline:0;background:transparent;font-family:var(--mono);
+    font-size:14px;padding:.7rem .4rem;color:var(--ink);min-width:0}
+  .qbox input::placeholder{color:var(--faint)}
+  .qbox button{border:0;border-left:1px solid var(--line);background:var(--panel);
+    font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+    padding:0 1rem;cursor:pointer;color:var(--ink)}
+  .qbox button:hover{background:var(--ink);color:var(--paper)}
+
+  /* ── main split: facets | results ───────────────────────────────────── */
+  .split{display:grid;grid-template-columns:16rem minmax(0,1fr);gap:clamp(1rem,3vw,2.4rem);
+    padding-bottom:3rem;align-items:start}
+  .split > *{min-width:0}
+  @media(max-width:980px){.split{grid-template-columns:minmax(0,1fr)}}
+
+  .facets{position:sticky;top:3rem;border-top:2px solid var(--ink);padding-top:.8rem}
+  @media(max-width:980px){.facets{position:static;top:auto}}
+  .fgroup{margin-bottom:1.3rem}
+  .fgroup h3{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.5rem}
+  .pills{display:flex;flex-wrap:wrap;gap:.3rem;min-width:0}
+  @media(max-width:980px){
+    .fgroup{min-width:0}
+    .pills{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;
+      padding-bottom:.35rem;scrollbar-width:thin}
+  }
+  .fx{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+  .pill{display:inline-flex;align-items:baseline;gap:.4rem;border:1px solid var(--line);background:#fff;
+    font-family:var(--mono);font-size:11.5px;padding:.28rem .5rem;cursor:pointer;white-space:nowrap;
+    transition:background .12s,border-color .12s,color .12s}
+  .pill b{color:var(--faint);font-weight:400;font-size:10.5px}
+  .pill:hover{border-color:var(--sig);color:var(--sig)}
+  .fx:checked + .pill{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .fx:checked + .pill b{color:rgba(251,251,249,.6)}
+  .fx:focus-visible + .pill{outline:2px solid var(--sig);outline-offset:1px}
+  .fnote{font-family:var(--mono);font-size:10.5px;color:var(--faint);line-height:1.8;
+    border-top:1px solid var(--hair);padding-top:.6rem;margin-top:.2rem}
+
+  /* ── results ────────────────────────────────────────────────────────── */
+  .results{border-top:2px solid var(--ink);padding-top:.55rem}
+  .rbar{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.3rem 1rem;
+    font-family:var(--mono);font-size:11px;letter-spacing:.05em;color:var(--dim);padding-bottom:.6rem}
+  .rbar b{color:var(--ink);font-weight:500}
+  .rbar .sort a{padding-left:.7rem}
+  .rbar .sort a.on{color:var(--sig);border-bottom:1px solid var(--sig)}
+  .rbar .sort a:hover{color:var(--sig)}
+
+  table.rows{width:100%;border-collapse:collapse}
+  table.rows th{font-family:var(--mono);font-size:10px;font-weight:400;letter-spacing:.18em;
+    text-transform:uppercase;color:var(--faint);text-align:left;
+    padding:.4rem .7rem .4rem 0;border-bottom:1px solid var(--ink)}
+  table.rows td{padding:.4rem .7rem;border-bottom:1px solid var(--hair);vertical-align:middle;
+    padding-left:0;font-size:13.5px}
+  table.rows tr:hover td{background:var(--sig-bg)}
+  table.rows .th img{width:40px;height:40px;object-fit:cover;background:var(--panel)}
+  table.rows .th{width:40px;padding-right:.7rem}
+  table.rows .id{font-family:var(--mono);font-size:11.5px;color:var(--sig);white-space:nowrap}
+  table.rows .ti{font-family:var(--serif);font-size:15.5px;font-weight:400;line-height:1.3}
+  table.rows tr:hover .ti{color:var(--sig)}
+  table.rows .yr{font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+  table.rows .dc,table.rows .md{font-size:12.5px;color:var(--dim);font-weight:300}
+  table.rows .st{font-family:var(--mono);font-size:11px;color:var(--dim);white-space:nowrap}
+  .tag{display:inline-block;border:1px solid var(--line);padding:0 .3rem;font-family:var(--mono);
+    font-size:10px;letter-spacing:.06em;color:var(--dim);margin-right:.2rem}
+  .tag.un{color:var(--faint);border-style:dashed}
+
+  @media(max-width:760px){
+    table.rows thead{position:absolute;left:-9999px}
+    table.rows tr{display:grid;grid-template-columns:40px 1fr;gap:.1rem .7rem;
+      padding:.6rem 0;border-bottom:1px solid var(--hair);align-items:start}
+    table.rows td{border:none;padding:0}
+    table.rows .th{grid-row:1/4;grid-column:1}
+    table.rows .id{grid-column:2}
+    table.rows .ti{grid-column:2}
+    table.rows .yr,table.rows .dc,table.rows .md,table.rows .st{grid-column:2;display:inline}
+    table.rows .md::before{content:" · "}
+    table.rows .st::before{content:" · "}
+  }
+
+  .more{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--dim);
+    border:1px dashed var(--line);padding:.7rem;text-align:center;margin-top:.9rem}
+  .more a{color:var(--sig);border-bottom:1px solid var(--sig)}
+
+  /* ── saved queries ──────────────────────────────────────────────────── */
+  .saved{margin-top:2.4rem;border-top:2px solid var(--ink);padding-top:.7rem}
+  .saved h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.9rem}
+  .sgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);
+    border:1px solid var(--line)}
+  .sgrid a{background:var(--paper);padding:.85rem .9rem 1rem;transition:background .12s}
+  .sgrid a:hover{background:#fff}
+  .sgrid .q{font-family:var(--mono);font-size:11px;color:var(--sig);letter-spacing:.02em;
+    overflow-wrap:anywhere;line-height:1.6}
+  .sgrid .n{font-family:var(--serif);font-size:16px;margin:.4rem 0 .25rem;line-height:1.25}
+  .sgrid .d{font-size:12.5px;color:var(--dim);font-weight:300;line-height:1.5}
+  .sgrid .c{font-family:var(--mono);font-size:10.5px;color:var(--faint);margin-top:.5rem}
+
+  /* ── health / provenance strip ──────────────────────────────────────── */
+  .health{margin-top:2.4rem;border-top:2px solid var(--ink);padding-top:.7rem}
+  .health h2{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--dim);font-weight:400;margin-bottom:.8rem}
+  .bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1.2rem}
+  .bar .lab{font-family:var(--mono);font-size:11px;color:var(--dim);display:flex;
+    justify-content:space-between;margin-bottom:.3rem}
+  .bar .lab b{color:var(--ink);font-weight:500}
+  .bar .track{height:5px;background:var(--panel);border:1px solid var(--line)}
+  .bar .fill{height:100%;background:var(--sig)}
+  .bar .note{font-family:var(--mono);font-size:10px;color:var(--faint);margin-top:.3rem}
+
+  footer.sysfoot{border-top:1px solid var(--line);background:var(--panel);margin-top:2.6rem}
+  footer.sysfoot .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem 1.4rem;
+    padding-top:.8rem;padding-bottom:2.6rem;font-family:var(--mono);font-size:11px;color:var(--dim);letter-spacing:.04em}
+  footer.sysfoot a:hover{color:var(--sig)}
+  footer.sysfoot b{color:var(--ink);font-weight:500}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--ink);color:var(--paper);
+    font-family:var(--mono);font-size:11px;letter-spacing:.08em;padding:.35rem .5rem;opacity:.94}
+  .sw a{color:var(--paper);padding:0 .22rem}
+  .sw a.cur{color:#7fd8bd}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="sysbar">
+  <div class="wrap">
+    <span class="id">kpc · oeuvre index</span>
+    <nav>
+      <a class="on" href="#">records</a>
+      <a href="#">projects</a>
+      <a href="#">editions</a>
+      <a href="#">cinema</a>
+      <a href="#">log</a>
+      <a href="#">about</a>
+      <a href="#">colophon</a>
+    </nav>
+    <span><b>160</b> records · last indexed <b>2026-07-06</b> · season <b>XIII</b> live</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <header class="queryhead">
+    <h1>Every work Kyle Parker Cunningham has made, <i>and everything known about each one.</i></h1>
+    <p class="sub">Painting, printmaking, installation, sculpture, exhibitions and other — <b>2009 to now</b>,
+      one record per work, one schema for all of them. Ask the archive a question. <b>12</b> of 160 records
+      carry a collection status; the rest are marked <i>unrecorded</i> rather than guessed.</p>
+
+    <div class="qbox">
+      <span class="pfx">?</span>
+      <input type="search" placeholder="clouds · drypoint 2021 · oil on linen · reworked · sold · Montana" aria-label="Search the archive">
+      <button type="button">Query</button>
+    </div>
+  </header>
+
+  <div class="split">
+
+    <!-- ── FACETS ──────────────────────────────────────────────────── -->
+    <aside class="facets">
+      <div class="fgroup">
+        <h3>Discipline</h3>
+        <div class="pills">
+          <input class="fx" type="checkbox" id="d1" checked><label class="pill" for="d1">painting <b>93</b></label>
+          <input class="fx" type="checkbox" id="d2"><label class="pill" for="d2">printmaking <b>47</b></label>
+          <input class="fx" type="checkbox" id="d3"><label class="pill" for="d3">installation <b>8</b></label>
+          <input class="fx" type="checkbox" id="d4"><label class="pill" for="d4">other <b>7</b></label>
+          <input class="fx" type="checkbox" id="d5"><label class="pill" for="d5">philosophy <b>3</b></label>
+          <input class="fx" type="checkbox" id="d6"><label class="pill" for="d6">sculpture <b>1</b></label>
+          <input class="fx" type="checkbox" id="d7"><label class="pill" for="d7">exhibitions <b>1</b></label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3>Year</h3>
+        <div class="pills">
+          <input class="fx" type="checkbox" id="y1" checked><label class="pill" for="y1">2024 <b>19</b></label>
+          <input class="fx" type="checkbox" id="y2"><label class="pill" for="y2">2023 <b>17</b></label>
+          <input class="fx" type="checkbox" id="y3"><label class="pill" for="y3">2022 <b>18</b></label>
+          <input class="fx" type="checkbox" id="y4"><label class="pill" for="y4">2021 <b>22</b></label>
+          <input class="fx" type="checkbox" id="y5"><label class="pill" for="y5">2018 <b>24</b></label>
+          <input class="fx" type="checkbox" id="y6"><label class="pill" for="y6">2015 <b>8</b></label>
+          <input class="fx" type="checkbox" id="y7"><label class="pill" for="y7">2014 <b>8</b></label>
+          <input class="fx" type="checkbox" id="y8"><label class="pill" for="y8">← 2009</label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3>Medium</h3>
+        <div class="pills">
+          <input class="fx" type="checkbox" id="m1"><label class="pill" for="m1">oil on linen</label>
+          <input class="fx" type="checkbox" id="m2"><label class="pill" for="m2">drypoint intaglio</label>
+          <input class="fx" type="checkbox" id="m3"><label class="pill" for="m3">acrylic &amp; latex</label>
+          <input class="fx" type="checkbox" id="m4"><label class="pill" for="m4">gouache, hand-col.</label>
+          <input class="fx" type="checkbox" id="m5"><label class="pill" for="m5">24kt gold leaf</label>
+          <input class="fx" type="checkbox" id="m6"><label class="pill" for="m6">gesso panel</label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3>Status</h3>
+        <div class="pills">
+          <input class="fx" type="checkbox" id="s1"><label class="pill" for="s1">available <b>6</b></label>
+          <input class="fx" type="checkbox" id="s2"><label class="pill" for="s2">sold <b>4</b></label>
+          <input class="fx" type="checkbox" id="s3"><label class="pill" for="s3">collection <b>2</b></label>
+          <input class="fx" type="checkbox" id="s4"><label class="pill" for="s4">unrecorded <b>148</b></label>
+        </div>
+      </div>
+
+      <div class="fgroup">
+        <h3>Has</h3>
+        <div class="pills">
+          <input class="fx" type="checkbox" id="h1"><label class="pill" for="h1">photograph</label>
+          <input class="fx" type="checkbox" id="h2"><label class="pill" for="h2">prose</label>
+          <input class="fx" type="checkbox" id="h3"><label class="pill" for="h3">dimensions</label>
+          <input class="fx" type="checkbox" id="h4"><label class="pill" for="h4">in a project</label>
+          <input class="fx" type="checkbox" id="h5"><label class="pill" for="h5">reworked</label>
+        </div>
+      </div>
+
+      <p class="fnote">Facets are ANDed. Counts are of the whole archive, not the current result set.
+        Every record is addressable and permanent — URLs from the 2013 site still resolve.</p>
+    </aside>
+
+    <!-- ── RESULTS ─────────────────────────────────────────────────── -->
+    <section class="results">
+      <div class="rbar">
+        <span><b>19</b> records — discipline: <b>painting</b> &nbsp;∧&nbsp; year: <b>2024</b></span>
+        <span class="sort">sort <a class="on" href="#">year ↓</a><a href="#">title</a><a href="#">recently edited</a><a href="#">discipline</a></span>
+      </div>
+
+      <table class="rows">
+        <thead><tr><th></th><th>ID</th><th>Title</th><th>Year</th><th>Discipline</th><th>Medium</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__the-river-in-the-sky__the-river-in-the-sky.jpg" width="1400" height="1400" alt="Luminous lavender and plum spheres with a strip of blue sky between cloud masses"></td>
+            <td class="id">PT-2024-014</td>
+            <td class="ti"><a href="33-the-index-work.html">the river in the sky</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__towers__towers.jpg" width="1400" height="1400" alt="Towering cumulus clouds in sculptural white and gray brushstrokes against vivid blue"></td>
+            <td class="id">PT-2024-017</td>
+            <td class="ti"><a href="#">towers</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__the-algebra-of-water-vapor__the-algebra-of-water-vapor.jpg" width="1400" height="1400" alt="White impasto clouds over a faceted geometric blue and teal sky"></td>
+            <td class="id">PT-2024-013</td>
+            <td class="ti"><a href="#">the algebra of water vapor</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__bottled-lightning__bottled-lightning.jpg" width="1400" height="1400" alt="Three glass mason jars each containing a cloud, one with a lightning bolt inside"></td>
+            <td class="id">PT-2024-003</td>
+            <td class="ti"><a href="#">bottled lightning</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__the-atmospheres-electric-finger__the-atmosphere-s-electric-finger-good.jpg" width="1400" height="1400" alt="Jagged golden-yellow lightning shapes on a pale white-gray ground"></td>
+            <td class="id">PT-2024-012</td>
+            <td class="ti"><a href="#">the atmosphere's electric finger</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__above-the-clouds__above-the-clouds.jpg" width="1400" height="1400" alt="Faceted green and olive mountains with clouds nestled between peaks under a hazy pink sky"></td>
+            <td class="id">PT-2024-001</td>
+            <td class="ti"><a href="#">above the clouds</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__low-angle-sun-rays__rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.jpg" width="1400" height="1400" alt="Billowing cumulus clouds in pinks and peach with golden highlights against deep navy"></td>
+            <td class="id">PT-2024-008</td>
+            <td class="ti"><a href="#">low angle sun rays</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag">project</span><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__felt-and-lived__felt-and-lived.jpg" width="1400" height="1400" alt="Radiating red, orange and yellow lines converging into an hourglass shape on gray"></td>
+            <td class="id">PT-2024-006</td>
+            <td class="ti"><a href="#">felt and lived</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag un">status?</span></td>
+          </tr>
+          <tr>
+            <td class="th"><img src="assets/oeuvre__painting__2024__out-there-on-the-horizon-a-solitary-cloud__-in-the-distance--on-the-horizon--a-cloud.jpg" width="1400" height="1400" alt="A single luminous cumulus cloud against horizontal bands of navy through pale blue to a golden horizon"></td>
+            <td class="id">PT-2024-010</td>
+            <td class="ti"><a href="#">out there, on the horizon, a solitary cloud</a></td>
+            <td class="yr">2024</td><td class="dc">painting</td><td class="md">oil on linen</td>
+            <td class="st"><span class="tag un">status?</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="more">10 further records match — <a href="#">load the rest of 2024</a> · or <a href="#">export this query as JSON</a></p>
+
+      <!-- ── SAVED QUERIES = the curated threads ───────────────────── -->
+      <section class="saved">
+        <h2>Saved queries — ways through the archive</h2>
+        <div class="sgrid">
+          <a href="#">
+            <div class="q">tags:solarpunk ∧ subject:animal</div>
+            <div class="n">Animals wearing the future</div>
+            <div class="d">Flora and fauna donning the technology of man to survive a climate-changed environment. The engine of the artist statement.</div>
+            <div class="c">18 records · 2014 — 2022</div>
+          </a>
+          <a href="#">
+            <div class="q">project:"the-memory-of-atmosphere"</div>
+            <div class="n">The Memory of Atmosphere</div>
+            <div class="d">What the sky keeps and what it lets go — the 2024 weather paintings, complete, with the exhibition catalog.</div>
+            <div class="c">14 records · complete · 2024</div>
+          </a>
+          <a href="#">
+            <div class="q">has:painting ∧ has:print ∧ same:title</div>
+            <div class="n">Painted, then scribed</div>
+            <div class="d">Works that exist twice: an oil panel and, years later, the same image cut into a drypoint plate.</div>
+            <div class="c">6 pairs · 2015 — 2023</div>
+          </a>
+          <a href="#">
+            <div class="q">year_reworked != null</div>
+            <div class="n">Returned to, years later</div>
+            <div class="d">Paintings the studio reopened — <i>Butterfly Conundrum</i> (2015, reworked 2020) and its kin.</div>
+            <div class="c">9 records</div>
+          </a>
+          <a href="#">
+            <div class="q">discipline:installation ORDER BY year</div>
+            <div class="n">The whole is bigger than the parts</div>
+            <div class="d">Eight installations, 2015 to 2023 — dense matrices of interconnected stories.</div>
+            <div class="c">8 records</div>
+          </a>
+          <a href="#">
+            <div class="q">status:unrecorded ∧ has:photograph</div>
+            <div class="n">Photographed, not yet accounted for</div>
+            <div class="d">The honest gap: works with an image but no collection status. The archive shows its own holes.</div>
+            <div class="c">148 records</div>
+          </a>
+        </div>
+      </section>
+
+      <!-- ── ARCHIVE HEALTH ───────────────────────────────────────── -->
+      <section class="health">
+        <h2>Archive completeness — what this index knows about itself</h2>
+        <div class="bars">
+          <div class="bar">
+            <div class="lab"><span>Photographed</span><b>100%</b></div>
+            <div class="track"><div class="fill" style="width:100%"></div></div>
+            <div class="note">160 / 160 records carry an image</div>
+          </div>
+          <div class="bar">
+            <div class="lab"><span>Medium recorded</span><b>62%</b></div>
+            <div class="track"><div class="fill" style="width:62%"></div></div>
+            <div class="note">99 / 160 — the rest read from prose</div>
+          </div>
+          <div class="bar">
+            <div class="lab"><span>Dimensions recorded</span><b>41%</b></div>
+            <div class="track"><div class="fill" style="width:41%"></div></div>
+            <div class="note">66 / 160</div>
+          </div>
+          <div class="bar">
+            <div class="lab"><span>Collection status</span><b>7%</b></div>
+            <div class="track"><div class="fill" style="width:7%"></div></div>
+            <div class="note">12 / 160 — knowledge only Kyle has</div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+</div>
+
+<footer class="sysfoot">
+  <div class="wrap">
+    <span><b>Kyle Parker Cunningham</b> — Truth or Consequences, New Mexico · 33.13° N, 107.25° W</span>
+    <span><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a> · <a href="#">merveilles.town/@kpc</a></span>
+    <span>Static site · no tracking · <a href="#">works.json</a> · <a href="#">rss</a> · built <b>2026-07-06</b></span>
+  </div>
+</footer>
+
+<nav class="sw"><i>33</i><a class="cur" href="33-the-index-home.html">home</a>·<a href="33-the-index-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="32-the-specimen-home.html">32</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>

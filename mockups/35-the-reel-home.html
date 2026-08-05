@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 35 — The Reel (home)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  /* ══════════════════════════════════════════════════════════════════════
+     35 — THE REEL
+     The riskiest of the five, and deliberately so. Kyle makes films as well
+     as paintings; this treats the whole site as one. The homepage is not a
+     page — it is a projection: title card, letterboxed frames that snap one
+     at a time, silent-film intertitles carrying the artist's own words, a
+     slate in the corner of every shot, and end credits that are also the
+     navigation. Nothing scrolls past you; each thing arrives, holds, and
+     gives way. No JavaScript — snap points, view-timeline animation and
+     :target do all of it.
+     ══════════════════════════════════════════════════════════════════════ */
+  :root{
+    --black:#070707; --deep:#0d0d0c; --chalk:#ece9e2; --dim:#82807a; --edge:#2a2926;
+    --amber:#d9a44b;
+    --dis:'Space Grotesk',system-ui,sans-serif;
+    --mono:'Space Mono',ui-monospace,monospace;
+    --gut:clamp(1rem,4vw,3rem);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased;scroll-snap-type:y proximity;scroll-behavior:smooth}
+  body{background:var(--black);color:var(--chalk);font-family:var(--dis);font-weight:300;line-height:1.55}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%}
+
+  /* ── the projector HUD ──────────────────────────────────────────────── */
+  .hud{position:fixed;inset:0;pointer-events:none;z-index:40}
+  .hud .bar{position:absolute;left:0;right:0;padding:.75rem var(--gut);
+    display:flex;justify-content:space-between;align-items:baseline;gap:.4rem 1.2rem;flex-wrap:wrap;
+    font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim)}
+  .hud .bar.top{top:0;background:linear-gradient(rgba(7,7,7,.85),transparent)}
+  .hud .bar.bot{bottom:0;background:linear-gradient(transparent,rgba(7,7,7,.85))}
+  .hud .mark{color:var(--chalk);letter-spacing:.32em}
+  .hud nav{pointer-events:auto;display:flex;gap:clamp(.7rem,2.2vw,1.5rem);flex-wrap:wrap}
+  .hud nav a{border-bottom:1px solid transparent;padding-bottom:2px}
+  .hud nav a:hover{color:var(--amber);border-color:var(--amber)}
+  .hud .rec{color:var(--amber)}
+  .hud .rec::before{content:"●";margin-right:.4rem}
+  @media(max-width:620px){.hud .bar.bot{display:none}}
+
+  /* film grain + vignette, over everything, under the HUD */
+  .grain{position:fixed;inset:0;z-index:30;pointer-events:none;opacity:.5;
+    background-image:
+      radial-gradient(circle at 15% 25%,rgba(255,255,255,.045) 0 1px,transparent 1px),
+      radial-gradient(circle at 62% 71%,rgba(255,255,255,.035) 0 1px,transparent 1px),
+      radial-gradient(circle at 88% 40%,rgba(255,255,255,.03) 0 1px,transparent 1px);
+    background-size:3px 3px,5px 5px,7px 7px}
+  .vign{position:fixed;inset:0;z-index:29;pointer-events:none;
+    background:radial-gradient(120% 90% at 50% 50%,transparent 40%,rgba(0,0,0,.55) 100%)}
+
+  /* ── a frame ────────────────────────────────────────────────────────── */
+  .frame{min-height:100vh;min-height:100svh;scroll-snap-align:start;position:relative;
+    display:grid;place-items:center;padding:3.4rem var(--gut)}
+
+  /* title card */
+  .card{text-align:center;max-width:min(92vw,1020px)}
+  .card .reel{font-family:var(--mono);font-size:.66rem;letter-spacing:.44em;text-transform:uppercase;color:var(--amber)}
+  .card h1{font-weight:300;font-size:clamp(2rem,6.4vw,4.5rem);line-height:1;letter-spacing:-.03em;
+    margin:1.4rem 0 1.4rem;text-transform:uppercase}
+  .card h1 b{font-weight:700}
+  .card .deck{font-size:clamp(.95rem,2vw,1.15rem);color:var(--dim);max-width:44ch;margin:0 auto;line-height:1.7}
+  .card .who{font-family:var(--mono);font-size:.64rem;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--dim);margin-top:2.4rem}
+  .cue{position:absolute;bottom:5.2rem;left:50%;transform:translateX(-50%);
+    font-family:var(--mono);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dim);
+    animation:pulse 2.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+
+  /* the gate — a letterboxed shot */
+  .gate{width:100%;max-width:1720px;aspect-ratio:2.39/1;overflow:hidden;position:relative;background:#000}
+  @media(max-width:760px){.gate{aspect-ratio:4/5}}
+  .gate img{width:100%;height:100%;object-fit:cover;transform:scale(1.06);
+    animation:drift 26s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:scale(1.06) translate3d(0,0,0)}to{transform:scale(1.14) translate3d(-1.2%,-1%,0)}}
+  @media(prefers-reduced-motion:reduce){.gate img{animation:none;transform:none}.cue{animation:none}}
+
+  /* the slate — every shot is labelled, like a can of film */
+  .slate{position:absolute;left:0;bottom:0;right:0;padding:1rem clamp(.8rem,2.5vw,1.6rem);
+    background:linear-gradient(transparent,rgba(0,0,0,.82));
+    display:flex;justify-content:space-between;align-items:flex-end;gap:.4rem 1.4rem;flex-wrap:wrap}
+  .slate .l .n{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;text-transform:uppercase;color:var(--amber)}
+  .slate .l .t{font-size:clamp(1.1rem,3.2vw,2rem);font-weight:400;line-height:1.1;margin-top:.35rem}
+  .slate .l .t a:hover{color:var(--amber)}
+  .slate .r{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;color:var(--dim);
+    text-align:right;line-height:1.9}
+  @media(max-width:620px){.slate .r{text-align:left}}
+
+  /* intertitle — the artist's words as a silent-film card */
+  .inter{text-align:center;max-width:26ch}
+  .inter .n{font-family:var(--mono);font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--dim)}
+  .inter p{font-size:clamp(1.5rem,4.6vw,3.2rem);font-weight:300;line-height:1.24;
+    letter-spacing:-.015em;margin:1.6rem 0 0}
+  .inter .src{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--dim);margin-top:2rem}
+
+  /* a match cut — two shots in one frame */
+  .cut2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.4rem,1.4vw,1rem);width:100%;max-width:1560px}
+  @media(max-width:760px){.cut2{grid-template-columns:1fr}}
+  .cut2 .half{position:relative;aspect-ratio:1/1;overflow:hidden;background:#000}
+  .cut2 .half img{width:100%;height:100%;object-fit:cover}
+  .cut2 .lab{position:absolute;left:0;right:0;bottom:0;padding:.8rem 1rem;
+    background:linear-gradient(transparent,rgba(0,0,0,.8))}
+  .cut2 .lab .n{font-family:var(--mono);font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;color:var(--amber)}
+  .cut2 .lab .t{font-size:clamp(1rem,2.4vw,1.4rem);margin-top:.25rem;line-height:1.15}
+
+  /* entrance, only where the browser can key it to the scroll */
+  @supports (animation-timeline: view()){
+    .frame > *{animation:rise linear both;animation-timeline:view();animation-range:entry 8% cover 32%}
+    @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.frame > *{animation:none}}
+  }
+
+  /* ── end credits — the navigation ───────────────────────────────────── */
+  .credits{min-height:100vh;min-height:100svh;scroll-snap-align:start;
+    padding:clamp(4rem,12vh,8rem) var(--gut) 5rem;max-width:1300px;margin:0 auto}
+  .credits .end{font-family:var(--mono);font-size:.66rem;letter-spacing:.44em;text-transform:uppercase;
+    color:var(--amber);text-align:center}
+  .credits h2{text-align:center;font-weight:300;font-size:clamp(1.7rem,5.4vw,3.4rem);
+    text-transform:uppercase;letter-spacing:-.02em;margin:1.2rem 0 clamp(2.4rem,6vw,4rem);line-height:1.05}
+  .roll{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:clamp(1.4rem,4vw,3rem) clamp(1.4rem,4vw,3.4rem)}
+  .roll section h3{font-family:var(--mono);font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--dim);border-bottom:1px solid var(--edge);padding-bottom:.5rem;margin-bottom:.8rem;font-weight:400}
+  .roll a,.roll span.li{display:block;font-size:1.02rem;line-height:1.9;color:var(--chalk)}
+  .roll a:hover{color:var(--amber)}
+  .roll a b,.roll span.li b{font-family:var(--mono);font-size:.66rem;color:var(--dim);
+    font-weight:400;letter-spacing:.1em;margin-left:.4rem}
+  .colophon{border-top:1px solid var(--edge);margin-top:clamp(2.4rem,6vw,4rem);padding-top:1.4rem;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem 1.6rem;
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+  .colophon a:hover{color:var(--amber)}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:var(--chalk);color:var(--black);
+    font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;padding:.35rem .5rem;opacity:.94}
+  .sw a{color:var(--black);padding:0 .22rem}
+  .sw a.cur{color:#9a5d00}
+  .sw i{opacity:.5;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="vign"></div>
+
+<div class="hud">
+  <div class="bar top">
+    <span class="mark">KPC</span>
+    <nav>
+      <a href="35-the-reel-work.html">Oeuvre</a>
+      <a href="#">Projects</a>
+      <a href="#">Cinema</a>
+      <a href="#">Log</a>
+      <a href="#credits">About</a>
+    </nav>
+    <span class="rec">Reel XIII — Summer 2026</span>
+  </div>
+  <div class="bar bot">
+    <span>Truth or Consequences, New Mexico · 33.13° N 107.25° W</span>
+    <span>160 works · 8 films · est. 2003</span>
+  </div>
+</div>
+
+<!-- ── 01 · TITLE CARD ────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="card">
+    <div class="reel">Reel XIII · Summer MMXXVI</div>
+    <h1>Everything<br>That Can Be<br><b>Carried</b></h1>
+    <p class="deck">The studio loses its walls. A summer spent finding out whether the whole
+      operation — paintings, a press, a bindery — can be carried, and keep working from anywhere.</p>
+    <div class="who">Kyle Parker Cunningham</div>
+  </div>
+  <div class="cue">Scroll ▼</div>
+</section>
+
+<!-- ── 02 · SHOT ──────────────────────────────────────────────────────── -->
+<section class="frame">
+  <figure class="gate">
+    <img src="assets/oeuvre__painting__2024__towers__towers.jpg" width="1400" height="1400"
+         alt="Oil painting of towering cumulus clouds in thick sculptural white and gray brushstrokes against a vivid blue sky">
+    <figcaption class="slate">
+      <div class="l">
+        <div class="n">Sc. 02 · Painting</div>
+        <div class="t"><a href="35-the-reel-work.html">towers</a></div>
+      </div>
+      <div class="r">Oil on linen · 2024<br>00:00:14:03 · TAKE 1</div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── 03 · INTERTITLE ────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="inter">
+    <div class="n">Intertitle</div>
+    <p>The sky becomes architecture, water vapor transformed into towers reaching toward infinity.</p>
+    <div class="src">towers · 2024</div>
+  </div>
+</section>
+
+<!-- ── 04 · WIDE ──────────────────────────────────────────────────────── -->
+<section class="frame">
+  <figure class="gate">
+    <img src="assets/oeuvre__installation__2022__once-creatures-existed__gallery-wide-webized.jpg" width="1400" height="371"
+         alt="Wide gallery view of the installation Once Creatures Existed, twenty-three paintings hung together across a long wall">
+    <figcaption class="slate">
+      <div class="l">
+        <div class="n">Sc. 04 · Installation · Wide</div>
+        <div class="t"><a href="35-the-reel-work.html">Once Creatures Existed</a></div>
+      </div>
+      <div class="r">Desert Archaic · 2022<br>23 paintings · 00:01:02:11</div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── 05 · MATCH CUT ─────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="cut2">
+    <div class="half">
+      <img src="assets/oeuvre__painting__2015__cadence__cadence-copy-2.jpg" width="1400" height="1379"
+           alt="Oil painting on gesso panel of a grid of hand-painted orange circles on a warm cream background">
+      <div class="lab"><div class="n">Sc. 05 a · 2015</div><div class="t">Cadence</div></div>
+    </div>
+    <div class="half">
+      <img src="assets/oeuvre__installation__2017__cyclum-lunarem__cyclum-close.jpg" width="1400" height="933"
+           alt="Close-up detail of Cyclum Lunarem showing painted moon phases on gold leaf squares in horizontal rows">
+      <div class="lab"><div class="n">Sc. 05 b · 2017</div><div class="t">Cyclum Lunarem</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── 06 · INTERTITLE ────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="inter">
+    <div class="n">Intertitle</div>
+    <p>The same mark, made until it sings.</p>
+    <div class="src">Cadence · 2015</div>
+  </div>
+</section>
+
+<!-- ── 07 · SHOT ──────────────────────────────────────────────────────── -->
+<section class="frame">
+  <figure class="gate">
+    <img src="assets/oeuvre__painting__2022__the-black-fire__the-black-fire-2000px.jpeg" width="1400" height="854"
+         alt="Oil painting of a row of green conifer trees on red earth with splashes of red and orange suggesting flames, against an abstracted gray sky">
+    <figcaption class="slate">
+      <div class="l">
+        <div class="n">Sc. 07 · Painting</div>
+        <div class="t"><a href="#">The Black Fire</a></div>
+      </div>
+      <div class="r">Oil on linen · 21 × 34 in · 2022<br>Aldo Leopold Wilderness · sold</div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── 08 · INTERTITLE ────────────────────────────────────────────────── -->
+<section class="frame">
+  <div class="inter">
+    <div class="n">Intertitle</div>
+    <p>I will watch many beloved wilderness burn every year for the rest of my life.</p>
+    <div class="src">The Black Fire · 2022</div>
+  </div>
+</section>
+
+<!-- ── 09 · SHOT — the season on the road ─────────────────────────────── -->
+<section class="frame">
+  <figure class="gate">
+    <img src="assets/editions__2026-summer__bindery-in-the-aspens.jpg" width="1500" height="2000"
+         alt="A bindery set up in an aspen grove, tools and materials laid out to bind a book outdoors">
+    <figcaption class="slate">
+      <div class="l">
+        <div class="n">Sc. 09 · The season</div>
+        <div class="t">The bindery loses its walls</div>
+      </div>
+      <div class="r">Lander, Wyoming · 2026<br>Agile Meteor Press · 00:04:38:00</div>
+    </figcaption>
+  </figure>
+</section>
+
+<!-- ── 10 · END CREDITS = the navigation ──────────────────────────────── -->
+<section class="credits" id="credits">
+  <div class="end">End of reel XIII</div>
+  <h2>The rest of the picture</h2>
+
+  <div class="roll">
+    <section>
+      <h3>The Oeuvre</h3>
+      <a href="35-the-reel-work.html">Painting <b>93</b></a>
+      <a href="#">Printmaking <b>47</b></a>
+      <a href="#">Installation <b>8</b></a>
+      <a href="#">Sculpture <b>1</b></a>
+      <a href="#">Other <b>7</b></a>
+      <a href="#">The whole ledger <b>160</b></a>
+    </section>
+    <section>
+      <h3>Cinema</h3>
+      <a href="#">Tomorrow</a>
+      <a href="#">Field Theory</a>
+      <a href="#">Blue Corn</a>
+      <a href="#">The Crystal Hammer</a>
+      <a href="#">Preludes and Etudes</a>
+      <a href="#">All eight films <b>↗</b></a>
+    </section>
+    <section>
+      <h3>Projects</h3>
+      <a href="#">Survival Notes from the Near Future <b>ongoing</b></a>
+      <a href="#">The 200 <b>ongoing</b></a>
+      <a href="#">Agile Meteor Press <b>ongoing</b></a>
+      <a href="#">The Memory of Atmosphere <b>complete</b></a>
+      <a href="#">The Periodic <b>researching</b></a>
+    </section>
+    <section>
+      <h3>Production</h3>
+      <a href="#">The Log — notes as they happen</a>
+      <a href="#">Editions — every past front page</a>
+      <a href="#">About &amp; biography</a>
+      <a href="#">Where to collect</a>
+      <a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a>
+    </section>
+  </div>
+
+  <div class="colophon">
+    <span>© 2026 Kyle Parker Cunningham — all works &amp; words</span>
+    <span>Shot on location: Wyoming · Montana · Colorado · New Mexico</span>
+    <span><a href="35-the-reel-home.html">Rewind to the head of the reel ↺</a></span>
+  </div>
+</section>
+
+<nav class="sw"><i>35</i><a class="cur" href="35-the-reel-home.html">home</a>·<a href="35-the-reel-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="31-the-ledger-home.html">31</a><a href="32-the-specimen-home.html">32</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a></nav>
+</body>
+</html>

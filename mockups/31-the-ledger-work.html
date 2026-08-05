@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mockup 31 — The Ledger (work)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+<style>
+  /* 31 — THE LEDGER · work page.
+     The plate leads at full measure; the tombstone is a real catalogue
+     record, not a run-on line; the story keeps one measure with the
+     particulars in the rail beside it. */
+  :root{
+    --bg:#f7f4ef; --paper:#fdfbf7; --ink:#1e1a16; --muted:#6a6258;
+    --accent:#1f3f5b; --line:#e2dbd1; --rule:#1e1a16;
+    --serif:'Literata',Georgia,serif; --sans:'IBM Plex Sans',system-ui,sans-serif;
+    --mono:'Inconsolata',ui-monospace,monospace;
+    --gut:clamp(1.1rem,4vw,2.2rem); --measure:62ch;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--bg);color:var(--ink);font-family:var(--serif);line-height:1.72;font-size:clamp(1rem,.96rem+.2vw,1.08rem)}
+  a{color:inherit;text-decoration:none}
+  img{display:block;max-width:100%;height:auto}
+  .shell{max-width:1180px;margin:0 auto;padding:0 var(--gut)}
+
+  .mast{padding-top:clamp(1.4rem,3vw,2.6rem)}
+  .mast-inner{border-bottom:2px solid var(--rule);padding-bottom:.85rem}
+  .mast .kicker{font-family:var(--mono);font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;
+    color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:.4rem 1rem;margin-bottom:.9rem}
+  .mast .kicker a:hover{color:var(--accent)}
+  .mast-row{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem 2rem}
+  .wordmark{font-weight:300;font-size:clamp(1.5rem,3.4vw,2.15rem);letter-spacing:-.015em;line-height:1;white-space:nowrap}
+  .wordmark .h{font-style:italic;font-weight:400}
+  .mast nav{font-family:var(--mono);font-size:.74rem;letter-spacing:.17em;text-transform:uppercase;
+    color:var(--muted);display:flex;gap:clamp(.8rem,2.4vw,1.5rem);flex-wrap:wrap}
+  .mast nav a{padding-bottom:2px;border-bottom:1px solid transparent}
+  .mast nav a:hover{color:var(--accent);border-color:var(--accent)}
+  .mast nav a.here{color:var(--ink);border-color:var(--ink)}
+
+  .crumb{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+    color:var(--muted);margin:1.5rem 0 .5rem}
+  .crumb a:hover{color:var(--accent)}
+
+  .work-head{padding-bottom:1.2rem;border-bottom:1px solid var(--line)}
+  .work-head h1{font-weight:300;font-size:clamp(2.1rem,6vw,3.9rem);line-height:1.03;letter-spacing:-.02em;max-width:18ch}
+  .work-head .sub{font-family:var(--mono);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;
+    color:var(--accent);margin-top:.9rem}
+
+  /* the plate, given the room it deserves */
+  .plate{margin:clamp(1.8rem,4vw,3rem) 0 0}
+  .plate img{width:100%;max-width:1040px;margin:0 auto;
+    box-shadow:0 1px 3px rgba(30,26,22,.12),0 26px 64px rgba(30,26,22,.18)}
+  .plate figcaption{font-family:var(--mono);font-size:.7rem;color:var(--muted);margin:.85rem auto 0;
+    max-width:1040px;letter-spacing:.03em;line-height:1.6}
+
+  /* the record: a catalogue tombstone that reads as a table, not a sentence */
+  .record{margin:clamp(2rem,4vw,3rem) 0 0;border-top:2px solid var(--rule);border-bottom:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line)}
+  @media(max-width:820px){.record{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .record div{background:var(--bg);padding:1rem 1.1rem 1.1rem 0}
+  .record dt{font-family:var(--mono);font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:.35rem}
+  .record dd{font-family:var(--sans);font-size:.92rem;font-weight:300;line-height:1.5}
+  .record dd b{font-weight:500}
+  .record .dot{display:inline-block;width:.45rem;height:.45rem;border-radius:50%;background:var(--accent);margin-right:.4rem;vertical-align:.05em}
+
+  /* the story, one measure, particulars in the rail */
+  .story{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,var(--measure)) minmax(0,1fr);
+    column-gap:clamp(1.4rem,3.5vw,3rem);margin-top:clamp(2rem,4vw,3.2rem)}
+  @media(max-width:940px){.story{grid-template-columns:1fr}}
+  .rail{font-family:var(--mono);font-size:.68rem;line-height:1.9;letter-spacing:.05em;color:var(--muted);
+    text-align:right;position:sticky;top:1.6rem;align-self:start}
+  @media(max-width:940px){.rail{position:static;text-align:left;border-left:2px solid var(--line);
+    padding-left:.9rem;margin-bottom:1.6rem}}
+  .rail b{display:block;color:var(--accent);font-weight:400;letter-spacing:.2em;text-transform:uppercase;
+    font-size:.62rem;margin:1.1rem 0 .25rem}
+  .rail b:first-child{margin-top:0}
+  .rail a:hover{color:var(--accent)}
+  .prose p{margin:0 0 1.35rem}
+  .prose p:first-child::first-letter{float:left;font-size:3.5rem;line-height:.78;padding:.32rem .48rem .1rem 0;
+    font-weight:400;color:var(--accent)}
+  .prose em{font-style:italic}
+
+  .enquire{grid-column:2;margin-top:.6rem;padding-top:1.2rem;border-top:1px solid var(--line);
+    font-family:var(--sans);font-size:.9rem;color:var(--muted);font-weight:300}
+  @media(max-width:940px){.enquire{grid-column:1}}
+  .enquire a{color:var(--accent);border-bottom:1px solid var(--line)}
+  .enquire a:hover{border-color:var(--accent)}
+
+  /* previous / next */
+  .pn{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);
+    margin-top:clamp(2.4rem,5vw,4rem);border-top:2px solid var(--rule)}
+  @media(max-width:600px){.pn{grid-template-columns:1fr}}
+  .pn a{background:var(--bg);padding:1.3rem 1.2rem 1.4rem;transition:background .2s}
+  .pn a:hover{background:rgba(31,63,91,.06)}
+  .pn a:last-child{text-align:right}
+  @media(max-width:600px){.pn a:last-child{text-align:left}}
+  .pn .k{font-family:var(--mono);font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--muted)}
+  .pn .t{font-style:italic;font-size:1.15rem;margin-top:.4rem;line-height:1.25}
+  .pn a:hover .t{color:var(--accent)}
+
+  /* also in the ledger */
+  .also{margin-top:clamp(2.6rem,5vw,4rem);border-top:2px solid var(--rule);padding-top:1.2rem}
+  .also h3{font-family:var(--mono);font-size:.7rem;font-weight:400;letter-spacing:.28em;text-transform:uppercase;
+    color:var(--accent);margin-bottom:1.2rem}
+  .thumbs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(.8rem,2vw,1.4rem)}
+  @media(max-width:760px){.thumbs{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .thumbs img{width:100%;aspect-ratio:1/1;object-fit:cover;box-shadow:0 1px 2px rgba(30,26,22,.1),0 10px 26px rgba(30,26,22,.12)}
+  .thumbs .cap{font-family:var(--mono);font-size:.66rem;color:var(--muted);margin-top:.5rem;line-height:1.55}
+  .thumbs .cap i{font-family:var(--serif);font-style:italic;color:var(--ink);font-size:.85rem;display:block}
+  .thumbs a:hover .cap i{color:var(--accent)}
+
+  .foot{margin-top:clamp(3rem,6vw,5rem);border-top:2px solid var(--rule);padding:1.3rem 0 4rem;
+    font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;color:var(--muted)}
+  .foot a:hover{color:var(--accent)}
+  .foot .top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.7rem 1.4rem;padding-bottom:1.4rem}
+  .foot .mark{font-family:var(--serif);font-size:1.1rem;font-style:italic;color:var(--ink);letter-spacing:0}
+  .foot .mark b{font-style:normal;font-weight:400}
+  .foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;border-top:1px solid var(--line);padding-top:1.4rem}
+  @media(max-width:720px){.foot .cols{grid-template-columns:1fr 1fr}}
+  .foot h5{font-size:.64rem;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin-bottom:.5rem;font-weight:400}
+  .foot .cols p{font-size:.74rem;line-height:1.9}
+  .foot .cols p a{display:block}
+  .foot .cols b{color:var(--ink);font-weight:600}
+  .foot .base{display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+    border-top:1px solid var(--line);margin-top:1.4rem;padding-top:1rem;font-size:.68rem}
+
+  .sw{position:fixed;bottom:12px;right:12px;z-index:99;background:#1e1a16;color:#f7f4ef;
+    font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;padding:.4rem .55rem;border-radius:2px;opacity:.92}
+  .sw a{color:#f7f4ef;padding:0 .22rem}
+  .sw a.cur{color:#e8b96a}
+  .sw i{opacity:.45;font-style:normal;padding-right:.25rem}
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="mast">
+    <div class="mast-inner">
+      <div class="kicker">
+        <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+        <span>Est. 2003 — Present</span>
+      </div>
+      <div class="mast-row">
+        <a class="wordmark" href="31-the-ledger-home.html">Kyle Parker Cunning<span class="h">h</span>am</a>
+        <nav>
+          <a class="here" href="#">The Oeuvre</a>
+          <a href="31-the-ledger-home.html">Editions</a>
+          <a href="#">Projects</a>
+          <a href="#">Log</a>
+          <a href="#">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <p class="crumb"><a href="31-the-ledger-home.html">Home</a> / <a href="#">Oeuvre</a> / <a href="#">Painting</a> / 2021</p>
+
+    <header class="work-head">
+      <h1>the mother bear</h1>
+      <div class="sub">Painting · No. PT·137 · Absaroka Mountains, Montana</div>
+    </header>
+
+    <figure class="plate">
+      <img src="assets/oeuvre__painting__2021__the-mother-bear__the-mother-bear-2000px.jpg" width="1400" height="867"
+           alt="Mixed media painting of a dark brown bear facing the viewer with an intense gaze, rendered in thick expressive brushstrokes of oil, oil stick, acrylic and latex on canvas, standing on orange-ochre ground against a speckled white background">
+      <figcaption><i>the mother bear</i> · oil, oil stick, acrylic and latex on canvas · 51½ × 32 inches · 2021</figcaption>
+    </figure>
+
+    <dl class="record">
+      <div><dt>Medium</dt><dd>Oil, oil stick, acrylic<br>&amp; latex on canvas</dd></div>
+      <div><dt>Dimensions</dt><dd>51½ × 32 inches</dd></div>
+      <div><dt>Year</dt><dd><b>2021</b> · painted November</dd></div>
+      <div><dt>Status</dt><dd><span class="dot"></span>Available</dd></div>
+    </dl>
+
+    <div class="story">
+      <aside class="rail">
+        <b>Discipline</b><a href="#">Painting</a>
+        <b>Year</b><a href="#">2021</a> — 14 works
+        <b>Subjects</b><a href="#">animism</a> · <a href="#">wilderness</a><br><a href="#">portraiture</a>
+        <b>Place</b>Cowen Cirque<br>Absaroka Mountains<br>Montana
+        <b>Cite as</b>Cunningham, Kyle Parker.<br><i>the mother bear</i>, 2021.
+      </aside>
+
+      <div class="prose">
+        <p>Jeannie and I encountered this mother bear while hiking in to the Absaroka Mountains in
+        Montana in August of 2021. We were headed up to Cowen Cirque to do a bit of alpine climbing
+        for a few days and came upon this wonderful creature about 1 mile into the 10 mile hike.</p>
+
+        <p>We stopped dead in our tracks only able to see her back as she had her head buried in a
+        rose hip bush. She was probably 12–15 ft away. After a moment I yelled "Hey Bear" and she
+        looked up at us for a split second, her eyes piercing straight into our being.</p>
+
+        <p>Then with no sound she was gone, up the hill disappearing into the thick undergrowth.</p>
+
+        <p>We gathered our composure and yelled into the wind for a dozen minutes telling her we only
+        wanted to pass through and would not be a threat to her. We slowly started down the trail past
+        where she had been only to find a switchback almost immediately taking us uphill in the
+        direction of where she had disappeared to.</p>
+
+        <p>When our hearts returned to a normal pace we stopped and talked and took off our packs and
+        ate snacks and drank water. There would be no continuing on this hike; where the bears were
+        located was on a steep hill in a deep canyon and there was no way around them without putting
+        ourselves straight into danger. We shouldered our packs and hiked back to the truck to go find
+        another mountain to climb.</p>
+
+        <p>The bears that year were hungry and stressed from the unprecedented drought gripping
+        Montana. They were not in a live-and-let-live mood, the cubs were tiny for that time of the
+        year and there was little more than rose hips to eat. I fear even now those cubs did not make
+        it to the next season, and I hope the mother did so she might try again to raise a family in
+        the ever shrinking wild spaces in which she roams.</p>
+      </div>
+
+      <p class="enquire"><a href="mailto:analogkyle@gmail.com?subject=the%20mother%20bear%20%E2%80%94%20enquiry">Enquire about this work ✉</a>
+        &nbsp;· or see <a href="#">where to collect</a></p>
+    </div>
+
+    <nav class="pn">
+      <a href="#"><div class="k">← Previous in 2021</div><div class="t">paper neck giraffes</div></a>
+      <a href="#"><div class="k">Next in 2021 →</div><div class="t">there once was ice here</div></a>
+    </nav>
+
+    <section class="also">
+      <h3>Elsewhere in the ledger — the same weather</h3>
+      <div class="thumbs">
+        <a href="#"><img src="assets/oeuvre__painting__2022__the-black-fire__the-black-fire-2000px.jpeg" width="1400" height="854" alt="Oil painting of conifers on red earth with red and orange flames against an abstracted gray sky"><div class="cap"><i>The Black Fire</i>oil on linen · 2022</div></a>
+        <a href="#"><img src="assets/oeuvre__painting__2021__paper-neck-giraffes__paper-neck-giraffes-2000px.jpg" width="1400" height="1643" alt="Oil painting of three flat-bodied yellow giraffes with glass globe respirators containing bonsai trees"><div class="cap"><i>paper neck giraffes</i>oil on canvas · 2021</div></a>
+        <a href="#"><img src="assets/oeuvre__painting__2022__saturday-evening-owls__saturday-evening-owls.jpeg" width="1400" height="933" alt="Acrylic painting of four stylized owls in a row against pink, orange and gray brushstrokes"><div class="cap"><i>Saturday Evening Owls</i>acrylic &amp; latex · 2022</div></a>
+        <a href="#"><img src="assets/oeuvre__printmaking__2021__balance__balance2-1500w.jpeg" width="1400" height="933" alt="Drypoint print covered with hand-painted golden triangular tree forms, photographed on pine needles"><div class="cap"><i>balance</i>drypoint, hand-coloured · 2021</div></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="top">
+      <span class="mark"><b>The art of</b> Kyle Parker Cunningham</span>
+      <span><a href="#">Painting</a> · <a href="#">Printmaking</a> · <a href="#">Installation</a> · <a href="#">Cinema</a></span>
+    </div>
+    <div class="cols">
+      <div><h5>The Studio</h5><p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p></div>
+      <div><h5>Contact</h5><p><a href="mailto:analogkyle@gmail.com">analogkyle@gmail.com</a><a href="#">merveilles.town/@kpc</a><a href="#">Collect</a></p></div>
+      <div><h5>The Archive</h5><p><a href="#"><b>160</b> works catalogued</a><a href="#"><b>93</b> paintings</a><a href="31-the-ledger-home.html">Season <b>XIII</b> live now</a></p></div>
+      <div><h5>This Page</h5><p>Updated <b>2026·07·06</b><br>Set in Literata &amp;<br>IBM Plex Sans</p></div>
+    </div>
+    <div class="base">
+      <span>© 2026 Kyle Parker Cunningham — all works &amp; words</span>
+      <span>The homepage is a work; the archive keeps everything.</span>
+    </div>
+  </footer>
+</div>
+
+<nav class="sw"><i>31</i><a href="31-the-ledger-home.html">home</a>·<a class="cur" href="31-the-ledger-work.html">work</a>
+  <i style="padding-left:.5rem">→</i><a href="32-the-specimen-home.html">32</a><a href="33-the-index-home.html">33</a><a href="34-the-wall-home.html">34</a><a href="35-the-reel-home.html">35</a></nav>
+</body>
+</html>
