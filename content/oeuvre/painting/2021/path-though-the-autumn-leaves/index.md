@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/path-though-the-autumn-leaves/", "/oeuvre/2021/painting/path-though-the-autumn-leaves/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "square", "spiral", "perspective", "autumn",
+  "seasons", "tree", "orange", "rust", "turquoise", "line work",
+  "repetition", "framed", "sold"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

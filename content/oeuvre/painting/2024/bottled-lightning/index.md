@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/bottled-lightning/", "/oeuvre/painting/2024/bottled-lightning/", "/oeuvre/2024/painting/bottled-lightning/"]
 
+[taxonomies]
+tags = [
+  "still life", "glass jar", "preservation", "cloud", "lightning", "sky",
+  "weather", "lightning strike", "the memory of atmosphere", "memory",
+  "awe", "teal", "white", "black"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

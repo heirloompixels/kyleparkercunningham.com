@@ -5,6 +5,12 @@ category = "painting"
 year = 2016
 aliases = ["/oeuvre/painting/2016/spring/", "/spring/", "/oeuvre/2016/painting/spring/"]
 
+[taxonomies]
+tags = [
+  "triangle", "geometry", "pattern", "scatter", "seed", "seasons", "green",
+  "teal", "orange", "gray", "abstraction", "repetition", "growth"
+]
+
 [extra]
 medium = "Oil and Spray Paint on Linen"
 dimensions = "20 x 30 inches"

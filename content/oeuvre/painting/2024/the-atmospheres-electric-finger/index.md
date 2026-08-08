@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/the-atmospheres-electric-finger/", "/the-atmospheres-electric-finger/", "/oeuvre/2024/painting/the-atmospheres-electric-finger/"]
 
+[taxonomies]
+tags = [
+  "lightning", "sky", "weather", "line work", "contour line",
+  "branching form", "minimal", "white", "gold", "awe", "wildness",
+  "lightning strike", "the memory of atmosphere", "abstraction"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

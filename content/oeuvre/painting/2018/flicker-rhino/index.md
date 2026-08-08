@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/flicker-rhino/", "/flicker-rhino/", "/oeuvre/2018/painting/flicker-rhino/"]
 
+[taxonomies]
+tags = [
+  "found wood", "rhino", "flicker", "feather", "spider silk", "machine",
+  "flight", "animist solarpunk", "post-collapse", "night", "gray", "white"
+]
+
 [extra]
 medium = "Acrylic on Found Object"
 dimensions = "13 x 20 inches"

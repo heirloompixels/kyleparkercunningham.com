@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/docile/", "/docile/", "/oeuvre/2022/painting/docile/"]
 
+[taxonomies]
+tags = [
+  "butterfly", "monarch", "tool", "tether", "flight", "fragility and force",
+  "absurdism", "manifesto image", "orange", "cream", "tenderness", "bee",
+  "cross-medium motif"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

@@ -4,6 +4,13 @@ date = 2022-03-08
 category = "exhibitions"
 year = 2022
 aliases = ["/b-sides-rarities/", "/oeuvre/exhibitions/2022/b-sides-rarities/", "/oeuvre/2022/exhibitions/b-sides-rarities/"]
+
+[taxonomies]
+tags = [
+  "exhibition", "salon hang", "desert archaic", "truth or consequences",
+  "new mexico", "survey", "archive", "small format", "mixed media", "bear",
+  "triangle", "early work"
+]
 +++
 This is a B-sides and rarities show - I've got some totally new pieces and a bunch of really old stuff I've never even shown before - various studies and experiments from the past that I've had around from a long time and it's time to pass them on. There are a bunch of good deals in this batch of paintings - collectors hit me up if you are interested. Desert Archaic, 324 Broadway, Truth or Consequences, NM 87901.
 

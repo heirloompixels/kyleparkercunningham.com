@@ -5,6 +5,13 @@ category = "installation"
 year = 2019
 aliases = ["/oeuvre/installation/2019/prophets/", "/prophets/", "/oeuvre/2019/installation/prophets/"]
 
+[taxonomies]
+tags = [
+  "site-specific", "found wood", "assemblage", "salvage", "hand lettering",
+  "cloud", "whale", "arrows", "folk vernacular", "small format",
+  "private collection"
+]
+
 [extra]
 medium = "Site-specific Painting Installation on Found Wood"
 +++

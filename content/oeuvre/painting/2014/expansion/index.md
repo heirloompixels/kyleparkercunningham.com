@@ -5,6 +5,12 @@ category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/expansion/", "/expansion-drypoint/", "/expansion/", "/oeuvre/2014/painting/expansion/"]
 
+[taxonomies]
+tags = [
+  "face", "profile", "head", "mind", "consciousness", "spiral",
+  "concentric", "ribcage", "line work", "blue", "small format", "surreal"
+]
+
 [extra]
 medium = "Oil on Handwoven Linen"
 dimensions = "6x7 inches"

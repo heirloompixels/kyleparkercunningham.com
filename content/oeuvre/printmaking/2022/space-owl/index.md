@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/space-owl/", "/space-owl/", "/oeuvre/2022/printmaking/space-owl/"]
 
+[taxonomies]
+tags = [
+  "hand-torn paper", "owl", "bird", "space helmet", "antenna",
+  "communication", "night", "animist solarpunk", "humor", "line work",
+  "black and white", "recurring motif", "anthropomorphism"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

@@ -5,6 +5,13 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/migratory-scavengers/", "/migratory-scavengers/", "/oeuvre/2020/painting/migratory-scavengers/"]
 
+[taxonomies]
+tags = [
+  "gold leaf", "sandhill crane", "bird", "spacecraft", "salvage",
+  "space exploration", "animist solarpunk", "post-collapse", "migration",
+  "panoramic format", "sacred ground", "gold", "companion piece"
+]
+
 [extra]
 author = "claude"
 medium = "Oil + 24kt gold leaf on ACM panel"

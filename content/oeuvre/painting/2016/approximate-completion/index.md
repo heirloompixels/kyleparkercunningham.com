@@ -5,6 +5,13 @@ category = "painting"
 year = 2016
 aliases = ["/approximate-completion/", "/oeuvre/painting/2016/approximate-completion/", "/oeuvre/2016/painting/approximate-completion/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "circle", "lightning", "spiral", "purple",
+  "magenta", "red", "scatter", "square format", "process",
+  "approximate completion", "repetition"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Canvas"

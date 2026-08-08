@@ -4,6 +4,13 @@ date = 2015-04-03
 category = "installation"
 year = 2015
 aliases = ["/rainfall/", "/oeuvre/2015/installation/rainfall/"]
+
+[taxonomies]
+tags = [
+  "salon hang", "accumulation", "monsoon", "rain", "weather", "desert",
+  "chihuahuan desert", "new mexico", "small format", "mixed media", "time",
+  "memory", "poem", "skull", "face"
+]
 +++
 
 {{ art_image(path="oeuvre/installation/2015/rainfall/IMG_6628.JPG", alt="Rainfall") }}

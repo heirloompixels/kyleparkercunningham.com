@@ -5,6 +5,14 @@ category = "painting"
 year = 2019
 aliases = ["/oeuvre/painting/2019/monsoon-bird/", "/monsoon-bird/", "/oeuvre/2019/painting/monsoon-bird/"]
 
+[taxonomies]
+tags = [
+  "bird", "sandhill crane", "monsoon", "rain", "weather", "petroglyph",
+  "rock art", "pattern", "stripes", "arrows", "leaf motif",
+  "concentric eye", "orange", "blue", "tan", "square format", "new mexico",
+  "indigenous visual vocabulary"
+]
+
 [extra]
 medium = "Oil on Canvas"
 dimensions = "30 x 30 inches"

@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2016
 aliases = ["/oeuvre/printmaking/2016/day-hike/", "/day-hike/", "/oeuvre/2016/printmaking/day-hike/"]
 
+[taxonomies]
+tags = [
+  "line work", "owl", "bird", "hiking", "gaze", "attention",
+  "anthropomorphism", "humor", "black and white", "hand-torn paper",
+  "recurring motif"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print"
 dimensions = "5 x 7 inches"

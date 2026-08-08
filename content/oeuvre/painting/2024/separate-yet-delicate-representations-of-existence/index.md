@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/separate-yet-delicate-representations-of-existence/", "/separate-yet-delicate-representations-of-existence/", "/oeuvre/2024/painting/separate-yet-delicate-representations-of-existence/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "minimal", "color field", "rectangle", "polyptych",
+  "balance", "cyclic time", "periwinkle", "pink", "white", "red",
+  "scumbled ground", "hard edge"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

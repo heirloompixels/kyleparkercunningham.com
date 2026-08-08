@@ -5,6 +5,12 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/surviving-the-asteroid/", "/surviving-the-asteroid/", "/oeuvre/2022/painting/surviving-the-asteroid/"]
 
+[taxonomies]
+tags = [
+  "crocodilian", "upright animal", "survival", "extinction", "deep time",
+  "humor", "flat ground", "pink", "rust", "folk-modern", "anthropomorphism"
+]
+
 [extra]
 author = "claude"
 medium = "Oil, Oil Stick, Acrylic, Latex on Canvas"

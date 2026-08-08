@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2023
 aliases = ["/astro-bee/", "/oeuvre/printmaking/2023/astro-bee/", "/oeuvre/2023/printmaking/astro-bee/"]
 
+[taxonomies]
+tags = [
+  "space exploration", "space helmet", "bee", "sky", "animist solarpunk",
+  "line work", "black and white", "absurdism", "interdependence"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 +++

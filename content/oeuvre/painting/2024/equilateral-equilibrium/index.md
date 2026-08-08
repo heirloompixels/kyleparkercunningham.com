@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/equilateral-equilibrium/", "/equilateral-equilibrium/", "/oeuvre/2024/painting/equilateral-equilibrium/"]
 
+[taxonomies]
+tags = [
+  "triangle", "concentric", "scatter", "pattern", "repetition", "balance",
+  "attention", "devotion", "high chroma", "white", "abstraction",
+  "meditation", "studio"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

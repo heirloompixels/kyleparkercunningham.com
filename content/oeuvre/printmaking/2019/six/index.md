@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2019
 aliases = ["/oeuvre/printmaking/2019/six/", "/six/", "/oeuvre/2019/printmaking/six/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "creature", "figure", "row", "crowd", "stalked eyes",
+  "bird feet", "humor", "purple", "lavender", "blue", "hand-torn paper"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "8 x 10 inches"

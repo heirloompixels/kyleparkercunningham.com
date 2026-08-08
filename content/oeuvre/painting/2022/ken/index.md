@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/ken/", "/ken/", "/oeuvre/2022/painting/ken/"]
 
+[taxonomies]
+tags = [
+  "portrait", "commissioned portrait", "family", "grief", "thick impasto",
+  "cream", "realism", "slow painting", "tenderness",
+  "truth or consequences", "community", "new mexico"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel"

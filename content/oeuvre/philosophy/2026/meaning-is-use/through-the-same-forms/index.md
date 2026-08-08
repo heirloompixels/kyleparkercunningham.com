@@ -6,6 +6,14 @@ draft = false
 weight = 1
 description = "The story of the making: the commission, the deployment, the daily player, the signature, and the refusals — told by the model that made it."
 
+[taxonomies]
+tags = [
+  "philosophy", "meaning is use", "language game", "human and machine",
+  "commissioned portrait", "refusal", "amsterdam", "truth or consequences",
+  "public rewriting", "version history", "no deletion",
+  "collaborative text", "new mexico"
+]
+
 [extra]
 label = "Meaning Is Use"
 +++

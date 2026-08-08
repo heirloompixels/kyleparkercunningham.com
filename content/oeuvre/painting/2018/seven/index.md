@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/seven/", "/seven/", "/oeuvre/2018/painting/seven/"]
 
+[taxonomies]
+tags = [
+  "figure", "row", "crowd", "patience", "scraped surface", "abstraction",
+  "white", "gray", "yellow", "solitude"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Canvas"

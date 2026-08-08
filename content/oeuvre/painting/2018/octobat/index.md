@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/octobat/", "/octobat/", "/oeuvre/2018/painting/octobat/"]
 
+[taxonomies]
+tags = [
+  "found wood", "narrow format", "octopus", "airship", "flight",
+  "handmade craft", "invented technology", "animist solarpunk", "absurdism",
+  "humor", "turquoise", "white"
+]
+
 [extra]
 medium = "Acrylic, Paint Marker and Latex Paint on Found Wood"
 dimensions = "3.5 x 19.5 inches"

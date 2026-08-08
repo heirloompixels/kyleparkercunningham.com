@@ -4,6 +4,12 @@ date = 2021-11-02
 category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/the-berry-picker/", "/the-berry-picker/", "/oeuvre/2021/painting/the-berry-picker/"]
+
+[taxonomies]
+tags = [
+  "portrait", "double portrait", "family", "hand", "foraging", "montana",
+  "awe", "work in progress", "studio", "gray", "realism", "gestural"
+]
 +++
 Mika picking berries for the first time with her mother Selena.
 

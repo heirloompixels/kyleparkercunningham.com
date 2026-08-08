@@ -5,6 +5,13 @@ category = "painting"
 year = 2014
 aliases = ["/bison-at-sunset/", "/oeuvre/painting/2014/bison-at-sunset/", "/oeuvre/2014/painting/bison-at-sunset/"]
 
+[taxonomies]
+tags = [
+  "bison", "rider", "human and animal", "great plains", "night", "twilight",
+  "blue", "silhouette", "stippling", "small format", "intimacy",
+  "private collection"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

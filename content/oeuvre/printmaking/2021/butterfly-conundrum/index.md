@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/butterfly-conundrum/", "/oeuvre/printmaking/2021/butterfly-conundrum/", "/oeuvre/2021/printmaking/butterfly-conundrum/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "edition variants", "butterfly", "tool", "tether",
+  "fragility and force", "paradox", "balance", "orange", "purple",
+  "cross-medium motif", "hand-torn paper"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print"
 dimensions = "8 x 10 inches"

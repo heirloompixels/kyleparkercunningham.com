@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/rocket-propelled-clovis-point-intaglio/", "/oeuvre/2022/printmaking/rocket-propelled-clovis-point-intaglio/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "hand-torn paper", "turtle", "shell", "pattern", "rocket",
+  "clovis point", "satellite dish", "salvage", "deep time", "technology",
+  "patience", "animist solarpunk", "humor", "cross-medium motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

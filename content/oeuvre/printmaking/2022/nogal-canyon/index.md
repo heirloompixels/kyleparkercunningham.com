@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/nogal-canyon/", "/nogal-canyon/", "/oeuvre/2022/printmaking/nogal-canyon/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "plein air", "landscape", "canyon", "geology", "tree",
+  "juniper", "nogal canyon", "new mexico", "camping", "deep time", "place",
+  "orange"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 +++

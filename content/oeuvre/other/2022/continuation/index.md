@@ -5,6 +5,12 @@ category = "other"
 year = 2022
 aliases = ["/oeuvre/other/2022/continuation/", "/continuation/", "/oeuvre/2022/all/continuation/"]
 
+[taxonomies]
+tags = [
+  "figure", "anatomy", "chain of hands", "gray", "grisaille", "flat ground",
+  "horizon", "lineage", "private collection"
+]
+
 [extra]
 medium = "Acrylic, Latex and Oil on Canvas"
 dimensions = "24 x 30 inches"

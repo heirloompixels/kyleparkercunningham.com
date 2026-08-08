@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/olympus/", "/olympus/", "/oeuvre/2022/printmaking/olympus/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "still life", "analog", "olympus", "tool", "machine",
+  "mundane", "orange", "line work", "technology"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 +++

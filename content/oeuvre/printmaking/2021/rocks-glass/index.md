@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/rocks-glass/", "/rocks-glass/", "/oeuvre/2021/printmaking/rocks-glass/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "still life", "rocks glass", "family", "memory",
+  "everyday ritual", "turquoise", "mundane"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
 dimensions = "8 x 10 inches"

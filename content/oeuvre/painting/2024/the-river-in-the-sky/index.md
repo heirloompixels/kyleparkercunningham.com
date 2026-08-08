@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/the-river-in-the-sky/", "/the-river-in-the-sky/", "/oeuvre/2024/painting/the-river-in-the-sky/"]
 
+[taxonomies]
+tags = [
+  "cloud", "sphere", "water cycle", "sky", "weather", "mountains",
+  "geology", "memory", "aging", "mauve", "plum", "blue", "close crop",
+  "the memory of atmosphere", "abstraction"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

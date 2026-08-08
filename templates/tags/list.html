@@ -1,0 +1,52 @@
+{# All oeuvre tags. Zola sorts terms alphabetically, which is the right default for
+   browsing a vocabulary; the spine strip above it surfaces the tags that actually
+   carry the work.
+
+   `hidden` holds tags that group works without being advertised — the term pages
+   still exist and still work, they just aren't listed here. Kyle, Aug 2026:
+   "animist solarpunk" stays internal for now. #}
+{% extends "base.html" %}
+{% block title %}Tags — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = "oeuvre" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
+{% block content %}
+{% set hidden = ["animist solarpunk"] %}
+{% set_global shown = 0 %}
+{% for item in terms %}{% if item.name not in hidden %}{% set_global shown = shown + 1 %}{% endif %}{% endfor %}
+
+<header class="ledger-head">
+  <h1>Tags <span class="ledger-sub">— the working vocabulary</span></h1>
+</header>
+
+<div class="ledger-statline">
+  <span><b>{{ shown }}</b> tags across the oeuvre</span>
+  <span><a href="{{ get_url(path='/oeuvre/') }}">the full index</a></span>
+</div>
+
+<div class="ledger-filters">
+  {% for item in terms %}
+    {% if item.name not in hidden and item.pages | length >= 10 %}
+      <a class="chip" href="{{ item.permalink }}">{{ item.name }} <b>{{ item.pages | length }}</b></a>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<ul class="doc-list">
+  {% for item in terms %}
+    {% if item.name not in hidden %}
+      <li>
+        <a href="{{ item.permalink }}">{{ item.name }}</a>
+        <span class="yr">{{ item.pages | length }} work{{ item.pages | length | pluralize }}</span>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+{% endblock %}

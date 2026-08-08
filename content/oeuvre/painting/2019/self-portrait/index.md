@@ -5,6 +5,13 @@ category = "painting"
 year = 2019
 aliases = ["/oeuvre/painting/2019/self-portrait/", "/self-portrait/", "/oeuvre/2019/painting/self-portrait/"]
 
+[taxonomies]
+tags = [
+  "self portrait", "portrait", "realism", "figure", "glasses", "beanie",
+  "flannel", "mountain clothes", "black", "chiaroscuro", "identity", "time",
+  "private collection"
+]
+
 [extra]
 medium = "Oil on ACM Panel"
 dimensions = "16 x 20 inches"

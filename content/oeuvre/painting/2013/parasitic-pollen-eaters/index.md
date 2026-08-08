@@ -5,6 +5,13 @@ category = "painting"
 year = 2013
 aliases = ["/oeuvre/painting/2013/parasitic-pollen-eaters/", "/parasitic-pollen-eaters/", "/oeuvre/2013/painting/parasitic-pollen-eaters/"]
 
+[taxonomies]
+tags = [
+  "raw linen ground", "bee", "flower", "bubbles", "mutual aid",
+  "adaptation", "pesticide", "agriculture", "drones", "animist solarpunk",
+  "fable", "ecology", "survival", "private collection"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

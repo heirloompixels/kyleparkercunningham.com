@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/airdrop/", "/oeuvre/painting/2018/airdrop/", "/oeuvre/2018/painting/airdrop/"]
 
+[taxonomies]
+tags = [
+  "found wood", "airship", "carrot", "garden", "agriculture", "food",
+  "flight", "mutual aid", "animist solarpunk", "post-collapse", "future",
+  "green", "orange", "vertical format"
+]
+
 [extra]
 medium = "Acrylic on Found Object"
 dimensions = "12 x 26 inches"

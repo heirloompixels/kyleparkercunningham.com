@@ -5,6 +5,12 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/nana/", "/nana/", "/oeuvre/2020/painting/nana/"]
 
+[taxonomies]
+tags = [
+  "portrait", "family", "aging", "hand", "white hair", "time", "geology",
+  "cream", "realism", "tenderness", "private collection"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "14 x 36 inches"

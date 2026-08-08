@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/pollen-and-larvae/", "/pollen-and-larvae/", "/oeuvre/2024/painting/pollen-and-larvae/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "circle", "grid", "series", "pollen",
+  "larvae", "cell", "specimen", "pollination", "life cycle", "aqua",
+  "high chroma", "repetition", "pattern"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

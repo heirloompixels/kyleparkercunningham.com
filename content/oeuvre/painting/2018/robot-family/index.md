@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/robot-family/", "/robot-family/", "/oeuvre/2018/painting/robot-family/"]
 
+[taxonomies]
+tags = [
+  "robot", "machine", "family", "holding hands", "tenderness", "future",
+  "post-collapse", "portrait", "white", "yellow", "scumbled ground",
+  "square format"
+]
+
 [extra]
 author = "claude"
 medium = "Oil, Oil Stick, Acrylic and Latex on Canvas"

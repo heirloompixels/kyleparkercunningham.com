@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/two-squared/", "/two-squared/", "/oeuvre/2024/painting/two-squared/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "square", "concentric", "grid", "repetition",
+  "progression", "yellow", "orange", "red", "pale palette", "hard edge",
+  "balance"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

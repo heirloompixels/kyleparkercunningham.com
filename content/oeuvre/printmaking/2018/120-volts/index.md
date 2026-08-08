@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2018
 aliases = ["/120-volts/", "/oeuvre/printmaking/2018/120-volts/", "/oeuvre/2018/printmaking/120-volts/"]
 
+[taxonomies]
+tags = [
+  "line work", "crosshatching", "figure", "energy", "grid",
+  "lightning strike", "hand-colored", "black and white"
+]
+
 [extra]
 medium = "Intaglio Printmaking on Rives BFK"
 dimensions = "8 x 10 inches"

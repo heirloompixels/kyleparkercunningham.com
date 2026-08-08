@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/daydream/", "/daydream/", "/oeuvre/2023/printmaking/daydream/"]
 
+[taxonomies]
+tags = [
+  "figure", "face", "profile", "head", "crystal", "geometry", "daydream",
+  "mind", "consciousness", "negative space", "plate tone", "minimal",
+  "black and white"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

@@ -6,6 +6,12 @@ draft = false
 weight = 3
 description = "A correction and a convergence: Anthropic's global-workspace paper looked behind the words — and found something shaped like publicity. What the microscope settles, what it can't, and why the game stays blind on purpose."
 
+[taxonomies]
+tags = [
+  "philosophy", "meaning is use", "wittgenstein", "artificial intelligence",
+  "revision as succession", "human and machine"
+]
+
 [extra]
 label = "Meaning Is Use"
 +++

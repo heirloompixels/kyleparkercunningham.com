@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/stole-the-rainbow/", "/oeuvre/2018/printmaking/stole-the-rainbow/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "rainbow", "theft", "cloud", "figure", "costume",
+  "weather", "light", "humor", "absurdism", "fable", "small format",
+  "recurring motif"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "5 x 5 inches"

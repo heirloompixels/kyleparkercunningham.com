@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/elephant-mask/", "/oeuvre/2018/painting/elephant-mask/"]
 
+[taxonomies]
+tags = [
+  "elephant", "mask", "animal portrait", "tusk", "yellow", "ochre",
+  "violet", "flat ground", "abstraction", "faceted", "identity",
+  "concealment"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "11x14 inches"

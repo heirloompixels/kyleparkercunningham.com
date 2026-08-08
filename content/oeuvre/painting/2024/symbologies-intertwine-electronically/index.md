@@ -5,6 +5,12 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/symbologies-intertwine-electronically/", "/symbologies-intertwine-electronically/", "/oeuvre/2024/painting/symbologies-intertwine-electronically/"]
 
+[taxonomies]
+tags = [
+  "landscape", "mountains", "triangle", "faceted", "sphere", "network",
+  "navy", "orange", "conifer", "the memory of atmosphere", "geometry"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

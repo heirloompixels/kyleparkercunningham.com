@@ -5,6 +5,13 @@ category = "other"
 year = 2021
 aliases = ["/oeuvre/other/2021/owl/", "/owl/", "/oeuvre/2021/2015/owl/"]
 
+[taxonomies]
+tags = [
+  "owl", "bird", "animal portrait", "frontal composition", "symmetry",
+  "blue", "turquoise", "ochre", "line work", "folk-modern",
+  "reworked painting", "time", "creature"
+]
+
 [extra]
 medium = "Oil on Baltic Birch Panel"
 dimensions = "12 x 17.5 inches"

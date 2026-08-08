@@ -5,6 +5,14 @@ category = "painting"
 year = 2012
 aliases = ["/oeuvre/painting/2012/me-own-juniper/", "/me-own-juniper/", "/oeuvre/2012/painting/me-own-juniper/"]
 
+[taxonomies]
+tags = [
+  "tree", "juniper", "alligator juniper", "ancient tree", "deep time",
+  "climate grief", "wildfire", "gila wilderness", "black range",
+  "new mexico", "grand enchantment trail", "thru-hiking", "wildness",
+  "witness", "green", "private collection", "gila"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

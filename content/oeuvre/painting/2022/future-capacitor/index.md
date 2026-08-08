@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/future-capacitor/", "/future-capcitor/", "/oeuvre/2022/painting/future-capcitor/"]
 
+[taxonomies]
+tags = [
+  "face", "profile", "head", "figure", "network", "energy", "mind",
+  "companionship", "communication", "flat ground", "hard edge", "pink",
+  "orange", "beige", "truth or consequences", "sold", "new mexico"
+]
+
 [extra]
 author = "claude"
 medium = "Acrylic and Latex on Canvas"

@@ -5,6 +5,14 @@ category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/pet-walk/", "/pet-walk/", "/oeuvre/2014/painting/pet-walk/"]
 
+[taxonomies]
+tags = [
+  "whale", "figure", "space helmet", "tether", "pet", "companionship",
+  "domesticity", "tenderness", "animist solarpunk", "post-collapse",
+  "future", "gold", "teal", "small format", "humor", "absurdism",
+  "private collection"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Handwoven Linen"

@@ -5,6 +5,13 @@ category = "painting"
 year = 2023
 aliases = ["/oeuvre/painting/2023/untitled-begins/", "/untitled-begins/", "/oeuvre/2023/painting/untitled-begins/"]
 
+[taxonomies]
+tags = [
+  "geometric anatomy", "series", "figure", "hand", "concealment",
+  "triangle", "faceted", "pastel", "memory", "flesh tones",
+  "recurring motif"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel (ACM)"

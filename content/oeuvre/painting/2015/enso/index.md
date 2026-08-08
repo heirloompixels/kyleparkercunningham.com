@@ -5,6 +5,13 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/enso/", "/enso/", "/oeuvre/2015/painting/enso/"]
 
+[taxonomies]
+tags = [
+  "polyptych", "enso", "circle", "concentric", "repetition", "gestural",
+  "zen", "meditation", "abstraction", "yellow", "green", "pink", "white",
+  "series"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "11 x 15 inches each (three panels)"

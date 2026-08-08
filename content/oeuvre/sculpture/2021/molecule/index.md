@@ -5,6 +5,13 @@ category = "sculpture"
 year = 2021
 aliases = ["/oeuvre/sculpture/2021/molecule/", "/molecule/", "/oeuvre/2021/sculpture/molecule/"]
 
+[taxonomies]
+tags = [
+  "direct carving", "geology", "molecule", "sphere", "cluster",
+  "abstraction", "physics", "deep time", "plankton", "sun", "pandemic",
+  "work in progress", "process"
+]
+
 [extra]
 medium = "Carved Colorado Marble"
 +++

@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/", "/oeuvre/painting/2024/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/", "/oeuvre/2024/painting/alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep/"]
 
+[taxonomies]
+tags = [
+  "landscape", "mountains", "creek", "cloud", "twilight", "faceted",
+  "triangle", "geometry", "plein air", "memory", "family", "camping", "joy",
+  "tres piedras", "new mexico", "green", "rose", "thick impasto"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

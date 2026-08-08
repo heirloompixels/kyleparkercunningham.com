@@ -4,6 +4,13 @@ date = 2021-09-21
 category = "other"
 year = 2021
 aliases = ["/oeuvre/other/2021/fall-2021/", "/fall-2021/", "/oeuvre/2021/now/fall-2021/"]
+
+[taxonomies]
+tags = [
+  "photograph", "studio journal", "tree", "autumn", "yellow", "seasons",
+  "weather", "landscape", "rio grande", "truth or consequences",
+  "new mexico", "montana", "memory", "place"
+]
 +++
 A log book of November 2021.
 

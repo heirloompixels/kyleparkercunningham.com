@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/in-the-pines/", "/in-the-pines/", "/oeuvre/2023/printmaking/in-the-pines/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "conifer", "tree", "figure", "row", "repetition", "green",
+  "folk song", "solitude", "shade", "line work", "hand-torn paper"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

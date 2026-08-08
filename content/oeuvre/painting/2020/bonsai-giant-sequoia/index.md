@@ -5,6 +5,14 @@ category = "painting"
 year = 2020
 aliases = ["/bonsai-giant-sequoia/", "/oeuvre/painting/2020/bonsai-giant-sequoia/", "/oeuvre/2020/painting/bonsai-giant-sequoia/"]
 
+[taxonomies]
+tags = [
+  "sandhill crane", "bird", "bonsai", "conifer", "tree", "space helmet",
+  "breathing apparatus", "salvage", "space exploration",
+  "animist solarpunk", "post-collapse", "migration", "bosque del apache",
+  "rio grande", "blue", "intelligence of nature", "new mexico"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "21 x 34 Inches"

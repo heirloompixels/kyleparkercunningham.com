@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/teardrop/", "/teardrop/", "/oeuvre/2018/printmaking/teardrop/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "edition variants", "teardrop trailer", "domesticity",
+  "road life", "still life", "orange", "jeannie", "biography"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "8 x 10 inches"

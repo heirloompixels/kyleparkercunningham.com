@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/lunarem/", "/lunarem/", "/oeuvre/2018/printmaking/lunarem/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "moon", "lunar cycle", "grid", "series", "repetition",
+  "time", "calendar", "cyclum lunarem", "black and white",
+  "hand-torn paper", "cross-medium motif"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "8 x 10 inches"

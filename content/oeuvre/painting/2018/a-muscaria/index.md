@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/a-muscaria/", "/oeuvre/painting/2018/a-muscaria/", "/oeuvre/2018/painting/a-muscaria/"]
 
+[taxonomies]
+tags = [
+  "found wood", "ant", "insect", "mushroom", "foraging", "machine",
+  "space helmet", "animist solarpunk", "post-collapse",
+  "invented technology", "future", "humor", "gray", "private collection"
+]
+
 [extra]
 medium = "Acrylic on Found Panel"
 dimensions = "14 x 28 inches (approximate)"

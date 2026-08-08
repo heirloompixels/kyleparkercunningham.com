@@ -5,6 +5,12 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/split-the-atom/", "/split-the-atom/", "/oeuvre/2015/painting/split-the-atom/"]
 
+[taxonomies]
+tags = [
+  "head", "face", "skull", "anatomy", "symmetry", "mask", "identity",
+  "consciousness", "brain", "memento mori", "blue", "red", "gray"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

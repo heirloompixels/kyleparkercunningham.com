@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/transplanter/", "/transplanter/", "/oeuvre/2021/painting/transplanter/"]
 
+[taxonomies]
+tags = [
+  "octopus", "juniper", "alligator juniper", "tree", "coracle",
+  "transplant", "mutual aid", "ocean", "animist solarpunk", "post-collapse",
+  "climate grief", "blue", "pink", "companion piece"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "16 x 20 inches"

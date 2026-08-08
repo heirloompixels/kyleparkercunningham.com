@@ -5,6 +5,12 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/triangular-circles/", "/triangular-circles/", "/oeuvre/2024/painting/triangular-circles/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "circle", "triangle", "radial", "geometry", "red",
+  "orange", "coral", "pale palette", "hard edge", "pattern"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

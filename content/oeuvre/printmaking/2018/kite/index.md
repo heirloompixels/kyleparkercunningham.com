@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/kite/", "/kite/", "/oeuvre/2018/printmaking/kite/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "edition variants", "elephant", "kite", "flying saucer",
+  "first contact", "anthropocentrism", "intelligence of nature", "lineage",
+  "play", "humor", "yellow"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "8 x 10 inches"

@@ -5,6 +5,14 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/rocket-propelled-clovis-point/", "/oeuvre/2020/painting/rocket-propelled-clovis-point/"]
 
+[taxonomies]
+tags = [
+  "figure", "breathing apparatus", "space exploration", "clovis point",
+  "rocket", "tool", "corn", "bee", "deep time", "technology", "paleoindian",
+  "absurdism", "animist solarpunk", "pandemic", "pastel",
+  "cross-medium motif"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Cotton Canvas"

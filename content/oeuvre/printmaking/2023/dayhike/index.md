@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/dayhike/", "/dayhike/", "/oeuvre/2023/printmaking/dayhike/"]
 
+[taxonomies]
+tags = [
+  "bird", "hiking", "anthropomorphism", "humor", "crosshatching",
+  "line work", "small format", "black and white", "recurring motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

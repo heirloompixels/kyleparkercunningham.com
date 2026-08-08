@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/pinned/", "/pinned/", "/oeuvre/2018/painting/pinned/"]
 
+[taxonomies]
+tags = [
+  "cloud", "specimen", "weather", "rain", "drought", "desert", "gray",
+  "white", "scatter", "humor"
+]
+
 [extra]
 author = "claude"
 medium = "Acrylic and Latex on Canvas"

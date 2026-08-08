@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2016
 aliases = ["/air-lift/", "/oeuvre/printmaking/2016/air-lift/", "/oeuvre/2016/printmaking/air-lift/"]
 
+[taxonomies]
+tags = [
+  "edition variants", "line work", "plate tone", "elephant", "airship",
+  "flight", "mutual aid", "animist solarpunk", "humor", "black and white",
+  "hand-torn paper", "recurring motif"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print"
 dimensions = "5 x 7 inches"

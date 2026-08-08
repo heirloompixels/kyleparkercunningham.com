@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/paper-neck-giraffes/", "/paper-neck-giraffes/", "/oeuvre/2021/painting/paper-neck-giraffes/"]
 
+[taxonomies]
+tags = [
+  "giraffe", "creature", "bonsai", "tree", "glass jar",
+  "breathing apparatus", "adaptation", "drought", "animist solarpunk",
+  "post-collapse", "future", "yellow", "blue", "gestural"
+]
+
 [extra]
 medium = "Oil on Cotton Canvas"
 dimensions = "20 x 24 Inches"

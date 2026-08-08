@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/deep-sea/", "/deep-sea/", "/oeuvre/2018/printmaking/deep-sea/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "line work", "diver", "space helmet", "figure", "ocean",
+  "solitude", "teal", "red"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-colored with Watercolor"
 dimensions = "8 x 10 inches"

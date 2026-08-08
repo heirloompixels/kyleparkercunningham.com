@@ -5,6 +5,13 @@ category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/corn-sky-connection/", "/corn-sky-connection/", "/oeuvre/2014/painting/corn-sky-connection/"]
 
+[taxonomies]
+tags = [
+  "raw linen ground", "lightning", "corn", "seed", "cloud", "sky",
+  "agriculture", "fertility", "myth", "gold", "zigzag", "vertical format",
+  "private collection"
+]
+
 [extra]
 medium = "Oil on Handwoven Linen"
 +++

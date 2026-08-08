@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/the-black-fire/", "/the-black-fire/", "/oeuvre/2022/painting/the-black-fire/"]
 
+[taxonomies]
+tags = [
+  "wildfire", "conifer", "tree", "aldo leopold wilderness", "gila",
+  "new mexico", "truth or consequences", "climate grief", "witness",
+  "grief", "red", "green", "gestural", "landscape", "sold"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "21 x 34 inches"

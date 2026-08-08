@@ -5,6 +5,13 @@ category = "painting"
 year = 2009
 aliases = ["/oeuvre/painting/2009/muxy/", "/muxy/", "/oeuvre/2009/painting/muxy/"]
 
+[taxonomies]
+tags = [
+  "raw linen ground", "surreal", "organic form", "vines", "tendrils",
+  "tree", "mushroom", "flower", "montana", "little belt mountains",
+  "biography", "private collection", "early work"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

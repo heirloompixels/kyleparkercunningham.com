@@ -5,6 +5,13 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/clouds/", "/clouds/", "/oeuvre/2015/painting/clouds/"]
 
+[taxonomies]
+tags = [
+  "face", "profile", "head", "cloud", "sphere", "weather", "mind", "sky",
+  "terracotta", "white", "blue", "abstraction", "surreal",
+  "private collection"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

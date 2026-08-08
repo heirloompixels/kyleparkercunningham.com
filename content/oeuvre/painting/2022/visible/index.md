@@ -5,6 +5,12 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/visible/", "/visible/", "/oeuvre/2022/painting/visible/"]
 
+[taxonomies]
+tags = [
+  "portrait", "face", "eyes", "gaze", "being seen", "gestural", "red",
+  "mauve", "lavender", "psychological", "close crop"
+]
+
 [extra]
 author = "claude"
 medium = "Acrylic, Latex and Oil on Canvas"
