@@ -37,6 +37,23 @@ Two kinds of work are mixed here, marked accordingly:
 
 ## 2. Fixes & migration debt
 
+- [ ] **Migrate the templates to Tera v2 (Zola 0.23)** [build] — Zola 0.23
+  rewrote its template engine, and the deploy action floats on `@master`, so the
+  first push after the 0.23 release failed to build. The action is pinned to
+  `v0.22.1` for now (the last version that built green); unpin once this is done.
+  The surface is 35 templates, of which 13 need work — no macros are used, which
+  is the expensive case avoided. What changed:
+  - tests take kwargs: `is ending_with("x")` → `is ending_with(pat="x")` (6 sites)
+  - `concat` filter removed → spread `[...a, ...b]` or a list comprehension
+    (21 sites, heaviest in `oeuvre/section.html` and `index.html`)
+  - `filter` filter removed → list comprehension with `if` (17 sites)
+  - `slice` filter removed → Python-style slicing `arr[1:3]` (5 sites)
+  - `arr.0` → `arr[0]` (10 sites, all `page.components.N`)
+  - undefined access now errors instead of being falsy; optional chaining
+    (`a?.b`) is the escape hatch. This is the part that needs eyes rather than
+    sed — it can change rendering silently.
+  Local zola is 0.23.2 now, so it can be verified before unpinning; the last
+  known-good render is on the `gh-pages` branch to diff against.
 - [x] **Add og:image / summary_large_image cards** [build] — done. Each page
   unfurls with its own first co-located photo (resized to 1200px at build
   time); the fallback painting is set in `config.toml` (`og_default_image`).
