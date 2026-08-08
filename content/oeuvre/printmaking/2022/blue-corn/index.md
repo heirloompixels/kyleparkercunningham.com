@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/blue-corn/", "/oeuvre/printmaking/2022/blue-corn/", "/oeuvre/2022/printmaking/blue-corn/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "figure", "blue corn", "corn", "origami", "balance",
+  "patience", "agriculture", "deep time", "orange", "cross-medium motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

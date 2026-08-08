@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/airlift/", "/oeuvre/printmaking/2021/airlift/", "/oeuvre/2021/printmaking/airlift/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "edition variants", "origami", "cloud", "flight", "sky",
+  "salvage", "moon", "animist solarpunk", "poem", "yellow", "teal",
+  "cross-medium motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Image 6 x 9 inches; paper approx. 8 x 10 inches"

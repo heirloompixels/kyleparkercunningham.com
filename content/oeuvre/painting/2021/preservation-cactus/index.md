@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/preservation-cactus/", "/preservation-cactus/", "/oeuvre/2021/painting/preservation-cactus/"]
 
+[taxonomies]
+tags = [
+  "still life", "cactus", "desert", "glass jar", "preservation",
+  "extinction", "memory", "thick impasto", "white on white", "pale palette",
+  "framed", "climate grief", "slow painting"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

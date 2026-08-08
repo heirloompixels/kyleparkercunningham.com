@@ -6,6 +6,12 @@ draft = false
 weight = 2
 description = "Where the project lands in the contemporary debate about machine meaning: the grounding dispute, the Wittgensteinian dissolution, the site as instrument, and the forms-of-life objection given its full weight."
 
+[taxonomies]
+tags = [
+  "philosophy", "meaning is use", "wittgenstein", "language game",
+  "artificial intelligence", "human and machine"
+]
+
 [extra]
 label = "Meaning Is Use"
 +++

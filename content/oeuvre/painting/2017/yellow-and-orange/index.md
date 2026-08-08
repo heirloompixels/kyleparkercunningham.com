@@ -5,6 +5,13 @@ category = "painting"
 year = 2017
 aliases = ["/oeuvre/painting/2017/yellow-and-orange/", "/yellow-and-orange/", "/oeuvre/2017/painting/yellow-and-orange/"]
 
+[taxonomies]
+tags = [
+  "triangle", "geometry", "tessellation", "hard edge", "color field",
+  "orange", "yellow", "high chroma", "centered composition", "abstraction",
+  "minimal"
+]
+
 [extra]
 medium = "Oil on Gesso Panel"
 dimensions = "12 x 14 inches"

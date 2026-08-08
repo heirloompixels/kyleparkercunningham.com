@@ -5,6 +5,13 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/solar-ascension/", "/solar-ascension/", "/oeuvre/2020/painting/solar-ascension/"]
 
+[taxonomies]
+tags = [
+  "triangle", "geometry", "tessellation", "sun", "rock art", "petroglyph",
+  "pattern", "red", "pink", "green", "high chroma", "square format",
+  "pandemic", "abstraction"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

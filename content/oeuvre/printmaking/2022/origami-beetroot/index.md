@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/origami-beetroot/", "/origami-beetroot/", "/oeuvre/2022/printmaking/origami-beetroot/"]
 
+[taxonomies]
+tags = [
+  "hand-torn paper", "still life", "beet", "garden", "harvest", "food",
+  "origami", "botanical plate", "crosshatching", "dense black", "line work"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

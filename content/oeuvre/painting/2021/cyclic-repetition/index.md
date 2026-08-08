@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/cyclic-repetition/", "/cyclic-repetition/", "/oeuvre/2021/painting/cyclic-repetition/"]
 
+[taxonomies]
+tags = [
+  "bison", "robot", "machine", "buffalo jump", "canyon", "stampede",
+  "hunting", "salvage", "drought", "cyclic time", "animist solarpunk",
+  "post-collapse", "panoramic format", "gestural", "gray", "pink", "poem"
+]
+
 [extra]
 medium = "Oil on Panel"
 dimensions = "48 x 14 Inches"

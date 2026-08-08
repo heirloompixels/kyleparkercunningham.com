@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/ghost-thugs/", "/ghost-thugs/", "/oeuvre/2022/printmaking/ghost-thugs/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "hand-torn paper", "ghost", "figure", "row", "crowd",
+  "humor", "gold", "plate tone", "ephemera series"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

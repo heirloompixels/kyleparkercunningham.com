@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/expansion-drypoint/", "/oeuvre/2021/printmaking/expansion-drypoint/"]
 
+[taxonomies]
+tags = [
+  "line work", "face", "profile", "head", "mind", "consciousness",
+  "segmentation", "spiral", "surreal", "black and white",
+  "cross-medium motif", "anatomy"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print on Rives BFK Paper"
 dimensions = "8 x 10 inches"

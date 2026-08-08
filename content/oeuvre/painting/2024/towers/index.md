@@ -5,6 +5,12 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/towers/", "/towers/", "/oeuvre/2024/painting/towers/"]
 
+[taxonomies]
+tags = [
+  "cloud", "sky", "weather", "looking up", "perspective", "tower", "awe",
+  "thick impasto", "blue", "gray", "the memory of atmosphere"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

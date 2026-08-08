@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/alligator-juniper/", "/oeuvre/2018/printmaking/alligator-juniper/"]
 
+[taxonomies]
+tags = [
+  "line work", "tree", "juniper", "alligator juniper", "close crop",
+  "looking up", "deep time", "intimacy", "new mexico", "black and white",
+  "recurring motif", "private collection"
+]
+
 [extra]
 medium = "Intaglio Printmaking on Rives BFK"
 dimensions = "8 x 10 inches"

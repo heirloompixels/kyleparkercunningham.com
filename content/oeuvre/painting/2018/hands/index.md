@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/hands/", "/hands/", "/oeuvre/2018/painting/hands/"]
 
+[taxonomies]
+tags = [
+  "found wood", "assemblage", "site-specific", "hand", "arm", "anatomy",
+  "machine", "gestural", "gray", "cruciform"
+]
+
 [extra]
 medium = "Acrylic on Found Wood"
 dimensions = "Dimensions variable"

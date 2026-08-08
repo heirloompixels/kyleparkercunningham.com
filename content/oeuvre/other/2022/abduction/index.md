@@ -4,6 +4,12 @@ date = 2022-04-05
 category = "other"
 year = 2022
 aliases = ["/abduction/", "/oeuvre/other/2022/abduction/", "/oeuvre/2022/all/abduction/"]
+
+[taxonomies]
+tags = [
+  "hand-colored", "line work", "minimal", "plate tone", "flying saucer",
+  "abduction", "pumpkin", "harvest", "humor", "absurdism", "orange", "gray"
+]
 +++
 {{ art_image(path="oeuvre/other/2022/abduction/IMG_3976-1.jpeg", alt="Abduction", caption="Abduction by kyle parker cunningham") }}
 

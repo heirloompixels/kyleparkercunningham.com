@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/elephant-mask-intaglio/", "/oeuvre/2023/printmaking/elephant-mask-intaglio/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "elephant", "mask", "figure", "concealment", "identity",
+  "irony", "yellow", "line work", "cross-medium motif", "anthropomorphism"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

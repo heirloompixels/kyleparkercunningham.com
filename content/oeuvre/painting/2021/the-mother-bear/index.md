@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/the-mother-bear/", "/the-mother-bear/", "/oeuvre/2021/painting/the-mother-bear/"]
 
+[taxonomies]
+tags = [
+  "bear", "animal encounter", "montana", "absaroka mountains", "hiking",
+  "drought", "climate grief", "wildness", "awe", "thick impasto",
+  "gestural", "ochre", "white", "large format"
+]
+
 [extra]
 medium = "Oil, Oil Stick, Acrylic and Latex on Canvas"
 dimensions = "51 1/2 x 32 inches"

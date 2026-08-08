@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/narwhal/", "/narwhal/", "/oeuvre/2018/painting/narwhal/"]
 
+[taxonomies]
+tags = [
+  "found wood", "narrow format", "narwhal", "whale", "tusk", "spiral",
+  "ocean", "blue", "white", "animal portrait", "private collection"
+]
+
 [extra]
 medium = "Acrylic on Found Object"
 dimensions = "30 x 3.5 inches (approximate)"

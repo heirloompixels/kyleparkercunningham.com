@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2020
 aliases = ["/oeuvre/printmaking/2020/alligator-juniper-nogal/", "/oeuvre/2020/printmaking/alligator-juniper-nogal/"]
 
+[taxonomies]
+tags = [
+  "hand-torn paper", "line work", "tree", "juniper", "alligator juniper",
+  "ancient tree", "nogal canyon", "new mexico", "wind", "survival",
+  "deep time", "series", "black and white", "awe"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

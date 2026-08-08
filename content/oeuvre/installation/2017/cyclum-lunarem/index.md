@@ -5,6 +5,13 @@ category = "installation"
 year = 2017
 aliases = ["/oeuvre/installation/2017/cyclum-lunarem/", "/cyclum-lunarem/", "/oeuvre/2017/installation/cyclum-lunarem/"]
 
+[taxonomies]
+tags = [
+  "grid", "series", "moon", "lunar cycle", "gold leaf", "gesso ground",
+  "solstice", "equinox", "seasons", "time", "repetition", "small format",
+  "atmospheric light", "ritual observation"
+]
+
 [extra]
 medium = "Oil and 24kt Gold Leaf on Gessoed Linen Panels"
 dimensions = "3 3/8 inch squares each; overall installation size variable"

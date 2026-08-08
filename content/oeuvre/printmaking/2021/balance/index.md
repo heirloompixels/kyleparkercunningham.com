@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/balance/", "/oeuvre/printmaking/2021/balance/", "/oeuvre/2021/printmaking/balance/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "triangle", "conifer", "tree", "scatter", "pattern",
+  "balance", "interdependence", "gold", "amber", "abstraction",
+  "repetition"
+]
+
 [extra]
 medium = "Drypoint Intaglio Printmaking on Rives BFK, Hand-colored with Gouache"
 dimensions = "8 x 10 inches"

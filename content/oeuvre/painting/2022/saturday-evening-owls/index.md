@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/saturday-evening-owls/", "/saturday-evening-owls/", "/oeuvre/2022/painting/saturday-evening-owls/"]
 
+[taxonomies]
+tags = [
+  "owl", "bird", "figure", "row", "portrait", "animal portrait", "night",
+  "gaze", "camping", "pink", "mauve", "gray", "gestural", "folk-modern",
+  "companionship"
+]
+
 [extra]
 medium = "Acrylic, Latex & Paint marker on Canvas"
 dimensions = "30 x 20 inches"

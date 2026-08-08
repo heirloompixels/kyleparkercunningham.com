@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/pink-and-yellow/", "/pink-and-yellow/", "/oeuvre/2021/painting/pink-and-yellow/"]
 
+[taxonomies]
+tags = [
+  "enso", "circle", "concentric", "grid", "repetition", "pink",
+  "high chroma", "abstraction", "meditation", "poem", "horizon",
+  "polyptych"
+]
+
 [extra]
 medium = "Oil, Oil Stick, Acrylic, Latex on Canvas"
 dimensions = "27 x 28, 28 1/2 by 28 1/2"

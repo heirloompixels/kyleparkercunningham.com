@@ -5,6 +5,13 @@ category = "painting"
 year = 2022
 aliases = ["/oeuvre/painting/2022/rhino-radar-arm-fauna/", "/rhino-radar-arm-fauna/", "/oeuvre/2022/painting/rhino-radar-arm-fauna/"]
 
+[taxonomies]
+tags = [
+  "rhino", "satellite dish", "antenna", "machine", "salvage", "gaze",
+  "animist solarpunk", "post-collapse", "teal", "ochre", "gestural",
+  "reworked painting", "animal portrait"
+]
+
 [extra]
 medium = "Oil on Gesso Panel"
 dimensions = "12x16 inches"

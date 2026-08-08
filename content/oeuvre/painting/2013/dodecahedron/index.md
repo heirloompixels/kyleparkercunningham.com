@@ -5,6 +5,13 @@ category = "painting"
 year = 2013
 aliases = ["/oeuvre/painting/2013/dodecahedron/", "/dodecahedron/", "/oeuvre/2013/painting/dodecahedron/"]
 
+[taxonomies]
+tags = [
+  "buddha", "figure", "meditation", "dodecahedron", "sacred geometry",
+  "geometry", "halo", "ribcage", "anatomy", "spiral", "green", "india",
+  "dharamshala", "buddhism"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

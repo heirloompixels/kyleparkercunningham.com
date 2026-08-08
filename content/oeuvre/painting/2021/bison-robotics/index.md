@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/bison-robotics/", "/oeuvre/painting/2021/bison-robotics/", "/oeuvre/2021/painting/bison-robotics/"]
 
+[taxonomies]
+tags = [
+  "bison", "robot", "machine", "great plains", "grazing", "de-extinction",
+  "animist solarpunk", "post-collapse", "coral", "ochre", "gray",
+  "flat ground", "irony", "sold"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

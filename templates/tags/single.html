@@ -1,0 +1,74 @@
+{# One tag: the ledger, filtered to the works carrying it. Mirrors the markup of
+   oeuvre/section.html so a tag view reads as the same index seen another way.
+   Falls back on taxonomy_single.html for `topics`, which stays with the notes. #}
+{% extends "base.html" %}
+{% block title %}{{ term.name }} — {{ config.title }}{% endblock %}
+
+{% block site_header %}
+  {% set mast_active = "oeuvre" %}
+  {% include "partials/masthead.html" %}
+{% endblock %}
+
+{% block site_footer %}
+  {% include "partials/colophon.html" %}
+{% endblock %}
+
+{% block content %}
+{% set works = term.pages | sort(attribute="components.2") | reverse %}
+{% set n_total = works | length %}
+{% set tags = get_taxonomy(kind="tags") %}
+
+<header class="ledger-head">
+  <h1>{{ term.name }} <span class="ledger-sub">— works tagged</span></h1>
+</header>
+
+<div class="ledger-statline">
+  <span><b>{{ n_total }}</b> work{{ n_total | pluralize }}</span>
+  {% if n_total > 0 %}
+    {% set newest = works | first %}
+    {% set oldest = works | last %}
+    <span>{{ oldest.components[2] }} — {{ newest.components[2] }}</span>
+  {% endif %}
+  <span><a href="{{ get_url(path='/tags/') }}">← all tags</a></span>
+  <span><a href="{{ get_url(path='/oeuvre/') }}">the full index</a></span>
+</div>
+
+<table class="ledger">
+  <thead>
+    <tr>
+      <th class="c-thumb"></th>
+      <th>Title</th>
+      <th>Discipline</th>
+      <th>Medium</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% set_global prev_year = "" %}
+    {% for p in works %}
+      {% set p_year = p.components[2] %}
+      {% if p_year != prev_year %}
+        {% set year_count = works | filter(attribute="components.2", value=p_year) | length %}
+        <tr class="yearband"><td colspan="5">{{ p_year }} <span>{{ year_count }} work{{ year_count | pluralize }}</span></td></tr>
+        {% set_global prev_year = p_year %}
+      {% endif %}
+      <tr>
+        <td class="c-thumb">
+          {% set thumb = p.assets | first %}
+          {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
+          {% if thumb %}
+            {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
+            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
+          {% else %}
+            <span class="noimg">no img</span>
+          {% endif %}
+        </td>
+        <td class="c-title"><a href="{{ p.permalink }}">{{ p.title }}</a></td>
+        <td class="c-disc">{{ p.components[1] }}</td>
+        <td class="c-med">{{ p.extra.medium | default(value="—") }}</td>
+        <td class="c-st"><span class="st st-{{ p.extra.status | default(value='unrecorded') | slugify }}">{{ p.extra.status | default(value="unrecorded") }}</span></td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

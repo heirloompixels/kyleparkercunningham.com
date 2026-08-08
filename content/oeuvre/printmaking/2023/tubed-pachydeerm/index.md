@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/tubed-pachydeerm/", "/oeuvre/2023/printmaking/tubed-pachydeerm/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "elephant", "analog", "sound", "music", "machine",
+  "salvage", "animist solarpunk", "red", "humor", "technology",
+  "large format"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

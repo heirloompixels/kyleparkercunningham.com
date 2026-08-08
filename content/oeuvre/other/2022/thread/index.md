@@ -5,6 +5,12 @@ category = "other"
 year = 2022
 aliases = ["/oeuvre/other/2022/thread/", "/thread/", "/oeuvre/2022/all/thread/"]
 
+[taxonomies]
+tags = [
+  "artist proof", "line work", "minimal", "plate tone", "hand", "tether",
+  "gestural", "geometry", "faceted", "grisaille", "small format"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/sunflowers/", "/sun/", "/oeuvre/2022/printmaking/sun/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "open edition", "still life", "flower", "vessel", "seed",
+  "spiral", "fibonacci", "garden", "orange", "domestic object"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

@@ -5,6 +5,13 @@ category = "painting"
 year = 2015
 aliases = ["/butterfly-conundrum-painting/", "/oeuvre/painting/2015/butterfly-conundrum/", "/oeuvre/painting/2015/butterfly_conundrum/"]
 
+[taxonomies]
+tags = [
+  "butterfly", "tool", "tether", "fragility and force", "paradox",
+  "balance", "orange", "blue", "vertical format", "reworked painting",
+  "cross-medium motif"
+]
+
 [extra]
 medium = "Oil on Gesso Panel"
 dimensions = "5.75 x 11.75 inches"

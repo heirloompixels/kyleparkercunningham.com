@@ -5,6 +5,12 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/felt-and-lived/", "/felt-and-lived/", "/oeuvre/2024/painting/felt-and-lived/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "radial", "hourglass", "symmetry", "time", "warm palette",
+  "red", "orange", "yellow", "gray", "hard edge", "geometry"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

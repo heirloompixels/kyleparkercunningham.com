@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/gardner/", "/gardner/", "/oeuvre/2023/printmaking/gardner/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "whale", "tree", "coracle", "transplant", "garden",
+  "mutual aid", "ocean", "animist solarpunk", "green", "minimal",
+  "cross-medium motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

@@ -5,6 +5,14 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/three-blue-corn/", "/three-blue-corn/", "/oeuvre/2018/painting/three-blue-corn/"]
 
+[taxonomies]
+tags = [
+  "still life", "blue corn", "corn", "food", "agriculture", "seed",
+  "deep time", "desert archaic", "pandemic", "community", "blue", "gray",
+  "square format", "cross-medium motif", "sold", "truth or consequences",
+  "new mexico"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Canvas"

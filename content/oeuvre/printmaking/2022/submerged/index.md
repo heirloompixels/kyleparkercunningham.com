@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2022
 aliases = ["/oeuvre/printmaking/2022/submerged/", "/submerged/", "/oeuvre/2022/printmaking/submerged/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "diver", "space helmet", "figure", "bubbles", "ocean",
+  "submersion", "solitude", "teal", "line work", "recurring motif"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

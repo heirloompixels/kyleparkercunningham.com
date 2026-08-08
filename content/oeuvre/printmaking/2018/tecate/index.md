@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/tecate/", "/tecate/", "/oeuvre/2018/printmaking/tecate/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "hand-torn paper", "still life", "beer can", "tecate",
+  "mundane", "everyday ritual", "desert", "red", "humor",
+  "chihuahuan desert", "new mexico"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

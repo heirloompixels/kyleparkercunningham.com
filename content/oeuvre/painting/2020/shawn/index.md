@@ -5,6 +5,12 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/shawn/", "/shawn/", "/oeuvre/2020/painting/shawn/"]
 
+[taxonomies]
+tags = [
+  "portrait", "commissioned portrait", "costume", "suspenders",
+  "chiaroscuro", "black", "realism", "sold"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "12 x 16 inches"

@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2016
 aliases = ["/oeuvre/printmaking/2016/alligator-juniper-2/", "/oeuvre/2016/printmaking/alligator-juniper-2/"]
 
+[taxonomies]
+tags = [
+  "line work", "tree", "juniper", "alligator juniper", "deep time",
+  "patience", "adobe canyon", "new mexico", "black and white",
+  "hand-torn paper", "private collection"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "8 x 10 inches"

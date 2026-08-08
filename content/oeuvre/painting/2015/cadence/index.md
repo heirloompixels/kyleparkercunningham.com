@@ -5,6 +5,12 @@ category = "painting"
 year = 2015
 aliases = ["/cadence/", "/oeuvre/painting/2015/cadence/", "/oeuvre/2015/painting/cadence/"]
 
+[taxonomies]
+tags = [
+  "framed", "enso", "circle", "grid", "repetition", "gestural",
+  "meditation", "zen", "abstraction", "pattern", "orange", "cream"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Gesso Panel"

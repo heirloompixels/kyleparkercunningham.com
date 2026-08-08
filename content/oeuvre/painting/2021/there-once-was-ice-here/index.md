@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/there-once-was-ice-here/", "/there-once-was-ice-here/", "/oeuvre/2021/painting/there-once-was-ice-here/"]
 
+[taxonomies]
+tags = [
+  "bear", "ice", "glass jar", "bubbles", "glassblowing", "ocean", "arctic",
+  "climate change", "extinction", "adaptation", "animist solarpunk",
+  "post-collapse", "blue", "orange", "invented technology"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "21 x 34 inches"

@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2023
 aliases = ["/oeuvre/printmaking/2023/shade-cloud/", "/shade-cloud/", "/oeuvre/2023/printmaking/shade-cloud/"]
 
+[taxonomies]
+tags = [
+  "cloud", "shade", "shadow", "sun", "drought", "desert", "creature", "awe",
+  "negative space", "horizon", "minimal", "humor",
+  "the memory of atmosphere"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

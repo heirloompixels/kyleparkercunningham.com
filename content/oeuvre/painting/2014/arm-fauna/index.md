@@ -5,6 +5,14 @@ category = "painting"
 year = 2014
 aliases = ["/arm-fauna/", "/oeuvre/painting/2014/arm-fauna/", "/oeuvre/2014/painting/arm-fauna/"]
 
+[taxonomies]
+tags = [
+  "elephant", "satao", "poaching", "rocket", "machine", "salvage",
+  "animist solarpunk", "post-collapse", "climate change",
+  "intelligence of nature", "anthropocentrism", "grief", "yellow",
+  "absurdism", "series", "private collection"
+]
+
 [extra]
 medium = "Oil on Handwoven Linen"
 dimensions = "13 x 21 inches"

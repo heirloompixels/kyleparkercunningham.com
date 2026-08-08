@@ -5,6 +5,12 @@ category = "painting"
 year = 2023
 aliases = ["/calavera-del-caballo/", "/oeuvre/painting/2023/calavera-del-caballo/", "/oeuvre/2023/painting/calavera-del-caballo/"]
 
+[taxonomies]
+tags = [
+  "portrait", "jeannie", "skull", "anatomy", "mask", "memento mori",
+  "desert", "gaze", "pink", "green", "realism", "dia de los muertos"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel"

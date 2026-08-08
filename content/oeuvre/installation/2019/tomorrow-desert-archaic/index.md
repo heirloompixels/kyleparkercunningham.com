@@ -4,6 +4,13 @@ date = 2019-07-24
 category = "installation"
 year = 2019
 aliases = ["/oeuvre/installation/2019/tomorrow-desert-archaic/", "/oeuvre/2019/installation/tomorrow-desert-archaic/"]
+
+[taxonomies]
+tags = [
+  "site-specific", "found wood", "assemblage", "salvage", "triangle",
+  "geometry", "anatomy", "ribcage", "lungs", "hand lettering",
+  "desert archaic", "truth or consequences", "new mexico", "large format"
+]
 +++
 Site specific installation at Desert Archaic in Truth or Consequences, New Mexico.
 

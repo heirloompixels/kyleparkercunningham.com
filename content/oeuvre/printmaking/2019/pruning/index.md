@@ -5,6 +5,12 @@ category = "printmaking"
 year = 2019
 aliases = ["/oeuvre/printmaking/2019/pruning/", "/pruning/", "/oeuvre/2019/printmaking/pruning/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "cactus", "desert", "scissors", "garden",
+  "interspecies negotiation", "humor", "anthropomorphism", "green"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/above-the-clouds/", "/oeuvre/painting/2024/above-the-clouds/", "/oeuvre/2024/painting/above-the-clouds/"]
 
+[taxonomies]
+tags = [
+  "landscape", "mountains", "cloud", "sky", "faceted", "triangle",
+  "geometry", "tres piedras", "taos", "rio grande rift", "new mexico",
+  "pink", "green", "thick impasto", "place", "rio grande"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

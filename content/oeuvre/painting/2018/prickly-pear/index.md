@@ -5,6 +5,13 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/prickly-pear/", "/prickly-pear/", "/oeuvre/2018/painting/prickly-pear/"]
 
+[taxonomies]
+tags = [
+  "still life", "cactus", "desert", "chihuahuan desert", "close crop",
+  "olive", "ochre", "cream", "contour line", "square format", "mundane",
+  "attention", "new mexico"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Diabond"

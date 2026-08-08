@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/twenty-one-years/", "/twenty-one-years/", "/oeuvre/2024/painting/twenty-one-years/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "spiral", "biography", "time", "growth",
+  "yellow", "blue", "pink", "green", "stippling", "centered composition",
+  "joy"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

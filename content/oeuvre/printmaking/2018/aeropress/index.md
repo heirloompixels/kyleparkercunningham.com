@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/aeropress/", "/oeuvre/printmaking/2018/aeropress/", "/oeuvre/2018/printmaking/aeropress/"]
 
+[taxonomies]
+tags = [
+  "still life", "coffee", "domestic object", "everyday ritual",
+  "exploded view", "diagram", "line work", "series", "black and white",
+  "private collection"
+]
+
 [extra]
 medium = "Intaglio Printmaking on Rives BFK"
 dimensions = "8 x 10 inches"

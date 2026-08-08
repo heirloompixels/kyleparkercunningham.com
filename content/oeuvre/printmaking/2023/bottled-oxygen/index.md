@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2023
 aliases = ["/bottled-oxygen/", "/oeuvre/printmaking/2023/bottled-oxygen/", "/oeuvre/2023/printmaking/bottled-oxygen/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "glass jar", "tree", "breathing apparatus",
+  "interdependence", "mutual aid", "animist solarpunk", "post-collapse",
+  "yellow", "green", "line work"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 author = "claude"

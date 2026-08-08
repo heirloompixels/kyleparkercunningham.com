@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/transition/", "/transition/", "/oeuvre/2021/painting/transition/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "circle", "pattern", "grid", "progression",
+  "order and chaos", "narrow format", "vertical format", "coral", "rust",
+  "cream", "slow painting", "time", "process"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Gesso Panel"

@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2016
 aliases = ["/boom-box/", "/oeuvre/printmaking/2016/boom-box/", "/oeuvre/2016/printmaking/boom-box/"]
 
+[taxonomies]
+tags = [
+  "crosshatching", "line work", "anatomy", "skull", "figure",
+  "space helmet", "boombox", "music", "crowd", "post-collapse", "humor",
+  "memento mori", "black and white", "hand-torn paper"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print"
 dimensions = "5 x 7 inches"

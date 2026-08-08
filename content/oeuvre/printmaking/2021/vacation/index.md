@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/vacation/", "/vacation/", "/oeuvre/2021/printmaking/vacation/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "hand-torn paper", "open edition", "figure",
+  "space helmet", "breathing apparatus", "vacation", "future",
+  "post-collapse", "gold", "green", "humor", "line work"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

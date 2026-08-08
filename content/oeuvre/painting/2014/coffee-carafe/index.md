@@ -5,6 +5,13 @@ category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/coffee-carafe/", "/coffee-carafe/", "/oeuvre/2014/painting/coffee-carafe/"]
 
+[taxonomies]
+tags = [
+  "still life", "coffee", "vessel", "domestic object", "everyday ritual",
+  "mundane", "blue", "black", "centered composition", "minimal", "series",
+  "private collection"
+]
+
 [extra]
 medium = "Oil on Panel"
 dimensions = "8 x 8 inches"

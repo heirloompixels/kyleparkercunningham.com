@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/tugboat-whale-sequoia/", "/oeuvre/2021/painting/tugboat-whale-sequoia/"]
 
+[taxonomies]
+tags = [
+  "whale", "conifer", "tree", "coracle", "transplant", "mutual aid",
+  "ocean", "animist solarpunk", "post-collapse", "panoramic format",
+  "lavender", "gray", "companion piece"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "13 x 34 inches"

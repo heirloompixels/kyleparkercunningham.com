@@ -5,6 +5,13 @@ category = "painting"
 year = 2023
 aliases = ["/autumnal-twilight/", "/oeuvre/painting/2023/autumnal-twilight/", "/oeuvre/2023/painting/autumnal-twilight/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "circle", "autumn", "twilight", "seasons",
+  "light", "thick impasto", "rose", "ochre", "blue", "framed", "repetition",
+  "enso"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel"

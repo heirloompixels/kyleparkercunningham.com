@@ -5,6 +5,13 @@ category = "painting"
 year = 2023
 aliases = ["/oeuvre/painting/2023/harmonics/", "/harmonics/", "/oeuvre/2023/painting/harmonics/"]
 
+[taxonomies]
+tags = [
+  "cloud", "lightning", "sky", "weather", "harmonics", "music",
+  "repetition", "lightning strike", "the memory of atmosphere", "blue",
+  "gray", "white", "gestural", "framed", "awe"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

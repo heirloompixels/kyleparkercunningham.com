@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/out-there-on-the-horizon-a-solitary-cloud/", "/oeuvre/2024/painting/out-there-on-the-horizon-a-solitary-cloud/"]
 
+[taxonomies]
+tags = [
+  "cloud", "sky", "weather", "solstice", "horizon", "gradient",
+  "thick impasto", "gaze", "navy", "white", "gold",
+  "the memory of atmosphere", "humor"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

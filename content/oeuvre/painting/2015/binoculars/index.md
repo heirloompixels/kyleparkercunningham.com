@@ -5,6 +5,13 @@ category = "painting"
 year = 2015
 aliases = ["/binoculars/", "/oeuvre/painting/2015/binoculars/", "/oeuvre/2015/painting/binoculars/"]
 
+[taxonomies]
+tags = [
+  "framed", "figure", "creature", "binoculars", "gaze", "hunting",
+  "self portrait", "long neck", "stripes", "trousers", "beige", "ochre",
+  "orange", "absurdism", "surreal"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel"

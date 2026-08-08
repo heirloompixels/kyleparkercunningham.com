@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/rhino-radar/", "/rhino-radar/", "/oeuvre/2021/painting/rhino-radar/"]
 
+[taxonomies]
+tags = [
+  "rhino", "satellite dish", "antenna", "machine", "salvage",
+  "communication", "animist solarpunk", "post-collapse", "teal", "yellow",
+  "gestural", "reworked painting", "animal portrait"
+]
+
 [extra]
 medium = "Oil on Gesso Panel"
 dimensions = "12 x 16 inches"

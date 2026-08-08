@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2017
 aliases = ["/oeuvre/printmaking/2017/riot-ghost/", "/riot-ghost/", "/oeuvre/2017/printmaking/riot-ghost/"]
 
+[taxonomies]
+tags = [
+  "hand-torn paper", "crosshatching", "dense black", "ghost", "gas mask",
+  "breathing apparatus", "wreath", "night", "ephemera series", "grief",
+  "black and white"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

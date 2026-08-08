@@ -5,6 +5,12 @@ category = "painting"
 year = 2018
 aliases = ["/oeuvre/painting/2018/crystal-tooth-whale/", "/oeuvre/2018/painting/crystal-tooth-whale/"]
 
+[taxonomies]
+tags = [
+  "whale", "megafauna", "teeth", "crystal", "faceted", "profile", "teal",
+  "white", "flat ground", "humor", "animal portrait", "on loan"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "11x14 inches"

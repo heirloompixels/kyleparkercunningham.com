@@ -5,6 +5,12 @@ category = "other"
 year = 2018
 aliases = ["/oeuvre/other/2018/space-worm/", "/space-worm/", "/oeuvre/2018/all/space-worm/"]
 
+[taxonomies]
+tags = [
+  "hand-torn paper", "hand-colored", "violet", "purple", "worm", "creature",
+  "space exploration", "moon", "line work", "humor", "edition variants"
+]
+
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"

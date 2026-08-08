@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2021
 aliases = ["/oeuvre/printmaking/2021/stole-the-rainbow-2/", "/oeuvre/2021/printmaking/stole-the-rainbow-2/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "megafauna", "extinction", "rainbow", "theft", "light",
+  "weather", "humor", "absurdism", "fable", "high chroma",
+  "recurring motif"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
 dimensions = "8 x 10 inches"

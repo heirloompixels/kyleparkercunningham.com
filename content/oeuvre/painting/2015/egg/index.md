@@ -5,6 +5,12 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/egg/", "/egg/", "/oeuvre/2015/painting/egg/"]
 
+[taxonomies]
+tags = [
+  "figure", "circle", "red", "gray", "faceted", "geometry", "anatomy",
+  "recurring motif"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel"

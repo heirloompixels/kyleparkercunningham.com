@@ -5,6 +5,12 @@ category = "painting"
 year = 2015
 aliases = ["/oeuvre/painting/2015/substantial/", "/substantial/", "/oeuvre/2015/painting/substantial/"]
 
+[taxonomies]
+tags = [
+  "face", "crowd", "eyes", "gaze", "being seen", "psychological",
+  "grisaille", "gray", "figure", "departure", "scale", "portrait"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

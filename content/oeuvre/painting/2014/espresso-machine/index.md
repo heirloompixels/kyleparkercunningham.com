@@ -5,6 +5,13 @@ category = "painting"
 year = 2014
 aliases = ["/oeuvre/painting/2014/espresso-machine/", "/espress-machine/", "/oeuvre/2014/painting/espress-machine/"]
 
+[taxonomies]
+tags = [
+  "still life", "coffee", "domestic object", "everyday ritual", "devotion",
+  "white on white", "thick impasto", "pale palette", "domesticity",
+  "series", "private collection"
+]
+
 [extra]
 medium = "Oil on Panel"
 dimensions = "8 x 8 inches"

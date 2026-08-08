@@ -5,6 +5,12 @@ category = "painting"
 year = 2023
 aliases = ["/oeuvre/painting/2023/geometric-anatomy/", "/geometric-anatomy/", "/oeuvre/2023/painting/geometric-anatomy/"]
 
+[taxonomies]
+tags = [
+  "geometric anatomy", "series", "figure", "intimacy", "hand", "triangle",
+  "red", "web", "yellow", "memory", "flesh tones"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Panel (ACM)"

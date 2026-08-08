@@ -5,6 +5,12 @@ category = "painting"
 year = 2020
 aliases = ["/oeuvre/painting/2020/michael/", "/michael/", "/oeuvre/2020/painting/michael/"]
 
+[taxonomies]
+tags = [
+  "portrait", "commissioned portrait", "joy", "tenderness", "chiaroscuro",
+  "black", "realism", "slow painting", "private collection"
+]
+
 [extra]
 medium = "Oil on Linen"
 dimensions = "12 x 18 inches"

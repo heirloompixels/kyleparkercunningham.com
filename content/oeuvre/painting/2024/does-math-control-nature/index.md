@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/does-math-control-nature/", "/does-math-control-nature/", "/oeuvre/2024/painting/does-math-control-nature/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "spiral", "concentric", "fibonacci", "mathematics",
+  "pattern", "ecology", "geometry", "coral", "salmon", "cream",
+  "order and chaos"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

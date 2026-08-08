@@ -5,6 +5,13 @@ category = "painting"
 year = 2014
 aliases = ["/atmospheric-whales/", "/oeuvre/painting/2014/atmospheric-whales/", "/oeuvre/2014/painting/atmospheric-whales/"]
 
+[taxonomies]
+tags = [
+  "gold leaf", "whale", "atmospheric whales", "flight", "eyes", "sun",
+  "moon", "recurring motif", "animist solarpunk", "tenderness",
+  "small format", "terracotta", "gold"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Handwoven Linen"

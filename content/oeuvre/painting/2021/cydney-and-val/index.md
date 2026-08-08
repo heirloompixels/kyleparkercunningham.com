@@ -5,6 +5,13 @@ category = "painting"
 year = 2021
 aliases = ["/oeuvre/painting/2021/cydney-and-val/", "/oeuvre/2021/painting/cydney-and-val/"]
 
+[taxonomies]
+tags = [
+  "portrait", "double portrait", "companionship", "mask", "masquerade",
+  "community", "costume", "turquoise", "black", "play",
+  "truth or consequences", "sold", "new mexico"
+]
+
 [extra]
 author = "claude"
 medium = "Oil on Linen"

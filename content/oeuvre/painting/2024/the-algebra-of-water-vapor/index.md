@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/the-algebra-of-water-vapor/", "/the-algebra-of-water-vapor/", "/oeuvre/2024/painting/the-algebra-of-water-vapor/"]
 
+[taxonomies]
+tags = [
+  "cloud", "sky", "weather", "faceted", "triangle", "geometry",
+  "mathematics", "abstraction", "blue", "teal", "navy", "thick impasto",
+  "the memory of atmosphere", "pattern", "tessellation"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/orbits-plankton-dreaming-of-a-sedimentary-afterlife/", "/orbits-plankton-dreaming-of-a-sedimentary-afterlife/", "/oeuvre/2024/painting/orbits-plankton-dreaming-of-a-sedimentary-afterlife/"]
 
+[taxonomies]
+tags = [
+  "abstraction", "concentric", "circle", "cell", "plankton", "geology",
+  "deep time", "water cycle", "garden", "salvage", "red", "orange", "green",
+  "the memory of atmosphere"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++

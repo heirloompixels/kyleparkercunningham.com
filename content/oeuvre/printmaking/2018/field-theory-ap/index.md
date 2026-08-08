@@ -5,6 +5,13 @@ category = "printmaking"
 year = 2018
 aliases = ["/oeuvre/printmaking/2018/field-theory-ap/", "/oeuvre/2018/printmaking/field-theory-ap/"]
 
+[taxonomies]
+tags = [
+  "hand-colored", "artist proof", "abstraction", "concentric", "rectangle",
+  "perspective", "attention", "field theory", "cross-medium motif", "teal",
+  "hand-torn paper"
+]
+
 [extra]
 medium = "Drypoint Intaglio Print, Hand-painted with Watercolor and Gouache"
 dimensions = "8 x 10 inches"

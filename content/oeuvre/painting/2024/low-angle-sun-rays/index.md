@@ -5,6 +5,13 @@ category = "painting"
 year = 2024
 aliases = ["/oeuvre/painting/2024/low-angle-sun-rays/", "/low-angle-sun-rays/", "/oeuvre/2024/painting/low-angle-sun-rays/"]
 
+[taxonomies]
+tags = [
+  "cloud", "sky", "weather", "twilight", "light", "dust",
+  "continental divide", "geology", "sand mandala",
+  "the memory of atmosphere", "peach", "navy", "scatter", "gestural"
+]
+
 [extra]
 medium = "Oil on Linen"
 +++
