@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Mockup 30 — Inner-page chrome (compact masthead + colophon)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="assets/fonts/fonts.css">
 <style>
   :root{
     --bg:#f7f4ef; --ink:#1e1a16; --muted:#6a6258; --accent:#1f3f5b; --line:#e2dbd1;
@@ -55,7 +55,8 @@
   /* ── Section index (the ledger-lite list) ─────────────────────────────── */
   .ix-stat{font-family:var(--mono);font-size:.74rem;letter-spacing:.1em;color:var(--muted);margin:0 0 1.6rem}
   .ix-stat b{color:var(--ink)}
-  table.ix{width:100%;border-collapse:collapse;font-size:1rem}
+  table.ix{width:100%;border-collapse:collapse;font-size:1rem;table-layout:fixed}
+  table.ix th,table.ix td{overflow-wrap:anywhere}
   table.ix th{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:400;padding:0 1rem .6rem 0;border-bottom:1px solid var(--ink)}
   table.ix td{padding:.7rem 1rem .7rem 0;border-bottom:1px solid var(--line);vertical-align:middle}
   table.ix tr:hover td{background:color-mix(in srgb,var(--accent) 6%,transparent)}
