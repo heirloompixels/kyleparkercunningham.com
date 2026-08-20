@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Docent</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:root{--paper:#faf8f4;--ink:#16130f;--dim:#8b8478}
+body{background:var(--paper);color:var(--ink);font-family:"Newsreader",Georgia,serif}
+.intro{min-height:100svh;display:grid;place-items:center;padding:8vh 6vw;text-align:center}
+.intro p{max-width:22ch;font-size:clamp(2rem,6.5vw,4.4rem);line-height:1.06;font-weight:300;
+ letter-spacing:-.022em;margin:0}
+.intro small{display:block;margin-top:2.4em;font-family:"Archivo Narrow",sans-serif;font-size:11px;
+ letter-spacing:.34em;text-transform:uppercase;color:var(--dim)}
+.stop{min-height:100svh;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+ align-items:center;gap:min(7vw,90px);padding:12vh 7vw;max-width:1500px;margin:0 auto}
+.stop:nth-child(even) .art{order:2}
+.said{font-size:clamp(1.5rem,3.4vw,2.9rem);line-height:1.18;font-weight:300;letter-spacing:-.015em;
+ margin:0 0 1.1em;max-width:20ch;text-wrap:balance}
+.art img{width:100%;height:auto;box-shadow:0 30px 90px -50px rgba(0,0,0,.6)}
+.tomb{font-family:"Archivo Narrow",sans-serif;font-size:11px;letter-spacing:.18em;
+ text-transform:uppercase;color:var(--dim);line-height:2;border-top:1px solid #ddd6c9;
+ padding-top:12px;max-width:34ch}
+.tomb b{color:var(--ink);font-weight:600}
+.his{font-size:1.06rem;line-height:1.62;color:#4a4338;max-width:38ch;margin:1.4em 0 1.6em;
+ font-style:italic}
+.end{min-height:80svh;display:grid;place-items:center;text-align:center;padding:10vh 6vw}
+.end p{font-size:clamp(1.4rem,3.6vw,2.4rem);font-weight:300;max-width:24ch;line-height:1.22;
+ margin:0 0 1.6em}
+.end a{font-family:"Archivo Narrow",sans-serif;font-size:12px;letter-spacing:.28em;
+ text-transform:uppercase;border-bottom:1px solid;padding-bottom:4px;text-decoration:none}
+@media(prefers-reduced-motion:no-preference){
+ .stop>*{animation:rise linear both;animation-timeline:view();animation-range:entry 4% cover 32%}
+ @keyframes rise{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:none}}
+}
+@media(max-width:860px){.stop{grid-template-columns:minmax(0,1fr);gap:32px;padding:9vh 7vw;
+ min-height:auto}.stop:nth-child(even) .art{order:0}}
+
+
+.sk-switch{position:fixed;right:12px;bottom:12px;z-index:99999;font:400 11px/1.35
+ ui-monospace,SFMono-Regular,Menlo,monospace;color:#111;max-width:min(300px,calc(100vw - 24px));
+ print-color-adjust:exact}
+.sk-switch summary{list-style:none;cursor:pointer;background:#111;color:#fff;padding:5px 9px;
+ border-radius:2px;letter-spacing:.08em;text-transform:uppercase;display:inline-block;
+ box-shadow:0 1px 10px rgba(0,0,0,.28);user-select:none}
+.sk-switch summary::-webkit-details-marker{display:none}
+.sk-switch[open] summary{border-radius:2px 2px 0 0}
+.sk-switch .sk-panel{background:#fbfaf8;border:1px solid #111;max-height:min(64vh,520px);
+ overflow:auto;padding:6px;box-shadow:0 6px 30px rgba(0,0,0,.3)}
+.sk-switch a{display:block;padding:3px 5px;color:#111;text-decoration:none;border-radius:2px;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sk-switch a:hover{background:#111;color:#fff}
+.sk-switch a.now{background:#e4dfd6;font-weight:700}
+.sk-switch b{color:#8a8378;font-weight:400;margin-right:6px}
+@media print{.sk-switch{display:none}}
+</style>
+</head>
+<body>
+<section class="intro"><p>There are one hundred and fifty-five. Let me show you seven.</p><small>a docent's route · about nine minutes</small></section><section class="stop"><div class="art"><img src="assets/w/me-own-juniper.webp" alt="Me Own Juniper, oil on linen, 2012" loading="lazy"></div><div><p class="said">Start here. He was twenty-nine and had just walked out of the Gila.</p><p class="his">Alive prominently upon a height of land out on one of a myriad of mesas extending west from the crest of the Black Range in Southern New Mexico there exists this particular Alligator Juniper. Splendid and ancient, all full of stories reaching as far back as…</p><div class="tomb"><b>Me Own Juniper</b><br>Oil on Linen · 2012</div></div></section><section class="stop"><div class="art"><img src="assets/w/substantial.webp" alt="Substantial, oil on linen, 2015" loading="lazy"></div><div><p class="said">Six years later, the faces get bigger than the canvas can hold.</p><p class="his">A wall of gray faces, all enormous eyes, watching a small figure who has turned to leave the frame. Being seen is heavy — substantial — and so is deciding to walk out from under it. Years later Visible picked the same nerve from the other side. 13 by 21…</p><div class="tomb"><b>Substantial</b><br>Oil on Linen · 13 × 21 in · 2015</div></div></section><section class="stop"><div class="art"><img src="assets/w/cyclum-lunarem.webp" alt="Cyclum Lunarem, oil and 24kt gold leaf on gessoed linen panels, 2017" loading="lazy"></div><div><p class="said">Then a year of only looking up, one small panel per night.</p><p class="his">I painted the moons from an entire summer, starting on the summer solstice and completed on the autumnal equinox. Each moon is painted upon a 3 3/8&quot; square prepared with linen and a traditional gesso ground. 24kt gold leaf was gilded upon this ground and the…</p><div class="tomb"><b>Cyclum Lunarem</b><br>Oil and 24kt Gold Leaf on Gessoed Linen Panels · 2017</div></div></section><section class="stop"><div class="art"><img src="assets/w/the-mother-bear.webp" alt="the mother bear, oil, oil stick, acrylic and latex on canvas, 2021" loading="lazy"></div><div><p class="said">This one happened in front of him, in Montana, and he painted it afterwards.</p><p class="his">Jeannie and I encountered this mother bear while hiking in to the Absaroka Mountains in Montana in August of 2021. We were headed up to Cowen Cirque to do a bit of alpine climbing for a few days and came upon this wonderful creature about 1 mile into the 10…</p><div class="tomb"><b>the mother bear</b><br>Oil, Oil Stick, Acrylic and Latex on Canvas · 32 × 51 in · 2021</div></div></section><section class="stop"><div class="art"><img src="assets/w/the-black-fire.webp" alt="The Black Fire, oil on linen, 2022" loading="lazy"></div><div><p class="said">This one he watched from the porch for three months.</p><p class="his">A painting created in response to the Black Fire in the Aldo Leopold Wilderness during the spring of 2022. Oil on Linen. Twenty One by Thirty Four Inches. May 2022. In May of 2022 the Black Fire started near Diamond Creek in the Aldo Leopold Wilderness near…</p><div class="tomb"><b>The Black Fire</b><br>Oil on Linen · 21 × 34 in · 2022</div></div></section><section class="stop"><div class="art"><img src="assets/w/bottled-lightning.webp" alt="bottled lightning, oil on linen, 2024" loading="lazy"></div><div><p class="said">He has been struck by lightning. Consider that while you look at the jar.</p><p class="his">On occasions, the electrons get out of balance. Randomly you just happen to be in that place at the wrong moment, right time and the atmospheres&#x27; electricity chooses to flow through your body.</p><div class="tomb"><b>bottled lightning</b><br>Oil on Linen · 2024</div></div></section><section class="stop"><div class="art"><img src="assets/w/the-river-in-the-sky.webp" alt="the river in the sky, oil on linen, 2024" loading="lazy"></div><div><p class="said">And now the weather itself, without the ground under it.</p><p class="his">Magic is the transportation of millions of gallons of water over thousands of miles in the rivers of the atmosphere. Each molecule of water drifts aimlessly on a cyclical pilgrimage to the tops of the mounts only to erode their way back to the melting pot of…</p><div class="tomb"><b>the river in the sky</b><br>Oil on Linen · 2024</div></div></section><section class="end"><p>That is the tour. The other hundred and forty-eight are catalogued, measured and photographed — go and get lost in them.</p><a href="#">archive.kyleparkercunningham.com</a></section>
+<details class="sk-switch"><summary>sketchbook</summary><div class="sk-panel"><a href="36-trailhead.html"><b>36</b>Trailhead</a><a href="37-field-guide.html"><b>37</b>Field Guide</a><a href="38-docent.html" class="now"><b>38</b>The Docent</a><a href="39-field-station.html"><b>39</b>Field Station</a><a href="40-the-long-walk.html"><b>40</b>The Long Walk</a><a href="41-chromatic.html"><b>41</b>Chromatic Index</a><a href="42-fugitive.html"><b>42</b>Fugitive</a><a href="43-true-scale.html"><b>43</b>True Scale</a><a href="44-deep-time.html"><b>44</b>Deep Time</a><a href="45-the-quilt.html"><b>45</b>The Quilt</a><a href="46-weather-log.html"><b>46</b>Weather Log</a><a href="47-ledger-of-hours.html"><b>47</b>Ledger of Hours</a><a href="48-card-catalogue.html"><b>48</b>Card Catalogue</a><a href="49-contact-sheet.html"><b>49</b>Contact Sheet</a><a href="50-the-loom.html"><b>50</b>The Loom</a><a href="51-the-press.html"><b>51</b>The Press</a><a href="52-herbarium.html"><b>52</b>Herbarium</a><a href="53-the-fold.html"><b>53</b>The Fold</a><a href="54-wunderkammer.html"><b>54</b>Wunderkammer</a><a href="55-terminal.html"><b>55</b>Terminal</a><a href="56-almanac.html"><b>56</b>Almanac</a><a href="57-lunarem.html"><b>57</b>Lunarem</a><a href="58-the-day.html"><b>58</b>The Day</a><a href="59-ephemeris.html"><b>59</b>Ephemeris</a><a href="60-the-return.html"><b>60</b>The Return</a><a href="61-motif-atlas.html"><b>61</b>Motif Atlas</a><a href="62-genealogy.html"><b>62</b>Genealogy</a><a href="63-the-score.html"><b>63</b>The Score</a><a href="64-tide.html"><b>64</b>Tide</a><a href="65-the-window.html"><b>65</b>The Window</a><a href="66-correspondence.html"><b>66</b>Correspondence</a><a href="67-constellations.html"><b>67</b>Constellations</a><a href="68-the-sieve.html"><b>68</b>The Sieve</a><a href="69-the-guide.html"><b>69</b>The Guide</a></div></details>
+</body>
+</html>
