@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ephemeris</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+:root{--paper:#fdfdfb;--ink:#101010;--dim:#8a8a86;--rule:#e0e0dc;--red:#8c1d18}
+body{background:var(--paper);color:var(--ink);font-family:"IBM Plex Mono",monospace;
+ font-size:12px;line-height:1.55}
+.wrap{max-width:1160px;margin:0 auto;padding:0 22px 90px}
+header{padding:56px 0 14px;border-bottom:2px solid var(--ink);display:grid;
+ grid-template-columns:minmax(0,1fr) auto;gap:22px;align-items:end}
+h1{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:clamp(2.4rem,7vw,4.6rem);
+ line-height:.94;letter-spacing:-.01em;margin:0}
+.sub{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);
+ margin-bottom:10px}
+.meta{text-align:right;font-size:10px;letter-spacing:.16em;text-transform:uppercase;
+ color:var(--dim);line-height:2}
+.note{font-family:"Bodoni Moda",Georgia,serif;font-size:1.06rem;line-height:1.6;max-width:64ch;
+ margin:20px 0 0;color:#2c2c2a}
+h2{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--dim);
+ font-weight:400;margin:44px 0 0;border-bottom:1px solid var(--ink);padding-bottom:6px;
+ display:flex;justify-content:space-between}
+.tw{overflow-x:auto}
+table{width:100%;min-width:660px;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th{text-align:right;font-weight:400;font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+ color:var(--dim);padding:8px 8px 6px 0;border-bottom:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left}
+td{padding:4px 8px 4px 0;border-bottom:1px solid var(--rule);text-align:right;
+ white-space:nowrap}
+td:first-child{white-space:normal;font-family:"Bodoni Moda",Georgia,serif;font-size:14px}
+td em{font-style:italic;color:var(--dim)}
+tr:hover td{background:#f4f2ec}
+.swatch{display:inline-block;width:20px;height:9px;border:.5px solid rgba(0,0,0,.25);
+ vertical-align:middle}
+.mag{color:var(--red)}
+.foot{margin-top:44px;border-top:2px solid var(--ink);padding-top:12px;
+ display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}
+.foot h3{font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);
+ font-weight:400;margin:0 0 6px}
+.foot p{margin:0;line-height:1.7;color:#2c2c2a;font-size:11.5px}
+@media(max-width:640px){header{grid-template-columns:minmax(0,1fr)}.meta{text-align:left}}
+
+
+.sk-switch{position:fixed;right:12px;bottom:12px;z-index:99999;font:400 11px/1.35
+ ui-monospace,SFMono-Regular,Menlo,monospace;color:#111;max-width:min(300px,calc(100vw - 24px));
+ print-color-adjust:exact}
+.sk-switch summary{list-style:none;cursor:pointer;background:#111;color:#fff;padding:5px 9px;
+ border-radius:2px;letter-spacing:.08em;text-transform:uppercase;display:inline-block;
+ box-shadow:0 1px 10px rgba(0,0,0,.28);user-select:none}
+.sk-switch summary::-webkit-details-marker{display:none}
+.sk-switch[open] summary{border-radius:2px 2px 0 0}
+.sk-switch .sk-panel{background:#fbfaf8;border:1px solid #111;max-height:min(64vh,520px);
+ overflow:auto;padding:6px;box-shadow:0 6px 30px rgba(0,0,0,.3)}
+.sk-switch a{display:block;padding:3px 5px;color:#111;text-decoration:none;border-radius:2px;
+ white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sk-switch a:hover{background:#111;color:#fff}
+.sk-switch a.now{background:#e4dfd6;font-weight:700}
+.sk-switch b{color:#8a8378;font-weight:400;margin-right:6px}
+@media print{.sk-switch{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap"><header><div><div class="sub">Oeuvre ephemeris · epoch 2009.0 · 155 bodies</div><h1>Ephemeris</h1></div><div class="meta">Kyle Parker Cunningham<br>archive.kyleparkercunningham.com<br>computed 2026 Aug 17</div></header><p class="note">An ephemeris is a table of where things are and when they will return. It is dense, ugly, entirely numeric, and astronomers have preferred it to every prettier alternative for four hundred years — because you can find one line in it in a second. This is the oeuvre in that form: every recurring motif, its first and last appearance, its period, and the longest it has ever been out of the sky.</p><h2><span>Table I · recurring motifs</span><span>sorted by span</span></h2><div class="tw"><table><thead><tr><th>Motif</th><th>n</th><th>First</th><th>Last</th><th>Span</th><th>Max gap</th><th>Hue</th><th>Colour</th><th>Mag.</th></tr></thead><tbody><tr><td>tree</td><td>15</td><td>2009</td><td>2023</td><td>14 yr</td><td>4 yr</td><td>54°</td><td><span class="swatch" style="background:hsl(54 32% 55%)"></span></td><td><span class="mag">-3.3</span></td></tr><tr><td>deep time</td><td>14</td><td>2012</td><td>2024</td><td>12 yr</td><td>4 yr</td><td>77°</td><td><span class="swatch" style="background:hsl(77 23% 57%)"></span></td><td><span class="mag">-3.4</span></td></tr><tr><td>cloud</td><td>16</td><td>2014</td><td>2024</td><td>10 yr</td><td>3 yr</td><td>283°</td><td><span class="swatch" style="background:hsl(283 31% 55%)"></span></td><td><span class="mag">-2.9</span></td></tr><tr><td>still life</td><td>14</td><td>2014</td><td>2024</td><td>10 yr</td><td>4 yr</td><td>89°</td><td><span class="swatch" style="background:hsl(89 23% 58%)"></span></td><td><span class="mag">-2.5</span></td></tr><tr><td>concentric</td><td>11</td><td>2014</td><td>2024</td><td>10 yr</td><td>3 yr</td><td>34°</td><td><span class="swatch" style="background:hsl(34 44% 56%)"></span></td><td><span class="mag">-3.5</span></td></tr><tr><td>lightning</td><td>6</td><td>2014</td><td>2024</td><td>10 yr</td><td>7 yr</td><td>243°</td><td><span class="swatch" style="background:hsl(243 34% 52%)"></span></td><td><span class="mag">-4.1</span></td></tr><tr><td>juniper</td><td>5</td><td>2012</td><td>2022</td><td>10 yr</td><td>4 yr</td><td>67°</td><td><span class="swatch" style="background:hsl(67 18% 58%)"></span></td><td><span class="mag">-1.8</span></td></tr><tr><td>bee</td><td>4</td><td>2013</td><td>2023</td><td>10 yr</td><td>7 yr</td><td>41°</td><td><span class="swatch" style="background:hsl(41 18% 58%)"></span></td><td><span class="mag">-4.2</span></td></tr><tr><td>post-collapse</td><td>16</td><td>2014</td><td>2023</td><td>9 yr</td><td>2 yr</td><td>107°</td><td><span class="swatch" style="background:hsl(107 44% 55%)"></span></td><td><span class="mag">-3.6</span></td></tr><tr><td>circle</td><td>8</td><td>2015</td><td>2024</td><td>9 yr</td><td>5 yr</td><td>29°</td><td><span class="swatch" style="background:hsl(29 44% 55%)"></span></td><td><span class="mag">-3.7</span></td></tr><tr><td>space helmet</td><td>8</td><td>2014</td><td>2023</td><td>9 yr</td><td>2 yr</td><td>130°</td><td><span class="swatch" style="background:hsl(130 25% 57%)"></span></td><td><span class="mag">-3.1</span></td></tr><tr><td>whale</td><td>6</td><td>2014</td><td>2023</td><td>9 yr</td><td>4 yr</td><td>157°</td><td><span class="swatch" style="background:hsl(157 28% 55%)"></span></td><td><span class="mag">-2.3</span></td></tr><tr><td>elephant</td><td>5</td><td>2014</td><td>2023</td><td>9 yr</td><td>5 yr</td><td>43°</td><td><span class="swatch" style="background:hsl(43 44% 59%)"></span></td><td><span class="mag">-2.4</span></td></tr><tr><td>portrait</td><td>14</td><td>2015</td><td>2023</td><td>8 yr</td><td>3 yr</td><td>26°</td><td><span class="swatch" style="background:hsl(26 22% 50%)"></span></td><td><span class="mag">-3.5</span></td></tr><tr><td>triangle</td><td>10</td><td>2016</td><td>2024</td><td>8 yr</td><td>4 yr</td><td>40°</td><td><span class="swatch" style="background:hsl(40 46% 53%)"></span></td><td><span class="mag">-3.9</span></td></tr><tr><td>machine</td><td>10</td><td>2014</td><td>2022</td><td>8 yr</td><td>4 yr</td><td>65°</td><td><span class="swatch" style="background:hsl(65 40% 57%)"></span></td><td><span class="mag">-3.7</span></td></tr><tr><td>skull</td><td>7</td><td>2015</td><td>2023</td><td>8 yr</td><td>4 yr</td><td>65°</td><td><span class="swatch" style="background:hsl(65 20% 58%)"></span></td><td><span class="mag">-2.6</span></td></tr><tr><td>flight</td><td>7</td><td>2014</td><td>2022</td><td>8 yr</td><td>3 yr</td><td>57°</td><td><span class="swatch" style="background:hsl(57 33% 58%)"></span></td><td><span class="mag">-3.0</span></td></tr><tr><td>mask</td><td>6</td><td>2015</td><td>2023</td><td>8 yr</td><td>3 yr</td><td>37°</td><td><span class="swatch" style="background:hsl(37 27% 53%)"></span></td><td><span class="mag">-3.1</span></td></tr><tr><td>rocket</td><td>3</td><td>2014</td><td>2022</td><td>8 yr</td><td>6 yr</td><td>61°</td><td><span class="swatch" style="background:hsl(61 35% 55%)"></span></td><td><span class="mag">-3.4</span></td></tr><tr><td>bison</td><td>3</td><td>2014</td><td>2021</td><td>7 yr</td><td>7 yr</td><td>325°</td><td><span class="swatch" style="background:hsl(325 56% 52%)"></span></td><td><span class="mag">-3.8</span></td></tr><tr><td>owl</td><td>4</td><td>2016</td><td>2022</td><td>6 yr</td><td>5 yr</td><td>151°</td><td><span class="swatch" style="background:hsl(151 25% 58%)"></span></td><td><span class="mag">-2.9</span></td></tr><tr><td>hand</td><td>5</td><td>2018</td><td>2023</td><td>5 yr</td><td>2 yr</td><td>42°</td><td><span class="swatch" style="background:hsl(42 28% 53%)"></span></td><td><span class="mag">-3.3</span></td></tr><tr><td>glass jar</td><td>5</td><td>2021</td><td>2024</td><td>3 yr</td><td>2 yr</td><td>109°</td><td><span class="swatch" style="background:hsl(109 41% 56%)"></span></td><td><span class="mag">-3.7</span></td></tr></tbody></table></div><h2><span>Table II · returns</span><span>the catalogue's own relations</span></h2><div class="tw"><table><thead><tr><th>Object</th><th>Epoch</th><th>Return</th><th>Period</th><th>Medium at first</th><th>Medium at return</th></tr></thead><tbody><tr><td>Egg</td><td>2015</td><td>2023</td><td>8 yr</td><td><em>painting</em></td><td><em>painting</em></td></tr><tr><td>Day Hike</td><td>2016</td><td>2023</td><td>7 yr</td><td><em>printmaking</em></td><td><em>printmaking</em></td></tr><tr><td>Substantial</td><td>2015</td><td>2022</td><td>7 yr</td><td><em>painting</em></td><td><em>painting</em></td></tr><tr><td>Butterfly Conundrum</td><td>2015</td><td>2021</td><td>6 yr</td><td><em>painting</em></td><td><em>printmaking</em></td></tr><tr><td>Elephant Mask</td><td>2018</td><td>2023</td><td>5 yr</td><td><em>painting</em></td><td><em>printmaking</em></td></tr><tr><td>Air Lift</td><td>2016</td><td>2021</td><td>5 yr</td><td><em>printmaking</em></td><td><em>printmaking</em></td></tr><tr><td>Three Blue Corn</td><td>2018</td><td>2022</td><td>4 yr</td><td><em>painting</em></td><td><em>printmaking</em></td></tr><tr><td>Deep Sea</td><td>2018</td><td>2022</td><td>4 yr</td><td><em>printmaking</em></td><td><em>printmaking</em></td></tr><tr><td>espresso machine</td><td>2014</td><td>2018</td><td>4 yr</td><td><em>painting</em></td><td><em>printmaking</em></td></tr><tr><td>Coffee Carafe</td><td>2014</td><td>2018</td><td>4 yr</td><td><em>painting</em></td><td><em>printmaking</em></td></tr><tr><td>Stole the Rainbow</td><td>2018</td><td>2021</td><td>3 yr</td><td><em>printmaking</em></td><td><em>printmaking</em></td></tr><tr><td>Path Through the Autumn Leaves</td><td>2021</td><td>2023</td><td>2 yr</td><td><em>painting</em></td><td><em>painting</em></td></tr></tbody></table></div><div class="foot"><div><h3>Magnitude</h3><p>Borrowed honestly from astronomy and computed the same way: −2.5 log₁₀ of the motif's mean area in cm², so smaller numbers are bigger objects. It is a joke that happens to work.</p></div><div><h3>Max gap</h3><p>The longest the motif has been absent between two appearances. The largest values in the table are the interesting ones — those are the things he came back to after years of not.</p></div><div><h3>Why this and not a grid</h3><p>Because a grid of 155 thumbnails answers 'what does it look like' and nothing else. This answers 'when', 'how often', and 'is it due back' — and fits on one screen.</p></div></div></div>
+<details class="sk-switch"><summary>sketchbook</summary><div class="sk-panel"><a href="36-trailhead.html"><b>36</b>Trailhead</a><a href="37-field-guide.html"><b>37</b>Field Guide</a><a href="38-docent.html"><b>38</b>The Docent</a><a href="39-field-station.html"><b>39</b>Field Station</a><a href="40-the-long-walk.html"><b>40</b>The Long Walk</a><a href="41-chromatic.html"><b>41</b>Chromatic Index</a><a href="42-fugitive.html"><b>42</b>Fugitive</a><a href="43-true-scale.html"><b>43</b>True Scale</a><a href="44-deep-time.html"><b>44</b>Deep Time</a><a href="45-the-quilt.html"><b>45</b>The Quilt</a><a href="46-weather-log.html"><b>46</b>Weather Log</a><a href="47-fallow.html"><b>47</b>Fallow</a><a href="48-card-catalogue.html"><b>48</b>Card Catalogue</a><a href="49-contact-sheet.html"><b>49</b>Contact Sheet</a><a href="50-the-loom.html"><b>50</b>The Loom</a><a href="51-the-press.html"><b>51</b>The Press</a><a href="52-herbarium.html"><b>52</b>Herbarium</a><a href="53-the-fold.html"><b>53</b>The Fold</a><a href="54-wunderkammer.html"><b>54</b>Wunderkammer</a><a href="55-terminal.html"><b>55</b>Terminal</a><a href="56-almanac.html"><b>56</b>Almanac</a><a href="57-lunarem.html"><b>57</b>Lunarem</a><a href="58-the-day.html"><b>58</b>The Day</a><a href="59-ephemeris.html" class="now"><b>59</b>Ephemeris</a><a href="60-the-return.html"><b>60</b>The Return</a><a href="61-motif-atlas.html"><b>61</b>Motif Atlas</a><a href="62-genealogy.html"><b>62</b>Genealogy</a><a href="63-the-score.html"><b>63</b>The Score</a><a href="64-tide.html"><b>64</b>Tide</a><a href="65-the-window.html"><b>65</b>The Window</a><a href="66-correspondence.html"><b>66</b>Correspondence</a><a href="67-constellations.html"><b>67</b>Constellations</a><a href="68-the-sieve.html"><b>68</b>The Sieve</a><a href="69-the-guide.html"><b>69</b>The Guide</a></div></details>
+</body>
+</html>
