@@ -15,6 +15,7 @@ tags = [
 [extra]
 medium = "Oil on Gesso Panel"
 dimensions = "5.75 x 11.75 inches"
+author = "claude"
 +++
 5.75 by 11.75 inches. Oil on Gesso Panel. 2015. Reworked in 2020 with a substantial amount of added detail.
 
