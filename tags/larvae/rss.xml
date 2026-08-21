@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - larvae</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/larvae/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>pollen and larvae</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/pollen-and-larvae/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/pollen-and-larvae/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/pollen-and-larvae/">&lt;p&gt;The dance of pollination and transformation, circles of life in geometric harmony.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;pollen-and-larvae.81d753739743a620.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;pollen-and-larvae.799b4dfbbe186b5a.jpg 480w, &#x2F;processed_images&amp;#x2F;pollen-and-larvae.81d753739743a620.jpg 960w, &#x2F;processed_images&amp;#x2F;pollen-and-larvae.830f6b94d428e67b.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of sixteen small concentric circle forms arranged in a four-by-four grid on a soft aqua-blue background, each rendered in varied combinations of green, red, yellow, pink, and purple rings suggesting microscopic pollen or cellular organisms.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;pollen and larvae by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

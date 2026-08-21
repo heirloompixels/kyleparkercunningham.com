@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - flicker</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/flicker/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Flicker Rhino</title>
+          <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/flicker-rhino/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/flicker-rhino/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/flicker-rhino/">&lt;p&gt;Airdrops in the night. This Rhino has it figured out. Friends with the Flicker feathers are affixed to a spider silk string. And upon the wind waves floats this Rhino of my dreams.&lt;&#x2F;p&gt;
+&lt;p&gt;Acrylic on Found Object. 13 x 20 inches. 2018. Private Collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.1f9a3435593629a8.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.3dfa711072299f7b.jpg 480w, &#x2F;processed_images&amp;#x2F;143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.1f9a3435593629a8.jpg 960w, &#x2F;processed_images&amp;#x2F;143A2538-57FB-4C44-ACC7-FC1AF6BA1BB0_1_201_a.a3078e955b5d4bbe.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Acrylic painting on weathered white found wood of a gray rhino suspended by a yellow harness from a bundle of spotted black-and-white flicker feathers.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Flicker Rhino by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

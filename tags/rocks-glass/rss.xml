@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - rocks glass</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/rocks-glass/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 16 Jul 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>rocks glass</title>
+          <pubDate>Fri, 16 Jul 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2021/rocks-glass/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2021/rocks-glass/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2021/rocks-glass/">&lt;p&gt;This particular glass was my grandfathers.
+He drank from it nightly a 7-up and vodka.&lt;&#x2F;p&gt;
+&lt;p&gt;8 x 10 inches
+drypoint intaglio print
+hand painted with watercolor and gouache&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;C09F2137-8F93-48A2-BA52-044BFEA0FA49.3c36515b39fb44c5.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;C09F2137-8F93-48A2-BA52-044BFEA0FA49.eca15f78700c8afa.jpg 480w, &#x2F;processed_images&amp;#x2F;C09F2137-8F93-48A2-BA52-044BFEA0FA49.3c36515b39fb44c5.jpg 960w, &#x2F;processed_images&amp;#x2F;C09F2137-8F93-48A2-BA52-044BFEA0FA49.a69b44e086ec6787.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a faceted rocks glass centered on the page, hand-painted with turquoise and mint-green watercolor washes filling the background and pooling at the base.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;rocks glass by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

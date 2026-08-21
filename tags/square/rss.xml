@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - square</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/square/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>two squared</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/two-squared/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/two-squared/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/two-squared/">&lt;p&gt;An exploration of geometric form and balance, where two elements create a harmonious square composition.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;two-squared.4380f280d1823f64.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;two-squared.1c96bea1f6bf16a7.jpg 480w, &#x2F;processed_images&amp;#x2F;two-squared.4380f280d1823f64.jpg 960w, &#x2F;processed_images&amp;#x2F;two-squared.affe5a5a2a3054da.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of four concentric nested squares arranged in a two-by-two grid on a pale yellow background, each rendered in warm oranges, yellows, and reds with varying levels of detail from simple to tightly spiraling inward.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;two squared by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Path Through the Autumn Leaves</title>
+          <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/path-though-the-autumn-leaves/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/path-though-the-autumn-leaves/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/path-though-the-autumn-leaves/">&lt;p&gt;Concentric squares in the colors of fall — orange, rust, a thread of turquoise sky — narrowing toward a small bright center. The sibling of &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2023&#x2F;autumnal-twilight&#x2F;&quot;&gt;Autumnal Twilight&lt;&#x2F;a&gt;&#x27;s circles: the same walk through the same season, this time with corners. A path is just a square spiral you follow inward until the leaves close over the way you came.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Linen. 17 1&#x2F;2 by 17 1&#x2F;2 inches. 2021.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;path_though_the_autumn_leaves_2.9f96c59bb2a8d65b.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;path_though_the_autumn_leaves_2.416d95f424bb58d5.jpg 480w, &#x2F;processed_images&amp;#x2F;path_though_the_autumn_leaves_2.9f96c59bb2a8d65b.jpg 960w, &#x2F;processed_images&amp;#x2F;path_though_the_autumn_leaves_2.c9fa2cc60f1de4a4.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of concentric squares in warm tones of orange, red, yellow, and turquoise blue, radiating inward to a small central square, creating a hypnotic tunnel-like composition in a light wooden frame.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;path though the autumn leaves by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

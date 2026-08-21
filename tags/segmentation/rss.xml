@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - segmentation</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/segmentation/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 30 Jul 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>expansion drypoint</title>
+          <pubDate>Fri, 30 Jul 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2021/expansion-drypoint/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2021/expansion-drypoint/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2021/expansion-drypoint/">&lt;p&gt;The mind shifts color pretending the future is a peeled orange imitating a banana.&lt;&#x2F;p&gt;
+&lt;p&gt;8 x 10 inches paper
+Rives BFK&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3895.85d21d99f5e771f2.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3895.da5467d1ffbaf285.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3895.85d21d99f5e771f2.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3895.67e01423de52885a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a surreal face in profile with the head sliced into accordion-like vertical segments that fan outward, rendered in black ink on Rives BFK paper with visible plate tone.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;expansion drypoint by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;expansion.0f1b370b7cef9f4a.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;expansion.48551dd8e602359d.jpg 480w, &#x2F;processed_images&amp;#x2F;expansion.0f1b370b7cef9f4a.jpg 960w, &#x2F;processed_images&amp;#x2F;expansion.85ac49ca7462fa8c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Wider view of the Expansion drypoint print showing the full paper margins around the segmented face composition, with handwritten edition number, title, and signature below the plate mark.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

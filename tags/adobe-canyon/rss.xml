@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - adobe canyon</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/adobe-canyon/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 08 Apr 2016 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Alligator Juniper (Adobe Canyon)</title>
+          <pubDate>Fri, 08 Apr 2016 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2016/alligator-juniper-2/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2016/alligator-juniper-2/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2016/alligator-juniper-2/">&lt;p&gt;A whole alligator juniper, drawn limb by limb, the checkered bark that names the species rendered scratch by scratch. The drypoint scribe turns out to be the right tool for a tree that grows one century at a time.&lt;&#x2F;p&gt;
+&lt;p&gt;8 x 10 inches. Intaglio Drypoint Print. Spring 2016. private collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;adobeCanyonAlligatorJuniper.6c5fe259769868b6.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;adobeCanyonAlligatorJuniper.17e116bacdd8412a.jpg 480w, &#x2F;processed_images&amp;#x2F;adobeCanyonAlligatorJuniper.6c5fe259769868b6.jpg 960w, &#x2F;processed_images&amp;#x2F;adobeCanyonAlligatorJuniper.58c7ed23dde31f00.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a full alligator juniper tree with detailed checkered bark texture and spreading branches filled with fine leaves, rendered in black ink on cream paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Alligator Juniper (Adobe Canyon) by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

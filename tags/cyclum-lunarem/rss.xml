@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - cyclum lunarem</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/cyclum-lunarem/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 25 Nov 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Lunarem</title>
+          <pubDate>Sun, 25 Nov 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2018/lunarem/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2018/lunarem/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2018/lunarem/">&lt;p&gt;Twenty-eight moons in their phases, row by row, drawn from the years I spent painting the Earth&#x27;s oldest timepiece (Cyclum Lunarem, 2014–2018). The moon repeats itself and is never the same twice — which is also a fair description of pulling prints from one plate.&lt;&#x2F;p&gt;
+&lt;p&gt;8 x 10 inches. Drypoint Intaglio Print. Handcolored with watercolor. 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018098.38764e5203a9c92c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018098.4c5332900d07019d.jpg 480w, &#x2F;processed_images&amp;#x2F;printsNovember2018098.38764e5203a9c92c.jpg 960w, &#x2F;processed_images&amp;#x2F;printsNovember2018098.665b5e21eeeefc1f.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print depicting rows of moon phases, from full moons with crosshatched craters at the top through waning crescents to thin slivers and back, arranged in a grid on cream paper in black ink.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Lunarem by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

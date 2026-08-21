@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - violet</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/violet/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 22 Oct 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Elephant Mask</title>
+          <pubDate>Mon, 22 Oct 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/elephant-mask/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/elephant-mask/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/elephant-mask/">&lt;p&gt;oil on linen. 11x14 inches. Fall 2018.&lt;&#x2F;p&gt;
+&lt;p&gt;We all wear masks most of the time.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;elephan_mask-original.805be0788743d8ed.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;elephan_mask-original.d58631d08677cfa1.jpg 480w, &#x2F;processed_images&amp;#x2F;elephan_mask-original.805be0788743d8ed.jpg 960w, &#x2F;processed_images&amp;#x2F;elephan_mask-original.3863f72e9c305432.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a stylized elephant rendered in bold yellow and ochre tones with a curved white tusk, set against a muted blue-violet background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Elephant Mask by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Space Worm</title>
+          <pubDate>Wed, 18 Jul 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/other/2018/space-worm/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/other/2018/space-worm/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/other/2018/space-worm/">&lt;p&gt;intaglio drypoint prints. printed area approx 6 x 9 inches. handtorn paper approx 8 x 10 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1093-1.a53345ad71dcdea0.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1093-1.7b3265522c94348c.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1093-1.a53345ad71dcdea0.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1093-1.37545b778746c36b.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Space worm&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Space Worm by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1093.2fa97c54d3548267.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1093.330be8c26c841678.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1093.2fa97c54d3548267.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1093.56e2f31184933e8f.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Space worm&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

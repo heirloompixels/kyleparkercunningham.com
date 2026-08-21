@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - white hair</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/white-hair/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 11 Nov 2020 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Nana</title>
+          <pubDate>Wed, 11 Nov 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2020/nana/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2020/nana/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2020/nana/">&lt;p&gt;Nana at the end of a century of weather, white hair lit like a cloud, one hand drawn up to her shoulder. The face is a map and I painted every road. Portraits of the very old are the closest my work comes to geology — time laid down in visible strata, and still moving.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on linen, 14x36 inches. Private collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;nana.55739c41f686a4fe.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;nana.7b1f9475bf87ec64.jpg 480w, &#x2F;processed_images&amp;#x2F;nana.55739c41f686a4fe.jpg 960w, &#x2F;processed_images&amp;#x2F;nana.5c845283059a5d7d.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on linen portrait of an elderly woman with white hair and deeply lined face, wearing a black top, one hand raised near her chest, against a warm muted brown background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Nana by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

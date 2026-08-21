@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - holding hands</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/holding-hands/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 24 Oct 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Robot Family</title>
+          <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/robot-family/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/robot-family/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/robot-family/">&lt;p&gt;Two tall machines and a small one between them, holding hands, rolling on drawn wheels through a field of white and yellow. A family portrait from the far side of the future — whatever we become, apparently we still take the little one for a walk. One of the tender ones.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil, Oil Stick, Acrylic and Latex on Canvas. 33 1&#x2F;2 by 31 1&#x2F;2 inches. Fall 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;robot_family.07ce9088eb2539a9.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;robot_family.74f8d73e721bec69.jpg 480w, &#x2F;processed_images&amp;#x2F;robot_family.07ce9088eb2539a9.jpg 960w, &#x2F;processed_images&amp;#x2F;robot_family.6b20056338f7a639.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of two boxy adult robots holding hands with a small child robot between them, rendered in white, gray, and black on a beige canvas with yellow accents.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Robot Family by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

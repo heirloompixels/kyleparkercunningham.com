@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - radial</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/radial/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>felt and lived</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/felt-and-lived/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/felt-and-lived/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/felt-and-lived/">&lt;p&gt;The convergence of experience and emotion, where opposing forces meet in the center to create something new and unified.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;felt-and-lived.3aa81a16efe17a88.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;felt-and-lived.2623e9b13c385b67.jpg 480w, &#x2F;processed_images&amp;#x2F;felt-and-lived.3aa81a16efe17a88.jpg 960w, &#x2F;processed_images&amp;#x2F;felt-and-lived.2015079ef0c662be.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of radiating lines in warm reds, oranges, yellows, and touches of teal converging at a central point to form an hourglass or bowtie shape against a soft gray background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;felt and lived by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>triangular circles</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/triangular-circles/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/triangular-circles/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/triangular-circles/">&lt;p&gt;Where geometry and emotion meet - perfect circle formed from sharp triangular fragments, suggesting wholeness through division.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;triangular-circles.34f5f5583cfb6999.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;triangular-circles.a3ec4b11cd5fabfd.jpg 480w, &#x2F;processed_images&amp;#x2F;triangular-circles.34f5f5583cfb6999.jpg 960w, &#x2F;processed_images&amp;#x2F;triangular-circles.b653f26d9cdda16e.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a circle composed of triangular wedges radiating from a central point in warm tones of red, orange, pink, peach, and coral against a pale blue-white background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;triangular circles by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

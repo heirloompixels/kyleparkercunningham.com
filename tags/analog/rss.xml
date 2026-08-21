@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - analog</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/analog/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Tubed Pachyderm</title>
+          <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2023/tubed-pachydeerm/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2023/tubed-pachydeerm/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2023/tubed-pachydeerm/">&lt;p&gt;An elephant refitted as a tube amplifier — vacuum tubes standing on its back, speaker cones set into its flank, a field of red gouache behind. The herd&#x27;s volume restored by analog means. (I have opinions about analog; see the &lt;a href=&quot;&#x2F;oeuvre&#x2F;printmaking&#x2F;2022&#x2F;olympus&#x2F;&quot;&gt;Olympus&lt;&#x2F;a&gt; typewriter.)&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;tubed-pachyderm-1.ea7d9719ee981d22.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;tubed-pachyderm-1.b6ec4843fb274aa2.jpg 480w, &#x2F;processed_images&amp;#x2F;tubed-pachyderm-1.ea7d9719ee981d22.jpg 960w, &#x2F;processed_images&amp;#x2F;tubed-pachyderm-1.2f129b2a1f3e561e.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Intaglio print of a mechanical elephant in profile with vacuum tubes protruding from its back and concentric circular speaker-like elements on its side, set against a vivid hand-painted red watercolor background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Tubed Pachyderm by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Olympus</title>
+          <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2022/olympus/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2022/olympus/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2022/olympus/">&lt;p&gt;This is one of my favorite typewriters of all time. Unfortunately it has a sticky &quot;n&quot; key, it works, but you get some type errors. That, though, is the cost of being analog!&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3937.97cb092a2709bdbb.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3937.87bc89deb7c724e2.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3937.97cb092a2709bdbb.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3937.219b8267a04f1869.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Intaglio drypoint print of a vintage Olympus typewriter viewed from a three-quarter angle, showing rows of round keys and the platen, with the body outlined in hand-colored orange accents against a scratched gray background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Olympus by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3940.3ca03e3f66d1e7ea.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3940.f3b96ed3a3de3658.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3940.3ca03e3f66d1e7ea.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3940.89dfd99424c746bd.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Close-up detail of the Olympus typewriter drypoint print, focusing on the round keys and platen mechanism with visible orange hand-coloring along the typewriter&amp;#x27;s frame edge.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

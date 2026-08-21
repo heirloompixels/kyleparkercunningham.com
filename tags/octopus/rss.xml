@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - octopus</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/octopus/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 24 Oct 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>transplanter</title>
+          <pubDate>Sun, 24 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/transplanter/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/transplanter/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/transplanter/">&lt;p&gt;oil on linen
+16 x 20 inches
+Spring 2021&lt;&#x2F;p&gt;
+&lt;p&gt;Octopus tenderly tugging a coracle boat which has been planted with a magnificent Alligator Juniper tree. The tree is stressed but alive and I&#x27;m assured will make it just fine in it&#x27;s new home some where out there in the mysterious middle of the ocean paradise these exquisite specimens are being gathered.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;tugboat_octopus_alligator_juniper.cfc1cae0d407eb90.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;tugboat_octopus_alligator_juniper.c3a3ebae615ef5c3.jpg 480w, &#x2F;processed_images&amp;#x2F;tugboat_octopus_alligator_juniper.cfc1cae0d407eb90.jpg 960w, &#x2F;processed_images&amp;#x2F;tugboat_octopus_alligator_juniper.56e054426b6af1e5.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on linen painting of a silver-gray octopus swimming in deep blue water, pulling a small coracle boat carrying a gnarled juniper tree with sparse green foliage, against a soft pink and peach sky.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;transplanter by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Octobat</title>
+          <pubDate>Fri, 18 May 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/octobat/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/octobat/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/octobat/">&lt;p&gt;Wild futures.&lt;&#x2F;p&gt;
+&lt;p&gt;An Octopus whom has created the most magical hot air balloon you could possible imagine. (I&#x27;m definitely pretty sure she sewed it by hand.)&lt;&#x2F;p&gt;
+&lt;p&gt;That Octopus, she is an acrobat so she is an octobat. An aquatic danced realized in the sky.&lt;&#x2F;p&gt;
+&lt;p&gt;Mesmerizingly absurd.&lt;&#x2F;p&gt;
+&lt;p&gt;Acrylic, Paint Marker, Latex Paint on found wood. 3.5 by 19.5 inches. 2019.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.cfa696d4848911c6.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.a386237b8e806201.jpg 480w, &#x2F;processed_images&amp;#x2F;7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.cfa696d4848911c6.jpg 960w, &#x2F;processed_images&amp;#x2F;7652AAB6-8CC3-4E09-8537-DF19D6552774_1_105_c.d3c9063d5cee9283.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Mixed media painting on a tall narrow piece of found wood showing a white octopus dangling from a hand-sewn hot air balloon on a turquoise background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Octobat by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

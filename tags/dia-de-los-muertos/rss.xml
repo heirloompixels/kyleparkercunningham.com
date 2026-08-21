@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - dia de los muertos</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/dia-de-los-muertos/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 12 Apr 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Calavera Del Caballo</title>
+          <pubDate>Wed, 12 Apr 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2023/calavera-del-caballo/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2023/calavera-del-caballo/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2023/calavera-del-caballo/">&lt;p&gt;Jeannie holds a horse skull up to her face like a mask, like a question. The desert gives up its bones eventually, and they are beautiful — white architecture that once ran. Half a living face and half a dead animal&#x27;s, sharing one gaze.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Panel, 16 x 20 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;Calaver-Del-Caballo-2048.8f9a59ced7b583b5.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;Calaver-Del-Caballo-2048.931e5b0b01d20ff1.jpg 480w, &#x2F;processed_images&amp;#x2F;Calaver-Del-Caballo-2048.8f9a59ced7b583b5.jpg 960w, &#x2F;processed_images&amp;#x2F;Calaver-Del-Caballo-2048.cacd6381d1ebeca4.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a woman in a pink shawl holding a white horse skull up to her face, obscuring half of it, against a muted gray-green background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Calavera Del Caballo by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

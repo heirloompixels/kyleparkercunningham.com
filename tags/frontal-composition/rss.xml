@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - frontal composition</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/frontal-composition/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 13 Apr 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>owl</title>
+          <pubDate>Tue, 13 Apr 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/other/2021/owl/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/other/2021/owl/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/other/2021/owl/">&lt;p&gt;oil on baltic birch panel
+12x17.5 inches
+painted 2012, reworked spring 2021&lt;&#x2F;p&gt;
+&lt;p&gt;This painting was from a few years ago. I reworked this painting in April 2021 to how it is here.&lt;&#x2F;p&gt;
+&lt;p&gt;I have mixed feelings about working on old paintings. On the one hand I love the old paintings, they have a piece of history of my life in them, they were a time and a place and they represent what I was capable of doing and what I was thinking at that moment. On the other hand I&#x27;m an infinitely better painter now than I ever have been. This owl, now, has more of my history representing it&#x27;s form, owls are magical and deserve to look as good as possible.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;owl.720f79accc775665.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;owl.7bb69cbfae86bb85.jpg 480w, &#x2F;processed_images&amp;#x2F;owl.720f79accc775665.jpg 960w, &#x2F;processed_images&amp;#x2F;owl.9ba34e7a5f241327.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Owl&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;owl by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - terracotta</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/terracotta/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 04 Dec 2015 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Clouds</title>
+          <pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2015/clouds/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2015/clouds/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2015/clouds/">&lt;p&gt;A terracotta profile face, eyes closed, gathering a crowd of small white spheres — clouds in the shape thoughts take when you finally lie down in the grass and look up. They cluster at the lips and crown like a hatch of weather. Where clouds come from, more or less.&lt;&#x2F;p&gt;
+&lt;p&gt;8 by 13 inches. Oil on Linen. 2015. Private Collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;clouds-nov16-copy-2.87fe6c0dbed0e417.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;clouds-nov16-copy-2.ba0d017377ee4cab.jpg 480w, &#x2F;processed_images&amp;#x2F;clouds-nov16-copy-2.87fe6c0dbed0e417.jpg 960w, &#x2F;processed_images&amp;#x2F;clouds-nov16-copy-2.fed305f05e726e33.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of white spherical forms clustered against an orange-brown vertical shape, split by a dark gap from a dense mass of white spheres on the right, all set against a pale blue-gray background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Clouds by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Atmospheric Whales</title>
+          <pubDate>Thu, 04 Dec 2014 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2014/atmospheric-whales/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2014/atmospheric-whales/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2014/atmospheric-whales/">&lt;p&gt;Whales coming down by parachute through a gold-leaf sky, an eye-sun watching from above. They appear again and again in my work, these atmospheric whales — the biggest body the planet ever made, handed the gentlest possible landing. Five by seven inches of the largest thing I know.&lt;&#x2F;p&gt;
+&lt;p&gt;5 by 7 inches. Oil on Handloom Linen. 24kt gold Leaf. 2014.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;atmospheric_whales-copy.0b6b2034ca095f1e.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;atmospheric_whales-copy.88b5b477a79438b9.jpg 480w, &#x2F;processed_images&amp;#x2F;atmospheric_whales-copy.0b6b2034ca095f1e.jpg 960w, &#x2F;processed_images&amp;#x2F;atmospheric_whales-copy.c3dc58697a5b8006.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting with gold leaf on linen depicting three stylized whale-like creatures with parachute canopies floating against a textured gold and terracotta background, with a crescent eye motif in the upper right.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Atmospheric Whales by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

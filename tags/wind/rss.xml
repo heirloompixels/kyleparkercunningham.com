@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - wind</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/wind/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 21 Nov 2020 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Alligator Juniper</title>
+          <pubDate>Sat, 21 Nov 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2020/alligator-juniper-nogal/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2020/alligator-juniper-nogal/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2020/alligator-juniper-nogal/">&lt;p&gt;The Nogal Canyon juniper, wind-bent and holding on. The third alligator juniper in the series — they are the great elders of this country, and I keep visiting them with a scribe point the way you visit grandparents with a camera. See also &lt;a href=&quot;&#x2F;oeuvre&#x2F;printmaking&#x2F;2022&#x2F;nogal-canyon&#x2F;&quot;&gt;Nogal Canyon&lt;&#x2F;a&gt; (2022).&lt;&#x2F;p&gt;
+&lt;p&gt;Intaglio drypoint prints. Printed area approx 6 x 9 inches, handtorn paper approx 8 x 10 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;alligator_juniper-3.efafe73f42444b56.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;alligator_juniper-3.0d7ec2e18a5a4242.jpg 480w, &#x2F;processed_images&amp;#x2F;alligator_juniper-3.efafe73f42444b56.jpg 960w, &#x2F;processed_images&amp;#x2F;alligator_juniper-3.6498b1fbb3887203.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a gnarled alligator juniper tree with sprawling branches and dense foliage, rendered in black ink on handtorn cream paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Alligator Juniper by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;alligator-juniper-5-1.f4d6f4987b8b84b5.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;alligator-juniper-5-1.bdf8c423aeef4aad.jpg 480w, &#x2F;processed_images&amp;#x2F;alligator-juniper-5-1.f4d6f4987b8b84b5.jpg 960w, &#x2F;processed_images&amp;#x2F;alligator-juniper-5-1.24b5a501441ca77f.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Close-up detail of the Alligator Juniper drypoint print showing the expressive scratched linework of the twisted trunk and tangled branches against a softly toned plate background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;alligator-juniper-5.672e6833252b0971.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;alligator-juniper-5.994e3c27b509db81.jpg 480w, &#x2F;processed_images&amp;#x2F;alligator-juniper-5.672e6833252b0971.jpg 960w, &#x2F;processed_images&amp;#x2F;alligator-juniper-5.4ab9581dc0a5b5a7.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Full view of the Alligator Juniper drypoint print on white paper, featuring the wide-canopied tree with textured bark rooted among rocks, with visible plate tone and artist signature.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

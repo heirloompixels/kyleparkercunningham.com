@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - vines</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/vines/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 25 Sep 2009 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Muxy</title>
+          <pubDate>Fri, 25 Sep 2009 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/">&lt;p&gt;Japanese Ink &amp;amp; Oil on Linen Canvas. 34 x 55 inches. 2009. Private Collection.&lt;&#x2F;p&gt;
+&lt;p&gt;Painted while working at Showdown Ski Area in the heart of the Little Belts up in cold wonderful Montana. This is the place of my youth and it was a magical summer Jeannie and I spent up there.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;muxy.8b912f2b6a914beb.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;muxy.61ba19d43185dbfd.jpg 480w, &#x2F;processed_images&amp;#x2F;muxy.8b912f2b6a914beb.jpg 960w, &#x2F;processed_images&amp;#x2F;muxy.4f48077c5a7d40e0.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil and Japanese ink painting on raw linen featuring surreal organic forms — colorful bulbous shapes in greens, blues, reds, and yellows cascade from the upper left, connected by twisting vines, tendrils, and a red flower against an exposed linen background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Muxy by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>
