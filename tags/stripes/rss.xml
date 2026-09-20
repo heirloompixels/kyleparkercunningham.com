@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - stripes</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/stripes/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 24 Apr 2019 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Monsoon Bird</title>
+          <pubDate>Wed, 24 Apr 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2019/monsoon-bird/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2019/monsoon-bird/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2019/monsoon-bird/">&lt;p&gt;A bird built from the oldest vocabulary: striped body, wings of blue rain-leaves, a head of orange grid-marks around one concentric eye, arrows flying off the corner of the sky. It walks the red ground on stilt legs, the way the big birds do here when the water finally comes. A petroglyph that got up and went looking for the monsoon.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on canvas, 30 by 30 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;monsoon_bird.2e0127a716a2a9ae.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;monsoon_bird.271885d0858e45e3.jpg 480w, &#x2F;processed_images&amp;#x2F;monsoon_bird.2e0127a716a2a9ae.jpg 960w, &#x2F;processed_images&amp;#x2F;monsoon_bird.5b01e6dece9337a7.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a stylized bird with a geometric patterned head in orange and cream, blue leaf-shaped feathers for wings and tail, standing on long thin legs against a golden-tan background with a red-orange ground line.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Monsoon Bird by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Binoculars</title>
+          <pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/">&lt;p&gt;A creature that is mostly neck — a long striped column rising out of ordinary baggy trousers — with binoculars for a head. All watcher, no talker. I have spent enough of my life glassing ridgelines that this may be a self portrait of one particular muscle.&lt;&#x2F;p&gt;
+&lt;p&gt;20 by 30 inches. Oil on Panel. Walnut Frame. 2015.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;binoculars.d9507889e347224b.png&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;binoculars.03a23599090013a3.png 480w, &#x2F;processed_images&amp;#x2F;binoculars.d9507889e347224b.png 960w, &#x2F;processed_images&amp;#x2F;binoculars.478c875ffcf036c0.png 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting on panel of a surreal standing figure with a long ribbed neck topped by binocular-like eyes, wearing white pants, centered against a textured beige and yellow background with an orange ground plane.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Binoculars by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

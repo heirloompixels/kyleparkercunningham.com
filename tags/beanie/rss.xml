@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - beanie</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/beanie/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 17 Apr 2019 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Self Portrait</title>
+          <pubDate>Wed, 17 Apr 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2019/self-portrait/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2019/self-portrait/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2019/self-portrait/">&lt;p&gt;Wool cap, glasses, a gray gaiter against the cold — the artist at a precise moment in time, which is what I&#x27;ve said a self portrait is for. Mountain clothes, winter light, a face caught deciding something. If the rest of the work is speculative autobiography, this is the autobiography holding still for once.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on acm panel, 16 by 20 inches. Private collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;self_portrait.bf003ce6f14cda72.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;self_portrait.183892c62a5d412e.jpg 480w, &#x2F;processed_images&amp;#x2F;self_portrait.bf003ce6f14cda72.jpg 960w, &#x2F;processed_images&amp;#x2F;self_portrait.0f26bb206cdfe37a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Realistic oil painting of a man wearing round glasses, a mustard-yellow knit beanie, and a green-and-blue plaid flannel shirt with a gray scarf, against a dark moody background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Self Portrait by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

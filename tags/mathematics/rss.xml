@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - mathematics</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/mathematics/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>does math control nature?</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/">&lt;p&gt;An exploration of the fibonacci sequence in nature, questioning whether mathematical patterns are the foundation of natural forms or merely our way of understanding them.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;does-math-control-nature-.4aaa6fe3b072a471.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;does-math-control-nature-.f7151edd0abba81f.jpg 480w, &#x2F;processed_images&amp;#x2F;does-math-control-nature-.4aaa6fe3b072a471.jpg 960w, &#x2F;processed_images&amp;#x2F;does-math-control-nature-.20ceb2a752e3aadb.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a spiral form composed of segmented concentric arcs in coral, salmon, and rose tones with white gaps between the segments, centered on a pale cream background, resembling a Fibonacci-like geometric pattern.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;does math control nature? by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>the algebra of water vapor</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/the-algebra-of-water-vapor/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/the-algebra-of-water-vapor/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/the-algebra-of-water-vapor/">&lt;p&gt;Clouds as mathematical equations, water vapor solving for x in the vast blue sky, where nature meets abstract calculation.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;the-algebra-of-water-vapor.ed43b2053e721073.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;the-algebra-of-water-vapor.ba5173322cd9de77.jpg 480w, &#x2F;processed_images&amp;#x2F;the-algebra-of-water-vapor.ed43b2053e721073.jpg 960w, &#x2F;processed_images&amp;#x2F;the-algebra-of-water-vapor.49cc6a59d726d7e0.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of white impasto clouds drifting diagonally across a fragmented, geometric sky composed of angular blue and teal triangular facets in varying shades from light cerulean to deep navy.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;the algebra of water vapor by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - scale</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/scale/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 04 Mar 2015 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Substantial</title>
+          <pubDate>Wed, 04 Mar 2015 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2015/substantial/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2015/substantial/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2015/substantial/">&lt;p&gt;A wall of gray faces, all enormous eyes, watching a small figure who has turned to leave the frame. Being seen is heavy — substantial — and so is deciding to walk out from under it. Years later &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2022&#x2F;visible&#x2F;&quot;&gt;Visible&lt;&#x2F;a&gt; picked the same nerve from the other side.&lt;&#x2F;p&gt;
+&lt;p&gt;13 by 21 inches. Oil on Linen. 2015.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;substantial.8fa46c79fd3665de.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;substantial.01e93437408f6638.jpg 480w, &#x2F;processed_images&amp;#x2F;substantial.8fa46c79fd3665de.jpg 960w, &#x2F;processed_images&amp;#x2F;substantial.2b7d25ab6bd2867b.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of multiple overlapping gray-toned faces with large expressive eyes crowding the composition, alongside a small standing figure in profile on the right, rendered in monochromatic grays and whites.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Substantial by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

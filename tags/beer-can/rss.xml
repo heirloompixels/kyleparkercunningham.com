@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - beer can</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/beer-can/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sun, 18 Feb 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Tecate</title>
+          <pubDate>Sun, 18 Feb 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2018/tecate/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2018/tecate/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2018/tecate/">&lt;p&gt;A Tecate can, slightly crushed, hand colored red. The desert has its monuments and its sacraments; this one is both. Still life raises the authority of simple, mundane objects — sometimes the object is a cold beer at the end of a hot day.&lt;&#x2F;p&gt;
+&lt;p&gt;intaglio drypoint prints. printed area approx 6 x 9 inches. handtorn paper approx 8 x 10 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1090-1.e680b36c50dda8f1.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1090-1.e8e858bd1d3c60b0.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1090-1.e680b36c50dda8f1.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1090-1.a68acd6555c4ce58.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Close-up view of a drypoint intaglio print of a Tecate beer can, hand-colored with red-orange watercolor on the top rim and bottom half, with a bold black eagle emblem in the center, on handtorn paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Tecate by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1090.961e5106425b9c26.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1090.813473a93ce3f299.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1090.961e5106425b9c26.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1090.1c4576d480ab9a7a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Full view of the Tecate beer can drypoint print showing the complete composition with red-orange watercolor accents, black crosshatched eagle design, and visible plate marks, with edition number and artist signature in pencil below.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

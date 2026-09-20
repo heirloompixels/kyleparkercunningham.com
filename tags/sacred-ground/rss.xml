@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - sacred ground</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/sacred-ground/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 24 Mar 2020 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Migratory Scavengers</title>
+          <pubDate>Tue, 24 Mar 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2020/migratory-scavengers/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2020/migratory-scavengers/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2020/migratory-scavengers/">&lt;p&gt;Space program detritus and grain binge daydreams.&lt;&#x2F;p&gt;
+&lt;p&gt;Sandhill cranes on gold leaf — the old religious ground reserved for saints, here given to the scavengers who will inherit the launch sites. Companion piece to &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2020&#x2F;bonsai-giant-sequoia&#x2F;&quot;&gt;Bonsai Giant Sequoia&lt;&#x2F;a&gt;, painted the same year.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil + 24kt gold leaf on ACM panel, 8 x 18 1&#x2F;2 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;migratory_scavengers.779c045175e5fc08.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;migratory_scavengers.639153d848d47243.jpg 480w, &#x2F;processed_images&amp;#x2F;migratory_scavengers.779c045175e5fc08.jpg 960w, &#x2F;processed_images&amp;#x2F;migratory_scavengers.c310af5651777b56.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Panoramic oil on linen painting of sandhill cranes scavenging parts from a domed spacecraft on sandy ground, set against a deep blue sky with white clouds.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Migratory Scavengers by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - carrot</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/carrot/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Airdrop</title>
+          <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/airdrop/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/airdrop/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/airdrop/">&lt;p&gt;Acrylic on Found Object. 12 by 26. 2018.&lt;&#x2F;p&gt;
+&lt;p&gt;Future Cultures. Assimliated Gardens. Landscapes unquestionable.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;9F48DA08-9817-4581-8427-B43938E88882_1_201_a-1.65b7aaf32fe11267.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;9F48DA08-9817-4581-8427-B43938E88882_1_201_a-1.6b7f457eb0ae75c8.jpg 480w, &#x2F;processed_images&amp;#x2F;9F48DA08-9817-4581-8427-B43938E88882_1_201_a-1.65b7aaf32fe11267.jpg 960w, &#x2F;processed_images&amp;#x2F;9F48DA08-9817-4581-8427-B43938E88882_1_201_a-1.b632252945bd62e7.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Acrylic painting on found wood of a white airship dropping orange carrots onto a green garden below, with exposed wood grain visible at top and bottom.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Airdrop by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

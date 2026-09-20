@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - peach</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/peach/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>low angle sun rays</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/low-angle-sun-rays/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/low-angle-sun-rays/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/low-angle-sun-rays/">&lt;p&gt;Wonder, about water vapor, dust and light angles. Effortlessly floating down the spine of the continental divide transporting moisture and spores. Aimlessly re-sculpting top soil creating art works while simultaneously eroding them like Buddhist monks and sand mandala&#x27;s. Endlessly enigmatic, effortlessly aloft.&lt;&#x2F;p&gt;
+&lt;p&gt;Sunset approaches and everyone has eyes glued to the horizon.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.c4f03942f10e4f92.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.7a6e2224089901e2.jpg 480w, &#x2F;processed_images&amp;#x2F;rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.c4f03942f10e4f92.jpg 960w, &#x2F;processed_images&amp;#x2F;rays-from-the-sun-captured-by-water-vapor-and-dust-at-a-low-angle.0efc5679e6443bfc.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of massive billowing cumulus clouds rendered in soft pinks, peach, and white with warm golden highlights, filling the canvas against a deep navy blue sky.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;low angle sun rays by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - wreath</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/wreath/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 18 Feb 2017 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Riot Ghost</title>
+          <pubDate>Sat, 18 Feb 2017 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2017/riot-ghost/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2017/riot-ghost/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2017/riot-ghost/">&lt;p&gt;A ghost in a gas mask and wreath, standing in a scratched-black night. Even the dead come prepared now. From the Ephemera series&#x27; darker shelf — the glitches in daily reality include the evening news.&lt;&#x2F;p&gt;
+&lt;p&gt;intaglio drypoint prints. printed area approx 6 x 9 inches. handtorn paper approx 8 x 10 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1099-1.c22f6f0b50759b65.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1099-1.0fffafa0d520bc2c.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1099-1.c22f6f0b50759b65.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1099-1.01c2cf22be9b5668.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Close-up view of a drypoint intaglio print depicting a tall ghost-like figure with a gas mask, featuring small circle eyes and a crosshatched respirator, set against a densely hatched dark background on handtorn paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Riot Ghost by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1099.17640886af6e6f37.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1099.51e0ed2b5d81fd34.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1099.17640886af6e6f37.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1099.612029befb18219e.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Full view of the Riot Ghost drypoint print showing the ghost figure with gas mask emerging from jagged grass-like forms at the bottom, surrounded by heavily crosshatched black background, with artist signature and edition notes in pencil below the plate mark.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

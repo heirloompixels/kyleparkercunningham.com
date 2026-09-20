@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - preservation</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/preservation/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>bottled lightning</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/bottled-lightning/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/bottled-lightning/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/bottled-lightning/">&lt;p&gt;On occasions, the electrons get out of balance. Randomly you just happen to be in that place at the wrong moment, right time and the atmospheres&#x27; electricity chooses to flow through your body. It&#x27;s rare to be touched by the sky&#x27;s electric finger, united between the heavens and the earth in a split moment of wonder. Slowly, the shock transforms into awe and you bottle up that experience and keep it on the shelf as a pretty object, and remember to remember the atmosphere often.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;bottled-lightning.6bc751ec8d5ebe0c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;bottled-lightning.98f0fbbb1b907dbc.jpg 480w, &#x2F;processed_images&amp;#x2F;bottled-lightning.6bc751ec8d5ebe0c.jpg 960w, &#x2F;processed_images&amp;#x2F;bottled-lightning.6383361fbea4c6ff.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of three glass mason jars with dark lids sitting on a dark surface against a muted teal sky, each containing a white billowing cloud, with a jagged yellow lightning bolt striking down inside the left jar.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;bottled lightning by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>preservation cactus</title>
+          <pubDate>Sat, 09 Oct 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/preservation-cactus/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/preservation-cactus/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/preservation-cactus/">&lt;p&gt;A small cactus potted in a preservation jar, lid resting on top, not quite sealed. Painted thick, the whites like frosting. We put up the things we cannot bear to lose — peaches, memories, whole deserts if we could. Started in 2018 and finished three years later, which seems right for a painting about keeping things alive in glass.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Linen. 11 by 14 inches. 2018–2021.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;preservation_cactus-1.f2b928295387114c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;preservation_cactus-1.cb5d499f64693d2f.jpg 480w, &#x2F;processed_images&amp;#x2F;preservation_cactus-1.f2b928295387114c.jpg 960w, &#x2F;processed_images&amp;#x2F;preservation_cactus-1.a64be74ddd281446.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a small green saguaro cactus enclosed inside a large white glass jar with a lid, rendered with thick impasto brushwork against a pale gray-white background, in a wooden frame.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;preservation cactus by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

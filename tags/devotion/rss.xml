@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - devotion</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/devotion/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>equilateral equilibrium</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/">&lt;p&gt;Rationing time and energy. The artifacts of ones life in need of attention and devotion. Finite existence demands decisions. Life&#x27;s quest to find balance; constantly wondering what lies around the next corner (if we just go a little bit further.) When too many of the triangles of life are out of balance I struggle and so I paint these three points where two lines meet with the utmost care in the hope they will help me towards equilibrium.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.c0b37529be906d79.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.033130432c130d54.jpg 480w, &#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.c0b37529be906d79.jpg 960w, &#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.54eb532b6ce8bdab.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of dozens of concentric nested triangles in vibrant yellows, reds, pinks, greens, blues, and oranges scattered across a white background in varying sizes and orientations.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;equilateral equilibrium by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>espresso machine</title>
+          <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2014/espresso-machine/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2014/espresso-machine/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2014/espresso-machine/">&lt;p&gt;The espresso machine painted white on white, an appliance dissolving into the kitchen light like a saint in an old fresco. Every household has its altars. This is one of ours.&lt;&#x2F;p&gt;
+&lt;p&gt;8 by 8 inches. Oil on Panel. 2014. Private Collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;drip_coffee_maker-copy.f0a93619b6dbc37f.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;drip_coffee_maker-copy.6bd35c49f88a2451.jpg 480w, &#x2F;processed_images&amp;#x2F;drip_coffee_maker-copy.f0a93619b6dbc37f.jpg 960w, &#x2F;processed_images&amp;#x2F;drip_coffee_maker-copy.9b1d8c86f7ab05d1.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a white espresso machine rendered in thick impasto brushstrokes, with a cup on the drip tray, set against a pale cream and blue background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;espresso machine by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

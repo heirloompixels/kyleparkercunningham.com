@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - abduction</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/abduction/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Abduction</title>
+          <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/other/2022/abduction/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/other/2022/abduction/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/other/2022/abduction/">
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3976-1.c9d96180b365422a.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3976-1.20931b8b766f630f.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3976-1.c9d96180b365422a.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3976-1.375b2f9750cafa2a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Abduction&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Abduction by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3976.73dda42534a88c29.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3976.e38ec01a67627683.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3976.73dda42534a88c29.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3976.f1aac593e119df1c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Abduction&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

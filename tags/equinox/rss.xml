@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - equinox</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/equinox/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 21 Sep 2017 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Cyclum Lunarem</title>
+          <pubDate>Thu, 21 Sep 2017 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/installation/2017/cyclum-lunarem/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/installation/2017/cyclum-lunarem/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/installation/2017/cyclum-lunarem/">&lt;p&gt;I painted the moons from an entire summer, starting on the summer solstice and completed on the autumnal equinox.&lt;&#x2F;p&gt;
+&lt;p&gt;Each moon is painted upon a 3 3&#x2F;8&quot; square prepared with linen and a traditional gesso ground. 24kt gold leaf was gilded upon this ground and the moon then painted upon this.&lt;&#x2F;p&gt;
+&lt;p&gt;Installation size is variable based on shape as well as spacing between the moons.&lt;&#x2F;p&gt;
+&lt;p&gt;This piece plays well with atmospheric light due to the gold leaf.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;cyclum_lunarem_with_trunk.e269e18ff9743651.png&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;cyclum_lunarem_with_trunk.080e927ed5ab1825.png 480w, &#x2F;processed_images&amp;#x2F;cyclum_lunarem_with_trunk.e269e18ff9743651.png 960w, &#x2F;processed_images&amp;#x2F;cyclum_lunarem_with_trunk.69595dbbf5ecdc7d.png 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Grid of small square paintings on 24kt gold leaf depicting a summer&amp;#x27;s worth of moon phases, mounted on a gray wall above a vintage leather trunk&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Cyclum Lunarem by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;DSCF2532.fac413b738c20cd6.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;DSCF2532.48597642db66e301.jpg 480w, &#x2F;processed_images&amp;#x2F;DSCF2532.fac413b738c20cd6.jpg 960w, &#x2F;processed_images&amp;#x2F;DSCF2532.bfd1a2a431b6a360.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Angled view of Cyclum Lunarem showing rows of gold-leafed moon phase paintings catching atmospheric light, with silver and gray moons progressing from full to crescent across the grid&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;cyclum_lunarem-2048.ab9650de541c5da8.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;cyclum_lunarem-2048.0bbd57eaa86e87f7.jpg 480w, &#x2F;processed_images&amp;#x2F;cyclum_lunarem-2048.ab9650de541c5da8.jpg 960w, &#x2F;processed_images&amp;#x2F;cyclum_lunarem-2048.d2ea16d0326ef762.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Full frontal view of Cyclum Lunarem installation arranged in a tall vertical column of gold-leafed square tiles, each painted with a lunar phase in muted grays and blacks on a white gallery wall&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;cyclum-close.d56452075520a40d.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;cyclum-close.59fc4fc736cc19cb.jpg 480w, &#x2F;processed_images&amp;#x2F;cyclum-close.d56452075520a40d.jpg 960w, &#x2F;processed_images&amp;#x2F;cyclum-close.f1a6c8b68ac7a1bb.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Close-up detail of Cyclum Lunarem showing the painted moon phases on gold leaf squares arranged in horizontal rows, revealing the textured brushwork and waxing and waning lunar cycle&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

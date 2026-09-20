@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - early work</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/early-work/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 08 Mar 2022 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>B-sides &amp; Rarities</title>
+          <pubDate>Tue, 08 Mar 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/exhibitions/2022/b-sides-rarities/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/exhibitions/2022/b-sides-rarities/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/exhibitions/2022/b-sides-rarities/">&lt;p&gt;This is a B-sides and rarities show - I&#x27;ve got some totally new pieces and a bunch of really old stuff I&#x27;ve never even shown before - various studies and experiments from the past that I&#x27;ve had around from a long time and it&#x27;s time to pass them on. There are a bunch of good deals in this batch of paintings - collectors hit me up if you are interested. Desert Archaic, 324 Broadway, Truth or Consequences, NM 87901.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1541.5a1c762739572f15.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1541.c2282fe3cd9f5dea.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1541.5a1c762739572f15.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1541.e39096d884fcd67d.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;B sides rarities&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;B-sides &amp;amp; Rarities by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Muxy</title>
+          <pubDate>Fri, 25 Sep 2009 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2009/muxy/">&lt;p&gt;Japanese Ink &amp;amp; Oil on Linen Canvas. 34 x 55 inches. 2009. Private Collection.&lt;&#x2F;p&gt;
+&lt;p&gt;Painted while working at Showdown Ski Area in the heart of the Little Belts up in cold wonderful Montana. This is the place of my youth and it was a magical summer Jeannie and I spent up there.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;muxy.8b912f2b6a914beb.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;muxy.61ba19d43185dbfd.jpg 480w, &#x2F;processed_images&amp;#x2F;muxy.8b912f2b6a914beb.jpg 960w, &#x2F;processed_images&amp;#x2F;muxy.4f48077c5a7d40e0.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil and Japanese ink painting on raw linen featuring surreal organic forms — colorful bulbous shapes in greens, blues, reds, and yellows cascade from the upper left, connected by twisting vines, tendrils, and a red flower against an exposed linen background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Muxy by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

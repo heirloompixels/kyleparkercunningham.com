@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - olive</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/olive/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 24 Apr 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Prickly Pear</title>
+          <pubDate>Tue, 24 Apr 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/prickly-pear/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/prickly-pear/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/prickly-pear/">&lt;p&gt;Prickly pear pads filling the square edge to edge, olive green on warm ochre, each one outlined like a river stone. A still life of the most ordinary desert citizen — the one that feeds you, sticks you, and outlives you. Simple, mundane objects infuse our being whether we notice or not; this one I noticed.&lt;&#x2F;p&gt;
+&lt;p&gt;oil on dibond ACM panel. 12x12 inches. Spring 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;prickly_pear.17bcafdcdc8002d9.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;prickly_pear.6c3b896f469cf282.jpg 480w, &#x2F;processed_images&amp;#x2F;prickly_pear.17bcafdcdc8002d9.jpg 960w, &#x2F;processed_images&amp;#x2F;prickly_pear.4eacfafc6eb31249.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a close-up prickly pear cactus with thick green pads branching outward, painted in olive and sage green tones against a warm tan background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Prickly Pear by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

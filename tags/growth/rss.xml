@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - growth</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/growth/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>twenty-one years</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/twenty-one-years/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/twenty-one-years/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/twenty-one-years/">&lt;p&gt;A celebration of time and growth, painted in arcs of vibrant color representing the journey through two decades of life and art.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;twenty-one-years.3ec81ced12438c59.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;twenty-one-years.76e1804954b7e09b.jpg 480w, &#x2F;processed_images&amp;#x2F;twenty-one-years.3ec81ced12438c59.jpg 960w, &#x2F;processed_images&amp;#x2F;twenty-one-years.545174cd1d67d2fc.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting featuring a large spiral of tightly layered concentric rings in golden yellow and sky blue dominating the left side of the canvas, set against a textured yellow-green field with blue speckled marks and a curving pink arc along the right edge.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;twenty-one years by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Spring</title>
+          <pubDate>Sat, 02 Apr 2016 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2016/spring/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2016/spring/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2016/spring/">&lt;p&gt;Triangles in every green the season makes — plus one or two orange ones for the early bloomers — scattered across a gray field like seedlings coming up through late snow. Spring arrives geometrically if you watch closely: one point first, then the spread.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil and Spray Paint on Linen. 20 by 30 inches. 2016.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;D63AD818-45DF-449D-BF34-48C78551F324_1_201_a.831e544c8e38cd99.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;D63AD818-45DF-449D-BF34-48C78551F324_1_201_a.88bb5a93f64cc708.jpg 480w, &#x2F;processed_images&amp;#x2F;D63AD818-45DF-449D-BF34-48C78551F324_1_201_a.831e544c8e38cd99.jpg 960w, &#x2F;processed_images&amp;#x2F;D63AD818-45DF-449D-BF34-48C78551F324_1_201_a.444d6405c4ad595a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil and spray paint on linen featuring dozens of small multicolored triangles — in greens, teals, light blues, and occasional oranges — scattered across a textured gray background, with upward-pointing triangles in the top half and inverted ones below.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Spring by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

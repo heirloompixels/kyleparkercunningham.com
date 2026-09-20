@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - flesh tones</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/flesh-tones/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 10 Apr 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Geometric Anatomy</title>
+          <pubDate>Mon, 10 Apr 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2023/geometric-anatomy/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2023/geometric-anatomy/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2023/geometric-anatomy/">&lt;p&gt;Two halves of my practice in a single frame: bodies painted as faithfully as I am able, intertwined against a field that has given up detail entirely — pale yellow broken by a red web of triangles. Memory refines forms to their basic emotions; the figures hold on while the world around them simplifies. First in the Geometric Anatomy series.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Panel (ACM), 20 by 20 inches, 2023.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;geometric-anatomy-final-perfect.b2e2860c3a586fec.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;geometric-anatomy-final-perfect.ceb4515a8aad82c1.jpg 480w, &#x2F;processed_images&amp;#x2F;geometric-anatomy-final-perfect.b2e2860c3a586fec.jpg 960w, &#x2F;processed_images&amp;#x2F;geometric-anatomy-final-perfect.6d98af24bb463831.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of two embracing figures rendered in dark, warm skin tones, their bodies intertwined against a pale yellow background overlaid with angular red geometric lines.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Geometric Anatomy by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Combinations and Re-Entry</title>
+          <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/">&lt;p&gt;Third in the Geometric Anatomy series. The figure folds in on itself, hands over face, while the ground fractures into pastel triangles — the geometry pressing in closer this time. Re-entry is the violent part of any return: coming back into the atmosphere of your own life, hoping the heat shield holds.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Panel (ACM), 16 by 20 inches, 2023.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;untitled-begins.bd976ca209ae58a5.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;untitled-begins.38e865ac66ff1159.jpg 480w, &#x2F;processed_images&amp;#x2F;untitled-begins.bd976ca209ae58a5.jpg 960w, &#x2F;processed_images&amp;#x2F;untitled-begins.57ed51c4f52e8c09.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a curled nude figure with hands covering the face, rendered in warm brown tones against a fragmented geometric background of pastel pink, teal, lavender, and cream triangles.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Combinations and Re-Entry by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

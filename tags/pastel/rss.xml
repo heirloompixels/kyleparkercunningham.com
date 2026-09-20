@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - pastel</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/pastel/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 09 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Combinations and Re-Entry</title>
+          <pubDate>Thu, 09 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2023/untitled-begins/">&lt;p&gt;Third in the Geometric Anatomy series. The figure folds in on itself, hands over face, while the ground fractures into pastel triangles — the geometry pressing in closer this time. Re-entry is the violent part of any return: coming back into the atmosphere of your own life, hoping the heat shield holds.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Panel (ACM), 16 by 20 inches, 2023.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;untitled-begins.bd976ca209ae58a5.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;untitled-begins.38e865ac66ff1159.jpg 480w, &#x2F;processed_images&amp;#x2F;untitled-begins.bd976ca209ae58a5.jpg 960w, &#x2F;processed_images&amp;#x2F;untitled-begins.57ed51c4f52e8c09.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a curled nude figure with hands covering the face, rendered in warm brown tones against a fragmented geometric background of pastel pink, teal, lavender, and cream triangles.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Combinations and Re-Entry by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Rocket Propelled Clovis Point</title>
+          <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2020/rocket-propelled-clovis-point/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2020/rocket-propelled-clovis-point/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2020/rocket-propelled-clovis-point/">&lt;p&gt;A figure in a white suit stands at ease, helmet ringed with ears of corn, a single bee parked on the crown, holding a rocket-propelled clovis point. Twelve thousand years of weapons technology collapsed into one absurd tool — the first point we ever knapped, strapped to the newest engine we could build. Pandemic painting, summer 2020. The &lt;a href=&quot;&#x2F;oeuvre&#x2F;printmaking&#x2F;2022&#x2F;rocket-propelled-clovis-point-intaglio&#x2F;&quot;&gt;intaglio version&lt;&#x2F;a&gt; followed in 2022.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on cotton canvas, 24 by 30 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;rpcp_1-2000px-1.a244eaefe5aef4bd.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;rpcp_1-2000px-1.2a8deaf049d3d3ff.jpg 480w, &#x2F;processed_images&amp;#x2F;rpcp_1-2000px-1.a244eaefe5aef4bd.jpg 960w, &#x2F;processed_images&amp;#x2F;rpcp_1-2000px-1.b554a2048a378c03.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on linen painting of a white armored figure with a honeycomb-filled visor and bees, holding a serrated spear-like weapon against a soft pink, yellow, and green background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Rocket Propelled Clovis Point by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

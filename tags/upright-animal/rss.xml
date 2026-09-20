@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - upright animal</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/upright-animal/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 18 Jan 2022 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Surviving the Asteroid</title>
+          <pubDate>Tue, 18 Jan 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2022/surviving-the-asteroid/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2022/surviving-the-asteroid/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2022/surviving-the-asteroid/">&lt;p&gt;The crocodilians have seen an extinction or two and kept walking. Here one stands upright on the rust-red ground, grinning the grin of a survivor: not the fastest or the smartest, just impossible to finish off. I think about survival a lot — who makes it through, and what they look like on the other side. This one made it through, and seems pleased about it.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil, Oil Stick, Acrylic and Latex on Canvas. 24 by 30 inches. Winter 2022.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;SDIM8385-1.6d6d870b0a2f5975.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;SDIM8385-1.89fde3b9bd35a687.jpg 480w, &#x2F;processed_images&amp;#x2F;SDIM8385-1.6d6d870b0a2f5975.jpg 960w, &#x2F;processed_images&amp;#x2F;SDIM8385-1.ac081f433c99328c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Mixed-media painting of a whimsical upright crocodile-like creature with a long toothy snout, white body, and yellow claws, standing on a dark rust-colored ground against a muted pink background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Surviving the Asteroid by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

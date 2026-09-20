@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - teeth</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/teeth/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Crystal Tooth Whale</title>
+          <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2023/crystal-tooth-whale/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2023/crystal-tooth-whale/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2023/crystal-tooth-whale/">&lt;p&gt;The whale in one continuous line, teeth like little crystals at the tip of the jaw — printed chine-collé, a sheet of handmade brown paper bonded into the print. The &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2018&#x2F;crystal-tooth-whale&#x2F;&quot;&gt;painting&lt;&#x2F;a&gt; came first (2018); even mega fauna needs dental work.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;edition-details&quot;&gt;Edition Details&lt;&#x2F;h3&gt;
+&lt;p&gt;intaglio drypoint prints
+printed area approx 11 x 12 inches
+handtorn paper approx 13 x 19 inches&lt;&#x2F;p&gt;
+&lt;p&gt;chine collé&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;crystal-tooth-whale.2648d623e9b4f16a.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;crystal-tooth-whale.8ae6cf0fd67d8345.jpg 480w, &#x2F;processed_images&amp;#x2F;crystal-tooth-whale.2648d623e9b4f16a.jpg 960w, &#x2F;processed_images&amp;#x2F;crystal-tooth-whale.fcab3a13fb4f4477.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Intaglio print of a whale rendered in simple contour lines on dark brown handmade paper, with small crystalline teeth visible in its open jaw and a forked tail at left.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Crystal Tooth Whale by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Crystal Tooth Whale</title>
+          <pubDate>Sat, 28 Apr 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/crystal-tooth-whale/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/crystal-tooth-whale/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/crystal-tooth-whale/">&lt;p&gt;oil on linen. 11x14 inches. spring 2018.&lt;&#x2F;p&gt;
+&lt;p&gt;Even mega fauna needs dental work.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;crystal_tooth_whale.666aa884b65ac381.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;crystal_tooth_whale.8c772c46e6988220.jpg 480w, &#x2F;processed_images&amp;#x2F;crystal_tooth_whale.666aa884b65ac381.jpg 960w, &#x2F;processed_images&amp;#x2F;crystal_tooth_whale.41f55812b458b90a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a white whale with crystalline, faceted teeth in an open mouth, set against a teal blue background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Crystal Tooth Whale by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

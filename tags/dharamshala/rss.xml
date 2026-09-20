@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - dharamshala</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/dharamshala/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 05 Dec 2013 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Dodecahedron</title>
+          <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2013/dodecahedron/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2013/dodecahedron/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2013/dodecahedron/">&lt;p&gt;21 by 34 inches. Oil on Linen. 2013.&lt;&#x2F;p&gt;
+&lt;p&gt;The inspiration for this Buddha comes from a small wooden carving of the Buddha in the Temple of Namgyal Monastery, Dharamshala India.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;dodcahedron-copy.f7bdd3a52ab33880.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;dodcahedron-copy.92a14ff1c6394fc8.jpg 480w, &#x2F;processed_images&amp;#x2F;dodcahedron-copy.f7bdd3a52ab33880.jpg 960w, &#x2F;processed_images&amp;#x2F;dodcahedron-copy.534e4a06e2335a20.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a seated Buddha-like figure with a ribbed torso, surrounded by floating black and white pentagonal faces forming a dodecahedron halo, set against a pale green background with subtle spiral patterns.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Dodecahedron by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

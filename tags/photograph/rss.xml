@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - photograph</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/photograph/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 21 Sep 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>fall 2021</title>
+          <pubDate>Tue, 21 Sep 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/other/2021/fall-2021/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/other/2021/fall-2021/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/other/2021/fall-2021/">&lt;p&gt;A log book of November 2021.&lt;&#x2F;p&gt;
+&lt;p&gt;Truth or Consequences, New Mexico&lt;&#x2F;p&gt;
+&lt;p&gt;The first days of November have brought perfect fall weather. The type of fall I always dreamed fall could be while a child in Montana. Lingering, wonderful fall.&lt;&#x2F;p&gt;
+&lt;p&gt;Work progresses on the new batch of paintings. Excitement for their completion.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;fall2021.66766b4366412ad9.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;fall2021.7e715f832b1d8328.jpg 480w, &#x2F;processed_images&amp;#x2F;fall2021.66766b4366412ad9.jpg 960w, &#x2F;processed_images&amp;#x2F;fall2021.8ca4101d36272649.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Fall 2021&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;fall 2021 by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>
