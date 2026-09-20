@@ -41,4 +41,4 @@ See Also: [https://intentionallyconfusing.com](https://intentionallyconfusing.co
 Represented by: [Truth or Consequences Contemporary](https://torc.art) — Truth or Consequences, NM  
 Also showing at: [Sun and Dust](https://sunanddust.gallery) — Santa Fe, NM  
 
-Shop: [https://shop.intentionallyconfusing.com](https://shop.intentionallyconfusing.com)
+Shop: [https://shop.torc.art](https://shop.torc.art)

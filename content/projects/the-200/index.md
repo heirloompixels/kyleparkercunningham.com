@@ -24,7 +24,7 @@ The 200 is the first iteration of a larger idea; later rounds are planned to
 grow — two hundred from each painter, and eventually six hundred in all.
 
 Announced on the summer solstice, June 21, 2026, with sales beginning in early
-July through [the shop](https://shop.intentionallyconfusing.com).
+July through [the shop](https://shop.torc.art).
 
 The project is one strand of [*Survival Notes from the Near
 Future*](/projects/survival-notes-from-the-near-future/) — a working answer to
