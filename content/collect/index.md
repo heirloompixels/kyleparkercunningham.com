@@ -23,7 +23,7 @@ Also showing work.
 
 ## Buy directly
 
-**[The shop](https://shop.intentionallyconfusing.com)** carries available
+**[The shop](https://shop.torc.art)** carries available
 works, prints, and editions — including projects made with Jeannie Ortiz
 under [Intentionally Confusing](https://intentionallyconfusing.com).
 
