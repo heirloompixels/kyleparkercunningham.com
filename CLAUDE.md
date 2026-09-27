@@ -8,6 +8,12 @@ cross-repo session rule.
 
 *Set by Kyle on 2026-09-27, ahead of a marketing push built on the films.*
 
+**Read the plan first.** The foundational pass across everything this site
+touches is `daybook/docs/explorations/2026-09-27-the-foundation.md` (daybook
+PR, 2026-09-27): the site is one reader of a core — every work's printed
+identity, its place on daybook's timeline, and provenance on every sentence —
+and twelve decisions in it are Kyle's. Nothing below overrides it.
+
 **The foundation stays.** The works, the written descriptions, the editions
 and the thirteen seasons are the first time one of Kyle's sites was actually
 filled rather than scaffolded — `brain/themes/the-website-as-artwork.md`
