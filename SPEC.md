@@ -1,5 +1,12 @@
 # Site Specification (v2)
 
+> **Read with `CLAUDE.md` § the 2027 pass.** This is the July 2026 spec and two
+> of its sections no longer hold. § 1's purpose — the definitive archive of
+> every work — is served by archive.kyleparkercunningham.com since the oeuvre
+> went live; this site shows routes through the works rather than all of them.
+> § 6's "no JS" was withdrawn by Kyle on 2026-09-27, with every other stack
+> rule. The rest describes the site as built and is still accurate.
+
 ## 1) Purpose & Audience
 - **Purpose:** Definitive, lifelong archive of all works (art, projects, writings, photographs, etc.).
 - **Audience:** Collectors and people interested in the work.
@@ -128,7 +135,7 @@ content/colophon/index.md
 - about
 
 ## 6) Visual Direction
-- Minimal, typography‑first, no JS.
+- Minimal, typography‑first, no JS. *(Withdrawn 2026-09-27 — see the note at the top.)*
 - Utopia‑style fluid type & spacing scale.
 - Literata (body + headings), IBM Plex Sans (UI + captions), Inconsolata (code).
 
