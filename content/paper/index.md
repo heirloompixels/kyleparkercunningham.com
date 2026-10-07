@@ -5,7 +5,7 @@ template = "page.html"
 +++
 
 <p>Notes on various papers used by artists. </p><p>I source all my paper from <a href="https://www.takachpaper.com/">Takach Paper</a> in Albuquerque, New Mexico. The paper name links to the product on the Takach Paper website. Support local businesses and buy from Takach to keep printmaking alive and thriving! </p><h2 id="printmaking">Printmaking</h2><h3 id="copperplate">Copperplate </h3>{{ art_image(path="paper/copperplate.jpeg") }}<h3 id="coventry-rag">Coventry Rag </h3><p>This paper has an excellent feel to it. Very crisp, stiff and firm to the hand. I prefer the "smooth" finish to the "vellum" finish. The smooth finish feels stiffer and more pleasing. Both papers tear fabulously and leave very interesting deckle edges. </p><p>This paper takes watercolor ok - it has medium sizing I'll call it. But it is not the best.</p>{{ art_image(path="paper/coventry_rag.jpeg", caption="Coventry Rag Smooth") }}{{ art_image(path="paper/coventry-rag-2.jpeg") }}<h3 id="domestic-etching"><a href="https://www.takachpaper.com/product/domestic-etching-paper/">Domestic Etching</a></h3><!--kg-card-begin: markdown--><ul>
-<li>Very little sizing so it does not take watercolors or guache at all.</li>
+<li>Very little sizing so it does not take watercolors or gouache at all.</li>
 <li>Soft fluffy touch to the paper</li>
 <li>Prints drypoints fantastically</li>
 <li>Cheap - great student paper.</li>

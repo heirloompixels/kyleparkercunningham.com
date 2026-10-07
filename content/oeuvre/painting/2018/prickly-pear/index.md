@@ -13,7 +13,7 @@ tags = [
 ]
 
 [extra]
-medium = "Oil on Diabond"
+medium = "Oil on Dibond"
 dimensions = "12x12 inches"
 +++
 oil on dibond ACM panel. 12x12 inches. Spring 2018.

@@ -9,7 +9,7 @@ template = "page.html"
 
 ## Concise:
 
-Kyle Parker Cunningham paints, print makes and sculpts in Truth or Consequences, New Mexico where he co-creates Desert Archaic Gallery.
+Kyle Parker Cunningham paints, printmakes and sculpts in Truth or Consequences, New Mexico where he co-creates Desert Archaic Gallery.
 
 ## Expanded:
 
@@ -27,4 +27,4 @@ These disparate experiences have formulated a world view which seeks to cultivat
 
 On a singular canvas the world is framed as he sees it today, as it was yesterday, and as it could be tomorrow, merging archaic images with the technologies of the future. Each piece is unique and poignant: paying homage to our prehistory while forcing us to examine how far we have come.
 
-Still life paintings raise the authority of the simple, mundane objects whose presence infuses our being, consciously or not. Dinosaurs with agua-lungs, elephants in space suits, whimsical perhaps, but each has been a part of our history or sits on the arc of the future. In the repetition of the random is found the building blocks of our psyches; each painting is real and resonates with familiarity. He reminds us that though the day is long we are each but a piece of this being known as existence: complex and sublime.
+Still life paintings raise the authority of the simple, mundane objects whose presence infuses our being, consciously or not. Dinosaurs with aqua-lungs, elephants in space suits, whimsical perhaps, but each has been a part of our history or sits on the arc of the future. In the repetition of the random is found the building blocks of our psyches; each painting is real and resonates with familiarity. He reminds us that though the day is long we are each but a piece of this being known as existence: complex and sublime.
