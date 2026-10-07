@@ -35,7 +35,7 @@
   | concat(with=philosophy.pages)
   | concat(with=book_binding.pages)
   | concat(with=other.pages)
-  | sort(attribute="date") | reverse
+  | sort(attribute="title") | reverse | sort(attribute="date") | reverse
 %}
 {# Sections have no date; band and sort by the year in the path (components[2]).
    Stable sort keeps the date order within each year for the leaf pages. #}

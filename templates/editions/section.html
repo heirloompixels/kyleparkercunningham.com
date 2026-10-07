@@ -17,7 +17,7 @@
 
 {% block content %}
 {% set live = section.pages | filter(attribute="extra.status", value="live") %}
-{% set retired = section.pages | filter(attribute="extra.status", value="retired") | sort(attribute="date") | reverse %}
+{% set retired = section.pages | filter(attribute="extra.status", value="retired") | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
 
 <div class="editions-intro">
   <div class="k">The Editions</div>

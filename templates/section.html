@@ -9,7 +9,7 @@
   {% if section.content %}<div class="doc-deck">{{ section.content | safe }}</div>{% endif %}
 
   <ul class="doc-list">
-    {% for page in section.pages | sort(attribute="date") | reverse %}
+    {% for page in section.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
       <li>
         <a href="{{ page.permalink }}">{{ page.title }}</a>
         <span class="yr">

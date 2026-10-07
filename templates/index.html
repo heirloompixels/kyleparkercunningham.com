@@ -186,8 +186,8 @@
 {% set_global edition_numeral = "" %}
 {% if live | length > 0 %}{% set ed = live | first %}{% set_global edition_numeral = ed.extra.numeral %}{% endif %}
 
-{% set recent_painting = painting.pages | sort(attribute="date") | reverse | slice(end=6) %}
-{% set archive_rest = printmaking.pages | concat(with=installation.pages) | concat(with=sculpture.pages) | concat(with=exhibitions.pages) | concat(with=philosophy.pages) | concat(with=book_binding.pages) | concat(with=other.pages) | sort(attribute="date") | reverse | slice(end=6) %}
+{% set recent_painting = painting.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=6) %}
+{% set archive_rest = printmaking.pages | concat(with=installation.pages) | concat(with=sculpture.pages) | concat(with=exhibitions.pages) | concat(with=philosophy.pages) | concat(with=book_binding.pages) | concat(with=other.pages) | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=6) %}
 
 <div class="h29">
   <header class="h29-mast">
@@ -225,7 +225,7 @@
       {# The season's field log, written once in /log/ and surfaced here while
          the edition is live. The edition's permanent page stays as authored. #}
       {% set log = get_section(path="log/_index.md") %}
-      {% set log_entries = log.pages | sort(attribute="date") | reverse | slice(end=3) %}
+      {% set log_entries = log.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=3) %}
       {% if log_entries | length > 0 %}
       <section class="ed-fieldlog">
         {% for e in log_entries %}

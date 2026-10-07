@@ -18,7 +18,7 @@
 {# Collect project-type works (sections under year folders) alongside leaf pages. #}
 {% set_global projects = [] %}
 {% for yp in section.subsections %}{% set ys = get_section(path=yp) %}{% for pp in ys.subsections %}{% set proj = get_section(path=pp) %}{% set_global projects = projects | concat(with=proj) %}{% endfor %}{% endfor %}
-{% set works = section.pages | sort(attribute="date") | reverse | concat(with=projects) | sort(attribute="components.2") | reverse %}
+{% set works = section.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | concat(with=projects) | sort(attribute="components.2") | reverse %}
 {% set n_total = works | length %}
 
 {% set oeuvre = get_section(path="oeuvre/_index.md") %}

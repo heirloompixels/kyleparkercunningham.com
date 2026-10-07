@@ -17,7 +17,7 @@
     <h1>{{ term.name | title }}</h1>
   </header>
   <ul class="doc-list">
-    {% for page in term.pages | sort(attribute="date") | reverse %}
+    {% for page in term.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
       <li>
         <a href="{{ page.permalink }}">{{ page.title }}</a>
         {% if page.date %}<span class="yr">{{ page.date | date(format="%Y-%m-%d") }}</span>{% endif %}
