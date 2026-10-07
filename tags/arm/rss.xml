@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - arm</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/arm/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 19 May 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Hands</title>
+          <pubDate>Sat, 19 May 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/hands/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/hands/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/hands/">&lt;p&gt;Our hands allow us to be the most human we can.&lt;&#x2F;p&gt;
+&lt;p&gt;Acrylic on Found Wood. Dimensions Variable. 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;BD602B72-C2FB-4F05-8982-32A08EBD9FA1_1_201_a.6adce27bde529921.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;BD602B72-C2FB-4F05-8982-32A08EBD9FA1_1_201_a.c3c89d6ea959ce19.jpg 480w, &#x2F;processed_images&amp;#x2F;BD602B72-C2FB-4F05-8982-32A08EBD9FA1_1_201_a.6adce27bde529921.jpg 960w, &#x2F;processed_images&amp;#x2F;BD602B72-C2FB-4F05-8982-32A08EBD9FA1_1_201_a.369c774130e7ec4e.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Acrylic painting on stacked found wood boards depicting white and gray hands and arms in various poses, including a skeletal mechanical arm and outstretched open hands.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Hands by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - bird feet</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/bird-feet/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Six</title>
+          <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2019/six/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2019/six/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2019/six/">&lt;p&gt;Six round creatures on bird feet, eyes up on long stalks, hand colored in purples and blues, standing around the way a group does when nobody wants to leave first. Cousin to the &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2018&#x2F;seven&#x2F;&quot;&gt;Seven&lt;&#x2F;a&gt; painting; apparently I count my crowds.&lt;&#x2F;p&gt;
+&lt;p&gt;Drypoint Intaglio Print, 8 x 10 inches. Handcolored with watercolor.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018071.3059bf2c11e93717.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018071.f60bbb1efc656fcf.jpg 480w, &#x2F;processed_images&amp;#x2F;printsNovember2018071.3059bf2c11e93717.jpg 960w, &#x2F;processed_images&amp;#x2F;printsNovember2018071.abbc0e8302e7573a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of six whimsical boxy creatures standing in a row, each with thin stick legs, bird-like feet, and tall stalked eyes, hand-colored in shades of purple, lavender, and blue watercolor on cream paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Six by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

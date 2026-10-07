@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - giraffe</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/giraffe/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 02 Nov 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>paper neck giraffes</title>
+          <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/paper-neck-giraffes/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/paper-neck-giraffes/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/paper-neck-giraffes/">&lt;p&gt;Oil on Canvas
+20x30 inches
+November 2021&lt;&#x2F;p&gt;
+&lt;p&gt;Paper neck giraffe. The rare breed of the future flatter than normal to use less water. These have the obligatory bonsai respirator apparatus which is oh so necessary in the futures climate.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;image.8500504a1cb8d6f7.png&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;image.0925e4f885240143.png 480w, &#x2F;processed_images&amp;#x2F;image.8500504a1cb8d6f7.png 960w, &#x2F;processed_images&amp;#x2F;image.d9ae96ca75c62c30.png 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Detail view of the oil on canvas painting showing three flat-bodied yellow giraffes with glass dome respirators containing bonsai trees, against a deep blue background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;paper neck giraffes by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;paper-neck-giraffes-2000px.f6dc28649902eaba.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;paper-neck-giraffes-2000px.b1c3c411882a7154.jpg 480w, &#x2F;processed_images&amp;#x2F;paper-neck-giraffes-2000px.f6dc28649902eaba.jpg 960w, &#x2F;processed_images&amp;#x2F;paper-neck-giraffes-2000px.b31c42bec30c498c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on canvas painting of three stylized flat-bodied yellow giraffes with patterned hides, each carrying glass globe respirators with bonsai trees, standing on brown earth against a muted blue background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

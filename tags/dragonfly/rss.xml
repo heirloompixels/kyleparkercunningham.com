@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - dragonfly</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/dragonfly/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 31 Jul 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>lunar lander</title>
+          <pubDate>Sat, 31 Jul 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2021/lunar-lander/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2021/lunar-lander/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2021/lunar-lander/">&lt;p&gt;intaglio drypoint prints
+printed area approx 6 x 9 inches
+handtorn paper approx 8 x 10 inches&lt;&#x2F;p&gt;
+&lt;p&gt;Based on an earlier 2014 oil painting of the same title (not yet documented here).&lt;&#x2F;p&gt;
+&lt;p&gt;Each print is printed in an open ended series. I physically scratch the print number into the plate before inking it and then print just one copy at that number.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;lunar_lander.d3f14a17e7770cf6.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;lunar_lander.70b7cdfc997e52bb.jpg 480w, &#x2F;processed_images&amp;#x2F;lunar_lander.d3f14a17e7770cf6.jpg 960w, &#x2F;processed_images&amp;#x2F;lunar_lander.8384798bc916d69a.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a geometric lunar lander module with a dragonfly resting on its dome, standing on four legs above a purple and maroon watercolor ground, on handtorn cream paper.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;lunar lander by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1091.8c83950e30419dfe.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1091.c6881b413c2f566a.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1091.8c83950e30419dfe.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1091.3b947cd379b2b98e.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Alternate print of the Lunar Lander with the geodesic spacecraft and dragonfly set against a lavender-purple watercolor landscape suggesting distant mesas, with the lander&amp;#x27;s legs straddling the painted terrain.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

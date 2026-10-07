@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - branching form</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/branching-form/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>the atmosphere&#x27;s electric finger</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/the-atmospheres-electric-finger/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/the-atmospheres-electric-finger/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/the-atmospheres-electric-finger/">&lt;p&gt;Behold the awe which is the blinding light of lighting strikes when surrounded by the intense darkness of encroached clouds while miles away from domesticated electricity.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;the-atmosphere-s-electric-finger-good.fd511b38f55a4ce0.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;the-atmosphere-s-electric-finger-good.7009908cdc53fcd8.jpg 480w, &#x2F;processed_images&amp;#x2F;the-atmosphere-s-electric-finger-good.fd511b38f55a4ce0.jpg 960w, &#x2F;processed_images&amp;#x2F;the-atmosphere-s-electric-finger-good.fe85837b0f035dbd.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Minimalist oil painting of jagged, angular lightning bolt shapes outlined in golden-yellow lines against a pale white-gray background, with the forms clustering and branching from the lower right corner upward across the canvas.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;the atmosphere&amp;#x27;s electric finger by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

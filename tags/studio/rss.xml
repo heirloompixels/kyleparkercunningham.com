@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - studio</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/studio/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>equilateral equilibrium</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/equilateral-equilibrium/">&lt;p&gt;Rationing time and energy. The artifacts of ones life in need of attention and devotion. Finite existence demands decisions. Life&#x27;s quest to find balance; constantly wondering what lies around the next corner (if we just go a little bit further.) When too many of the triangles of life are out of balance I struggle and so I paint these three points where two lines meet with the utmost care in the hope they will help me towards equilibrium.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.c0b37529be906d79.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.033130432c130d54.jpg 480w, &#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.c0b37529be906d79.jpg 960w, &#x2F;processed_images&amp;#x2F;equilateral-equilibrium-.54eb532b6ce8bdab.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of dozens of concentric nested triangles in vibrant yellows, reds, pinks, greens, blues, and oranges scattered across a white background in varying sizes and orientations.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;equilateral equilibrium by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>the berry picker</title>
+          <pubDate>Tue, 02 Nov 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/the-berry-picker/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/the-berry-picker/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/the-berry-picker/">&lt;p&gt;Mika picking berries for the first time with her mother Selena.&lt;&#x2F;p&gt;
+&lt;p&gt;I fell in love with this image of Mika, her eyes staring straight into my being wide full of wonder and joy of that magic which is picking a huckleberry from the edge of a trail.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;mika_phase2.92f8ac06b073702c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;mika_phase2.24b0973320fbc5e8.jpg 480w, &#x2F;processed_images&amp;#x2F;mika_phase2.92f8ac06b073702c.jpg 960w, &#x2F;processed_images&amp;#x2F;mika_phase2.5424b2d49954fb79.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting in progress on an easel showing a young child in a white dress looking directly at the viewer while a woman beside her offers berries, rendered in expressive brushwork against a gray background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;the berry picker by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

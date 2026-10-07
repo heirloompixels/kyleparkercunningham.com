@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - de-extinction</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/de-extinction/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Saber Tooth Puma</title>
+          <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2023/saber-tooth-puma/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2023/saber-tooth-puma/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2023/saber-tooth-puma/">&lt;p&gt;A puma carrying the old saber teeth again — the Pleistocene loadout reissued for the present mountains (the plate was first scratched in 2016). Deep time doesn&#x27;t retire its designs; it just waits for the right climate to bring them back.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;saber-tooth-puma.beb493c9d87ebd9d.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;saber-tooth-puma.b2e08e45f1443752.jpg 480w, &#x2F;processed_images&amp;#x2F;saber-tooth-puma.beb493c9d87ebd9d.jpg 960w, &#x2F;processed_images&amp;#x2F;saber-tooth-puma.411bc155a93aaba8.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Black and white intaglio print of a large puma standing in profile facing right, with elongated saber-tooth fangs, angular pointed ears, and blocky paws, rendered in loose expressive line work on a lightly toned ground.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Saber Tooth Puma by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>bison robotics</title>
+          <pubDate>Thu, 08 Apr 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/bison-robotics/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/bison-robotics/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/bison-robotics/">&lt;p&gt;oil on linen
+21 x 34 inches
+spring 2021&lt;&#x2F;p&gt;
+&lt;p&gt;They will one day again roam the great plains.&lt;&#x2F;p&gt;
+&lt;p&gt;Three of them graze a pink-orange sky, hides of riveted sheet metal, legs of jointed steel. The companion poem lives with &lt;a href=&quot;&#x2F;oeuvre&#x2F;painting&#x2F;2021&#x2F;cyclic-repetition&#x2F;&quot;&gt;Cyclic Repetition&lt;&#x2F;a&gt;: we missed the bison, so we brought them back as robots — and when the chips ran out, we hunted them all over again, the oldest technique aimed at the newest herd. Ancient cycles repeat.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;bison_robotics.b7ad7a37e661c323.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;bison_robotics.5fc27c9164b04d84.jpg 480w, &#x2F;processed_images&amp;#x2F;bison_robotics.b7ad7a37e661c323.jpg 960w, &#x2F;processed_images&amp;#x2F;bison_robotics.cc84ef9e776a55f6.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on linen painting of three gray mechanical bison with boxy angular bodies and wind-up key-like legs, grazing on a yellow-ochre plain beneath a warm coral-orange sky.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;bison robotics by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

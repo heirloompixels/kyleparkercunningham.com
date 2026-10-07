@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - approximate completion</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/approximate-completion/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Sat, 09 Jul 2016 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Approximate Completion</title>
+          <pubDate>Sat, 09 Jul 2016 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2016/approximate-completion/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2016/approximate-completion/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2016/approximate-completion/">&lt;p&gt;Rings of purple, magenta, and red circling a pale center, like a storm seen from above or a tree&#x27;s rings still being laid down. The title is the whole philosophy of my abstract work: each pass approximates closer that perfection in form which I will never attain but will always strive towards. You stop when the painting is approximately complete, which is the only kind of complete there is.&lt;&#x2F;p&gt;
+&lt;p&gt;Oil on Canvas. 30 by 30 inches. 2016.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;659246FF-8DA2-4BB1-A1CA-4ACE0CC2C6B8_1_201_a.c074837a63e63d53.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;659246FF-8DA2-4BB1-A1CA-4ACE0CC2C6B8_1_201_a.c21c75c613180822.jpg 480w, &#x2F;processed_images&amp;#x2F;659246FF-8DA2-4BB1-A1CA-4ACE0CC2C6B8_1_201_a.c074837a63e63d53.jpg 960w, &#x2F;processed_images&amp;#x2F;659246FF-8DA2-4BB1-A1CA-4ACE0CC2C6B8_1_201_a.0edc9b443447aed5.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of concentric circles spiraling inward with alternating bands of deep purple, pink, red, and lavender, radiating from a small bright center point to fill the entire square canvas.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Approximate Completion by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

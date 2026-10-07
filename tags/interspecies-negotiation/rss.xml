@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - interspecies negotiation</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/interspecies-negotiation/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 18 Feb 2019 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Pruning</title>
+          <pubDate>Mon, 18 Feb 2019 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2019/pruning/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2019/pruning/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2019/pruning/">&lt;p&gt;Loppers at work on a prickly pear, a green barrel cactus standing witness. Garden chores in the desert are a negotiation between species, and the cactus usually gets the last word. Hand colored.&lt;&#x2F;p&gt;
+&lt;p&gt;Intaglio drypoint prints. Printed area approx 6 x 9 inches, handtorn paper approx 8 x 10 inches.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1092-1.f0f116831790c6de.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1092-1.fe96e32ba21ea675.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1092-1.f0f116831790c6de.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1092-1.aa6c726186158f1c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print of a prickly pear cactus with sprawling oval pads being trimmed by a small pair of scissors held by a round green barrel cactus, hand-colored with green watercolor on the barrel cactus against a grey-toned background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Pruning by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_1092.06173c8b44214b64.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_1092.5bf67cee6759d96e.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_1092.06173c8b44214b64.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_1092.a0208e6b82517756.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Alternate print of the same pruning composition showing the prickly pear and green barrel cactus with scissors, with subtle differences in ink saturation and plate tone from the hand-pulled printing process.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

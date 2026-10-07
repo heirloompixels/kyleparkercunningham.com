@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - diver</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/diver/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 05 Apr 2022 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Submerged</title>
+          <pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2022/submerged/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2022/submerged/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2022/submerged/">&lt;p&gt;A diver stands on the bottom, helmet line wandering all the way up to the thin band of the surface. Sibling of &lt;a href=&quot;&#x2F;oeuvre&#x2F;printmaking&#x2F;2018&#x2F;deep-sea&#x2F;&quot;&gt;Deep Sea&lt;&#x2F;a&gt; (2018) — the same predicament, revisited.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;IMG_3941.3cc26017edb19970.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;IMG_3941.b9d672eaede75f5c.jpg 480w, &#x2F;processed_images&amp;#x2F;IMG_3941.3cc26017edb19970.jpg 960w, &#x2F;processed_images&amp;#x2F;IMG_3941.bfd85b1a16e1be6c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Intaglio drypoint print of a small figure wearing a round diving helmet standing at the bottom of the composition, with a cloud of bubbles rising from the helmet up toward a dense tangle of scribbled lines at the top edge, hand-colored with teal-green at the water&amp;#x27;s surface.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Submerged by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Deep Sea</title>
+          <pubDate>Sun, 25 Feb 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2018/deep-sea/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2018/deep-sea/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2018/deep-sea/">&lt;p&gt;A figure in a diving helmet stands on the bottom, while a single line wanders all the way up to the thin green-and-red band of the surface, impossibly far above. Some days are like that. The air is up there somewhere.&lt;&#x2F;p&gt;
+&lt;p&gt;8 x 10 inches. Drypoint Intaglio Print. Handcolored with watercolor. 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018094.01368f2b08413d6c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;printsNovember2018094.8ab0e47dec68f385.jpg 480w, &#x2F;processed_images&amp;#x2F;printsNovember2018094.01368f2b08413d6c.jpg 960w, &#x2F;processed_images&amp;#x2F;printsNovember2018094.8cc1b90ef3fb138c.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Drypoint intaglio print hand-colored with watercolor, depicting a small deep-sea diver standing at the bottom with a round helmet, looking up at a tangled mass of seaweed or coral along the top edge painted in teal green and red-orange.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Deep Sea by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

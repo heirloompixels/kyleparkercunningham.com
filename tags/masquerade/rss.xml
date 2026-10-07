@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - masquerade</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/masquerade/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Wed, 05 May 2021 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>cydney and val</title>
+          <pubDate>Wed, 05 May 2021 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2021/cydney-and-val/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2021/cydney-and-val/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2021/cydney-and-val/">&lt;p&gt;Cydney and Val in their masks from the DaDa Ball, one arm slung over a shoulder, two pairs of eyes looking out from behind turquoise paper-mâché. A portrait of mischief held still long enough to paint. Some faces you paint for the bones; these two I painted for the glint.&lt;&#x2F;p&gt;
+&lt;p&gt;oil on linen
+16x20 inches
+Winter 2020 - Spring 2021
+private collection&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;cydney_val.6a341043e4f2776c.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;cydney_val.ba6a06a8f84c1050.jpg 480w, &#x2F;processed_images&amp;#x2F;cydney_val.6a341043e4f2776c.jpg 960w, &#x2F;processed_images&amp;#x2F;cydney_val.643e46fc8fe23241.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil on linen portrait of two people wearing matching turquoise flame-shaped masquerade masks, one in a polka-dot orange shirt and dark jacket, the other in a yellow shirt with a red bow tie, against a dark background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;cydney and val by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

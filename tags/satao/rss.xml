@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - satao</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/satao/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Thu, 04 Dec 2014 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Arm Fauna</title>
+          <pubDate>Thu, 04 Dec 2014 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2014/arm-fauna/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2014/arm-fauna/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2014/arm-fauna/">&lt;p&gt;13 by 21 inches. Oil on Handwoven Linen. 2014. Private Collection.&lt;&#x2F;p&gt;
+&lt;p&gt;I painted this on the occasion of reading about the death of Satao. I had not known before of this creature but his story really moved my heart.&lt;&#x2F;p&gt;
+&lt;p&gt;So I gave this elephant a rocket so as he might ever so slightly even the playing field.&lt;&#x2F;p&gt;
+&lt;p&gt;This piece was one of my first fully successful paintings on this theme of an anamistic solarpunk future. One where the remaining animals of the world use the detritus of the collapsed human civilization to survivie in a post climate changed world.&lt;&#x2F;p&gt;
+&lt;p&gt;At the heart of this series is my intense belief in the intelligence of nature. We are all created form the magic which is life and to believe we are above or beyond the natural world is core mistake in our modern societies.&lt;&#x2F;p&gt;
+&lt;p&gt;This body of work, absurd as it is, looks to inspire hope as well as instill fear for the near term future of our planet in the face of unimaginable change.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;arm_fauna-copy.708f52b1d2601485.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;arm_fauna-copy.f96aa1b892b766ac.jpg 480w, &#x2F;processed_images&amp;#x2F;arm_fauna-copy.708f52b1d2601485.jpg 960w, &#x2F;processed_images&amp;#x2F;arm_fauna-copy.1221779660d599a0.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting on handwoven linen of a dark elephant harnessed to a silver rocket on wheels against a bright golden-yellow textured background, with a glowing red patch on the elephant&amp;#x27;s back.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Arm Fauna by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

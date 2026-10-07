@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - binoculars</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/binoculars/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 04 Dec 2015 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Binoculars</title>
+          <pubDate>Fri, 04 Dec 2015 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2015/binoculars/">&lt;p&gt;A creature that is mostly neck — a long striped column rising out of ordinary baggy trousers — with binoculars for a head. All watcher, no talker. I have spent enough of my life glassing ridgelines that this may be a self portrait of one particular muscle.&lt;&#x2F;p&gt;
+&lt;p&gt;20 by 30 inches. Oil on Panel. Walnut Frame. 2015.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;binoculars.d9507889e347224b.png&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;binoculars.03a23599090013a3.png 480w, &#x2F;processed_images&amp;#x2F;binoculars.d9507889e347224b.png 960w, &#x2F;processed_images&amp;#x2F;binoculars.478c875ffcf036c0.png 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting on panel of a surreal standing figure with a long ribbed neck topped by binocular-like eyes, wearing white pants, centered against a textured beige and yellow background with an orange ground plane.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Binoculars by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

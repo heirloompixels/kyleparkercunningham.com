@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - daydream</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/daydream/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Tue, 07 Feb 2023 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Daydream</title>
+          <pubDate>Tue, 07 Feb 2023 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/printmaking/2023/daydream/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/printmaking/2023/daydream/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/printmaking/2023/daydream/">&lt;p&gt;A small figure, chin in hand, with a cluster of crystal geometry blooming out of the head — and around it, nothing but open plate tone. That&#x27;s the true anatomy of a daydream: mostly empty space, one bright formation.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;daydream-4.1ac561df324350b9.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;daydream-4.585cd04137fc8dc4.jpg 480w, &#x2F;processed_images&amp;#x2F;daydream-4.1ac561df324350b9.jpg 960w, &#x2F;processed_images&amp;#x2F;daydream-4.68db22e3090986a6.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Black and white intaglio print of a small face in profile at center, crowned with angular crystalline geometric forms, floating against a vast scratched and textured gray field.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Daydream by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

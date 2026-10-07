@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - scraped surface</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/scraped-surface/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 16 Mar 2018 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Seven</title>
+          <pubDate>Fri, 16 Mar 2018 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2018/seven/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2018/seven/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2018/seven/">&lt;p&gt;Seven white figures standing in a row, scraped and weathered into the gray like old fence posts, like cottonwoods in winter, like people waiting for something to begin. Count them and the title is done explaining; stand with them a while and it isn&#x27;t.&lt;&#x2F;p&gt;
+&lt;p&gt;oil on canvas. 20 by 16 inches. Spring 2018.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;seven-orignal.81c3278f856a4312.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;seven-orignal.a3745584f9f6f00c.jpg 480w, &#x2F;processed_images&amp;#x2F;seven-orignal.81c3278f856a4312.jpg 960w, &#x2F;processed_images&amp;#x2F;seven-orignal.8fe61ac65e3106c1.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of seven tall, narrow white figures standing in a row against a muted gray-blue background with yellow accents, rendered in loose vertical brushstrokes.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Seven by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>

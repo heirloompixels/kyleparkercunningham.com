@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - ecology</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/ecology/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>does math control nature?</title>
+          <pubDate>Mon, 29 Jul 2024 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2024/does-math-control-nature/">&lt;p&gt;An exploration of the fibonacci sequence in nature, questioning whether mathematical patterns are the foundation of natural forms or merely our way of understanding them.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;does-math-control-nature-.4aaa6fe3b072a471.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;does-math-control-nature-.f7151edd0abba81f.jpg 480w, &#x2F;processed_images&amp;#x2F;does-math-control-nature-.4aaa6fe3b072a471.jpg 960w, &#x2F;processed_images&amp;#x2F;does-math-control-nature-.20ceb2a752e3aadb.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting of a spiral form composed of segmented concentric arcs in coral, salmon, and rose tones with white gaps between the segments, centered on a pale cream background, resembling a Fibonacci-like geometric pattern.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;does math control nature? by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+      <item>
+          <title>Parasitic Pollen Eaters</title>
+          <pubDate>Thu, 05 Dec 2013 00:00:00 +0000</pubDate>
+          <author>Unknown</author>
+          <link>https://kyleparkercunningham.com/oeuvre/painting/2013/parasitic-pollen-eaters/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/painting/2013/parasitic-pollen-eaters/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/painting/2013/parasitic-pollen-eaters/">&lt;p&gt;21 by 34 inches. Oil on Linen. 2013. Private Collection.&lt;&#x2F;p&gt;
+&lt;p&gt;The bees build bubbles to protect themselves from the poisons dropped by drones on the human&#x27;s crops. The bubbles allow them to gather pollen while not being infected. They take the pollen back to their beehive laboratory, work some bee alchemy and like magic pure, perfect honey is once again produced.&lt;&#x2F;p&gt;
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;parasitic_pollen_eaters-copy.e79859b3c731ead0.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;parasitic_pollen_eaters-copy.7184100ea7469155.jpg 480w, &#x2F;processed_images&amp;#x2F;parasitic_pollen_eaters-copy.e79859b3c731ead0.jpg 960w, &#x2F;processed_images&amp;#x2F;parasitic_pollen_eaters-copy.8fb6d48437d21901.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    alt=&quot;Oil painting on raw linen of yellow-and-black bees enclosed in translucent protective bubbles, floating among tall green-stemmed wildflowers with yellow blooms against a natural linen-toned background.&quot;
+    loading=&quot;lazy&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Parasitic Pollen Eaters by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>
