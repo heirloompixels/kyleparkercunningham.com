@@ -53,7 +53,7 @@
   <a class="chip {% if disc == 'sculpture' %}on{% endif %}" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip {% if disc == 'exhibitions' %}on{% endif %}" href="{{ exhibitions.permalink }}">Exhibitions</a>
   <a class="chip {% if disc == 'philosophy' %}on{% endif %}" href="{{ philosophy.permalink }}">Philosophy</a>
-  <a class="chip {% if disc == 'book-binding' %}on{% endif %}" href="{{ book_binding.permalink }}">Book Binding</a>
+  {% if book_binding.pages | length > 0 %}<a class="chip {% if disc == 'book-binding' %}on{% endif %}" href="{{ book_binding.permalink }}">Book Binding</a>{% endif %}
   <a class="chip {% if disc == 'other' %}on{% endif %}" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>

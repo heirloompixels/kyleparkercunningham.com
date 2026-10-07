@@ -1,6 +1,6 @@
 +++
 transparent = true
+render = false
 page_template = "oeuvre/single.html"
 sort_by = "date"
-aliases = ["/oeuvre/philosophy/2026/"]
 +++

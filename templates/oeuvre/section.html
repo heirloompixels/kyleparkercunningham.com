@@ -78,7 +78,7 @@
   <a class="chip" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip" href="{{ exhibitions.permalink }}">Exhibitions</a>
   <a class="chip" href="{{ philosophy.permalink }}">Philosophy</a>
-  <a class="chip" href="{{ book_binding.permalink }}">Book Binding</a>
+  {% if book_binding.pages | length > 0 %}<a class="chip" href="{{ book_binding.permalink }}">Book Binding</a>{% endif %}
   <a class="chip" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
