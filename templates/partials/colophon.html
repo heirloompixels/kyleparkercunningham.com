@@ -34,19 +34,19 @@
   </div>
   <div class="cols">
     <div>
-      <h5>The Studio</h5>
+      <h2 class="foot-h">The Studio</h2>
       <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
     </div>
     <div>
-      <h5>Contact</h5>
-      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a><a href="{{ get_url(path='/collect/') }}">Collect</a><a href="{{ get_url(path='/rss.xml') }}">RSS</a></p>
+      <h2 class="foot-h">Contact</h2>
+      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a rel="me" href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a><a href="{{ get_url(path='/collect/') }}">Collect</a><a href="{{ get_url(path='/rss.xml') }}">RSS</a></p>
     </div>
     <div>
-      <h5>The Archive</h5>
+      <h2 class="foot-h">The Archive</h2>
       <p><a href="{{ get_url(path='/oeuvre/') }}"><b>{{ works_count }}</b> works catalogued</a><a href="{{ get_url(path='/oeuvre/painting/') }}"><b>{{ n_pt }}</b> paintings</a>{% if live | length > 0 %}{% set ed = live | first %}<a href="{{ ed.permalink }}">Season <b>{{ ed.extra.numeral }}</b> live now</a>{% else %}<a href="{{ get_url(path='/editions/') }}">Between seasons</a>{% endif %}</p>
     </div>
     <div>
-      <h5>This Page</h5>
+      <h2 class="foot-h">This Page</h2>
       <p>Updated <b>{{ now() | date(format="%Y·%m·%d") }}</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
     </div>
   </div>

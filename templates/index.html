@@ -48,7 +48,7 @@
   .h29 .ed-head .roman{font-weight:300;font-size:clamp(4.5rem,13vw,9rem);line-height:.82;letter-spacing:-.03em}
   .h29 .ed-head .roman small{display:block;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--h29-accent);margin-top:.6rem;font-weight:400}
   .h29 .ed-head .label{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--h29-accent)}
-  .h29 .ed-head h3{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
+  .h29 .ed-head h2{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
   .h29 .ed-head .lifespan{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.08em;color:var(--h29-muted)}
 
   .h29 .issue{margin-top:3rem}
@@ -186,8 +186,8 @@
 {% set_global edition_numeral = "" %}
 {% if live | length > 0 %}{% set ed = live | first %}{% set_global edition_numeral = ed.extra.numeral %}{% endif %}
 
-{% set recent_painting = painting.pages | sort(attribute="date") | reverse | slice(end=6) %}
-{% set archive_rest = printmaking.pages | concat(with=installation.pages) | concat(with=sculpture.pages) | concat(with=exhibitions.pages) | concat(with=philosophy.pages) | concat(with=book_binding.pages) | concat(with=other.pages) | sort(attribute="date") | reverse | slice(end=6) %}
+{% set recent_painting = painting.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=6) %}
+{% set archive_rest = printmaking.pages | concat(with=installation.pages) | concat(with=sculpture.pages) | concat(with=exhibitions.pages) | concat(with=philosophy.pages) | concat(with=book_binding.pages) | concat(with=other.pages) | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=6) %}
 
 <div class="h29">
   <header class="h29-mast">
@@ -210,7 +210,7 @@
       <div class="roman">{{ edition.extra.numeral }}<small>{{ edition.extra.ornament }} {{ edition.extra.cover_tag | split(pat="— ") | last }}</small></div>
       <div>
         <div class="label">The Current Edition</div>
-        <h3>{{ edition.title }}</h3>
+        <h2>{{ edition.title }}</h2>
         <div class="lifespan">The Front Page · {% if edition.extra.kind == "season" %}Season{% else %}Edition{% endif %} {{ edition.extra.numeral }} · {{ edition.extra.lifespan }}</div>
       </div>
     </div>
@@ -225,7 +225,7 @@
       {# The season's field log, written once in /log/ and surfaced here while
          the edition is live. The edition's permanent page stays as authored. #}
       {% set log = get_section(path="log/_index.md") %}
-      {% set log_entries = log.pages | sort(attribute="date") | reverse | slice(end=3) %}
+      {% set log_entries = log.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=3) %}
       {% if log_entries | length > 0 %}
       <section class="ed-fieldlog">
         {% for e in log_entries %}
@@ -321,15 +321,15 @@
   </div>
   <div class="cols">
     <div>
-      <h5>The Studio</h5>
+      <h2 class="foot-h">The Studio</h2>
       <p>Truth or Consequences<br>New Mexico, USA<br>33.13° N, 107.25° W</p>
     </div>
     <div>
-      <h5>Contact</h5>
-      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a><a href="{{ get_url(path='/collect/') }}">Collect</a></p>
+      <h2 class="foot-h">Contact</h2>
+      <p><a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a><a rel="me" href="https://merveilles.town/@kpc">Mastodon</a><a href="{{ get_url(path='/about/') }}">About</a><a href="{{ get_url(path='/collect/') }}">Collect</a></p>
     </div>
     <div>
-      <h5>The Archive</h5>
+      <h2 class="foot-h">The Archive</h2>
       {% set editions = get_section(path="editions/_index.md") %}
       {% set live = editions.pages | filter(attribute="extra.status", value="live") %}
       {% set painting = get_section(path="oeuvre/painting/_index.md") %}
@@ -354,7 +354,7 @@
       <p><a href="{{ get_url(path='/oeuvre/') }}"><b>{{ works_count }}</b> works catalogued</a><br><a href="{{ get_url(path='/oeuvre/painting/') }}"><b>{{ n_pt }}</b> paintings</a><br>{% if live | length > 0 %}{% set ed = live | first %}<a href="{{ ed.permalink }}">Season <b>{{ ed.extra.numeral }}</b> live now</a>{% else %}<a href="{{ get_url(path='/editions/') }}">Between seasons</a>{% endif %}</p>
     </div>
     <div>
-      <h5>This Page</h5>
+      <h2 class="foot-h">This Page</h2>
       <p>Updated <b>{{ now() | date(format="%Y·%m·%d") }}</b><br>Set in Literata &amp;<br>IBM Plex Sans</p>
     </div>
   </div>

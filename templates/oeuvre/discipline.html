@@ -18,7 +18,7 @@
 {# Collect project-type works (sections under year folders) alongside leaf pages. #}
 {% set_global projects = [] %}
 {% for yp in section.subsections %}{% set ys = get_section(path=yp) %}{% for pp in ys.subsections %}{% set proj = get_section(path=pp) %}{% set_global projects = projects | concat(with=proj) %}{% endfor %}{% endfor %}
-{% set works = section.pages | sort(attribute="date") | reverse | concat(with=projects) | sort(attribute="components.2") | reverse %}
+{% set works = section.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | concat(with=projects) | sort(attribute="components.2") | reverse %}
 {% set n_total = works | length %}
 
 {% set oeuvre = get_section(path="oeuvre/_index.md") %}
@@ -53,7 +53,7 @@
   <a class="chip {% if disc == 'sculpture' %}on{% endif %}" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip {% if disc == 'exhibitions' %}on{% endif %}" href="{{ exhibitions.permalink }}">Exhibitions</a>
   <a class="chip {% if disc == 'philosophy' %}on{% endif %}" href="{{ philosophy.permalink }}">Philosophy</a>
-  <a class="chip {% if disc == 'book-binding' %}on{% endif %}" href="{{ book_binding.permalink }}">Book Binding</a>
+  {% if book_binding.pages | length > 0 %}<a class="chip {% if disc == 'book-binding' %}on{% endif %}" href="{{ book_binding.permalink }}">Book Binding</a>{% endif %}
   <a class="chip {% if disc == 'other' %}on{% endif %}" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
@@ -83,7 +83,7 @@
           {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
           {% if thumb %}
             {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
-            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
+            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ p.title }}" loading="lazy" decoding="async"></a>
           {% else %}
             <span class="noimg">no img</span>
           {% endif %}

@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block title %}{{ section.title }} — {{ config.title }}{% endblock %}
+{% block head_extra %}<script src="{{ get_url(path='/film.js') }}" defer></script>{% endblock %}
 
 {% block site_header %}
   {% include "partials/masthead.html" %}
@@ -19,11 +20,8 @@
   <div class="filmography">
     {% for film in section.pages %}
     <section class="film">
-      <figure class="film-embed">
-        <iframe src="{{ film.extra.embed | safe }}" title="{{ film.title }}"
-                loading="lazy" allowfullscreen
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-      </figure>
+      {% set film_title = film.title %}{% set film_embed = film.extra.embed %}
+      {% include "partials/film_embed.html" %}
       <h2><a href="{{ film.permalink }}"><em>{{ film.title }}</em></a></h2>
       {% if film.extra.format or film.extra.location %}
       <p class="film-meta">

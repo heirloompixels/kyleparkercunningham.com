@@ -16,13 +16,10 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-import tomllib
 
-ROOT = Path(__file__).resolve().parents[1]
-CONTENT = ROOT / "content"
+from zola_paths import CONTENT, ROOT, is_rendered, permalink_for, split_frontmatter, title_for
+
 OUTPUT = ROOT / "data" / "site_index.json"
-
-FRONTMATTER_RE = re.compile(r"^\+\+\+\s*$")
 
 # First path segment -> display group. Anything else falls to "Other pages".
 GROUPS = {
@@ -36,38 +33,6 @@ GROUPS = {
 }
 GROUP_ORDER = ["Home", "Oeuvre", "Projects", "Editions", "Log", "Cinema",
                "About & information", "Installations", "Other pages"]
-
-
-def split_frontmatter(path: Path):
-    text = path.read_text(encoding="utf-8")
-    lines = text.splitlines()
-    if not lines or not FRONTMATTER_RE.match(lines[0]):
-        return {}, text
-    for i in range(1, len(lines)):
-        if FRONTMATTER_RE.match(lines[i]):
-            raw = "\n".join(lines[1:i])
-            body = "\n".join(lines[i + 1:])
-            try:
-                return tomllib.loads(raw), body
-            except tomllib.TOMLDecodeError:
-                return {}, body
-    return {}, text
-
-
-def permalink_for(rel: Path) -> str:
-    if rel.name == "_index.md":
-        return "/" if rel.parent == Path(".") else f"/{rel.parent.as_posix()}/"
-    if rel.name == "index.md":
-        return f"/{rel.parent.as_posix()}/"
-    return f"/{rel.with_suffix('').as_posix()}/"
-
-
-def title_for(rel: Path, fm: dict) -> str:
-    if fm.get("title"):
-        return str(fm["title"])
-    if rel.name == "_index.md" and rel.parent == Path("."):
-        return "Home"
-    return rel.parent.name.replace("-", " ").replace("_", " ").title()
 
 
 def has_prose(body: str) -> bool:
@@ -93,18 +58,17 @@ def author_for(rel: Path, fm: dict, body: str) -> str:
 
 def main() -> None:
     entries = []
-    for md in CONTENT.rglob("*.md"):
+    for md in sorted(CONTENT.rglob("*.md")):
         rel = md.relative_to(CONTENT)
         fm, body = split_frontmatter(md)
-        if fm.get("draft") is True:
-            continue  # excluded from production builds
-        seg = rel.parts[0] if rel.parts and rel.name != "_index.md" or len(rel.parts) > 1 else "home"
+        if not is_rendered(rel, fm):
+            continue  # drafts and render = false never reach the site
         first = rel.parts[0] if rel.name != "_index.md" or rel.parent != Path(".") else "home"
         group = "Home" if (rel.name == "_index.md" and rel.parent == Path(".")) \
             else GROUPS.get(first, "Other pages")
         entries.append({
             "title": title_for(rel, fm),
-            "permalink": permalink_for(rel),
+            "permalink": permalink_for(rel, fm),
             "path": rel.parent.as_posix() if rel.parent != Path(".") else "",
             "group": group,
             "author": author_for(rel, fm, body),

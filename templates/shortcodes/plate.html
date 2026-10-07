@@ -1,9 +1,10 @@
 {% set alt_text = alt | default(value="") %}
 {% set t = title | default(value="") %}
 {% set m = meta | default(value="") %}
-{% set img_sm = resize_image(path=path, width=480, op="fit_width") %}
-{% set img_md = resize_image(path=path, width=960, op="fit_width") %}
-{% set img_lg = resize_image(path=path, width=1600, op="fit_width") %}
+{% set p_lower = path | lower %}{% if p_lower is ending_with(".png") %}{% set fmt = "jpg" %}{% else %}{% set fmt = "auto" %}{% endif %}
+{% set img_sm = resize_image(path=path, width=480, op="fit_width", format=fmt) %}
+{% set img_md = resize_image(path=path, width=960, op="fit_width", format=fmt) %}
+{% set img_lg = resize_image(path=path, width=1600, op="fit_width", format=fmt) %}
 <figure class="ed-plate">
   <img
     src="/{{ img_md.static_path | replace(from='static/', to='') }}"

@@ -8,6 +8,9 @@ description = "Artist portfolio featuring painting, printmaking, and cinema"
 # The default language; used in feeds.
 default_language = "en"
 
+# The feeds' author for every item; without it each item says "Unknown".
+author = "Kyle Parker Cunningham"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -37,6 +40,14 @@ taxonomies = [
 # Put all your custom variables here
 author = "Kyle Parker Cunningham"
 email = "analogkyle@gmail.com"
+# Kyle's own profiles elsewhere: schema.org sameAs on every page's structured data.
+same_as = [
+  "https://merveilles.town/@kpc",
+  "https://instagram.com/kyleparkercunningham",
+  "https://facebook.com/kyleparkercunningham",
+]
+# The catalogue of record. Works on this site link to it from their structured data.
+archive_url = "https://archive.kyleparkercunningham.com"
 # Fallback social-share image (path relative to content/) for pages that have
 # no co-located photo of their own — e.g. the homepage and section indexes.
 og_default_image = "oeuvre/painting/2024/the-river-in-the-sky/the-river-in-the-sky.jpg"
