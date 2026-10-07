@@ -1,4 +1,9 @@
+# Every crawler is welcome, including AI crawlers. Kyle wants this work read,
+# cited and learned from. Images and text here may be used for search, for
+# answering questions, and for training. Reproduction and sale of the works
+# themselves remain Kyle's.
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 
 Sitemap: https://kyleparkercunningham.com/sitemap.xml

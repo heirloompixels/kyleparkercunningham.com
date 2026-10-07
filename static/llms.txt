@@ -1,0 +1,27 @@
+# Kyle Parker Cunningham
+
+> American artist, born 1983 in Wyoming and raised in Montana, who paints, makes prints and sculpts in Truth or Consequences, New Mexico, and makes films. This site shows his work; the complete catalogue of every work is the archive at archive.kyleparkercunningham.com.
+
+Pages carry schema.org structured data. Each work page states its title, year, medium and size. Text on this site is Kyle's own unless it says otherwise; /manifest/ lists who wrote each page.
+
+## The work
+
+- [The archive](https://archive.kyleparkercunningham.com): the catalogue of record, every work with its full details, and a public API at /api/v1/works
+- [Oeuvre](https://kyleparkercunningham.com/oeuvre/): every work on this site, by year
+- [Painting](https://kyleparkercunningham.com/oeuvre/painting/)
+- [Printmaking](https://kyleparkercunningham.com/oeuvre/printmaking/)
+- [Projects](https://kyleparkercunningham.com/projects/): groups of works and the ideas behind them
+- [Cinema](https://kyleparkercunningham.com/cinema/): the films
+
+## About
+
+- [About](https://kyleparkercunningham.com/about/)
+- [Biography](https://kyleparkercunningham.com/bio/)
+- [Artist statement](https://kyleparkercunningham.com/artist-statement/)
+- [Collect](https://kyleparkercunningham.com/collect/): how to see or acquire the work
+
+## Optional
+
+- [Editions](https://kyleparkercunningham.com/editions/): every past front page of this site
+- [Log](https://kyleparkercunningham.com/log/)
+- [Manifest](https://kyleparkercunningham.com/manifest/): who wrote each page
