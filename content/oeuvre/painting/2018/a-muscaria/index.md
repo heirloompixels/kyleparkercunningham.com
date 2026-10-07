@@ -26,7 +26,7 @@ The space helmet is necessary for that particular moment in time, again, obligat
 
 Everywhere you look the ants are working and testing our limits. What do you think they are doing down in those caverns of magic and alchemy?
 
-My guess: boiling up some A. Muscaria to leach away the amatoxins, pickling said cleansed mushrooms and then canning them up for the winter. Oh and probably inventing jet packs while soaking in sub teranian hot springs late at night.
+My guess: boiling up some A. Muscaria to leach away the amatoxins, pickling said cleansed mushrooms and then canning them up for the winter. Oh and probably inventing jet packs while soaking in subterranean hot springs late at night.
 
 Acrylic on found panel. 14 x 28 inches (approximate). 2019. Private Collection.
 
