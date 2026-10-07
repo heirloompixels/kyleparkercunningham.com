@@ -98,6 +98,22 @@ a:focus-visible {
   color: var(--ink);
 }
 
+/* A visible ring for keyboard focus on anything interactive. */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+main:focus { outline: none; }
+
+/* Hidden until a keyboard user tabs to it; then it sits top-left. */
+.skip-link {
+  position: absolute; left: 0.75rem; top: -3rem; z-index: 100;
+  padding: 0.55rem 0.9rem; background: var(--ink); color: var(--bg);
+  font-family: "Inconsolata", monospace; font-size: 0.8rem; letter-spacing: 0.08em;
+  text-decoration: none;
+}
+.skip-link:focus { top: 0.75rem; color: var(--bg); }
+
 img,
 video,
 iframe {
@@ -766,7 +782,9 @@ table.ledger {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.6rem;
   border-top: 1px solid var(--line); padding-top: 1.6rem;
 }
-.foot .cols h5 {
+/* Footer headings are h2 (the page's h1 is above them); styled small here. */
+.foot .cols .foot-h {
+  font-family: inherit; line-height: inherit; margin-top: 0;
   font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase;
   color: var(--accent); margin-bottom: 0.6rem; font-weight: 400;
 }
@@ -840,6 +858,30 @@ table.ledger {
 .film-embed {
   margin: 0 0 1.2rem;
   iframe { width: 100%; aspect-ratio: 16 / 9; height: auto; border: 0; display: block; }
+}
+/* Click-to-load placard; static/film.js swaps it for the player. */
+.film-facade .film-play {
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 0.4rem;
+  aspect-ratio: 16 / 9; padding: clamp(1rem, 4vw, 2rem);
+  background: var(--ink); color: var(--bg); text-decoration: none;
+  position: relative;
+}
+.film-facade .film-play-icon {
+  position: absolute; top: 50%; left: 50%; translate: -50% -50%;
+  width: 4.5rem; height: 4.5rem; border-radius: 50%;
+  border: 2px solid var(--bg); transition: background 0.15s ease;
+}
+.film-facade .film-play-icon::after {
+  content: ""; position: absolute; top: 50%; left: 54%; translate: -50% -50%;
+  border-style: solid; border-width: 0.75rem 0 0.75rem 1.2rem;
+  border-color: transparent transparent transparent var(--bg);
+}
+.film-facade .film-play:hover .film-play-icon,
+.film-facade .film-play:focus-visible .film-play-icon { background: var(--accent); }
+.film-facade .film-play-title { font-size: var(--step-1); }
+.film-facade .film-play-note {
+  font-family: "Inconsolata", monospace; font-size: 0.75rem;
+  letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.75;
 }
 .filmography .film h2 {
   font-weight: 300; font-size: var(--step-2); margin: 0 0 0.3rem;
