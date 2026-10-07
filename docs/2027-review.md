@@ -23,14 +23,21 @@ its index page). This file is the work around them.
 
 In order of what it costs to leave.
 
-1. **Prices and buyer names are public on GitHub.** This repo is public, and
-   `docs/archive/Kyle Oeuvre/Oeuvre-Table 1.csv` holds 114 prices and 11 buyer
-   names with sale dates, in history since 2026-06-23. It never reached the
-   website. Deleting the file stops nothing on its own: it has to be purged
-   from history (`git filter-repo`) and force-pushed, or the repo made
-   private (GitHub Pages from a private repo needs a paid plan). Both are
-   yours to choose. The `metadata_audit*.csv` files beside it should be checked
-   in the same pass.
+1. **Prices and buyer names were public on GitHub. — Purged 2026-10-07.**
+   Kyle: "clear this out however we need to but keep the site live." Every
+   branch was rewritten and force-pushed, with the site live throughout:
+   the price spreadsheet (at both of its historical paths), the four
+   `metadata_audit*.csv` files, `mockups/_build/raw/`, and a collector's name
+   on the Three Blue Corn page and its 18 feeds. A scan of every blob found
+   none left. **Still to do, by Kyle:** GitHub keeps the old commits reachable
+   by their IDs and through the closed PRs #1–4 until GitHub Support removes
+   them (support.github.com, "Remove sensitive data"; the old main tip was
+   `f769cd6`). The pre-purge history is in a bundle at
+   `~/kpc-site-private-backup/` on granite, with the spreadsheet beside it,
+   readable only by Kyle; the oeuvre database already holds its rows. The
+   archive's own Three Blue Corn page still names the collector — a one-field
+   edit to its `body_md` that wants Kyle's go-ahead. `scripts/backfill_from_csv.py`
+   now has no input; it was already exhausted.
 2. **HTTPS is not enforced.** `http://kyleparkercunningham.com/` answers 200
    with no redirect; the Pages setting is off. `docs/seo-and-cutover.md` says it
    is on, and is wrong. One command fixes it:
