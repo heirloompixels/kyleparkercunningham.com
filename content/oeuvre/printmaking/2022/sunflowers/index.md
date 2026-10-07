@@ -13,10 +13,7 @@ tags = [
 
 [extra]
 medium = "Intaglio Drypoint Print"
-author = "claude"
 +++
-Sunflowers in a mug, the big head spiraling with seed, hand colored in burnt orange. Numbered into the plate one pull at a time — an open-ended series, with each numbered print getting its portrait below.
-
 Intaglio Drypoint Print.
 
 ### Versions
