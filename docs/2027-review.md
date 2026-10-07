@@ -19,6 +19,60 @@ its index page). This file is the work around them.
 
 ---
 
+## Where it stands — evening of 2026-10-07
+
+Kyle: "lets settle all this other stuff, all the mechanical things, prose,
+etc. get it all up to snuff and then we can pivot to the new way." His calls:
+strip the drafted prose from the 80 work pages and keep the facts; leave the
+ten other drafted pages for him; keep the summer edition, cleaned; let
+Claude write to the archive.
+
+**Done, live now**
+- The public repo's history is purged of prices and buyers (§ 1 item 1).
+- HTTPS is enforced; plain http answers 301.
+- The archive: every one of the 80 drafts is off (descriptions and bodies now
+  match what the site keeps; seven works carry Kyle's own earlier words back),
+  the collector's name is gone from Three Blue Corn, 21 media typos fixed
+  ("LInen", "Acylic", "Diabond" → Dibond…), 20 pages no longer print their text
+  twice, and every image has alt text except the junk "Test" record. No record
+  had been edited by hand since the import, so nothing of Kyle's was overwritten.
+
+**Done, waiting for Kyle to merge** (this repo deploys on merge)
+- **#7** `claude/site-prose`: drafts off the 80 work pages, Kyle's earlier words
+  restored on seven, the summer edition's working notes gone and the 200's
+  tense fixed, 22 spelling fixes in his own pages.
+- **#8** `claude/site-fixes`: every item in § 2 "Site" — dead links, blank
+  pages, feeds, unique descriptions, JSON-LD on every work, PNGs (Paper Neck
+  Giraffes 8.7 MB → 0.5 MB on a phone), self-hosted fonts and click-to-play
+  films (no third-party request on load), the final catalogue PDF, skip link
+  and footer headings, stable order, README, robots.txt allowing AI training
+  and an llms.txt. It already contains #7; **merge #7 first, then #8.**
+- **oeuvre #8** `claude/kpc-open-to-models`: the archive's crawler policy per
+  instance — Kyle's opens to search, AI answers and training; Jeannie's is
+  byte-for-byte unchanged. Neither Cloudflare zone overrides it.
+- `claude/site-ci` (local only): CI on pull requests, actions pinned by commit,
+  Ubuntu 24.04. GitHub refused the push: this machine's token lacks the
+  `workflow` scope. Kyle runs `gh auth refresh -s workflow` and it can go up.
+
+**New questions for Kyle**
+- Nine 2023 print pages had Ghost-era text that reads as generated
+  (bottled-oxygen, crystal-tooth-whale print, daydream, dayhike, gardner,
+  in-the-pines, saber-tooth-puma, shade-cloud, tubed-pachydeerm). They are
+  off; say which, if any, are yours.
+- "Riverfront at the Stormcastlle" (private) shows the same painting and
+  photographs as the public "storm castle bluffs". One work?
+- "Nine Squares" and "Rework" carry the same photograph.
+- Titles that may be typos or may be meant: Stormcastlle, Oragami, Airborn,
+  Crystalized, Caraffe, the full stop on "Chanterelle, tall and proud."
+- Still open from § 1: the price on the archive (item 4), which films go
+  public (6), the facts in item 7, GitHub Support for the old commits (1).
+
+**Not done, and why:** duplicate records and slug renames need tools the
+archive doesn't expose (merge, delete, rename), so they wait for its admin;
+Evening Clouds is public while in progress and visibility can't be set from
+here either. The Zola 0.23 migration is skipped because the site is moving.
+The ten drafted non-work pages are Kyle's.
+
 ## 1. Needs Kyle, now
 
 In order of what it costs to leave.
@@ -38,11 +92,12 @@ In order of what it costs to leave.
    archive's own Three Blue Corn page still names the collector — a one-field
    edit to its `body_md` that wants Kyle's go-ahead. `scripts/backfill_from_csv.py`
    now has no input; it was already exhausted.
-2. **HTTPS is not enforced.** `http://kyleparkercunningham.com/` answers 200
+2. **HTTPS was not enforced. — Fixed 2026-10-07.** `http://kyleparkercunningham.com/` answers 200
    with no redirect; the Pages setting is off. `docs/seo-and-cutover.md` says it
    is on, and is wrong. One command fixes it:
    `gh api -X PUT repos/heirloompixels/kyleparkercunningham.com/pages -F https_enforced=true`.
-3. **Machine prose is live under your name.** 90 pages are marked
+3. **Machine prose is live under your name. — Off the archive 2026-10-07;
+   off the site when #7 merges.** 90 pages are marked
    `author = "claude"` (80 works, 10 others) and nothing on the page says so;
    about 41 are in your first person. The worst is
    `content/oeuvre/painting/2022/ken/`, where a model tells how Ken's wife
