@@ -13,14 +13,11 @@ tags = [
 ]
 
 [extra]
-author = "claude"
 medium = "Oil on Linen"
 dimensions = "16 x 20 inches"
 status = "sold"
 year_started = "2020"
 +++
-Cydney and Val in their masks from the DaDa Ball, one arm slung over a shoulder, two pairs of eyes looking out from behind turquoise paper-mâché. A portrait of mischief held still long enough to paint. Some faces you paint for the bones; these two I painted for the glint.
-
 oil on linen
 16x20 inches
 Winter 2020 - Spring 2021

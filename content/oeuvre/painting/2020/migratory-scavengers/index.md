@@ -13,13 +13,10 @@ tags = [
 ]
 
 [extra]
-author = "claude"
 medium = "Oil + 24kt gold leaf on ACM panel"
 dimensions = "8 x 18 1/2 inches"
 +++
 Space program detritus and grain binge daydreams.
-
-Sandhill cranes on gold leaf — the old religious ground reserved for saints, here given to the scavengers who will inherit the launch sites. Companion piece to [Bonsai Giant Sequoia](/oeuvre/painting/2020/bonsai-giant-sequoia/), painted the same year.
 
 Oil + 24kt gold leaf on ACM panel, 8 x 18 1/2 inches.
 

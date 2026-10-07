@@ -14,10 +14,7 @@ tags = [
 [extra]
 medium = "Intaglio Printmaking on Rives BFK"
 dimensions = "8 x 10 inches"
-author = "claude"
 +++
-A long, stooped figure plugged into the wall outlet by his own hair. Household current as life support, five years before the sky demonstrated the high-voltage version on me personally. The glitch of daily reality at its most literal: we are all on the grid.
-
 intaglio printmaking on rives bfk. 8 by 10 inches. 2018.
 
 {{ art_image(path="oeuvre/printmaking/2018/120-volts/120_volts_2.jpg", alt="Black and white intaglio print of a tall, thin figure standing in profile with a cord trailing from its head to a wall outlet, surrounded by dense crosshatched shadows in the upper left and dripping vertical lines.", caption="120 Volts by kyle parker cunningham") }}
