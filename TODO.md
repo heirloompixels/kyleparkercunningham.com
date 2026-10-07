@@ -54,6 +54,13 @@ Two kinds of work are mixed here, marked accordingly:
     sed — it can change rendering silently.
   Local zola is 0.23.2 now, so it can be verified before unpinning; the last
   known-good render is on the `gh-pages` branch to diff against.
+- [ ] **Stop deploying unused originals** [build] — Zola copies every file
+  co-located with a page into `public/`, so about 212 MB of full-size originals
+  that no page links to (only their resized variants are used) are deployed
+  and downloadable. Fixing it needs a build-pipeline step (prune unreferenced
+  originals from `public/` after `zola build`, before the deploy) or moving
+  originals out of the page bundles. Left for the move off Zola (see
+  docs/2027-review.md) unless it is needed sooner. Found 2026-10-07.
 - [x] **Add og:image / summary_large_image cards** [build] — done. Each page
   unfurls with its own first co-located photo (resized to 1200px at build
   time); the fallback painting is set in `config.toml` (`og_default_image`).
