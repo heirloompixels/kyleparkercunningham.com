@@ -24,6 +24,9 @@ kpc-site/
 
 ## Features
 
+As built in July 2026. These describe the site today, not rules for it —
+the stack is open since 2026-09-27; see `CLAUDE.md`.
+
 - **Minimal vanilla CSS**: No frameworks, clean and lightweight
 - **Mobile-responsive**: Works on all screen sizes  
 - **Fast loading**: Static files, minimal dependencies
