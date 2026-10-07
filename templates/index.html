@@ -48,7 +48,7 @@
   .h29 .ed-head .roman{font-weight:300;font-size:clamp(4.5rem,13vw,9rem);line-height:.82;letter-spacing:-.03em}
   .h29 .ed-head .roman small{display:block;font-family:var(--h29-mono);font-size:.7rem;letter-spacing:.28em;text-transform:uppercase;color:var(--h29-accent);margin-top:.6rem;font-weight:400}
   .h29 .ed-head .label{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--h29-accent)}
-  .h29 .ed-head h3{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
+  .h29 .ed-head h2{font-weight:300;font-size:clamp(1.9rem,5vw,3.2rem);font-style:italic;line-height:1.05;margin:.5rem 0 .7rem}
   .h29 .ed-head .lifespan{font-family:var(--h29-mono);font-size:.72rem;letter-spacing:.08em;color:var(--h29-muted)}
 
   .h29 .issue{margin-top:3rem}
@@ -210,7 +210,7 @@
       <div class="roman">{{ edition.extra.numeral }}<small>{{ edition.extra.ornament }} {{ edition.extra.cover_tag | split(pat="— ") | last }}</small></div>
       <div>
         <div class="label">The Current Edition</div>
-        <h3>{{ edition.title }}</h3>
+        <h2>{{ edition.title }}</h2>
         <div class="lifespan">The Front Page · {% if edition.extra.kind == "season" %}Season{% else %}Edition{% endif %} {{ edition.extra.numeral }} · {{ edition.extra.lifespan }}</div>
       </div>
     </div>
