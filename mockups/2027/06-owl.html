@@ -1,0 +1,732 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Owl</title>
+<meta name="description" content="Kyle Parker Cunningham's catalogue, read aloud at night by Owl, the studio's machine voice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300;1,400&family=Caveat:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a letter written in the dark. A narrow column of Owl's prose,
+   the owl and the moon kept to a sticky left margin on wide screens. */
+:root{
+  --ink:#08111f;        /* the night */
+  --ink-2:#0e1a2e;      /* paper of the night, a shade lifted */
+  --moon:#ece6d2;       /* moonlight: Owl's text */
+  --dim:#8c98ad;        /* labels, the visitor's side */
+  --faint:#3a4a64;      /* hairlines */
+  --lamp:#f0b866;       /* lamplight: Kyle's own hand */
+  --frost:#a9c6e8;      /* links, focus */
+  --f-owl:"Spectral", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --f-hand:"Caveat", "Segoe Print", "Bradley Hand", cursive;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--ink);color:var(--moon);font-family:var(--f-owl);font-weight:300;
+  font-size:clamp(17px,1.05rem + .25vw,20px);line-height:1.6;min-height:100vh;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased}
+#sky{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+.moonglow{position:fixed;z-index:0;pointer-events:none;top:-18vmax;right:-14vmax;width:52vmax;height:52vmax;border-radius:50%;
+  background:radial-gradient(circle at 50% 50%, rgba(236,230,210,.16) 0, rgba(236,230,210,.05) 28%, rgba(8,17,31,0) 62%)}
+.moon{position:fixed;z-index:0;pointer-events:none;top:clamp(28px,7vh,80px);right:clamp(24px,8vw,140px);
+  width:clamp(44px,6vw,84px);aspect-ratio:1;border-radius:50%;
+  background:radial-gradient(circle at 38% 36%, #fbf7e9 0, #e7dfc4 45%, #c9c0a2 100%);
+  box-shadow:0 0 60px 10px rgba(236,230,210,.18)}
+.moon::after{content:"";position:absolute;inset:0;border-radius:50%;
+  background:radial-gradient(circle at 64% 60%, rgba(120,112,90,.35) 0 9%, transparent 10%),
+             radial-gradient(circle at 30% 64%, rgba(120,112,90,.25) 0 6%, transparent 7%),
+             radial-gradient(circle at 58% 28%, rgba(120,112,90,.22) 0 5%, transparent 6%)}
+
+a{color:var(--frost);text-decoration-thickness:1px;text-underline-offset:.22em}
+a:hover{color:var(--moon)}
+:focus-visible{outline:2px solid var(--frost);outline-offset:4px;border-radius:2px}
+
+.page{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr);gap:0;
+  padding-inline:max(18px,env(safe-area-inset-left));padding-block:28px 120px;max-width:1240px;margin:0 auto}
+@media (min-width:980px){
+  .page{grid-template-columns:300px minmax(0,680px);gap:72px;padding-inline:48px;padding-top:56px;justify-content:start}
+}
+
+/* margin column */
+.margin{display:flex;gap:18px;align-items:flex-start}
+@media (min-width:980px){.margin{position:sticky;top:56px;align-self:start;flex-direction:column;gap:22px}}
+.owl{width:84px;flex:none}
+@media (min-width:980px){.owl{width:200px;margin-left:-8px}}
+.owl svg{width:100%;height:auto;display:block;overflow:visible}
+.eye{transform-box:fill-box;transform-origin:center;transition:transform .07s ease-in}
+.eye.shut{transform:scaleY(.08)}
+@media (max-width:979px){.moon{top:18px;right:16px;width:34px}.moonglow{top:-30vmax;right:-30vmax}.who{padding-right:44px}}
+.who{font-family:var(--f-mono);font-size:12px;line-height:1.55;color:var(--dim);letter-spacing:.02em;max-width:34ch}
+.who b{display:block;font-weight:500;color:var(--moon);letter-spacing:.24em;text-transform:uppercase;font-size:11px;margin-bottom:6px}
+.who p{margin:0 0 .8em}
+.margin-links{display:none}
+@media (min-width:980px){.margin-links{display:flex;flex-direction:column;gap:8px;font-family:var(--f-mono);font-size:12px}}
+
+/* the letter */
+.letter{min-width:0;padding-top:28px}
+@media (min-width:980px){.letter{padding-top:6px}}
+.dateline{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
+  display:flex;flex-wrap:wrap;gap:6px 18px;border-bottom:1px solid var(--faint);padding-bottom:12px;margin-bottom:32px}
+.turn{margin:0 0 44px}
+.owlsays p{margin:0 0 .9em;max-width:60ch;text-wrap:pretty}
+.owlsays p.lead{font-size:1.5em;line-height:1.3;font-weight:300;text-wrap:balance;letter-spacing:-.005em}
+.owlsays em{font-style:italic}
+.sig{font-family:var(--f-mono);font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--dim);margin-top:4px}
+.sig::before{content:"— "}
+
+/* writing reveal */
+.w{opacity:0;transition:opacity .5s ease}
+.w.on{opacity:1}
+
+/* the visitor's side: a pencilled note in the margin, not a bubble */
+.asked{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;color:var(--dim);margin:48px 0 20px;padding-left:16px;
+  border-left:1px solid var(--faint)}
+.asked span{color:var(--moon)}
+
+/* Kyle's own words */
+.kyle{margin:26px 0 30px;padding:4px 0 4px 22px;border-left:2px solid var(--lamp);max-width:56ch}
+.kyle q{display:block;font-family:var(--f-hand);font-weight:500;color:var(--lamp);font-size:1.7em;line-height:1.15;quotes:none}
+.kyle q::before{content:"\201C"}.kyle q::after{content:"\201D"}
+.kyle .src{display:block;margin-top:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--dim)}
+
+/* works */
+.works{display:grid;gap:44px;margin:30px 0 8px}
+.work{margin:0;min-width:0}
+.work .frame{display:block;background:var(--ink-2);position:relative;overflow:hidden;max-width:100%}
+.work img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;background:var(--ink-2);
+  animation:develop 1.8s ease-out both}
+@keyframes develop{from{filter:brightness(.35) saturate(.4) blur(2px)}to{filter:none}}
+.work.tall .frame{max-width:min(100%,520px)}
+.work figcaption{margin-top:12px;display:grid;gap:4px}
+.work .t{font-style:italic;font-size:1.25em;line-height:1.25;font-weight:400}
+.work .m{font-family:var(--f-mono);font-size:12px;color:var(--dim);letter-spacing:.03em}
+.work .c{margin-top:6px;max-width:58ch}
+.work .c::after{content:" — Owl";font-family:var(--f-mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);white-space:nowrap}
+.work .rec{font-family:var(--f-mono);font-size:12px;margin-top:4px}
+
+/* replies */
+.doors{margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px 14px;align-items:baseline}
+.doors .lbl{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);width:100%}
+.door{font:inherit;font-style:italic;font-size:1em;color:var(--moon);background:none;border:0;border-bottom:1px solid var(--faint);
+  padding:4px 0 3px;cursor:pointer;text-align:left;line-height:1.3}
+.door:hover{border-bottom-color:var(--moon)}
+.door:disabled{opacity:.35;cursor:default;border-bottom-color:transparent}
+.door + .door::before{content:"";}
+.exit{display:block;margin-top:18px;font-family:var(--f-mono);font-size:12px;letter-spacing:.04em}
+
+/* ask anything */
+.ask{position:sticky;bottom:0;z-index:5;margin-top:24px;padding:14px 0 calc(14px + env(safe-area-inset-bottom,0px));
+  background:linear-gradient(to top, var(--ink) 70%, rgba(8,17,31,0))}
+.ask form{display:flex;gap:12px;align-items:flex-end;border-bottom:1px solid var(--dim);padding-bottom:6px}
+.ask label{font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);display:block;margin-bottom:6px}
+.ask input{flex:1;min-width:0;background:none;border:0;color:var(--moon);font:inherit;font-style:italic;font-size:1.1em;padding:4px 0;outline:none}
+.ask input::placeholder{color:#55647d}
+.ask .go{font-family:var(--f-mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--moon);background:none;border:1px solid var(--faint);padding:8px 12px;cursor:pointer}
+.ask .go:hover{border-color:var(--moon)}
+.ask form:focus-within{border-bottom-color:var(--frost)}
+
+/* agents */
+details.agents{margin-top:40px;border-top:1px solid var(--faint);padding-top:16px;font-family:var(--f-mono);font-size:12px;color:var(--dim)}
+details.agents summary{cursor:pointer;letter-spacing:.16em;text-transform:uppercase;font-size:11px;list-style:none}
+details.agents summary::-webkit-details-marker{display:none}
+details.agents summary::before{content:"+ ";color:var(--moon)}
+details.agents[open] summary::before{content:"− "}
+details.agents p{max-width:62ch;line-height:1.6}
+details.agents pre{margin:12px 0 0;padding:16px;background:#050b15;border:1px solid var(--faint);color:#b8c7dc;
+  overflow:auto;max-height:420px;font-size:11.5px;line-height:1.55;white-space:pre}
+.ex{display:inline-block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink);background:var(--dim);padding:1px 6px;margin-right:6px;vertical-align:1px}
+
+.foot{margin-top:56px;font-family:var(--f-mono);font-size:11px;color:var(--dim);display:flex;flex-wrap:wrap;gap:8px 20px}
+
+@media (prefers-reduced-motion:reduce){
+  .w{transition:none;opacity:1}
+  .work img{animation:none}
+  #eyes-l,#eyes-r{transition:none}
+}
+</style>
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="moonglow" aria-hidden="true"></div>
+<div class="moon" aria-hidden="true"></div>
+
+<div class="page">
+  <aside class="margin" aria-label="About Owl">
+    <div class="owl" aria-hidden="true">
+      <svg viewBox="0 0 200 230" role="img">
+        <defs>
+          <radialGradient id="iris" cx="50%" cy="50%" r="50%">
+            <stop offset="0" stop-color="#f6d48a"/>
+            <stop offset=".62" stop-color="#d79a3c"/>
+            <stop offset="1" stop-color="#7a4a17"/>
+          </radialGradient>
+          <linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#1d2c47"/>
+            <stop offset="1" stop-color="#0f1a2d"/>
+          </linearGradient>
+        </defs>
+        <!-- branch -->
+        <path d="M-6 214 C 40 206, 120 210, 206 200" stroke="#2c3a52" stroke-width="5" fill="none" stroke-linecap="round"/>
+        <path d="M150 204 c 12 -10 22 -12 34 -10" stroke="#2c3a52" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <!-- body -->
+        <path d="M100 30 C 54 30, 30 64, 32 112 C 34 160, 56 200, 100 206 C 144 200, 166 160, 168 112 C 170 64, 146 30, 100 30 Z" fill="url(#body)" stroke="#3a4d6e" stroke-width="1.2"/>
+        <!-- ear tufts -->
+        <path d="M48 58 L 38 16 L 72 44 Z" fill="#1d2c47" stroke="#3a4d6e" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M152 58 L 162 16 L 128 44 Z" fill="#1d2c47" stroke="#3a4d6e" stroke-width="1.2" stroke-linejoin="round"/>
+        <!-- facial disc -->
+        <path d="M100 62 C 76 44, 40 56, 40 88 C 40 116, 70 128, 100 112 C 130 128, 160 116, 160 88 C 160 56, 124 44, 100 62 Z" fill="#24365a" stroke="#4b6189" stroke-width="1"/>
+        <!-- breast chevrons -->
+        <g id="chev" stroke="#5a6f96" stroke-width="1.4" fill="none" stroke-linecap="round" opacity=".85"></g>
+        <!-- eyes -->
+        <g>
+          <g class="eye"><circle cx="72" cy="88" r="22" fill="#0a1222" stroke="#e8dcb8" stroke-width="1.5"/>
+          <g id="eyes-l" style="transition:transform .25s ease-out">
+            <circle cx="72" cy="88" r="15" fill="url(#iris)"/>
+            <circle cx="72" cy="88" r="7.5" fill="#05080f"/>
+            <circle cx="68" cy="83.5" r="2.6" fill="#fffbe9"/>
+          </g></g>
+          <g class="eye"><circle cx="128" cy="88" r="22" fill="#0a1222" stroke="#e8dcb8" stroke-width="1.5"/>
+          <g id="eyes-r" style="transition:transform .25s ease-out">
+            <circle cx="128" cy="88" r="15" fill="url(#iris)"/>
+            <circle cx="128" cy="88" r="7.5" fill="#05080f"/>
+            <circle cx="124" cy="83.5" r="2.6" fill="#fffbe9"/>
+          </g></g>
+        </g>
+        <!-- beak -->
+        <path d="M100 98 L 93 110 L 100 124 L 107 110 Z" fill="#c9a35c" stroke="#7d6331" stroke-width=".8"/>
+        <!-- feet -->
+        <g stroke="#c9a35c" stroke-width="2.4" stroke-linecap="round" fill="none">
+          <path d="M82 204 l -6 9 M82 204 l 0 10 M82 204 l 6 9"/>
+          <path d="M118 204 l -6 9 M118 204 l 0 10 M118 204 l 6 9"/>
+        </g>
+      </svg>
+    </div>
+    <div class="who">
+      <b>Owl</b>
+      <p>Owl is software. It reads the catalogue; it doesn't speak for Kyle.</p>
+      <p>Anything in lamplight is Kyle's own words, quoted with the day he said them.</p>
+    </div>
+    <nav class="margin-links" aria-label="Elsewhere">
+      <a href="https://archive.kyleparkercunningham.com/">The archive, all of it</a>
+      <a href="index.html">Sketchbook</a>
+    </nav>
+  </aside>
+
+  <main class="letter" id="letter" aria-live="polite">
+    <div class="dateline">
+      <span id="dl-place">Truth or Consequences, New Mexico</span>
+      <span id="dl-time"></span>
+      <span>Kyle Parker Cunningham</span>
+    </div>
+    <div id="thread"></div>
+
+    <div class="ask">
+      <form id="askf" autocomplete="off">
+        <div style="flex:1;min-width:0">
+          <label for="q">Or ask Owl anything</label>
+          <input id="q" name="q" type="text" placeholder="blue whales, 2018, something for a small wall…" enterkeyhint="send">
+        </div>
+        <button class="go" type="submit">Ask</button>
+      </form>
+    </div>
+
+    <details class="agents" id="agents">
+      <summary>For agents</summary>
+      <p>The same catalogue, for software that reads on a person's behalf. A 2027 site would serve this beside every page. Below is the structured data for the works on screen now, generated as you go and also written into this page's head.</p>
+      <p><span class="ex">example</span>Agent entry points: <br>
+        GET https://archive.kyleparkercunningham.com/api/v1/works?q=whale<br>
+        GET https://kyleparkercunningham.com/llms.txt<br>
+        GET https://kyleparkercunningham.com/n/2024-007 &nbsp;(a work by its card number)</p>
+      <pre id="ld">[]</pre>
+    </details>
+
+    <div class="foot">
+      <a href="https://archive.kyleparkercunningham.com/">archive.kyleparkercunningham.com</a>
+      <span>Catalogue read 7 October 2026 · 159 public works</span>
+      <a href="index.html">sketchbook</a>
+    </div>
+  </main>
+</div>
+
+<script src="works.js"></script>
+<script>
+(() => {
+const W = window.WORKS || [];
+const ARCHIVE = "https://archive.kyleparkercunningham.com";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const bySlug = Object.fromEntries(W.map(w => [w.slug, w]));
+const $ = s => document.querySelector(s);
+const thread = $("#thread");
+const shownSlugs = new Set();
+let onScreen = [];
+
+/* ---------- Kyle's words, verbatim, with where they came from ---------- */
+const Q = {
+  radical: {t:"my art is more radical than your art.", s:"Kyle, said on camera at the easel, 6 October 2026 (The Most Radical Thing)"},
+  landscape: {t:"really a whole landscape", s:"Kyle, on the cloud canvas, said on camera 6 October 2026"},
+  hunch: {t:"everything is a conspiracy theory on top of an allegation, on top of a hunch", s:"Kyle, said on camera 6 October 2026"},
+  admiration: {t:"of pleasure, of admiration", s:"Kyle, on the shared emotion a painting can make, said on camera 6 October 2026"},
+  reflect: {t:"a broken, beautiful field of reflectivity, which is like what water particles would be doing in the sky.", s:"Kyle, Paint Talk, Techniques Edition, said on camera 6 October 2026 (The Top Layers)"},
+  pears: {t:"These clouds are better than pears.", s:"Kyle, said on camera, 2026 (Keep Talking)"},
+  robots: {t:"I've been talking to robots all summer", s:"Kyle, to the lens, summer 2026 (Portrait of Claude No. 1)"},
+  balance: {t:"A practice in balance after a lightning strike connected. A collection to bring calm to the mind in the chaos of the storm.", s:"Kyle, on Atmospheric Balance, written 1 October 2026"},
+  life: {t:"the artists work, foremost, is the artists life - the way a person chooses to live outside the framework of a society and commenting back to his peers.", s:"Kyle, typed to the studio, 27 September 2026"},
+  trail: {t:"i can walk 10 miles up a trail and capture [the] emotion of a moment felt through flesh", s:"Kyle, typed to the studio, 27 September 2026"},
+  butterfly: {t:"A butterfly carrying a sledge hammer is no less bizarre than sending a Tesla Roadster to Mars.", s:"From Kyle's published artist statement"}
+};
+
+/* ---------- helpers ---------- */
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const sleep = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+function size(w){
+  if(!w.h || !w.w) return "";
+  const cm = v => (v/10).toFixed(v % 10 ? 1 : 0), inch = v => (v/25.4).toFixed(1).replace(/\.0$/,"");
+  return `${cm(w.h)} × ${cm(w.w)} cm (${inch(w.h)} × ${inch(w.w)} in)`;
+}
+function caption(w){
+  // Owl's factual caption: the first clause of the catalogue's image description, plus where it sits.
+  let a = (w.alt || "").split(/(?<=\.)\s/)[0].replace(/\.$/,"");
+  a = a.replace(/^(Realistic |Minimalist |Whimsical )?(oil painting|acrylic painting|intaglio drypoint print|drypoint intaglio print|painting|print|photograph|watercolor|gouache)( of| featuring| showing)?\s*/i, "");
+  const bits = [];
+  if(a) bits.push(a.charAt(0).toUpperCase() + a.slice(1) + ".");
+  const c = w.coll.find(c => c[0]);
+  if(c) bits.push(c[1] ? `Number ${c[1]} of ${c[0]}.` : `One of the eight paintings in ${c[0]}.`);
+  else if(w.tags.includes("the memory of atmosphere")) bits.push("Part of the memory of atmosphere.");
+  if(!a){
+    const t = w.tags.filter(x => !/^(private collection|sold|framed|series|hand-colored)$/.test(x)).slice(0,3);
+    bits.push(t.length ? `Catalogued under ${t.join(", ")}.` : `Catalogued in ${w.year}; its description is still to be written.`);
+  }
+  return bits.join(" ");
+}
+
+/* ---------- writing ---------- */
+async function writeOwl(paras, opts={}){
+  const box = document.createElement("div");
+  box.className = "turn owlsays";
+  thread.appendChild(box);
+  for(let i=0;i<paras.length;i++){
+    const p = document.createElement("p");
+    if(i===0 && opts.lead) p.className = "lead";
+    box.appendChild(p);
+    // reveal word by word, like a pen moving
+    const words = paras[i].split(/(\s+)/);
+    for(const wd of words){
+      const s = document.createElement("span");
+      s.className = "w"; s.innerHTML = wd;
+      p.appendChild(s);
+    }
+    const spans = [...p.querySelectorAll(".w")];
+    for(const s of spans){ s.classList.add("on"); if(!reduce && s.textContent.trim()) await sleep(28); }
+    await sleep(160);
+  }
+  const sig = document.createElement("div"); sig.className="sig"; sig.textContent="Owl";
+  box.appendChild(sig);
+  return box;
+}
+function writeKyle(q, into){
+  const b = document.createElement("blockquote");
+  b.className = "kyle";
+  b.innerHTML = `<q>${esc(q.t)}</q><span class="src">${esc(q.s)}</span>`;
+  (into || thread).appendChild(b);
+}
+function writeAsked(text){
+  const d = document.createElement("p");
+  d.className = "asked";
+  d.innerHTML = `You asked: <span>${esc(text)}</span>`;
+  thread.appendChild(d);
+}
+function showWorks(list, into){
+  const g = document.createElement("div");
+  g.className = "works";
+  for(const w of list){
+    shownSlugs.add(w.slug);
+    const tall = w.ih / w.iw > 1.15;
+    const f = document.createElement("figure");
+    f.className = "work" + (tall ? " tall" : "");
+    const meta = [w.date || w.year, w.medium, size(w)].filter(Boolean).map(esc).join(" · ");
+    f.innerHTML = `<a class="frame" href="${ARCHIVE}/works/${encodeURIComponent(w.slug)}" target="_blank" rel="noopener" aria-label="${esc(w.title)}, full record in the archive">
+        <img src="${window.img(w, 960)}" alt="${esc(w.alt || w.title)}" width="${w.iw}" height="${w.ih}" loading="lazy" decoding="async"></a>
+      <figcaption><span class="t">${esc(w.title)}</span><span class="m">${meta}</span>
+      <span class="c">${esc(caption(w))}</span>
+      <a class="rec" href="${ARCHIVE}/works/${encodeURIComponent(w.slug)}" target="_blank" rel="noopener">Its full record in the archive →</a></figcaption>`;
+    g.appendChild(f);
+  }
+  (into || thread).appendChild(g);
+  onScreen = onScreen.concat(list);
+  updateLD();
+}
+function offerDoors(keys, note){
+  const d = document.createElement("div");
+  d.className = "doors";
+  d.innerHTML = `<span class="lbl">${esc(note || "Write back")}</span>`;
+  for(const k of keys){
+    const b = document.createElement("button");
+    b.className = "door"; b.type = "button"; b.textContent = DOORS[k].label;
+    b.addEventListener("click", () => { closeDoors(); go(k, DOORS[k].label); });
+    d.appendChild(b);
+  }
+  const ex = document.createElement("a");
+  ex.className = "exit"; ex.href = ARCHIVE + "/"; ex.target = "_blank"; ex.rel = "noopener";
+  ex.textContent = "Everything is in the archive: all 159 public works, by year →";
+  d.appendChild(ex);
+  thread.appendChild(d);
+}
+function closeDoors(){ document.querySelectorAll(".door").forEach(b => b.disabled = true); }
+function settle(){
+  const last = thread.lastElementChild;
+  if(!last) return;
+  const top = last.getBoundingClientRect().top + scrollY - 90;
+  if(top > scrollY + innerHeight*0.25) scrollTo({top, behavior: reduce ? "auto" : "smooth"});
+}
+async function think(){ await sleep(380); }
+
+/* ---------- picking works ---------- */
+const S = (...slugs) => slugs.map(s => bySlug[s]).filter(Boolean);
+function fresh(list, n){ // prefer what has not been shown yet, then the best images
+  const a = list.filter(w => !shownSlugs.has(w.slug));
+  const pool = a.length >= Math.min(n, list.length) ? a : list;
+  return pool.slice().sort((x,y) => (y.best - x.best)).slice(0, n);
+}
+
+/* ---------- the doors ---------- */
+const DOORS = {
+  minute: {label:"I've got one minute"},
+  calm: {label:"Show me something calm"},
+  animals: {label:"The strange animals"},
+  now: {label:"What's he making right now?"},
+  who: {label:"Who is he?"},
+  collect: {label:"I collect, or I'm curating"},
+  prints: {label:"The prints"},
+  more: {label:"Show me three more"}
+};
+let lastPool = [], lastTopic = "";
+
+async function go(key, label){
+  writeAsked(label);
+  settle();
+  await think();
+  const fn = TOPICS[key];
+  if(fn) await fn();
+  settle();
+}
+
+const TOPICS = {
+  async minute(){
+    await writeOwl(["Then three paintings, ten years apart, and one sentence of his.",
+      "A creature from 2018, made when he was putting breathing gear on animals. A sky from 2024, after the lightning. And a small watercolor from this summer."]);
+    showWorks(S("crystal-tooth-whale","the-river-in-the-sky","evening-clouds"));
+    writeKyle(Q.trail);
+    await writeOwl(["That's the minute. If you have another, ask me for anything: a color, a year, an animal."]);
+    offerDoors(["calm","animals","now"]);
+  },
+  async calm(){
+    lastTopic = "calm";
+    const ab = W.filter(w => w.coll.some(c => c[0]==="Atmospheric Balance"));
+    lastPool = ab;
+    await writeOwl(["Atmospheric Balance. Eight oil paintings on linen, made in the summer of 2024 at Tres Piedras, New Mexico, and hung together as one work.",
+      "He wrote this about them on the first of October:"]);
+    writeKyle(Q.balance);
+    showWorks(fresh(ab, 3));
+    await writeOwl([`There are ${ab.length - 3} more in the set. Look slowly; they were made to be looked at slowly.`]);
+    offerDoors(["more","now","minute"]);
+  },
+  async animals(){
+    lastTopic = "animals";
+    const pool = W.filter(w => w.tags.includes("animist solarpunk"));
+    lastPool = pool;
+    await writeOwl([`In the catalogue they're tagged <em>animist solarpunk</em>: ${pool.length} works where animals carry the technology people would need to survive what comes next. Radar on a rhino. A whale with crystal teeth. An elephant breathing through a tube.`,
+      "His statement puts it plainly:"]);
+    writeKyle(Q.butterfly);
+    showWorks(S("rhino-radar","crystal-tooth-whale-printmaking","tubed-pachydeerm","bison-robotics"));
+    offerDoors(["more","prints","who"]);
+  },
+  async now(){
+    lastTopic = "now";
+    await writeOwl(["This autumn he is painting clouds, at the easel in Truth or Consequences Contemporary, and talking while he does it. The cloud canvas on the easel this week has no record in the catalogue yet, so I can't show it to you. I can show you what it sounds like.",
+      ]);
+    writeKyle(Q.landscape);
+    writeKyle(Q.reflect);
+    await writeOwl(["The newest works with a record are three small paintings from August, numbered in a run he calls The 200."]);
+    showWorks(S("absolute-potential","storm-castle-bluffs","evening-clouds"));
+    await writeOwl(['On the winter solstice, 21 December 2026, he begins a thousand new works in a year. <span class="ex">example</span> When it starts, this is where I would tell you the day\'s count and show you what came off the easel.']);
+    offerDoors(["calm","who","minute"]);
+  },
+  async who(){
+    lastTopic = "who";
+    await writeOwl(["Kyle Parker Cunningham. Born in Wyoming in 1983, raised in Montana, living now on the Rio Grande in Truth or Consequences, New Mexico, with the artist Jeannie Ortiz. He paints, makes prints on an etching press and a Vandercook, and films himself doing it.",
+      "This is the self-portrait in the catalogue, from 2019. Asked what the work is, he wrote this:"]);
+    showWorks(S("self-portrait"));
+    writeKyle(Q.life);
+    await writeOwl(["The paintings are one record of that life. The films are another; there are eighty-six of them now, most not yet released."]);
+    offerDoors(["now","animals","collect"]);
+  },
+  async collect(){
+    lastTopic = "collect";
+    await writeOwl(["I don't discuss prices; Kyle answers those himself. What I can tell you is what the catalogue records.",
+      `Of the 159 public works, 28 are recorded as sold and one, <em>absolute potential</em>, as available. Most of the rest have no status written down yet, which usually means: ask.`,
+      "For a curator, the strongest single group is Atmospheric Balance, eight paintings meant to hang as one."]);
+    showWorks(S("absolute-potential","twenty-one-years"));
+    await writeOwl(['Write to the studio from the work\'s record in the archive, or from <a href="https://kyleparkercunningham.com/collect/" target="_blank" rel="noopener">kyleparkercunningham.com/collect</a>. Every record has its dimensions, medium and date; exhibition history is still being filled in.']);
+    offerDoors(["calm","prints","who"]);
+  },
+  async prints(){
+    lastTopic = "prints";
+    const pool = W.filter(w => /intaglio|drypoint/i.test(w.medium || ""));
+    lastPool = pool;
+    await writeOwl([`${pool.length} prints in the catalogue are drypoint intaglio: lines scratched straight into a plate, inked, wiped, and pulled through the press. Many are hand-colored afterward, one sheet at a time, so no two in an edition match.`]);
+    showWorks(fresh(pool.filter(w => w.best), 3));
+    offerDoors(["more","animals","calm"]);
+  },
+  async more(){
+    if(!lastPool.length){ lastPool = W.filter(w => w.best); }
+    const next = fresh(lastPool, 3);
+    const left = lastPool.filter(w => !shownSlugs.has(w.slug)).length - next.filter(w=>!shownSlugs.has(w.slug)).length;
+    await writeOwl([next.every(w => shownSlugs.has(w.slug)) ? "You've seen all of this group. Here are three of them again." : "Three more."]);
+    showWorks(next);
+    if(left > 0) await writeOwl([`${left} more like these in the archive. I'd stop here, or try something else.`]);
+    offerDoors(["more","minute","now"].filter(k => !(k==="more" && left<=0)));
+  }
+};
+
+/* ---------- free text ---------- */
+const COLORS = {red:0, rust:15, orange:28, ochre:40, gold:45, yellow:52, green:120, olive:75, teal:175, turquoise:172, cyan:185,
+  blue:215, navy:225, indigo:240, violet:270, purple:280, lavender:265, pink:340, magenta:320, coral:12, salmon:10};
+const SYN = {
+  print:["intaglio","drypoint"], prints:["intaglio","drypoint"], printmaking:["intaglio","drypoint"], etching:["intaglio","drypoint"], drypoint:["drypoint"],
+  painting:["oil","acrylic"], paintings:["oil","acrylic"], oil:["oil"], watercolor:["watercolor","gouache"], watercolour:["watercolor","gouache"],
+  sculpture:["marble","found"], stone:["marble"], storm:["lightning","weather","cloud"], storms:["lightning","weather","cloud"], lightning:["lightning"],
+  sky:["sky","cloud"], clouds:["cloud"], weather:["weather","cloud"], animals:["animist solarpunk","creature","animal portrait"], animal:["animist solarpunk","creature","animal portrait"],
+  whales:["whale"], owls:["owl"], birds:["bird"], space:["space helmet","space exploration","moon"], robot:["machine"], robots:["machine"],
+  calm:["meditation","balance","minimal"], sad:["grief","climate grief"], funny:["humor","absurdism"], portrait:["portrait","face"], portraits:["portrait","face"],
+  tree:["tree","juniper","conifer"], trees:["tree","juniper","conifer"], desert:["desert","new mexico"], montana:["montana"], ocean:["ocean","whale"]
+};
+const STOP = new Set("a an the of and or to me some something show see with for in on any by is are i i'm im want like that this from about his he work works art please".split(" "));
+function hueOf(hex){
+  const n = parseInt(hex.slice(1),16), r=(n>>16&255)/255, g=(n>>8&255)/255, b=(n&255)/255;
+  const mx=Math.max(r,g,b), mn=Math.min(r,g,b), d=mx-mn; let h=0;
+  if(d===0) return {h:0,s:0,l:(mx+mn)/2};
+  if(mx===r) h=((g-b)/d)%6; else if(mx===g) h=(b-r)/d+2; else h=(r-g)/d+4;
+  h*=60; if(h<0) h+=360;
+  const l=(mx+mn)/2, s=d/(1-Math.abs(2*l-1));
+  return {h,s,l};
+}
+function colorScore(w, hue){
+  let best = 0;
+  (w.pal || []).forEach((hx,i) => {
+    const c = hueOf(hx); if(c.s < .22 || c.l < .12 || c.l > .9) return;
+    const dh = Math.min(Math.abs(c.h-hue), 360-Math.abs(c.h-hue));
+    const v = Math.max(0, 1 - dh/35) * (1 - i*0.12) * Math.min(1, c.s*1.4);
+    best = Math.max(best, v);
+  });
+  return best;
+}
+function interpret(text){
+  const raw = text.toLowerCase().trim();
+  const toks = raw.replace(/[^a-z0-9\s'-]/g," ").split(/\s+/).filter(t => t && !STOP.has(t));
+  const why = [];
+  let score = new Map(W.map(w => [w.slug, 0]));
+  const add = (w, v) => score.set(w.slug, score.get(w.slug) + v);
+  // size
+  const area = w => (w.h && w.w) ? w.h*w.w/1e6 : null;
+  if(/\b(small|little|tiny|small wall|apartment)\b/.test(raw)){ why.push("small, under about 30 × 30 cm"); W.forEach(w => { const a=area(w); if(a!==null && a < 0.09) add(w, 2.2); else if(a!==null) add(w,-1); else add(w,-1.5); }); }
+  if(/\b(big|large|huge|big wall|monumental)\b/.test(raw)){ why.push("the largest, over about 60 cm a side"); W.forEach(w => { const a=area(w); if(a!==null && a > 0.36) add(w, 2.6); else add(w,-1.5); }); }
+  // decades and years
+  const years = raw.match(/\b(20[012]\d)s?\b/g) || [];
+  years.forEach(y => {
+    if(y.endsWith("s")){ const d=+y.slice(0,4); why.push(`the ${y}`); W.forEach(w => { if(w.year>=d && w.year<d+10) add(w,1.2); }); }
+    else { why.push(`made in ${y}`); W.forEach(w => { if(w.year===+y) add(w,3); else add(w,-2); }); }
+  });
+  if(/\b(new|newest|latest|recent|now)\b/.test(raw)){ why.push("the newest"); W.forEach(w => add(w, Math.max(0,(w.year-2018))*0.35)); }
+  if(/\b(old|oldest|early|first)\b/.test(raw)){ why.push("the earliest"); W.forEach(w => add(w, Math.max(0,(2020-w.year))*0.4)); }
+  // colors
+  for(const t of toks){
+    if(t in COLORS){ why.push(t); W.forEach(w => { add(w, colorScore(w, COLORS[t])*3); if(w.tags.includes(t)) add(w,1.5); }); }
+  }
+  // words
+  for(const t of toks){
+    if(t in COLORS || /^20[012]\d/.test(t)) continue;
+    const terms = SYN[t] || [t.replace(/s$/,""), t];
+    let hit = false;
+    W.forEach(w => {
+      let v = 0;
+      for(const term of terms){
+        if(term.length < 3) continue;
+        if(w.title.toLowerCase().includes(term)) v += 3;
+        if(w.tags.some(x => x === term)) v += 2.4; else if(w.tags.some(x => x.includes(term))) v += 1.2;
+        if((w.medium||"").toLowerCase().includes(term)) v += 2;
+        if(w.coll.some(c => c[0].toLowerCase().includes(term))) v += 2;
+        if((w.alt||"").toLowerCase().includes(term)) v += 0.8;
+      }
+      if(v){ add(w, v); hit = true; }
+    });
+    if(hit && !/^(small|little|tiny|big|large|huge|new|newest|latest|recent|old|oldest|early|first|now)$/.test(t)) why.push(t);
+  }
+  const ranked = W.map(w => ({w, s: score.get(w.slug) + (w.best ? 0.25 : 0)}))
+    .filter(x => x.s > 1.1).sort((a,b) => b.s - a.s);
+  return {ranked: ranked.map(x => x.w), why: [...new Set(why)], toks};
+}
+const TOPIC_WORDS = [
+  [/^(hi|hello|hey|good (morning|evening|afternoon))\b/, "hello"],
+  [/\b(who is|who's|about him|biography|bio)\b/, "who"],
+  [/\b(price|cost|buy|purchase|for sale|collect|collector|curat)/, "collect"],
+  [/\b(right now|today|this week|currently|working on|making now)\b/, "now"],
+  [/\b(one minute|a minute|quick|short on time)\b/, "minute"],
+  [/\b(calm|peace|quiet|soothing|relax)/, "calm"],
+  [/\b(strange animals|weird animals|creatures)\b/, "animals"],
+  [/\b(video|film|films|movie)\b/, "films"],
+  [/\b(are you|what are you|you real|human|ai\b|robot\?)/, "self"]
+];
+
+async function answer(text){
+  writeAsked(text);
+  settle();
+  closeDoors();
+  await think();
+  const low = text.toLowerCase();
+  for(const [re, key] of TOPIC_WORDS){
+    if(re.test(low)){
+      if(key === "hello"){ await writeOwl(["Hello. Ask me for a color, a year, an animal, a size of wall, and I'll find it in the catalogue."]); offerDoors(["minute","calm","animals"]); settle(); return; }
+      if(key === "self"){ await writeOwl(["I'm software: a reader of Kyle's catalogue, given a name so you can tell my words from his. I don't know anything the catalogue doesn't, and I don't write in his voice. When you see his handwriting here, those are his own words, with the day he said them."]); writeKyle(Q.robots); offerDoors(["who","now","minute"]); settle(); return; }
+      if(key === "films"){ await writeOwl(["There are eighty-six films so far: paint talks at the easel, the letterpress shop, gongs, a creek after rain. None are on this page yet. When they are, each one plays beside the paintings it's about."]); writeKyle(Q.pears); offerDoors(["now","calm","who"]); settle(); return; }
+      if(TOPICS[key] && !/\b(blue|red|green|whale|20[012]\d)\b/.test(low)){ await TOPICS[key](); settle(); return; }
+    }
+  }
+  const {ranked, why, toks} = interpret(text);
+  if(!ranked.length){
+    await writeOwl([`I couldn't find anything in the catalogue for “${esc(text)}”. It knows titles, years, media, colors, sizes and about four hundred subjects. Try a color, an animal, a place, or a year between 2009 and 2026.`]);
+    offerDoors(["minute","calm","animals"]);
+    settle(); return;
+  }
+  lastPool = ranked; lastTopic = "free";
+  const pick = fresh(ranked, ranked.length > 8 ? 4 : 3);
+  const n = ranked.length;
+  const intro = why.length
+    ? `Reading that as ${why.slice(0,4).map(x=>`<em>${esc(x)}</em>`).join(", ")}: ${n === 1 ? "one work matches" : `${n} works match`}. ${n > pick.length ? `Here are the ${pick.length} I'd start with.` : ""}`
+    : `${n} works match. Here are the ${Math.min(n,pick.length)} I'd start with.`;
+  await writeOwl([intro]);
+  showWorks(pick);
+  if(/lightning|storm|cloud|sky|weather/.test(low)) writeKyle(Q.balance);
+  else if(/whale|rhino|animal|creature|elephant|bison/.test(low)) writeKyle(Q.butterfly);
+  else if(/land|landscape|mountain|desert/.test(low)) writeKyle(Q.landscape);
+  const doors = n > pick.length ? ["more","minute","now"] : ["minute","calm","now"];
+  offerDoors(doors, n > pick.length ? `${n - pick.length} more in this vein` : "Write back");
+  settle();
+}
+
+$("#askf").addEventListener("submit", e => {
+  e.preventDefault();
+  const v = $("#q").value.trim();
+  if(!v) return;
+  $("#q").value = "";
+  answer(v);
+});
+
+/* ---------- structured data, live ---------- */
+const ldTag = document.createElement("script");
+ldTag.type = "application/ld+json";
+document.head.appendChild(ldTag);
+function updateLD(){
+  const uniq = [...new Map(onScreen.map(w => [w.slug,w])).values()];
+  const g = {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Person","@id":"https://kyleparkercunningham.com/#kyle","name":"Kyle Parker Cunningham","birthDate":"1983",
+       "homeLocation":{"@type":"Place","name":"Truth or Consequences, New Mexico"},"url":"https://kyleparkercunningham.com/"},
+      ...uniq.map(w => {
+        const o = {"@type":"VisualArtwork","@id":`${ARCHIVE}/works/${w.slug}`,"name":w.title,
+          "creator":{"@id":"https://kyleparkercunningham.com/#kyle"},"dateCreated":String(w.year),
+          "url":`${ARCHIVE}/works/${w.slug}`};
+        if(w.medium) o.artMedium = w.medium;
+        if(w.h && w.w){ o.height={"@type":"QuantitativeValue","value":w.h/10,"unitCode":"CMT"}; o.width={"@type":"QuantitativeValue","value":w.w/10,"unitCode":"CMT"}; }
+        if(w.tags.length) o.keywords = w.tags.slice(0,8).join(", ");
+        if(w.alt) o.abstract = w.alt;
+        const c = w.coll[0]; if(c) o.isPartOf = {"@type":"Collection","name":c[0], ...(c[1]?{"position":c[1]}:{})};
+        return o;
+      })
+    ]
+  };
+  const s = JSON.stringify(g, null, 2);
+  ldTag.textContent = s;
+  $("#ld").textContent = s;
+}
+
+/* ---------- the owl: chevrons, eyes that follow, blinking ---------- */
+(function owl(){
+  const ch = $("#chev");
+  let d = "";
+  for(let row=0; row<6; row++){
+    const y = 138 + row*11, n = row < 4 ? 5 : 4, w = 92 - row*7, x0 = 100 - w/2;
+    for(let i=0;i<n;i++){
+      const x = x0 + (i+0.5)*(w/n) + (row%2 ? 4 : -4);
+      d += `M${(x-4).toFixed(1)} ${y} l4 3.5 l4 -3.5 `;
+    }
+  }
+  ch.innerHTML = `<path d="${d}"/>`;
+  const L = $("#eyes-l"), R = $("#eyes-r"), svg = document.querySelector(".owl svg");
+  if(!reduce){
+    addEventListener("pointermove", e => {
+      const r = svg.getBoundingClientRect();
+      const cx = r.left + r.width/2, cy = r.top + r.height*0.38;
+      const a = Math.atan2(e.clientY-cy, e.clientX-cx), dist = Math.min(1, Math.hypot(e.clientX-cx, e.clientY-cy)/400);
+      const t = `translate(${(Math.cos(a)*5*dist).toFixed(2)}px, ${(Math.sin(a)*4*dist).toFixed(2)}px)`;
+      L.style.transform = t; R.style.transform = t;
+    }, {passive:true});
+    const eyes = [...document.querySelectorAll(".eye")];
+    const blink = () => {
+      eyes.forEach(e => e.classList.add("shut"));
+      setTimeout(() => eyes.forEach(e => e.classList.remove("shut")), 140);
+      setTimeout(blink, 3500 + Math.random()*5000);
+    };
+    setTimeout(blink, 2500);
+  }
+})();
+
+/* ---------- sky: a few stars, very slow ---------- */
+(function sky(){
+  const c = $("#sky"), x = c.getContext("2d");
+  let stars = [], W2, H2, dpr;
+  function size(){
+    dpr = Math.min(2, devicePixelRatio || 1);
+    W2 = c.width = innerWidth*dpr; H2 = c.height = innerHeight*dpr;
+    const n = Math.round(innerWidth*innerHeight/9000);
+    let seed = 7; const rnd = () => (seed = (seed*16807) % 2147483647) / 2147483647;
+    stars = Array.from({length:n}, () => ({x:rnd()*W2, y:rnd()*H2, r:(rnd()*1.1+0.25)*dpr, p:rnd()*6.28, s:0.2+rnd()*0.8}));
+    draw(0);
+  }
+  function draw(t){
+    x.clearRect(0,0,W2,H2);
+    for(const s of stars){
+      const a = 0.25 + 0.45*(0.5+0.5*Math.sin(s.p + t*0.0006*s.s));
+      x.fillStyle = `rgba(226,222,206,${a.toFixed(3)})`;
+      x.beginPath(); x.arc(s.x, s.y, s.r, 0, 6.283); x.fill();
+    }
+  }
+  size(); addEventListener("resize", size);
+  if(!reduce){ const loop = t => { draw(t); requestAnimationFrame(loop); }; requestAnimationFrame(loop); }
+})();
+
+/* ---------- opening ---------- */
+(async function open(){
+  const now = new Date();
+  const h = now.getHours();
+  const part = h < 5 ? "It's late" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening";
+  $("#dl-time").textContent = now.toLocaleDateString("en-US", {weekday:"long", day:"numeric", month:"long", year:"numeric"});
+  await writeOwl([
+    `${part}. I'm Owl. I keep the catalogue for Kyle Parker Cunningham, a painter and printmaker on the Rio Grande in New Mexico.`,
+    "There are 159 works in his public archive, and you don't have time for all of them. Tell me how long you have, or what you're after, and I'll show you a few."
+  ], {lead:true});
+  showWorks(S("the-river-in-the-sky"));
+  offerDoors(["minute","calm","animals","now","who","collect"], "Write back, or ask below");
+  // a door can be shared by its name: …/06-owl.html#calm
+  const k = location.hash.slice(1);
+  if(DOORS[k]){ closeDoors(); go(k, DOORS[k].label); }
+  else if(k.startsWith("ask-")){ answer(k.slice(4).replace(/[-_]/g," ")); }
+})();
+})();
+</script>
+</body>
+</html>

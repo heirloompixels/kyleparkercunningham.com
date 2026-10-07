@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ten Miles</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Zilla+Slab:ital,wght@0,400;0,600;1,400;1,600&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one full-bleed canvas landscape; a slab odometer top-left, a trail profile and a single hold-to-walk bar at the bottom; sheets rise over the land at each waypoint. A single visual world: it does not follow the light/dark theme. */
+:root {
+  --ink: #1d1a15;          /* the walker, trail signs */
+  --bone: #f4eee2;         /* type on dark sheets */
+  --sign: #6b4a2b;         /* routed-wood plank */
+  --sign-type: #f1e2c4;
+  --blaze: #e3a43b;        /* trail blaze: the one accent */
+  --veil: rgba(18, 16, 13, .82);
+  --display: "Alfa Slab One", "Rockwell", "Roboto Slab", Georgia, serif;
+  --body: "Zilla Slab", "Rockwell", Georgia, serif;
+  --mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #2a2620; color: var(--bone); overflow: hidden; }
+body { font-family: var(--body); -webkit-font-smoothing: antialiased; }
+canvas#c { position: fixed; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; cursor: pointer; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--blaze); outline-offset: 3px; }
+
+/* HUD */
+.hud { position: fixed; top: calc(env(safe-area-inset-top, 0px) + 14px); left: 16px; right: 16px; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; pointer-events: none; z-index: 3; }
+.odo { pointer-events: none; color: var(--ink); line-height: 1; }
+.odo .n { font-family: var(--display); font-size: clamp(44px, 9vw, 84px); letter-spacing: .01em; font-variant-numeric: tabular-nums; }
+.odo .of { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; margin-top: 6px; display: flex; gap: 14px; flex-wrap: wrap; }
+.links { display: flex; gap: 8px; pointer-events: auto; flex-wrap: wrap; justify-content: flex-end; }
+.chip { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--bone); background: rgba(29, 26, 21, .72); border: 0; padding: 8px 10px; text-decoration: none; cursor: pointer; }
+.chip:hover { background: rgba(29, 26, 21, .92); }
+
+/* Trail profile */
+.profile { position: fixed; left: 16px; right: 16px; bottom: calc(env(safe-area-inset-bottom, 0px) + 78px); height: 18px; z-index: 3; pointer-events: none; }
+.profile .line { position: absolute; left: 0; right: 0; top: 8px; height: 2px; background: rgba(244, 238, 226, .45); }
+.profile .wp { position: absolute; top: 4px; width: 10px; height: 10px; margin-left: -5px; border: 2px solid var(--bone); background: transparent; transform: rotate(45deg); }
+.profile .wp.seen { background: var(--blaze); border-color: var(--blaze); }
+.profile .top { position: absolute; right: -2px; top: 0; width: 0; height: 0; border-left: 9px solid transparent; border-right: 9px solid transparent; border-bottom: 16px solid var(--bone); }
+.profile .me { position: absolute; top: -1px; width: 4px; height: 20px; margin-left: -2px; background: var(--blaze); }
+
+/* Walk bar */
+#walk { position: fixed; left: 16px; right: 16px; bottom: calc(env(safe-area-inset-bottom, 0px) + 16px); height: 52px; z-index: 3; border: 0; background: var(--ink); color: var(--bone); font-family: var(--display); font-size: 20px; letter-spacing: .06em; cursor: pointer; touch-action: none; user-select: none; -webkit-user-select: none; display: flex; align-items: center; justify-content: center; gap: 14px; }
+#walk .k { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; opacity: .7; text-transform: uppercase; }
+#walk.on { background: var(--blaze); color: var(--ink); }
+@media (min-width: 900px) { #walk { left: auto; width: 340px; } .profile { right: 380px; } }
+
+/* Sheets */
+.sheet { position: fixed; inset: 0; z-index: 5; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+.sheet[hidden] { display: none !important; }
+.intro { display: flex; align-items: flex-end; padding: 0 16px calc(env(safe-area-inset-bottom, 0px) + 24px); background: linear-gradient(180deg, rgba(20,18,15,0) 30%, rgba(20,18,15,.78) 78%); }
+.intro .in { max-width: 640px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .85; }
+.intro h1 { font-family: var(--display); font-weight: 400; font-size: clamp(64px, 17vw, 168px); line-height: .86; margin: 10px 0 18px; letter-spacing: -.01em; color: var(--bone); text-wrap: balance; }
+.owl { font-size: clamp(18px, 2.4vw, 22px); line-height: 1.45; max-width: 34em; margin: 0; }
+.sig { font-family: var(--mono); font-size: 12px; letter-spacing: .08em; margin-top: 10px; opacity: .8; }
+.how { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; margin: 22px 0 18px; opacity: .85; line-height: 1.6; }
+.row { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.btn { font-family: var(--display); font-size: 20px; letter-spacing: .04em; border: 0; background: var(--blaze); color: var(--ink); padding: 14px 22px; cursor: pointer; text-decoration: none; display: inline-block; }
+.btn.ghost { background: transparent; color: var(--bone); box-shadow: inset 0 0 0 2px rgba(244,238,226,.7); font-family: var(--mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; padding: 14px 16px; }
+
+/* Waypoint view */
+.view { background: var(--veil); display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(20px, 4vw, 56px); align-items: center; padding: calc(env(safe-area-inset-top, 0px) + 70px) clamp(16px, 5vw, 72px) 40px; }
+.view figure { margin: 0; display: flex; justify-content: center; align-items: center; min-width: 0; }
+.view img { max-width: 100%; max-height: 78vh; height: auto; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 6px #14110d; display: block; }
+.view.rise img { animation: rise .9s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes rise { from { transform: translateY(40px) scale(.94); opacity: 0; } to { transform: none; opacity: 1; } }
+.view .txt { min-width: 0; max-width: 32em; }
+.mm { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--blaze); }
+.view h2 { font-family: var(--body); font-style: italic; font-weight: 600; font-size: clamp(30px, 4.4vw, 54px); line-height: 1.02; margin: 12px 0 14px; text-wrap: balance; }
+.meta { font-family: var(--mono); font-size: 13px; line-height: 1.7; opacity: .9; }
+blockquote { margin: 22px 0 0; padding: 0 0 0 16px; border-left: 3px solid var(--blaze); font-size: clamp(19px, 2.2vw, 24px); line-height: 1.38; }
+blockquote cite { display: block; font-style: normal; font-family: var(--mono); font-size: 11px; letter-spacing: .08em; margin-top: 10px; opacity: .75; }
+.view .row { margin-top: 26px; }
+@media (max-width: 760px) {
+  .view { grid-template-columns: minmax(0, 1fr); align-items: start; padding-top: calc(env(safe-area-inset-top, 0px) + 64px); }
+  .view img { max-height: 50vh; }
+}
+
+/* Summit */
+.summit { background: rgba(22, 18, 24, .94); padding: calc(env(safe-area-inset-top, 0px) + 70px) clamp(16px, 5vw, 72px) 48px; }
+.summit .grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 60px); max-width: 1200px; margin: 0 auto; }
+.summit h2 { font-family: var(--display); font-weight: 400; font-size: clamp(48px, 9vw, 110px); line-height: .9; margin: 6px 0 18px; }
+.summit .newest img { width: 100%; max-height: 62vh; object-fit: contain; object-position: left top; display: block; box-shadow: 0 0 0 6px #14110d, 0 30px 80px rgba(0,0,0,.5); }
+.summit .newest .cap { margin-top: 18px; }
+.summit h3 { font-family: var(--body); font-style: italic; font-weight: 600; font-size: clamp(24px, 3vw, 34px); margin: 6px 0 6px; }
+.block { border-top: 2px solid rgba(244,238,226,.25); padding-top: 18px; margin-top: 26px; }
+.block:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+.thousand { display: grid; grid-template-columns: repeat(50, 1fr); gap: 2px; margin: 14px 0 10px; }
+.thousand i { display: block; aspect-ratio: 1; background: rgba(244,238,226,.16); }
+.thousand i.done { background: var(--blaze); }
+.big { font-family: var(--display); font-size: clamp(40px, 6vw, 64px); line-height: 1; }
+.p { font-size: 18px; line-height: 1.5; margin: 8px 0 0; max-width: 32em; }
+form.reg { display: flex; gap: 0; margin-top: 14px; max-width: 520px; }
+form.reg input { flex: 1; min-width: 0; font-family: var(--mono); font-size: 15px; padding: 14px 14px; border: 2px solid var(--bone); border-right: 0; background: transparent; color: var(--bone); }
+form.reg input::placeholder { color: rgba(244,238,226,.55); }
+form.reg button { border: 0; background: var(--bone); color: var(--ink); font-family: var(--display); font-size: 16px; padding: 0 16px; cursor: pointer; }
+.signed { font-family: var(--mono); font-size: 13px; line-height: 1.6; margin-top: 14px; color: var(--blaze); }
+.door { display: block; text-decoration: none; background: var(--bone); color: var(--ink); padding: 22px 22px 20px; margin-top: 14px; }
+.door .t { font-family: var(--display); font-size: clamp(26px, 3.4vw, 38px); line-height: 1; }
+.door .s { font-family: var(--mono); font-size: 12px; letter-spacing: .06em; margin-top: 10px; line-height: 1.6; }
+.door:hover { background: var(--blaze); }
+.tag { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; background: var(--blaze); color: var(--ink); padding: 2px 6px; margin-left: 6px; vertical-align: 2px; }
+@media (max-width: 760px) { .summit .grid { grid-template-columns: minmax(0, 1fr); } .thousand { grid-template-columns: repeat(40, 1fr); } }
+
+.hint { position: fixed; z-index: 2; pointer-events: none; font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); background: rgba(244,238,226,.85); padding: 6px 9px; transform: translate(-50%, -100%); white-space: nowrap; animation: bob 1.6s ease-in-out infinite; }
+@keyframes bob { 50% { transform: translate(-50%, calc(-100% - 6px)); } }
+body.sheet-open #walk, body.sheet-open .profile, body.sheet-open #hint { visibility: hidden; }
+body.sheet-open .odo { opacity: .25; }
+#s-title:focus { outline: none; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  .view.rise img, .hint { animation: none; }
+}
+</style>
+</head>
+<body class="sheet-open">
+<canvas id="c" aria-label="A mountain trail, drawn as layered ridgelines. Hold to walk."></canvas>
+
+<div class="hud">
+  <div class="odo" aria-live="off">
+    <div class="n" id="odo">00.0</div>
+    <div class="of"><span>of 10.0 mi</span><span id="elev">6,420 ft</span><span id="next"></span></div>
+  </div>
+  <nav class="links" aria-label="Site">
+    <button class="chip" id="sound" type="button" aria-pressed="false">Sound off</button>
+    <a class="chip" href="https://archive.kyleparkercunningham.com/" target="_blank" rel="noopener">Archive ↗</a>
+    <a class="chip" href="index.html">Sketchbook</a>
+  </nav>
+</div>
+
+<div class="profile" id="profile" aria-hidden="true"><div class="line"></div><div class="top"></div><div class="me" id="me"></div></div>
+<button id="walk" type="button" aria-label="Hold to walk"><span>Hold to walk</span><span class="k">or hold →</span></button>
+<div class="hint" id="hint" hidden>hold to walk</div>
+<p class="sr" id="live" aria-live="polite"></p>
+
+<section class="sheet intro" id="intro" aria-labelledby="t-intro">
+  <div class="in">
+    <div class="eyebrow">Kyle Parker Cunningham · a walk</div>
+    <h1 id="t-intro">Ten Miles</h1>
+    <p class="owl">Kyle says the one thing a machine can't do for him is walk ten miles up a trail and feel the moment in his body. So this site is a walk. Eight paintings wait along the trail, and the newest one is at the top.</p>
+    <div class="sig">— Owl, the site's machine voice</div>
+    <p class="how">Hold anywhere to walk, or hold the → key. Scrolling works too.<br>About three minutes to the summit. Sound is better.</p>
+    <div class="row">
+      <button class="btn" id="start" type="button">Start walking</button>
+      <a class="btn ghost" href="https://archive.kyleparkercunningham.com/" target="_blank" rel="noopener">Skip it: the archive ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="sheet view" id="view" hidden aria-labelledby="v-title" role="dialog" aria-modal="true">
+  <figure><img id="v-img" alt=""></figure>
+  <div class="txt">
+    <div class="mm" id="v-mile"></div>
+    <h2 id="v-title"></h2>
+    <div class="meta" id="v-meta"></div>
+    <blockquote id="v-quote" hidden><span id="v-q"></span><cite id="v-cite"></cite></blockquote>
+    <div class="row">
+      <button class="btn" id="v-go" type="button">Keep walking</button>
+      <a class="btn ghost" id="v-arch" target="_blank" rel="noopener">In the archive ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="sheet summit" id="summit" hidden aria-labelledby="s-title" role="dialog" aria-modal="true">
+  <div class="grid">
+    <div>
+      <div class="mm">Mile 10.0 · 10,220 ft · the summit</div>
+      <h2 id="s-title">You made it.</h2>
+      <div class="newest">
+        <img id="s-img" alt="">
+        <div class="cap">
+          <div class="mm">The newest work</div>
+          <h3 id="s-name"></h3>
+          <div class="meta" id="s-meta"></div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="block">
+        <div class="mm">The 1000</div>
+        <div class="big" id="k-big"></div>
+        <div class="thousand" id="k-grid" aria-hidden="true"></div>
+        <p class="p" id="k-p"></p>
+      </div>
+      <div class="block">
+        <div class="mm">The trail register</div>
+        <p class="p">Sign it, and hear when a new painting is set out on the trail.</p>
+        <form class="reg" id="reg">
+          <label class="sr" for="reg-email">Email address</label>
+          <input id="reg-email" type="email" required placeholder="you@somewhere" autocomplete="email">
+          <button type="submit">Sign</button>
+        </form>
+        <div class="signed" id="signed" hidden></div>
+      </div>
+      <div class="block">
+        <div class="mm">From up here</div>
+        <a class="door" href="https://archive.kyleparkercunningham.com/" target="_blank" rel="noopener">
+          <div class="t">The whole range, mapped ↗</div>
+          <div class="s" id="door-s"></div>
+        </a>
+        <div class="row" style="margin-top:16px">
+          <button class="btn ghost" id="again" type="button">Walk it again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="works.js"></script>
+<script>
+(() => {
+  const W_ = window.WORKS || [];
+  const bySlug = Object.fromEntries(W_.map(w => [w.slug, w]));
+  const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // The trail. Places are the game's; the paintings and the quoted words are real.
+  const WP = [
+    { mile: 0.8, slug: 'low-angle-sun-rays', place: 'Boulder at the first switchback', kind: 'rock' },
+    { mile: 2.0, slug: 'rhino-radar', place: 'Hung in an alligator juniper', kind: 'juniper' },
+    { mile: 3.2, slug: 'there-once-was-ice-here', place: 'The creek crossing', kind: 'creek' },
+    { mile: 4.4, slug: 'the-algebra-of-water-vapor', place: 'A cairn in the ponderosas', kind: 'cairn',
+      quote: 'a broken, beautiful field of reflectivity, which is like what water particles would be doing in the sky.',
+      cite: 'Kyle, in The Top Layers, a paint talk filmed 6 October 2026' },
+    { mile: 5.6, slug: 'crystal-tooth-whale', place: 'A lightning-struck snag', kind: 'snag' },
+    { mile: 7.0, slug: 'felt-and-lived', place: 'Under the storm', kind: 'post',
+      quote: 'A practice in balance after a lightning strike connected. A collection to bring calm to the mind in the chaos of the storm.',
+      cite: 'Kyle, on Atmospheric Balance, eight paintings from summer 2024' },
+    { mile: 8.2, slug: 'above-the-clouds', place: 'Treeline', kind: 'rock',
+      quote: 'These clouds are better than pears.', cite: 'Kyle, in the film Keep Talking, 2026' },
+    { mile: 9.2, slug: 'bison-robotics', place: 'The scree field', kind: 'scree' },
+  ].filter(p => bySlug[p.slug]).map(p => Object.assign(p, { w: bySlug[p.slug] }));
+
+  // the newest work: the latest year, then the latest exact date within it
+  const maxYear = Math.max(...W_.map(w => w.year || 0));
+  const newest = W_.filter(w => w.year === maxYear)
+    .sort((a, b) => (Date.parse(b.date) || 0) - (Date.parse(a.date) || 0))[0] || bySlug['absolute-potential'];
+
+  // ---------- colour ----------
+  const hx = h => { h = h.replace('#', ''); return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)]; };
+  const mix = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+  const css = (c, a = 1) => `rgba(${c[0] | 0},${c[1] | 0},${c[2] | 0},${a})`;
+  const lum = c => .2126 * c[0] + .7152 * c[1] + .0722 * c[2];
+  const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+  const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+
+  WP.forEach(p => {
+    const pal = (p.w.pal && p.w.pal.length ? p.w.pal : [p.w.hex || '#888888']).map(hx).sort((a, b) => lum(a) - lum(b));
+    const n = pal.length, at = i => pal[clamp(Math.round(i), 0, n - 1)];
+    const L = at(n - 1), D = at(0), M = at((n - 1) / 2);
+    p.tone = {
+      skyBot: L, skyTop: mix(at(n - 2), D, .3),
+      layers: [mix(L, M, .5), M, mix(M, D, .45), mix(M, D, .75), mix(D, [0, 0, 0], .35)],
+    };
+  });
+
+  // time of day across the climb: dawn -> noon -> dusk at the summit
+  const TOD = [
+    { t: 0, top: hx('#8fa6bd'), bot: hx('#f1cfa6') },
+    { t: .45, top: hx('#6f9bc4'), bot: hx('#e3e8e6') },
+    { t: .75, top: hx('#6d86ad'), bot: hx('#efd9b4') },
+    { t: 1, top: hx('#3e3f6b'), bot: hx('#f09a6a') },
+  ];
+  const BASE = [hx('#a9b2bf'), hx('#8f9b93'), hx('#6c7a66'), hx('#4c5743'), hx('#2b2820')];
+  const DUSK = hx('#5b4867'), STORM = hx('#283039');
+
+  function tod(t) {
+    for (let i = 0; i < TOD.length - 1; i++) {
+      const a = TOD[i], b = TOD[i + 1];
+      if (t <= b.t) { const k = (t - a.t) / (b.t - a.t); return { top: mix(a.top, b.top, k), bot: mix(a.bot, b.bot, k) }; }
+    }
+    return TOD[TOD.length - 1];
+  }
+
+  // ---------- noise ----------
+  const hash = (i, s) => { const x = Math.sin(i * 127.1 + s * 311.7) * 43758.5453; return x - Math.floor(x); };
+  const vn = (x, s) => { const i = Math.floor(x), f = x - i, u = f * f * (3 - 2 * f); return hash(i, s) * (1 - u) + hash(i + 1, s) * u; };
+  const fbm = (x, s) => { let v = 0, a = .5, f = 1; for (let o = 0; o < 4; o++) { v += a * vn(x * f, s + o * 17); a *= .5; f *= 2.03; } return v / .9375; };
+
+  // ---------- canvas ----------
+  // each ellipse starts its own subpath, so several in one fill do not join with stray edges
+  const E = (x, y, rx, ry) => { g.moveTo(x + rx, y); g.ellipse(x, y, rx, ry, 0, 0, Math.PI * 2); };
+  const cv = document.getElementById('c'), g = cv.getContext('2d');
+  let W = 0, H = 0, DPR = 1, PXM = 1000, figX = 0;
+  function resize() {
+    DPR = Math.min(window.devicePixelRatio || 1, 2);
+    W = innerWidth; H = innerHeight;
+    cv.width = Math.round(W * DPR); cv.height = Math.round(H * DPR);
+    g.setTransform(DPR, 0, 0, DPR, 0, 0);
+    PXM = Math.max(W, 720) * 1.15;
+    figX = W < 600 ? W * .26 : W * .32;
+  }
+  addEventListener('resize', resize); resize();
+
+  // ---------- images ----------
+  const imgs = {};
+  const load = (w, size) => { const k = w.slug + size; if (!imgs[k]) { const im = new Image(); im.decoding = 'async'; im.src = window.img(w, size); imgs[k] = im; } return imgs[k]; };
+  WP.forEach(p => load(p.w, 480));
+  if (newest) load(newest, 960);
+
+  // ---------- state ----------
+  let d = 0, v = 0, dir = 1, phase = 0, lastStep = 0, walking = false, holding = 0, paused = true, started = false;
+  let flash = 0, time = 0, nextWp = 0, done = false, moved = false;
+  const seen = new Set();
+
+  const rain = Array.from({ length: RM ? 50 : 170 }, () => ({ x: Math.random(), y: Math.random(), s: .6 + Math.random() * .8 }));
+  const clouds = Array.from({ length: 6 }, (_, i) => ({ x: i * 520 + hash(i, 9) * 300, y: .08 + hash(i, 2) * .2, s: .7 + hash(i, 5) * .8 }));
+
+  const SUMMIT = 10;
+  const stormAt = m => smooth(6.25, 6.85, m) * (1 - smooth(7.25, 7.7, m));
+
+  function prox(m) {
+    let best = null, bw = 0;
+    for (const p of WP) {
+      const w = m < p.mile ? smooth(p.mile - 1.15, p.mile - .05, m) : 1 - smooth(p.mile, p.mile + .55, m);
+      if (w > bw) { bw = w; best = p; }
+    }
+    return { p: best, w: bw };
+  }
+
+  // foreground ground line in screen space; rising to the right reads as climbing
+  function ground(sx, camX) {
+    const wx = camX + sx;
+    let y = H * .8 + 20 * (fbm(wx / 300, 7) - .5) * 2 - (sx - figX) * .07;
+    const past = wx - SUMMIT * PXM - 140;
+    if (past > 0) y += past * .55 + past * past * .0012;
+    return y;
+  }
+
+  // ---------- drawing ----------
+  function frame(ts) {
+    const dt = Math.min(.05, (ts - (frame.t || ts)) / 1000); frame.t = ts; time += dt;
+    // walking physics
+    const want = (!paused && (walking || holding)) ? .078 : 0;
+    v += (want - v) * Math.min(1, dt * (want ? 3.5 : 6));
+    if (v < .0004 && !want) v = 0;
+    if (v > 0) step(v * dt * dir);
+    if (flash > 0) flash = Math.max(0, flash - dt * 2.4);
+    draw();
+    requestAnimationFrame(frame);
+  }
+
+  function step(dd) {
+    const prev = d;
+    d = clamp(d + dd, 0, SUMMIT);
+    if (d !== prev) { moved = true; document.getElementById('hint').hidden = true; }
+    phase += Math.abs(d - prev) * 26 * Math.PI;
+    const n = Math.floor(phase / Math.PI);
+    if (n !== lastStep) { lastStep = n; footstep(); }
+    // waypoints
+    if (dir > 0) {
+      for (const p of WP) if (!seen.has(p.mile) && prev < p.mile && d >= p.mile) { d = p.mile; openWp(p); return; }
+      if (d >= SUMMIT && !done) { done = true; openSummit(); }
+    }
+    hud();
+  }
+
+  function draw() {
+    const camX = d * PXM - figX;
+    const t = d / SUMMIT;
+    const { p: P, w: pw } = prox(d);
+    const storm = stormAt(d);
+    const T = tod(t);
+    const pt = P ? P.tone : null;
+    const tint = (c, k) => pt ? mix(c, k, pw * .62) : c;
+    let skyTop = pt ? mix(T.top, pt.skyTop, pw * .5) : T.top;
+    let skyBot = pt ? mix(T.bot, pt.skyBot, pw * .5) : T.bot;
+    skyTop = mix(skyTop, STORM, storm * .7); skyBot = mix(skyBot, mix(STORM, [180, 185, 190], .35), storm * .65);
+
+    // sky
+    const sg = g.createLinearGradient(0, 0, 0, H * .78);
+    sg.addColorStop(0, css(skyTop)); sg.addColorStop(1, css(skyBot));
+    g.fillStyle = sg; g.fillRect(0, 0, W, H);
+
+    // sun: an arc from low east to low west across the climb
+    if (storm < .9) {
+      const sx = W * (.12 + t * .76), sy = H * (.62 - Math.sin(Math.PI * clamp(t * .95 + .04, 0, 1)) * .48);
+      const sunC = mix([255, 236, 200], [255, 160, 100], smooth(.7, 1, t));
+      const rg = g.createRadialGradient(sx, sy, 0, sx, sy, Math.min(W, H) * .32);
+      rg.addColorStop(0, css(sunC, .55 * (1 - storm))); rg.addColorStop(1, css(sunC, 0));
+      g.fillStyle = rg; g.fillRect(0, 0, W, H);
+      g.fillStyle = css(sunC, .95 * (1 - storm));
+      g.beginPath(); g.arc(sx, sy, Math.max(14, Math.min(W, H) * .028), 0, Math.PI * 2); g.fill();
+    }
+
+    // clouds
+    const cloudC = mix(mix(skyBot, [255, 255, 255], .55), [70, 76, 86], storm);
+    for (const c of clouds) {
+      const span = W + 900;
+      let x = ((c.x - camX * .05 - (RM ? 0 : time * 6 * c.s)) % span + span) % span - 450;
+      const y = H * c.y + storm * 20;
+      const s = c.s * (1 + storm * .9) * Math.max(.7, W / 1400);
+      g.fillStyle = css(cloudC, .75 + storm * .2);
+      g.beginPath();
+      E(x, y, 120 * s, 26 * s);
+      E(x + 60 * s, y - 16 * s, 70 * s, 28 * s);
+      E(x - 50 * s, y - 8 * s, 60 * s, 22 * s);
+      g.fill();
+    }
+
+    // ridges: far to near; the far ones sink as you climb
+    const PAR = [.06, .14, .27, .48];
+    const BY = [.44, .52, .6, .68];
+    const AMP = [.13, .12, .1, .08];
+    const FQ = [1 / 520, 1 / 380, 1 / 300, 1 / 220];
+    const HAZE = [.55, .38, .22, .1];
+    for (let k = 0; k < 4; k++) {
+      let col = mix(BASE[k], DUSK, smooth(.6, 1, t) * .3);
+      col = tint(col, pt ? pt.layers[k] : col);
+      col = mix(col, skyBot, HAZE[k]);
+      col = mix(col, STORM, storm * .45);
+      const off = camX * PAR[k], base = H * BY[k] + t * (1 - PAR[k] * 1.4) * H * .2;
+      g.fillStyle = css(col);
+      g.beginPath(); g.moveTo(0, H);
+      for (let sx = 0; sx <= W + 6; sx += 5) {
+        const wx = (sx + off);
+        const y = base - AMP[k] * H * (fbm(wx * FQ[k], k * 13 + 3) * 1.6 - .3) - (k === 0 ? Math.pow(fbm(wx / 900, 40), 3) * H * .12 : 0);
+        g.lineTo(sx, y);
+      }
+      g.lineTo(W, H); g.closePath(); g.fill();
+
+      // a fringe of trees on the nearer ridges
+      if (k >= 2) {
+        const cell = k === 3 ? 22 : 14, tc = mix(col, [0, 0, 0], .18);
+        g.fillStyle = css(tc);
+        const i0 = Math.floor(off / cell), i1 = Math.ceil((off + W) / cell);
+        for (let i = i0; i <= i1; i++) {
+          const zm = (i * cell / PAR[k] + figX) / PXM; // rough mile at this point
+          const dens = zm > 8.3 ? .05 : .55;
+          if (hash(i, k + 50) > dens) continue;
+          const wx = i * cell + hash(i, k + 60) * cell, sx = wx - off;
+          const y = base - AMP[k] * H * (fbm(wx * FQ[k], k * 13 + 3) * 1.6 - .3) + 2;
+          const r = (k === 3 ? 5 : 3) * (.7 + hash(i, k + 70) * .6);
+          if (zm > 5.2) { g.beginPath(); g.moveTo(sx - r * .8, y); g.lineTo(sx, y - r * 3.4); g.lineTo(sx + r * .8, y); g.fill(); }
+          else { g.beginPath(); E(sx, y - r * .8, r * 1.2, r); g.fill(); }
+        }
+      }
+    }
+
+    // foreground
+    let fg = mix(BASE[4], DUSK, smooth(.6, 1, t) * .2);
+    fg = tint(fg, pt ? pt.layers[4] : fg);
+    fg = mix(fg, [16, 18, 22], storm * .6);
+    g.fillStyle = css(fg);
+    g.beginPath(); g.moveTo(0, H);
+    for (let sx = 0; sx <= W + 6; sx += 4) g.lineTo(sx, ground(sx, camX));
+    g.lineTo(W, H); g.closePath(); g.fill();
+    // the worn path
+    g.strokeStyle = css(mix(fg, skyBot, .28)); g.lineWidth = 3; g.setLineDash([14, 7]);
+    g.beginPath();
+    for (let sx = 0; sx <= Math.min(W, SUMMIT * PXM - camX + 120); sx += 6) { const y = ground(sx, camX) + 9; sx ? g.lineTo(sx, y) : g.moveTo(sx, y); }
+    g.stroke(); g.setLineDash([]);
+
+    // foreground trees and rocks
+    const treeC = mix(fg, [30, 44, 28], .25);
+    const cell = 64;
+    const i0 = Math.floor(camX / cell) - 2, i1 = Math.ceil((camX + W) / cell) + 2;
+    for (let i = i0; i <= i1; i++) {
+      if (hash(i, 11) > .42) continue;
+      const wx = i * cell + hash(i, 12) * 40, m = wx / PXM;
+      if (m < -.2 || m > SUMMIT + .05) continue;
+      if (WP.some(p => Math.abs(p.mile * PXM + 70 - wx) < 110)) continue;
+      if (Math.abs(wx - (camX + figX)) < 26) continue;
+      const sx = wx - camX, y = ground(sx, camX) + 4, sc = Math.max(.8, H / 850) * (.75 + hash(i, 13) * .6);
+      if (m < 3) juniper(sx, y, sc, treeC);
+      else if (m < 5.3) ponderosa(sx, y, sc, treeC);
+      else if (m < 8.3) spruce(sx, y, sc, treeC);
+      else boulder(sx, y, sc * .7, mix(fg, skyBot, .15));
+    }
+
+    // trail signs
+    for (const s of [{ m: 0, a: 'TEN MILES TRAIL', b: 'SUMMIT 10.0' }, { m: 2.5, b: 'SUMMIT 7.5' }, { m: 5, b: 'SUMMIT 5.0' }, { m: 7.5, b: 'SUMMIT 2.5' }]) {
+      const sx = s.m * PXM - camX + figX * .1 + 40; if (sx < -200 || sx > W + 200) continue;
+      sign(sx, ground(sx, camX) + 6, s);
+    }
+
+    // waypoints
+    for (const p of WP) {
+      const X = p.mile * PXM - camX + 70; // just ahead of the walker when the walk stops
+      if (X < -260 || X > W + 260) continue;
+      waypoint(p, X, ground(X, camX) + 4, fg, treeC, d >= p.mile - .3 && d <= p.mile + .1);
+    }
+
+    // summit cairn and flag
+    { const X = SUMMIT * PXM - camX + 90; if (X > -100 && X < W + 100) { const y = ground(X, camX) + 4; boulder(X, y, 1.3, mix(fg, skyBot, .2)); g.strokeStyle = css(fg); g.lineWidth = 3; g.beginPath(); g.moveTo(X, y - 30); g.lineTo(X, y - 92); g.stroke(); g.fillStyle = '#e3a43b'; g.beginPath(); g.moveTo(X, y - 92); g.lineTo(X + 36 + Math.sin(time * 3) * 4, y - 82); g.lineTo(X, y - 72); g.fill(); } }
+
+    // walker
+    walker(figX, ground(figX, camX) + 6);
+
+    // storm: rain and lightning
+    if (storm > .02) {
+      g.strokeStyle = css([210, 220, 232], .45 * storm); g.lineWidth = 1.2;
+      g.beginPath();
+      for (const r of rain) {
+        if (!RM) { r.y += .028 * r.s * 2.2; r.x -= .004 * r.s + v * .02; if (r.y > 1) { r.y = 0; r.x = Math.random() * 1.2; } if (r.x < -.05) r.x += 1.1; }
+        const x = r.x * W, y = r.y * H;
+        g.moveTo(x, y); g.lineTo(x - 5 * r.s, y + 16 * r.s);
+      }
+      g.stroke();
+      if (!RM && storm > .6 && Math.random() < .007 && flash === 0) { flash = 1; bolt.seed = Math.random() * 1000; bolt.x = W * (.4 + Math.random() * .5); setTimeout(thunder, 500 + Math.random() * 900); }
+      if (flash > 0) {
+        g.fillStyle = `rgba(235,240,255,${flash * .35})`; g.fillRect(0, 0, W, H);
+        g.strokeStyle = `rgba(255,255,255,${flash})`; g.lineWidth = 2.5; g.beginPath();
+        let x = bolt.x, y = 0; g.moveTo(x, y);
+        for (let i = 0; i < 9; i++) { x += (hash(i, bolt.seed) - .5) * 60; y += H * .055; g.lineTo(x, y); }
+        g.stroke();
+      }
+    }
+  }
+  const bolt = { x: 0, seed: 0 };
+
+  function juniper(x, y, s, c) {
+    g.fillStyle = css(mix(c, [0, 0, 0], .2)); g.fillRect(x - 2 * s, y - 14 * s, 4 * s, 14 * s);
+    g.fillStyle = css(c); g.beginPath();
+    E(x, y - 22 * s, 18 * s, 13 * s);
+    E(x - 12 * s, y - 15 * s, 11 * s, 9 * s);
+    E(x + 13 * s, y - 16 * s, 12 * s, 9 * s);
+    g.fill();
+  }
+  function ponderosa(x, y, s, c) {
+    g.fillStyle = css(mix(c, [60, 30, 20], .35)); g.fillRect(x - 3 * s, y - 70 * s, 6 * s, 70 * s);
+    g.fillStyle = css(c); g.beginPath();
+    for (let i = 0; i < 4; i++) E(x + (i % 2 ? 9 : -9) * s, y - (52 + i * 14) * s, 17 * s, 10 * s);
+    E(x, y - 108 * s, 10 * s, 12 * s);
+    g.fill();
+  }
+  function spruce(x, y, s, c) {
+    g.fillStyle = css(mix(c, [0, 0, 0], .1)); g.beginPath();
+    for (let i = 0; i < 4; i++) { const w = (18 - i * 3.6) * s, b = y - i * 18 * s; g.moveTo(x - w, b); g.lineTo(x, b - 34 * s); g.lineTo(x + w, b); }
+    g.fill();
+  }
+  function boulder(x, y, s, c) {
+    g.fillStyle = css(c); g.beginPath();
+    g.moveTo(x - 26 * s, y); g.lineTo(x - 20 * s, y - 16 * s); g.lineTo(x - 4 * s, y - 24 * s); g.lineTo(x + 16 * s, y - 18 * s); g.lineTo(x + 26 * s, y); g.closePath(); g.fill();
+    g.fillStyle = 'rgba(255,255,255,.08)'; g.beginPath(); g.moveTo(x - 20 * s, y - 16 * s); g.lineTo(x - 4 * s, y - 24 * s); g.lineTo(x, y - 12 * s); g.closePath(); g.fill();
+  }
+  function sign(x, y, s) {
+    const sc = Math.max(.85, H / 900);
+    g.fillStyle = '#4a3320'; g.fillRect(x - 3 * sc, y - 70 * sc, 6 * sc, 70 * sc);
+    g.font = `${13 * sc}px "Alfa Slab One", Georgia, serif`;
+    const lines = [s.a, s.b].filter(Boolean);
+    const w = Math.max(...lines.map(l => g.measureText(l).width)) + 22 * sc, h = (lines.length * 18 + 12) * sc;
+    g.fillStyle = '#6b4a2b'; g.fillRect(x - w / 2, y - 70 * sc - h + 6 * sc, w, h);
+    g.fillStyle = '#f1e2c4'; g.textAlign = 'center'; g.textBaseline = 'middle';
+    lines.forEach((l, i) => g.fillText(l, x, y - 70 * sc - h + 6 * sc + (16 + i * 18) * sc));
+    g.textAlign = 'start'; g.textBaseline = 'alphabetic';
+  }
+  function painting(p, x, y, ph, rot, glow) {
+    const im = imgs[p.w.slug + 480];
+    const ar = (p.w.iw || 1) / (p.w.ih || 1), pw = ph * ar;
+    g.save(); g.translate(x, y); g.rotate(rot);
+    if (glow) { g.shadowColor = 'rgba(255,230,170,.9)'; g.shadowBlur = 26; }
+    else { g.shadowColor = 'rgba(0,0,0,.45)'; g.shadowBlur = 10; }
+    g.fillStyle = '#16120d'; g.fillRect(-pw / 2 - 3, -ph - 3, pw + 6, ph + 6);
+    g.shadowBlur = 0;
+    if (im && im.complete && im.naturalWidth) g.drawImage(im, -pw / 2, -ph, pw, ph);
+    else { g.fillStyle = p.w.hex || '#888'; g.fillRect(-pw / 2, -ph, pw, ph); }
+    g.restore();
+    return pw;
+  }
+  function waypoint(p, x, y, fg, treeC, near) {
+    const ph = clamp(H * .15, 64, 132);
+    const rockC = mix(fg, [200, 200, 200], .12);
+    switch (p.kind) {
+      case 'rock': boulder(x + ph * .45, y, ph / 45, rockC); painting(p, x - ph * .05, y, ph, -.1, near); break;
+      case 'juniper': {
+        juniper(x, y, ph / 30, treeC);
+        const hy = y - ph * 1.05; g.strokeStyle = 'rgba(20,16,12,.8)'; g.lineWidth = 1.2;
+        const pw = ph * .78 * (p.w.iw / p.w.ih);
+        g.beginPath(); g.moveTo(x - pw * .3, hy - ph * .2); g.lineTo(x - pw * .32, hy - ph * .78 + ph * .78); g.moveTo(x + pw * .3, hy - ph * .2); g.lineTo(x + pw * .32, hy); g.stroke();
+        painting(p, x, hy + ph * .78, ph * .78, Math.sin(time * 1.3) * (RM ? 0 : .02), near);
+        break;
+      }
+      case 'creek': {
+        const wc = mix([70, 120, 150], fg, .3);
+        g.fillStyle = css(wc, .95); g.beginPath(); E(x - 70, y + 6, 90, 9); g.fill();
+        g.strokeStyle = 'rgba(255,255,255,.4)'; g.lineWidth = 1.5;
+        for (let i = 0; i < 3; i++) { const o = ((time * 30 + i * 40) % 140) - 70; g.beginPath(); g.moveTo(x - 70 + o - 10, y + 4 + i * 2); g.lineTo(x - 70 + o + 10, y + 4 + i * 2); g.stroke(); }
+        g.fillStyle = css(rockC); for (const o of [-110, -72, -36]) { g.beginPath(); E(x + o, y + 4, 9, 5); g.fill(); }
+        g.fillStyle = '#4a3320'; g.fillRect(x + 8, y - ph * .5, 5, ph * .5);
+        painting(p, x + 10, y - ph * .45, ph, 0, near);
+        break;
+      }
+      case 'cairn':
+        g.fillStyle = css(rockC);
+        [[0, 0, 26, 12], [2, -18, 20, 9], [-1, -32, 14, 7], [1, -42, 9, 5]].forEach(([dx, dy, rx, ry]) => { g.beginPath(); E(x + 40 + dx, y + dy - ry, rx, ry); g.fill(); });
+        painting(p, x - 12, y, ph, -.13, near); break;
+      case 'snag': {
+        g.fillStyle = css(mix(fg, [120, 110, 100], .25));
+        g.beginPath(); g.moveTo(x - 8, y); g.lineTo(x - 5, y - ph * 2.1); g.lineTo(x + 2, y - ph * 1.9); g.lineTo(x + 7, y - ph * 2.3); g.lineTo(x + 9, y); g.fill();
+        g.fillRect(x, y - ph * 1.6, 34, 4);
+        painting(p, x, y - ph * .55, ph, .02, near); break;
+      }
+      case 'post':
+        g.fillStyle = '#3e2c1c'; g.fillRect(x - 4, y - ph * 1.25, 8, ph * 1.25);
+        painting(p, x, y - ph * .35, ph, 0, near); break;
+      case 'scree':
+        for (let i = 0; i < 6; i++) boulder(x - 70 + i * 28, y + 2, .45 + hash(i, 3) * .3, rockC);
+        boulder(x + 10, y, 1.1, rockC);
+        painting(p, x - 4, y - 18, ph, -.07, near); break;
+    }
+  }
+  function walker(x, y) {
+    const s = clamp(H / 700, 1.05, 1.7);
+    const sw = Math.sin(phase) * (v > .002 ? .55 : 0);
+    const c = '#1b1813';
+    g.save(); g.translate(x, y); g.scale(dir * s, s);
+    g.strokeStyle = c; g.fillStyle = c; g.lineCap = 'round'; g.lineWidth = 4.5;
+    const hip = [0, -30];
+    // legs
+    g.beginPath(); g.moveTo(...hip); g.lineTo(Math.sin(sw) * 16, -2 + Math.max(0, -Math.cos(sw)) * 0); g.stroke();
+    g.beginPath(); g.moveTo(...hip); g.lineTo(Math.sin(-sw) * 16, -2); g.stroke();
+    // torso leaning into the climb
+    g.beginPath(); g.moveTo(...hip); g.lineTo(5, -60); g.stroke();
+    // pack
+    g.fillStyle = '#7a4e2a'; g.fillRect(-11, -64, 11, 26); g.fillStyle = c; g.fillRect(-12, -40, 13, 3);
+    g.fillStyle = '#c7802f'; g.fillRect(-12, -68, 12, 5);
+    // arm and stick
+    g.strokeStyle = c; g.lineWidth = 3.5;
+    g.beginPath(); g.moveTo(4, -56); g.lineTo(14 + Math.sin(sw) * 5, -40); g.stroke();
+    g.strokeStyle = '#5a3d22'; g.lineWidth = 2.5;
+    g.beginPath(); g.moveTo(17 + Math.sin(sw) * 5, -56); g.lineTo(21 + Math.sin(sw) * 9, 0); g.stroke();
+    // head and hat
+    g.fillStyle = c; g.beginPath(); g.arc(7, -68, 7, 0, Math.PI * 2); g.fill();
+    g.fillRect(-4, -75, 22, 3); g.fillRect(1, -82, 12, 8);
+    g.restore();
+  }
+
+  // ---------- HUD ----------
+  const odo = document.getElementById('odo'), elev = document.getElementById('elev'), nxt = document.getElementById('next'), me = document.getElementById('me');
+  const prof = document.getElementById('profile');
+  WP.forEach(p => { const e = document.createElement('div'); e.className = 'wp'; e.style.left = (p.mile / SUMMIT * 100) + '%'; e.dataset.m = p.mile; prof.appendChild(e); });
+  function hud() {
+    odo.textContent = d.toFixed(1).padStart(4, '0');
+    elev.textContent = Math.round(6420 + d * 380).toLocaleString('en-US') + ' ft';
+    const n = WP.find(p => !seen.has(p.mile) && p.mile > d - .001);
+    nxt.textContent = n ? `next painting ${(n.mile - d).toFixed(1)} mi` : `summit ${(SUMMIT - d).toFixed(1)} mi`;
+    me.style.left = (d / SUMMIT * 100) + '%';
+    prof.querySelectorAll('.wp').forEach(e => e.classList.toggle('seen', seen.has(+e.dataset.m)));
+  }
+  hud();
+
+  // ---------- sheets ----------
+  const fmtSize = w => {
+    if (!w.h || !w.w) return '';
+    const cm = x => (x / 10).toFixed(x % 10 ? 1 : 0), inch = x => (Math.round(x / 25.4 * 4) / 4).toString();
+    return `${cm(w.h)} × ${cm(w.w)} cm · ${inch(w.h)} × ${inch(w.w)} in`;
+  };
+  const coll = w => (w.coll || []).map(([n, k]) => k ? `${n}, no. ${k}` : n).join(' · ');
+  const view = document.getElementById('view');
+  let lastFocus = null;
+  function openWp(p) {
+    seen.add(p.mile); document.body.classList.add('sheet-open'); paused = true; v = 0; walking = false; holding = 0; setWalkUI();
+    const w = p.w;
+    const im = document.getElementById('v-img');
+    im.src = window.img(w, 960); im.alt = w.alt || w.title;
+    document.getElementById('v-mile').textContent = `Mile ${p.mile.toFixed(1)} · ${p.place}`;
+    document.getElementById('v-title').textContent = w.title;
+    document.getElementById('v-meta').innerHTML = [w.date || w.year, w.medium, fmtSize(w), coll(w)].filter(Boolean).map(s => `<div>${esc(s)}</div>`).join('');
+    const q = document.getElementById('v-quote');
+    q.hidden = !p.quote;
+    if (p.quote) { document.getElementById('v-q').textContent = '“' + p.quote + '”'; document.getElementById('v-cite').textContent = p.cite; }
+    document.getElementById('v-arch').href = 'https://archive.kyleparkercunningham.com/works/' + w.slug;
+    const c = hx(w.hex || '#222222');
+    view.style.background = css(mix(c, [12, 10, 8], .78), .94);
+    view.hidden = false; view.classList.remove('rise'); void view.offsetWidth; view.classList.add('rise');
+    view.scrollTop = 0;
+    document.getElementById('live').textContent = `Mile ${p.mile.toFixed(1)}. ${w.title}.`;
+    hud();
+    setTimeout(() => document.getElementById('v-go').focus({ preventScroll: true }), 50);
+  }
+  function closeWp() { view.hidden = true; document.body.classList.remove('sheet-open'); paused = false; cv.focus?.(); document.getElementById('walk').focus({ preventScroll: true }); }
+  document.getElementById('v-go').addEventListener('click', closeWp);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+
+  const summit = document.getElementById('summit');
+  function openSummit() {
+    document.body.classList.add('sheet-open');
+    paused = true; v = 0; walking = false; holding = 0; setWalkUI();
+    const w = newest;
+    const im = document.getElementById('s-img'); im.src = window.img(w, 960); im.alt = w.alt || w.title;
+    document.getElementById('s-name').textContent = w.title;
+    document.getElementById('s-meta').innerHTML = [w.date, w.medium, fmtSize(w), coll(w)].filter(Boolean).map(s => `<div>${esc(s)}</div>`).join('');
+    // the 1000: solstice 2026 to solstice 2027
+    const sol = new Date('2026-12-21T00:00:00-07:00'), now = new Date();
+    const days = Math.ceil((sol - now) / 864e5);
+    const grid = document.getElementById('k-grid'); grid.innerHTML = '';
+    let painted = 0, big, p;
+    if (days > 0) {
+      big = `${days} days`;
+      p = 'until the winter solstice, when the 1000 begins: a thousand new works, painted between the solstice of 2026 and the solstice of 2027. None is painted yet. Each will be set out here as it is finished.';
+    } else {
+      const day = Math.floor((now - sol) / 864e5) + 1;
+      painted = Math.min(1000, Math.round(day * 2.74));
+      big = `Day ${day}`;
+      p = `${painted} of 1000 painted. (Example figure: this sketch does not read the real count.)`;
+    }
+    for (let i = 0; i < 1000; i++) { const e = document.createElement('i'); if (i < painted) e.className = 'done'; grid.appendChild(e); }
+    document.getElementById('k-big').textContent = big;
+    document.getElementById('k-p').textContent = p;
+    const yrs = W_.map(w => w.year).filter(Boolean);
+    document.getElementById('door-s').textContent = `All ${W_.length} public works, ${Math.min(...yrs)} to ${Math.max(...yrs)}: paintings, drypoints, sculpture, installations, with every record in full. The trail shows nine. The archive holds everything.`;
+    summit.hidden = false; summit.scrollTop = 0;
+    document.getElementById('live').textContent = 'The summit.';
+    setTimeout(() => document.getElementById('s-title').focus?.(), 50);
+    hud();
+  }
+  document.getElementById('s-title').tabIndex = -1;
+  document.getElementById('reg').addEventListener('submit', e => {
+    e.preventDefault();
+    const s = document.getElementById('signed');
+    s.hidden = false;
+    s.textContent = 'Signed. Your name is in the register. (Sketch only: nothing was sent anywhere.)';
+    e.target.hidden = true;
+  });
+  document.getElementById('again').addEventListener('click', () => {
+    summit.hidden = true; document.body.classList.remove('sheet-open'); d = 0; seen.clear(); done = false; phase = 0; paused = false; hud();
+    document.getElementById('walk').focus({ preventScroll: true });
+  });
+
+  // ---------- input ----------
+  const walkBtn = document.getElementById('walk');
+  function setWalkUI() { walkBtn.classList.toggle('on', !!(walking || holding) && !paused); }
+  function begin() {
+    if (!started) { started = true; document.getElementById('intro').hidden = true; document.body.classList.remove('sheet-open'); paused = false; audioInit(); showHint(); }
+  }
+  function showHint() {
+    if (moved) return;
+    const h = document.getElementById('hint');
+    h.hidden = false;
+    const place = () => { if (h.hidden) return; const camX = d * PXM - figX; h.style.left = figX + 'px'; h.style.top = (ground(figX, camX) - 120 * clamp(H / 700, 1.05, 1.7)) + 'px'; requestAnimationFrame(place); };
+    place();
+  }
+  document.getElementById('start').addEventListener('click', begin);
+  const down = e => {
+    if (!started || paused) return;
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    holding++; dir = 1; setWalkUI(); audioInit();
+    try { e.target.setPointerCapture?.(e.pointerId); } catch (_) {}
+    e.preventDefault();
+  };
+  const up = () => { holding = 0; setWalkUI(); };
+  for (const el of [cv, walkBtn]) {
+    el.addEventListener('pointerdown', down);
+    el.addEventListener('pointerup', up); el.addEventListener('pointercancel', up); el.addEventListener('lostpointercapture', up);
+    el.addEventListener('contextmenu', e => e.preventDefault());
+  }
+  addEventListener('keydown', e => {
+    if (!view.hidden && (e.key === 'Escape')) { closeWp(); return; }
+    if (!started && (e.key === 'ArrowRight')) { begin(); }
+    if (paused || !started) return;
+    if (e.key === 'ArrowRight' || e.key === 'd' || (e.key === ' ' && document.activeElement === walkBtn) || (e.key === 'Enter' && document.activeElement === walkBtn)) { walking = true; dir = 1; setWalkUI(); audioInit(); e.preventDefault(); }
+    else if (e.key === 'ArrowLeft' || e.key === 'a') { walking = true; dir = -1; setWalkUI(); e.preventDefault(); }
+  });
+  addEventListener('keyup', e => {
+    if (['ArrowRight', 'ArrowLeft', 'd', 'a', ' ', 'Enter'].includes(e.key)) { walking = false; dir = 1; setWalkUI(); }
+  });
+  addEventListener('wheel', e => {
+    if (!started || paused) return;
+    const dy = clamp(e.deltaY || e.deltaX, -120, 120);
+    if (dy > 0) { dir = 1; step(dy * .0011); }
+  }, { passive: true });
+  addEventListener('blur', up);
+
+  // ---------- sound ----------
+  let ac = null, master, windG, windF, rainG, noiseBuf, muted = true;
+  const soundBtn = document.getElementById('sound');
+  function audioInit() {
+    if (ac) { if (ac.state === 'suspended') ac.resume(); return; }
+    try {
+      ac = new (window.AudioContext || window.webkitAudioContext)();
+      noiseBuf = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
+      const ch = noiseBuf.getChannelData(0); for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+      master = ac.createGain(); master.gain.value = 0; master.connect(ac.destination);
+      const loop = () => { const s = ac.createBufferSource(); s.buffer = noiseBuf; s.loop = true; s.start(); return s; };
+      windF = ac.createBiquadFilter(); windF.type = 'bandpass'; windF.Q.value = .6; windF.frequency.value = 500;
+      windG = ac.createGain(); windG.gain.value = .04;
+      loop().connect(windF); windF.connect(windG); windG.connect(master);
+      const rf = ac.createBiquadFilter(); rf.type = 'highpass'; rf.frequency.value = 2500;
+      rainG = ac.createGain(); rainG.gain.value = 0;
+      loop().connect(rf); rf.connect(rainG); rainG.connect(master);
+      setMute(false);
+      (function tick() {
+        if (!ac) return;
+        const t = ac.currentTime, st = stormAt(d);
+        windF.frequency.setTargetAtTime(380 + Math.sin(t * .35) * 160 + Math.sin(t * 1.3) * 60 + d * 30, t, .3);
+        windG.gain.setTargetAtTime(.035 + d / SUMMIT * .07 + st * .09, t, .5);
+        rainG.gain.setTargetAtTime(st * .11, t, .4);
+        setTimeout(tick, 120);
+      })();
+    } catch (_) { ac = null; }
+  }
+  function setMute(m) {
+    muted = m;
+    if (master) master.gain.setTargetAtTime(m ? 0 : .9, ac.currentTime, .1);
+    soundBtn.textContent = m ? 'Sound off' : 'Sound on';
+    soundBtn.setAttribute('aria-pressed', String(!m));
+  }
+  soundBtn.addEventListener('click', () => { if (!ac) { audioInit(); return; } setMute(!muted); });
+  function footstep() {
+    if (!ac || muted) return;
+    const t = ac.currentTime, s = ac.createBufferSource(); s.buffer = noiseBuf; s.playbackRate.value = .7 + Math.random() * .5;
+    const f = ac.createBiquadFilter(), gn = ac.createGain();
+    const creek = Math.abs(d - 3.15) < .12;
+    if (d > 8.3) { f.type = 'bandpass'; f.frequency.value = 2600; f.Q.value = .8; }
+    else if (creek) { f.type = 'bandpass'; f.frequency.value = 1500; f.Q.value = 3; }
+    else { f.type = 'lowpass'; f.frequency.value = 800; }
+    gn.gain.setValueAtTime(0, t); gn.gain.linearRampToValueAtTime(creek ? .35 : .28, t + .006); gn.gain.exponentialRampToValueAtTime(.001, t + (d > 8.3 ? .09 : .14));
+    s.connect(f); f.connect(gn); gn.connect(master); s.start(t, Math.random()); s.stop(t + .2);
+  }
+  function thunder() {
+    if (!ac || muted) return;
+    const t = ac.currentTime, s = ac.createBufferSource(); s.buffer = noiseBuf; s.loop = true;
+    const f = ac.createBiquadFilter(); f.type = 'lowpass'; f.frequency.value = 160;
+    const gn = ac.createGain(); gn.gain.setValueAtTime(0, t); gn.gain.linearRampToValueAtTime(.9, t + .08); gn.gain.exponentialRampToValueAtTime(.001, t + 3.2);
+    s.connect(f); f.connect(gn); gn.connect(master); s.start(t); s.stop(t + 3.3);
+  }
+
+  // A quick look for previews: ?mile=4.4 style deep links are not allowed in artifacts, so #m44 jumps there.
+  // #v70 opens the painting at mile 7.0; #top opens the summit.
+  const m = /^#([mv])(\d{1,3})$/.exec(location.hash);
+  const jump = to => { d = clamp(to, 0, SUMMIT); WP.forEach(p => { if (p.mile < d) seen.add(p.mile); }); started = true; paused = false; document.getElementById('intro').hidden = true; document.body.classList.remove('sheet-open'); hud(); };
+  if (m) {
+    jump(+m[2] / 10);
+    const p = m[1] === 'v' && WP.find(p => Math.abs(p.mile - d) < .05);
+    if (p) openWp(p);
+  } else if (location.hash === '#top') { jump(SUMMIT); done = true; openSummit(); }
+
+  (document.fonts ? document.fonts.ready : Promise.resolve()).then(() => requestAnimationFrame(frame));
+})();
+</script>
+</body>
+</html>

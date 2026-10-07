@@ -1,0 +1,631 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Territory</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Sofia+Sans+Condensed:ital,wght@0,400;0,600;0,800;1,400&family=Sofia+Sans+Extra+Condensed:wght@700;900&display=swap">
+<style>
+/* Layout: a printed topographic sheet. Collar on top, map in the middle, margins either side
+   (stacked under the map on a phone), then the index to adjoining sheets and the door to the archive. */
+:root{
+  --paper:#f2f1e8;        /* the sheet: a cool, slightly green white, not cream */
+  --paper-2:#e8e7dc;
+  --ink:#1d1d1b;          /* black plate: names, culture, control marks */
+  --ink-2:#55544d;
+  --contour:#a5623a;      /* brown plate: relief */
+  --water:#2a7ab8;        /* blue plate: hydrography */
+  --wood:#cfe2b6;         /* green plate: woodland tint */
+  --rev:#8b3a9c;          /* purple plate: provisional overprint, used only for example data */
+  --label:"Sofia Sans Condensed","Arial Narrow",Arial,sans-serif;
+  --display:"Sofia Sans Extra Condensed","Sofia Sans Condensed","Arial Narrow",sans-serif;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:15px;line-height:1.5;
+  padding-inline:16px;padding-block:0 40px;overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rev);outline-offset:2px}
+.caps{font-family:var(--label);text-transform:uppercase;letter-spacing:.14em;font-size:11px;font-weight:600}
+
+/* collar */
+.collar{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:12px 10px;
+  border-bottom:1px solid var(--ink);color:var(--ink-2)}
+.collar a{color:var(--ink-2);text-decoration:none;border-bottom:1px dotted currentColor}
+.sheet{display:grid;gap:24px;grid-template-columns:minmax(0,1fr);grid-template-areas:"a" "map" "b" "note";max-width:1400px;margin:0 auto;padding-top:18px}
+.left-a{grid-area:a}.left-b{grid-area:b}.mapsec{grid-area:map;min-width:0}.right{grid-area:note}
+@media (min-width:1000px){
+  .sheet{grid-template-columns:minmax(250px,1fr) minmax(480px,600px) minmax(280px,1fr);grid-template-areas:"a map note" "b map note";
+    grid-template-rows:auto 1fr;align-items:start;row-gap:0}
+  .right{position:sticky;top:12px;grid-row:1 / span 2}
+  .mapsec{grid-row:1 / span 2}
+}
+
+/* title block */
+.title h1{font-family:var(--display);font-weight:900;font-size:clamp(40px,6vw,64px);line-height:.86;
+  letter-spacing:.01em;text-transform:uppercase;margin:4px 0 8px;text-wrap:balance}
+.title .sub{font-family:var(--label);font-size:15px;color:var(--ink-2);margin:0 0 14px}
+.rule{border:0;border-top:1px solid var(--ink);margin:14px 0}
+.rule.thin{border-top-width:.5px;border-color:var(--ink-2)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-family:var(--label);font-size:13px}
+.kv dt{color:var(--ink-2);text-transform:uppercase;letter-spacing:.1em;font-size:11px;padding-top:2px}
+.kv dd{margin:0}
+.rev{color:var(--rev)}
+.now{border:1px solid var(--rev);padding:10px 12px;color:var(--rev);font-family:var(--label);font-size:13px}
+.now b{font-weight:800;letter-spacing:.06em}
+.owl{font-size:14px;font-style:italic;color:var(--ink-2)}
+.owl .sig{font-style:normal;font-family:var(--label);font-size:11px;letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:6px}
+.latest{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.latest button{all:unset;cursor:pointer;display:grid;grid-template-columns:48px 1fr;gap:10px;align-items:center}
+.latest img{width:48px;height:48px;object-fit:cover;display:block;border:.5px solid var(--ink-2)}
+.latest .t{font-style:italic}
+.latest .m{font-family:var(--label);font-size:12px;color:var(--ink-2)}
+
+/* the map */
+.mapwrap{position:relative;width:100%;aspect-ratio:0.5554;max-width:100%;border:1.5px solid var(--ink);
+  background:var(--paper);overflow:hidden;touch-action:pan-y}
+.mapwrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#overlay{position:absolute;inset:0}
+.pin{position:absolute;width:22px;height:22px;margin:-11px 0 0 -11px;padding:0;border:0;background:none;cursor:pointer;z-index:3}
+.pin svg{width:22px;height:22px;display:block;overflow:visible}
+.pin .tri{fill:var(--paper);stroke:var(--ink);stroke-width:1.6}
+.pin .dot{fill:var(--ink)}
+.pin[aria-pressed="true"] .tri{fill:var(--ink)}
+.pin[aria-pressed="true"] .dot{fill:var(--paper)}
+.pin.region .tri{stroke-dasharray:2.5 2}
+.callout{position:absolute;z-index:2;font-family:var(--label);font-size:clamp(10px,2.7vw,11.5px);line-height:1.1;color:var(--ink);
+  background:rgba(242,241,232,.86);padding:2px 4px;white-space:nowrap;cursor:pointer;border:0;text-align:left}
+.callout b{font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.callout i{display:block;font-family:var(--serif);font-size:10.5px;color:var(--ink-2)}
+.callout .n{font-weight:400;color:var(--ink-2)}
+.callout.on b{background:var(--ink);color:var(--paper);padding:0 3px}
+#leaders{position:absolute;inset:0;pointer-events:none;z-index:1}
+.here{position:absolute;width:0;height:0;z-index:2;pointer-events:none}
+.here::before,.here::after{content:"";position:absolute;left:-7px;top:-7px;width:14px;height:14px;border-radius:50%;border:2px solid var(--rev)}
+.here::after{animation:ping 2.4s ease-out infinite}
+@keyframes ping{from{transform:scale(1);opacity:.9}to{transform:scale(3.4);opacity:0}}
+@media (prefers-reduced-motion:reduce){.here::after{animation:none;opacity:0}}
+.maphint{font-family:var(--label);font-size:12px;color:var(--ink-2);margin:8px 0 0;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.scalebar{display:flex;align-items:flex-end;gap:10px;font-family:var(--label);font-size:11px;margin-top:10px}
+.scalebar .bar{display:flex;height:6px;border:1px solid var(--ink)}
+.scalebar .bar span{display:block;height:100%}
+.scalebar .bar span:nth-child(odd){background:var(--ink)}
+
+/* legend */
+.legend{display:grid;gap:7px;font-family:var(--label);font-size:12.5px}
+.legend div{display:grid;grid-template-columns:38px 1fr;align-items:center;gap:10px}
+.legend svg{width:38px;height:14px;overflow:visible}
+
+/* the sheet note (right margin; a bottom sheet on a phone) */
+.note .empty{font-family:var(--label);color:var(--ink-2);font-size:13px}
+.note h2{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:28px;line-height:.95;margin:2px 0 4px}
+.note .placesub{font-family:var(--label);color:var(--ink-2);font-size:13px;margin:0 0 10px}
+.note blockquote{margin:10px 0 12px;padding:0 0 0 12px;border-left:1.5px solid var(--contour);font-size:14px}
+.note blockquote cite{display:block;font-family:var(--label);font-style:normal;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-top:4px}
+.strip{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;margin:0 0 10px;scrollbar-width:thin}
+.strip button{flex:0 0 auto;padding:0;border:1.5px solid transparent;background:none;cursor:pointer}
+.strip button[aria-current="true"]{border-color:var(--ink)}
+.strip img{width:54px;height:54px;object-fit:cover;display:block}
+.plate{margin:0}
+.plate img{width:100%;height:auto;display:block;background:var(--paper-2);border:.5px solid var(--ink-2)}
+.plate figcaption{margin-top:8px}
+.plate .wt{font-size:19px;font-style:italic;line-height:1.25}
+.plate .kv{margin-top:8px}
+.arch{display:inline-block;margin-top:12px;font-family:var(--label);font-weight:600;font-size:13px;letter-spacing:.06em;
+  text-transform:uppercase;text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:1px}
+.closebtn{display:none}
+@media (max-width:999px){
+  .right{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:2px solid var(--ink);
+    max-height:72vh;overflow-y:auto;padding:12px 16px calc(16px + env(safe-area-inset-bottom,0px));
+    transform:translateY(105%);transition:transform .28s ease,visibility .28s;visibility:hidden}
+  .right.open{transform:none;visibility:visible;box-shadow:0 -10px 30px rgba(0,0,0,.12)}
+  .closebtn{display:block;position:sticky;top:0;margin-left:auto;font-family:var(--label);font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;background:var(--paper);border:1px solid var(--ink);padding:4px 10px;cursor:pointer}
+  .plate img{max-height:42vh;object-fit:contain}
+}
+@media (prefers-reduced-motion:reduce){.right{transition:none}}
+
+/* index to adjoining sheets */
+.adj{max-width:1400px;margin:44px auto 0}
+.adj header{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;border-bottom:1px solid var(--ink);padding-bottom:8px}
+.adj h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(28px,4vw,40px);line-height:.9;margin:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-left:1px solid var(--ink);border-top:1px solid var(--ink);margin-top:18px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:1000px){.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.cell{all:unset;box-sizing:border-box;cursor:pointer;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:10px;display:grid;gap:8px;align-content:start;min-width:0}
+.cell:focus-visible{outline:2px solid var(--rev);outline-offset:-3px}
+.cell .no{font-family:var(--label);font-size:11px;letter-spacing:.12em;color:var(--ink-2);display:flex;justify-content:space-between;gap:6px}
+.cell .img{aspect-ratio:1;overflow:hidden;background:var(--paper-2)}
+.cell img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.92);transition:filter .2s}
+.cell:hover img{filter:saturate(1.1)}
+.cell .nm{font-family:var(--label);font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:13px;line-height:1.15;overflow-wrap:anywhere}
+.cell .pl{font-family:var(--serif);font-style:italic;font-size:12.5px;color:var(--ink-2)}
+.unrec{display:grid;grid-template-columns:1fr;gap:14px;margin-top:28px;align-items:center}
+@media (min-width:900px){.unrec{grid-template-columns:minmax(0,360px) 1fr}}
+.unrec p{margin:0;font-family:var(--label);font-size:14px;color:var(--ink-2)}
+.ghosts{display:flex;flex-wrap:wrap;gap:4px}
+.ghosts img{width:34px;height:34px;object-fit:cover;filter:grayscale(1) contrast(.9);opacity:.6;display:block}
+.door{max-width:1400px;margin:44px auto 0;border:2px solid var(--ink);padding:22px;display:grid;gap:16px;grid-template-columns:1fr}
+@media (min-width:800px){.door{grid-template-columns:1fr auto;align-items:center}}
+.door h2{font-family:var(--display);font-weight:900;text-transform:uppercase;font-size:clamp(30px,4.6vw,52px);line-height:.88;margin:0 0 8px}
+.door p{margin:0;max-width:62ch}
+.door a.big{font-family:var(--label);font-weight:800;font-size:16px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;
+  background:var(--ink);color:var(--paper);padding:14px 18px;display:inline-block;white-space:nowrap}
+.door a.big:hover{background:var(--contour)}
+.foot{max-width:1400px;margin:18px auto 0;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:var(--ink-2)}
+</style>
+</head>
+<body>
+
+<div class="collar caps">
+  <span>Kyle Parker Cunningham · painter · topographic series</span>
+  <span>Sheet 2027–01 · <span class="rev">example edition</span> · <a href="index.html">sketchbook</a></span>
+</div>
+
+<main class="sheet">
+  <!-- left margin: title block, now, latest, legend -->
+  <section class="left-a" aria-label="Title block">
+    <div class="title">
+      <div class="caps" style="color:var(--ink-2)">New Mexico — Wyoming — Montana</div>
+      <h1>Kyle Parker Cunningham Quadrangle</h1>
+      <p class="sub">Paintings, prints and films, plotted where they were made.</p>
+    </div>
+    <div class="now" role="status">
+      <b>HERE NOW</b> · Truth or Consequences, NM<br>
+      <span id="wx">84 °F · clear · wind SW 8 mph</span><br>
+      <span style="font-size:11px;letter-spacing:.1em;text-transform:uppercase">example · purple overprint = provisional</span>
+    </div>
+  </section>
+  <section class="left-b" aria-label="Latest work, survey note and legend">
+    <hr class="rule">
+    <div class="caps" style="margin-bottom:8px">Latest survey</div>
+    <ul class="latest" id="latest"></ul>
+    <hr class="rule">
+    <p class="owl" id="owlnote"></p>
+    <hr class="rule thin">
+    <div class="caps" style="margin-bottom:8px">Legend</div>
+    <div class="legend" aria-label="Map legend">
+      <div><svg viewBox="0 0 38 14" aria-hidden="true"><path d="M1 9 C10 2 18 13 37 5" fill="none" stroke="#a5623a" stroke-width="1.6"/></svg>Index contour, every 500 m</div>
+      <div><svg viewBox="0 0 38 14" aria-hidden="true"><path d="M1 9 C10 2 18 13 37 5" fill="none" stroke="#a5623a" stroke-width=".6" opacity=".8"/></svg>Intermediate contour, 100 m</div>
+      <div><svg viewBox="0 0 38 14" aria-hidden="true"><rect x="1" y="2" width="36" height="10" fill="#cfe2b6"/></svg>Woodland</div>
+      <div><svg viewBox="0 0 38 14" aria-hidden="true"><path d="M1 8 C12 3 22 12 37 6" fill="none" stroke="#2a7ab8" stroke-width="1.6"/></svg><i style="font-family:var(--serif)">Perennial stream</i></div>
+      <div><svg viewBox="0 0 38 14" aria-hidden="true"><path d="M1 7 H37" stroke="#8b3a9c" stroke-width="1.8" stroke-dasharray="5 3"/></svg><span class="rev">The season's road (example)</span></div>
+      <div><svg viewBox="-19 -7 38 14" aria-hidden="true"><path d="M0 -6 L6 5 L-6 5 Z" fill="#f2f1e8" stroke="#1d1d1b" stroke-width="1.5"/><circle r="1.6" cy="1.6" fill="#1d1d1b"/></svg>Work, place on record</div>
+      <div><svg viewBox="-19 -7 38 14" aria-hidden="true"><path d="M0 -6 L6 5 L-6 5 Z" fill="#f2f1e8" stroke="#1d1d1b" stroke-width="1.5" stroke-dasharray="2.5 2"/><circle r="1.6" cy="1.6" fill="#1d1d1b"/></svg>Works, state known, site not</div>
+      <div><svg viewBox="-19 -7 38 14" aria-hidden="true"><circle r="5" fill="none" stroke="#8b3a9c" stroke-width="2"/></svg><span class="rev">Where he is now (example)</span></div>
+    </div>
+  </section>
+
+  <!-- the map -->
+  <section class="mapsec" aria-label="Map of the places the work was made">
+    <div class="mapwrap" id="map">
+      <canvas id="terrain" aria-hidden="true"></canvas>
+      <svg id="leaders" aria-hidden="true"></svg>
+      <div id="overlay"></div>
+    </div>
+    <div class="scalebar" aria-hidden="true">
+      <div><div class="bar" id="bar"></div><div style="display:flex;justify-content:space-between" id="barlabels"></div></div>
+      <div id="ratio" style="color:var(--ink-2)"></div>
+    </div>
+    <p class="maphint"><span>Tap a triangle to read the place.</span><span>Relief is drawn, not surveyed. Places are from the archive.</span></p>
+  </section>
+
+  <!-- right margin: the sheet note -->
+  <aside class="right" id="right" aria-live="polite" aria-label="Sheet note">
+    <button class="closebtn" id="close" type="button">Close</button>
+    <div class="note" id="note"><p class="empty">Choose a place on the sheet.</p></div>
+  </aside>
+</main>
+
+<section class="adj" aria-labelledby="adjh">
+  <header>
+    <h2 id="adjh">Index to adjoining sheets</h2>
+    <span class="caps" style="color:var(--ink-2)">Twelve works chosen from sixteen years</span>
+  </header>
+  <div class="grid" id="grid"></div>
+  <div class="unrec">
+    <p id="unrectext"></p>
+    <div class="ghosts" id="ghosts" aria-hidden="true"></div>
+  </div>
+</section>
+
+<section class="door" aria-labelledby="doorh">
+  <div>
+    <div class="caps" style="color:var(--ink-2);margin-bottom:6px">The complete survey</div>
+    <h2 id="doorh">Everything else is in the archive</h2>
+    <p id="doortext">This sheet shows the places and a short walk through the best of the work. The archive holds every work on record, with its date, medium, size and history.</p>
+  </div>
+  <a class="big" href="https://archive.kyleparkercunningham.com/" rel="noopener">Open the archive →</a>
+</section>
+
+<div class="foot caps">
+  <span>Compiled from archive.kyleparkercunningham.com, 7 October 2026</span>
+  <a href="index.html" style="color:var(--ink-2)">sketchbook</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+<script src="works.js"></script>
+<script>
+(() => {
+const W = window.WORKS || [];
+const bySlug = Object.fromEntries(W.map(w => [w.slug, w]));
+const ARCHIVE = 'https://archive.kyleparkercunningham.com/works/';
+
+/* ---------- projection: equirectangular, cos(39.6°) ---------- */
+const LON0 = -114.6, LON1 = -102.6, LAT0 = 31.2, LAT1 = 48.0;
+const K = Math.cos(39.6 * Math.PI / 180);
+const ASPECT = ((LON1 - LON0) * K) / (LAT1 - LAT0); // width / height
+const fx = lon => (lon - LON0) / (LON1 - LON0);
+const fy = lat => (LAT1 - lat) / (LAT1 - LAT0);
+
+/* ---------- places, with where each fact came from ---------- */
+const PLACES = {
+  tc:    {name:'Truth or Consequences', sub:'The studio and the gallery', long:'The studio · Truth or Consequences Contemporary, the gallery', lat:33.13, lon:-107.25, dx:.1, dy:.0,
+          quote:{text:'my art is more radical than your art.', cite:'Paint Talk No. 8, filmed here, 6 October 2026'}},
+  tres:  {name:'Tres Piedras', sub:'Atmospheric Balance, summer 2024', lat:36.65, lon:-105.97, dx:-.24, dy:-.03,
+          quote:{text:'Painted summer, 2024 in Tres Piedras, New Mexico. A practice in balance after a lightning strike connected.', cite:'Atmospheric Balance, the collection text'}},
+  nogal: {name:'Nogal Canyon', sub:'San Mateo Mountains', lat:33.60, lon:-107.38, dx:-.27, dy:-.035},
+  gila:  {name:'Gila', sub:'Wilderness', lat:33.22, lon:-108.25, dx:-.2, dy:.03},
+  lc:    {name:'Las Cruces', lat:32.32, lon:-106.76, dx:-.2, dy:.035},
+  jor:   {name:'Chihuahuan Desert', sub:'Jornada del Muerto', lat:32.85, lon:-106.85, dx:.08, dy:.06},
+  rg:    {name:'Rio Grande', sub:'reach not recorded', lat:34.45, lon:-106.85, dx:.12, dy:-.03},
+  nm:    {name:'New Mexico', sub:'site not recorded', lat:35.15, lon:-104.4, dx:.03, dy:-.045, region:true},
+  boz:   {name:'Bozeman', lat:45.68, lon:-111.04, dx:.11, dy:.012},
+  cam:   {name:'Cameron Bridge', sub:'Gallatin River', lat:45.80, lon:-111.27, dx:-.29, dy:-.03},
+  storm: {name:'Storm Castle', sub:'placed from the title', lat:45.44, lon:-111.22, dx:-.27, dy:.032},
+  abs:   {name:'Absaroka Range', lat:45.20, lon:-110.15, dx:.1, dy:.03},
+  mt:    {name:'Montana', sub:'site not recorded', lat:46.55, lon:-108.9, dx:.07, dy:.03, region:true},
+};
+const RECORDED = {'evening-clouds':'cam','absolute-potential':'boz'}; // created_place in the archive
+const TITLE = {'storm-castle-bluffs':'storm'};
+const TAGS = [['tres piedras','tres'],['nogal canyon','nogal'],['absaroka mountains','abs'],['las cruces','lc'],['gila','gila'],
+  ['truth or consequences','tc'],['desert archaic','tc'],['chihuahuan desert','jor'],['rio grande','rg'],['montana','mt'],['new mexico','nm']];
+const placeOf = w => {
+  if (RECORDED[w.slug]) return [RECORDED[w.slug], 'the archive record (place made)'];
+  if (TITLE[w.slug]) return [TITLE[w.slug], 'the title; no place on record'];
+  if ((w.coll||[]).some(c => c[0] === 'Atmospheric Balance')) return ['tres', 'the Atmospheric Balance collection'];
+  for (const [t, p] of TAGS) if ((w.tags||[]).includes(t)) return [p, 'the work’s tag “' + t + '”'];
+  return [null, null];
+};
+const placed = {}; const unplaced = [];
+for (const w of W) { const [p, src] = placeOf(w); w._place = p; w._src = src;
+  if (p) (placed[p] ||= []).push(w); else unplaced.push(w); }
+for (const k in placed) placed[k].sort((a,b) => (b.year||0)-(a.year||0) || (b.best - a.best));
+
+/* ---------- terrain: drawn, not surveyed ---------- */
+// small Perlin noise
+const perm = new Uint8Array(512); { const p = [...Array(256).keys()]; let s = 7;
+  for (let i = 255; i > 0; i--) { s = (s * 16807) % 2147483647; const j = s % (i + 1); [p[i], p[j]] = [p[j], p[i]]; }
+  for (let i = 0; i < 512; i++) perm[i] = p[i & 255]; }
+const fade = t => t*t*t*(t*(t*6-15)+10), lerp = (a,b,t) => a+(b-a)*t;
+const grad = (h,x,y) => ((h&1)?-x:x) + ((h&2)?-y:y);
+function noise(x, y){ const X = Math.floor(x)&255, Y = Math.floor(y)&255; x -= Math.floor(x); y -= Math.floor(y);
+  const u = fade(x), v = fade(y), a = perm[X]+Y, b = perm[X+1]+Y;
+  return lerp(lerp(grad(perm[a],x,y), grad(perm[b],x-1,y), u), lerp(grad(perm[a+1],x,y-1), grad(perm[b+1],x-1,y-1), u), v); }
+const fbm = (x,y,o=5) => { let s=0,a=.5,f=1; for(let i=0;i<o;i++){ s+=a*noise(x*f,y*f); a*=.5; f*=2.03; } return s; };
+const ridged = (x,y) => { let s=0,a=.5,f=1; for(let i=0;i<5;i++){ s+=a*(1-Math.abs(noise(x*f+31,y*f-17))); a*=.5; f*=2.1; } return s; };
+
+// ranges as [height m, half-width deg, [lat,lon]...]
+const RANGES = [
+  [2300,.28,[35.6,-105.8],[36.5,-105.45],[37.4,-105.4],[38.3,-105.85]],   // Sangre de Cristo
+  [2400,.55,[37.55,-108.1],[37.85,-107.3],[37.7,-106.7]],                // San Juans
+  [2300,.25,[38.6,-106.35],[39.4,-106.4]],                               // Sawatch
+  [2200,.3,[38.8,-105.1],[39.6,-105.6],[40.6,-105.7]],                   // Front Range
+  [1700,.3,[40.3,-106.7],[41.3,-106.3]],                                 // Park Range
+  [1500,.25,[35.75,-106.7],[36.0,-106.45]],                              // Jemez
+  [1150,.16,[33.45,-107.5],[34.05,-107.3]],                              // San Mateo
+  [1250,.14,[32.85,-107.85],[33.45,-107.8]],                             // Black Range
+  [1350,.35,[33.05,-108.75],[33.45,-108.3]],                             // Mogollon
+  [1400,.22,[32.6,-105.75],[33.4,-105.7]],                               // Sacramento
+  [900,.08,[32.2,-106.55],[33.5,-106.48]],                               // Organ / San Andres
+  [1100,.22,[34.9,-106.4],[35.3,-106.4]],                                // Sandia/Manzano
+  [2300,.25,[42.6,-109.5],[43.5,-110.0]],                                // Wind River
+  [2100,.12,[43.4,-110.8],[44.0,-110.8]],                                // Tetons
+  [1900,.25,[44.0,-107.1],[45.0,-107.6]],                                // Bighorns
+  [2200,.3,[44.2,-110.0],[45.3,-110.2],[45.2,-109.6]],                   // Absaroka / Beartooth
+  [1700,.2,[44.8,-111.15],[45.5,-111.1]],                                // Gallatin
+  [1700,.2,[44.8,-111.6],[45.55,-111.65]],                               // Madison
+  [1200,.08,[45.7,-110.95],[46.1,-110.95]],                              // Bridgers
+  [1400,.13,[45.9,-110.3],[46.2,-110.35]],                               // Crazies
+  [1050,.25,[46.6,-110.95],[47.0,-110.5]],                               // Little Belts
+  [1000,.25,[46.2,-111.9],[46.9,-112.4],[47.6,-112.8]],                  // Big Belt / front
+  [1900,.2,[40.6,-111.0],[40.75,-109.8]],                                // Uintas
+  [1700,.15,[39.5,-111.6],[41.8,-111.7]],                                // Wasatch
+  [1300,.4,[44.0,-113.6],[45.2,-113.2],[46.2,-114.0]],                   // Idaho / Bitterroot
+  [900,.6,[44.55,-110.6],[44.4,-110.9]],                                 // Yellowstone plateau
+];
+const RIVERS = {
+  'Rio Grande': [[37.75,-107.25],[37.6,-106.6],[37.47,-105.87],[37.0,-105.75],[36.5,-105.7],[36.05,-106.07],[35.6,-106.3],[35.08,-106.66],[34.4,-106.8],[34.06,-106.89],[33.45,-107.15],[33.13,-107.26],[32.9,-107.3],[32.6,-107.0],[32.3,-106.8],[31.78,-106.5],[31.4,-106.1],[31.2,-105.8]],
+  'Yellowstone R.': [[44.42,-110.38],[44.75,-110.5],[45.03,-110.7],[45.4,-110.68],[45.66,-110.56],[45.83,-109.95],[45.78,-108.5],[46.1,-107.6],[46.4,-106.4],[46.8,-105.4],[47.1,-104.6],[47.6,-104.1]],
+  'Gallatin R.': [[44.95,-111.05],[45.3,-111.22],[45.6,-111.2],[45.8,-111.27],[45.92,-111.5]],
+  'Missouri R.': [[45.92,-111.5],[46.35,-111.6],[46.6,-111.85],[47.05,-111.9],[47.5,-111.3],[47.8,-110.6],[48.0,-110.0]],
+  'Gila R.': [[33.45,-108.4],[33.2,-108.2],[32.95,-108.6],[32.85,-109.1],[33.0,-109.6],[33.1,-110.4],[33.05,-111.0],[33.0,-111.6]],
+  'Pecos R.': [[35.8,-105.6],[35.4,-105.4],[34.9,-104.7],[34.4,-104.2],[33.4,-104.5],[32.4,-104.2],[31.9,-103.9],[31.4,-103.4]],
+  'Colorado R.': [[40.2,-105.85],[39.9,-106.3],[39.6,-107.3],[39.1,-108.5],[38.6,-109.6],[38.1,-110.1],[37.4,-110.8],[36.9,-111.6],[36.5,-112.8],[36.1,-114.0]],
+  'Green R.': [[43.2,-110.1],[42.4,-110.1],[41.5,-109.5],[41.0,-109.6],[40.5,-109.3],[39.6,-110.1],[38.6,-110.0],[38.2,-109.95]],
+  'Arkansas R.': [[39.2,-106.3],[38.8,-106.1],[38.45,-105.4],[38.25,-104.6],[38.05,-103.6],[37.9,-102.6]],
+};
+const segDist = (px,py,ax,ay,bx,by) => { const dx=bx-ax, dy=by-ay, l=dx*dx+dy*dy; let t=l?((px-ax)*dx+(py-ay)*dy)/l:0;
+  t=Math.max(0,Math.min(1,t)); const x=ax+t*dx-px, y=ay+t*dy-py; return Math.sqrt(x*x+y*y); };
+const lineDist = (lon,lat,pts) => { let d=1e9; for(let i=0;i<pts.length-1;i++){ const [la,lo]=pts[i],[lb,lb2]=pts[i+1];
+  d=Math.min(d,segDist(lon*K,lat,lo*K,la,lb2*K,lb)); } if(pts.length===1){ const [la,lo]=pts[0]; d=Math.hypot((lon-lo)*K,lat-la);} return d; };
+
+function elevation(lon0, lat0){
+  // warp the domain so ranges bend and break instead of reading as ovals
+  const lon = lon0 + .32*fbm(lon0*.9+11, lat0*.9-3, 4), lat = lat0 + .26*fbm(lon0*.9-21, lat0*.9+8, 4);
+  let e = 1150 + Math.max(0, -103.5 - lon0) * 210;                    // plains climb west
+  e = Math.min(e, 1700);
+  const plateau = Math.max(0, 1 - Math.hypot((lon+109.8)/2.6, (lat-37.4)/2.1)); e += 650 * plateau * plateau; // Colorado Plateau
+  const divide = lineDist(lon,lat,[[31.5,-108.6],[34,-108.2],[37.5,-106.8],[40.5,-106],[42.5,-109.2],[44.5,-110.6],[46.5,-112.5],[48,-113.4]]);
+  e += 600 * Math.exp(-((divide/1.6)**2));                            // the Rockies' broad swell
+  let mtn = 0;
+  for (const r of RANGES){ const [h,wd,...pts]=r; const d=lineDist(lon,lat,pts); const g=Math.exp(-((d/(wd*1.15))**2));
+    if (g>.002){ const rg = ridged(lon*2.3, lat*2.3); e += h * g * (.28 + .95*rg*rg); mtn = Math.max(mtn, g); } }
+  const rift = lineDist(lon0,lat0,RIVERS['Rio Grande'].slice(2,16)); e -= 520*Math.exp(-((rift/.32)**2));
+  const basin = Math.max(0, 1 - Math.hypot((lon+108.4)/2.2,(lat-42.0)/1.0)); e -= 250*basin; // Great Divide basin
+  e += 230 * fbm(lon0*1.15+3.1, lat0*1.15-7.7) + 330 * mtn * fbm(lon0*4.2-5, lat0*4.2+2, 4); // mesas, foothills, spurs
+  return e;
+}
+const forest = (lon,lat,e) => e>2050 && e<3350 && (fbm(lon*3.1+40,lat*3.1+12,3) + (e-2600)/4000) > -.02;
+
+/* compute the grid once */
+const GW = 230, GH = Math.round(GW / ASPECT);
+const values = new Float64Array(GW*GH), wood = new Uint8Array(GW*GH);
+for (let j=0;j<GH;j++){ const lat = LAT1 - (j+.5)/GH*(LAT1-LAT0);
+  for (let i=0;i<GW;i++){ const lon = LON0 + (i+.5)/GW*(LON1-LON0); const e = elevation(lon,lat);
+    values[j*GW+i]=e; wood[j*GW+i]=forest(lon,lat,e)?1:0; } }
+// bake the relief raster (hillshade + woodland) at grid resolution
+const relief = document.createElement('canvas'); relief.width = GW; relief.height = GH;
+{ const rc = relief.getContext('2d'), im = rc.createImageData(GW,GH);
+  const P=[242,241,232], G=[207,226,182];
+  for (let j=0;j<GH;j++) for (let i=0;i<GW;i++){
+    const v=(x,y)=>values[Math.min(GH-1,Math.max(0,y))*GW+Math.min(GW-1,Math.max(0,x))];
+    const dzdx=(v(i+1,j)-v(i-1,j))/2, dzdy=(v(i,j+1)-v(i,j-1))/2;
+    const s=Math.max(-1,Math.min(1,(-dzdx - dzdy)/260));             // light from the north-west
+    let c = wood[j*GW+i] ? G : P;
+    const k = 1 + s*.10 - Math.max(0,(values[j*GW+i]-3300))/9000;
+    const o=(j*GW+i)*4; im.data[o]=c[0]*k; im.data[o+1]=c[1]*k; im.data[o+2]=c[2]*k; im.data[o+3]=255; }
+  rc.putImageData(im,0,0); }
+const levels = d3.range(1100, 4400, 100);
+const contours = d3.contours().size([GW,GH]).thresholds(levels).smooth(true)(values);
+
+/* ---------- drawing ---------- */
+const map = document.getElementById('map'), cv = document.getElementById('terrain'), ov = document.getElementById('overlay'),
+      leaders = document.getElementById('leaders');
+let MW = 0, MH = 0;
+
+function smoothLine(ctx, pts){ // catmull-rom through projected points
+  ctx.moveTo(pts[0][0],pts[0][1]);
+  for (let i=0;i<pts.length-1;i++){ const p0=pts[Math.max(0,i-1)],p1=pts[i],p2=pts[i+1],p3=pts[Math.min(pts.length-1,i+2)];
+    ctx.bezierCurveTo(p1[0]+(p2[0]-p0[0])/6,p1[1]+(p2[1]-p0[1])/6,p2[0]-(p3[0]-p1[0])/6,p2[1]-(p3[1]-p1[1])/6,p2[0],p2[1]); } }
+function meander(pts, amt){ // subdivide and wiggle so rivers do not look ruled
+  const out=[]; for (let i=0;i<pts.length-1;i++){ const [a,b]=[pts[i],pts[i+1]];
+    for (let t=0;t<4;t++){ const u=t/4, lat=a[0]+(b[0]-a[0])*u, lon=a[1]+(b[1]-a[1])*u;
+      out.push([lat+amt*noise(lon*6,lat*6+9), lon+amt*noise(lat*6-4,lon*6)]); } }
+  out.push(pts[pts.length-1]); return out; }
+const P = (lat,lon) => [fx(lon)*MW, fy(lat)*MH];
+
+function draw(){
+  const r = map.getBoundingClientRect(); MW = r.width; MH = r.height; if (!MW) return;
+  const dpr = Math.min(window.devicePixelRatio||1, 2.5);
+  cv.width = Math.round(MW*dpr); cv.height = Math.round(MH*dpr);
+  const c = cv.getContext('2d'); c.setTransform(dpr,0,0,dpr,0,0);
+  c.imageSmoothingEnabled = true; c.imageSmoothingQuality = 'high';
+  c.drawImage(relief, 0, 0, MW, MH);
+  const sx = MW/GW, sy = MH/GH;
+  const path = d3.geoPath(d3.geoTransform({point(x,y){ this.stream.point(x*sx, y*sy); }}), c);
+  const fine = MW < 500 ? .38 : .5;
+  for (const ct of contours){ const idx = ct.value % 500 === 0;
+    c.beginPath(); path(ct); c.strokeStyle = idx ? 'rgba(150,86,48,.95)' : 'rgba(165,98,58,.62)';
+    c.lineWidth = idx ? (MW<500 ? .8 : 1.05) : fine; c.stroke(); }
+
+  // graticule
+  c.save(); c.strokeStyle='rgba(29,29,27,.35)'; c.lineWidth=.6; c.setLineDash([1,3]);
+  for (let lon=-114;lon<=-103;lon+=2){ c.beginPath(); c.moveTo(fx(lon)*MW,0); c.lineTo(fx(lon)*MW,MH); c.stroke(); }
+  for (let lat=32;lat<=48;lat+=2){ c.beginPath(); c.moveTo(0,fy(lat)*MH); c.lineTo(MW,fy(lat)*MH); c.stroke(); }
+  c.restore();
+  // state lines
+  c.save(); c.strokeStyle='rgba(29,29,27,.55)'; c.lineWidth=1.1; c.setLineDash([7,3,1.5,3]);
+  const seg=(a,b)=>{ c.beginPath(); c.moveTo(...P(...a)); c.lineTo(...P(...b)); c.stroke(); };
+  seg([45,-111.05],[45,-104.05]); seg([41,-111.05],[41,-102.05]); seg([37,-109.05],[37,-102.05]); seg([32,-109.05],[32,-106.62]);
+  seg([31.33,-109.05],[48,-109.05].map((v,i)=>i?-109.05:41)); seg([45,-111.05],[41,-111.05]); seg([44.5,-111.05],[45,-111.05]);
+  seg([32,-103.06],[37,-103.0]); seg([45,-104.05],[48,-104.05]); seg([42,-114.05],[42,-111.05]); seg([42,-111.05],[44.5,-111.05]);
+  c.restore();
+
+  // water: lakes and rivers
+  c.fillStyle='#8ec3e6'; c.strokeStyle='#2a7ab8'; c.lineWidth=.8;
+  const lake=(pts)=>{ c.beginPath(); smoothLine(c, pts.map(p=>P(...p))); c.closePath(); c.fill(); c.stroke(); };
+  lake([[33.45,-107.16],[33.33,-107.12],[33.2,-107.17],[33.17,-107.21],[33.3,-107.2],[33.42,-107.2]]);   // Elephant Butte
+  lake([[32.98,-107.3],[32.9,-107.28],[32.86,-107.31],[32.93,-107.33]]);                                // Caballo
+  lake([[44.55,-110.42],[44.5,-110.25],[44.33,-110.25],[44.3,-110.42],[44.42,-110.55]]);                 // Yellowstone Lake
+  lake([[41.25,-112.95],[41.6,-112.5],[41.15,-112.1],[40.75,-112.25],[40.9,-112.75]]);                   // Great Salt Lake (edge)
+  c.lineWidth = MW<500 ? 1.1 : 1.5; c.strokeStyle='#2a7ab8';
+  for (const [n,pts] of Object.entries(RIVERS)){ c.beginPath(); smoothLine(c, meander(pts,.035).map(p=>P(...p))); c.stroke(); }
+
+  // the season's road (example)
+  const road=[[45.68,-111.04],[45.66,-110.56],[45.03,-110.7],[44.6,-110.5],[43.48,-110.76],[42.87,-109.86],[41.79,-107.24],[41.31,-105.59],[40.58,-105.08],[39.74,-104.99],[38.83,-104.82],[37.62,-104.78],[37.47,-105.87],[37.08,-106.0],[36.65,-105.97],[36.41,-105.57],[35.69,-105.94],[35.08,-106.65],[34.06,-106.89],[33.13,-107.25]];
+  c.save(); c.strokeStyle='#8b3a9c'; c.lineWidth = MW<500 ? 1.5 : 2; c.setLineDash([6,4]); c.beginPath(); smoothLine(c, road.map(p=>P(...p))); c.stroke(); c.restore();
+
+  // lettering
+  const fs = s => Math.max(8, s * MW / 560);
+  const label = (txt, lat, lon, {font, color='#1d1d1b', spacing=0, rot=0, align='center', halo=true}={}) => {
+    const [x,y]=P(lat,lon); c.save(); c.translate(x,y); c.rotate(rot); c.font=font; c.textAlign=align; c.textBaseline='middle';
+    if ('letterSpacing' in c) c.letterSpacing = spacing+'px';
+    if (halo){ c.lineWidth=3; c.strokeStyle='rgba(242,241,232,.85)'; c.lineJoin='round'; c.strokeText(txt,0,0); }
+    c.fillStyle=color; c.fillText(txt,0,0); c.restore(); };
+  const st = `600 ${fs(15)}px "Sofia Sans Condensed"`, sp = Math.max(2, MW/110);
+  label('MONTANA',47.55,-106.0,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('WYOMING',42.9,-106.7,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('COLORADO',38.2,-103.9,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('NEW MEXICO',34.0,-104.0,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('UTAH',39.1,-112.3,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('IDAHO',43.4,-113.6,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  label('ARIZONA',34.6,-112.0,{font:st,color:'rgba(29,29,27,.55)',spacing:sp});
+  const rng = `600 ${fs(8.6)}px "Sofia Sans Condensed"`, brown='#7d4422';
+  label('SANGRE DE CRISTO MTS',37.0,-105.2,{font:rng,color:brown,spacing:1,rot:-1.35});
+  label('SAN JUAN MTS',37.95,-108.2,{font:rng,color:brown,spacing:1});
+  label('BLACK RANGE',33.0,-108.15,{font:rng,color:brown,spacing:1,rot:-1.5});
+  label('ABSAROKA RANGE',44.55,-109.55,{font:rng,color:brown,spacing:1,rot:-1.45});
+  label('WIND RIVER RANGE',43.0,-109.2,{font:rng,color:brown,spacing:1,rot:-.95});
+  label('BIGHORN MTS',44.6,-106.9,{font:rng,color:brown,spacing:1,rot:-1.2});
+  label('FRONT RANGE',40.0,-105.15,{font:rng,color:brown,spacing:1,rot:-1.35});
+  label('JORNADA DEL MUERTO',33.0,-106.68,{font:rng,color:brown,spacing:1,rot:-1.5});
+  label('LITTLE BELT MTS',47.1,-110.55,{font:rng,color:brown,spacing:1});
+  const wf = `italic ${fs(9.5)}px "Libre Caslon Text"`, blue='#1f6aa5';
+  label('Rio Grande',35.45,-106.2,{font:wf,color:blue,rot:-1.2});
+  label('Rio Grande',31.6,-106.15,{font:wf,color:blue,rot:-.7});
+  label('Yellowstone',46.25,-106.95,{font:wf,color:blue,rot:-.45});
+  label('Missouri',47.2,-111.8,{font:wf,color:blue,rot:-1.0});
+  label('Gila',32.82,-109.35,{font:wf,color:blue,rot:.2});
+  label('Pecos',33.8,-104.55,{font:wf,color:blue,rot:-1.3});
+  label('Colorado',39.25,-108.0,{font:wf,color:blue,rot:.5});
+  label('Elephant Butte Res.',33.45,-106.6,{font:`italic ${fs(8)}px "Libre Caslon Text"`,color:blue,align:'left'});
+  label('Yellowstone L.',44.2,-110.95,{font:`italic ${fs(8)}px "Libre Caslon Text"`,color:blue,align:'right'});
+  // towns for orientation
+  const tf = `400 ${fs(8.6)}px "Sofia Sans Condensed"`;
+  [['Billings',45.78,-108.5],['Great Falls',47.5,-111.3],['Denver',39.74,-104.99],['Santa Fe',35.69,-105.94],['Albuquerque',35.08,-106.65],
+   ['El Paso',31.76,-106.48],['Salt Lake City',40.76,-111.89],['Taos',36.41,-105.57],['Showdown',46.84,-110.71],['Cheyenne',41.14,-104.82]]
+   .forEach(([n,la,lo])=>{ const [x,y]=P(la,lo); c.fillStyle='#1d1d1b'; c.fillRect(x-1.8,y-1.8,3.6,3.6); label(n,la,lo-.12,{font:tf,align:'right'}); });
+  // graticule ticks in the neatline
+  c.font = `400 ${fs(7.6)}px "Sofia Sans Condensed"`; c.fillStyle='rgba(29,29,27,.7)';
+  for (let lon=-114;lon<=-104;lon+=2){ c.textAlign='center'; c.textBaseline='top'; c.fillText(`${-lon}°`, fx(lon)*MW, 3); }
+  for (let lat=32;lat<=46;lat+=2){ c.textAlign='left'; c.textBaseline='middle'; c.fillText(`${lat}°`, 3, fy(lat)*MH); }
+
+  layoutOverlay(); scale();
+}
+
+/* ---------- pins, callouts, leader lines ---------- */
+let current = null;
+function layoutOverlay(){
+  ov.innerHTML=''; leaders.innerHTML=''; leaders.setAttribute('viewBox',`0 0 ${MW} ${MH}`);
+  const [hx,hy] = P(33.13,-107.25); const here=document.createElement('div'); here.className='here';
+  here.style.left=hx+'px'; here.style.top=hy+'px'; ov.appendChild(here);
+  const boxes = [];
+  for (const [id,p] of Object.entries(PLACES)){
+    const works = placed[id]; if (!works) continue;
+    const [x,y] = P(p.lat,p.lon);
+    const pin = document.createElement('button'); pin.type='button'; pin.className='pin'+(p.region?' region':'');
+    pin.style.left=x+'px'; pin.style.top=y+'px'; pin.setAttribute('aria-pressed', current===id);
+    pin.setAttribute('aria-label', `${p.name}: ${works.length} work${works.length>1?'s':''}`);
+    pin.innerHTML='<svg viewBox="-11 -11 22 22" aria-hidden="true"><path class="tri" d="M0 -8 L7.5 6 L-7.5 6 Z"/><circle class="dot" r="2" cy="1.8"/></svg>';
+    pin.onclick=()=>openPlace(id);
+    const co = document.createElement('button'); co.type='button'; co.tabIndex=-1; co.className='callout'+(current===id?' on':'');
+    co.innerHTML=`<b>${p.name}</b> <span class="n">· ${works.length}</span>${p.sub?`<i>${p.sub}</i>`:''}`;
+    co.onclick=()=>openPlace(id);
+    ov.appendChild(co); ov.appendChild(pin);
+    let lx = x + p.dx*MW, ly = y + p.dy*MW; const bw = co.offsetWidth, bh = co.offsetHeight;
+    if (p.dx < 0) lx -= bw;
+    lx = Math.max(4, Math.min(MW-bw-4, lx)); ly = ly - bh/2;
+    boxes.push({co, x, y, lx, ly, bw, bh});
+  }
+  // nudge overlapping labels apart, top to bottom, keeping each inside the neatline
+  boxes.sort((a,b) => a.ly - b.ly);
+  for (let pass = 0; pass < 4; pass++) for (let i = 0; i < boxes.length; i++) for (let j = 0; j < i; j++){
+    const a = boxes[j], b = boxes[i];
+    const ox = Math.min(a.lx+a.bw, b.lx+b.bw) - Math.max(a.lx, b.lx), oy = Math.min(a.ly+a.bh, b.ly+b.bh) - Math.max(a.ly, b.ly);
+    if (ox > 0 && oy > -2) b.ly = a.ly + a.bh + 3;
+  }
+  for (const b of boxes){
+    if (b.ly + b.bh > MH - 4){ b.ly = MH - 4 - b.bh; }
+    b.ly = Math.max(16, b.ly);
+    b.co.style.left = b.lx+'px'; b.co.style.top = b.ly+'px';
+    const ex = Math.max(b.lx, Math.min(b.lx+b.bw, b.x)), ey = Math.max(b.ly, Math.min(b.ly+b.bh, b.y));
+    const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',b.x); ln.setAttribute('y1',b.y); ln.setAttribute('x2',ex); ln.setAttribute('y2',ey);
+    ln.setAttribute('stroke','#1d1d1b'); ln.setAttribute('stroke-width','.8'); leaders.appendChild(ln);
+  }
+}
+function scale(){
+  // ground metres per css pixel along the map's middle latitude
+  const kmPerPx = ((LON1-LON0) * 111.32 * K) / MW, miPerPx = kmPerPx/1.609;
+  const step = MW < 500 ? 50 : 100, n = 4, px = step/miPerPx;
+  const bar=document.getElementById('bar'), bl=document.getElementById('barlabels');
+  bar.innerHTML = Array.from({length:n},()=>`<span style="width:${px}px"></span>`).join('');
+  bl.innerHTML = Array.from({length:n+1},(_,i)=>`<span>${i*step}</span>`).join('') ;
+  bl.lastChild.textContent += ' mi';
+  const ratio = Math.round(kmPerPx*1000 / 0.0002645833 / 100000) * 100000;
+  document.getElementById('ratio').textContent = `1 : ${ratio.toLocaleString('en-US').replace(/,/g,' ')} on this screen`;
+}
+
+/* ---------- the sheet note ---------- */
+const note = document.getElementById('note'), right = document.getElementById('right');
+const mm2in = mm => (mm/25.4).toFixed(mm/25.4 < 20 ? 1 : 0).replace(/\.0$/,'');
+const dims = w => (w.h && w.w) ? `${mm2in(w.h)} × ${mm2in(w.w)} in · ${w.h} × ${w.w} mm` : 'not recorded';
+const esc = s => String(s ?? '').replace(/[&<>"]/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));
+function plate(w){
+  const coll = (w.coll||[]).map(c => c[0] + (c[1] ? `, no. ${c[1]}` : '')).join('; ');
+  const p = w._place ? PLACES[w._place] : null;
+  return `<figure class="plate">
+    <img src="${img(w, 960)}" alt="${esc(w.alt || w.title)}" width="${w.iw}" height="${w.ih}">
+    <figcaption><div class="wt">${esc(w.title)}</div>
+    <dl class="kv"><dt>Made</dt><dd>${esc(w.date || w.year || 'not recorded')}</dd>
+    <dt>Medium</dt><dd>${esc(w.medium || 'not recorded')}</dd>
+    <dt>Size</dt><dd>${dims(w)}</dd>
+    ${coll ? `<dt>Set</dt><dd>${esc(coll)}</dd>` : ''}
+    <dt>Place</dt><dd>${p ? esc(p.name) + `<br><span style="color:var(--ink-2);font-size:12px">from ${esc(w._src)}</span>` : 'not recorded'}</dd></dl>
+    <a class="arch" href="${ARCHIVE}${w.slug}" rel="noopener">Full record in the archive →</a></figcaption></figure>`;
+}
+function openPlace(id, workSlug){
+  current = id; const p = PLACES[id], works = placed[id];
+  const sel = works.find(w => w.slug === workSlug) || works.find(w => w.best) || works[0];
+  note.innerHTML = `<div class="caps" style="color:var(--ink-2)">Sheet note · ${works.length} work${works.length>1?'s':''}</div>
+    <h2>${p.name}</h2>${(p.long||p.sub)?`<p class="placesub">${p.long||p.sub}</p>`:''}
+    ${p.quote?`<blockquote>“${esc(p.quote.text)}”<cite>Kyle, ${esc(p.quote.cite)}</cite></blockquote>`:''}
+    ${works.length>1?`<div class="strip" role="list">${works.map(w=>`<button type="button" role="listitem" data-s="${w.slug}" aria-current="${w===sel}" aria-label="${esc(w.title)}"><img src="${img(w,480)}" alt="" loading="lazy"></button>`).join('')}</div>`:''}
+    <div id="plate">${plate(sel)}</div>`;
+  note.querySelectorAll('.strip button').forEach(b => b.onclick = () => {
+    note.querySelectorAll('.strip button').forEach(x => x.setAttribute('aria-current', x===b));
+    note.querySelector('#plate').innerHTML = plate(bySlug[b.dataset.s]); });
+  layoutOverlay(); right.classList.add('open');
+}
+function openWork(w){
+  if (w._place) return openPlace(w._place, w.slug);
+  current = null; layoutOverlay();
+  note.innerHTML = `<div class="caps" style="color:var(--ink-2)">Sheet note</div><h2>Place not recorded</h2>
+    <p class="placesub">This work is in the survey but not yet on the map.</p><div id="plate">${plate(w)}</div>`;
+  right.classList.add('open');
+}
+document.getElementById('close').onclick = () => right.classList.remove('open');
+document.addEventListener('keydown', e => { if (e.key === 'Escape') right.classList.remove('open'); });
+
+/* ---------- margins and the index ---------- */
+const latest = [...W].filter(w => w.year >= 2026).sort((a,b)=> String(b.date).localeCompare(String(a.date))).slice(0,3);
+document.getElementById('latest').innerHTML = latest.map(w => `<li><button type="button" data-s="${w.slug}">
+  <img src="${img(w,480)}" alt=""><span><span class="t">${esc(w.title)}</span><br>
+  <span class="m">${esc(w.date)} · ${w._place ? esc(PLACES[w._place].name) : 'place not recorded'}</span></span></button></li>`).join('');
+document.querySelectorAll('#latest button').forEach(b => b.onclick = () => openWork(bySlug[b.dataset.s]));
+
+const nPlaced = W.length - unplaced.length;
+document.getElementById('owlnote').innerHTML = `Of the ${W.length} public works, ${nPlaced} can be placed: by the place recorded in the archive, by a collection, by a place named in their tags, or, once, by a title. ${unplaced.length} are waiting for someone to say where they were made.<span class="sig">— Owl, the machine voice that keeps the survey</span>`;
+
+const PICKS = ['twenty-one-years','the-river-in-the-sky','evening-clouds','the-mother-bear','crystal-tooth-whale','rhino-radar',
+  'there-once-was-ice-here','bison-robotics','solar-ascension','storm-castle-bluffs','self-portrait','tubed-pachydeerm'];
+const picks = PICKS.map(s => bySlug[s]).filter(Boolean);
+document.getElementById('grid').innerHTML = picks.map((w,i) => `<button class="cell" type="button" data-s="${w.slug}">
+  <span class="no"><span>Sheet ${String(i+1).padStart(2,'0')}</span><span>${w.year||''}</span></span>
+  <span class="img"><img src="${img(w,480)}" alt="${esc(w.alt||w.title)}" loading="lazy"></span>
+  <span class="nm">${esc(w.title)}</span>
+  <span class="pl">${w._place ? esc(PLACES[w._place].name) : 'place not recorded'}</span></button>`).join('');
+document.querySelectorAll('.cell').forEach(b => b.onclick = () => { openWork(bySlug[b.dataset.s]);
+  if (window.innerWidth >= 1000) document.getElementById('map').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block:'start'}); });
+
+document.getElementById('unrectext').innerHTML = `<b style="color:var(--ink)">${unplaced.length} works have no place on record.</b> They are not lost; they are not yet located. Every one of them is in the archive.`;
+document.getElementById('ghosts').innerHTML = unplaced.slice(0, 48).map(w => `<img src="${img(w,480)}" alt="" loading="lazy">`).join('');
+document.getElementById('doortext').textContent = `This sheet is the short walk: where the work is being made now, and twelve works from sixteen years. The archive holds all ${W.length} public works on record, each with its date, medium, size and history.`;
+
+/* ---------- go ---------- */
+const fontsReady = Promise.all(['600 12px "Sofia Sans Condensed"','400 12px "Sofia Sans Condensed"','italic 12px "Libre Caslon Text"']
+  .map(f => document.fonts.load(f).catch(()=>{})));
+Promise.race([fontsReady, new Promise(r => setTimeout(r, 1500))]).then(() => {
+  draw();
+  if (window.innerWidth >= 1000) openPlace('tc', 'cydney-and-val');
+});
+let t; new ResizeObserver(() => { clearTimeout(t); t = setTimeout(draw, 120); }).observe(map);
+})();
+</script>
+</body>
+</html>
