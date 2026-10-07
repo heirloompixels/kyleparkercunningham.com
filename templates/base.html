@@ -80,17 +80,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path='/apple-touch-icon.png') }}">
     <link rel="manifest" href="{{ get_url(path='/site.webmanifest') }}">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&family=IBM+Plex+Sans:wght@300;400;500;600&family=Inconsolata:wght@300..700&display=swap" rel="stylesheet">
+    {# Fonts are self-hosted (static/fonts) so no page calls a third party. #}
+    <link rel="preload" href="{{ get_url(path='/fonts/literata-normal-300-700-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ get_url(path='/fonts/fonts.css') }}">
     <link rel="stylesheet" href="{{ get_url(path='/style.css') }}">
     {% block head_extra %}{% endblock %}
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     {% block site_header %}
     {% include "partials/masthead.html" %}
     {% endblock %}
-    <main>
+    <main id="main" tabindex="-1">
         {% block content %}{% endblock %}
     </main>
     {% block site_footer %}
