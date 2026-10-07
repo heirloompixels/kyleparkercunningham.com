@@ -35,9 +35,10 @@ static/processed_images` before committing unless the change is intended.
 
 ## Deploying
 
-A push to `main` builds and deploys (`.github/workflows/main.yml`). Pull
-requests and other branches only build. Because main deploys, Claude's branches
-open **draft** pull requests that wait for Kyle (`claude-branch-pr.yml`).
+A push to `main` builds and deploys (`.github/workflows/main.yml`); nothing
+else is built yet, so build locally before merging. Because main deploys,
+Claude's branches open **draft** pull requests that wait for Kyle
+(`claude-branch-pr.yml`).
 
 ## Where things are
 
