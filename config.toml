@@ -8,6 +8,9 @@ description = "Artist portfolio featuring painting, printmaking, and cinema"
 # The default language; used in feeds.
 default_language = "en"
 
+# The feeds' author for every item; without it each item says "Unknown".
+author = "Kyle Parker Cunningham"
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
