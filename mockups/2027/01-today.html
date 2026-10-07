@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Today</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one long day written straight onto a live sky; no boxes, the sky is the page. */
+:root{
+  --ink:#f8f3ea; --ink-2:rgba(248,243,234,.72); --ink-3:rgba(248,243,234,.42);
+  --rule:rgba(248,243,234,.28); --night:#050a1f; --shadow:rgba(5,10,31,.35);
+  --display:"Cormorant Garamond","Cormorant",Garamond,"Times New Roman",serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--night);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--ink);outline-offset:4px;border-radius:2px}
+
+/* the sky */
+#sky{position:fixed;inset:0;z-index:0;transition:background 1.6s ease}
+#stars{position:fixed;inset:0;z-index:0;width:100%;height:100%;pointer-events:none}
+#sun{position:fixed;z-index:0;width:46vmin;height:46vmin;margin:-23vmin 0 0 -23vmin;border-radius:50%;pointer-events:none;
+  transition:left 1.6s ease, top 1.6s ease, opacity 1.6s ease}
+#grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.07;mix-blend-mode:overlay}
+main,header,footer{position:relative;z-index:1}
+body.ready{transition:color 1.4s ease}
+
+.wrap{padding-inline:clamp(16px,5vw,72px)}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+
+header{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;
+  padding-top:calc(env(safe-area-inset-top,0px) + 20px)}
+header .name{font-family:var(--display);font-size:22px;font-weight:500;letter-spacing:.01em;text-decoration:none}
+header nav{display:flex;gap:20px;flex-wrap:wrap;color:var(--ink-2)}
+header nav a{text-decoration:none;border-bottom:1px solid var(--rule)}
+header nav a:hover{color:var(--ink)}
+
+/* hero */
+.hero{padding-block:clamp(56px,12vh,140px) 24px;display:grid;gap:18px}
+.where{color:var(--ink-2);display:flex;gap:10px 22px;flex-wrap:wrap}
+.where b{font-weight:500;color:var(--ink)}
+h1{font-family:var(--display);font-weight:300;margin:0 0 .12em;line-height:.86;letter-spacing:-.02em;
+  font-size:clamp(64px,15vw,232px);text-wrap:balance}
+h1 .wd{display:block;font-style:italic;font-size:.42em;letter-spacing:0;line-height:1.1;color:var(--ink-2);font-weight:300}
+.thousand{font-variant-numeric:lining-nums;display:flex;align-items:baseline;gap:14px 28px;flex-wrap:wrap;margin-top:6px}
+.thousand .big{font-family:var(--display);font-size:clamp(28px,4.4vw,56px);font-weight:400;line-height:1.05}
+.thousand .big em{font-style:italic}
+.mode{display:inline-flex;gap:0;border-bottom:1px solid var(--rule)}
+.mode button{background:none;border:0;color:var(--ink-3);font:inherit;font-family:var(--mono);font-size:12px;letter-spacing:.06em;
+  text-transform:uppercase;padding:6px 10px 6px 0;cursor:pointer}
+.mode button[aria-pressed="true"]{color:var(--ink)}
+.mode button+button{padding-left:10px;border-left:1px solid var(--rule)}
+
+/* today */
+.today{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(24px,5vw,80px);
+  align-items:end;padding-block:clamp(40px,8vh,96px)}
+.today figure{margin:0;min-width:0}
+.today .plate{position:relative;max-width:100%}
+.today img{display:block;width:100%;height:auto;max-height:78vh;object-fit:contain;object-position:left bottom;
+  box-shadow:0 30px 60px -20px var(--shadow);transition:filter .9s ease}
+.today figcaption{margin-top:14px;display:grid;gap:4px;color:var(--ink-2)}
+.today figcaption .t{font-family:var(--display);font-style:italic;font-size:26px;color:var(--ink);line-height:1.15}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;
+  padding:2px 6px;border:1px solid var(--rule);color:var(--ink-2);vertical-align:middle;white-space:nowrap}
+.state{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.side{display:grid;gap:36px;min-width:0}
+blockquote{margin:0;font-family:var(--display);font-weight:300;font-style:italic;line-height:1.08;
+  font-size:clamp(34px,4.6vw,64px);text-wrap:balance}
+blockquote::before{content:"\201C";margin-left:-.4em;opacity:.5}
+blockquote::after{content:"\201D";opacity:.5}
+.cite{margin-top:14px;color:var(--ink-2)}
+.facts{display:grid;gap:8px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:16px}
+.facts div{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.facts span:last-child{color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.night-note{font-family:var(--display);font-style:italic;font-size:22px;color:var(--ink-2)}
+
+/* days before */
+section h2{font-family:var(--display);font-weight:300;font-size:clamp(36px,5.5vw,76px);line-height:1;margin:0 0 6px;letter-spacing:-.01em}
+section .lede{color:var(--ink-2);max-width:60ch;margin:0 0 28px}
+.days{padding-block:clamp(40px,8vh,90px)}
+.strip{display:flex;gap:10px;overflow-x:auto;padding-bottom:18px;scroll-snap-type:x proximity;scrollbar-width:thin}
+.day{flex:0 0 auto;width:150px;display:grid;grid-template-rows:auto 280px auto;gap:10px;text-decoration:none;scroll-snap-align:start}
+.day .d{color:var(--ink-2)}
+.day .band{position:relative;display:flex;align-items:flex-end;justify-content:center;padding:14px}
+.day .band img{max-width:100%;max-height:150px;display:block;box-shadow:0 14px 24px -12px rgba(0,0,0,.5);transition:transform .4s ease}
+.day:hover .band img,.day:focus-visible .band img{transform:translateY(-6px)}
+.day .cap{display:grid;gap:2px}
+.day .cap .t{font-family:var(--display);font-style:italic;font-size:19px;line-height:1.1;color:var(--ink)}
+.day .cap .m{color:var(--ink-2)}
+
+/* best */
+.best{padding-block:clamp(60px,10vh,120px)}
+.work{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:clamp(20px,4vw,64px);align-items:end;margin-block:clamp(48px,9vh,110px)}
+.work:nth-child(even){grid-template-columns:minmax(0,1fr) minmax(0,1.3fr)}
+.work:nth-child(even) figure{order:2}
+.work figure{margin:0;min-width:0}
+.work img{display:block;max-width:100%;max-height:74vh;width:auto;height:auto;box-shadow:0 30px 60px -24px var(--shadow)}
+.work:nth-child(even) img{margin-left:auto}
+.work .meta{display:grid;gap:6px;color:var(--ink-2);min-width:0}
+.work .meta .n{font-family:var(--mono);font-size:12px;letter-spacing:.08em}
+.work .meta .t{font-family:var(--display);font-size:clamp(30px,3.6vw,52px);font-style:italic;line-height:1;color:var(--ink);font-weight:300}
+.work .meta a{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--rule);justify-self:start;margin-top:8px}
+
+/* archive door */
+.door{padding-block:clamp(80px,14vh,180px) clamp(160px,22vh,240px);display:grid;gap:22px}
+.door p.big{font-family:var(--display);font-weight:300;font-size:clamp(44px,8vw,128px);line-height:.95;margin:0;letter-spacing:-.02em;text-wrap:balance}
+.door .count{color:var(--ink-2);display:flex;gap:10px 26px;flex-wrap:wrap}
+.door a.go{font-family:var(--display);font-size:clamp(26px,3vw,40px);font-style:italic;text-decoration:none;border-bottom:1px solid var(--ink);justify-self:start}
+.door .also{color:var(--ink-2);max-width:56ch}
+
+/* scrubber */
+.clock{position:fixed;left:0;right:0;bottom:0;z-index:5;padding:28px clamp(16px,5vw,72px) calc(env(safe-area-inset-bottom,0px) + 14px);
+  background:linear-gradient(to top, rgba(5,10,31,.55), rgba(5,10,31,0));color:#f8f3ea}
+.clock .row{display:flex;align-items:center;gap:14px}
+.clock .time{font-variant-numeric:lining-nums tabular-nums;font-family:var(--display);font-size:28px;font-weight:400;min-width:104px;font-variant-numeric:tabular-nums}
+.clock .track{position:relative;flex:1;height:34px;min-width:0}
+.clock canvas{position:absolute;left:0;right:0;top:12px;width:100%;height:10px;display:block}
+.clock .ticks{position:absolute;left:0;right:0;top:0;height:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:rgba(248,243,234,.6)}
+.clock .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.clock input[type=range]{position:absolute;inset:4px 0 0 0;width:100%;height:30px;margin:0;background:transparent;-webkit-appearance:none;appearance:none;cursor:ew-resize}
+.clock input[type=range]::-webkit-slider-runnable-track{height:30px;background:transparent}
+.clock input[type=range]::-moz-range-track{height:30px;background:transparent}
+.clock input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:3px;height:30px;background:#fff;box-shadow:0 0 0 1px rgba(5,10,31,.6),0 0 14px rgba(255,255,255,.8)}
+.clock input[type=range]::-moz-range-thumb{width:3px;height:30px;border:0;border-radius:0;background:#fff;box-shadow:0 0 14px rgba(255,255,255,.8)}
+.clock .live{background:none;border:1px solid rgba(248,243,234,.5);color:#f8f3ea;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;padding:6px 10px;cursor:pointer;white-space:nowrap}
+.clock .live[aria-pressed="true"]{background:#f8f3ea;color:#050a1f}
+.clock .live .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:currentColor;margin-right:6px;vertical-align:1px}
+.clock .live[aria-pressed="true"] .dot{background:#d33;animation:pulse 2s infinite}
+@keyframes pulse{50%{opacity:.2}}
+.clock .hint{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:rgba(248,243,234,.55);margin-top:6px}
+
+header nav a.sk{color:var(--ink-3);border-bottom-style:dotted}
+
+@media (max-width:760px){
+  body{font-size:17px}
+  .today,.work,.work:nth-child(even){grid-template-columns:minmax(0,1fr)}
+  .work:nth-child(even) figure{order:0}
+  .work:nth-child(even) img{margin-left:0}
+  .clock .time{font-size:22px;min-width:76px}
+  .clock .ticks span.minor,.clock .ticks span.noon{display:none}
+  .hero{padding-top:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+<div id="sky" aria-hidden="true"></div>
+<div id="sun" aria-hidden="true"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<svg id="grain" aria-hidden="true" width="100%" height="100%"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+
+<header class="wrap">
+  <a class="name" href="#top">Kyle Parker Cunningham</a>
+  <nav class="mono" aria-label="Site">
+    <a href="#today">Today</a>
+    <a href="#before">The days before</a>
+    <a href="#best">Before the 1000</a>
+    <a href="https://archive.kyleparkercunningham.com/">Archive</a>
+    <a class="sk" href="index.html">Sketchbook</a>
+  </nav>
+</header>
+
+<main id="top">
+  <section class="hero wrap" aria-labelledby="date">
+    <div class="where mono"><span>Now, over <b>Truth or Consequences, New Mexico</b></span><span id="coords">33.13° N · 107.25° W</span><span id="sunNow"></span></div>
+    <h1 id="date"><span class="wd" id="weekday"></span><span id="dm"></span></h1>
+    <div class="thousand">
+      <div class="big" id="thousand"></div>
+      <div class="mode" role="group" aria-label="Which day to show">
+        <button type="button" id="modeReal" aria-pressed="true">Today, real</button>
+        <button type="button" id="modeEx" aria-pressed="false">Example: day 112</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="today wrap" id="today" aria-label="Today's work">
+    <figure>
+      <div class="plate"><img id="todayImg" alt=""></div>
+      <figcaption>
+        <div><span class="state" id="todayState"></span> <span class="tag">example</span></div>
+        <div class="t" id="todayTitle"></div>
+        <div class="mono" id="todayMeta"></div>
+      </figcaption>
+    </figure>
+    <div class="side">
+      <div>
+        <blockquote id="quote"></blockquote>
+        <div class="cite mono" id="cite"></div>
+      </div>
+      <div class="night-note" id="nightNote" hidden></div>
+      <div class="facts mono">
+        <div><span>Sunrise</span><span id="rise"></span></div>
+        <div><span>Sunset</span><span id="set"></span></div>
+        <div><span>Sun</span><span id="sunPos"></span></div>
+        <div><span>Weather <span class="tag">example</span></span><span id="wx"></span></div>
+        <div><span>Place <span class="tag">example</span></span><span id="place"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="days wrap" id="before" aria-labelledby="beforeH">
+    <h2 id="beforeH">The days before</h2>
+    <p class="lede">Each day, one work, and the sky at the minute it was finished. The skies are computed for each date and time; the works and times shown here are examples until the 1000 begins.</p>
+    <div class="strip" id="strip"></div>
+  </section>
+
+  <section class="best wrap" id="best" aria-labelledby="bestH">
+    <h2 id="bestH">Before the 1000</h2>
+    <p class="lede">Seven works from sixteen years, chosen for this page. <span class="tag">example selection</span></p>
+    <div id="bestList"></div>
+  </section>
+
+  <section class="door wrap" aria-labelledby="doorH">
+    <p class="big" id="doorH">Everything else is in the archive.</p>
+    <div class="count mono" id="count"></div>
+    <a class="go" href="https://archive.kyleparkercunningham.com/">Open the archive &rarr;</a>
+    <p class="also">This page is only today and a few chosen days. The archive keeps the full record of every work: dates, sizes, media and where each one is now.</p>
+  </section>
+</main>
+
+<div class="clock" role="group" aria-label="Time of day">
+  <div class="row">
+    <div class="time" id="clockTime" aria-live="off"></div>
+    <div class="track">
+      <div class="ticks" id="ticks"></div>
+      <canvas id="dayStrip" aria-hidden="true"></canvas>
+      <input type="range" id="scrub" min="0" max="1439" step="1" aria-label="Drag through the 24 hours in Truth or Consequences">
+    </div>
+    <button type="button" class="live" id="live" aria-pressed="true"><span class="dot"></span>Live</button>
+  </div>
+  <div class="hint" id="hint">Drag through the day. The sky is computed for Truth or Consequences.</div>
+</div>
+
+<script src="works.js"></script>
+<script>
+(() => {
+  const LAT = 33.13, LON = -107.25, TZ = 'America/Denver';
+  const RAD = Math.PI / 180;
+  const W = window.WORKS || [];
+  const bySlug = Object.fromEntries(W.map(w => [w.slug, w]));
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---------- time helpers (all in Truth or Consequences local time) ----------
+  function tzParts(date) {
+    const f = new Intl.DateTimeFormat('en-US', { timeZone: TZ, year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hourCycle: 'h23' });
+    const p = Object.fromEntries(f.formatToParts(date).map(x => [x.type, x.value]));
+    return { y: +p.year, m: +p.month, d: +p.day, h: +p.hour, min: +p.minute, s: +p.second };
+  }
+  function offsetMin(date) { // local minus UTC, in minutes
+    const p = tzParts(date);
+    return Math.round((Date.UTC(p.y, p.m - 1, p.d, p.h, p.min, p.s) - date.getTime()) / 60000);
+  }
+  function instantFor(y, m, d, minutes) {
+    const guess = new Date(Date.UTC(y, m - 1, d, 12));
+    const off = offsetMin(guess);
+    return new Date(Date.UTC(y, m - 1, d, 0, 0) + (minutes - off) * 60000);
+  }
+  const fmtTime = mins => {
+    mins = ((Math.round(mins) % 1440) + 1440) % 1440;
+    let h = Math.floor(mins / 60), m = mins % 60, ap = h < 12 ? 'am' : 'pm';
+    h = h % 12 || 12; return `${h}:${String(m).padStart(2, '0')} ${ap}`;
+  };
+  const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const WEEK = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+  // ---------- the sun ----------
+  function sun(date) {
+    const jd = date.getTime() / 86400000 + 2440587.5, n = jd - 2451545.0;
+    const L = (280.460 + 0.9856474 * n) % 360;
+    const g = ((357.528 + 0.9856003 * n) % 360) * RAD;
+    const lam = (L + 1.915 * Math.sin(g) + 0.020 * Math.sin(2 * g)) * RAD;
+    const eps = (23.439 - 0.0000004 * n) * RAD;
+    const ra = Math.atan2(Math.cos(eps) * Math.sin(lam), Math.cos(lam));
+    const dec = Math.asin(Math.sin(eps) * Math.sin(lam));
+    const gmst = ((18.697374558 + 24.06570982441908 * n) % 24 + 24) % 24;
+    const H = (gmst * 15 + LON) * RAD - ra, lat = LAT * RAD;
+    const el = Math.asin(Math.sin(lat) * Math.sin(dec) + Math.cos(lat) * Math.cos(dec) * Math.cos(H));
+    let az = Math.atan2(-Math.sin(H), Math.tan(dec) * Math.cos(lat) - Math.sin(lat) * Math.cos(H)) / RAD;
+    return { el: el / RAD, az: (az + 360) % 360 };
+  }
+  function sunTimes(y, m, d) {
+    let rise = null, set = null, prev = sun(instantFor(y, m, d, 0)).el, noonEl = -90;
+    for (let t = 2; t <= 1440; t += 2) {
+      const e = sun(instantFor(y, m, d, t)).el;
+      noonEl = Math.max(noonEl, e);
+      if (prev < -0.833 && e >= -0.833 && rise === null) rise = t;
+      if (prev >= -0.833 && e < -0.833) set = t;
+      prev = e;
+    }
+    return { rise, set, noonEl };
+  }
+
+  // ---------- sky colour, by solar elevation ----------
+  const hex = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+  const KEYS = [ // elevation: [zenith, middle, horizon]
+    [-90, '#02040c', '#050817', '#0a1024'],
+    [-18, '#040920', '#08102c', '#11193a'],
+    [-12, '#081236', '#121d48', '#252a58'],
+    [-7,  '#142256', '#2e3570', '#5e4a78'],
+    [-3,  '#22397a', '#6a5e94', '#e08a6e'],
+    [0,   '#33558f', '#a1859d', '#ffa66a'],
+    [3,   '#42679f', '#b6a0a4', '#ffc48c'],
+    [8,   '#5487c6', '#a7c0d9', '#f2dcc2'],
+    [20,  '#5f98d8', '#a4c7e8', '#e3ecf1'],
+    [60,  '#5d97df', '#9cc5ee', '#dbe8f2'],
+    [90,  '#5a94de', '#98c2ec', '#d8e6f1']
+  ].map(([e, a, b, c]) => [e, hex(a), hex(b), hex(c)]);
+  function skyAt(el, evening) {
+    let i = 0; while (i < KEYS.length - 2 && el > KEYS[i + 1][0]) i++;
+    const [e0, ...c0] = KEYS[i], [e1, ...c1] = KEYS[i + 1];
+    const t = Math.min(1, Math.max(0, (el - e0) / (e1 - e0)));
+    const cols = [0, 1, 2].map(k => c0[k].map((v, j) => v + (c1[k][j] - v) * t));
+    // evenings burn warmer, mornings run cooler and pinker
+    const w = Math.max(0, 1 - Math.abs(el - 1) / 7);
+    const tint = evening ? [255, 112, 64] : [244, 168, 176];
+    cols[2] = cols[2].map((v, j) => v + (tint[j] - v) * w * (evening ? .38 : .26));
+    cols[1] = cols[1].map((v, j) => v + (tint[j] - v) * w * (evening ? .16 : .12));
+    return cols.map(c => `rgb(${c.map(Math.round).join(',')})`);
+  }
+  const gradient = (cols, dir = 'to bottom') => `linear-gradient(${dir}, ${cols[0]} 0%, ${cols[1]} 58%, ${cols[2]} 100%)`;
+
+  // ---------- data ----------
+  const QUOTES = [
+    { q: 'These clouds are better than pears.', c: 'Kyle, in Keep Talking, a film, 2026' },
+    { q: 'a broken, beautiful field of reflectivity, which is like what water particles would be doing in the sky.', c: 'Kyle, in The Top Layers, a paint talk, 6 October 2026' },
+    { q: 'my art is more radical than your art.', c: 'Kyle, in The Most Radical Thing, a paint talk, 6 October 2026' },
+    { q: 'everything is a conspiracy theory on top of an allegation, on top of a hunch', c: 'Kyle, in The Most Radical Thing, a paint talk, 6 October 2026' },
+    { q: 'A collection to bring calm to the mind in the chaos of the storm.', c: 'Kyle, on Atmospheric Balance, eight paintings, Tres Piedras, 2024' },
+    { q: "I've been talking to robots all summer", c: 'Kyle, in Portrait of Claude No. 1, a film, 2026' }
+  ];
+  const TODAY_POOL = ['storm-castle-bluffs', 'evening-clouds', 'absolute-potential', 'the-river-in-the-sky', 'bottled-lightning', 'low-angle-sun-rays', 'the-algebra-of-water-vapor', 'out-there-on-the-horizon-a-solitary-cloud'];
+  const DAY_POOL = ['above-the-clouds', 'felt-and-lived', 'two-squared', 'twenty-one-years', 'pollen-and-larvae', 'towers', 'triangular-circles', 'does-math-control-nature', 'equilateral-equilibrium', 'symbologies-intertwine-electronically', 'the-atmospheres-electric-finger', 'orbits-plankton-dreaming-of-a-sedimentary-afterlife', 'separate-yet-delicate-representations-of-existence', 'alpenglow-at-mineral-creek-with-the-adults-after-the-babies-have-gone-to-sleep'];
+  const BEST = ['crystal-tooth-whale', 'there-once-was-ice-here', 'rhino-radar', 'solar-ascension', 'self-portrait', 'tubed-pachydeerm', 'the-river-in-the-sky'];
+  const WX = ['Clear, 24 °C, wind SW 8 mph', 'High cloud, 21 °C, still', 'Clear and dry, 27 °C, wind W 12 mph', 'Scattered cumulus, 22 °C, wind S 6 mph', 'Haze from the west, 25 °C'];
+  const PLACES = ['the studio, Truth or Consequences', 'Truth or Consequences Contemporary', 'the Rio Grande, below the dam', 'the truck, Black Range road', 'the porch, Truth or Consequences'];
+
+  const hash = s => { let h = 2166136261; for (const ch of String(s)) { h ^= ch.charCodeAt(0); h = Math.imul(h, 16777619); } return h >>> 0; };
+  const pick = (arr, seed) => arr[hash(seed) % arr.length];
+  const dims = w => {
+    if (!w.h || !w.w) return '';
+    const cm = v => (v / 10).toFixed(v % 10 ? 1 : 0), inch = v => (v / 25.4).toFixed(1).replace(/\.0$/, '');
+    return `${cm(w.h)} × ${cm(w.w)} cm · ${inch(w.h)} × ${inch(w.w)} in`;
+  };
+  const archiveUrl = w => `https://archive.kyleparkercunningham.com/works/${w.slug}`;
+
+  // ---------- state ----------
+  const now = new Date(), np = tzParts(now);
+  const SOLSTICE = { y: 2026, m: 12, d: 21 };
+  const EXAMPLE = { y: 2027, m: 4, d: 11 }; // day 112, counting the solstice as day 1
+  const state = { live: true, example: false, day: { y: np.y, m: np.m, d: np.d }, mins: np.h * 60 + np.min };
+
+  const $ = id => document.getElementById(id);
+  const sky = $('sky'), sunEl = $('sun'), stars = $('stars'), scrub = $('scrub');
+  let currentEl = 0, times = null;
+
+  const dayIndex = (a, b) => Math.round((Date.UTC(a.y, a.m - 1, a.d) - Date.UTC(b.y, b.m - 1, b.d)) / 86400000);
+  const addDays = (day, n) => { const t = new Date(Date.UTC(day.y, day.m - 1, day.d + n)); return { y: t.getUTCFullYear(), m: t.getUTCMonth() + 1, d: t.getUTCDate() }; };
+  const dayKey = d => `${d.y}-${d.m}-${d.d}`;
+  const finishMins = day => 9 * 60 + hash('finish' + dayKey(day)) % (11 * 60 + 30); // example: between 9 am and 8:30 pm
+
+  // ---------- render: the day (date-level, runs when the day changes) ----------
+  function renderDay() {
+    const day = state.day;
+    const wd = new Date(Date.UTC(day.y, day.m - 1, day.d)).getUTCDay();
+    $('weekday').textContent = WEEK[wd];
+    $('dm').textContent = `${day.d} ${MONTHS[day.m - 1]}`;
+    const n = dayIndex(day, SOLSTICE) + 1;
+    if (n >= 1) {
+      $('thousand').innerHTML = `Day <em>${n}</em> of the 1000 <span class="tag">example</span>`;
+    } else {
+      $('thousand').innerHTML = `The 1000 begins in <em>${-n + 1} days</em>, at the winter solstice`;
+    }
+    times = sunTimes(day.y, day.m, day.d);
+    $('rise').textContent = times.rise == null ? '—' : fmtTime(times.rise);
+    $('set').textContent = times.set == null ? '—' : fmtTime(times.set);
+
+    // today's work (a stand-in)
+    const w = bySlug[pick(state.example ? DAY_POOL : TODAY_POOL, dayKey(day))] || W[0];
+    const img = $('todayImg');
+    img.src = window.img(w, 960); img.alt = w.alt || w.title;
+    $('todayTitle').textContent = w.title;
+    $('todayMeta').textContent = [w.year, w.medium, dims(w)].filter(Boolean).join(' · ');
+    const q = QUOTES[hash('q' + dayKey(day)) % QUOTES.length];
+    $('quote').textContent = q.q; $('cite').textContent = '— ' + q.c + ' · verbatim';
+    $('wx').textContent = pick(WX, 'wx' + dayKey(day));
+    $('place').textContent = pick(PLACES, 'pl' + dayKey(day));
+
+    renderStrip(); drawDayStrip(); renderTicks();
+  }
+
+  // ---------- render: the moment (runs every tick and every scrub) ----------
+  function renderMoment() {
+    const day = state.day, t = instantFor(day.y, day.m, day.d, state.mins);
+    const s = sun(t); currentEl = s.el;
+    const evening = s.az > 180;
+    const cols = skyAt(s.el, evening);
+    sky.style.background = gradient(cols);
+    // ink follows the light
+    const light = s.el < 4;
+    const r = document.documentElement.style;
+    if (light) { r.setProperty('--ink', '#f8f3ea'); r.setProperty('--ink-2', 'rgba(248,243,234,.74)'); r.setProperty('--ink-3', 'rgba(248,243,234,.45)'); r.setProperty('--rule', 'rgba(248,243,234,.3)'); r.setProperty('--shadow', 'rgba(3,6,20,.55)'); }
+    else { r.setProperty('--ink', '#0d1a30'); r.setProperty('--ink-2', 'rgba(13,26,48,.74)'); r.setProperty('--ink-3', 'rgba(13,26,48,.45)'); r.setProperty('--rule', 'rgba(13,26,48,.28)'); r.setProperty('--shadow', 'rgba(20,40,80,.35)'); }
+    // the sun on screen: azimuth 60°→300° spans the width, horizon sits low
+    const x = Math.min(110, Math.max(-10, (s.az - 60) / 240 * 100));
+    const y = 86 - s.el * 1.15;
+    sunEl.style.left = x + 'vw'; sunEl.style.top = y + 'vh';
+    const warm = Math.max(0, 1 - Math.max(0, s.el) / 25);
+    sunEl.style.background = `radial-gradient(circle, rgba(255,${Math.round(250 - 70 * warm)},${Math.round(225 - 120 * warm)},.95) 0 7%, rgba(255,${Math.round(236 - 60 * warm)},${Math.round(200 - 90 * warm)},.35) 14%, rgba(255,220,180,0) 62%)`;
+    sunEl.style.opacity = s.el > -4 ? Math.min(1, (s.el + 4) / 5) : 0;
+    stars.style.opacity = Math.min(1, Math.max(0, (-s.el - 3) / 10));
+    $('sunNow').textContent = s.el > -0.833 ? `sun ${Math.round(s.el)}° above the horizon` : `sun ${Math.round(-s.el)}° below the horizon`;
+    $('sunPos').textContent = `${s.el >= 0 ? '+' : ''}${s.el.toFixed(1)}° · bearing ${Math.round(s.az)}°`;
+
+    // today's work resolves through the day: begun at 8 am, finished at an example time
+    const fin = finishMins(day), start = 8 * 60;
+    const p = Math.min(1, Math.max(0, (state.mins - start) / (fin - start)));
+    const img = $('todayImg');
+    if (state.mins >= fin) { img.style.filter = 'none'; $('todayState').textContent = `Finished ${fmtTime(fin)}`; }
+    else if (state.mins < start) { img.style.filter = 'blur(26px) saturate(.2) brightness(.8)'; $('todayState').textContent = `Not begun · the studio opens at 8:00 am`; }
+    else { img.style.filter = `blur(${(1 - p) * 22}px) saturate(${.25 + p * .75})`; $('todayState').textContent = `In progress · ${Math.round(p * 100)}%`; }
+
+    const nn = $('nightNote');
+    if (s.el < -6 && times && times.rise != null) {
+      let until = state.mins < times.rise ? times.rise - state.mins : 1440 - state.mins + times.rise;
+      nn.hidden = false; nn.textContent = `The studio is dark. First light in ${Math.floor(until / 60)} h ${Math.round(until % 60)} min.`;
+    } else nn.hidden = true;
+
+    $('clockTime').textContent = fmtTime(state.mins);
+    scrub.value = Math.round(state.mins);
+    scrub.setAttribute('aria-valuetext', fmtTime(state.mins));
+  }
+
+  // ---------- the days before ----------
+  function renderStrip() {
+    const strip = $('strip'); strip.innerHTML = '';
+    for (let i = 1; i <= 14; i++) {
+      const d = addDays(state.day, -i), fin = finishMins(d);
+      const w = bySlug[pick(DAY_POOL.concat(TODAY_POOL), 'strip' + dayKey(d))];
+      const s = sun(instantFor(d.y, d.m, d.d, fin));
+      const cols = skyAt(s.el, s.az > 180);
+      const n = dayIndex(d, SOLSTICE) + 1;
+      const a = document.createElement('a');
+      a.className = 'day'; a.href = archiveUrl(w);
+      const wd = WEEK[new Date(Date.UTC(d.y, d.m - 1, d.d)).getUTCDay()].slice(0, 3);
+      a.innerHTML = `<span class="d mono">${wd} ${d.d} ${MONTHS[d.m - 1].slice(0, 3)}${n >= 1 ? ' · day ' + n : ''}</span>
+        <span class="band" style="background:${gradient(cols)}"><img loading="lazy" src="${window.img(w, 480)}" alt="${(w.alt || w.title).replace(/"/g, '&quot;')}"></span>
+        <span class="cap"><span class="t">${w.title}</span><span class="m mono">finished ${fmtTime(fin)} · sun ${Math.round(s.el)}°</span></span>`;
+      a.setAttribute('aria-label', `${w.title}, finished ${fmtTime(fin)} on ${d.d} ${MONTHS[d.m - 1]}. Opens in the archive.`);
+      strip.appendChild(a);
+    }
+  }
+
+  // ---------- best of the past ----------
+  function renderBest() {
+    const list = $('bestList');
+    BEST.map(s => bySlug[s]).filter(Boolean).forEach((w, i) => {
+      const el = document.createElement('article'); el.className = 'work';
+      el.innerHTML = `<figure><img loading="lazy" src="${window.img(w, 960)}" alt="${(w.alt || w.title).replace(/"/g, '&quot;')}" width="${w.iw}" height="${w.ih}"></figure>
+        <div class="meta"><span class="n">${String(i + 1).padStart(2, '0')} / ${String(BEST.length).padStart(2, '0')} · ${w.year}</span>
+        <span class="t">${w.title}</span><span class="mono">${[w.medium, dims(w)].filter(Boolean).join(' · ')}</span>
+        <a href="${archiveUrl(w)}">The full record in the archive</a></div>`;
+      list.appendChild(el);
+    });
+    const years = W.map(w => w.year).filter(Boolean);
+    $('count').innerHTML = `<span>${W.length} works</span><span>${Math.min(...years)}–${Math.max(...years)}</span><span>painting · printmaking · sculpture · installation</span>`;
+  }
+
+  // ---------- the scrubber's strip: the whole day's horizon ----------
+  function drawDayStrip() {
+    const c = $('dayStrip'), dpr = Math.min(2, devicePixelRatio || 1);
+    const w = c.clientWidth || 600; c.width = Math.round(w * dpr); c.height = 10 * dpr;
+    const ctx = c.getContext('2d'), day = state.day;
+    for (let x = 0; x < c.width; x++) {
+      const mins = x / c.width * 1440, s = sun(instantFor(day.y, day.m, day.d, mins));
+      const cols = skyAt(s.el, s.az > 180);
+      const g = ctx.createLinearGradient(0, 0, 0, c.height);
+      g.addColorStop(0, cols[0]); g.addColorStop(1, cols[2]);
+      ctx.fillStyle = g; ctx.fillRect(x, 0, 1, c.height);
+    }
+  }
+  function renderTicks() {
+    const t = $('ticks'); t.innerHTML = '';
+    const add = (mins, label, cls) => { const s = document.createElement('span'); s.style.left = (mins / 1440 * 100) + '%'; s.textContent = label; if (cls) s.className = cls; t.appendChild(s); };
+    [3, 9, 15, 21].forEach(h => add(h * 60, h < 12 ? `${h} am` : `${h - 12} pm`, 'minor'));
+    add(720, 'noon', 'noon');
+    if (times && times.rise != null) add(times.rise, '↑ ' + fmtTime(times.rise));
+    if (times && times.set != null) add(times.set, '↓ ' + fmtTime(times.set));
+  }
+
+  // ---------- stars ----------
+  const STARS = Array.from({ length: 260 }, (_, i) => ({ x: (hash('x' + i) % 10000) / 10000, y: Math.pow((hash('y' + i) % 10000) / 10000, 1.4) * .8, r: .4 + (hash('r' + i) % 100) / 100 * 1.1, p: (hash('p' + i) % 628) / 100 }));
+  function drawStars(time) {
+    const dpr = Math.min(2, devicePixelRatio || 1);
+    if (stars.width !== innerWidth * dpr) { stars.width = innerWidth * dpr; stars.height = innerHeight * dpr; }
+    const ctx = stars.getContext('2d'); ctx.clearRect(0, 0, stars.width, stars.height);
+    if (stars.style.opacity === '0') return;
+    for (const s of STARS) {
+      const tw = reduce ? .8 : .55 + .45 * Math.sin(time / 900 + s.p * 3);
+      ctx.globalAlpha = tw; ctx.fillStyle = '#fff';
+      ctx.beginPath(); ctx.arc(s.x * stars.width, s.y * stars.height, s.r * dpr, 0, 6.283); ctx.fill();
+    }
+  }
+  function loop(t) { drawStars(t); if (!reduce) requestAnimationFrame(loop); }
+
+  // ---------- controls ----------
+  function setLive(on) {
+    state.live = on; $('live').setAttribute('aria-pressed', on);
+    $('hint').textContent = on ? 'Live. Drag through the day; the sky is computed for Truth or Consequences.' : `Showing ${fmtTime(state.mins)}. Press Live to return to now.`;
+    try { history.replaceState(null, '', on ? location.pathname : '#t' + String(Math.floor(state.mins / 60)).padStart(2, '0') + String(Math.floor(state.mins % 60)).padStart(2, '0')); } catch (e) {}
+  }
+  scrub.addEventListener('input', () => {
+    state.mins = +scrub.value; setLive(false);
+    renderMoment();
+  });
+  $('live').addEventListener('click', () => {
+    const p = tzParts(new Date());
+    if (state.example) setMode(false);
+    state.mins = p.h * 60 + p.min; setLive(true); renderMoment();
+  });
+  function setMode(ex) {
+    state.example = ex;
+    $('modeReal').setAttribute('aria-pressed', !ex); $('modeEx').setAttribute('aria-pressed', ex);
+    const p = tzParts(new Date());
+    state.day = ex ? { ...EXAMPLE } : { y: p.y, m: p.m, d: p.d };
+    if (ex) setLive(false);
+    renderDay(); renderMoment();
+  }
+  $('modeReal').addEventListener('click', () => { setMode(false); const p = tzParts(new Date()); state.mins = p.h * 60 + p.min; setLive(true); renderMoment(); });
+  $('modeEx').addEventListener('click', () => setMode(true));
+
+  setInterval(() => {
+    if (!state.live) return;
+    const p = tzParts(new Date());
+    if (dayKey(p) !== dayKey(state.day) && !state.example) { state.day = { y: p.y, m: p.m, d: p.d }; renderDay(); }
+    state.mins = p.h * 60 + p.min + p.s / 60; renderMoment();
+  }, 20000);
+  addEventListener('resize', () => { drawDayStrip(); drawStars(performance.now()); });
+
+  renderBest(); renderDay();
+  const hm = /^#t(\d{2})(\d{2})$/.exec(location.hash);
+  if (hm && +hm[1] < 24 && +hm[2] < 60) { state.mins = +hm[1] * 60 + +hm[2]; renderMoment(); setLive(false); }
+  else { renderMoment(); setLive(true); }
+  requestAnimationFrame(() => document.body.classList.add('ready'));
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

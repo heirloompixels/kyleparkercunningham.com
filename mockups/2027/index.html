@@ -1,0 +1,189 @@
+<title>Sketchbook 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a working sketchbook — a cover, then ten sheets down the page, each a screenshot pinned beside its notes. */
+:root {
+  --paper: #efece4;
+  --sheet: #f8f6f0;
+  --ink: #1d2024;
+  --dim: #5d625f;
+  --rule: #c9c4b6;
+  --mark: #2f4cdd;
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #15171a; --sheet: #1d2024; --ink: #ebe7dc; --dim: #a19f97; --rule: #3a3d40; --mark: #8ea0ff; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #15171a; --sheet: #1d2024; --ink: #ebe7dc; --dim: #a19f97; --rule: #3a3d40; --mark: #8ea0ff; color-scheme: dark }
+
+body { background: var(--paper); color: var(--ink); font: 400 1.0625rem/1.55 var(--body); }
+.wrap { max-width: 72rem; margin: 0 auto; padding-inline: clamp(16px, 4vw, 48px); padding-block: 0 6rem; }
+a { color: inherit; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; }
+.label { font: 500 0.7rem/1.3 var(--mono); letter-spacing: 0.09em; text-transform: uppercase; color: var(--dim); }
+
+header.cover { padding-block: clamp(3rem, 9vw, 7rem) 2.5rem; border-bottom: 1px solid var(--rule); display: grid; gap: 1.5rem; }
+header.cover h1 { font: 300 clamp(3rem, 11vw, 8.5rem)/0.92 var(--display); letter-spacing: -0.03em; margin: 0; text-wrap: balance; }
+header.cover h1 em { font-style: normal; font-weight: 700; color: var(--mark); }
+.lede { max-width: 40rem; font-size: 1.2rem; margin: 0; }
+.lede + .lede { font-size: 1.0625rem; color: var(--dim); }
+.meta { display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; }
+.toplinks { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.toplinks a { font: 500 0.8rem/1 var(--mono); letter-spacing: 0.05em; text-decoration: none; border: 1px solid var(--ink); padding: 0.7rem 0.9rem; }
+.toplinks a:hover { background: var(--ink); color: var(--paper); }
+
+nav.contents { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 0.25rem 1.5rem; padding-block: 1.5rem; border-bottom: 1px solid var(--rule); }
+nav.contents a { text-decoration: none; display: flex; gap: 0.6rem; padding-block: 0.25rem; }
+nav.contents a span:first-child { font: 500 0.8rem/1.6 var(--mono); color: var(--mark); }
+
+.sheet { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.25rem, 3vw, 3rem); padding-block: clamp(2.5rem, 6vw, 4.5rem); border-bottom: 1px solid var(--rule); align-items: start; }
+.sheet:nth-of-type(even) .shot { order: 2; }
+@media (max-width: 760px) { .sheet { grid-template-columns: 1fr; } .sheet:nth-of-type(even) .shot { order: 0; } }
+.shot { display: block; background: var(--sheet); padding: 10px; border: 1px solid var(--rule); box-shadow: 0 1px 0 var(--rule), 0 18px 40px -28px rgba(0,0,0,.45); transform: rotate(var(--tilt, 0deg)); transition: transform .25s ease; }
+.shot:hover { transform: rotate(0deg) translateY(-2px); }
+.shot img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; object-position: top; background: var(--rule); }
+.notes { min-width: 0; display: grid; gap: 1rem; }
+.num { font: 700 clamp(3.5rem, 8vw, 5.5rem)/0.8 var(--display); color: var(--mark); letter-spacing: -0.04em; }
+.notes h2 { font: 500 clamp(1.8rem, 4vw, 2.6rem)/1.05 var(--display); margin: 0; letter-spacing: -0.015em; text-wrap: balance; }
+.thesis { font-size: 1.15rem; margin: 0; }
+dl { margin: 0; display: grid; gap: 0.75rem; }
+dl div { display: grid; gap: 0.15rem; }
+dd { margin: 0; }
+.open { justify-self: start; font: 500 0.85rem/1 var(--mono); letter-spacing: 0.04em; text-decoration: none; background: var(--ink); color: var(--paper); padding: 0.85rem 1.1rem; }
+.open:hover { background: var(--mark); color: #fff; }
+
+section.read { padding-block: clamp(3rem, 7vw, 5rem) 0; display: grid; gap: 1.25rem; max-width: 46rem; }
+section.read h2 { font: 500 clamp(2rem, 5vw, 3rem)/1.05 var(--display); margin: 0; letter-spacing: -0.02em; }
+section.read p { margin: 0; }
+section.read ol { margin: 0; padding-left: 1.3rem; display: grid; gap: 0.7rem; }
+section.read strong { font-weight: 500; }
+footer { padding-block: 4rem 0; }
+@media (prefers-reduced-motion: reduce) { .shot, .shot:hover { transform: none; transition: none; } }
+</style>
+
+<div class="wrap">
+  <header class="cover">
+    <span class="label">kyleparkercunningham.com · sketchbook · 7 October 2026</span>
+    <h1>Ten sites for <em>2027</em></h1>
+    <p class="lede">The archive keeps everything. The site gets a stranger's few minutes, and has to show what Kyle is doing now and the best of what came before. Here are ten ways to spend those minutes, each built far from the others on purpose. Every one is a working prototype using the real catalogue: 159 works, their real sizes and colours, and Kyle's own spoken words.</p>
+    <p class="lede">Each design ends at the archive. Nothing here uses a price, and no new words are written as Kyle; where a machine speaks, it signs as Owl. Anything that doesn't exist yet (the 1000's progress, today's clip, where he is now) is marked as an example. One line, in The Reel and Ten Miles, comes from something Kyle typed in a private session on 27 September; it stays out of anything public until he says so.</p>
+    <div class="meta">
+      <span class="label">10 sketches</span><span class="label">159 works</span><span class="label">no framework</span><span class="label">phone and desktop</span>
+    </div>
+    <div class="toplinks">
+      <a href="review.html">The review: everything that needs to happen</a>
+      <a href="#combine">How they combine</a>
+    </div>
+  </header>
+
+  <nav class="contents" aria-label="The ten sketches" id="contents"></nav>
+  <main id="sheets"></main>
+
+  <section class="read" id="combine">
+    <span class="label">After the ten</span>
+    <h2>How they combine</h2>
+    <p>These are sketches, not candidates for one winner. My read on which parts belong together:</p>
+    <ol>
+      <li><strong>The spine is Today and The Thousand.</strong> They are one idea at two scales. The front page is today's sky, today's work and today's line, and the field of 1000 is the same year seen from above. From the solstice, they're the reason to come back tomorrow.</li>
+      <li><strong>Owl replaces the menu.</strong> A visitor who wants something specific asks, and gets three works and a door into the archive. The same layer answers agents, with structured data on every work.</li>
+      <li><strong>The Reel is how the site leaves the site.</strong> Each panel is already a post. It belongs in reception's queue as much as on the homepage.</li>
+      <li><strong>Channel is the films' home</strong>, once the films have a public host. Until then it's a placeholder broadcast, and it says so.</li>
+      <li><strong>True Size is a button, not a site.</strong> "See it at its real size" on every work, in the archive as well.</li>
+      <li><strong>Calm, Fauna and Ten Miles are artworks in their own right.</strong> Each is small and self-contained, so they fit the portals house better than the homepage. Each is also a launch moment: one release, one link people pass around.</li>
+      <li><strong>Territory is the "where" room</strong>, and it fills itself as the 1000 is made on the road. It needs places recorded: 149 of 159 public works have none today.</li>
+    </ol>
+    <p>The full list of what has to happen first, beginning with what needs Kyle, is <a href="review.html">the review</a>.</p>
+  </section>
+
+  <footer><span class="label">Built from archive.kyleparkercunningham.com/api/v1 on 2026-10-07 · mockups/2027 in the site repository</span></footer>
+</div>
+
+<script>
+const DESIGNS = [
+  { n: "01", file: "01-today.html", name: "Today", tilt: -0.6,
+    thesis: "The site is one day: today, written on the real sky over Truth or Consequences. The sun's position comes from the visitor's clock, so at 3 a.m. the page is night with stars and at dusk it burns.",
+    first: "A huge date on a sky matching the one outside Kyle's window, the countdown to the 1000, today's work coming into focus, one line he said. A 24-hour scrubber drags the whole site from dawn to night.",
+    split: "Today, then the fourteen days before, each with its sky at the minute the work was finished, then seven chosen works and the door to the archive.",
+    hook: "Links that carry a time: send someone the New Mexico sunset at 6:35 p.m., on that day's painting.",
+    tech: "Solar position formula, sky colour from sun elevation, canvas stars." },
+  { n: "02", file: "02-thousand.html", name: "The Thousand", tilt: 0.5,
+    thesis: "The front page is the year-long performance itself: a field of 1000 numbered cells that fills from the winter solstice, three paintings a day, until it is full.",
+    first: "The scale of 1000 felt at once: a monumental grid, a live counter, the countdown to 21 December. Flip to the example state at day 112 and a third of the field is lit.",
+    split: "The field is the showcase. Every cell opens a work's card, and the card says the full record lives in the archive.",
+    hook: "Watching one artist make 1000 paintings in a year, cell by cell.",
+    tech: "Canvas or DOM grid, card layout in the waybill look." },
+  { n: "03", file: "03-reel.html", name: "The Reel", tilt: -0.4,
+    thesis: "The format people's attention lives in, full-screen vertical panels, cut like a short film rather than a feed. Thirteen panels, about two minutes, and then it ends on purpose.",
+    first: "Kyle's name over a painting the camera slowly pushes into, then his line \"These clouds are better than pears.\" coming up word by word as burned-in subtitles in the painting's colours.",
+    split: "\"That's the reel. The rest is in the archive.\" The panels a visitor kept with a heart wait for them at the end.",
+    hook: "His own spoken lines, subtitled over moving paint: made to be screen-recorded and reposted.",
+    tech: "Scroll-snap, Web Animations, palette-blurred backdrop." },
+  { n: "04", file: "04-territory.html", name: "Territory", tilt: 0.7,
+    thesis: "A printed topographic sheet of the West, the Kyle Parker Cunningham Quadrangle, with every work pinned where it was made. The life on the road, shown before any painting.",
+    first: "Paper, brown contours, green woodland, the season's road dashed in purple from Bozeman to Truth or Consequences, a pulsing mark where he is now.",
+    split: "The map and an index to adjoining sheets. 125 works with no place recorded wait in the margin; the rest is in the archive.",
+    hook: "The map fills as he travels. People come back to see where he is.",
+    tech: "d3-contour on generated terrain, real town coordinates, a true scale bar." },
+  { n: "05", file: "05-true-size.html", name: "True Size", tilt: -0.5,
+    thesis: "Every painting online is the same size. This is one room in the studio where the best works hang at their real dimensions, with a person for scale.",
+    first: "A whitewashed room, warm light, paintings at true scale. Tap one and walk up to it; hold it up to your own wall at 1:1 on the screen.",
+    split: "The room holds a dozen. Each wall label sends you to the archive record.",
+    hook: "\"See it at its real size\": the thing no feed can do.",
+    tech: "three.js, physical sizes from the catalogue, CSS physical units for 1:1." },
+  { n: "06", file: "06-owl.html", name: "Owl", tilt: 0.4,
+    thesis: "People and their agents arrive with questions, not menus. Owl, the studio's machine voice, signs its own words and reads the catalogue aloud like a letter written in the dark.",
+    first: "Owl greets you by the time of day, says there are 159 works and you haven't time for all of them, and offers six doors: one minute, something calm, the strange animals, what he's making now, who he is, collecting.",
+    split: "Each answer is three or four works, never more, and every turn ends with the archive.",
+    hook: "A share link that is a question, answered with real paintings.",
+    tech: "SVG owl, client-side matcher over tags, colour, size and year, live schema.org data for agents." },
+  { n: "07", file: "07-fauna.html", name: "Fauna of the Near Future", tilt: -0.7,
+    thesis: "The creature paintings and prints as a natural-history field guide from the near future: plates, plate marks, a life list. Owl signs the mock Latin names.",
+    first: "An engraved title page with Rhino Radar as frontispiece, then the plates. Each creature you scroll past is stamped Sighted, and the life list counts up.",
+    split: "Twenty-two species, nothing else. The last page names what it leaves out and links to the complete survey.",
+    hook: "The specimen card: \"I sighted the Tubed Pachyderm.\"",
+    tech: "Intersection observer, canvas share cards, IM Fell and Garamond." },
+  { n: "08", file: "08-calm.html", name: "Calm", tilt: 0.5,
+    thesis: "The calmest place on the internet: the eight Atmospheric Balance paintings played like weather, a colour field breathing in each one's palette, a score drawn from its colours.",
+    first: "Kyle's four sentences about the collection over a moving field. One tap and the drone starts; the first painting surfaces. On the third, one distant flash and thunder, once.",
+    split: "\"There are eight. The rest of the work is in the archive.\"",
+    hook: "\"I spent three minutes in a storm with Kyle Parker Cunningham.\"",
+    tech: "WebGL shader field, WebAudio score from the palettes." },
+  { n: "09", file: "09-ten-miles.html", name: "Ten Miles", tilt: -0.4,
+    thesis: "A site you walk. A two-minute hike up a trail where the land takes on the colours of each painting as you near it, with the newest work at the summit.",
+    first: "Hold to walk. The odometer counts, the wind starts, and at mile 0.8 a painting propped on a boulder glows and rises full-screen.",
+    split: "Nine works on the trail. The summit's door is \"the whole range, mapped\": the archive.",
+    hook: "\"I hiked to the top of an artist's website.\"",
+    tech: "One canvas, procedural ridges and weather, WebAudio footsteps." },
+  { n: "10", file: "10-channel.html", name: "KPC-TV", tilt: 0.6,
+    thesis: "The 86 films become an always-on station broadcasting from Truth or Consequences. The schedule runs on the world clock, so everyone sees the same frame at the same moment.",
+    first: "Something already on air, now and next with real titles and running times, a programme guide in your time zone, and a teletext service you drive by typing page numbers.",
+    split: "Three channels of now; teletext page 200 and the masthead go to the archive.",
+    hook: "\"Watch with me\": whoever opens the link sees this same moment.",
+    tech: "Canvas broadcast and teletext renderer, WebAudio ident." }
+];
+const esc = s => s.replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+document.getElementById("contents").innerHTML = DESIGNS.map(d =>
+  `<a href="#s${d.n}"><span>${d.n}</span><span>${esc(d.name)}</span></a>`).join("");
+document.getElementById("sheets").innerHTML = DESIGNS.map(d => `
+  <article class="sheet" id="s${d.n}">
+    <a class="shot" href="${d.file}" style="--tilt:${d.tilt}deg" aria-label="Open ${esc(d.name)}">
+      <img src="shots/${d.n}.jpg" alt="Screenshot of ${esc(d.name)} at desktop width" loading="lazy">
+    </a>
+    <div class="notes">
+      <span class="num">${d.n}</span>
+      <h2>${esc(d.name)}</h2>
+      <p class="thesis">${esc(d.thesis)}</p>
+      <dl>
+        <div><dt class="label">First thirty seconds</dt><dd>${esc(d.first)}</dd></div>
+        <div><dt class="label">Showcase and archive</dt><dd>${esc(d.split)}</dd></div>
+        <div><dt class="label">Why it travels</dt><dd>${esc(d.hook)}</dd></div>
+        <div><dt class="label">Built with</dt><dd>${esc(d.tech)}</dd></div>
+      </dl>
+      <a class="open" href="${d.file}">Open ${esc(d.name)} →</a>
+    </div>
+  </article>`).join("");
+</script>

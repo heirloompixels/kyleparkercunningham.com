@@ -1,0 +1,575 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fauna of the Near Future</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a bound field guide. Title page, instructions, index, then one engraved plate per species,
+   image set into an intaglio plate mark beside its specimen table; a life list rides along the bottom. */
+:root{
+  --paper:#edeee7;      /* cool laid paper, not cream */
+  --paper-deep:#e2e3da;
+  --ink:#1c3352;        /* Prussian blue printing ink: the one ink */
+  --ink-soft:#4a5d78;
+  --ink-faint:rgba(28,51,82,.18);
+  --hair:rgba(28,51,82,.42);
+  --display:"IM Fell English SC","IM Fell English",Georgia,"Times New Roman",serif;
+  --fell:"IM Fell English",Georgia,"Times New Roman",serif;
+  --body:"EB Garamond",Garamond,Georgia,serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:clamp(17px,1.05vw + 12px,20px);line-height:1.5;
+  background-image:
+    repeating-linear-gradient(0deg,rgba(28,51,82,.025) 0 1px,transparent 1px 5px),
+    radial-gradient(ellipse at 50% 0%,rgba(255,255,255,.5),transparent 70%);
+  padding-inline:16px;padding-block:0 96px;overflow-x:hidden}
+a{color:var(--ink)}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin-inline:auto}
+.sc{font-family:var(--display);letter-spacing:.04em}
+.mono{font-family:var(--mono);font-size:.68em;letter-spacing:.08em;text-transform:uppercase}
+.sketch{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:12px;z-index:30;font-family:var(--mono);font-size:11px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft);background:var(--paper);padding:3px 7px;border:1px solid var(--ink-faint);text-decoration:none}
+.sketch:hover{color:var(--ink);border-color:var(--ink)}
+
+/* ---------- title page ---------- */
+.title-page{margin:clamp(28px,6vw,72px) auto 0;max-width:860px;border:1px solid var(--ink);padding:6px;position:relative}
+.title-page>.inner{border:3px double var(--ink);padding:clamp(24px,5vw,64px) clamp(18px,5vw,64px);text-align:center;position:relative}
+.title-page .orn{position:absolute;width:22px;height:22px;color:var(--ink)}
+.orn.tl{top:8px;left:8px}.orn.tr{top:8px;right:8px;transform:scaleX(-1)}.orn.bl{bottom:8px;left:8px;transform:scaleY(-1)}.orn.br{bottom:8px;right:8px;transform:scale(-1,-1)}
+.tp-kicker{font-family:var(--fell);font-style:italic;font-size:1.05em;margin:0}
+.tp-title{font-family:var(--display);font-weight:400;font-size:clamp(40px,8.4vw,98px);line-height:.92;margin:.25em 0 .2em;text-wrap:balance;letter-spacing:.01em}
+.tp-title span{display:block;font-size:.42em;letter-spacing:.32em;margin:.3em 0}
+.tp-sub{font-family:var(--fell);font-size:1.12em;max-width:34em;margin:0 auto;text-wrap:balance}
+.tp-rule{width:min(320px,70%);height:9px;margin:1.3em auto;border-top:1px solid var(--ink);border-bottom:3px double var(--ink)}
+.frontis{margin:1.4em auto 0;max-width:420px}
+.frontis figure{margin:0}
+.frontis .platemark{padding:clamp(14px,3vw,22px)}
+.frontis figcaption{font-family:var(--fell);font-style:italic;font-size:.9em;margin-top:.5em}
+.tp-imprint{margin-top:1.6em;font-family:var(--display);font-size:.95em;letter-spacing:.12em}
+.tp-imprint small{display:block;font-family:var(--fell);font-style:italic;letter-spacing:0;font-size:.9em;margin-top:.3em}
+
+/* ---------- plate mark: the intaglio impression ---------- */
+.platemark{background:var(--paper-deep);padding:clamp(12px,2.4vw,26px);
+  box-shadow:inset 0 0 0 1px rgba(28,51,82,.22),inset 2px 2px 3px rgba(0,0,0,.10),inset -2px -2px 2px rgba(255,255,255,.7),0 1px 0 rgba(255,255,255,.8);
+  position:relative}
+.platemark img{width:100%;height:auto;box-shadow:0 0 0 1px rgba(28,51,82,.35)}
+
+/* ---------- sections ---------- */
+section.leaf{max-width:860px;margin:clamp(56px,9vw,120px) auto 0}
+.leaf h2{font-family:var(--display);font-weight:400;font-size:clamp(26px,3.4vw,40px);margin:0 0 .2em;letter-spacing:.03em}
+.leaf .h2-rule{height:7px;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);margin-bottom:1.2em}
+.howto{list-style:none;padding:0;margin:0;display:grid;gap:1em;counter-reset:n}
+.howto li{display:grid;grid-template-columns:2.4em 1fr;gap:.6em;align-items:baseline;counter-increment:n}
+.howto li::before{content:counter(n,upper-roman)".";font-family:var(--display);text-align:right}
+.howto b{font-family:var(--display);font-weight:400;letter-spacing:.03em}
+.quote{margin:2em 0 0;padding:1.2em 0 0;border-top:1px solid var(--hair);display:grid;gap:.9em}
+.quote blockquote{margin:0;font-family:var(--fell);font-size:1.22em;line-height:1.35;text-wrap:balance}
+.quote cite{display:block;font-style:normal;margin-top:.35em}
+.owl-sig{font-family:var(--fell);font-style:italic;color:var(--ink-soft)}
+
+/* index */
+.index{columns:2 240px;column-gap:2.4em;padding:0;margin:0;list-style:none}
+.index li{break-inside:avoid;display:grid;grid-template-columns:3em 1fr auto;gap:.5em;align-items:baseline;padding:.28em 0;border-bottom:1px dotted var(--hair)}
+.index .num{font-family:var(--display);text-align:right}
+.index a{text-decoration:none;font-family:var(--fell)}
+.index a:hover{text-decoration:underline}
+.index i{display:block;font-size:.8em;color:var(--ink-soft)}
+.tick{width:1.1em;height:1.1em;border:1px solid var(--hair);border-radius:50%;display:inline-grid;place-items:center;font-size:.8em;line-height:1}
+.tick.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* plates */
+.plate{max-width:1180px;margin:clamp(72px,12vw,150px) auto 0;scroll-margin-top:24px}
+.plate-head{display:flex;justify-content:space-between;align-items:baseline;gap:1em;border-bottom:1px solid var(--ink);padding-bottom:.35em;margin-bottom:clamp(16px,2.4vw,28px)}
+.plate-head .pn{font-family:var(--display);font-size:clamp(18px,1.8vw,22px);letter-spacing:.2em}
+.plate-head .run{font-family:var(--fell);font-style:italic;font-size:.9em;color:var(--ink-soft);text-align:right}
+.plate-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);align-items:start}
+.plate:nth-of-type(even) .plate-body{grid-template-columns:minmax(0,1fr) minmax(0,1.15fr)}
+.plate:nth-of-type(even) .fig{order:2}
+.fig{position:relative;min-width:0}
+.fig .platemark{transition:transform .5s ease}
+.fig .legend{display:flex;justify-content:space-between;gap:1em;margin-top:.55em;font-family:var(--fell);font-style:italic;font-size:.88em}
+.specs{display:flex;gap:.4em;flex-wrap:wrap;margin-top:.6em}
+.specs button{font:inherit;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:none;color:var(--ink);border:1px solid var(--hair);padding:.35em .6em;cursor:pointer}
+.specs button[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.txt{min-width:0}
+.common{font-family:var(--display);font-weight:400;font-size:clamp(34px,4.6vw,62px);line-height:.98;margin:0;text-wrap:balance;letter-spacing:.01em}
+.binom{font-family:var(--fell);font-style:italic;font-size:clamp(20px,2vw,26px);margin:.3em 0 0}
+.binom .auth{font-style:normal;font-family:var(--display);font-size:.8em;letter-spacing:.05em}
+.table{margin:1.3em 0 0;border-top:3px double var(--ink)}
+.row{display:grid;grid-template-columns:8.2em 1fr;gap:.8em;padding:.5em 0;border-bottom:1px solid var(--ink-faint);align-items:baseline}
+.row dt{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft)}
+.row dd{margin:0}
+.app{font-family:var(--fell);font-size:1.08em}
+.colour{display:flex;gap:4px;flex-wrap:wrap}
+.colour span{display:block;width:30px;height:20px;box-shadow:inset 0 0 0 1px rgba(28,51,82,.3)}
+.colour-names{font-family:var(--mono);font-size:10px;color:var(--ink-soft);margin-top:4px;letter-spacing:.04em}
+.fieldnote{margin:1.2em 0 0;padding:.9em 1em;border-left:1px solid var(--ink);background:rgba(28,51,82,.04);font-family:var(--fell);font-style:italic;font-size:1.02em}
+.fieldnote .owl-sig{display:block;font-size:.85em;margin-top:.4em;font-style:normal;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;font-size:10.5px}
+.actions{display:flex;gap:.6em;flex-wrap:wrap;margin-top:1.3em}
+.btn{font:inherit;font-family:var(--display);letter-spacing:.08em;font-size:.95em;background:var(--paper);color:var(--ink);border:1px solid var(--ink);padding:.5em 1em;cursor:pointer;box-shadow:3px 3px 0 var(--ink)}
+.btn:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--ink)}
+.btn:active{transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+.btn.solid{background:var(--ink);color:var(--paper)}
+.btn[disabled]{opacity:.45;cursor:default;transform:none;box-shadow:3px 3px 0 var(--ink)}
+
+/* stamp */
+.stamp{position:absolute;right:6%;bottom:9%;width:clamp(96px,13vw,138px);aspect-ratio:1;color:var(--ink);pointer-events:none;opacity:0;transform:rotate(-14deg) scale(1.6);transition:opacity .25s ease,transform .35s cubic-bezier(.2,1.6,.4,1)}
+.plate.seen .stamp{opacity:.9;transform:rotate(-14deg) scale(1)}
+.stamp svg{width:100%;height:100%;mix-blend-mode:multiply}
+
+/* life list bar */
+.lifebar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--paper);border-top:1px solid var(--ink);
+  padding:.55em 16px calc(.55em + env(safe-area-inset-bottom,0px));display:flex;align-items:center;gap:1em}
+.lifebar .count{font-family:var(--display);letter-spacing:.06em;white-space:nowrap;font-size:.98em}
+.lifebar .count b{font-weight:400;font-size:1.25em}
+.dots{flex:1;display:flex;gap:3px;min-width:0;overflow:hidden}
+.dots a{flex:1;max-width:28px;height:12px;border:1px solid var(--hair);display:block}
+.dots a.on{background:var(--ink);border-color:var(--ink)}
+.lifebar .btn{padding:.35em .8em;font-size:.82em;white-space:nowrap}
+
+/* final */
+.survey{max-width:1180px;margin:clamp(90px,14vw,170px) auto 0;border:1px solid var(--ink);padding:6px}
+.survey>.inner{border:3px double var(--ink);padding:clamp(22px,5vw,60px)}
+.survey h2{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,64px);margin:0;line-height:1;text-wrap:balance}
+.lifegrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:10px;margin:1.6em 0}
+.lifegrid a{display:block;text-decoration:none;font-family:var(--fell);font-size:.78em;line-height:1.2}
+.lifegrid .th{aspect-ratio:1;background:var(--paper-deep) center/cover no-repeat;box-shadow:inset 0 0 0 1px var(--hair);filter:grayscale(1) contrast(.4) brightness(1.25);opacity:.55;margin-bottom:.35em;position:relative}
+.lifegrid a.on .th{filter:none;opacity:1}
+.lifegrid a:not(.on) .th::after{content:"?";position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-size:2em;color:var(--ink-soft)}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,56px);margin-top:1em}
+.cols p{margin:0 0 .8em}
+.archive-link{display:block;margin-top:.6em;font-family:var(--display);font-size:clamp(20px,2.4vw,30px);letter-spacing:.03em;text-decoration:none;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:.45em 0}
+.archive-link:hover{background:var(--ink);color:var(--paper);padding-inline:.4em}
+.colophon{max-width:860px;margin:3em auto 0;text-align:center;font-family:var(--fell);font-style:italic;font-size:.88em;color:var(--ink-soft)}
+
+/* card dialog */
+dialog{border:1px solid var(--ink);background:var(--paper);color:var(--ink);padding:0;max-width:min(560px,calc(100vw - 32px));width:100%;max-height:calc(100dvh - 32px)}
+dialog::backdrop{background:rgba(20,30,48,.55)}
+.dlg{padding:18px;display:grid;gap:12px}
+.dlg img{width:100%;height:auto;box-shadow:0 6px 24px rgba(0,0,0,.25)}
+.dlg p{margin:0;font-family:var(--fell);font-style:italic;font-size:.95em;text-align:center}
+.dlg .row-b{display:flex;justify-content:center;gap:.6em}
+
+@media (min-width:1000px){.lifegrid{grid-template-columns:repeat(11,minmax(0,1fr))}}
+@media (max-width:760px){
+  .plate-body,.plate:nth-of-type(even) .plate-body{grid-template-columns:minmax(0,1fr)}
+  .plate:nth-of-type(even) .fig{order:0}
+  .cols{grid-template-columns:minmax(0,1fr)}
+  .row{grid-template-columns:6.6em 1fr}
+  .plate-head .run{display:none}
+  .lifebar .btn{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important}
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+</head>
+<body>
+<a class="sketch" href="index.html">sketchbook</a>
+
+<div class="wrap">
+
+<header class="title-page" id="top">
+  <div class="inner">
+    <svg class="orn tl" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 21V6c0-3 2-5 5-5h15M5 21V9c0-2 2-4 4-4h12M9 13a4 4 0 1 1 4 4" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    <svg class="orn tr" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 21V6c0-3 2-5 5-5h15M5 21V9c0-2 2-4 4-4h12M9 13a4 4 0 1 1 4 4" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    <svg class="orn bl" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 21V6c0-3 2-5 5-5h15M5 21V9c0-2 2-4 4-4h12M9 13a4 4 0 1 1 4 4" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    <svg class="orn br" viewBox="0 0 22 22" aria-hidden="true"><path d="M1 21V6c0-3 2-5 5-5h15M5 21V9c0-2 2-4 4-4h12M9 13a4 4 0 1 1 4 4" fill="none" stroke="currentColor" stroke-width="1"/></svg>
+    <p class="tp-kicker">A Field Guide to the</p>
+    <h1 class="tp-title">Fauna <span>of the</span> Near Future</h1>
+    <p class="tp-sub">Being an account of the creatures observed in the paintings, prints and found objects of Kyle&nbsp;Parker&nbsp;Cunningham, <span style="white-space:nowrap">2014–2023</span>, with their apparatus, habitats and colouration</p>
+    <div class="tp-rule"></div>
+    <div class="frontis">
+      <figure>
+        <div class="platemark"><img id="frontis-img" alt="" width="960" height="1280"></div>
+        <figcaption id="frontis-cap">Frontispiece.</figcaption>
+      </figure>
+    </div>
+    <p class="tp-imprint"><span id="tp-count">XXII</span> Plates · <span id="tp-specs">XXVI</span> Specimens
+      <small>Field-guide apparatus compiled by Owl, the studio’s machine. The works and their titles are the artist’s.</small></p>
+  </div>
+</header>
+
+<section class="leaf" id="how">
+  <h2>How to use this guide</h2>
+  <div class="h2-rule"></div>
+  <ol class="howto">
+    <li><span><b>Look.</b> Each plate shows one species as the artist recorded it, in paint, in drypoint, or on found wood. Some were recorded twice, years apart; those plates carry more than one specimen.</span></li>
+    <li><span><b>Sight it.</b> Linger on a plate, or tap <i>Record sighting</i>, and it is stamped into your life list at the foot of the page.</span></li>
+    <li><span><b>Mind the apparatus.</b> Most of these animals wear something: a dish, a helmet, a respirator, a rocket. The table says what, taken from the record of each work.</span></li>
+    <li><span><b>Take a card.</b> Any plate will print you a specimen card to keep or send. Collect all twenty-two and the guide says so.</span></li>
+  </ol>
+  <div class="quote">
+    <blockquote>“A butterfly carrying a sledge hammer is no less bizarre than sending a Tesla Roadster to Mars.”
+      <cite class="mono">From the artist’s statement</cite></blockquote>
+    <blockquote style="font-size:1.02em">“Kyle situates much of his art in a speculative future, where flora and fauna of nature don the technology of man in order to survive a future ‘climate changed’ environment.”
+      <cite class="mono">From the artist’s statement</cite></blockquote>
+  </div>
+</section>
+
+<section class="leaf" id="index">
+  <h2>Index of plates</h2>
+  <div class="h2-rule"></div>
+  <ol class="index" id="index-list"></ol>
+</section>
+
+<main id="plates"></main>
+
+<section class="survey" id="survey">
+  <div class="inner">
+    <p class="mono" style="margin:0 0 .6em">End of the field guide</p>
+    <h2 id="survey-title">Your life list</h2>
+    <div class="lifegrid" id="lifegrid"></div>
+    <div class="cols">
+      <div>
+        <p>This guide covers the creatures alone: twenty-two species, recorded between 2014 and 2023. It leaves out the clouds, the self-portraits, the still lifes, the abstractions, the atmospheres of 2024 and everything since.</p>
+        <p>New species are expected. From the winter solstice, 21 December 2026, the artist begins a thousand new works in a year.</p>
+      </div>
+      <div>
+        <p class="sc" style="margin-bottom:.2em;letter-spacing:.06em">The complete survey</p>
+        <p>Every work, with its size, medium, date and photographs, is kept in the archive: 159 public records and counting.</p>
+        <a class="archive-link" href="https://archive.kyleparkercunningham.com/">archive.kyleparkercunningham.com →</a>
+        <div class="actions"><button class="btn" id="final-card" type="button">Print my life-list card</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<p class="colophon">Set in IM Fell, cut from the Fell types of 1672–86, and EB Garamond. Printed in one ink. Binomials, field notes and the arrangement of this guide are Owl’s inventions and carry Owl’s name as their authority; they are a game, not science. <a href="#top">Return to the title page</a></p>
+
+</div>
+
+<nav class="lifebar" aria-label="Life list">
+  <span class="count"><span class="sc">Sighted</span> <b id="lb-n">0</b> of <span id="lb-t">22</span></span>
+  <div class="dots" id="dots"></div>
+  <button class="btn" id="lb-card" type="button">My card</button>
+</nav>
+
+<dialog id="dlg">
+  <div class="dlg">
+    <img id="dlg-img" alt="Your specimen card">
+    <p>Long-press the card on a phone, or right-click it, to save or share.</p>
+    <div class="row-b"><button class="btn" type="button" id="dlg-close">Close</button></div>
+  </div>
+</dialog>
+
+<script src="works.js"></script>
+<script>
+(function(){
+"use strict";
+/* The guide's species. Common names are the works' real titles. Apparatus, habitat and
+   observed-in are read from each work's catalogue record (alt text, tags, medium).
+   Binomials and field notes are Owl's, and say so. */
+const SPECIES = [
+ {id:"crystal-tooth-whale", name:"Crystal Tooth Whale", bin:"Balaena crystallodonta", specs:["crystal-tooth-whale","crystal-tooth-whale-printmaking"],
+  app:"Crystalline, faceted teeth, carried in an open mouth.", hab:"Open water, teal; later on dark handmade paper",
+  note:"Recorded twice, five years apart: once in oil, once in a single contour line. The teeth survive both."},
+ {id:"rhino-radar", name:"Rhino Radar", bin:"Rhinoceros parabolicus", specs:["rhino-radar","rhino-radar-arm-fauna"],
+  app:"A satellite dish antenna, mounted on the back.", hab:"Yellow ground under a teal sky",
+  note:"The dish points up. What it is listening for has not been recorded."},
+ {id:"flicker-rhino", name:"Flicker Rhino", bin:"Rhinoceros volans", specs:["flicker-rhino"],
+  app:"A yellow harness, hung from a bundle of spotted flicker feathers.", hab:"Night air; weathered found wood",
+  note:"A second, lighter answer to the problem of being a rhinoceros."},
+ {id:"tubed-pachyderm", name:"Tubed Pachyderm", bin:"Loxodonta thermionica", specs:["tubed-pachydeerm"],
+  app:"Vacuum tubes rising from the back; concentric speaker cones on the flank.", hab:"A field of hand-painted red",
+  note:"Analog to the last. Approach slowly; it may be warming up."},
+ {id:"arm-fauna", name:"Arm Fauna", bin:"Loxodonta propulsa", specs:["arm-fauna"],
+  app:"Harnessed to a silver rocket on wheels; a glowing red patch on the back.", hab:"Golden-yellow ground, handwoven linen",
+  note:"Among the earliest specimens in the guide. Its record is tagged with poaching and with grief."},
+ {id:"elephant-mask", name:"Elephant Mask", bin:"Persona elephantina", specs:["elephant-mask","elephant-mask-intaglio"],
+  app:"A mask. In the 2023 specimen it is worn by a standing figure.", hab:"Blue-violet ground; off-white paper",
+  note:"The only species in the guide that may be a person. Identification is not advised."},
+ {id:"paper-neck-giraffes", name:"Paper Neck Giraffes", bin:"Giraffa bonsaiphora", specs:["paper-neck-giraffes"],
+  app:"Glass dome respirators, each holding a bonsai tree.", hab:"Deep blue; tagged for drought",
+  note:"Each animal breathes through its own small tree. Observed in threes."},
+ {id:"bison-robotics", name:"Bison Robotics", bin:"Bison mechanicus", specs:["bison-robotics"],
+  app:"Boxy, angular bodies on wind-up, key-like legs.", hab:"Great Plains, grazing, under a coral sky",
+  note:"A grazing herd of three. Owl could find no record of who winds them."},
+ {id:"bison-at-sunset", name:"Bison at Sunset", bin:"Bison crepuscularis", specs:["bison-at-sunset"],
+  app:"Carries a glowing, orange-speckled rider.", hab:"Great Plains at twilight",
+  note:"The one plate where the animal carries a human, instead of the other way round."},
+ {id:"the-mother-bear", name:"The Mother Bear", bin:"Ursus maternus", specs:["the-mother-bear"],
+  app:"None. The control specimen: unmodified, and looking straight at you.", hab:"Absaroka Mountains, Montana",
+  note:"Recorded from an encounter on foot. Every other animal in this guide wears something; this one does not need to."},
+ {id:"saber-tooth-puma", name:"Saber Tooth Puma", bin:"Puma redux", specs:["saber-tooth-puma"],
+  app:"Elongated saber fangs, angular ears, blocky paws.", hab:"The Pleistocene, returning",
+  note:"Its record is tagged both extinction and de-extinction. It is not clear which way it is walking."},
+ {id:"space-owl", name:"Space Owl", bin:"Bubo astronauticus", specs:["space-owl"],
+  app:"A round space helmet with an antenna.", hab:"Night; a dark branch; hand-torn paper",
+  note:"Owl notes this specimen with professional interest and no further comment."},
+ {id:"owl", name:"owl", bin:"Bubo vigilans", specs:["owl"],
+  app:"None visible. Enormous dark-blue eyes, speckled irises.", hab:"Pale blue; Baltic birch panel",
+  note:"The compiler’s namesake. Recorded facing forward, which owls rarely do for long."},
+ {id:"astro-bee", name:"Astro Bee", bin:"Apis cosmonautica", specs:["astro-bee"],
+  app:"An astronaut’s helmet, occupied by dozens of bees.", hab:"Space; a grey-toned ground",
+  note:"A colony that has taken the helmet for itself. Whether the astronaut agreed is not on record."},
+ {id:"lunar-lander", name:"Lunar Lander", bin:"Odonata selenitica", specs:["lunar-lander"],
+  app:"A geometric lunar lander module, used as a perch.", hab:"Purple and maroon ground; canyon",
+  note:"Small dragonfly, large machine. The dragonfly appears unimpressed."},
+ {id:"butterfly-conundrum", name:"Butterfly Conundrum", bin:"Lepidoptera malleifera", specs:["butterfly_conundrum","butterfly-conundrum"],
+  app:"Tethered to a red sledgehammer.", hab:"Pale blue-grey; later, cream paper",
+  note:"The species named in the artist’s statement. Recorded in oil in 2015 and in drypoint in 2021, still holding on."},
+ {id:"migratory-scavengers", name:"Migratory Scavengers", bin:"Grus recuperatrix", specs:["migratory-scavengers"],
+  app:"Parts, scavenged from a domed spacecraft. 24kt gold leaf.", hab:"Sandy ground under a deep blue sky",
+  note:"Sandhill cranes, salvaging. Their record is tagged sacred ground and migration."},
+ {id:"monsoon-bird", name:"Monsoon Bird", bin:"Grus pluvialis", specs:["monsoon-bird"],
+  app:"Blue leaf-shaped feathers; a geometric, patterned head.", hab:"Monsoon; golden-tan ground",
+  note:"Drawn in the manner of rock art. The only bird here dressed for weather rather than for space."},
+ {id:"atmospheric-whales", name:"Atmospheric Whales", bin:"Cetacea aerostatica", specs:["atmospheric-whales"],
+  app:"Parachute canopies.", hab:"The upper air; gold and terracotta",
+  note:"A recurring motif in the record. Three individuals, descending gently."},
+ {id:"tugboat-whale-sequoia", name:"Tugboat Whale Sequoia", bin:"Eschrichtius arborifer", specs:["tugboat-whale-sequoia"],
+  app:"Tows a red boat carrying a tall sequoia.", hab:"A lavender sea",
+  note:"Tagged mutual aid and transplant. A whale moving a forest, one tree at a time."},
+ {id:"narwhal", name:"Narwhal", bin:"Monodon monoceros", specs:["narwhal"],
+  app:"Its own spiral tusk, which it brought with it.", hab:"Ocean; a long narrow piece of found wood",
+  note:"The one species in this guide with a real binomial. It already looked like the future."},
+ {id:"octobat", name:"Octobat", bin:"Octopus aeronauticus", specs:["octobat"],
+  app:"A hand-sewn hot air balloon.", hab:"Turquoise air; tall found wood",
+  note:"Eight arms and no wings, which it has solved."}
+];
+
+const BY = Object.fromEntries((window.WORKS||[]).map(w=>[w.slug,w]));
+const sp = SPECIES.filter(s=>s.specs.every(x=>BY[x]));
+const total = sp.length;
+const ROMAN = n=>{const m=[[1000,"M"],[900,"CM"],[500,"D"],[400,"CD"],[100,"C"],[90,"XC"],[50,"L"],[40,"XL"],[10,"X"],[9,"IX"],[5,"V"],[4,"IV"],[1,"I"]];let r="";for(const [v,s] of m){while(n>=v){r+=s;n-=v}}return r};
+const esc = s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const size = w=>{ if(!w.h||!w.w) return "Not recorded"; return `${w.h} × ${w.w} mm`; };
+const src = w=>window.img(w,960);
+
+/* sightings, per visitor */
+let seen = new Set();
+try{ seen = new Set(JSON.parse(localStorage.getItem("fauna-seen")||"[]")); }catch(e){}
+const save = ()=>{ try{ localStorage.setItem("fauna-seen",JSON.stringify([...seen])); }catch(e){} };
+
+document.getElementById("tp-count").textContent = ROMAN(total);
+document.getElementById("tp-specs").textContent = ROMAN(sp.reduce((a,s)=>a+s.specs.length,0));
+document.getElementById("lb-t").textContent = total;
+
+/* frontispiece */
+const fw = BY["rhino-radar-arm-fauna"] || BY[sp[0].specs[0]];
+const fi = document.getElementById("frontis-img");
+fi.src = src(fw); fi.alt = fw.alt||fw.title; fi.width = fw.iw; fi.height = fw.ih;
+document.getElementById("frontis-cap").textContent = `Frontispiece. ${fw.title}, ${fw.year}. ${fw.medium}.`;
+
+/* index */
+document.getElementById("index-list").innerHTML = sp.map((s,i)=>
+  `<li><span class="num">${ROMAN(i+1)}</span><a href="#p-${s.id}">${esc(s.name)}<i>${esc(s.bin)}</i></a><span class="tick" data-tick="${s.id}" aria-hidden="true"></span></li>`).join("");
+
+/* dots */
+document.getElementById("dots").innerHTML = sp.map((s,i)=>`<a href="#p-${s.id}" data-dot="${s.id}" title="Plate ${ROMAN(i+1)}: ${esc(s.name)}" aria-label="Plate ${ROMAN(i+1)}: ${esc(s.name)}"></a>`).join("");
+
+const stampSVG = (n)=>`<svg viewBox="0 0 120 120" aria-hidden="true"><defs><path id="c${n}" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1 -88 0"/></defs>
+<circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="60" cy="60" r="50" fill="none" stroke="currentColor" stroke-width="1"/>
+<text font-family="IBM Plex Mono,monospace" font-size="9.5" letter-spacing="2.6" fill="currentColor"><textPath href="#c${n}">FAUNA OF THE NEAR FUTURE · SIGHTED ·</textPath></text>
+<text x="60" y="58" text-anchor="middle" font-family="IM Fell English SC,Georgia,serif" font-size="22" fill="currentColor">Sighted</text>
+<text x="60" y="76" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="9" fill="currentColor" class="sd">—</text></svg>`;
+
+/* plates */
+const plates = document.getElementById("plates");
+plates.innerHTML = sp.map((s,i)=>{
+  const w = BY[s.specs[0]];
+  const pal = (w.pal&&w.pal.length?w.pal:[w.hex]).slice(0,6);
+  const specBtns = s.specs.length>1 ? `<div class="specs" role="group" aria-label="Specimens">${s.specs.map((x,j)=>{const k=BY[x];return `<button type="button" data-plate="${s.id}" data-spec="${x}" aria-pressed="${j===0}">Specimen ${"abc"[j]} · ${esc(k.year)}</button>`}).join("")}</div>`:"";
+  return `<article class="plate" id="p-${s.id}" data-id="${s.id}">
+   <div class="plate-head"><span class="pn">Plate ${ROMAN(i+1)}</span><span class="run">Fauna of the Near Future</span></div>
+   <div class="plate-body">
+     <div class="fig">
+       <div class="platemark"><img loading="lazy" decoding="async" src="${src(w)}" alt="${esc(w.alt||w.title)}" width="${w.iw}" height="${w.ih}" data-img="${s.id}"></div>
+       <div class="stamp">${stampSVG(i)}</div>
+       <div class="legend"><span data-cap="${s.id}">${esc(w.title)}, ${esc(w.year)}</span><span>Fig. ${i+1}</span></div>
+       ${specBtns}
+     </div>
+     <div class="txt">
+       <h2 class="common">${esc(s.name)}</h2>
+       <p class="binom">${esc(s.bin)} <span class="auth">Owl, 2026</span></p>
+       <dl class="table">
+         <div class="row"><dt>Apparatus</dt><dd class="app">${esc(s.app)}</dd></div>
+         <div class="row"><dt>Habitat</dt><dd>${esc(s.hab)}</dd></div>
+         <div class="row"><dt>Observed in</dt><dd data-med="${s.id}">${esc(w.medium||"Not recorded")}</dd></div>
+         <div class="row"><dt>First sighting</dt><dd>${esc(Math.min(...s.specs.map(x=>BY[x].year)))}</dd></div>
+         <div class="row"><dt>Plate size</dt><dd data-size="${s.id}">${esc(size(w))}</dd></div>
+         <div class="row"><dt>Colouration</dt><dd><div class="colour" data-pal="${s.id}">${pal.map(h=>`<span style="background:${h}" title="${h}"></span>`).join("")}</div><div class="colour-names" data-paln="${s.id}">${pal.join("  ")}</div></dd></div>
+       </dl>
+       <p class="fieldnote">${esc(s.note)}<span class="owl-sig">Field note · Owl</span></p>
+       <div class="actions">
+         <button class="btn solid" type="button" data-sight="${s.id}">Record sighting</button>
+         <button class="btn" type="button" data-card="${s.id}">Specimen card</button>
+       </div>
+     </div>
+   </div>
+  </article>`;
+}).join("");
+
+/* specimen switching */
+plates.addEventListener("click",e=>{
+  const b = e.target.closest("[data-spec]");
+  if(b){
+    const id=b.dataset.plate, w=BY[b.dataset.spec];
+    document.querySelectorAll(`[data-plate="${id}"]`).forEach(x=>x.setAttribute("aria-pressed",String(x===b)));
+    const im=document.querySelector(`[data-img="${id}"]`); im.src=src(w); im.alt=w.alt||w.title; im.width=w.iw; im.height=w.ih;
+    document.querySelector(`[data-cap="${id}"]`).textContent=`${w.title}, ${w.year}`;
+    document.querySelector(`[data-med="${id}"]`).textContent=w.medium||"Not recorded";
+    document.querySelector(`[data-size="${id}"]`).textContent=size(w);
+    const pal=(w.pal&&w.pal.length?w.pal:[w.hex]).slice(0,6);
+    document.querySelector(`[data-pal="${id}"]`).innerHTML=pal.map(h=>`<span style="background:${h}" title="${h}"></span>`).join("");
+    document.querySelector(`[data-paln="${id}"]`).textContent=pal.join("  ");
+    return;
+  }
+  const s = e.target.closest("[data-sight]"); if(s){ sight(s.dataset.sight,true); return; }
+  const c = e.target.closest("[data-card]"); if(c){ openCard(c.dataset.card); }
+});
+
+const today = new Date();
+const dstr = today.toLocaleDateString("en-GB",{day:"numeric",month:"short",year:"numeric"}).toUpperCase();
+document.querySelectorAll(".stamp .sd").forEach(t=>t.textContent=dstr);
+
+function render(){
+  const n = seen.size;
+  document.getElementById("lb-n").textContent = n;
+  sp.forEach(s=>{
+    const on = seen.has(s.id);
+    document.getElementById("p-"+s.id).classList.toggle("seen",on);
+    const t=document.querySelector(`[data-tick="${s.id}"]`); t.classList.toggle("on",on); t.textContent=on?"✓":"";
+    document.querySelector(`[data-dot="${s.id}"]`).classList.toggle("on",on);
+    const btn=document.querySelector(`[data-sight="${s.id}"]`); btn.disabled=on; btn.textContent=on?"Sighted":"Record sighting";
+  });
+  document.getElementById("lifegrid").innerHTML = sp.map((s,i)=>{const w=BY[s.specs[0]];const on=seen.has(s.id);
+    return `<a href="#p-${s.id}" class="${on?"on":""}"><div class="th" style="background-image:url('${window.img(w,480)}')"></div>${ROMAN(i+1)}. ${on?esc(s.name):"Not yet sighted"}</a>`}).join("");
+  document.getElementById("survey-title").textContent = n===total ? `All ${total} sighted. A complete field naturalist.` : n===0 ? "Your life list is empty" : `Your life list: ${n} of ${total}`;
+}
+function sight(id,manual){
+  if(seen.has(id)) return;
+  seen.add(id); save(); render();
+}
+render();
+
+/* sighting by lingering: a plate in view for 1.4 s is stamped */
+const timers = new Map();
+if("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      const id=e.target.dataset.id;
+      if(e.isIntersecting && e.intersectionRatio>=.55){ if(!timers.has(id)) timers.set(id,setTimeout(()=>sight(id),1400)); }
+      else { clearTimeout(timers.get(id)); timers.delete(id); }
+    });
+  },{threshold:[0,.55,.8]});
+  document.querySelectorAll(".plate").forEach(p=>io.observe(p));
+}
+
+/* ---------- specimen card, drawn to canvas ---------- */
+const INK="#1c3352", PAPER="#edeee7", DEEP="#e2e3da";
+const loadImg = u=>new Promise((res,rej)=>{const i=new Image();i.onload=()=>res(i);i.onerror=rej;i.src=u;});
+function wrapText(ctx,text,x,y,maxW,lh){
+  const words=text.split(" ");let line="";const lines=[];
+  for(const w of words){const t=line?line+" "+w:w; if(ctx.measureText(t).width>maxW&&line){lines.push(line);line=w}else line=t}
+  if(line) lines.push(line);
+  lines.forEach((l,i)=>ctx.fillText(l,x,y+i*lh)); return lines.length;
+}
+function frame(ctx,W,H){
+  ctx.fillStyle=PAPER;ctx.fillRect(0,0,W,H);
+  ctx.strokeStyle=INK;ctx.lineWidth=2;ctx.strokeRect(28,28,W-56,H-56);
+  ctx.lineWidth=5;ctx.strokeRect(44,44,W-88,H-88);
+  ctx.lineWidth=1.5;ctx.strokeRect(53,53,W-106,H-106);
+  // laid-paper lines
+  ctx.globalAlpha=.035;ctx.fillStyle=INK;for(let y=0;y<H;y+=6)ctx.fillRect(0,y,W,1);ctx.globalAlpha=1;
+}
+async function ready(){ try{ await document.fonts.ready; }catch(e){} }
+async function cardFor(id){
+  await ready();
+  const s=sp.find(x=>x.id===id), i=sp.indexOf(s);
+  const cur=document.querySelector(`[data-plate="${id}"][aria-pressed="true"]`);
+  const w=BY[cur?cur.dataset.spec:s.specs[0]];
+  const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  frame(x,W,H);
+  x.fillStyle=INK;x.textAlign="center";
+  x.font='30px "IM Fell English SC", Georgia, serif';x.fillText(`P L A T E   ${ROMAN(i+1)}`,W/2,120);
+  x.font='italic 26px "IM Fell English", Georgia, serif';x.fillText("Fauna of the Near Future",W/2,158);
+  // plate mark
+  const im=await loadImg(src(w));
+  const boxW=W-260, boxH=540, r=Math.min(boxW/im.width,boxH/im.height), iw=im.width*r, ih=im.height*r;
+  const ix=(W-iw)/2, iy=200+(boxH-ih)/2;
+  x.fillStyle=DEEP;x.fillRect(ix-30,iy-30,iw+60,ih+60);
+  x.strokeStyle="rgba(28,51,82,.35)";x.lineWidth=1.5;x.strokeRect(ix-30,iy-30,iw+60,ih+60);
+  x.drawImage(im,ix,iy,iw,ih);x.strokeStyle="rgba(28,51,82,.5)";x.lineWidth=1;x.strokeRect(ix,iy,iw,ih);
+  // name
+  let y=200+boxH+96;
+  x.fillStyle=INK;x.font='68px "IM Fell English SC", Georgia, serif';
+  let fs=68; while(x.measureText(s.name).width>W-180&&fs>36){fs-=2;x.font=`${fs}px "IM Fell English SC", Georgia, serif`}
+  x.fillText(s.name,W/2,y);
+  y+=50;x.font='italic 34px "IM Fell English", Georgia, serif';x.fillText(`${s.bin}  Owl, 2026`,W/2,y);
+  y+=30;x.strokeStyle=INK;x.lineWidth=1;x.beginPath();x.moveTo(170,y);x.lineTo(W-170,y);x.stroke();
+  y+=46;x.font='29px "EB Garamond", Georgia, serif';
+  const n=wrapText(x,"Apparatus: "+s.app,W/2,y,W-260,38);y+=n*38+6;
+  x.font='22px "IBM Plex Mono", monospace';x.fillStyle="#4a5d78";
+  let meta=`${w.title.toUpperCase()} · ${w.year} · ${(w.medium||"").toUpperCase()}`;
+  while(x.measureText(meta).width>W-220&&meta.length>10) meta=meta.slice(0,-2).trimEnd();
+  if(meta!==`${w.title.toUpperCase()} · ${w.year} · ${(w.medium||"").toUpperCase()}`) meta+="…";
+  x.fillText(meta,W/2,y);
+  y+=56;x.fillStyle=INK;x.font='italic 27px "IM Fell English", Georgia, serif';
+  const m=wrapText(x,"“"+s.note+"”",W/2,y,W-300,36);y+=m*36+8;
+  x.font='17px "IBM Plex Mono", monospace';x.fillStyle="#4a5d78";x.fillText("FIELD NOTE · OWL",W/2,y);
+  // stamp
+  if(seen.has(id)){
+    x.save();x.translate(W-190,200+boxH-10);x.rotate(-.24);x.globalAlpha=.85;x.strokeStyle=INK;x.fillStyle=INK;
+    x.lineWidth=4;x.beginPath();x.arc(0,0,78,0,Math.PI*2);x.stroke();x.lineWidth=1.5;x.beginPath();x.arc(0,0,68,0,Math.PI*2);x.stroke();
+    x.font='34px "IM Fell English SC", Georgia, serif';x.fillText("Sighted",0,4);x.font='15px "IBM Plex Mono", monospace';x.fillText(dstr,0,30);x.restore();
+  }
+  x.textAlign="center";x.fillStyle=INK;x.font='20px "IBM Plex Mono", monospace';
+  x.fillText(`LIFE LIST ${seen.size} OF ${total}  ·  KYLEPARKERCUNNINGHAM.COM`,W/2,H-82);
+  return c.toDataURL("image/jpeg",.9);
+}
+async function lifeCard(){
+  await ready();
+  const W=1080,H=1350,c=document.createElement("canvas");c.width=W;c.height=H;const x=c.getContext("2d");
+  frame(x,W,H);x.fillStyle=INK;x.textAlign="center";
+  x.font='italic 30px "IM Fell English", Georgia, serif';x.fillText("A Field Guide to the",W/2,140);
+  x.font='84px "IM Fell English SC", Georgia, serif';x.fillText("Fauna of the",W/2,228);x.fillText("Near Future",W/2,310);
+  x.font='30px "EB Garamond", Georgia, serif';x.fillText(`Life list of a visitor, ${dstr.toLowerCase()}`,W/2,364);
+  const cols=6, cell=(W-220)/cols, gx=110, gy=410;
+  const imgs=await Promise.all(sp.map(s=>loadImg(window.img(BY[s.specs[0]],480)).catch(()=>null)));
+  sp.forEach((s,i)=>{const cx=gx+(i%cols)*cell, cy=gy+Math.floor(i/cols)*cell, p=10, sz=cell-p*2;
+    x.fillStyle=DEEP;x.fillRect(cx+p,cy+p,sz,sz);
+    const im=imgs[i];
+    if(im&&seen.has(s.id)){const r=Math.max(sz/im.width,sz/im.height),iw=im.width*r,ih=im.height*r;x.save();x.beginPath();x.rect(cx+p,cy+p,sz,sz);x.clip();x.drawImage(im,cx+p+(sz-iw)/2,cy+p+(sz-ih)/2,iw,ih);x.restore();}
+    else{x.fillStyle="rgba(28,51,82,.4)";x.font='44px "IM Fell English SC", Georgia, serif';x.fillText("?",cx+cell/2,cy+cell/2+14);}
+    x.strokeStyle="rgba(28,51,82,.45)";x.lineWidth=1;x.strokeRect(cx+p,cy+p,sz,sz);
+    x.fillStyle=INK;x.font='15px "IBM Plex Mono", monospace';x.fillText(ROMAN(i+1),cx+cell/2,cy+cell+6);
+  });
+  x.fillStyle=INK;x.font='46px "IM Fell English SC", Georgia, serif';
+  x.fillText(seen.size===total?"All twenty-two sighted":`Sighted ${seen.size} of ${total}`,W/2,H-150);
+  x.font='20px "IBM Plex Mono", monospace';x.fillText("KYLEPARKERCUNNINGHAM.COM",W/2,H-82);
+  return c.toDataURL("image/jpeg",.9);
+}
+const dlg=document.getElementById("dlg"), dimg=document.getElementById("dlg-img");
+async function show(p){
+  dimg.removeAttribute("src");
+  if(dlg.showModal) dlg.showModal(); else dlg.setAttribute("open","");
+  try{ dimg.src = await p; }catch(e){ dimg.alt="The card could not be drawn."; }
+}
+function openCard(id){ sight(id); show(cardFor(id)); }
+document.getElementById("dlg-close").addEventListener("click",()=>dlg.close());
+dlg.addEventListener("click",e=>{ if(e.target===dlg) dlg.close(); });
+document.getElementById("lb-card").addEventListener("click",()=>show(lifeCard()));
+document.getElementById("final-card").addEventListener("click",()=>show(lifeCard()));
+/* deep links: #mycard opens the life-list card, #card-<species> a specimen card */
+const h=location.hash.slice(1);
+/* plates are inserted by script, so an anchor resolved at load lands short; jump again now they exist */
+const tgt=h&&document.getElementById(h);
+if(tgt) requestAnimationFrame(()=>tgt.scrollIntoView({behavior:"instant",block:"start"}));
+if(h==="mycard") show(lifeCard());
+else if(h.startsWith("card-")&&sp.some(s=>s.id===h.slice(5))) openCard(h.slice(5));
+})();
+</script>
+</body>
+</html>

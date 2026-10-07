@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,800&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a phone-shaped reel of snapping full-bleed panels, centred on desktop between
+   a name column and a facts rail, all floating on the current painting's palette, blurred. */
+:root{
+  --ink:#0d0c0b;           /* the dark of the frame and the shadow under captions */
+  --paper:#f6f3ee;         /* caption white */
+  --accent:#d0663e;        /* rewritten per panel from the painting's palette */
+  --on-accent:#0d0c0b;
+  --mute:rgba(246,243,238,.62);
+  --rule:rgba(246,243,238,.22);
+  --display:"Bricolage Grotesque", "Arial Black", Impact, system-ui, sans-serif;
+  --mono:"DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0}
+body{background:var(--ink);color:var(--paper);font-family:var(--display);overflow:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+
+/* the palette, blurred huge behind everything */
+.wash{position:fixed;inset:-12%;filter:blur(70px) saturate(1.25);transition:opacity 1.4s ease;opacity:0;pointer-events:none}
+.wash.on{opacity:1}
+.grain{position:fixed;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.stage{position:relative;height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:clamp(24px,3vw,56px);padding-inline:clamp(16px,3vw,48px)}
+
+/* ---------- the reel ---------- */
+.frame{position:relative;height:min(94vh,940px);aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:#000;
+  box-shadow:0 40px 120px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.08);container-type:size}
+.reel{position:absolute;inset:0;overflow-y:scroll;scroll-snap-type:y mandatory;overscroll-behavior:contain;scrollbar-width:none}
+.reel::-webkit-scrollbar{display:none}
+.panel{position:relative;height:100%;scroll-snap-align:start;scroll-snap-stop:always;overflow:hidden;background:#000}
+.kb{position:absolute;inset:0;transform-origin:50% 50%;will-change:transform}
+.kb img{width:100%;height:100%;object-fit:cover;display:block}
+.shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45) 0%,rgba(0,0,0,0) 22%,rgba(0,0,0,0) 48%,rgba(0,0,0,.62) 100%)}
+
+/* burned-in captions */
+.cap{position:absolute;left:7cqw;right:7cqw;bottom:24cqh;font-weight:800;font-size:10.2cqw;line-height:1.02;letter-spacing:-.015em;text-wrap:balance;
+  text-shadow:0 2px 0 rgba(0,0,0,.35),0 0 24px rgba(0,0,0,.45)}
+.cap .w{display:inline-block;padding:.02em .1em;margin:0 -.02em;border-radius:.12em;transition:background-color .12s,color .12s,transform .18s}
+.cap .w.on{background:var(--accent);color:var(--on-accent);text-shadow:none;transform:rotate(-1.5deg) scale(1.04)}
+.cap.done{opacity:0;transition:opacity .4s}
+.quote{position:absolute;left:7cqw;right:9cqw;bottom:21cqh;font-weight:800;font-size:6.6cqw;line-height:1.08;opacity:0;transform:translateY(8px);transition:opacity .6s,transform .6s;text-wrap:pretty;text-shadow:0 0 22px rgba(0,0,0,.6)}
+.quote.show{opacity:1;transform:none}
+.quote q{quotes:"\201C" "\201D"}
+.who{display:block;margin-top:1.2em;font:500 3.2cqw/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--mute);text-shadow:none}
+.who b{color:var(--accent);font-weight:500}
+
+.label{position:absolute;left:7cqw;right:22cqw;bottom:6cqh;font:400 3cqw/1.35 var(--mono);letter-spacing:.04em;color:var(--mute)}
+.label strong{display:block;color:var(--paper);font:800 4.6cqw/1.05 var(--display);letter-spacing:-.01em;margin-bottom:.35em;text-transform:none}
+
+/* chrome over the reel */
+.segs{position:absolute;top:calc(14px + env(safe-area-inset-top,0px));left:4cqw;right:4cqw;display:flex;gap:4px;z-index:5}
+.seg{flex:1;height:3px;border-radius:2px;background:rgba(255,255,255,.28);overflow:hidden}
+.seg i{display:block;height:100%;width:100%;background:var(--paper);transform:scaleX(0);transform-origin:left}
+.seg.past i{transform:scaleX(1)}
+.seg.now i{animation:fill var(--dur,8s) linear forwards}
+.paused .seg.now i{animation-play-state:paused}
+@keyframes fill{to{transform:scaleX(1)}}
+.top{position:absolute;top:calc(28px + env(safe-area-inset-top,0px));left:4cqw;right:4cqw;z-index:5;display:flex;align-items:center;gap:14px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}
+.top .me{font:800 15px/1 var(--display);letter-spacing:-.01em;text-transform:none;margin-right:auto}
+.top a,.top button{opacity:.85;text-decoration:none}
+.top a:hover,.top button:hover{opacity:1}
+.mobile-only{display:none}
+
+.actions{position:absolute;right:4cqw;bottom:6cqh;z-index:5;display:flex;flex-direction:column;align-items:center;gap:6px}
+.heart{width:13cqw;height:13cqw;max-width:56px;max-height:56px;display:grid;place-items:center;border-radius:50%;background:rgba(0,0,0,.28);backdrop-filter:blur(6px)}
+.heart svg{width:52%;height:52%;transition:transform .2s}
+.heart[aria-pressed="true"] svg path{fill:var(--accent);stroke:var(--accent)}
+.heart[aria-pressed="true"] svg{transform:scale(1.12)}
+.actions small{font:500 10px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.burst{position:absolute;left:50%;top:45%;width:34cqw;height:34cqw;margin:-17cqw 0 0 -17cqw;z-index:6;pointer-events:none;opacity:0}
+.burst.go{animation:burst .9s cubic-bezier(.2,.9,.2,1)}
+.burst path{fill:var(--accent)}
+@keyframes burst{0%{opacity:0;transform:scale(.3) rotate(-12deg)}25%{opacity:1;transform:scale(1.1) rotate(4deg)}60%{opacity:1;transform:scale(1)}100%{opacity:0;transform:scale(1.25) translateY(-20%)}}
+
+/* opener */
+.title-big{position:absolute;left:6cqw;right:6cqw;top:15cqh;font-weight:800;font-size:13.6cqw;line-height:.86;letter-spacing:-.035em;text-transform:uppercase;text-shadow:0 0 40px rgba(0,0,0,.35)}
+.title-big span{display:block}
+.hint{position:absolute;left:0;right:0;bottom:15cqh;text-align:center;font:500 3cqw/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;opacity:.8;animation:bob 2.4s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+
+/* film card */
+.film{background:#060a1c}
+.film .kb{opacity:.42;filter:grayscale(.2)}
+.card{position:absolute;inset:auto 7cqw 22cqh 7cqw}
+.card .kicker{font:500 3.2cqw/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.card h2{margin:.25em 0 .2em;font-weight:800;font-size:14cqw;line-height:.86;letter-spacing:-.035em;text-transform:uppercase}
+.card .meta{display:flex;gap:4cqw;font:400 3.2cqw/1.4 var(--mono);color:var(--mute)}
+.play{margin-top:6cqh;display:flex;align-items:center;gap:4cqw;font:500 3.2cqw/1.3 var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.play .disc{width:16cqw;height:16cqw;border-radius:50%;border:2px solid var(--paper);display:grid;place-items:center;flex:none}
+.play .disc::after{content:"";border-left:4.4cqw solid var(--paper);border-top:2.7cqw solid transparent;border-bottom:2.7cqw solid transparent;margin-left:1cqw}
+.tag-ex{display:inline-block;font:500 2.6cqw/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:.45em .6em;border:1px solid currentColor;border-radius:3px;color:var(--accent)}
+
+/* flicker */
+.flick .kb img{position:absolute;inset:0;opacity:0}
+.flick .kb img.on{opacity:1}
+.flick .grid8{display:none}
+
+/* the thousand */
+.thousand{background:#120d02}
+.thousand .kb{opacity:.35}
+.th{position:absolute;inset:16cqh 7cqw auto 7cqw}
+.th .num{font-weight:800;font-size:44cqw;line-height:.8;letter-spacing:-.06em}
+.th .of{font:800 6.4cqw/1.05 var(--display);letter-spacing:-.01em;margin-top:2cqh;text-wrap:balance}
+.dots{display:grid;grid-template-columns:repeat(40,1fr);gap:.5cqw;margin-top:5cqh}
+.dots i{aspect-ratio:1;border-radius:50%;background:rgba(255,255,255,.18)}
+.dots i.lit{background:var(--accent)}
+.count{margin-top:4cqh;font:500 3.4cqw/1.5 var(--mono);letter-spacing:.04em}
+.count b{display:block;font:800 8.6cqw/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums;margin-top:.2em}
+
+/* the end */
+.end{background:#0d0c0b;padding:20cqh 7cqw 6cqh;display:flex;flex-direction:column;gap:3.4cqh}
+.end h2{margin:0;font-weight:800;font-size:15cqw;line-height:.86;letter-spacing:-.04em;text-transform:uppercase}
+.end p{margin:0;font:400 4cqw/1.45 var(--display);color:var(--mute);max-width:34ch}
+.end p b{color:var(--paper);font-weight:800}
+.wall{display:grid;grid-template-columns:repeat(5,1fr);gap:1.6cqw}
+.wall img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px;display:block}
+.wall .empty{grid-column:1/-1;font:400 3.2cqw/1.45 var(--mono);color:var(--mute);border:1px dashed var(--rule);border-radius:4px;padding:3cqw}
+.walltitle{font:500 3cqw/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);display:flex;justify-content:space-between}
+.cta{display:flex;flex-direction:column;gap:1.6cqh;margin-top:auto}
+.btn{display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 4.4cqw;border-radius:6px;font:800 5cqw/1 var(--display);letter-spacing:-.01em;text-decoration:none}
+.btn.primary{background:var(--paper);color:var(--ink)}
+.btn.ghost{border:1px solid var(--rule)}
+.btn small{font:400 2.8cqw/1.2 var(--mono);letter-spacing:.04em;opacity:.7;text-align:right}
+
+/* ---------- desktop columns ---------- */
+.side{align-self:stretch;display:flex;flex-direction:column;justify-content:space-between;padding-block:clamp(24px,6vh,64px);min-width:0;text-shadow:0 1px 18px rgba(0,0,0,.25)}
+.brand h1{margin:0;font-weight:800;font-size:clamp(40px,3.7vw,64px);line-height:.86;letter-spacing:-.04em;text-transform:uppercase}
+.brand p{margin:18px 0 0;font:400 13px/1.5 var(--mono);letter-spacing:.03em;max-width:30ch;opacity:.85}
+.nav{display:flex;flex-direction:column;gap:2px;margin-top:28px}
+.nav a{display:flex;justify-content:space-between;gap:16px;max-width:300px;padding:10px 0;border-top:1px solid var(--rule);font:800 18px/1.1 var(--display);text-decoration:none}
+.nav a span{font:400 11px/1.6 var(--mono);opacity:.7;letter-spacing:.04em}
+.nav a[aria-current]{text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:2px}
+.keys{font:400 11px/1.9 var(--mono);opacity:.75;letter-spacing:.04em}
+.keys kbd{font:inherit;border:1px solid var(--rule);border-radius:3px;padding:0 5px}
+
+.rail{justify-self:start;max-width:330px}
+.rail .idx{font:500 12px/1 var(--mono);letter-spacing:.14em}
+.rail .idx b{font-size:44px;font-family:var(--display);font-weight:800;letter-spacing:-.04em;display:block;margin-bottom:6px}
+.rail h2{margin:22px 0 8px;font-weight:800;font-size:clamp(26px,2.3vw,40px);line-height:.95;letter-spacing:-.02em;text-wrap:balance}
+.facts{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 16px;font:400 12px/1.45 var(--mono)}
+.facts dt{opacity:.6;text-transform:uppercase;letter-spacing:.08em;font-size:10.5px;padding-top:1px}
+.facts dd{margin:0}
+.whole{margin-top:22px;display:flex;gap:14px;align-items:flex-end}
+.whole img{max-width:150px;max-height:150px;width:auto;height:auto;display:block;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.whole small{font:400 10.5px/1.4 var(--mono);opacity:.7;letter-spacing:.04em}
+.rail .go{display:inline-block;margin-top:22px;font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid currentColor;padding-bottom:4px}
+.owl{margin-top:26px;padding-top:14px;border-top:1px solid var(--rule);font:400 12px/1.55 var(--mono);opacity:.85;max-width:34ch}
+.owl b{font-weight:500;letter-spacing:.1em;text-transform:uppercase;font-size:10.5px;display:block;margin-bottom:4px;opacity:.7}
+.rail-fade{transition:opacity .35s}
+.rail-fade.out{opacity:0}
+.sketch{position:fixed;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));font:400 11px/1 var(--mono);letter-spacing:.06em;opacity:.55;z-index:9;text-decoration:none}
+.sketch:hover{opacity:1}
+
+body.light .side,body.light .rail,body.light .sketch{color:var(--ink);text-shadow:none}
+body.light .side,body.light .rail{--rule:rgba(13,12,11,.22)}
+body.light .rail .facts dd,body.light .rail h2{color:var(--ink)}
+.side,.rail,.sketch{transition:color .8s}
+/* ---------- phone ---------- */
+@media (max-width:820px){
+  .stage{display:block;padding:0}
+  .side,.rail{display:none}
+  .frame{position:fixed;inset:0;height:100%;width:100%;aspect-ratio:auto;border-radius:0;box-shadow:none}
+  .mobile-only{display:inline}
+  .sketch{display:none}
+}
+@media (prefers-reduced-motion:reduce){
+  .hint{animation:none}
+  .seg.now i{animation:none;transform:scaleX(1)}
+  .cap .w{transition:none}
+  .flick .kb{display:none}
+  .flick .grid8{display:grid;position:absolute;inset:16cqh 5cqw 34cqh;grid-template-columns:repeat(2,1fr);gap:2cqw}
+  .flick .grid8 img{width:100%;height:100%;object-fit:cover;display:block}
+}
+</style>
+</head>
+<body>
+<div class="wash" id="washA"></div><div class="wash" id="washB"></div><div class="grain"></div>
+
+<div class="stage">
+  <section class="side" aria-label="About this reel">
+    <div class="brand">
+      <h1>Kyle<br>Parker<br>Cunningham</h1>
+      <p>Paintings, prints and films, made on the road and in the studio in New Mexico and Montana.</p>
+      <nav class="nav" aria-label="Site">
+        <a href="#" aria-current="page">The reel <span>13 panels · 2 min</span></a>
+        <a href="https://archive.kyleparkercunningham.com/" target="_blank" rel="noopener">The archive <span>everything, since 2009</span></a>
+        <a href="https://futures.torc.art/" target="_blank" rel="noopener">The 1000 <span>from the solstice</span></a>
+      </nav>
+    </div>
+    <div class="keys"><kbd>↑</kbd> <kbd>↓</kbd> move &nbsp; <kbd>L</kbd> keep &nbsp; <kbd>space</kbd> pause</div>
+  </section>
+
+  <main class="frame" id="frame" aria-roledescription="reel">
+    <div class="segs" id="segs" aria-hidden="true"></div>
+    <div class="top">
+      <span class="me mobile-only">KPC</span>
+      <a class="mobile-only" href="https://archive.kyleparkercunningham.com/" target="_blank" rel="noopener">Archive</a>
+      <a class="mobile-only" href="index.html">Sketchbook</a>
+      <button id="pause" aria-label="Pause the reel">Pause</button>
+    </div>
+    <div class="reel" id="reel" tabindex="0" aria-label="The reel. Use the arrow keys to move between panels."></div>
+    <div class="actions">
+      <button class="heart" id="heart" aria-pressed="false" aria-label="Keep this panel on your wall">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 6.9 4.5c2.1 0 3.6 1.2 5.1 3 1.5-1.8 3-3 5.1-3 3.5 0 5.5 3.5 4.2 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="#f6f3ee" stroke-width="2" stroke-linejoin="round"/></svg>
+      </button>
+      <small id="keptN">Keep</small>
+    </div>
+    <svg class="burst" id="burst" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 8 3.4 4.5 6.9 4.5c2.1 0 3.6 1.2 5.1 3 1.5-1.8 3-3 5.1-3 3.5 0 5.5 3.5 4.2 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+  </main>
+
+  <aside class="rail" aria-live="polite">
+    <div class="rail-fade" id="rail"></div>
+  </aside>
+</div>
+<a class="sketch" href="index.html">sketchbook</a>
+
+<script src="works.js"></script>
+<script>
+(() => {
+const W = Object.fromEntries(WORKS.map(w => [w.slug, w]));
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const ARCHIVE = 'https://archive.kyleparkercunningham.com/';
+const atmos = WORKS.filter(w => w.coll.some(c => c[0] === 'Atmospheric Balance'));
+
+/* The authored sequence. Every quoted line is Kyle's own, verbatim, with its source. */
+const P = [
+  {k:'open', slug:'the-river-in-the-sky'},
+  {slug:'above-the-clouds', words:'These clouds are better than pears.', who:'Kyle', src:'Keep Talking, 2026'},
+  {slug:'symbologies-intertwine-electronically', words:"I've been talking to robots all summer.", who:'Kyle', src:'Portrait of Claude No. 1'},
+  {slug:'the-algebra-of-water-vapor', words:'Everything is a conspiracy theory on top of an allegation, on top of a hunch.', who:'Kyle', src:'Paint Talk No. 8'},
+  {k:'film', slug:'out-there-on-the-horizon-a-solitary-cloud'},
+  {slug:'bottled-lightning', words:'A broken, beautiful field of reflectivity, which is like what water particles would be doing in the sky.', who:'Kyle', src:'Paint Talk · The Top Layers'},
+  {k:'flick', slug:atmos[0] ? atmos[0].slug : 'twenty-one-years', words:'A collection to bring calm to the mind in the chaos of the storm.', who:'Kyle', src:'on Atmospheric Balance'},
+  {slug:'crystal-tooth-whale', words:'A butterfly carrying a sledge hammer is no less bizarre than sending a Tesla Roadster to Mars.', who:'Artist statement', src:'published'},
+  {slug:'rhino-radar-arm-fauna', words:'Animals with solarpunk breathing apparatus envision a potential near future in our uncertain world.', who:'Artist statement', src:'published'},
+  {slug:'storm-castle-bluffs', words:'I can walk 10 miles up a trail and capture the emotion of a moment felt through flesh.', who:'Kyle', src:'27 September 2026'},
+  {k:'thousand', slug:'solar-ascension'},
+  {slug:'self-portrait', words:'My art is more radical than your art.', who:'Kyle', src:'Paint Talk No. 8, catching himself'},
+  {k:'end'}
+];
+
+/* palette helpers */
+const rgb = h => [1,3,5].map(i => parseInt(h.slice(i,i+2),16));
+const lum = h => { const [r,g,b] = rgb(h).map(v => { v/=255; return v<=.03928 ? v/12.92 : ((v+.055)/1.055)**2.4; }); return .2126*r+.7152*g+.0722*b; };
+const sat = h => { const [r,g,b] = rgb(h).map(v=>v/255); const mx=Math.max(r,g,b), mn=Math.min(r,g,b); return mx===0?0:(mx-mn)/mx * (1-Math.abs(mx+mn-1)*.35); };
+function accentOf(w){
+  const pal = (w && w.pal && w.pal.length) ? w.pal : ['#d0663e'];
+  let best = pal.slice().sort((a,b) => sat(b)-sat(a))[0];
+  // lift very dark accents so they read on black
+  // lift dark accents toward white until they read on a dark ground
+  let n = 0;
+  while (lum(best) < .3 && n++ < 14) { best = '#'+rgb(best).map(v=>Math.min(255,Math.round(v + (255-v)*.16)).toString(16).padStart(2,'0')).join(''); }
+  return best;
+}
+const fmtSize = w => (w.h && w.w) ? `${(w.h/10).toFixed(1).replace('.0','')} × ${(w.w/10).toFixed(1).replace('.0','')} cm · ${(w.h/25.4).toFixed(1)} × ${(w.w/25.4).toFixed(1)} in` : 'not yet measured';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const titleCase = t => t.charAt(0).toUpperCase() + t.slice(1);
+
+/* chunk a line into burned-in subtitle groups */
+function chunks(line){
+  const words = line.split(' '); const out = []; let cur = [];
+  for (const w of words){
+    const len = cur.join(' ').length + w.length;
+    if (cur.length && (cur.length >= 4 || len > 20)) { out.push(cur); cur = []; }
+    cur.push(w);
+    if (/[.,?!]$/.test(w) && cur.length >= 2) { out.push(cur); cur = []; }
+  }
+  if (cur.length) out.push(cur);
+  return out;
+}
+const wordMs = w => 200 + w.replace(/[^a-z]/gi,'').length * 34 + (/[.,]$/.test(w) ? 220 : 0);
+
+/* ---------- build panels ---------- */
+const reel = document.getElementById('reel');
+const segs = document.getElementById('segs');
+P.forEach((p, i) => {
+  const w = W[p.slug];
+  p.work = w; p.accent = w ? accentOf(w) : '#f6f3ee';
+  p.focus = [ (Math.sin(i*12.9898)*43758.5453 % 1 + 1) % 1, (Math.sin(i*78.233)*12345.678 % 1 + 1) % 1 ];
+  const el = document.createElement('section');
+  el.className = 'panel'; el.dataset.i = i;
+  el.setAttribute('aria-label', `Panel ${i+1} of ${P.length}`);
+  const kb = w ? `<div class="kb"><img src="${img(w,960)}" alt="${esc(w.alt || w.title)}" ${i>1?'loading="lazy"':''} decoding="async"></div><div class="shade"></div>` : '';
+  const label = w ? `<div class="label"><strong>${esc(titleCase(w.title))}</strong>${w.year} · ${esc(w.medium || '')}</div>` : '';
+  if (p.k === 'open'){
+    el.innerHTML = `${kb}<div class="title-big"><span>Kyle</span><span>Parker</span><span>Cunningham</span></div>
+      <div class="quote show" style="bottom:30cqh"><q>the artists work, foremost, is the artists life</q><span class="who"><b>Kyle</b> · 27 September 2026</span></div>
+      <div class="hint">Swipe up · 13 panels · then it ends</div>${label}`;
+    p.dur = 7000;
+  } else if (p.k === 'film'){
+    el.classList.add('film');
+    el.innerHTML = `${kb}<div class="card"><div class="kicker">Paint Talk No. 8 · a film</div><h2>The Most Radical Thing</h2>
+      <div class="meta"><span>4:23</span><span>3840 × 2160</span><span>Truth or Consequences, NM</span></div>
+      <div class="play"><span class="disc" aria-hidden="true"></span><span>The film plays here<br><span class="tag-ex">Example · not yet published</span></span></div></div>${label}`;
+    p.dur = 7500;
+  } else if (p.k === 'flick'){
+    el.classList.add('flick');
+    const imgs = atmos.map((a,j) => `<img src="${img(a,960)}" alt="${esc(a.alt || a.title)}" loading="lazy" decoding="async" class="${j===0?'on':''}">`).join('');
+    el.innerHTML = `<div class="kb">${imgs}</div><div class="grid8">${atmos.map(a=>`<img src="${img(a,480)}" alt="" loading="lazy">`).join('')}</div><div class="shade"></div>
+      <div class="cap" aria-hidden="true"></div><div class="quote"><q>${esc(p.words)}</q><span class="who"><b>${esc(p.who)}</b> · ${esc(p.src)}</span></div>
+      <div class="label"><strong>Atmospheric Balance</strong>${atmos.length} paintings · oil on linen · 2024 · Tres Piedras, New Mexico</div>`;
+  } else if (p.k === 'thousand'){
+    el.classList.add('thousand');
+    el.innerHTML = `${kb}<div class="th"><div class="tag-ex">Example · the board opens at the solstice</div>
+      <div class="num" id="thNum">000</div><div class="of">of 1000 new works, painted in one year, traded while they are painted.</div>
+      <div class="dots" id="dots" aria-hidden="true">${'<i></i>'.repeat(200)}</div>
+      <div class="count">Winter solstice 2026 → winter solstice 2027<b id="countdown">—</b></div></div>
+      <div class="label"><strong>The 1000</strong>futures.torc.art · each square is five works</div>`;
+    p.dur = 9000;
+  } else if (p.k === 'end'){
+    el.classList.add('end');
+    el.innerHTML = `<h2>That’s<br>the reel.</h2>
+      <p>Thirteen panels, about two minutes. <b>The rest is in the archive</b>: ${WORKS.length} works with every date, size and medium, back to ${Math.min(...WORKS.map(w=>w.year||9999))}.</p>
+      <div><div class="walltitle"><span>Your wall</span><span id="wallN">0 kept</span></div><div class="wall" id="wall"></div></div>
+      <div class="cta">
+        <a class="btn primary" href="${ARCHIVE}" target="_blank" rel="noopener">Open the archive <small>everything,<br>since 2009</small></a>
+        <button class="btn ghost" id="again" type="button">Watch again <small>a new reel<br>each season</small></button>
+      </div>
+      <p style="font:400 2.8cqw/1.5 var(--mono);letter-spacing:.04em">This reel: autumn 2026. The next one is cut at the winter solstice.</p>`;
+    p.dur = 0;
+  } else {
+    el.innerHTML = `${kb}<div class="cap" aria-hidden="true"></div><div class="quote"><q>${esc(p.words)}</q><span class="who"><b>${esc(p.who)}</b> · ${esc(p.src)}</span></div>${label}`;
+  }
+  if (p.words && !p.dur){
+    p.chunks = chunks(p.words);
+    const total = p.words.split(' ').reduce((s,w) => s + wordMs(w), 0) + p.chunks.length * 160;
+    p.capMs = total; p.dur = Math.max(6500, total + 3400);
+    if (p.k === 'flick') p.dur += 2400;
+  }
+  reel.appendChild(el); p.el = el;
+  segs.insertAdjacentHTML('beforeend', '<div class="seg"><i></i></div>');
+});
+const segEls = [...segs.children];
+
+/* ---------- state ---------- */
+let cur = -1, playing = !reduce, advanceT = null, startedAt = 0, remaining = 0, anim = null, timers = [];
+let kept = []; try { kept = JSON.parse(localStorage.getItem('kpc-reel-kept') || '[]'); } catch(e) {}
+const saveKept = () => { try { localStorage.setItem('kpc-reel-kept', JSON.stringify(kept)); } catch(e) {} };
+const frame = document.getElementById('frame');
+const washA = document.getElementById('washA'), washB = document.getElementById('washB'); let washFlip = false;
+const heart = document.getElementById('heart'), keptN = document.getElementById('keptN');
+const pauseBtn = document.getElementById('pause');
+const railEl = document.getElementById('rail');
+
+function clearTimers(){ timers.forEach(clearTimeout); timers = []; }
+function later(fn, ms){ timers.push(setTimeout(fn, ms)); }
+
+function setWash(p){
+  const pal = p.work ? p.work.pal : ['#2a2622','#0d0c0b','#3a3530'];
+  const g = pal.slice(0,5).map((c,j) => `radial-gradient(circle at ${[18,82,30,70,50][j]}% ${[20,25,80,75,50][j]}%, ${c} 0, transparent 55%)`).join(',');
+  const next = washFlip ? washA : washB, prev = washFlip ? washB : washA; washFlip = !washFlip;
+  next.style.background = `${g}, ${pal[0]}`; next.classList.add('on'); prev.classList.remove('on');
+  document.body.classList.toggle('light', lum(pal[0]) > .38);
+  const a = p.accent; document.documentElement.style.setProperty('--accent', a);
+  document.documentElement.style.setProperty('--on-accent', lum(a) > .32 ? '#0d0c0b' : '#f6f3ee');
+}
+
+function setRail(p, i){
+  railEl.classList.add('out');
+  setTimeout(() => {
+    const w = p.work;
+    let h = `<div class="idx"><b>${String(i+1).padStart(2,'0')}</b>of ${P.length}</div>`;
+    if (p.k === 'end') h += `<h2>The rest is in the archive.</h2><dl class="facts"><dt>Works</dt><dd>${WORKS.length}</dd><dt>Years</dt><dd>2009 to now</dd><dt>Films</dt><dd>86, arriving</dd></dl><a class="go" href="${ARCHIVE}" target="_blank" rel="noopener">archive.kyleparkercunningham.com →</a>`;
+    else if (p.k === 'flick') h += `<h2>Atmospheric Balance</h2><dl class="facts"><dt>Works</dt><dd>${atmos.length} paintings</dd><dt>Medium</dt><dd>Oil on linen</dd><dt>Made</dt><dd>Summer 2024, Tres Piedras, New Mexico</dd></dl><div class="whole">${atmos.slice(0,4).map(a=>`<img src="${img(a,480)}" alt="" style="max-width:66px">`).join('')}</div><a class="go" href="${ARCHIVE}" target="_blank" rel="noopener">The set in the archive →</a>`;
+    else if (p.k === 'film') h += `<h2>The Most Radical Thing</h2><dl class="facts"><dt>Film</dt><dd>Paint Talk No. 8</dd><dt>Length</dt><dd>4:23</dd><dt>Shot</dt><dd>6 October 2026, Truth or Consequences Contemporary</dd><dt>Status</dt><dd>Cut, not yet published</dd></dl><div class="owl"><b>Owl, the studio’s machine</b>One of 86 films cut since September. Here a still stands in for the film.</div>`;
+    else if (p.k === 'thousand') h += `<h2>The 1000</h2><dl class="facts"><dt>What</dt><dd>1000 new works, traded while they are painted</dd><dt>Opens</dt><dd>21 December 2026</dd><dt>Ships</dt><dd>After the solstice, 2027</dd></dl><a class="go" href="https://futures.torc.art/" target="_blank" rel="noopener">futures.torc.art →</a>`;
+    if (w && !p.k || (w && p.k === 'open')) h += `<h2>${esc(titleCase(w.title))}</h2><dl class="facts"><dt>Year</dt><dd>${esc(w.date || w.year)}</dd><dt>Medium</dt><dd>${esc(w.medium || '—')}</dd><dt>Size</dt><dd>${fmtSize(w)}</dd>${w.coll.length?`<dt>Part of</dt><dd>${w.coll.map(c=>esc(c[0])+(c[1]?` no. ${c[1]}`:'')).join(', ')}</dd>`:''}</dl>
+      <div class="whole"><img src="${img(w,480)}" alt="${esc(w.alt||w.title)}"><small>The whole work.<br>The reel crops it.</small></div>
+      <a class="go" href="${ARCHIVE}works/${w.slug}" target="_blank" rel="noopener">In the archive →</a>`;
+    railEl.innerHTML = h; railEl.classList.remove('out');
+  }, 260);
+}
+
+function kenBurns(p){
+  const kb = p.el.querySelector('.kb'); if (!kb || reduce) return;
+  if (anim) anim.cancel();
+  const [fx, fy] = p.focus; const dx = (fx - .5) * 14, dy = (fy - .5) * 14;
+  kb.style.transformOrigin = `${30 + fx*40}% ${30 + fy*40}%`;
+  anim = kb.animate([{transform:'scale(1.04) translate(0,0)'},{transform:`scale(1.42) translate(${dx}%, ${dy}%)`}],
+    {duration: Math.max(p.dur, 9000) + 4000, easing:'cubic-bezier(.33,0,.2,1)', fill:'forwards'});
+  if (!playing) anim.pause();
+}
+
+function runCaption(p){
+  const cap = p.el.querySelector('.cap'), quote = p.el.querySelector('.quote');
+  if (!cap) return;
+  quote.classList.remove('show'); cap.classList.remove('done'); cap.innerHTML = '';
+  if (reduce){ quote.classList.add('show'); return; }
+  let t = p.k === 'flick' ? 2300 : 650;
+  p.chunks.forEach((ch, ci) => {
+    later(() => { cap.innerHTML = ch.map(w => `<span class="w">${esc(w)}</span>`).join(' '); }, t);
+    ch.forEach((w, wi) => {
+      later(() => { const s = cap.querySelectorAll('.w'); s.forEach((x,k) => x.classList.toggle('on', k === wi)); }, t + 10);
+      t += wordMs(w);
+    });
+    t += 160;
+  });
+  later(() => { cap.classList.add('done'); quote.classList.add('show'); }, t + 200);
+}
+
+function runFlicker(p){
+  const imgs = [...p.el.querySelectorAll('.kb img')]; if (!imgs.length || reduce) return;
+  let j = 0, delay = 85, elapsed = 0;
+  const step = () => {
+    imgs.forEach((im,k) => im.classList.toggle('on', k === j));
+    p.labelTitle && 0;
+    j = (j + 1) % imgs.length; elapsed += delay;
+    if (elapsed > 1500) delay = Math.min(delay * 1.28, 900);
+    if (elapsed < 4600) later(step, delay);
+  };
+  step();
+}
+
+function runThousand(){
+  const num = document.getElementById('thNum'), dots = [...document.querySelectorAll('#dots i')];
+  // Example only: the board has not opened. Count up to an illustrative day-112 figure.
+  const target = 337, startT = performance.now(), dur = reduce ? 0 : 2600;
+  const tick = now => {
+    const k = dur ? Math.min(1, (now - startT) / dur) : 1, e = 1 - Math.pow(1 - k, 3), n = Math.round(target * e);
+    num.textContent = String(n).padStart(3,'0');
+    dots.forEach((d,i) => d.classList.toggle('lit', i < Math.floor(n/5)));
+    if (k < 1) requestAnimationFrame(tick);
+  };
+  requestAnimationFrame(tick);
+}
+const SOLSTICE = Date.UTC(2026, 11, 21, 20, 50);
+function countdown(){
+  const el = document.getElementById('countdown'); if (!el) return;
+  let ms = SOLSTICE - Date.now();
+  if (ms <= 0){ el.textContent = 'The board is open'; return; }
+  const d = Math.floor(ms/864e5); ms -= d*864e5; const h = Math.floor(ms/36e5); ms -= h*36e5; const m = Math.floor(ms/6e4); const s = Math.floor((ms - m*6e4)/1e3);
+  el.textContent = `${d} days ${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+setInterval(countdown, 1000); countdown();
+
+function renderWall(){
+  const wall = document.getElementById('wall'); const n = document.getElementById('wallN');
+  const items = kept.map(i => P[i]).filter(Boolean);
+  n.textContent = `${items.length} kept`;
+  wall.innerHTML = items.length ? items.map(p => {
+    const w = p.k === 'flick' ? atmos[0] : p.work; if (!w) return '';
+    return `<a href="${ARCHIVE}works/${w.slug}" target="_blank" rel="noopener" title="${esc(titleCase(w.title))}"><img src="${img(w,480)}" alt="${esc(titleCase(w.title))}"></a>`;
+  }).join('') : `<div class="empty">Nothing kept yet. Tap the heart, double-tap a panel or press L to keep it here.</div>`;
+}
+
+function syncHeart(){
+  const on = kept.includes(cur);
+  heart.setAttribute('aria-pressed', on); keptN.textContent = kept.length ? `${kept.length} kept` : 'Keep';
+  document.querySelector('.actions').style.visibility = (P[cur] && P[cur].k === 'end') ? 'hidden' : 'visible';
+}
+function toggleKeep(burst){
+  if (cur < 0 || P[cur].k === 'end') return;
+  const at = kept.indexOf(cur);
+  if (at >= 0 && !burst) kept.splice(at, 1); else if (at < 0) kept.push(cur);
+  saveKept(); syncHeart();
+  if (kept.includes(cur) && !reduce){ const b = document.getElementById('burst'); b.classList.remove('go'); void b.getBoundingClientRect(); b.classList.add('go'); }
+}
+
+function schedule(ms){
+  clearTimeout(advanceT); remaining = ms; startedAt = performance.now();
+  if (playing && ms > 0) advanceT = setTimeout(() => go(cur + 1), ms);
+}
+
+function activate(i){
+  if (i === cur) return;
+  cur = i; const p = P[i];
+  clearTimers();
+  segEls.forEach((s,k) => { s.classList.toggle('past', k < i); s.classList.remove('now'); });
+  if (p.dur){ void segEls[i].offsetWidth; segEls[i].style.setProperty('--dur', p.dur + 'ms'); segEls[i].classList.add('now'); }
+  else segEls[i].classList.add('past');
+  setWash(p); setRail(p, i); kenBurns(p); syncHeart();
+  if (p.words) runCaption(p);
+  if (p.k === 'flick') runFlicker(p);
+  if (p.k === 'thousand') runThousand();
+  if (p.k === 'end') renderWall();
+  schedule(p.dur);
+}
+
+function go(i){
+  i = Math.max(0, Math.min(P.length - 1, i));
+  reel.scrollTo({top: i * reel.clientHeight, behavior: reduce ? 'auto' : 'smooth'});
+}
+
+const io = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting && e.intersectionRatio > .6) activate(+e.target.dataset.i); });
+}, {root: reel, threshold: [.6, .9]});
+P.forEach(p => io.observe(p.el));
+
+function setPlaying(v){
+  playing = v; frame.classList.toggle('paused', !v);
+  pauseBtn.textContent = v ? 'Pause' : 'Play'; pauseBtn.setAttribute('aria-label', v ? 'Pause the reel' : 'Play the reel');
+  if (anim) v ? anim.play() : anim.pause();
+  if (!v){ clearTimeout(advanceT); remaining -= performance.now() - startedAt; }
+  else if (P[cur] && P[cur].dur) schedule(Math.max(800, remaining));
+}
+pauseBtn.addEventListener('click', () => setPlaying(!playing));
+heart.addEventListener('click', () => toggleKeep(false));
+
+/* double-tap / double-click to keep */
+let lastTap = 0;
+reel.addEventListener('dblclick', e => { if (!e.target.closest('a,button')) toggleKeep(true); });
+reel.addEventListener('touchend', e => {
+  if (e.target.closest('a,button')) return;
+  const now = Date.now(); if (now - lastTap < 300){ toggleKeep(true); e.preventDefault(); } lastTap = now;
+}, {passive:false});
+
+document.addEventListener('keydown', e => {
+  if (e.target.matches('input,textarea')) return;
+  if (['ArrowDown','PageDown','j'].includes(e.key)){ e.preventDefault(); go(cur + 1); }
+  else if (['ArrowUp','PageUp','k'].includes(e.key)){ e.preventDefault(); go(cur - 1); }
+  else if (e.key === ' '){ e.preventDefault(); setPlaying(!playing); }
+  else if (e.key === 'l' || e.key === 'L'){ toggleKeep(false); }
+  else if (e.key === 'Home'){ go(0); } else if (e.key === 'End'){ go(P.length - 1); }
+});
+document.addEventListener('visibilitychange', () => { if (document.hidden && playing) setPlaying(false); });
+reel.addEventListener('click', e => { if (e.target.closest('#again')){ go(0); if (!playing && !reduce) setPlaying(true); } });
+if (reduce){ frame.classList.add('paused'); pauseBtn.textContent = 'Play'; }
+const m = /^#p(\d+)$/.exec(location.hash);
+const start = m ? Math.max(0, Math.min(P.length - 1, +m[1] - 1)) : 0;
+requestAnimationFrame(() => { if (start) reel.scrollTop = start * reel.clientHeight; activate(start); });
+})();
+</script>
+</body>
+</html>
