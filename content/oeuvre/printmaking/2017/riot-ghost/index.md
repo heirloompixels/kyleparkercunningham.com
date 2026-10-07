@@ -15,10 +15,7 @@ tags = [
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
-author = "claude"
 +++
-A ghost in a gas mask and wreath, standing in a scratched-black night. Even the dead come prepared now. From the Ephemera series' darker shelf — the glitches in daily reality include the evening news.
-
 intaglio drypoint prints. printed area approx 6 x 9 inches. handtorn paper approx 8 x 10 inches.
 
 {{ art_image(path="oeuvre/printmaking/2017/riot-ghost/IMG_1099-1.jpeg", alt="Close-up view of a drypoint intaglio print depicting a tall ghost-like figure with a gas mask, featuring small circle eyes and a crosshatched respirator, set against a densely hatched dark background on handtorn paper.", caption="Riot Ghost by kyle parker cunningham") }}
