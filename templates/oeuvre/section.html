@@ -108,7 +108,7 @@
           {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
           {% if thumb %}
             {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
-            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
+            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ p.title }}" loading="lazy" decoding="async"></a>
           {% else %}
             <span class="noimg">no img</span>
           {% endif %}
