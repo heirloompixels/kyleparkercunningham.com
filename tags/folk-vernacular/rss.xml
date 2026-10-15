@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+      <title>The art of Kyle Parker Cunningham - folk vernacular</title>
+      <link>https://kyleparkercunningham.com</link>
+      <description>Artist portfolio featuring painting, printmaking, and cinema</description>
+      <generator>Zola</generator>
+      <language>en</language>
+      <atom:link href="https://kyleparkercunningham.com/tags/folk-vernacular/rss.xml" rel="self" type="application/rss+xml"/>
+      <lastBuildDate>Fri, 01 Nov 2019 00:00:00 +0000</lastBuildDate>
+      <item>
+          <title>Prophets</title>
+          <pubDate>Fri, 01 Nov 2019 00:00:00 +0000</pubDate>
+          <author>Kyle Parker Cunningham</author>
+          <link>https://kyleparkercunningham.com/oeuvre/installation/2019/prophets/</link>
+          <guid>https://kyleparkercunningham.com/oeuvre/installation/2019/prophets/</guid>
+          <description xml:base="https://kyleparkercunningham.com/oeuvre/installation/2019/prophets/">&lt;p&gt;Site specific installation. Painting on Found Wood. Private collection.&lt;&#x2F;p&gt;
+
+
+
+
+
+
+
+
+
+&lt;figure class=&quot;art-image&quot;&gt;
+  &lt;img
+    src=&quot;&#x2F;processed_images&amp;#x2F;prophets.e8544a27dc6762d4.jpg&quot;
+    srcset=&quot;&#x2F;processed_images&amp;#x2F;prophets.821972236e000e62.jpg 480w, &#x2F;processed_images&amp;#x2F;prophets.e8544a27dc6762d4.jpg 960w, &#x2F;processed_images&amp;#x2F;prophets.8a9147dedf08a495.jpg 1600w&quot;
+    sizes=&quot;(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px&quot;
+    width=&quot;960&quot; height=&quot;1440&quot;
+    alt=&quot;Prophets&quot;
+    
+    loading=&quot;eager&quot; fetchpriority=&quot;high&quot;
+    decoding=&quot;async&quot;
+  &gt;
+  &lt;figcaption&gt;Prophets by kyle parker cunningham&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+</description>
+      </item>
+    </channel>
+</rss>
