@@ -1,5 +1,6 @@
 +++
 title = "Solstice: the season opens"
+draft = true
 date = 2026-06-21
 template = "log/single.html"
 

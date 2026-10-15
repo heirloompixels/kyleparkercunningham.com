@@ -1,5 +1,6 @@
 +++
 title = "Collect"
+draft = true
 date = 2026-07-06
 template = "page.html"
 
