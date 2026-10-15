@@ -35,9 +35,9 @@
 {% for d in [painting, printmaking, installation, sculpture, exhibitions, philosophy, book_binding, other] %}{% for yp in d.subsections %}{% set ys = get_section(path=yp) %}{% set yc = ys.subsections | length %}{% set_global n_proj = n_proj + yc %}{% endfor %}{% endfor %}
 {% set n_total = n_painting + n_printmaking + n_installation + n_sculpture + n_exhibitions + n_philosophy + n_book_binding + n_other + n_proj %}
 
-{% set ongoing = projects.pages | filter(attribute="extra.status", value="ongoing") | sort(attribute="date") | reverse %}
-{% set researching = projects.pages | filter(attribute="extra.status", value="researching") | sort(attribute="date") | reverse %}
-{% set complete = projects.pages | filter(attribute="extra.status", value="complete") | sort(attribute="date") | reverse %}
+{% set ongoing = projects.pages | filter(attribute="extra.status", value="ongoing") | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
+{% set researching = projects.pages | filter(attribute="extra.status", value="researching") | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
+{% set complete = projects.pages | filter(attribute="extra.status", value="complete") | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
 {% set edited = load_data(path="data/recently_edited.json") %}
 
 <div class="dash">
@@ -62,7 +62,7 @@
       {% endfor %}
 
       <h2 class="dash-h dash-h-gap">Production log</h2>
-      {% for p in log.pages | sort(attribute="date") | reverse | slice(end=6) %}
+      {% for p in log.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse | slice(end=6) %}
         <a class="dash-logentry" href="{{ p.permalink }}">
           <time>{{ p.date | date(format="%Y-%m-%d") }}</time>
           <span><b>{{ p.title }}</b>

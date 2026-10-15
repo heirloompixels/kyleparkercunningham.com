@@ -1,7 +1,9 @@
-{% set l_sm = resize_image(path=left, width=480, op="fit_width") %}
-{% set l_img = resize_image(path=left, width=960, op="fit_width") %}
-{% set r_sm = resize_image(path=right, width=480, op="fit_width") %}
-{% set r_img = resize_image(path=right, width=960, op="fit_width") %}
+{% set ll = left | lower %}{% if ll is ending_with(".png") %}{% set lfmt = "jpg" %}{% else %}{% set lfmt = "auto" %}{% endif %}
+{% set rl = right | lower %}{% if rl is ending_with(".png") %}{% set rfmt = "jpg" %}{% else %}{% set rfmt = "auto" %}{% endif %}
+{% set l_sm = resize_image(path=left, width=480, op="fit_width", format=lfmt) %}
+{% set l_img = resize_image(path=left, width=960, op="fit_width", format=lfmt) %}
+{% set r_sm = resize_image(path=right, width=480, op="fit_width", format=rfmt) %}
+{% set r_img = resize_image(path=right, width=960, op="fit_width", format=rfmt) %}
 {% set lt = left_title | default(value="") %}
 {% set rt = right_title | default(value="") %}
 {% set lm = left_meta | default(value="") %}

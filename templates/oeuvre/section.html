@@ -35,7 +35,7 @@
   | concat(with=philosophy.pages)
   | concat(with=book_binding.pages)
   | concat(with=other.pages)
-  | sort(attribute="date") | reverse
+  | sort(attribute="title") | reverse | sort(attribute="date") | reverse
 %}
 {# Sections have no date; band and sort by the year in the path (components[2]).
    Stable sort keeps the date order within each year for the leaf pages. #}
@@ -78,7 +78,7 @@
   <a class="chip" href="{{ sculpture.permalink }}">Sculpture</a>
   <a class="chip" href="{{ exhibitions.permalink }}">Exhibitions</a>
   <a class="chip" href="{{ philosophy.permalink }}">Philosophy</a>
-  <a class="chip" href="{{ book_binding.permalink }}">Book Binding</a>
+  {% if book_binding.pages | length > 0 %}<a class="chip" href="{{ book_binding.permalink }}">Book Binding</a>{% endif %}
   <a class="chip" href="{{ other.permalink }}">Other</a>
   <a class="chip" href="{{ get_url(path='/cinema/') }}">Cinema</a>
 </div>
@@ -108,7 +108,7 @@
           {% if not thumb %}{% set thumb = p.extra.cover | default(value=false) %}{% endif %}
           {% if thumb %}
             {% set thumb_img = resize_image(path=thumb, width=96, height=96, op="fill") %}
-            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="" loading="lazy" decoding="async"></a>
+            <a href="{{ p.permalink }}"><img src="/{{ thumb_img.static_path | replace(from='static/', to='') }}" alt="{{ p.title }}" loading="lazy" decoding="async"></a>
           {% else %}
             <span class="noimg">no img</span>
           {% endif %}

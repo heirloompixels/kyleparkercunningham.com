@@ -1,0 +1,13 @@
+{# A film that loads only when asked. Until the play button is pressed, the page
+   makes no request to YouTube or Vimeo; then static/film.js swaps in the
+   (privacy-mode) player. Without JavaScript the button is a plain link out.
+   Expects `film_title` and `film_embed` set by the including template. #}
+{% if film_embed is containing("vimeo") %}{% set film_host = "Vimeo" %}{% else %}{% set film_host = "YouTube" %}{% endif %}
+{% if film_embed is containing("?") %}{% set film_play = film_embed ~ "&autoplay=1" %}{% else %}{% set film_play = film_embed ~ "?autoplay=1" %}{% endif %}
+<figure class="film-embed film-facade" data-src="{{ film_play }}" data-title="{{ film_title }}">
+  <a class="film-play" href="{{ film_embed | safe }}" rel="noopener">
+    <span class="film-play-icon" aria-hidden="true"></span>
+    <span class="film-play-title"><em>{{ film_title }}</em></span>
+    <span class="film-play-note">Play · loads the player from {{ film_host }}</span>
+  </a>
+</figure>

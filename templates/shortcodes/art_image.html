@@ -1,15 +1,24 @@
-{% set alt_text = alt | default(value="") %}
-{% set img_sm = resize_image(path=path, width=480, op="fit_width") %}
-{% set img_md = resize_image(path=path, width=960, op="fit_width") %}
-{% set img_lg = resize_image(path=path, width=1600, op="fit_width") %}
+{# Alt text: the page's own, else the caption, else the work's title and which
+   view this is — so no image on the site is unnamed (Rainfall had 18). #}
+{% if alt %}{% set alt_text = alt %}{% elif caption %}{% set alt_text = caption %}{% elif page.title %}{% set alt_text = page.title ~ ", view " ~ nth %}{% else %}{% set alt_text = "" %}{% endif %}
+{# PNG originals become JPEG variants: format "auto" keeps them PNG, which made
+   some phone-sized images 8 MB. JPEG sources stay on "auto" so their cached
+   variants keep their names. #}
+{% set p_lower = path | lower %}
+{% if p_lower is ending_with(".png") %}{% set fmt = "jpg" %}{% else %}{% set fmt = "auto" %}{% endif %}
+{% set img_sm = resize_image(path=path, width=480, op="fit_width", format=fmt) %}
+{% set img_md = resize_image(path=path, width=960, op="fit_width", format=fmt) %}
+{% set img_lg = resize_image(path=path, width=1600, op="fit_width", format=fmt) %}
 
 <figure class="art-image">
   <img
     src="/{{ img_md.static_path | replace(from='static/', to='') }}"
     srcset="/{{ img_sm.static_path | replace(from='static/', to='') }} 480w, /{{ img_md.static_path | replace(from='static/', to='') }} 960w, /{{ img_lg.static_path | replace(from='static/', to='') }} 1600w"
     sizes="(max-width: 640px) 100vw, (max-width: 1200px) 80vw, 900px"
+    width="{{ img_md.width }}" height="{{ img_md.height }}"
     alt="{{ alt_text }}"
-    loading="lazy"
+    {# The first image on a page is the work itself: load it at once. #}
+    {% if nth == 1 %}loading="eager" fetchpriority="high"{% else %}loading="lazy"{% endif %}
     decoding="async"
   >
   {% if caption %}<figcaption>{{ caption }}</figcaption>{% endif %}

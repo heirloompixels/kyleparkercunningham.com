@@ -7,7 +7,7 @@ aliases = ["/works/the-memory-of-atmosphere/"]
 [extra]
 year = 2024
 cover = "projects/the-memory-of-atmosphere/sun-and-dust-install.jpeg"
-catalog_pdf = "The Memory of Atmosphere - catalog.pdf"
+catalog_pdf = "Catalog-final-web.pdf"
 status = "complete"
 works = [
   "oeuvre/painting/2024/bottled-lightning",

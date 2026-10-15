@@ -23,7 +23,7 @@
     <section class="topic-group">
       <h2><a href="{{ topic.permalink }}">{{ topic.name | title }}</a> <span class="count">{{ topic.pages | length }}</span></h2>
       <ul>
-        {% for page in topic.pages | sort(attribute="date") | reverse %}
+        {% for page in topic.pages | sort(attribute="title") | reverse | sort(attribute="date") | reverse %}
           <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
         {% endfor %}
       </ul>
