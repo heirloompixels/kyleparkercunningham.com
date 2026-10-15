@@ -65,27 +65,35 @@ kyleparkercunningham.com. Judge layout only after the cutover.
 
 ## Cutover — waits for Kyle
 
-The site deploys on merge today and keeps draft PRs; it keeps them after the
-move, because a deploy is still a change to the live site.
+The site keeps draft PRs after the move, because a deploy is still a change to
+the live site.
 
-1. Merge the PRs this branch sits on (#7, then #8) and this one, and deploy
-   from main with `scripts/deploy-worker.sh`.
-2. In the `kyleparkercunningham.com` zone, delete the four apex A records
-   (185.199.108–111.153) and the `www` CNAME to `heirloompixels.github.io`.
-   Leave the MX, SPF, Mailgun, `tzprofiles` and Google verification records
-   alone.
-3. Uncomment the two `custom_domain` routes in `wrangler.jsonc` and deploy;
-   Cloudflare creates the records and the certificate.
-4. Check: `https://kyleparkercunningham.com/` and `www` answer 200 from
+1. #7 and #8 are merged (2026-10-15), and the Worker at workers.dev carries
+   that build with this branch's redirects.
+2. **`scripts/cutover.py`** does the switch in one go. It checks that the staged
+   Worker answers and redirects, saves the four apex A records
+   (185.199.108–111.153) and the `www` CNAME to `heirloompixels.github.io` to
+   `docs/cutover-github-pages-records.json`, deletes them, and runs
+   `scripts/deploy-worker.sh`, which attaches both names to the Worker;
+   Cloudflare creates the records and the certificate. It then waits until both
+   names answer from Cloudflare. Nothing else in the zone is touched: MX, SPF,
+   Mailgun, `tzprofiles`, the Google verification record and the subdomains
+   stay as they are. Until this has run, `deploy-worker.sh` refuses a real
+   deploy (`scripts/cutover.py --check`), because the domains in
+   `wrangler.jsonc` cannot attach while GitHub Pages holds the names.
+3. Check: `https://kyleparkercunningham.com/` and `www` answer 200 from
    Cloudflare (`server: cloudflare`), http answers 301 to https, a sample of
    `_redirects` answers 301 to the archive, and a real Chrome look at the home
    page, a project page and a redirected work.
-5. Retire `.github/workflows/main.yml` (the gh-pages build), then turn GitHub
-   Pages off for the repo, so two hosts never claim the domain.
-6. In Search Console (domain property `sc-domain:kyleparkercunningham.com`,
+4. Retire `.github/workflows/main.yml` (the gh-pages build), then turn GitHub
+   Pages off for the repo, so two hosts never claim the domain. From then on a
+   merge to main does not deploy; `scripts/deploy-worker.sh` does, by hand,
+   until a workflow carries a Cloudflare token (that token in GitHub is
+   Kyle's decision).
+5. In Search Console (domain property `sc-domain:kyleparkercunningham.com`,
    verified 2026-10-15 by a DNS TXT record), resubmit
    `https://kyleparkercunningham.com/sitemap.xml` and watch Pages → "Page with
    redirect" fill with the old catalogue addresses over the following weeks.
 
-To undo before step 5, put the A records and the CNAME back and remove the
-custom domains; GitHub Pages is still building.
+To undo before step 4: `scripts/cutover.py --undo` detaches the Worker's
+domains and puts the saved records back; GitHub Pages is still building.

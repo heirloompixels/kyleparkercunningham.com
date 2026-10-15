@@ -25,6 +25,15 @@ python3 scripts/generate_site_index.py
 "$ZOLA" build
 python3 scripts/redirects.py
 
+# wrangler.jsonc names the domains, so a real deploy attaches them. Before the
+# cutover, GitHub Pages' records still hold those names; stop rather than fail
+# halfway. A dry run never attaches anything.
+case " $* " in
+  *" --dry-run "*) ;;
+  *) python3 scripts/cutover.py --check || {
+       echo "GitHub Pages still holds kyleparkercunningham.com: cut over first (scripts/cutover.py)" >&2; exit 1; } ;;
+esac
+
 set -a; . "$HOME/.config/cloudflare/torc.env"; set +a
 WRANGLER="${WRANGLER:-npx --yes wrangler@4}"
 $WRANGLER deploy "$@"

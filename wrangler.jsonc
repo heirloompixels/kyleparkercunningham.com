@@ -16,12 +16,15 @@
     // Zola writes public/404.html.
     "not_found_handling": "404-page"
   },
-  // Staging: served at kpc-site.<account>.workers.dev until the cutover.
-  "workers_dev": true
-  // The cutover waits for Kyle (docs/hosting.md § cutover). It means deleting
-  // the apex A records and the www CNAME that point at GitHub Pages, then:
-  // "routes": [
-  //   { "pattern": "kyleparkercunningham.com", "custom_domain": true },
-  //   { "pattern": "www.kyleparkercunningham.com", "custom_domain": true }
-  // ]
+  // Also served at kpc-site.<account>.workers.dev, which is how a build is
+  // checked before it reaches the domain.
+  "workers_dev": true,
+  // The domains. A deploy attaches them, which cannot happen while GitHub
+  // Pages' A records and CNAME still hold the names: scripts/cutover.py
+  // deletes those first (docs/hosting.md § cutover), and deploy-worker.sh
+  // refuses to run until it has.
+  "routes": [
+    { "pattern": "kyleparkercunningham.com", "custom_domain": true },
+    { "pattern": "www.kyleparkercunningham.com", "custom_domain": true }
+  ]
 }
