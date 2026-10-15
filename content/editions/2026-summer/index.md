@@ -35,11 +35,9 @@ back from the road will gather here, week by week, all summer long.
 {{ marginalia(text="— the season's work —") }}
 
 **The 200.** Two hundred small watercolors — half mine, half Jeannie's — painted in the field and
-each one unique. The first iteration of a larger idea, made entirely on the move. They go up for
+each one unique. The first iteration of a larger idea, made entirely on the move. They went up for
 sale beginning at the summer solstice.
 
-<!-- PLATE SLOT: add a 200 painting once photographed —
-     {{/* plate(path="...", alt="", title="", meta="watercolor · 2026") */}} -->
 
 **Two books, bound in the forest.** First editions in the Sewn Boards structure: Wittgenstein's
 *Tractatus Logico-Philosophicus*, chosen for what it says about the limits of language in the age of
@@ -68,20 +66,3 @@ there are no walls, the landscape doing most of the talking.
 A running record of the season lives in [the log](/log/), posted from the
 road. While this edition is the front page, the latest entries follow just
 below.
-
-<!--
-  HOW TO ADD TO THIS EDITION (working notes — invisible in production while draft = true)
-
-  Preview live:   ./scripts/edition.sh serve   → http://127.0.0.1:1111/editions/2026-summer/
-  Promote it:     ./scripts/edition.sh promote 2026-summer   (when ready to go live)
-  Set the cover:  fill cover / cover_alt in the front matter with a photographed work.
-
-  Editorial vocabulary:
-    {{/* plate(path="oeuvre/...", alt="", title="", meta="") */}}
-    {{/* diptych(left="...", right="...", left_title="", right_title="", left_meta="", right_meta="", left_alt="", right_alt="") */}}
-    {{/* wallquote(quote="...", cite="...") */}}
-    {{/* marginalia(text="— ... —") */}}
-    {%/* interlude(kicker="...", title="...", image="...", image_alt="...") */%} body markdown {%/* end */%}
-
-  Per-edition art direction: drop an `edition.css` file next to this index.md.
--->

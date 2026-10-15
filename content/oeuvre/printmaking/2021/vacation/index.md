@@ -15,10 +15,7 @@ tags = [
 [extra]
 medium = "Intaglio Drypoint Print"
 dimensions = "Printed area approx. 6 x 9 inches; hand-torn paper approx. 8 x 10 inches"
-author = "claude"
 +++
-A figure stands easy on green ground in a gold space helmet, oxygen tank resting at the knee. A vacation in the future may require equipment, but the posture is eternal: shoulders down, nowhere to be, air supply secured.
-
 intaglio drypoint prints
 printed area approx 6 x 9 inches
 handtorn paper approx 8 x 10 inches
