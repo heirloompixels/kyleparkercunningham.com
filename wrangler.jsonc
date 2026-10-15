@@ -1,0 +1,27 @@
+{
+  // kyleparkercunningham.com as a Cloudflare Worker serving the Zola build.
+  // It moved off GitHub Pages for real 301s to the archive (docs/hosting.md);
+  // there is no script yet, only static assets and public/_redirects, which
+  // scripts/redirects.py writes after `zola build`.
+  "name": "kpc-site",
+  // Pinned so a stray CLOUDFLARE_ACCOUNT_ID can't deploy this elsewhere. TorC.
+  "account_id": "0170b714b0ee025091fed8a088f7a65a",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "public",
+    // Zola serves every page as a folder with an index.html, at an address
+    // ending in a slash; a request without the slash gets a redirect to it.
+    "html_handling": "auto-trailing-slash",
+    // Zola writes public/404.html.
+    "not_found_handling": "404-page"
+  },
+  // Staging: served at kpc-site.<account>.workers.dev until the cutover.
+  "workers_dev": true
+  // The cutover waits for Kyle (docs/hosting.md § cutover). It means deleting
+  // the apex A records and the www CNAME that point at GitHub Pages, then:
+  // "routes": [
+  //   { "pattern": "kyleparkercunningham.com", "custom_domain": true },
+  //   { "pattern": "www.kyleparkercunningham.com", "custom_domain": true }
+  // ]
+}
