@@ -39,6 +39,13 @@ cutover is a deploy, not a migration.
   archive has no exhibitions or writing yet), `/oeuvre/book-binding/` (no such
   category there), and 14 tags the archive does not use. The script prints the
   list with `--report`.
+- **`src/worker.js`**, the only code: it sends `www` and plain `http` to
+  `https://kyleparkercunningham.com`, as GitHub Pages did, and hands everything
+  else to the assets. It runs first (`run_worker_first`), or `www` would be
+  served the matching file; `_redirects` still applies to what it hands on,
+  checked on a preview version on 2026-10-15. The zone's `always_use_https`
+  stays off because it would change every subdomain, and the API token cannot
+  write the zone's redirect rules.
 - **`sitemap.xml`** with every redirected address taken out, and Zola's empty
   `/topics/`: 68 addresses, each answering 200.
 
