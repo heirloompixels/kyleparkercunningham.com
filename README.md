@@ -40,6 +40,10 @@ else is built yet, so build locally before merging. Because main deploys,
 Claude's branches open **draft** pull requests that wait for Kyle
 (`claude-branch-pr.yml`).
 
+The site is moving to a Cloudflare Worker, so that the catalogue's addresses can
+answer 301 to the archive: staged, with the cutover waiting for Kyle. How it is
+built, deployed and cut over is `docs/hosting.md`.
+
 ## Where things are
 
 | Path | What |
