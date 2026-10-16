@@ -24,6 +24,7 @@ python3 scripts/update_recently_edited.py
 python3 scripts/generate_site_index.py
 "$ZOLA" build
 python3 scripts/redirects.py
+python3 scripts/finalize_links.py
 
 # wrangler.jsonc names the domains, so a real deploy attaches them. Before the
 # cutover, GitHub Pages' records still hold those names; stop rather than fail
