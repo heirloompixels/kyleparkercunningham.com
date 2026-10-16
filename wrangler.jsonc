@@ -1,0 +1,36 @@
+{
+  // kyleparkercunningham.com as a Cloudflare Worker serving the Zola build.
+  // It moved off GitHub Pages for real 301s to the archive (docs/hosting.md):
+  // static assets, public/_redirects (written by scripts/redirects.py after
+  // `zola build`), and a few lines in front for www and plain http.
+  "name": "kpc-site",
+  // src/worker.js answers www and plain http; everything else is the build.
+  "main": "src/worker.js",
+  // Pinned so a stray CLOUDFLARE_ACCOUNT_ID can't deploy this elsewhere. TorC.
+  "account_id": "0170b714b0ee025091fed8a088f7a65a",
+  "compatibility_date": "2026-10-01",
+  "observability": { "enabled": true },
+  "assets": {
+    "directory": "public",
+    "binding": "ASSETS",
+    // The script sees every request first, or www would be served the
+    // matching file instead of a redirect.
+    "run_worker_first": true,
+    // Zola serves every page as a folder with an index.html, at an address
+    // ending in a slash; a request without the slash gets a redirect to it.
+    "html_handling": "auto-trailing-slash",
+    // Zola writes public/404.html.
+    "not_found_handling": "404-page"
+  },
+  // Also served at kpc-site.<account>.workers.dev, which is how a build is
+  // checked before it reaches the domain.
+  "workers_dev": true,
+  // The domains. A deploy attaches them, which cannot happen while GitHub
+  // Pages' A records and CNAME still hold the names: scripts/cutover.py
+  // deletes those first (docs/hosting.md § cutover), and deploy-worker.sh
+  // refuses to run until it has.
+  "routes": [
+    { "pattern": "kyleparkercunningham.com", "custom_domain": true },
+    { "pattern": "www.kyleparkercunningham.com", "custom_domain": true }
+  ]
+}
