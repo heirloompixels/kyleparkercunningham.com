@@ -12,7 +12,9 @@ to the archive page. It runs on the build, never on content/: the content
 keeps naming the site's own pages, and a later change to where the archive
 keeps something is picked up by the next build with nothing to edit.
 
-Only anchors are rewritten. A page's canonical, its feeds and works.json (the
+A link to one of the site's own pages that leaves off the trailing slash Zola
+serves it at gains the slash, for the same reason. Only anchors are
+rewritten. A page's canonical, its feeds and works.json (the
 river service syncs that by the site's own slugs) keep the site's addresses.
 """
 from __future__ import annotations
@@ -47,7 +49,14 @@ def main() -> int:
         bare, sep, frag = path.partition("#")
         bare = bare.split("?", 1)[0]
         dst = to.get(bare.rstrip("/") or "/")
-        return None if dst is None else dst + (sep + frag if sep else "")
+        if dst is None:
+            # Zola serves every page at an address ending in a slash; a link
+            # without it costs the reader a 307 first. Name the page itself.
+            if bare != "/" and not bare.endswith("/") and "?" not in path \
+                    and (PUBLIC / bare.strip("/") / "index.html").exists():
+                return ORIGIN + bare + "/" + (sep + frag if sep else "")
+            return None
+        return dst + (sep + frag if sep else "")
 
     pages = changed = links = 0
     for page in PUBLIC.rglob("*.html"):
