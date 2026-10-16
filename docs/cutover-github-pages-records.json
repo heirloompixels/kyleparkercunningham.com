@@ -1,0 +1,42 @@
+[
+  {
+    "id": "e8cb4a25aa4bc9fca5a140b7d671508f",
+    "type": "A",
+    "name": "kyleparkercunningham.com",
+    "content": "185.199.108.153",
+    "ttl": 1,
+    "proxied": false
+  },
+  {
+    "id": "bd36e9ca50cece3c0d655c6a615d0674",
+    "type": "A",
+    "name": "kyleparkercunningham.com",
+    "content": "185.199.109.153",
+    "ttl": 1,
+    "proxied": false
+  },
+  {
+    "id": "a2cdde7483e99f72b8ada4de955d852a",
+    "type": "A",
+    "name": "kyleparkercunningham.com",
+    "content": "185.199.110.153",
+    "ttl": 1,
+    "proxied": false
+  },
+  {
+    "id": "687e5e3fe5a588574f010991a01c7fa9",
+    "type": "A",
+    "name": "kyleparkercunningham.com",
+    "content": "185.199.111.153",
+    "ttl": 1,
+    "proxied": false
+  },
+  {
+    "id": "c28f05a7bdea685ecf4cdd0c3b4eed96",
+    "type": "CNAME",
+    "name": "www.kyleparkercunningham.com",
+    "content": "heirloompixels.github.io",
+    "ttl": 1,
+    "proxied": false
+  }
+]

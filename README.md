@@ -2,8 +2,9 @@
 
 The website of the artist Kyle Parker Cunningham: his paintings, prints,
 installations, films and writing, and the seasonal front page called the
-editions. It is a [Zola](https://www.getzola.org) site, built by GitHub Actions
-and served from the `gh-pages` branch by GitHub Pages.
+editions. It is a [Zola](https://www.getzola.org) site served by a Cloudflare
+Worker since 2026-10-15, deployed by hand with `scripts/deploy-worker.sh`
+(`docs/hosting.md`); merging to main does not deploy it.
 
 **The archive is the record.** The complete catalogue of every work lives at
 [archive.kyleparkercunningham.com](https://archive.kyleparkercunningham.com)

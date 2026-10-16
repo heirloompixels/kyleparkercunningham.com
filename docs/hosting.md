@@ -70,10 +70,22 @@ The Worker is `kpc-site`, on the TorC account
 and fonts**: `base_url` is absolute, so every page links its stylesheets at
 kyleparkercunningham.com. Judge layout only after the cutover.
 
-## Cutover — waits for Kyle
+## Cutover — done 2026-10-15
 
-The site keeps draft PRs after the move, because a deploy is still a change to
-the live site.
+Kyle ran `scripts/cutover.py` at 22:22 on 2026-10-15. The four A records and
+the `www` CNAME are saved in `docs/cutover-github-pages-records.json`, the
+Worker holds both names, and every check in step 3 passed in curl and in
+Chrome. The site keeps draft PRs after the move, because a deploy is still a
+change to the live site.
+
+**What the switch looked like from Kyle's house.** The script's own checks
+asked for the apex in the seconds between deleting GitHub's records and
+Cloudflare creating its own, and the house's resolvers (the router, then the
+Mac's cache) kept that empty answer for the zone's negative-cache time, 1,800
+seconds in its SOA. `www` answered at once; the apex came back on this network
+about half an hour later, while public resolvers had it within a minute.
+Another move of a name in this zone should not query that name until the new
+records exist.
 
 1. #7 and #8 are merged (2026-10-15), and the Worker at workers.dev carries
    that build with this branch's redirects.
@@ -92,7 +104,8 @@ the live site.
    Cloudflare (`server: cloudflare`), http answers 301 to https, a sample of
    `_redirects` answers 301 to the archive, and a real Chrome look at the home
    page, a project page and a redirected work.
-4. Retire `.github/workflows/main.yml` (the gh-pages build), then turn GitHub
+4. *Done in the merge of PR #9:* `.github/workflows/main.yml` (the gh-pages
+   build) is retired. *Kyle's click, after a few quiet days:* turn GitHub
    Pages off for the repo, so two hosts never claim the domain. From then on a
    merge to main does not deploy; `scripts/deploy-worker.sh` does, by hand,
    until a workflow carries a Cloudflare token (that token in GitHub is
@@ -102,5 +115,6 @@ the live site.
    `https://kyleparkercunningham.com/sitemap.xml` and watch Pages → "Page with
    redirect" fill with the old catalogue addresses over the following weeks.
 
-To undo before step 4: `scripts/cutover.py --undo` detaches the Worker's
-domains and puts the saved records back; GitHub Pages is still building.
+To undo while GitHub Pages is still on: `scripts/cutover.py --undo` detaches
+the Worker's domains and puts the saved records back, and Pages serves the
+last build on the `gh-pages` branch, from before the workflow was retired.
