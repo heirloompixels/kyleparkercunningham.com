@@ -35,6 +35,7 @@ import json
 import re
 import sys
 import unicodedata
+import urllib.error
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -65,6 +66,31 @@ def archive_works(saved: str | None) -> list[dict]:
         if len(works) >= data["total"] or not data["works"]:
             return works
         page += 1
+
+
+class _NoFollow(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+def forwarded(slug: str) -> str | None:
+    """The archive's current slug for one it has renamed, from its own forward.
+
+    The archive answers a renamed work's old address with a 301 to the new one
+    (its prints spec, § names), so a site page whose slug the archive no
+    longer uses is sent straight to where the work is now, not through a
+    second hop.
+    """
+    req = urllib.request.Request(f"{ARCHIVE}/works/{urllib.parse.quote(slug)}", method="HEAD",
+                                 headers={"User-Agent": UA})
+    try:
+        urllib.request.build_opener(_NoFollow).open(req, timeout=20)
+        return None
+    except urllib.error.HTTPError as e:
+        loc = e.headers.get("Location", "") if e.code in (301, 308) else ""
+    # The archive answers with a path; accept a full URL too.
+    m = re.match(r"(?:" + re.escape(ARCHIVE) + r")?/works/([^/?#]+)$", loc)
+    return urllib.parse.unquote(m.group(1)) if m else None
 
 
 def norm_title(s: str) -> str:
@@ -122,6 +148,10 @@ def main() -> int:
             continue
         slug, year = m.group(3), int(m.group(2))
         hit, how = by_slug.get(slug), "slug"
+        if hit is None and not args.archive_json:
+            new = forwarded(slug)
+            if new is not None and new in by_slug:
+                hit, how = by_slug[new], "forward"
         if hit is None:
             cands = by_title.get((norm_title(str(fm.get("title", ""))), year), [])
             if len(cands) == 1:

@@ -39,6 +39,13 @@ cutover is a deploy, not a migration.
   archive has no exhibitions or writing yet), `/oeuvre/book-binding/` (no such
   category there), and 14 tags the archive does not use. The script prints the
   list with `--report`.
+- **Links name the final address.** `scripts/finalize_links.py` runs after
+  the redirects are written and rewrites every `<a href>` in the build whose
+  target is a redirected address to that redirect's target, so the site links
+  straight to the archive page rather than through a hop (Kyle, 2026-10-15:
+  "everything gets updated to the final source"). Works whose archive slug
+  has changed are found through the archive's own forwards, so a renamed
+  print is linked at its new address on the next build.
 - **`src/worker.js`**, the only code: it sends `www` and plain `http` to
   `https://kyleparkercunningham.com`, as GitHub Pages did, and hands everything
   else to the assets. It runs first (`run_worker_first`), or `www` would be
