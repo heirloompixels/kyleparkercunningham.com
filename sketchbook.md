@@ -1,5 +1,8 @@
 # Sketchbook — new directions for kyleparkercunningham.com
 
+*Later: `explorations/2026-10-17-a-2027-website.md`, the 2027 premise
+(replays, typesetting, built for one job and finished all the way down).*
+
 Started 17 August 2026. Thirty-four sheets, numbered 36–69, continuing from
 the existing `mockups/` run. Open `mockups/index.html` for the contact sheet;
 every sheet also carries a switcher in its bottom-right corner.
