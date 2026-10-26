@@ -41,7 +41,7 @@ import urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from zola_paths import CONTENT, ROOT, is_rendered, permalink_for, slugify, split_frontmatter  # noqa: E402
+from zola_paths import CONTENT, DATE_PREFIX_RE, ROOT, is_rendered, permalink_for, slugify, split_frontmatter  # noqa: E402
 
 ARCHIVE = "https://archive.kyleparkercunningham.com"
 API = ARCHIVE + "/api/v1/works?per_page=100&page={}"
@@ -209,6 +209,36 @@ def main() -> int:
             else:
                 kept.append(f"/tags/{d.name}/ — the archive has no tag '{d.name}'")
 
+    # 4. Addresses Zola never serves but search engines found anyway (Search
+    # Console, 2026-10-26). A section marked render = false, like a year folder
+    # under the exhibitions, has no page of its own: it goes to the nearest
+    # section above it that renders.
+    for path in sorted(CONTENT.glob("**/_index.md")):
+        rel = path.relative_to(CONTENT)
+        fm, _ = split_frontmatter(path)
+        if fm.get("render", True) is not False:
+            continue
+        up = rel.parent.parent
+        while up != Path("."):
+            idx = CONTENT / up / "_index.md"
+            if idx.exists() and split_frontmatter(idx)[0].get("render", True) is not False:
+                break
+            up = up.parent
+        add(permalink_for(rel, fm), permalink_for(up / "_index.md", {}), "unrendered section")
+
+    # 5. A dated folder name, the address an old link or feed used: Zola drops
+    # the date (2026-02-15-print-specs → /log/print-specs/), so the dated form
+    # goes to the page. Drafts are left to 404.
+    for path in sorted(CONTENT.glob("**/index.md")):
+        rel = path.relative_to(CONTENT)
+        fm, _ = split_frontmatter(path)
+        if not is_rendered(rel, fm) or fm.get("path") or fm.get("slug"):
+            continue
+        name = rel.parent.name
+        if DATE_PREFIX_RE.match(name):
+            dated = "/" + "/".join(slugify(p) for p in rel.parent.parent.parts) + "/" + name + "/"
+            add(dated, permalink_for(rel, fm), "dated")
+
     # One rule per source; a later duplicate would never fire.
     seen: dict[str, str] = {}
     out: list[tuple[str, str, str]] = []
@@ -219,6 +249,12 @@ def main() -> int:
             continue
         seen[src] = dst
         out.append((src, dst, cls))
+    # A target that is itself redirected is followed, so every rule is one hop.
+    for i, (src, dst, cls) in enumerate(out):
+        hops = 0
+        while dst in seen and hops < 5:
+            dst, hops = seen[dst], hops + 1
+        out[i] = (src, dst, cls)
     if len(out) > STATIC_LIMIT:
         sys.exit(f"{len(out)} rules is over the {STATIC_LIMIT} static redirect limit")
     too_long = [s for s, d, _ in out if len(f"{s} {d} 301") > 1000]
