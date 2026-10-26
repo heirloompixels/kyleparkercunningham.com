@@ -14,6 +14,18 @@ export default {
       url.port = '';
       return Response.redirect(url.toString(), 301);
     }
-    return env.ASSETS.fetch(request);
+    const res = await env.ASSETS.fetch(request);
+    // _redirects lists only the trailing-slash form, and the asset handler adds
+    // the slash only where a page exists, so /oeuvre/printmaking/2017 was a 404
+    // while /oeuvre/printmaking/2017/ was a 301 (Search Console, 2026-10-26).
+    // A slashless 404 tries the slash form and passes on a redirect it finds,
+    // so it is still one hop.
+    if (res.status === 404 && !url.pathname.endsWith('/') && !/\.[a-z0-9]+$/i.test(url.pathname)) {
+      const slashed = new URL(url);
+      slashed.pathname += '/';
+      const alt = await env.ASSETS.fetch(new Request(slashed, request));
+      if (alt.status === 301 || alt.status === 308) return alt;
+    }
+    return res;
   },
 };
